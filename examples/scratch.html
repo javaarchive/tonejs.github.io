@@ -32,17 +32,22 @@
 			},
 		});
 
-		require(["Tone/source/Noise", "Tone/event/Loop", "Tone/core/Transport"],
-		function(Noise, Loop, Transport){
+		require(["Tone/source/Oscillator", "Tone/component/AmplitudeEnvelope"],
+		function(Noise, Envelope){
 
-			window.Transport = Transport;
-			Transport.PPQ = 12;
+			window.envelope = new Envelope({
+				attackCurve : "bounce",
+				releaseCurve : "step",
+				attack : 0.5,
+				release : 1
+			}).toMaster();
 
-			var noise = new Noise().toMaster();
+			var noise = new Noise().connect(envelope).start();
 
-			var loop = new Loop(function(time){
-				noise.start(time).stop(time + 0.01);
-			}, "4n").start();
+			setTimeout(function(){
+				envelope.triggerAttackRelease(2);
+			}, 1000);
+
 			
 			/*function loop(){
 				requestAnimationFrame(loop)
