@@ -543,6 +543,35 @@ a:hover:active {
  *  SIZING
  */
 
+#term {
+  width: 100%;
+  border-left-width: 23px;
+  border-bottom-width: 3px;
+  border-left-color: #7F33ED;
+  border-bottom-color: #7F33ED;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  box-sizing: border-box;
+  padding: 15px;
+  margin-bottom: 3px;
+}
+
+#term #name {
+  font-size: 2em;
+  color: #7F33ED;
+}
+
+#term #description {
+  padding: 15px;
+}
+/**
+ *  COLORS
+ */
+
+/**
+ *  SIZING
+ */
+
 #sidebar {
   margin-top: 3px;
   display: inline-block;
@@ -638,35 +667,6 @@ a:hover:active {
 #sidebar #sidebarContents .item:hover:active {
   background-color: #ED33CF;
   color: #22DBC0;
-}
-/**
- *  COLORS
- */
-
-/**
- *  SIZING
- */
-
-#term {
-  width: 100%;
-  border-left-width: 23px;
-  border-bottom-width: 3px;
-  border-left-color: #7F33ED;
-  border-bottom-color: #7F33ED;
-  border-left-style: solid;
-  border-bottom-style: solid;
-  box-sizing: border-box;
-  padding: 15px;
-  margin-bottom: 3px;
-}
-
-#term #name {
-  font-size: 2em;
-  color: #7F33ED;
-}
-
-#term #description {
-  padding: 15px;
 }
 /**
  *  COLORS
