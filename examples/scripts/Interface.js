@@ -16,10 +16,10 @@ $(function(){
 	$("body").prepend(topbar);
 	
 	if (typeof Tone !== "undefined"){
-		var logo = new Logo({
+		Logo({
 			"container" : topbar.get(0),
-			"height" : topbar.height() - 8,
-			"width" : 120
+			"height" : topbar.height() - 6,
+			"width" : 140
 		});
 
 	}
