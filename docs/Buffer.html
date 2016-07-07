@@ -164,6 +164,28 @@
 			<div id="description"><p>dispose and disconnect</p>
 </div>
 		</div>
+		<div id="supportsType" class="method listItem static">
+			<span id="title">.supportsType
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>url</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">url</span>
+						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+						<div id="description">The url/extension to test</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Boolean<span class='paren'>}</span></span>
+					<span id="description"><p>If the file extension can be played</p>
+</span>
+				</div>
+			<div id="description"><p>Checks a url&#39;s extension to see if the current browser can play that file type.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>Tone.Buffer.supportsType(<span class="hljs-string">"wav"</span>); <span class="hljs-comment">//returns true</span>
+Tone.Buffer.supportsType(<span class="hljs-string">"path/to/file.wav"</span>); <span class="hljs-comment">//returns true</span></pre></div>
+		</div>
 </div>
 			<div id="footer"></div>	
 		</div>

@@ -24,15 +24,15 @@
 		</span>
 		<div id="paramDescriptions">
 					<span id="name">frequency</span>
-				<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a>|Object<span class='paren'>}</span></span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a>|Object<span class='paren'>}</span></span>
 				<div id="description"><p>The frequency of the LFO.</p>
 </div>
 					<span id="name">delayTime</span>
-				<span class="type"><span class='paren'>{</span><a href='../docs/#Milliseconds'>Milliseconds</a><span class='paren'>}</span></span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Milliseconds'>Milliseconds</a><span class='paren'>}</span></span>
 				<div id="description"><p>The delay of the chorus effect in ms.</p>
 </div>
 					<span id="name">depth</span>
-				<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
 				<div id="description"><p>The depth of the chorus.</p>
 </div>
 		</div>
@@ -49,20 +49,20 @@ synth.triggerAttackRelease([<span class="hljs-string">"C3"</span>,<span class="h
 		<div id="frequency" class="member listItem">
 			<span id="title">.frequency</span>
 				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a><span class='paren'>}</span></span>
 			<div id="description"><p>The frequency of the LFO which modulates the delayTime.</p>
 </div>
 		</div>
 		<div id="depth" class="member listItem">
 			<span id="title">.depth</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
 			<div id="description"><p>The depth of the effect. A depth of 1 makes the delayTime
 modulate between 0 and 2*delayTime (centered around the delayTime).</p>
 </div>
 		</div>
 		<div id="delayTime" class="member listItem">
 			<span id="title">.delayTime</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Milliseconds'>Milliseconds</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Milliseconds'>Milliseconds</a><span class='paren'>}</span></span>
 			<div id="description"><p>The delayTime in milliseconds of the chorus. A larger delayTime
 will give a more pronounced effect. Nominal range a delayTime
 is between 2 and 20ms.</p>
@@ -76,7 +76,7 @@ is between 2 and 20ms.</p>
 		</div>
 		<div id="spread" class="member listItem">
 			<span id="title">.spread</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Degrees'>Degrees</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Degrees'>Degrees</a><span class='paren'>}</span></span>
 			<div id="description"><p>Amount of stereo spread. When set to 0, both LFO&#39;s will be panned centrally.
 When set to 180, LFO&#39;s will be panned hard left and right respectively.</p>
 </div>
@@ -84,7 +84,7 @@ When set to 180, LFO&#39;s will be panned hard left and right respectively.</p>
 		<div id="feedback" class="member listItem">
 			<span id="title">.feedback</span>
 				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
 			<div id="description"><p>The amount of feedback from the output
  back into the input of the effect (routed
  across left and right channels).</p>
@@ -93,7 +93,7 @@ When set to 180, LFO&#39;s will be panned hard left and right respectively.</p>
 		<div id="wet" class="member listItem">
 			<span id="title">.wet</span>
 				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
 			<div id="description"><p>The wet control is how much of the effected
  will pass through to the output. 1 = 100% effected
  signal, 0 = 100% dry signal.</p>

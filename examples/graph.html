@@ -18,7 +18,7 @@
 	<style type="text/css">
 
 		canvas {
-			width: 1000px;
+			width: 100px;
 			height: 200px;
 		}
 	</style>
@@ -33,8 +33,12 @@
 			},
 		});
 
-		require(["Tone/source/Oscillator", "Tone/core/Tone", "../test/helper/Offline"],
-		function(Oscillator, Tone, Offline){
+		function scale(audioRange, min, max){
+			return 1 - (audioRange - min) / (max - min);
+		}
+
+		require(["Tone/component/Envelope", "Tone/core/Tone", "../test/helper/Offline"],
+		function(Envelope, Tone, Offline){
 
 			var width = $("canvas").width() * 2;
 			var height = $("canvas").height() * 2;
@@ -43,41 +47,27 @@
 			context.canvas.width = width;
 			context.canvas.height = height;
 
-			var duration = 3;
+			var duration = 0.01;
 			var offline = new Offline(duration);
 			offline.before(function(dest){
-				/*var osc = Tone.context.createOscillator();
-				osc.connect(dest);
-				osc.type = "square";
-				osc.frequency.value = 0.5;
-				osc.start(0);*/
 
-				var osc2 = Tone.context.createOscillator();
-				osc2.connect(dest);
-				osc2.type = "square";
-				osc2.frequency.value = 0.5;
-				osc2.start(0);
+				env = new Envelope(0.001, 0.001, 0);
+				env.connect(dest);
+				env.triggerAttack(0);
+				// sched.setTargetAtTime(2, 3.5, 5);
+				// sched.setValueCurveAtTime([0, 1, 0], 3.8, 0.2);
 			});
-			var max = 0;
 			//test for discontinuities
 			offline.test(function(sample, time){
-				if (sample > max){
-					max = sample;
-				}
-
 				//draw each of the samples
 				var x = Math.floor(time * (width / duration));
-				var y = height / 2 - sample * height / 2;
+				//scale sample to between 0-5
+				var y = scale(sample, 0, 1) * height;
 				context.fillStyle = "blue";
 				context.beginPath();
 				context.fillRect( x, y, 1, 1 );
 			}); 
-			offline.after(function(){
-				console.log(max);
-			});
 			offline.run();
-			
-			// loop();
 		});
 	
 

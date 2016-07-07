@@ -19,7 +19,7 @@
 			<span id="newKeyword">new</span>
 			<span>Tone.</span><span id="class">Pattern</span>
 		<span class="params">
-			<span class='syntax'>(</span><span id='name'>callback</span><span class='syntax'>, </span><span id='name'>events</span><span class='syntax'>)</span>
+			<span class='syntax'>(</span><span id='name'>callback</span><span class='syntax'>, </span><span id='name'>values</span><span class='syntax'>)</span>
 		</span>
 		<div id="paramDescriptions">
 					<span id="name">callback</span>
@@ -27,9 +27,9 @@
 				<div id="description"><p>The callback to invoke with the
                             event.</p>
 </div>
-					<span id="name">events</span>
+					<span id="name">values</span>
 				<span class="type"><span class='paren'>{</span>Array<span class='paren'>}</span></span>
-				<div id="description"><p>The events to arpeggiate over.</p>
+				<div id="description"><p>The values to arpeggiate over.</p>
 </div>
 		</div>
 	</div>
@@ -38,18 +38,18 @@
   <span class="hljs-comment">//the order of the notes passed in depends on the pattern</span>
 }, [<span class="hljs-string">"C2"</span>, <span class="hljs-string">"D4"</span>, <span class="hljs-string">"E5"</span>, <span class="hljs-string">"A6"</span>], <span class="hljs-string">"upDown"</span>);</pre></div>
 		</div>
-	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>pattern</span><span class='syntax'>:</span><span class='value Tone'>Tone.CtrlPattern.Type.Up</span></div><div class='row'><span id='name'>events</span><span class='syntax'>:</span><span class='value string'>&quot;[]&quot;</span></div></div></div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>pattern</span><span class='syntax'>:</span><span class='value Tone'>Tone.CtrlPattern.Type.Up</span></div><div class='row'><span id='name'>values</span><span class='syntax'>:</span><span class='value string'>&quot;[]&quot;</span></div></div></div>
 </div>
 			<div id="members">
 	<div id="title">members</div>
 		<div id="index" class="member listItem">
 			<span id="title">.index</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
-			<div id="description"><p>The current index in the events array.</p>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Positive'>Positive</a><span class='paren'>}</span></span>
+			<div id="description"><p>The current index in the values array.</p>
 </div>
 		</div>
-		<div id="events" class="member listItem">
-			<span id="title">.events</span>
+		<div id="values" class="member listItem">
+			<span id="title">.values</span>
 			<span class="type"><span class='paren'>{</span>Array<span class='paren'>}</span></span>
 			<div id="description"><p>The array of events.</p>
 </div>
@@ -82,7 +82,7 @@
 		</div>
 		<div id="progress" class="member listItem">
 			<span id="title">.progress</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
 				<span id="readonly">READ ONLY</span>
 			<div id="description"><p>The progress of the loop as a value between 0-1. 0, when
  the loop is stopped or done iterating.</p>
@@ -90,28 +90,28 @@
 		</div>
 		<div id="interval" class="member listItem">
 			<span id="title">.interval</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 			<div id="description"><p>The time between successive callbacks.</p>
 </div>
 					<div class='example'><div id=exampleTitle>code</div><pre>loop.interval = <span class="hljs-string">"8n"</span>; <span class="hljs-comment">//loop every 8n</span></pre></div>
 		</div>
 		<div id="playbackRate" class="member listItem">
 			<span id="title">.playbackRate</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 			<div id="description"><p>The playback rate of the loop. The normal playback rate is 1 (no change). 
  A <code>playbackRate</code> of 2 would be twice as fast.</p>
 </div>
 		</div>
 		<div id="humanize" class="member listItem">
 			<span id="title">.humanize</span>
-			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 			<div id="description"><p>Random variation +/-0.01s to the scheduled time. 
  Or give it a time value which it will randomize by.</p>
 </div>
 		</div>
 		<div id="probability" class="member listItem">
 			<span id="title">.probability</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
 			<div id="description"><p>The probably of the callback being invoked.</p>
 </div>
 		</div>
@@ -123,7 +123,7 @@
 		</div>
 		<div id="iterations" class="member listItem">
 			<span id="title">.iterations</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Positive'>Positive</a><span class='paren'>}</span></span>
 			<div id="description"><p>The number of iterations of the loop. The default
  value is Infinity (loop forever).</p>
 </div>
@@ -155,7 +155,7 @@
 			</span>
 				<div id="paramDescriptions">
 							<span id="name">time</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span>TimelinePosition<span class='paren'>}</span></span>
 						<div id="description">When to start the Loop.</div>
 				</div>
 				<div id="returns">
@@ -176,7 +176,7 @@
 			</span>
 				<div id="paramDescriptions">
 							<span id="name">time</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span>TimelinePosition<span class='paren'>}</span></span>
 						<div id="description">When to stop the Arpeggio</div>
 				</div>
 				<div id="returns">
@@ -197,7 +197,7 @@
 				<div id="paramDescriptions">
 							<span id="name">time</span> <span class="syntax">=</span>
 							<span id="default">0</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span>TimelinePosition<span class='paren'>}</span></span>
 						<div id="description">The time after which events will be cancel.</div>
 				</div>
 				<div id="returns">

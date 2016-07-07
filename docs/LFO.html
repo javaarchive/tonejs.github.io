@@ -24,7 +24,7 @@
 		</span>
 		<div id="paramDescriptions">
 					<span id="name">frequency</span>
-				<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a>|Object<span class='paren'>}</span></span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a>|Object<span class='paren'>}</span></span>
 				<div id="description"><p>The frequency of the oscillation. Typically, LFOs will be
                               in the frequency range of 0.1 to 10 hertz.</p>
 </div>
@@ -49,7 +49,7 @@ lfo.connect(filter.frequency);</pre></div>
 		<div id="frequency" class="member listItem">
 			<span id="title">.frequency</span>
 				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a><span class='paren'>}</span></span>
 			<div id="description"><p>the lfo&#39;s frequency</p>
 </div>
 		</div>
@@ -93,6 +93,12 @@ between -5 and 5.</p>
 			<div id="description"><p>The output units of the LFO.</p>
 </div>
 		</div>
+		<div id="mute" class="member listItem">
+			<span id="title">.mute</span>
+			<span class="type"><span class='paren'>{</span>Boolean<span class='paren'>}</span></span>
+			<div id="description"><p>Mute the output.</p>
+</div>
+		</div>
 		<div id="state" class="member listItem">
 			<span id="title">.state</span>
 			<span class="type"><span class='paren'>{</span>Tone.State<span class='paren'>}</span></span>
@@ -103,7 +109,7 @@ between -5 and 5.</p>
 		<div id="detune" class="member listItem">
 			<span id="title">.detune</span>
 				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Cents'>Cents</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Cents'>Cents</a><span class='paren'>}</span></span>
 			<div id="description"><p>The detune control signal.</p>
 </div>
 		</div>
@@ -122,7 +128,7 @@ The value is an empty array when the type is not &quot;custom&quot;.</p>
 		<div id="volume" class="member listItem">
 			<span id="title">.volume</span>
 				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Decibels'>Decibels</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Decibels'>Decibels</a><span class='paren'>}</span></span>
 			<div id="description"><p>The volume of the output in decibels.</p>
 </div>
 					<div class='example'><div id=exampleTitle>code</div><pre>source.volume.value = -<span class="hljs-number">6</span>;</pre></div>
@@ -140,7 +146,7 @@ The value is an empty array when the type is not &quot;custom&quot;.</p>
 				<div id="paramDescriptions">
 							<span id="name">time</span> <span class="syntax">=</span>
 							<span id="default">now</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">the time the LFO will start</div>
 				</div>
 				<div id="returns">
@@ -161,7 +167,7 @@ The value is an empty array when the type is not &quot;custom&quot;.</p>
 				<div id="paramDescriptions">
 							<span id="name">time</span> <span class="syntax">=</span>
 							<span id="default">now</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">the time the LFO will stop</div>
 				</div>
 				<div id="returns">
@@ -182,7 +188,7 @@ The value is an empty array when the type is not &quot;custom&quot;.</p>
 				<div id="paramDescriptions">
 							<span id="name">delay</span> <span class="syntax">=</span>
 							<span id="default">0</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">the time to delay the start of the
                                LFO from the start of the transport</div>
 				</div>

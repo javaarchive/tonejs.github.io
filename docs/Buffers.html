@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">Buffers</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<div id="description"><p>A data structure for holding multiple buffers.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">Buffers</span>
+		<span class="params">
+			<span class='syntax'>(</span><span id='name'>urls</span>[<span class='syntax'>, </span><span id='name'>callback</span>]<span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">urls</span>
+				<span class="type"><span class='paren'>{</span>Object|Array<span class='paren'>}</span></span>
+				<div id="description"><p>An object literal or array
+                                     of urls to load.</p>
+</div>
+					<span id="name">callback</span>
+				<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+				<div id="description"><p>The callback to invoke when
+                                the buffers are loaded.</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//load a whole bank of piano samples</span>
+<span class="hljs-keyword">var</span> pianoSamples = <span class="hljs-keyword">new</span> Tone.Buffers({
+	<span class="hljs-string">"C4"</span> : <span class="hljs-string">"path/to/C4.mp3"</span>
+	<span class="hljs-string">"C#4"</span> : <span class="hljs-string">"path/to/C#4.mp3"</span>
+	<span class="hljs-string">"D4"</span> : <span class="hljs-string">"path/to/D4.mp3"</span>
+	<span class="hljs-string">"D#4"</span> : <span class="hljs-string">"path/to/D#4.mp3"</span>
+	...
+}, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+	<span class="hljs-comment">//play one of the samples when they all load</span>
+	player.buffer = pianoSamples.get(<span class="hljs-string">"C4"</span>);
+	player.start();
+});</pre></div>
+		</div>
+	
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="baseUrl" class="member listItem">
+			<span id="title">.baseUrl</span>
+			<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+			<div id="description"><p>A path which is prefixed before every url.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="get" class="method listItem ">
+			<span id="title">.get
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>name</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">name</span>
+						<span class="type"><span class='paren'>{</span>String|Number<span class='paren'>}</span></span>
+						<div id="description">The key or index of the 
+                                buffer.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Buffer'>Tone.Buffer</a><span class='paren'>}</span></span>
+					<span id="description"></span>
+				</div>
+			<div id="description"><p>Get a buffer by name. If an array was loaded, 
+ then use the array index.</p>
+</div>
+		</div>
+		<div id="add" class="method listItem ">
+			<span id="title">.add
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>name</span><span class='syntax'>, </span><span id='name'>url</span>[<span class='syntax'>, </span><span id='name'>callback</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">name</span>
+						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+						<div id="description">A unique name to give
+                               the buffer</div>
+							<span id="name">url</span>
+						<span class="type"><span class='paren'>{</span>String|<a class="internalLink" href='../docs/#Buffer'>Tone.Buffer</a>|Audiobuffer<span class='paren'>}</span></span>
+						<div id="description">Either the url of the bufer, 
+                                                or a buffer which will be added
+                                                with the given name.</div>
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">The callback to invoke 
+                                when the url is loaded.</div>
+				</div>
+			<div id="description"><p>Add a buffer by name and url to the Buffers</p>
+</div>
+		</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Buffers'>Tone.Buffers</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up.</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

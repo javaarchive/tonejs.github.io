@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">Synth</span><span id="extends"> &#8594; <a href='#Monophonic'>Tone.Monophonic</a></span>
+	<div id="description"><p><a class="internalLink" href='../docs/#Synth'>Tone.Synth</a> is composed simply of a <a class="internalLink" href='../docs/#OmniOscillator'>Tone.OmniOscillator</a>
+         routed through a <a class="internalLink" href='../docs/#AmplitudeEnvelope'>Tone.AmplitudeEnvelope</a>. 
+         <img src="https://docs.google.com/drawings/d/1-1_0YW2Z1J2EPI36P8fNCMcZG7N1w1GZluPs4og4evo/pub?w=1163&h=231"></p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">Synth</span>
+		<span class="params">
+			<span class='syntax'>(</span>[<span id='name'>options</span>]<span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">options</span>
+				<span class="type"><span class='paren'>{</span>Object<span class='paren'>}</span></span>
+				<div id="description"><p>the options available for the synth 
+                         see defaults below</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> synth = <span class="hljs-keyword">new</span> Tone.Synth().toMaster();
+synth.triggerAttackRelease(<span class="hljs-string">"C4"</span>, <span class="hljs-string">"8n"</span>);</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>oscillator</span><span class='syntax'>:</span><span class='syntax'>{</span><div class='row'><span id='name'>type</span><span class='syntax'>:</span><span class='value string'>&quot;triangle&quot;</span></div><span class='syntax'>}</span></div><div class='row'><span id='name'>envelope</span><span class='syntax'>:</span><span class='syntax'>{</span><div class='row'><span id='name'>attack</span><span class='syntax'>:</span><span class='value number'>0.005</span></div><div class='row'><span id='name'>decay</span><span class='syntax'>:</span><span class='value number'>0.1</span></div><div class='row'><span id='name'>sustain</span><span class='syntax'>:</span><span class='value number'>0.3</span></div><div class='row'><span id='name'>release</span><span class='syntax'>:</span><span class='value number'>1</span></div><span class='syntax'>}</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="oscillator" class="member listItem">
+			<span id="title">.oscillator</span>
+			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#OmniOscillator'>Tone.OmniOscillator</a><span class='paren'>}</span></span>
+			<div id="description"><p>The oscillator.</p>
+</div>
+		</div>
+		<div id="frequency" class="member listItem">
+			<span id="title">.frequency</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a><span class='paren'>}</span></span>
+			<div id="description"><p>The frequency control.</p>
+</div>
+		</div>
+		<div id="detune" class="member listItem">
+			<span id="title">.detune</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Cents'>Cents</a><span class='paren'>}</span></span>
+			<div id="description"><p>The detune control.</p>
+</div>
+		</div>
+		<div id="envelope" class="member listItem">
+			<span id="title">.envelope</span>
+			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#AmplitudeEnvelope'>Tone.AmplitudeEnvelope</a><span class='paren'>}</span></span>
+			<div id="description"><p>The amplitude envelope.</p>
+</div>
+		</div>
+		<div id="portamento" class="member listItem">
+			<span id="title">.portamento</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>The glide time between notes.</p>
+</div>
+		</div>
+		<div id="volume" class="member listItem">
+			<span id="title">.volume</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Decibels'>Decibels</a><span class='paren'>}</span></span>
+			<div id="description"><p>The volume of the output in decibels.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>source.volume.value = -<span class="hljs-number">6</span>;</pre></div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Synth'>Tone.Synth</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>clean up</p>
+</div>
+		</div>
+		<div id="triggerAttack" class="method listItem ">
+			<span id="title">.triggerAttack
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>note</span>[<span class='syntax'>, </span><span id='name'>time</span>][<span class='syntax'>, </span><span id='name'>velocity</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">note</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a><span class='paren'>}</span></span>
+						<div id="description">The note to trigger.</div>
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When the note should start.</div>
+							<span id="name">velocity</span> <span class="syntax">=</span>
+							<span id="default">1</span>
+						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+						<div id="description">velocity The velocity scaler 
+                               determines how &quot;loud&quot; the note 
+                               will be triggered.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Monophonic'>Tone.Monophonic</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Trigger the attack of the note optionally with a given velocity.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>synth.triggerAttack(<span class="hljs-string">"C4"</span>);</pre></div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//trigger the note a half second from now at half velocity</span>
+synth.triggerAttack(<span class="hljs-string">"C4"</span>, <span class="hljs-string">"+0.5"</span>, <span class="hljs-number">0.5</span>);</pre></div>
+		</div>
+		<div id="triggerRelease" class="method listItem ">
+			<span id="title">.triggerRelease
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">If no time is given, the release happens immediatly</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Monophonic'>Tone.Monophonic</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Trigger the release portion of the envelope</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>synth.triggerRelease();</pre></div>
+		</div>
+		<div id="setNote" class="method listItem ">
+			<span id="title">.setNote
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>note</span>[<span class='syntax'>, </span><span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">note</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a><span class='paren'>}</span></span>
+						<div id="description">The note to change to.</div>
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The time when the note should be set.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Monophonic'>Tone.Monophonic</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Set the note at the given time. If no time is given, the note
+ will set immediately.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//change to F#6 in one quarter note from now.</span>
+synth.setNote(<span class="hljs-string">"F#6"</span>, <span class="hljs-string">"+4n"</span>);</pre></div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//change to Bb4 right now</span>
+synth.setNote(<span class="hljs-string">"Bb4"</span>);</pre></div>
+		</div>
+		<div id="triggerAttackRelease" class="method listItem ">
+			<span id="title">.triggerAttackRelease
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>note</span><span class='syntax'>, </span><span id='name'>duration</span>[<span class='syntax'>, </span><span id='name'>time</span>][<span class='syntax'>, </span><span id='name'>velocity</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">note</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a><span class='paren'>}</span></span>
+						<div id="description">The note to trigger.</div>
+							<span id="name">duration</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">How long the note should be held for before
+                         triggering the release.</div>
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When the note should be triggered.</div>
+							<span id="name">velocity</span> <span class="syntax">=</span>
+							<span id="default">1</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+						<div id="description">The velocity the note should be triggered at.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Instrument'>Tone.Instrument</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Trigger the attack and then the release after the duration.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//trigger "C4" for the duration of an 8th note</span>
+synth.triggerAttackRelease(<span class="hljs-string">"C4"</span>, <span class="hljs-string">"8n"</span>);</pre></div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

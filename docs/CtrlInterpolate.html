@@ -29,7 +29,7 @@
 				<div id="description"><p>The array of values to interpolate over</p>
 </div>
 					<span id="name">index</span>
-				<span class="type"><span class='paren'>{</span><a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Positive'>Positive</a><span class='paren'>}</span></span>
 				<div id="description"><p>The initial interpolation index.</p>
 </div>
 		</div>
@@ -39,8 +39,8 @@
 interp.index = <span class="hljs-number">0.75</span>;
 interp.value; <span class="hljs-comment">//returns 1.5</span></pre></div>
 				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> interp = <span class="hljs-keyword">new</span> Tone.CtrlInterpolate([
-	[<span class="hljs-string">"C3"</span>, <span class="hljs-string">"G4"</span>, <span class="hljs-string">"E5"</span>],
-	[<span class="hljs-string">"D4"</span>, <span class="hljs-string">"F#4"</span>, <span class="hljs-string">"E5"</span>],
+	[<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>],
+	[<span class="hljs-number">9</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>],
 ]);</pre></div>
 		</div>
 	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>index</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>values</span><span class='syntax'>:</span><span class='value string'>&quot;[]&quot;</span></div></div></div>
@@ -55,7 +55,7 @@ interp.value; <span class="hljs-comment">//returns 1.5</span></pre></div>
 		</div>
 		<div id="index" class="member listItem">
 			<span id="title">.index</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Positive'>Positive</a><span class='paren'>}</span></span>
 			<div id="description"><p>The interpolated index between values. For example: a value of 1.5
  would interpolate equally between the value at index 1
  and the value at index 2.</p>

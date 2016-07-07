@@ -12,34 +12,23 @@
 			<div id="constructor">
 	<span id="name">Meter</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
 	<div id="description"><p><a class="internalLink" href='../docs/#Meter'>Tone.Meter</a> gets the <a href="https://en.wikipedia.org/wiki/Root_mean_square">RMS</a>
-         of an input signal with some averaging applied. 
-         It can also get the raw value of the signal or the value in dB. For signal 
-         processing, it&#39;s better to use <a class="internalLink" href='../docs/#Follower'>Tone.Follower</a> which will produce an audio-rate 
-         envelope follower instead of needing to poll the Meter to get the output.
-         <br><br>
-         Meter was inspired by <a href="https://github.com/cwilso/volume-meter/blob/master/volume-meter.js">Chris Wilsons Volume Meter</a>.</p>
+         of an input signal with some averaging applied. It can also get the raw 
+         value of the input signal.</p>
 </div>
 	<div id="new">
 			<span id="newKeyword">new</span>
 			<span>Tone.</span><span id="class">Meter</span>
 		<span class="params">
-			<span class='syntax'>(</span>[<span id='name'>channels</span>][<span class='syntax'>, </span><span id='name'>smoothing</span>][<span class='syntax'>, </span><span id='name'>clipMemory</span>]<span class='syntax'>)</span>
+			<span class='syntax'>(</span><span id='name'>type</span><span class='syntax'>, </span><span id='name'>smoothing</span><span class='syntax'>)</span>
 		</span>
 		<div id="paramDescriptions">
-					<span id="name">channels</span> <span class="equalSign">=</span>
-					<span id="default">1</span>
-				<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-				<div id="description"><p>number of channels being metered</p>
+					<span id="name">type</span>
+				<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+				<div id="description"><p>Either &quot;level&quot; or &quot;signal&quot;.</p>
 </div>
-					<span id="name">smoothing</span> <span class="equalSign">=</span>
-					<span id="default">0.8</span>
-				<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-				<div id="description"><p>amount of smoothing applied to the volume</p>
-</div>
-					<span id="name">clipMemory</span> <span class="equalSign">=</span>
-					<span id="default">0.5</span>
-				<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-				<div id="description"><p>number in seconds that a &quot;clip&quot; should be remembered</p>
+					<span id="name">smoothing</span>
+				<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+				<div id="description"><p>The amount of smoothing applied between frames.</p>
 </div>
 		</div>
 	</div>
@@ -48,111 +37,41 @@
 <span class="hljs-keyword">var</span> mic = <span class="hljs-keyword">new</span> Tone.Microphone().start();
 <span class="hljs-comment">//connect mic to the meter</span>
 mic.connect(meter);
-<span class="hljs-comment">//use getLevel or getDb </span>
-<span class="hljs-comment">//to access meter level</span>
-meter.getLevel();</pre></div>
+<span class="hljs-comment">//the current level of the mic input</span>
+<span class="hljs-keyword">var</span> level = meter.value;</pre></div>
 		</div>
-	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>smoothing</span><span class='syntax'>:</span><span class='value number'>0.8</span></div><div class='row'><span id='name'>bufferSize</span><span class='syntax'>:</span><span class='value number'>1024</span></div><div class='row'><span id='name'>clipMemory</span><span class='syntax'>:</span><span class='value number'>0.5</span></div><div class='row'><span id='name'>clipLevel</span><span class='syntax'>:</span><span class='value number'>0.9</span></div><div class='row'><span id='name'>channels</span><span class='syntax'>:</span><span class='value number'>1</span></div></div></div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>smoothing</span><span class='syntax'>:</span><span class='value number'>0.8</span></div><div class='row'><span id='name'>type</span><span class='syntax'>:</span><span class='value Tone'>Tone.Meter.Type.Level</span></div></div></div>
 </div>
 			<div id="members">
 	<div id="title">members</div>
+		<div id="type" class="member listItem">
+			<span id="title">.type</span>
+			<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+			<div id="description"><p>The type of the meter, either &quot;level&quot; or &quot;signal&quot;. 
+ A &quot;level&quot; meter will return the volume level (rms) of the 
+ input signal and a &quot;signal&quot; meter will return
+ the signal value of the input.</p>
+</div>
+		</div>
 		<div id="smoothing" class="member listItem">
 			<span id="title">.smoothing</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
-			<div id="description"><p>The amount which the decays of the meter are smoothed. Small values
-will follow the contours of the incoming envelope more closely than large values.</p>
-</div>
-		</div>
-		<div id="clipMemory" class="member listItem">
-			<span id="title">.clipMemory</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
-			<div id="description"><p>The amount of time a clip is remember for.</p>
-</div>
-		</div>
-		<div id="clipLevel" class="member listItem">
-			<span id="title">.clipLevel</span>
 			<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
-			<div id="description"><p>The value above which the signal is considered clipped.</p>
+			<div id="description"><p>The amount of carryover between the current and last frame. 
+ Only applied meter for &quot;level&quot; type.</p>
+</div>
+		</div>
+		<div id="value" class="member listItem">
+			<span id="title">.value</span>
+			<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>The current value of the meter. A value of 1 is
+&quot;unity&quot;.</p>
 </div>
 		</div>
 </div>
 
 			<div id="methods">
 	<div id="title">methods</div>
-		<div id="getLevel" class="method listItem ">
-			<span id="title">.getLevel
-				<span class="params">
-					<span class='syntax'>(</span>[<span id='name'>channel</span>]<span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">channel</span> <span class="syntax">=</span>
-							<span id="default">0</span>
-						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-						<div id="description">which channel</div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-					<span id="description"><p>the value</p>
-</span>
-				</div>
-			<div id="description"><p>Get the rms of the signal.</p>
-</div>
-		</div>
-		<div id="getValue" class="method listItem ">
-			<span id="title">.getValue
-				<span class="params">
-					<span class='syntax'>(</span>[<span id='name'>channel</span>]<span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">channel</span>
-						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-						<div id="description"></div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-					<span id="description"></span>
-				</div>
-			<div id="description"><p>Get the raw value of the signal.</p>
-</div>
-		</div>
-		<div id="getDb" class="method listItem ">
-			<span id="title">.getDb
-				<span class="params">
-					<span class='syntax'>(</span>[<span id='name'>channel</span>]<span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">channel</span>
-						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-						<div id="description"></div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span><a href='../docs/#Decibels'>Decibels</a><span class='paren'>}</span></span>
-					<span id="description"></span>
-				</div>
-			<div id="description"><p>Get the volume of the signal in dB</p>
-</div>
-		</div>
-		<div id="isClipped" class="method listItem ">
-			<span id="title">.isClipped
-				<span class="params">
-					<span class='syntax'>(</span><span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>boolean<span class='paren'>}</span></span>
-					<span id="description"><p>if the audio has clipped. The value resets
-                      based on the clipMemory defined.</p>
-</span>
-				</div>
-			<div id="description"></div>
-		</div>
 		<div id="dispose" class="method listItem ">
 			<span id="title">.dispose
 				<span class="params">

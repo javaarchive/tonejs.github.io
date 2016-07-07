@@ -59,7 +59,7 @@
 						<span class="type"><span class='paren'>{</span>string<span class='paren'>}</span></span>
 						<div id="description">A named channel to send the signal to.</div>
 							<span id="name">amount</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Decibels'>Decibels</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Decibels'>Decibels</a><span class='paren'>}</span></span>
 						<div id="description">The amount of the source to send to the bus.</div>
 				</div>
 				<div id="returns">
@@ -130,7 +130,7 @@
 						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
 						<div id="description"></div>
 							<span id="name">rampTime</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description"></div>
 				</div>
 				<div id="returns">
@@ -265,9 +265,16 @@ synth.get([<span class="hljs-string">"envelope.attack"</span>, <span class="hljs
 		<div id="disconnect" class="method listItem ">
 			<span id="title">.disconnect
 				<span class="params">
-					<span class='syntax'>(</span><span class='syntax'>)</span>
+					<span class='syntax'>(</span><span id='name'>output</span><span class='syntax'>)</span>
 				</span>
 			</span>
+				<div id="paramDescriptions">
+							<span id="name">output</span>
+						<span class="type"><span class='paren'>{</span>Number|AudioNode<span class='paren'>}</span></span>
+						<div id="description">Either the output index to disconnect
+                                  if the output is an array, or the
+                                  node to disconnect from.</div>
+				</div>
 				<div id="returns">
 					<span id="keyword">returns</span>
 					<span class="type"><span class='paren'>{</span>Tone<span class='paren'>}</span></span>
@@ -295,26 +302,6 @@ synth.get([<span class="hljs-string">"envelope.attack"</span>, <span class="hljs
 </span>
 				</div>
 			<div id="description"><p>connect together all of the arguments in series</p>
-</div>
-		</div>
-		<div id="connectParallel" class="method listItem ">
-			<span id="title">.connectParallel
-				<span class="params">
-					<span class='syntax'>(</span><span id='name'>nodes</span><span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">nodes</span>
-						<span class="type"><span class='paren'>{</span>AudioParam|Tone|AudioNode<span class='paren'>}</span></span>
-						<div id="description"></div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>Tone<span class='paren'>}</span></span>
-					<span id="description"><p>this</p>
-</span>
-				</div>
-			<div id="description"><p>fan out the connection from the first argument to the rest of the arguments</p>
 </div>
 		</div>
 		<div id="chain" class="method listItem ">
@@ -576,7 +563,7 @@ synth.get([<span class="hljs-string">"envelope.attack"</span>, <span class="hljs
 			</span>
 				<div id="paramDescriptions">
 							<span id="name">percent</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
 						<div id="description">(0-1)</div>
 				</div>
 				<div id="returns">
@@ -596,7 +583,7 @@ synth.get([<span class="hljs-string">"envelope.attack"</span>, <span class="hljs
 			</span>
 				<div id="paramDescriptions">
 							<span id="name">db</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Decibels'>Decibels</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Decibels'>Decibels</a><span class='paren'>}</span></span>
 						<div id="description"></div>
 				</div>
 				<div id="returns">
@@ -620,11 +607,34 @@ synth.get([<span class="hljs-string">"envelope.attack"</span>, <span class="hljs
 				</div>
 				<div id="returns">
 					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span><a href='../docs/#Decibels'>Decibels</a><span class='paren'>}</span></span>
+					<span class="type"><span class='paren'>{</span><a href='../docs/#types/Decibels'>Decibels</a><span class='paren'>}</span></span>
 					<span id="description"></span>
 				</div>
 			<div id="description"><p>Convert gain to decibels.</p>
 </div>
+		</div>
+		<div id="intervalToFrequencyRatio" class="method listItem ">
+			<span id="title">.intervalToFrequencyRatio
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>interval</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">interval</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Interval'>Interval</a><span class='paren'>}</span></span>
+						<div id="description">the number of semitones above the base note</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+					<span id="description"><p>the frequency ratio</p>
+</span>
+				</div>
+			<div id="description"><p>Convert an interval (in semitones) to a frequency ratio.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>tone.intervalToFrequencyRatio(<span class="hljs-number">0</span>); <span class="hljs-comment">// 1</span>
+tone.intervalToFrequencyRatio(<span class="hljs-number">12</span>); <span class="hljs-comment">// 2</span>
+tone.intervalToFrequencyRatio(-<span class="hljs-number">12</span>); <span class="hljs-comment">// 0.5</span></pre></div>
 		</div>
 		<div id="now" class="method listItem static">
 			<span id="title">.now
@@ -680,232 +690,45 @@ synth.get([<span class="hljs-string">"envelope.attack"</span>, <span class="hljs
  be sure to do it at the start of your code, before creating any objects.</p>
 </div>
 		</div>
-		<div id="isFrequency" class="method listItem ">
-			<span id="title">.isFrequency
+		<div id="toSeconds" class="method listItem ">
+			<span id="title">.toSeconds
 				<span class="params">
-					<span class='syntax'>(</span><span id='name'>freq</span><span class='syntax'>)</span>
+					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>)</span>
 				</span>
 			</span>
 				<div id="paramDescriptions">
-							<span id="name">freq</span>
-						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description"></div>
 				</div>
 				<div id="returns">
 					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>boolean<span class='paren'>}</span></span>
+					<span class="type"><span class='paren'>{</span><a href='../docs/#types/Seconds'>Seconds</a><span class='paren'>}</span></span>
 					<span id="description"></span>
 				</div>
-			<div id="description"><p>Test if the input is in the format of number + hz
- i.e.: 10hz</p>
+			<div id="description"><p>Convert Time into seconds.</p>
+<p> Unlike the method which it overrides, this takes into account 
+ transporttime and musical notation.</p>
+<p> Time : 1.40
+ Notation: 4n|1m|2t
+ Now Relative: +3n
+ Math: 3n+16n or even complicated expressions ((3n*2)/6 + 1)</p>
 </div>
-		</div>
-		<div id="notationToSeconds" class="method listItem ">
-			<span id="title">.notationToSeconds
-				<span class="params">
-					<span class='syntax'>(</span><span id='name'>notation</span>[<span class='syntax'>, </span><span id='name'>bpm</span>][<span class='syntax'>, </span><span id='name'>timeSignature</span>]<span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">notation</span>
-						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
-						<div id="description"></div>
-							<span id="name">bpm</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#BPM'>BPM</a><span class='paren'>}</span></span>
-						<div id="description"></div>
-							<span id="name">timeSignature</span>
-						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-						<div id="description"></div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-					<span id="description"></span>
-				</div>
-			<div id="description"><p>convert notation format strings to seconds</p>
-</div>
-		</div>
-		<div id="transportTimeToSeconds" class="method listItem ">
-			<span id="title">.transportTimeToSeconds
-				<span class="params">
-					<span class='syntax'>(</span><span id='name'>transportTime</span>[<span class='syntax'>, </span><span id='name'>bpm</span>][<span class='syntax'>, </span><span id='name'>timeSignature</span>]<span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">transportTime</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#TransportTime'>TransportTime</a><span class='paren'>}</span></span>
-						<div id="description"></div>
-							<span id="name">bpm</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#BPM'>BPM</a><span class='paren'>}</span></span>
-						<div id="description"></div>
-							<span id="name">timeSignature</span>
-						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-						<div id="description"></div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-					<span id="description"><p>seconds</p>
-</span>
-				</div>
-			<div id="description"><p>convert transportTime into seconds.</p>
-<p> ie: 4:2:3 == 4 measures + 2 quarters + 3 sixteenths</p>
-</div>
-		</div>
-		<div id="ticksToSeconds" class="method listItem ">
-			<span id="title">.ticksToSeconds
-				<span class="params">
-					<span class='syntax'>(</span><span id='name'>ticks</span>[<span class='syntax'>, </span><span id='name'>bpm</span>]<span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">ticks</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Ticks'>Ticks</a><span class='paren'>}</span></span>
-						<div id="description"></div>
-							<span id="name">bpm</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#BPM'>BPM</a><span class='paren'>}</span></span>
-						<div id="description"></div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-					<span id="description"><p>seconds</p>
-</span>
-				</div>
-			<div id="description"><p>Convert ticks into seconds</p>
-</div>
-		</div>
-		<div id="frequencyToSeconds" class="method listItem ">
-			<span id="title">.frequencyToSeconds
-				<span class="params">
-					<span class='syntax'>(</span><span id='name'>freq</span><span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">freq</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a><span class='paren'>}</span></span>
-						<div id="description"></div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-					<span id="description"></span>
-				</div>
-			<div id="description"><p>Convert a frequency into seconds.
- Accepts numbers and strings: i.e. &quot;10hz&quot; or 
- 10 both return 0.1.</p>
-</div>
-		</div>
-		<div id="samplesToSeconds" class="method listItem ">
-			<span id="title">.samplesToSeconds
-				<span class="params">
-					<span class='syntax'>(</span><span id='name'>samples</span><span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">samples</span>
-						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-						<div id="description"></div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-					<span id="description"></span>
-				</div>
-			<div id="description"><p>Convert a sample count to seconds.</p>
-</div>
-		</div>
-		<div id="secondsToSamples" class="method listItem ">
-			<span id="title">.secondsToSamples
-				<span class="params">
-					<span class='syntax'>(</span><span id='name'>seconds</span><span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">seconds</span>
-						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-						<div id="description"></div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-					<span id="description"><p>The number of samples</p>
-</span>
-				</div>
-			<div id="description"><p>Convert from seconds to samples.</p>
-</div>
-		</div>
-		<div id="secondsToTransportTime" class="method listItem ">
-			<span id="title">.secondsToTransportTime
-				<span class="params">
-					<span class='syntax'>(</span><span id='name'>seconds</span>[<span class='syntax'>, </span><span id='name'>bpm</span>][<span class='syntax'>, </span><span id='name'>timeSignature</span>]<span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">seconds</span>
-						<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
-						<div id="description"></div>
-							<span id="name">bpm</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#BPM'>BPM</a><span class='paren'>}</span></span>
-						<div id="description"></div>
-							<span id="name">timeSignature</span>
-						<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
-						<div id="description"></div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span><a href='../docs/#TransportTime'>TransportTime</a><span class='paren'>}</span></span>
-					<span id="description"></span>
-				</div>
-			<div id="description"><p>Convert seconds to transportTime in the form 
-     &quot;measures:quarters:sixteenths&quot;</p>
-</div>
-		</div>
-		<div id="secondsToFrequency" class="method listItem ">
-			<span id="title">.secondsToFrequency
-				<span class="params">
-					<span class='syntax'>(</span><span id='name'>seconds</span><span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">seconds</span>
-						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-						<div id="description"></div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-					<span id="description"></span>
-				</div>
-			<div id="description"><p>Convert a number in seconds to a frequency.</p>
-</div>
-		</div>
-		<div id="toTransportTime" class="method listItem ">
-			<span id="title">.toTransportTime
-				<span class="params">
-					<span class='syntax'>(</span><span class='syntax'>)</span>
-				</span>
-			</span>
-			<div id="description"></div>
 		</div>
 		<div id="toFrequency" class="method listItem ">
 			<span id="title">.toFrequency
 				<span class="params">
-					<span class='syntax'>(</span><span id='name'>freq</span>[<span class='syntax'>, </span><span id='name'>now</span>]<span class='syntax'>)</span>
+					<span class='syntax'>(</span><span id='name'>freq</span><span class='syntax'>)</span>
 				</span>
 			</span>
 				<div id="paramDescriptions">
 							<span id="name">freq</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a><span class='paren'>}</span></span>
 						<div id="description"></div>
-							<span id="name">now</span>
-						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-						<div id="description">if passed in, this number will be 
-                       		used for all &#x27;now&#x27; relative timings</div>
 				</div>
 				<div id="returns">
 					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+					<span class="type"><span class='paren'>{</span><a href='../docs/#types/Hertz'>Hertz</a><span class='paren'>}</span></span>
 					<span id="description"><p>the frequency in hertz</p>
 </span>
 				</div>
@@ -920,256 +743,17 @@ synth.get([<span class="hljs-string">"envelope.attack"</span>, <span class="hljs
 			</span>
 				<div id="paramDescriptions">
 							<span id="name">time</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description"></div>
 				</div>
 				<div id="returns">
 					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span><a href='../docs/#Ticks'>Ticks</a><span class='paren'>}</span></span>
-					<span id="description"></span>
-				</div>
-			<div id="description"><p>Convert the time representation into ticks.
- Now-Relative timing will be relative to the current
- <a class="internalLink" href='../docs/#Transport.ticks'>Tone.Transport.ticks</a>.</p>
-</div>
-		</div>
-		<div id="toSamples" class="method listItem ">
-			<span id="title">.toSamples
-				<span class="params">
-					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">time</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
-						<div id="description"></div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-					<span id="description"></span>
-				</div>
-			<div id="description"><p>convert a time into samples</p>
-</div>
-		</div>
-		<div id="toSeconds" class="method listItem ">
-			<span id="title">.toSeconds
-				<span class="params">
-					<span class='syntax'>(</span><span id='name'>time</span>[<span class='syntax'>, </span><span id='name'>now</span>]<span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">time</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
-						<div id="description"></div>
-							<span id="name">now</span>
-						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-						<div id="description">if passed in, this number will be 
-                       		used for all &#x27;now&#x27; relative timings</div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-					<span id="description"></span>
-				</div>
-			<div id="description"><p>Convert Time into seconds.</p>
-<p> Unlike the method which it overrides, this takes into account 
- transporttime and musical notation.</p>
-<p> Time : 1.40
- Notation: 4n|1m|2t
- TransportTime: 2:4:1 (measure:quarters:sixteens)
- Now Relative: +3n
- Math: 3n+16n or even complicated expressions ((3n*2)/6 + 1)</p>
-</div>
-		</div>
-		<div id="toNotation" class="method listItem ">
-			<span id="title">.toNotation
-				<span class="params">
-					<span class='syntax'>(</span><span id='name'>time</span>[<span class='syntax'>, </span><span id='name'>bpm</span>][<span class='syntax'>, </span><span id='name'>timeSignature</span>]<span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">time</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
-						<div id="description"></div>
-							<span id="name">bpm</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#BPM'>BPM</a><span class='paren'>}</span></span>
-						<div id="description"></div>
-							<span id="name">timeSignature</span>
-						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-						<div id="description"></div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span><a href='../docs/#Notation'>Notation</a><span class='paren'>}</span></span>
-					<span id="description"></span>
-				</div>
-			<div id="description"><p>Convert a Time to Notation. Values will be thresholded to the nearest 128th note.</p>
-</div>
-		</div>
-		<div id="fromUnits" class="method listItem ">
-			<span id="title">.fromUnits
-				<span class="params">
-					<span class='syntax'>(</span><span id='name'>val</span><span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">val</span>
-						<span class="type"><span class='paren'>{</span>*<span class='paren'>}</span></span>
-						<div id="description">the value to convert</div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
-					<span id="description"><p>the number which the value should be set to</p>
+					<span class="type"><span class='paren'>{</span><a href='../docs/#types/Ticks'>Ticks</a><span class='paren'>}</span></span>
+					<span id="description"><p>the time in ticks</p>
 </span>
 				</div>
-			<div id="description"><p>Convert the given value from the type specified by units
- into a number.</p>
+			<div id="description"><p>Convert a time representation into ticks.</p>
 </div>
-		</div>
-		<div id="toUnits" class="method listItem ">
-			<span id="title">.toUnits
-				<span class="params">
-					<span class='syntax'>(</span><span id='name'>val</span><span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">val</span>
-						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-						<div id="description">the value to convert</div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-					<span id="description"></span>
-				</div>
-			<div id="description"><p>Convert a number to the specified units.</p>
-</div>
-		</div>
-		<div id="noteToFrequency" class="method listItem ">
-			<span id="title">.noteToFrequency
-				<span class="params">
-					<span class='syntax'>(</span><span id='name'>note</span><span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">note</span>
-						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
-						<div id="description"></div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-					<span id="description"></span>
-				</div>
-			<div id="description"><p>Convert a note name to frequency.</p>
-</div>
-					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> freq = tone.noteToFrequency(<span class="hljs-string">"A4"</span>); <span class="hljs-comment">//returns 440</span></pre></div>
-		</div>
-		<div id="frequencyToNote" class="method listItem ">
-			<span id="title">.frequencyToNote
-				<span class="params">
-					<span class='syntax'>(</span><span id='name'>freq</span><span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">freq</span>
-						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-						<div id="description"></div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
-					<span id="description"></span>
-				</div>
-			<div id="description"><p>Convert a frequency to a note name (i.e. A4, C#5).</p>
-</div>
-		</div>
-		<div id="intervalToFrequencyRatio" class="method listItem ">
-			<span id="title">.intervalToFrequencyRatio
-				<span class="params">
-					<span class='syntax'>(</span><span id='name'>interval</span><span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">interval</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Interval'>Interval</a><span class='paren'>}</span></span>
-						<div id="description">the number of semitones above the base note</div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
-					<span id="description"><p>the frequency ratio</p>
-</span>
-				</div>
-			<div id="description"><p>Convert an interval (in semitones) to a frequency ratio.</p>
-</div>
-					<div class='example'><div id=exampleTitle>code</div><pre>tone.intervalToFrequencyRatio(<span class="hljs-number">0</span>); <span class="hljs-comment">// returns 1</span>
-tone.intervalToFrequencyRatio(<span class="hljs-number">12</span>); <span class="hljs-comment">// returns 2</span></pre></div>
-		</div>
-		<div id="midiToNote" class="method listItem ">
-			<span id="title">.midiToNote
-				<span class="params">
-					<span class='syntax'>(</span><span id='name'>midiNumber</span><span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">midiNumber</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#MIDI'>MIDI</a><span class='paren'>}</span></span>
-						<div id="description">the midi note number</div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
-					<span id="description"><p>the note&#39;s name and octave</p>
-</span>
-				</div>
-			<div id="description"><p>Convert a midi note number into a note name.</p>
-</div>
-					<div class='example'><div id=exampleTitle>code</div><pre>tone.midiToNote(<span class="hljs-number">60</span>); <span class="hljs-comment">// returns "C3"</span></pre></div>
-		</div>
-		<div id="noteToMidi" class="method listItem ">
-			<span id="title">.noteToMidi
-				<span class="params">
-					<span class='syntax'>(</span><span id='name'>note</span><span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">note</span>
-						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
-						<div id="description">the note name (i.e. &quot;C3&quot;)</div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span><a href='../docs/#MIDI'>MIDI</a><span class='paren'>}</span></span>
-					<span id="description"><p>the midi value of that note</p>
-</span>
-				</div>
-			<div id="description"><p>Convert a note to it&#39;s midi value.</p>
-</div>
-					<div class='example'><div id=exampleTitle>code</div><pre>tone.noteToMidi(<span class="hljs-string">"C3"</span>); <span class="hljs-comment">// returns 60</span></pre></div>
-		</div>
-		<div id="midiToFrequency" class="method listItem ">
-			<span id="title">.midiToFrequency
-				<span class="params">
-					<span class='syntax'>(</span><span id='name'>midi</span><span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">midi</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#MIDI'>MIDI</a><span class='paren'>}</span></span>
-						<div id="description">The midi number to convert.</div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a><span class='paren'>}</span></span>
-					<span id="description"><p>the corresponding frequency value</p>
-</span>
-				</div>
-			<div id="description"><p>Convert a MIDI note to frequency value.</p>
-</div>
-					<div class='example'><div id=exampleTitle>code</div><pre>tone.midiToFrequency(<span class="hljs-number">57</span>); <span class="hljs-comment">// returns 440</span></pre></div>
 		</div>
 </div>
 			<div id="footer"></div>	

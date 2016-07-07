@@ -11,6 +11,7 @@
 	<script type="text/javascript" src="./scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="./scripts/draggabilly.js"></script>
 	<script type="text/javascript" src="./scripts/Logo.js"></script>
+	<script type="text/javascript" src="./scripts/StartAudioContext.js"></script>
 	<script type="text/javascript" src="./scripts/Interface.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="./style/examples.css">
@@ -83,8 +84,8 @@
 		};
 
 		//left and right synthesizers
-		var synthL = new Tone.SimpleSynth(synthSettings).connect(merge.left);
-		var synthR = new Tone.SimpleSynth(synthSettings).connect(merge.right);
+		var synthL = new Tone.Synth(synthSettings).connect(merge.left);
+		var synthR = new Tone.Synth(synthSettings).connect(merge.right);
 
 		//the two Tone.Sequences
 		var partL = new Tone.Sequence(function(time, note){

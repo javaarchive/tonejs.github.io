@@ -30,22 +30,22 @@
 				<div id="description"><p>The number of voices to create</p>
 </div>
 					<span id="name">voice</span> <span class="equalSign">=</span>
-					<span id="default">Tone.MonoSynth</span>
+					<span id="default">Tone.Synth</span>
 				<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
 				<div id="description"><p>The constructor of the voices
-                                           uses <a class="internalLink" href='../docs/#MonoSynth'>Tone.MonoSynth</a> by default.</p>
+                                           uses <a class="internalLink" href='../docs/#Synth'>Tone.Synth</a> by default.</p>
 </div>
 		</div>
 	</div>
 		<div id="examples">
-				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//a polysynth composed of 6 Voices of MonoSynth</span>
-<span class="hljs-keyword">var</span> synth = <span class="hljs-keyword">new</span> Tone.PolySynth(<span class="hljs-number">6</span>, Tone.MonoSynth).toMaster();
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//a polysynth composed of 6 Voices of Synth</span>
+<span class="hljs-keyword">var</span> synth = <span class="hljs-keyword">new</span> Tone.PolySynth(<span class="hljs-number">6</span>, Tone.Synth).toMaster();
 <span class="hljs-comment">//set the attributes using the set interface</span>
 synth.set(<span class="hljs-string">"detune"</span>, -<span class="hljs-number">1200</span>);
 <span class="hljs-comment">//play a chord</span>
 synth.triggerAttackRelease([<span class="hljs-string">"C4"</span>, <span class="hljs-string">"E4"</span>, <span class="hljs-string">"A4"</span>], <span class="hljs-string">"4n"</span>);</pre></div>
 		</div>
-	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>polyphony</span><span class='syntax'>:</span><span class='value number'>4</span></div><div class='row'><span id='name'>volume</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>voice</span><span class='syntax'>:</span><span class='value Tone'>Tone.MonoSynth</span></div></div></div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>polyphony</span><span class='syntax'>:</span><span class='value number'>4</span></div><div class='row'><span id='name'>volume</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>detune</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>voice</span><span class='syntax'>:</span><span class='value Tone'>Tone.Synth</span></div></div></div>
 </div>
 			<div id="members">
 	<div id="title">members</div>
@@ -55,10 +55,17 @@ synth.triggerAttackRelease([<span class="hljs-string">"C4"</span>, <span class="
 			<div id="description"><p>the array of voices</p>
 </div>
 		</div>
+		<div id="detune" class="member listItem">
+			<span id="title">.detune</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Cents'>Cents</a><span class='paren'>}</span></span>
+			<div id="description"><p>The detune in cents</p>
+</div>
+		</div>
 		<div id="volume" class="member listItem">
 			<span id="title">.volume</span>
 				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Decibels'>Decibels</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Decibels'>Decibels</a><span class='paren'>}</span></span>
 			<div id="description"><p>The volume of the output in decibels.</p>
 </div>
 					<div class='example'><div id=exampleTitle>code</div><pre>source.volume.value = -<span class="hljs-number">6</span>;</pre></div>
@@ -75,12 +82,12 @@ synth.triggerAttackRelease([<span class="hljs-string">"C4"</span>, <span class="
 			</span>
 				<div id="paramDescriptions">
 							<span id="name">notes</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a>|Array<span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a>|Array<span class='paren'>}</span></span>
 						<div id="description">The notes to play. Accepts a single
                                  Frequency or an array of frequencies.</div>
 							<span id="name">time</span> <span class="syntax">=</span>
 							<span id="default">now</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">The start time of the note.</div>
 							<span id="name">velocity</span> <span class="syntax">=</span>
 							<span id="default">1</span>
@@ -106,15 +113,15 @@ poly.triggerAttack([<span class="hljs-string">"Ab3"</span>, <span class="hljs-st
 			</span>
 				<div id="paramDescriptions">
 							<span id="name">notes</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a>|Array<span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a>|Array<span class='paren'>}</span></span>
 						<div id="description">The notes to play. Accepts a single
                                  Frequency or an array of frequencies.</div>
 							<span id="name">duration</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">the duration of the note</div>
 							<span id="name">time</span> <span class="syntax">=</span>
 							<span id="default">now</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">if no time is given, defaults to now</div>
 							<span id="name">velocity</span> <span class="syntax">=</span>
 							<span id="default">1</span>
@@ -131,6 +138,8 @@ poly.triggerAttack([<span class="hljs-string">"Ab3"</span>, <span class="hljs-st
 </div>
 					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//trigger a chord for a duration of a half note </span>
 poly.triggerAttackRelease([<span class="hljs-string">"Eb3"</span>, <span class="hljs-string">"G4"</span>, <span class="hljs-string">"C5"</span>], <span class="hljs-string">"2n"</span>);</pre></div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//can pass in an array of durations as well</span>
+poly.triggerAttackRelease([<span class="hljs-string">"Eb3"</span>, <span class="hljs-string">"G4"</span>, <span class="hljs-string">"C5"</span>], [<span class="hljs-string">"2n"</span>, <span class="hljs-string">"4n"</span>, <span class="hljs-string">"4n"</span>]);</pre></div>
 		</div>
 		<div id="triggerRelease" class="method listItem ">
 			<span id="title">.triggerRelease
@@ -140,12 +149,12 @@ poly.triggerAttackRelease([<span class="hljs-string">"Eb3"</span>, <span class="
 			</span>
 				<div id="paramDescriptions">
 							<span id="name">notes</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a>|Array<span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a>|Array<span class='paren'>}</span></span>
 						<div id="description">The notes to play. Accepts a single
                                  Frequency or an array of frequencies.</div>
 							<span id="name">time</span> <span class="syntax">=</span>
 							<span id="default">now</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">When the release will be triggered.</div>
 				</div>
 				<div id="returns">
@@ -173,7 +182,7 @@ poly.triggerAttackRelease([<span class="hljs-string">"Eb3"</span>, <span class="
 						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
 						<div id="description"></div>
 							<span id="name">rampTime</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description"></div>
 				</div>
 				<div id="returns">
@@ -221,7 +230,7 @@ poly.triggerAttackRelease([<span class="hljs-string">"Eb3"</span>, <span class="
 				<div id="paramDescriptions">
 							<span id="name">time</span> <span class="syntax">=</span>
 							<span id="default">now</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">When the notes should be released.</div>
 				</div>
 				<div id="returns">

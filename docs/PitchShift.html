@@ -25,7 +25,7 @@
 		</span>
 		<div id="paramDescriptions">
 					<span id="name">pitch</span>
-				<span class="type"><span class='paren'>{</span><a href='../docs/#Interval'>Interval</a><span class='paren'>}</span></span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Interval'>Interval</a><span class='paren'>}</span></span>
 				<div id="description"><p>The interval to transpose the incoming signal by.</p>
 </div>
 		</div>
@@ -37,13 +37,13 @@
 		<div id="delayTime" class="member listItem">
 			<span id="title">.delayTime</span>
 				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 			<div id="description"><p>The amount of delay on the input signal</p>
 </div>
 		</div>
 		<div id="pitch" class="member listItem">
 			<span id="title">.pitch</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Interval'>Interval</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Interval'>Interval</a><span class='paren'>}</span></span>
 			<div id="description"><p>Repitch the incoming signal by some interval (measured
 in semi-tones).</p>
 </div>
@@ -52,7 +52,7 @@ pitchShift.pitch = <span class="hljs-number">7</span>; <span class="hljs-comment
 		</div>
 		<div id="windowSize" class="member listItem">
 			<span id="title">.windowSize</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 			<div id="description"><p>The window size corresponds roughly to the sample length in a looping sampler. 
 Smaller values are desirable for a less noticeable delay time of the pitch shifted
 signal, but larger values will result in smoother pitch shifting for larger intervals. 
@@ -63,14 +63,14 @@ A nominal range of 0.03 to 0.1 is recommended.</p>
 		<div id="feedback" class="member listItem">
 			<span id="title">.feedback</span>
 				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
 			<div id="description"><p>The amount of signal which is fed back into the effect input.</p>
 </div>
 		</div>
 		<div id="wet" class="member listItem">
 			<span id="title">.wet</span>
 				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
 			<div id="description"><p>The wet control is how much of the effected
  will pass through to the output. 1 = 100% effected
  signal, 0 = 100% dry signal.</p>
