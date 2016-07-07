@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">MidSideSplit</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<div id="description"><p>Mid/Side processing separates the the &#39;mid&#39; signal 
+        (which comes out of both the left and the right channel) 
+        and the &#39;side&#39; (which only comes out of the the side channels). <br><br>
+        <code>
+        Mid = (Left+Right)/sqrt(2);   // obtain mid-signal from left and right<br>
+        Side = (Left-Right)/sqrt(2);   // obtain side-signal from left and righ<br>
+        </code></p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">MidSideSplit</span>
+		<span class="params">
+			<span class='syntax'>(</span><span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+		</div>
+	</div>
+	
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="mid" class="member listItem">
+			<span id="title">.mid</span>
+			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Expr'>Tone.Expr</a><span class='paren'>}</span></span>
+			<div id="description"><p>The mid send. Connect to mid processing. Alias for
+ <code>output[0]</code></p>
+</div>
+		</div>
+		<div id="side" class="member listItem">
+			<span id="title">.side</span>
+			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Expr'>Tone.Expr</a><span class='paren'>}</span></span>
+			<div id="description"><p>The side output. Connect to side processing. Alias for
+ <code>output[1]</code></p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#MidSideSplit'>Tone.MidSideSplit</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>clean up</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

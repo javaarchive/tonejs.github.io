@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">Transport</span><span id="extends"> &#8594; <a href='#Emitter'>Tone.Emitter</a></span>
+	<div id="description"><p>Transport for timing musical events.
+         Supports tempo curves and time changes. Unlike browser-based timing (setInterval, requestAnimationFrame)
+         <a class="internalLink" href='../docs/#Transport'>Tone.Transport</a> timing events pass in the exact time of the scheduled event
+         in the argument of the callback function. Pass that time value to the object
+         you&#39;re scheduling. <br><br>
+         A single transport is created for you when the library is initialized. 
+         <br><br>
+         The transport emits the events: &quot;start&quot;, &quot;stop&quot;, &quot;pause&quot;, and &quot;loop&quot; which are
+         called with the time of that event as the argument.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">singleton</span>
+			<span>Tone.</span><span id="class">Transport</span>
+		<span class="params">
+			<span class='syntax'>(</span><span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//repeated event every 8th note</span>
+Tone.Transport.setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">time</span>)</span>{
+	<span class="hljs-comment">//do something with the time</span>
+}, <span class="hljs-string">"8n"</span>);</pre></div>
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//one time event 1 second in the future</span>
+Tone.Transport.setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">time</span>)</span>{
+	<span class="hljs-comment">//do something with the time</span>
+}, <span class="hljs-number">1</span>);</pre></div>
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//event fixed to the Transports timeline. </span>
+Tone.Transport.setTimeline(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">time</span>)</span>{
+	<span class="hljs-comment">//do something with the time</span>
+}, <span class="hljs-string">"16:0:0"</span>);</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>bpm</span><span class='syntax'>:</span><span class='value number'>120</span></div><div class='row'><span id='name'>swing</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>swingSubdivision</span><span class='syntax'>:</span><span class='value string'>&quot;16n&quot;</span></div><div class='row'><span id='name'>timeSignature</span><span class='syntax'>:</span><span class='value number'>4</span></div><div class='row'><span id='name'>loopStart</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>loopEnd</span><span class='syntax'>:</span><span class='value string'>&quot;4m&quot;</span></div><div class='row'><span id='name'>PPQ</span><span class='syntax'>:</span><span class='value number'>48</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="loop" class="member listItem">
+			<span id="title">.loop</span>
+			<span class="type"><span class='paren'>{</span>boolean<span class='paren'>}</span></span>
+			<div id="description"><p>If the transport loops or not.</p>
+</div>
+		</div>
+		<div id="bpm" class="member listItem">
+			<span id="title">.bpm</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#BPM'>BPM</a><span class='paren'>}</span></span>
+			<div id="description"><p>The Beats Per Minute of the Transport.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>Tone.Transport.bpm.value = <span class="hljs-number">80</span>;
+<span class="hljs-comment">//ramp the bpm to 120 over 10 seconds</span>
+Tone.Transport.bpm.rampTo(<span class="hljs-number">120</span>, <span class="hljs-number">10</span>);</pre></div>
+		</div>
+		<div id="state" class="member listItem">
+			<span id="title">.state</span>
+			<span class="type"><span class='paren'>{</span>Tone.State<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>Returns the playback state of the source, either &quot;started&quot;, &quot;stopped&quot;, or &quot;paused&quot;</p>
+</div>
+		</div>
+		<div id="timeSignature" class="member listItem">
+			<span id="title">.timeSignature</span>
+			<span class="type"><span class='paren'>{</span>Number|Array<span class='paren'>}</span></span>
+			<div id="description"><p>The time signature as just the numerator over 4. 
+ For example 4/4 would be just 4 and 6/8 would be 3.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//common time</span>
+Tone.Transport.timeSignature = <span class="hljs-number">4</span>;
+<span class="hljs-comment">// 7/8</span>
+Tone.Transport.timeSignature = [<span class="hljs-number">7</span>, <span class="hljs-number">8</span>];
+<span class="hljs-comment">//this will be reduced to a single number</span>
+Tone.Transport.timeSignature; <span class="hljs-comment">//returns 3.5</span></pre></div>
+		</div>
+		<div id="loopStart" class="member listItem">
+			<span id="title">.loopStart</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>When the <a class="internalLink" href='../docs/#Transport.loop'>Tone.Transport.loop</a> = true, this is the starting position of the loop.</p>
+</div>
+		</div>
+		<div id="loopEnd" class="member listItem">
+			<span id="title">.loopEnd</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>When the <a class="internalLink" href='../docs/#Transport.loop'>Tone.Transport.loop</a> = true, this is the ending position of the loop.</p>
+</div>
+		</div>
+		<div id="swing" class="member listItem">
+			<span id="title">.swing</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<div id="description"><p>The swing value. Between 0-1 where 1 equal to 
+ the note + half the subdivision.</p>
+</div>
+		</div>
+		<div id="swingSubdivision" class="member listItem">
+			<span id="title">.swingSubdivision</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>Set the subdivision which the swing will be applied to. 
+ The default values is a 16th note. Value must be less 
+ than a quarter note.</p>
+</div>
+		</div>
+		<div id="position" class="member listItem">
+			<span id="title">.position</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#TransportTime'>TransportTime</a><span class='paren'>}</span></span>
+			<div id="description"><p>The Transport&#39;s position in MEASURES:BEATS:SIXTEENTHS.
+ Setting the value will jump to that position right away.</p>
+</div>
+		</div>
+		<div id="progress" class="member listItem">
+			<span id="title">.progress</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<div id="description"><p>The Transport&#39;s loop position as a normalized value. Always
+ returns 0 if the transport if loop is not true.</p>
+</div>
+		</div>
+		<div id="ticks" class="member listItem">
+			<span id="title">.ticks</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Ticks'>Ticks</a><span class='paren'>}</span></span>
+			<div id="description"><p>The transports current tick position.</p>
+</div>
+		</div>
+		<div id="PPQ" class="member listItem">
+			<span id="title">.PPQ</span>
+			<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+			<div id="description"><p>Pulses Per Quarter note. This is the smallest resolution
+ the Transport timing supports. This should be set once
+ on initialization and not set again. Changing this value 
+ after other objects have been created can cause problems.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="schedule" class="method listItem ">
+			<span id="title">.schedule
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>callback</span><span class='syntax'>, </span><span id='name'>time</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">The callback to be invoked at the time.</div>
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The time to invoke the callback at.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+					<span id="description"><p>The id of the event which can be used for canceling the event.</p>
+</span>
+				</div>
+			<div id="description"><p>Schedule an event along the timeline.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//trigger the callback when the Transport reaches the desired time</span>
+Tone.Transport.schedule(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">time</span>)</span>{
+	envelope.triggerAttack(time);
+}, <span class="hljs-string">"128i"</span>);</pre></div>
+		</div>
+		<div id="scheduleRepeat" class="method listItem ">
+			<span id="title">.scheduleRepeat
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>callback</span><span class='syntax'>, </span><span id='name'>interval</span>[<span class='syntax'>, </span><span id='name'>startTime</span>][<span class='syntax'>, </span><span id='name'>duration</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">The callback to invoke.</div>
+							<span id="name">interval</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The duration between successive
+                              callbacks.</div>
+							<span id="name">startTime</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When along the timeline the events should
+                              start being invoked.</div>
+							<span id="name">duration</span> <span class="syntax">=</span>
+							<span id="default">Infinity</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">How long the event should repeat.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+					<span id="description"><p>The ID of the scheduled event. Use this to cancel
+                          the event.</p>
+</span>
+				</div>
+			<div id="description"><p>Schedule a repeated event along the timeline. The event will fire
+ at the <code>interval</code> starting at the <code>startTime</code> and for the specified
+ <code>duration</code>.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//a callback invoked every eighth note after the first measure</span>
+Tone.Transport.scheduleRepeat(callback, <span class="hljs-string">"8n"</span>, <span class="hljs-string">"1m"</span>);</pre></div>
+		</div>
+		<div id="scheduleOnce" class="method listItem ">
+			<span id="title">.scheduleOnce
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>callback</span><span class='syntax'>, </span><span id='name'>time</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">The callback to invoke once.</div>
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The time the callback should be invoked.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+					<span id="description"><p>The ID of the scheduled event.</p>
+</span>
+				</div>
+			<div id="description"><p>Schedule an event that will be removed after it is invoked. 
+ Note that if the given time is less than the current transport time, 
+ the event will be invoked immediately.</p>
+</div>
+		</div>
+		<div id="clear" class="method listItem ">
+			<span id="title">.clear
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>eventId</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">eventId</span>
+						<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+						<div id="description">The id of the event.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Transport'>Tone.Transport</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clear the passed in event id from the timeline</p>
+</div>
+		</div>
+		<div id="cancel" class="method listItem ">
+			<span id="title">.cancel
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>after</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">after</span> <span class="syntax">=</span>
+							<span id="default">0</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">Clear all events after
+                         this time.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Transport'>Tone.Transport</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Remove scheduled events from the timeline after
+ the given time. Repeated events will be removed
+ if their startTime is after the given time</p>
+</div>
+		</div>
+		<div id="quantize" class="method listItem ">
+			<span id="title">.quantize
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span>[<span class='syntax'>, </span><span id='name'>subdivision</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The time value to quantize to the given subdivision</div>
+							<span id="name">subdivision</span> <span class="syntax">=</span>
+							<span id="default">&quot;4n&quot;</span>
+						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+						<div id="description">The subdivision to quantize to.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+					<span id="description"><p>the time in seconds until the next subdivision.</p>
+</span>
+				</div>
+			<div id="description"><p>Returns the time closest time (equal to or after the given time) that aligns 
+ to the subidivision.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>Tone.Transport.bpm.value = <span class="hljs-number">120</span>;
+Tone.Transport.quantize(<span class="hljs-string">"3 * 4n"</span>, <span class="hljs-string">"1m"</span>); <span class="hljs-comment">//return 0.5</span>
+<span class="hljs-comment">//if the clock is started, it will return a value less than 0.5</span></pre></div>
+		</div>
+		<div id="start" class="method listItem ">
+			<span id="title">.start
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>][<span class='syntax'>, </span><span id='name'>offset</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The time when the transport should start.</div>
+							<span id="name">offset</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The timeline offset to start the transport.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Transport'>Tone.Transport</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Start the transport and all sources synced to the transport.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//start the transport in one second starting at beginning of the 5th measure. </span>
+Tone.Transport.start(<span class="hljs-string">"+1"</span>, <span class="hljs-string">"4:0:0"</span>);</pre></div>
+		</div>
+		<div id="stop" class="method listItem ">
+			<span id="title">.stop
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The time when the transport should stop.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Transport'>Tone.Transport</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Stop the transport and all sources synced to the transport.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>Tone.Transport.stop();</pre></div>
+		</div>
+		<div id="pause" class="method listItem ">
+			<span id="title">.pause
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description"></div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Transport'>Tone.Transport</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Pause the transport and all sources synced to the transport.</p>
+</div>
+		</div>
+		<div id="setLoopPoints" class="method listItem ">
+			<span id="title">.setLoopPoints
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>startPosition</span><span class='syntax'>, </span><span id='name'>endPosition</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">startPosition</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description"></div>
+							<span id="name">endPosition</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description"></div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Transport'>Tone.Transport</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Set the loop start and stop at the same time.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//loop over the first measure</span>
+Tone.Transport.setLoopPoints(<span class="hljs-number">0</span>, <span class="hljs-string">"1m"</span>);
+Tone.Transport.loop = <span class="hljs-literal">true</span>;</pre></div>
+		</div>
+		<div id="syncSignal" class="method listItem ">
+			<span id="title">.syncSignal
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>signal</span>[<span class='syntax'>, </span><span id='name'>ratio</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">signal</span>
+						<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Signal'>Tone.Signal</a><span class='paren'>}</span></span>
+						<div id="description"></div>
+							<span id="name">ratio</span>
+						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+						<div id="description">Optionally pass in the ratio between
+                        the two signals. Otherwise it will be computed
+                        based on their current values.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Transport'>Tone.Transport</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Attaches the signal to the tempo control signal so that 
+ any changes in the tempo will change the signal in the same
+ ratio.</p>
+</div>
+		</div>
+		<div id="unsyncSignal" class="method listItem ">
+			<span id="title">.unsyncSignal
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>signal</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">signal</span>
+						<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Signal'>Tone.Signal</a><span class='paren'>}</span></span>
+						<div id="description"></div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Transport'>Tone.Transport</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Unsyncs a previously synced signal from the transport&#39;s control. 
+ See <a class="internalLink" href='../docs/#Transport.syncSignal'>Tone.Transport.syncSignal</a>.</p>
+</div>
+		</div>
+		<div id="on" class="method listItem ">
+			<span id="title">.on
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>event</span><span class='syntax'>, </span><span id='name'>callback</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">event</span>
+						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+						<div id="description">The name of the event to listen for.</div>
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">The callback to invoke when the
+                               event is triggered</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Emitter'>Tone.Emitter</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Bind a callback to a specific event.</p>
+</div>
+		</div>
+		<div id="off" class="method listItem ">
+			<span id="title">.off
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>event</span>[<span class='syntax'>, </span><span id='name'>callback</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">event</span>
+						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+						<div id="description">The event to stop listening to.</div>
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">The callback which was bound to 
+                               the event with Tone.Emitter.on.
+                               If no callback is given, all callbacks
+                               events are removed.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Emitter'>Tone.Emitter</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Remove the event listener.</p>
+</div>
+		</div>
+		<div id="trigger" class="method listItem ">
+			<span id="title">.trigger
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>event</span><span class='syntax'>, </span><span id='name'></span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">event</span>
+						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+						<div id="description">The name of the event.</div>
+							<span id="name"></span>
+						<span class="type"></span>
+						<div id="description"></div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Emitter'>Tone.Emitter</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Invoke all of the callbacks bound to the event
+ with any arguments passed in.</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

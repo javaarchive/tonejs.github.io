@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">SignalBase</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<div id="description"><p>Base class for all Signals. Used Internally.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">SignalBase</span>
+		<span class="params">
+			<span class='syntax'>(</span><span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+		</div>
+	</div>
+	
+</div>
+			
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="connect" class="method listItem ">
+			<span id="title">.connect
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>node</span>[<span class='syntax'>, </span><span id='name'>outputNumber</span>][<span class='syntax'>, </span><span id='name'>inputNumber</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">node</span>
+						<span class="type"><span class='paren'>{</span>AudioParam|AudioNode|<a class="internalLink" href='../docs/#Signal'>Tone.Signal</a>|Tone<span class='paren'>}</span></span>
+						<div id="description"></div>
+							<span id="name">outputNumber</span> <span class="syntax">=</span>
+							<span id="default">0</span>
+						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+						<div id="description">The output number to connect from.</div>
+							<span id="name">inputNumber</span> <span class="syntax">=</span>
+							<span id="default">0</span>
+						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+						<div id="description">The input number to connect to.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#SignalBase'>Tone.SignalBase</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>When signals connect to other signals or AudioParams, 
+ they take over the output value of that signal or AudioParam. 
+ For all other nodes, the behavior is the same as a default <code>connect</code>.</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">CtrlInterpolate</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<div id="description"><p><a class="internalLink" href='../docs/#CtrlInterpolate'>Tone.CtrlInterpolate</a> will interpolate between given values based
+        on the &quot;index&quot; property. Passing in an array or object literal
+        will interpolate each of the parameters. Note (i.e. &quot;C3&quot;)
+        and Time (i.e. &quot;4n + 2&quot;) can be interpolated. All other values are
+        assumed to be numbers.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">CtrlInterpolate</span>
+		<span class="params">
+			<span class='syntax'>(</span><span id='name'>values</span><span class='syntax'>, </span><span id='name'>index</span><span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">values</span>
+				<span class="type"><span class='paren'>{</span>Array<span class='paren'>}</span></span>
+				<div id="description"><p>The array of values to interpolate over</p>
+</div>
+					<span id="name">index</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+				<div id="description"><p>The initial interpolation index.</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> interp = <span class="hljs-keyword">new</span> Tone.CtrlInterpolate([<span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">9</span>, <span class="hljs-number">4</span>]);
+interp.index = <span class="hljs-number">0.75</span>;
+interp.value; <span class="hljs-comment">//returns 1.5</span></pre></div>
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> interp = <span class="hljs-keyword">new</span> Tone.CtrlInterpolate([
+	[<span class="hljs-string">"C3"</span>, <span class="hljs-string">"G4"</span>, <span class="hljs-string">"E5"</span>],
+	[<span class="hljs-string">"D4"</span>, <span class="hljs-string">"F#4"</span>, <span class="hljs-string">"E5"</span>],
+]);</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>index</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>values</span><span class='syntax'>:</span><span class='value string'>&quot;[]&quot;</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="values" class="member listItem">
+			<span id="title">.values</span>
+			<span class="type"><span class='paren'>{</span>Array<span class='paren'>}</span></span>
+			<div id="description"><p>The values to interpolate between</p>
+</div>
+		</div>
+		<div id="index" class="member listItem">
+			<span id="title">.index</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<div id="description"><p>The interpolated index between values. For example: a value of 1.5
+ would interpolate equally between the value at index 1
+ and the value at index 2.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>interp.index = <span class="hljs-number">0</span>; 
+interp.value; <span class="hljs-comment">//returns the value at 0</span>
+interp.index = <span class="hljs-number">0.5</span>;
+interp.value; <span class="hljs-comment">//returns the value between indices 0 and 1.</span></pre></div>
+		</div>
+		<div id="value" class="member listItem">
+			<span id="title">.value</span>
+			<span class="type"><span class='paren'>{</span>*<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>The current interpolated value based on the index</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#CtrlInterpolate'>Tone.CtrlInterpolate</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

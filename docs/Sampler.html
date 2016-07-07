@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">Sampler</span><span id="extends"> &#8594; <a href='#Instrument'>Tone.Instrument</a></span>
+	<div id="description"><p>A sampler instrument which plays an audio buffer 
+        through an amplitude envelope and a filter envelope. The sampler takes
+        an Object in the constructor which maps a sample name to the URL 
+        of the sample. Nested Objects will be flattened and can be accessed using
+        a dot notation (see the example).
+        <img src="https://docs.google.com/drawings/d/1UK-gi_hxzKDz9Dh4ByyOptuagMOQxv52WxN12HwvtW8/pub?w=931&h=241"></p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">Sampler</span>
+		<span class="params">
+			<span class='syntax'>(</span><span id='name'>urls</span>[<span class='syntax'>, </span><span id='name'>options</span>]<span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">urls</span>
+				<span class="type"><span class='paren'>{</span>Object|string<span class='paren'>}</span></span>
+				<div id="description"><p>the urls of the audio file</p>
+</div>
+					<span id="name">options</span>
+				<span class="type"><span class='paren'>{</span>Object<span class='paren'>}</span></span>
+				<div id="description"><p>the options object for the synth</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> sampler = <span class="hljs-keyword">new</span> Sampler({
+	A : {
+		<span class="hljs-number">1</span> : <span class="hljs-string">"./audio/casio/A1.mp3"</span>,
+		<span class="hljs-number">2</span> : <span class="hljs-string">"./audio/casio/A2.mp3"</span>,
+	},
+	<span class="hljs-string">"B.1"</span> : <span class="hljs-string">"./audio/casio/B1.mp3"</span>,
+}).toMaster();
+
+<span class="hljs-comment">//listen for when all the samples have loaded</span>
+Tone.Buffer.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+	sampler.triggerAttack(<span class="hljs-string">"A.1"</span>, time, velocity);
+};</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>sample</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>pitch</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>player</span><span class='syntax'>:</span><span class='syntax'>{</span><div class='row'><span id='name'>loop</span><span class='syntax'>:</span><span class='value number'>false</span></div><span class='syntax'>}</span></div><div class='row'><span id='name'>envelope</span><span class='syntax'>:</span><span class='syntax'>{</span><div class='row'><span id='name'>attack</span><span class='syntax'>:</span><span class='value number'>0.001</span></div><div class='row'><span id='name'>decay</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>sustain</span><span class='syntax'>:</span><span class='value number'>1</span></div><div class='row'><span id='name'>release</span><span class='syntax'>:</span><span class='value number'>0.1</span></div><span class='syntax'>}</span></div><div class='row'><span id='name'>filterEnvelope</span><span class='syntax'>:</span><span class='syntax'>{</span><div class='row'><span id='name'>attack</span><span class='syntax'>:</span><span class='value number'>0.001</span></div><div class='row'><span id='name'>decay</span><span class='syntax'>:</span><span class='value number'>0.001</span></div><div class='row'><span id='name'>sustain</span><span class='syntax'>:</span><span class='value number'>1</span></div><div class='row'><span id='name'>release</span><span class='syntax'>:</span><span class='value number'>0.5</span></div><div class='row'><span id='name'>baseFrequency</span><span class='syntax'>:</span><span class='value number'>20</span></div><div class='row'><span id='name'>octaves</span><span class='syntax'>:</span><span class='value number'>10</span></div><span class='syntax'>}</span></div><div class='row'><span id='name'>filter</span><span class='syntax'>:</span><span class='syntax'>{</span><div class='row'><span id='name'>type</span><span class='syntax'>:</span><span class='value string'>&quot;lowpass&quot;</span></div><span class='syntax'>}</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="player" class="member listItem">
+			<span id="title">.player</span>
+			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Player'>Tone.Player</a><span class='paren'>}</span></span>
+			<div id="description"><p>The sample player.</p>
+</div>
+		</div>
+		<div id="envelope" class="member listItem">
+			<span id="title">.envelope</span>
+			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#AmplitudeEnvelope'>Tone.AmplitudeEnvelope</a><span class='paren'>}</span></span>
+			<div id="description"><p>The amplitude envelope.</p>
+</div>
+		</div>
+		<div id="filterEnvelope" class="member listItem">
+			<span id="title">.filterEnvelope</span>
+			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#FrequencyEnvelope'>Tone.FrequencyEnvelope</a><span class='paren'>}</span></span>
+			<div id="description"><p>The filter envelope.</p>
+</div>
+		</div>
+		<div id="filter" class="member listItem">
+			<span id="title">.filter</span>
+			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Filter'>Tone.Filter</a><span class='paren'>}</span></span>
+			<div id="description"><p>The filter.</p>
+</div>
+		</div>
+		<div id="sample" class="member listItem">
+			<span id="title">.sample</span>
+			<span class="type"><span class='paren'>{</span>number|string<span class='paren'>}</span></span>
+			<div id="description"><p>The name of the sample to trigger.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//set the sample to "A.2" for next time the sample is triggered</span>
+sampler.sample = <span class="hljs-string">"A.2"</span>;</pre></div>
+		</div>
+		<div id="reverse" class="member listItem">
+			<span id="title">.reverse</span>
+			<span class="type"><span class='paren'>{</span>boolean<span class='paren'>}</span></span>
+			<div id="description"><p>The direction the buffer should play in</p>
+</div>
+		</div>
+		<div id="pitch" class="member listItem">
+			<span id="title">.pitch</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Interval'>Interval</a><span class='paren'>}</span></span>
+			<div id="description"><p>Repitch the sampled note by some interval (measured
+in semi-tones).</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>sampler.pitch = -<span class="hljs-number">12</span>; <span class="hljs-comment">//down one octave</span>
+sampler.pitch = <span class="hljs-number">7</span>; <span class="hljs-comment">//up a fifth</span></pre></div>
+		</div>
+		<div id="volume" class="member listItem">
+			<span id="title">.volume</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Decibels'>Decibels</a><span class='paren'>}</span></span>
+			<div id="description"><p>The volume of the output in decibels.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>source.volume.value = -<span class="hljs-number">6</span>;</pre></div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="triggerAttack" class="method listItem ">
+			<span id="title">.triggerAttack
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>sample</span>][<span class='syntax'>, </span><span id='name'>time</span>][<span class='syntax'>, </span><span id='name'>velocity</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">sample</span>
+						<span class="type"><span class='paren'>{</span>string<span class='paren'>}</span></span>
+						<div id="description">The name of the sample to trigger, defaults to
+                         the last sample used.</div>
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The time when the sample should start</div>
+							<span id="name">velocity</span> <span class="syntax">=</span>
+							<span id="default">1</span>
+						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+						<div id="description">The velocity of the note</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Sampler'>Tone.Sampler</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Start the sample and simultaneously trigger the envelopes.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>sampler.triggerAttack(<span class="hljs-string">"B.1"</span>);</pre></div>
+		</div>
+		<div id="triggerRelease" class="method listItem ">
+			<span id="title">.triggerRelease
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The time when the note should release</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Sampler'>Tone.Sampler</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Start the release portion of the sample. Will stop the sample once the 
+ envelope has fully released.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>sampler.triggerRelease();</pre></div>
+		</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Sampler'>Tone.Sampler</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up.</p>
+</div>
+		</div>
+		<div id="triggerAttackRelease" class="method listItem ">
+			<span id="title">.triggerAttackRelease
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>note</span><span class='syntax'>, </span><span id='name'>duration</span>[<span class='syntax'>, </span><span id='name'>time</span>][<span class='syntax'>, </span><span id='name'>velocity</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">note</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a><span class='paren'>}</span></span>
+						<div id="description">The note to trigger.</div>
+							<span id="name">duration</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">How long the note should be held for before
+                         triggering the release.</div>
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When the note should be triggered.</div>
+							<span id="name">velocity</span> <span class="syntax">=</span>
+							<span id="default">1</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+						<div id="description">The velocity the note should be triggered at.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Instrument'>Tone.Instrument</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Trigger the attack and then the release after the duration.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//trigger "C4" for the duration of an 8th note</span>
+synth.triggerAttackRelease(<span class="hljs-string">"C4"</span>, <span class="hljs-string">"8n"</span>);</pre></div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

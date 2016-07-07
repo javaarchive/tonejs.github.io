@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">MultibandSplit</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<div id="description"><p>Split the incoming signal into three bands (low, mid, high)
+        with two crossover frequency controls.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">MultibandSplit</span>
+		<span class="params">
+			<span class='syntax'>(</span>[<span id='name'>lowFrequency</span>][<span class='syntax'>, </span><span id='name'>highFrequency</span>]<span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">lowFrequency</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a>|Object<span class='paren'>}</span></span>
+				<div id="description"><p>the low/mid crossover frequency</p>
+</div>
+					<span id="name">highFrequency</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a><span class='paren'>}</span></span>
+				<div id="description"><p>the mid/high crossover frequency</p>
+</div>
+		</div>
+	</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>lowFrequency</span><span class='syntax'>:</span><span class='value number'>400</span></div><div class='row'><span id='name'>highFrequency</span><span class='syntax'>:</span><span class='value number'>2500</span></div><div class='row'><span id='name'>Q</span><span class='syntax'>:</span><span class='value number'>1</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="low" class="member listItem">
+			<span id="title">.low</span>
+			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Filter'>Tone.Filter</a><span class='paren'>}</span></span>
+			<div id="description"><p>The low band. Alias for <code>output[0]</code></p>
+</div>
+		</div>
+		<div id="mid" class="member listItem">
+			<span id="title">.mid</span>
+			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Filter'>Tone.Filter</a><span class='paren'>}</span></span>
+			<div id="description"><p>The mid band output. Alias for <code>output[1]</code></p>
+</div>
+		</div>
+		<div id="high" class="member listItem">
+			<span id="title">.high</span>
+			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Filter'>Tone.Filter</a><span class='paren'>}</span></span>
+			<div id="description"><p>The high band output. Alias for <code>output[2]</code></p>
+</div>
+		</div>
+		<div id="lowFrequency" class="member listItem">
+			<span id="title">.lowFrequency</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a><span class='paren'>}</span></span>
+			<div id="description"><p>The low/mid crossover frequency.</p>
+</div>
+		</div>
+		<div id="highFrequency" class="member listItem">
+			<span id="title">.highFrequency</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a><span class='paren'>}</span></span>
+			<div id="description"><p>The mid/high crossover frequency.</p>
+</div>
+		</div>
+		<div id="Q" class="member listItem">
+			<span id="title">.Q</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+			<div id="description"><p>The quality of all the filters</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#MultibandSplit'>Tone.MultibandSplit</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up.</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

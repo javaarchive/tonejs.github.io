@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">CtrlPattern</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<div id="description"><p>Generate patterns from an array of values.
+        Has a number of arpeggiation and randomized
+        selection patterns. 
+          <ul>
+             <li>&quot;up&quot; - cycles upward</li>
+             <li>&quot;down&quot; - cycles downward</li>
+             <li>&quot;upDown&quot; - up then and down</li>
+             <li>&quot;downUp&quot; - cycles down then and up</li>
+             <li>&quot;alternateUp&quot; - jump up two and down one</li>
+             <li>&quot;alternateDown&quot; - jump down two and up one</li>
+             <li>&quot;random&quot; - randomly select an index</li>
+             <li>&quot;randomWalk&quot; - randomly moves one index away from the current position</li>
+             <li>&quot;randomOnce&quot; - randomly select an index without repeating until all values have been chosen.</li>
+            </ul></p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">CtrlPattern</span>
+		<span class="params">
+			<span class='syntax'>(</span><span id='name'>values</span>[<span class='syntax'>, </span><span id='name'>type</span>]<span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">values</span>
+				<span class="type"><span class='paren'>{</span>Array<span class='paren'>}</span></span>
+				<div id="description"><p>An array of options to choose from.</p>
+</div>
+					<span id="name">type</span>
+				<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#CtrlPattern.Type'>Tone.CtrlPattern.Type</a><span class='paren'>}</span></span>
+				<div id="description"><p>The name of the pattern.</p>
+</div>
+		</div>
+	</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>type</span><span class='syntax'>:</span><span class='value Tone'>Tone.CtrlPattern.Type.Up</span></div><div class='row'><span id='name'>values</span><span class='syntax'>:</span><span class='value string'>&quot;[]&quot;</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="values" class="member listItem">
+			<span id="title">.values</span>
+			<span class="type"><span class='paren'>{</span>Array<span class='paren'>}</span></span>
+			<div id="description"><p>The array of values to arpeggiate over</p>
+</div>
+		</div>
+		<div id="index" class="member listItem">
+			<span id="title">.index</span>
+			<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+			<div id="description"><p>The current position in the values array</p>
+</div>
+		</div>
+		<div id="value" class="member listItem">
+			<span id="title">.value</span>
+			<span class="type"><span class='paren'>{</span>*<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>The value at the current index of the pattern.</p>
+</div>
+		</div>
+		<div id="type" class="member listItem">
+			<span id="title">.type</span>
+			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#CtrlPattern.Type'>Tone.CtrlPattern.Type</a><span class='paren'>}</span></span>
+			<div id="description"><p>The pattern used to select the next
+ item from the values array</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="next" class="method listItem ">
+			<span id="title">.next
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>*<span class='paren'>}</span></span>
+					<span id="description"><p>The next value</p>
+</span>
+				</div>
+			<div id="description"><p>Return the next value given the current position
+ and pattern.</p>
+</div>
+		</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#CtrlPattern'>Tone.CtrlPattern</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

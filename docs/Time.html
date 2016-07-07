@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Time</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="content">
+			<div id="typedef">
+				<div id="name">Time</div>
+				<div id="description"><p>Time can be described in a number of ways. Read more <a href="https://github.com/Tonejs/Tone.js/wiki/Time">Time</a>.</p>
+ <ul>
+ <li>Numbers, which will be taken literally as the time (in seconds).</li>
+ <li>Notation, (&quot;4n&quot;, &quot;8t&quot;) describes time in BPM and time signature relative values.</li>
+ <li>TransportTime, (&quot;4:3:2&quot;) will also provide tempo and time signature relative times 
+ in the form BARS:QUARTERS:SIXTEENTHS.</li>
+ <li>Frequency, (&quot;8hz&quot;) is converted to the length of the cycle in seconds.</li>
+ <li>Now-Relative, (&quot;+1&quot;) prefix any of the above with &quot;+&quot; and it will be interpreted as 
+ &quot;the current time plus whatever expression follows&quot;.</li>
+ <li>Expressions, (&quot;3:0 + 2 - (1m / 7)&quot;) any of the above can also be combined 
+ into a mathematical expression which will be evaluated to compute the desired time.</li>
+ <li>No Argument, for methods which accept time, no argument will be interpreted as 
+ &quot;now&quot; (i.e. the currentTime).</li>
+ </ul></div>
+			</div>
+		</div>
+	</body>
+</html>
+ng</p>
+</div>
+					<span id="name">units</span>
+				<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+				<div id="description"><p>Unit values</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre>Tone.Time(<span class="hljs-number">4</span>, <span class="hljs-string">"n"</span>)</pre></div>
+		</div>
+	
+</div>
+			
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="_evalValue" class="method listItem ">
+			<span id="title">._evalValue
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+					<span id="description"></span>
+				</div>
+			<div id="description"><p>Evaluate this time objects own value</p>
+</div>
+		</div>
+		<div id="_parseExpression" class="method listItem ">
+			<span id="title">._parseExpression
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+			<div id="description"></div>
+		</div>
+		<div id="_parseUnary" class="method listItem ">
+			<span id="title">._parseUnary
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+			<div id="description"></div>
+		</div>
+		<div id="_parsePrimary" class="method listItem ">
+			<span id="title">._parsePrimary
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+			<div id="description"></div>
+		</div>
+		<div id="_traverseTree" class="method listItem ">
+			<span id="title">._traverseTree
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+			<div id="description"></div>
+		</div>
+		<div id="add" class="method listItem ">
+			<span id="title">.add
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+			<div id="description"></div>
+		</div>
+		<div id="sub" class="method listItem ">
+			<span id="title">.sub
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+			<div id="description"></div>
+		</div>
+		<div id="mult" class="method listItem ">
+			<span id="title">.mult
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+			<div id="description"></div>
+		</div>
+		<div id="div" class="method listItem ">
+			<span id="title">.div
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+			<div id="description"></div>
+		</div>
+		<div id="quantize" class="method listItem ">
+			<span id="title">.quantize
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+			<div id="description"></div>
+		</div>
+		<div id="fromNow" class="method listItem ">
+			<span id="title">.fromNow
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+			<div id="description"></div>
+		</div>
+		<div id="eval" class="method listItem ">
+			<span id="title">.eval
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+			<div id="description"></div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

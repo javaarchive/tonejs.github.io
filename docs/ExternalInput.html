@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">ExternalInput</span><span id="extends"> &#8594; <a href='#Source'>Tone.Source</a></span>
+	<div id="description"><p><a class="internalLink" href='../docs/#ExternalInput'>Tone.ExternalInput</a> is a WebRTC Audio Input. Check 
+         <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_API">Media Stream API Support</a>
+         to see which browsers are supported. As of
+         writing this, Chrome, Firefox, and Opera 
+         support Media Stream. Chrome allows enumeration 
+         of the sources, and access to device name over a 
+         secure (HTTPS) connection. See <a href="https://simpl.info/getusermedia/sources/index.html">https://simpl.info</a> 
+         vs <a href="https://simpl.info/getusermedia/sources/index.html">http://simple.info</a> 
+         on a Chrome browser for the difference.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">ExternalInput</span>
+		<span class="params">
+			<span class='syntax'>(</span>[<span id='name'>inputNum</span>]<span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">inputNum</span> <span class="equalSign">=</span>
+					<span id="default">0</span>
+				<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+				<div id="description"><p>If multiple inputs are present, select the input number. Chrome only.</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//select the third input</span>
+<span class="hljs-keyword">var</span> motu = <span class="hljs-keyword">new</span> Tone.ExternalInput(<span class="hljs-number">3</span>);
+
+<span class="hljs-comment">//opening the input asks the user to activate their mic</span>
+motu.open(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+	<span class="hljs-comment">//opening is activates the microphone</span>
+	<span class="hljs-comment">//starting lets audio through</span>
+	motu.start(<span class="hljs-number">10</span>);
+});</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>inputNum</span><span class='syntax'>:</span><span class='value number'>0</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="supported" class="member listItem">
+			<span id="title">.supported</span>
+			<span class="type"><span class='paren'>{</span>Boolean<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>If getUserMedia is supported by the browser.</p>
+</div>
+		</div>
+		<div id="volume" class="member listItem">
+			<span id="title">.volume</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Decibels'>Decibels</a><span class='paren'>}</span></span>
+			<div id="description"><p>The volume of the output in decibels.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>source.volume.value = -<span class="hljs-number">6</span>;</pre></div>
+		</div>
+		<div id="state" class="member listItem">
+			<span id="title">.state</span>
+			<span class="type"><span class='paren'>{</span>Tone.State<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>Returns the playback state of the source, either &quot;started&quot; or &quot;stopped&quot;.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="open" class="method listItem ">
+			<span id="title">.open
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>callback</span>][<span class='syntax'>, </span><span id='name'>error</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">The callback function to 
+                      execute when the stream is open</div>
+							<span id="name">error</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">The callback function to execute
+                           when the media stream can&#x27;t open. 
+                           This is fired either because the browser
+                           doesn&#x27;t support the media stream,
+                           or the user blocked opening the microphone.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#ExternalInput'>Tone.ExternalInput</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Open the media stream</p>
+</div>
+		</div>
+		<div id="close" class="method listItem ">
+			<span id="title">.close
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#ExternalInput'>Tone.ExternalInput</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Close the media stream</p>
+</div>
+		</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#ExternalInput'>Tone.ExternalInput</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up.</p>
+</div>
+		</div>
+		<div id="getSources" class="method listItem static">
+			<span id="title">.getSources
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>callback</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">Callback to be executed after populating list</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#ExternalInput'>Tone.ExternalInput</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Populates the source list. Invokes the callback with an array of 
+ possible audio sources.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> soundflower = <span class="hljs-keyword">new</span> Tone.ExternalInput();
+Tone.ExternalInput.getSources(selectSoundflower);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">selectSoundflower</span>(<span class="hljs-params">sources</span>)</span>{
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; sources.length; i++){
+		<span class="hljs-keyword">if</span>(sources[i].label === <span class="hljs-string">"soundflower"</span>){
+			soundflower.inputNum = i;
+			soundflower.open(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+				soundflower.start();
+			});
+			<span class="hljs-keyword">break</span>;
+		}
+	}
+};</pre></div>
+		</div>
+		<div id="start" class="method listItem ">
+			<span id="title">.start
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When the source should be started.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Source'>Tone.Source</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Start the source at the specified time. If no time is given, 
+ start the source now.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>source.start(<span class="hljs-string">"+0.5"</span>); <span class="hljs-comment">//starts the source 0.5 seconds from now</span></pre></div>
+		</div>
+		<div id="stop" class="method listItem ">
+			<span id="title">.stop
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When the source should be stopped.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Source'>Tone.Source</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Stop the source at the specified time. If no time is given, 
+ stop the source now.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>source.stop(); <span class="hljs-comment">// stops the source immediately</span></pre></div>
+		</div>
+		<div id="sync" class="method listItem ">
+			<span id="title">.sync
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>delay</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">delay</span> <span class="syntax">=</span>
+							<span id="default">0</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">Delay time before starting the source after the
+                              Transport has started.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Source'>Tone.Source</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Sync the source to the Transport so that when the transport
+ is started, this source is started and when the transport is stopped
+ or paused, so is the source.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//sync the source to start 1 measure after the transport starts</span>
+source.sync(<span class="hljs-string">"1m"</span>);
+<span class="hljs-comment">//start the transport. the source will start 1 measure later. </span>
+Tone.Transport.start();</pre></div>
+		</div>
+		<div id="unsync" class="method listItem ">
+			<span id="title">.unsync
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Source'>Tone.Source</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Unsync the source to the Transport. See <a class="internalLink" href='../docs/#Source.sync'>Tone.Source.sync</a></p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

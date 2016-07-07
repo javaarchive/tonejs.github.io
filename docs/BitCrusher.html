@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">BitCrusher</span><span id="extends"> &#8594; <a href='#Effect'>Tone.Effect</a></span>
+	<div id="description"><p>Tone.Bitcrusher downsamples the incoming signal to a different bitdepth. 
+        Lowering the bitdepth of the signal creates distortion. Read more about Bitcrushing
+        on <a href="https://en.wikipedia.org/wiki/Bitcrusher">Wikipedia</a>.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">BitCrusher</span>
+		<span class="params">
+			<span class='syntax'>(</span><span id='name'>bits</span><span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">bits</span>
+				<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+				<div id="description"><p>The number of bits to downsample the signal. Nominal range
+                      of 1 to 8.</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//initialize crusher and route a synth through it</span>
+<span class="hljs-keyword">var</span> crusher = <span class="hljs-keyword">new</span> Tone.BitCrusher(<span class="hljs-number">4</span>).toMaster();
+<span class="hljs-keyword">var</span> synth = <span class="hljs-keyword">new</span> Tone.MonoSynth().connect(crusher);</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>bits</span><span class='syntax'>:</span><span class='value number'>4</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="bits" class="member listItem">
+			<span id="title">.bits</span>
+			<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+			<div id="description"><p>The bit depth of the effect. Nominal range of 1-8.</p>
+</div>
+		</div>
+		<div id="wet" class="member listItem">
+			<span id="title">.wet</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<div id="description"><p>The wet control is how much of the effected
+ will pass through to the output. 1 = 100% effected
+ signal, 0 = 100% dry signal.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#BitCrusher'>Tone.BitCrusher</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up.</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">Loop</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<div id="description"><p><a class="internalLink" href='../docs/#Loop'>Tone.Loop</a> creates a looped callback at the 
+        specified interval. The callback can be 
+        started, stopped and scheduled along
+        the Transport&#39;s timeline.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">Loop</span>
+		<span class="params">
+			<span class='syntax'>(</span><span id='name'>callback</span><span class='syntax'>, </span><span id='name'>interval</span><span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">callback</span>
+				<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+				<div id="description"><p>The callback to invoke with the event.</p>
+</div>
+					<span id="name">interval</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+				<div id="description"><p>The time between successive callback calls.</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> loop = <span class="hljs-keyword">new</span> Tone.Loop(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">time</span>)</span>{
+	<span class="hljs-comment">//triggered every eighth note. </span>
+	<span class="hljs-built_in">console</span>.log(time);
+}, <span class="hljs-string">"8n"</span>).start(<span class="hljs-number">0</span>);
+Tone.Transport.start();</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>interval</span><span class='syntax'>:</span><span class='value string'>&quot;4n&quot;</span></div><div class='row'><span id='name'>callback</span><span class='syntax'>:</span><span class='value Tone'>Tone.noOp</span></div><div class='row'><span id='name'>playbackRate</span><span class='syntax'>:</span><span class='value number'>1</span></div><div class='row'><span id='name'>iterations</span><span class='syntax'>:</span><span class='value string'>&quot;Infinity&quot;</span></div><div class='row'><span id='name'>probability</span><span class='syntax'>:</span><span class='value number'>true</span></div><div class='row'><span id='name'>mute</span><span class='syntax'>:</span><span class='value number'>false</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="callback" class="member listItem">
+			<span id="title">.callback</span>
+			<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+			<div id="description"><p>The callback to invoke with the next event in the pattern</p>
+</div>
+		</div>
+		<div id="state" class="member listItem">
+			<span id="title">.state</span>
+			<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>The state of the Loop, either started or stopped.</p>
+</div>
+		</div>
+		<div id="progress" class="member listItem">
+			<span id="title">.progress</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>The progress of the loop as a value between 0-1. 0, when
+ the loop is stopped or done iterating.</p>
+</div>
+		</div>
+		<div id="interval" class="member listItem">
+			<span id="title">.interval</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>The time between successive callbacks.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>loop.interval = <span class="hljs-string">"8n"</span>; <span class="hljs-comment">//loop every 8n</span></pre></div>
+		</div>
+		<div id="playbackRate" class="member listItem">
+			<span id="title">.playbackRate</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>The playback rate of the loop. The normal playback rate is 1 (no change). 
+ A <code>playbackRate</code> of 2 would be twice as fast.</p>
+</div>
+		</div>
+		<div id="humanize" class="member listItem">
+			<span id="title">.humanize</span>
+			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>Random variation +/-0.01s to the scheduled time. 
+ Or give it a time value which it will randomize by.</p>
+</div>
+		</div>
+		<div id="probability" class="member listItem">
+			<span id="title">.probability</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<div id="description"><p>The probably of the callback being invoked.</p>
+</div>
+		</div>
+		<div id="mute" class="member listItem">
+			<span id="title">.mute</span>
+			<span class="type"><span class='paren'>{</span>Boolean<span class='paren'>}</span></span>
+			<div id="description"><p>Muting the Loop means that no callbacks are invoked.</p>
+</div>
+		</div>
+		<div id="iterations" class="member listItem">
+			<span id="title">.iterations</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<div id="description"><p>The number of iterations of the loop. The default
+ value is Infinity (loop forever).</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="start" class="method listItem ">
+			<span id="title">.start
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When to start the Loop.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Loop'>Tone.Loop</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Start the loop at the specified time along the Transport&#39;s
+ timeline.</p>
+</div>
+		</div>
+		<div id="stop" class="method listItem ">
+			<span id="title">.stop
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When to stop the Arpeggio</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Loop'>Tone.Loop</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Stop the loop at the given time.</p>
+</div>
+		</div>
+		<div id="cancel" class="method listItem ">
+			<span id="title">.cancel
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">0</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The time after which events will be cancel.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Loop'>Tone.Loop</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Cancel all scheduled events greater than or equal to the given time</p>
+</div>
+		</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Loop'>Tone.Loop</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

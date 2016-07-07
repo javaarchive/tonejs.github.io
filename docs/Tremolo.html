@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">Tremolo</span><span id="extends"> &#8594; <a href='#StereoEffect'>Tone.StereoEffect</a></span>
+	<div id="description"><p><a class="internalLink" href='../docs/#Tremolo'>Tone.Tremolo</a> modulates the amplitude of an incoming signal using a <a class="internalLink" href='../docs/#LFO'>Tone.LFO</a>.
+        The type, frequency, and depth of the LFO is controllable.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">Tremolo</span>
+		<span class="params">
+			<span class='syntax'>(</span>[<span id='name'>frequency</span>][<span class='syntax'>, </span><span id='name'>depth</span>]<span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">frequency</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a><span class='paren'>}</span></span>
+				<div id="description"><p>The rate of the effect.</p>
+</div>
+					<span id="name">depth</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+				<div id="description"><p>The depth of the effect.</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//create a tremolo and start it's LFO</span>
+<span class="hljs-keyword">var</span> tremolo = <span class="hljs-keyword">new</span> Tone.Tremolo(<span class="hljs-number">9</span>, <span class="hljs-number">0.75</span>).toMaster().start();
+<span class="hljs-comment">//route an oscillator through the tremolo and start it</span>
+<span class="hljs-keyword">var</span> oscillator = <span class="hljs-keyword">new</span> Tone.Oscillator().connect(tremolo).start();</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>frequency</span><span class='syntax'>:</span><span class='value number'>10</span></div><div class='row'><span id='name'>type</span><span class='syntax'>:</span><span class='value string'>&quot;sine&quot;</span></div><div class='row'><span id='name'>depth</span><span class='syntax'>:</span><span class='value number'>0.5</span></div><div class='row'><span id='name'>spread</span><span class='syntax'>:</span><span class='value number'>180</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="frequency" class="member listItem">
+			<span id="title">.frequency</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a><span class='paren'>}</span></span>
+			<div id="description"><p>The frequency of the tremolo.</p>
+</div>
+		</div>
+		<div id="depth" class="member listItem">
+			<span id="title">.depth</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<div id="description"><p>The depth of the effect. A depth of 0, has no effect
+ on the amplitude, and a depth of 1 makes the amplitude
+ modulate fully between 0 and 1.</p>
+</div>
+		</div>
+		<div id="type" class="member listItem">
+			<span id="title">.type</span>
+			<span class="type"><span class='paren'>{</span>string<span class='paren'>}</span></span>
+			<div id="description"><p>The Tremolo&#39;s oscillator type.</p>
+</div>
+		</div>
+		<div id="spread" class="member listItem">
+			<span id="title">.spread</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Degrees'>Degrees</a><span class='paren'>}</span></span>
+			<div id="description"><p>Amount of stereo spread. When set to 0, both LFO&#39;s will be panned centrally.
+When set to 180, LFO&#39;s will be panned hard left and right respectively.</p>
+</div>
+		</div>
+		<div id="wet" class="member listItem">
+			<span id="title">.wet</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<div id="description"><p>The wet control, i.e. how much of the effected
+ will pass through to the output.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="start" class="method listItem ">
+			<span id="title">.start
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When the tremolo begins.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Tremolo'>Tone.Tremolo</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Start the tremolo.</p>
+</div>
+		</div>
+		<div id="stop" class="method listItem ">
+			<span id="title">.stop
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When the tremolo stops.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Tremolo'>Tone.Tremolo</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Stop the tremolo.</p>
+</div>
+		</div>
+		<div id="sync" class="method listItem ">
+			<span id="title">.sync
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>delay</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">delay</span> <span class="syntax">=</span>
+							<span id="default">0</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">Delay time before starting the effect after the
+                             Transport has started.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#AutoFilter'>Tone.AutoFilter</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Sync the effect to the transport.</p>
+</div>
+		</div>
+		<div id="unsync" class="method listItem ">
+			<span id="title">.unsync
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Tremolo'>Tone.Tremolo</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Unsync the filter from the transport</p>
+</div>
+		</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Tremolo'>Tone.Tremolo</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>clean up</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

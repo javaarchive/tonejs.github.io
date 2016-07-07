@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">Part</span><span id="extends"> &#8594; <a href='#Event'>Tone.Event</a></span>
+	<div id="description"><p><a class="internalLink" href='../docs/#Part'>Tone.Part</a> is a collection <a class="internalLink" href='../docs/#Events'>Tone.Events</a> which can be
+        started/stoped and looped as a single unit.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">Part</span>
+		<span class="params">
+			<span class='syntax'>(</span><span id='name'>callback</span><span class='syntax'>, </span><span id='name'>events</span><span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">callback</span>
+				<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+				<div id="description"><p>The callback to invoke on each event</p>
+</div>
+					<span id="name">events</span>
+				<span class="type"><span class='paren'>{</span>Array<span class='paren'>}</span></span>
+				<div id="description"><p>the array of events</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> part = <span class="hljs-keyword">new</span> Tone.Part(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">time, note</span>)</span>{
+	<span class="hljs-comment">//the notes given as the second element in the array</span>
+	<span class="hljs-comment">//will be passed in as the second argument</span>
+	synth.triggerAttackRelease(note, <span class="hljs-string">"8n"</span>, time);
+}, [[<span class="hljs-number">0</span>, <span class="hljs-string">"C2"</span>], [<span class="hljs-string">"0:2"</span>, <span class="hljs-string">"C3"</span>], [<span class="hljs-string">"0:3:2"</span>, <span class="hljs-string">"G2"</span>]]);</pre></div>
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//use an array of objects as long as the object has a "time" attribute</span>
+<span class="hljs-keyword">var</span> part = <span class="hljs-keyword">new</span> Tone.Part(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">time, value</span>)</span>{
+	<span class="hljs-comment">//the value is an object which contains both the note and the velocity</span>
+	synth.triggerAttackRelease(value.note, <span class="hljs-string">"8n"</span>, time, value.velocity);
+}, [{<span class="hljs-string">"time"</span> : <span class="hljs-number">0</span>, <span class="hljs-string">"note"</span> : <span class="hljs-string">"C3"</span>, <span class="hljs-string">"velocity"</span>: <span class="hljs-number">0.9</span>}, 
+	   {<span class="hljs-string">"time"</span> : <span class="hljs-string">"0:2"</span>, <span class="hljs-string">"note"</span> : <span class="hljs-string">"C4"</span>, <span class="hljs-string">"velocity"</span>: <span class="hljs-number">0.5</span>}
+]).start(<span class="hljs-number">0</span>);</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>callback</span><span class='syntax'>:</span><span class='value Tone'>Tone.noOp</span></div><div class='row'><span id='name'>loop</span><span class='syntax'>:</span><span class='value number'>false</span></div><div class='row'><span id='name'>loopEnd</span><span class='syntax'>:</span><span class='value string'>&quot;1m&quot;</span></div><div class='row'><span id='name'>loopStart</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>playbackRate</span><span class='syntax'>:</span><span class='value number'>1</span></div><div class='row'><span id='name'>probability</span><span class='syntax'>:</span><span class='value number'>1</span></div><div class='row'><span id='name'>humanize</span><span class='syntax'>:</span><span class='value number'>false</span></div><div class='row'><span id='name'>mute</span><span class='syntax'>:</span><span class='value number'>false</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="callback" class="member listItem">
+			<span id="title">.callback</span>
+			<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+			<div id="description"><p>The callback to invoke at all the scheduled events.</p>
+</div>
+		</div>
+		<div id="mute" class="member listItem">
+			<span id="title">.mute</span>
+			<span class="type"><span class='paren'>{</span>Boolean<span class='paren'>}</span></span>
+			<div id="description"><p>If mute is true, the callback won&#39;t be
+ invoked.</p>
+</div>
+		</div>
+		<div id="probability" class="member listItem">
+			<span id="title">.probability</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<div id="description"><p>The probability of the notes being triggered.</p>
+</div>
+		</div>
+		<div id="loop" class="member listItem">
+			<span id="title">.loop</span>
+			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<div id="description"><p>If the part should loop or not
+ between <a class="internalLink" href='../docs/#Part.loopStart'>Tone.Part.loopStart</a> and 
+ <a class="internalLink" href='../docs/#Part.loopEnd'>Tone.Part.loopEnd</a>. An integer
+ value corresponds to the number of
+ loops the Part does after it starts.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//loop the part 8 times</span>
+part.loop = <span class="hljs-number">8</span>;</pre></div>
+		</div>
+		<div id="loopEnd" class="member listItem">
+			<span id="title">.loopEnd</span>
+			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<div id="description"><p>The loopEnd point determines when it will 
+ loop if <a class="internalLink" href='../docs/#Part.loop'>Tone.Part.loop</a> is true.</p>
+</div>
+		</div>
+		<div id="loopStart" class="member listItem">
+			<span id="title">.loopStart</span>
+			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<div id="description"><p>The loopStart point determines when it will 
+ loop if <a class="internalLink" href='../docs/#Part.loop'>Tone.Part.loop</a> is true.</p>
+</div>
+		</div>
+		<div id="playbackRate" class="member listItem">
+			<span id="title">.playbackRate</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<div id="description"><p>The playback rate of the part</p>
+</div>
+		</div>
+		<div id="length" class="member listItem">
+			<span id="title">.length</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>The number of scheduled notes in the part.</p>
+</div>
+		</div>
+		<div id="humanize" class="member listItem">
+			<span id="title">.humanize</span>
+			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>If set to true, will apply small (+/-0.02 seconds) random variation
+ to the callback time. If the value is given as a time, it will randomize
+ by that amount.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>event.humanize = <span class="hljs-literal">true</span>;</pre></div>
+		</div>
+		<div id="state" class="member listItem">
+			<span id="title">.state</span>
+			<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>Returns the playback state of the note, either &quot;started&quot; or &quot;stopped&quot;.</p>
+</div>
+		</div>
+		<div id="progress" class="member listItem">
+			<span id="title">.progress</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>The current progress of the loop interval.
+ Returns 0 if the event is not started yet or
+ it is not set to loop.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="start" class="method listItem ">
+			<span id="title">.start
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span>[<span class='syntax'>, </span><span id='name'>offset</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When to start the part.</div>
+							<span id="name">offset</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The offset from the start of the part
+                          to begin playing at.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Part'>Tone.Part</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Start the part at the given time.</p>
+</div>
+		</div>
+		<div id="stop" class="method listItem ">
+			<span id="title">.stop
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When to stop the part.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Part'>Tone.Part</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Stop the part at the given time.</p>
+</div>
+		</div>
+		<div id="at" class="method listItem ">
+			<span id="title">.at
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span>[<span class='syntax'>, </span><span id='name'>value</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">the time of the event to get or set</div>
+							<span id="name">value</span>
+						<span class="type"><span class='paren'>{</span>*<span class='paren'>}</span></span>
+						<div id="description">If a value is passed in, the value of the
+                   event at the given time will be set to it.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Event'>Tone.Event</a><span class='paren'>}</span></span>
+					<span id="description"><p>the event at the time</p>
+</span>
+				</div>
+			<div id="description"><p>Get/Set an Event&#39;s value at the given time. 
+ If a value is passed in and no event exists at
+ the given time, one will be created with that value. 
+ If two events are at the same time, the first one will
+ be returned.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>part.at(<span class="hljs-string">"1m"</span>); <span class="hljs-comment">//returns the part at the first measure</span>
+
+part.at(<span class="hljs-string">"2m"</span>, <span class="hljs-string">"C2"</span>); <span class="hljs-comment">//set the value at "2m" to C2. </span>
+<span class="hljs-comment">//if an event didn't exist at that time, it will be created.</span></pre></div>
+		</div>
+		<div id="add" class="method listItem ">
+			<span id="title">.add
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>, </span><span id='name'>value</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The time the note should start.
+                           If an object is passed in, it should
+                           have a &#x27;time&#x27; attribute and the rest
+                           of the object will be used as the &#x27;value&#x27;.</div>
+							<span id="name">value</span>
+						<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Event'>Tone.Event</a>|*<span class='paren'>}</span></span>
+						<div id="description"></div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Part'>Tone.Part</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Add a an event to the part.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>part.add(<span class="hljs-string">"1m"</span>, <span class="hljs-string">"C#+11"</span>);</pre></div>
+		</div>
+		<div id="remove" class="method listItem ">
+			<span id="title">.remove
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>, </span><span id='name'>value</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The time of the event</div>
+							<span id="name">value</span>
+						<span class="type"><span class='paren'>{</span>*<span class='paren'>}</span></span>
+						<div id="description">Optionally select only a specific event value</div>
+				</div>
+			<div id="description"><p>Remove an event from the part. Will recursively iterate
+ into nested parts to find the event.</p>
+</div>
+		</div>
+		<div id="removeAll" class="method listItem ">
+			<span id="title">.removeAll
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Part'>Tone.Part</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Remove all of the notes from the group.</p>
+</div>
+		</div>
+		<div id="cancel" class="method listItem ">
+			<span id="title">.cancel
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>after</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">after</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The time after which to cancel the scheduled events.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Part'>Tone.Part</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Cancel scheduled state change events: i.e. &quot;start&quot; and &quot;stop&quot;.</p>
+</div>
+		</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Part'>Tone.Part</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

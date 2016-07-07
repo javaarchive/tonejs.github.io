@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">Sequence</span><span id="extends"> &#8594; <a href='#Part'>Tone.Part</a></span>
+	<div id="description"><p>A sequence is an alternate notation of a part. Instead
+        of passing in an array of [time, event] pairs, pass
+        in an array of events which will be spaced at the
+        given subdivision. Sub-arrays will subdivide that beat
+        by the number of items are in the array. 
+        Sequence notation inspiration from <a href="http://yaxu.org/tidal/">Tidal</a></p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">Sequence</span>
+		<span class="params">
+			<span class='syntax'>(</span><span id='name'>callback</span><span class='syntax'>, </span><span id='name'>events</span><span class='syntax'>, </span><span id='name'>subdivision</span><span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">callback</span>
+				<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+				<div id="description"><p>The callback to invoke with every note</p>
+</div>
+					<span id="name">events</span>
+				<span class="type"><span class='paren'>{</span>Array<span class='paren'>}</span></span>
+				<div id="description"><p>The sequence</p>
+</div>
+					<span id="name">subdivision</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+				<div id="description"><p>The subdivision between which events are placed.</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> seq = <span class="hljs-keyword">new</span> Tone.Sequence(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">time, note</span>)</span>{
+	<span class="hljs-built_in">console</span>.log(note);
+<span class="hljs-comment">//straight quater notes</span>
+}, [<span class="hljs-string">"C4"</span>, <span class="hljs-string">"E4"</span>, <span class="hljs-string">"G4"</span>, <span class="hljs-string">"A4"</span>], <span class="hljs-string">"4n"</span>);</pre></div>
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> seq = <span class="hljs-keyword">new</span> Tone.Sequence(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">time, note</span>)</span>{
+	<span class="hljs-built_in">console</span>.log(note);
+<span class="hljs-comment">//subdivisions are given as subarrays</span>
+}, [<span class="hljs-string">"C4"</span>, [<span class="hljs-string">"E4"</span>, <span class="hljs-string">"D4"</span>, <span class="hljs-string">"E4"</span>], <span class="hljs-string">"G4"</span>, [<span class="hljs-string">"A4"</span>, <span class="hljs-string">"G4"</span>]]);</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>subdivision</span><span class='syntax'>:</span><span class='value string'>&quot;4n&quot;</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="subdivision" class="member listItem">
+			<span id="title">.subdivision</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>The subdivision of the sequence. This can only be 
+ set in the constructor. The subdivision is the 
+ interval between successive steps.</p>
+</div>
+		</div>
+		<div id="callback" class="member listItem">
+			<span id="title">.callback</span>
+			<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+			<div id="description"><p>The callback to invoke at all the scheduled events.</p>
+</div>
+		</div>
+		<div id="mute" class="member listItem">
+			<span id="title">.mute</span>
+			<span class="type"><span class='paren'>{</span>Boolean<span class='paren'>}</span></span>
+			<div id="description"><p>If mute is true, the callback won&#39;t be
+ invoked.</p>
+</div>
+		</div>
+		<div id="probability" class="member listItem">
+			<span id="title">.probability</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<div id="description"><p>The probability of the notes being triggered.</p>
+</div>
+		</div>
+		<div id="loop" class="member listItem">
+			<span id="title">.loop</span>
+			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<div id="description"><p>If the part should loop or not
+ between <a class="internalLink" href='../docs/#Part.loopStart'>Tone.Part.loopStart</a> and 
+ <a class="internalLink" href='../docs/#Part.loopEnd'>Tone.Part.loopEnd</a>. An integer
+ value corresponds to the number of
+ loops the Part does after it starts.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//loop the part 8 times</span>
+part.loop = <span class="hljs-number">8</span>;</pre></div>
+		</div>
+		<div id="loopEnd" class="member listItem">
+			<span id="title">.loopEnd</span>
+			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<div id="description"><p>The loopEnd point determines when it will 
+ loop if <a class="internalLink" href='../docs/#Part.loop'>Tone.Part.loop</a> is true.</p>
+</div>
+		</div>
+		<div id="loopStart" class="member listItem">
+			<span id="title">.loopStart</span>
+			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<div id="description"><p>The loopStart point determines when it will 
+ loop if <a class="internalLink" href='../docs/#Part.loop'>Tone.Part.loop</a> is true.</p>
+</div>
+		</div>
+		<div id="playbackRate" class="member listItem">
+			<span id="title">.playbackRate</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<div id="description"><p>The playback rate of the part</p>
+</div>
+		</div>
+		<div id="length" class="member listItem">
+			<span id="title">.length</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>The number of scheduled notes in the part.</p>
+</div>
+		</div>
+		<div id="humanize" class="member listItem">
+			<span id="title">.humanize</span>
+			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>If set to true, will apply small (+/-0.02 seconds) random variation
+ to the callback time. If the value is given as a time, it will randomize
+ by that amount.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>event.humanize = <span class="hljs-literal">true</span>;</pre></div>
+		</div>
+		<div id="state" class="member listItem">
+			<span id="title">.state</span>
+			<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>Returns the playback state of the note, either &quot;started&quot; or &quot;stopped&quot;.</p>
+</div>
+		</div>
+		<div id="progress" class="member listItem">
+			<span id="title">.progress</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>The current progress of the loop interval.
+ Returns 0 if the event is not started yet or
+ it is not set to loop.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="at" class="method listItem ">
+			<span id="title">.at
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>index</span><span class='syntax'>, </span><span id='name'>value</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">index</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+						<div id="description">The index to get or set</div>
+							<span id="name">value</span>
+						<span class="type"><span class='paren'>{</span>*<span class='paren'>}</span></span>
+						<div id="description">Optionally pass in the value to set at the given index.</div>
+				</div>
+			<div id="description"><p>Get/Set an index of the sequence. If the index contains a subarray, 
+ a <a class="internalLink" href='../docs/#Sequence'>Tone.Sequence</a> representing that sub-array will be returned.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> sequence = <span class="hljs-keyword">new</span> Tone.Sequence(playNote, [<span class="hljs-string">"E4"</span>, <span class="hljs-string">"C4"</span>, <span class="hljs-string">"F#4"</span>, [<span class="hljs-string">"A4"</span>, <span class="hljs-string">"Bb3"</span>]])
+sequence.at(<span class="hljs-number">0</span>)<span class="hljs-comment">// =&gt; returns "E4"</span>
+<span class="hljs-comment">//set a value</span>
+sequence.at(<span class="hljs-number">0</span>, <span class="hljs-string">"G3"</span>);
+<span class="hljs-comment">//get a nested sequence</span>
+sequence.at(<span class="hljs-number">3</span>).at(<span class="hljs-number">1</span>)<span class="hljs-comment">// =&gt; returns "Bb3"</span></pre></div>
+		</div>
+		<div id="add" class="method listItem ">
+			<span id="title">.add
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>index</span><span class='syntax'>, </span><span id='name'>value</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">index</span>
+						<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+						<div id="description">The index to add the event to</div>
+							<span id="name">value</span>
+						<span class="type"><span class='paren'>{</span>*<span class='paren'>}</span></span>
+						<div id="description">The value to add at that index</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Sequence'>Tone.Sequence</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Add an event at an index, if there&#39;s already something
+ at that index, overwrite it. If <code>value</code> is an array, 
+ it will be parsed as a subsequence.</p>
+</div>
+		</div>
+		<div id="remove" class="method listItem ">
+			<span id="title">.remove
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>index</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">index</span>
+						<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+						<div id="description">The index of the event to remove</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Sequence'>Tone.Sequence</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Remove a value from the sequence by index</p>
+</div>
+		</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Sequence'>Tone.Sequence</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up.</p>
+</div>
+		</div>
+		<div id="start" class="method listItem ">
+			<span id="title">.start
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span>[<span class='syntax'>, </span><span id='name'>offset</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When to start the part.</div>
+							<span id="name">offset</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The offset from the start of the part
+                          to begin playing at.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Part'>Tone.Part</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Start the part at the given time.</p>
+</div>
+		</div>
+		<div id="stop" class="method listItem ">
+			<span id="title">.stop
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When to stop the part.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Part'>Tone.Part</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Stop the part at the given time.</p>
+</div>
+		</div>
+		<div id="removeAll" class="method listItem ">
+			<span id="title">.removeAll
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Part'>Tone.Part</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Remove all of the notes from the group.</p>
+</div>
+		</div>
+		<div id="cancel" class="method listItem ">
+			<span id="title">.cancel
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>after</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">after</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The time after which to cancel the scheduled events.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Part'>Tone.Part</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Cancel scheduled state change events: i.e. &quot;start&quot; and &quot;stop&quot;.</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

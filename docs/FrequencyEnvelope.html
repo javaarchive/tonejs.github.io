@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">FrequencyEnvelope</span><span id="extends"> &#8594; <a href='#Envelope'>Tone.Envelope</a></span>
+	<div id="description"><p><a class="internalLink" href='../docs/#FrequencyEnvelope'>Tone.FrequencyEnvelope</a> is a <a class="internalLink" href='../docs/#ScaledEnvelope'>Tone.ScaledEnvelope</a>, but instead of <code>min</code> and <code>max</code>
+        it&#39;s got a <code>baseFrequency</code> and <code>octaves</code> parameter.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">FrequencyEnvelope</span>
+		<span class="params">
+			<span class='syntax'>(</span>[<span id='name'>attack</span>][<span class='syntax'>, </span><span id='name'>decay</span>][<span class='syntax'>, </span><span id='name'>sustain</span>][<span class='syntax'>, </span><span id='name'>release</span>]<span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">attack</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a>|Object<span class='paren'>}</span></span>
+				<div id="description"><p>the attack time in seconds</p>
+</div>
+					<span id="name">decay</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+				<div id="description"><p>the decay time in seconds</p>
+</div>
+					<span id="name">sustain</span>
+				<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+				<div id="description"><p>a percentage (0-1) of the full amplitude</p>
+</div>
+					<span id="name">release</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+				<div id="description"><p>the release time in seconds</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> env = <span class="hljs-keyword">new</span> Tone.FrequencyEnvelope({
+ 	<span class="hljs-string">"attack"</span> : <span class="hljs-number">0.2</span>,
+ 	<span class="hljs-string">"baseFrequency"</span> : <span class="hljs-string">"C2"</span>,
+ 	<span class="hljs-string">"octaves"</span> : <span class="hljs-number">4</span>
+ });
+ scaledEnv.connect(oscillator.frequency);</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>baseFrequency</span><span class='syntax'>:</span><span class='value number'>200</span></div><div class='row'><span id='name'>octaves</span><span class='syntax'>:</span><span class='value number'>4</span></div><div class='row'><span id='name'>exponent</span><span class='syntax'>:</span><span class='value number'>2</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="baseFrequency" class="member listItem">
+			<span id="title">.baseFrequency</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a><span class='paren'>}</span></span>
+			<div id="description"><p>The envelope&#39;s mininum output value. This is the value which it
+starts at.</p>
+</div>
+		</div>
+		<div id="octaves" class="member listItem">
+			<span id="title">.octaves</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<div id="description"><p>The number of octaves above the baseFrequency that the
+envelope will scale to.</p>
+</div>
+		</div>
+		<div id="exponent" class="member listItem">
+			<span id="title">.exponent</span>
+			<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+			<div id="description"><p>The envelope&#39;s exponent value.</p>
+</div>
+		</div>
+		<div id="attack" class="member listItem">
+			<span id="title">.attack</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>When triggerAttack is called, the attack time is the amount of
+ time it takes for the envelope to reach it&#39;s maximum value.</p>
+</div>
+		</div>
+		<div id="decay" class="member listItem">
+			<span id="title">.decay</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>After the attack portion of the envelope, the value will fall
+ over the duration of the decay time to it&#39;s sustain value.</p>
+</div>
+		</div>
+		<div id="sustain" class="member listItem">
+			<span id="title">.sustain</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<div id="description"><p>The sustain value is the value 
+    which the envelope rests at after triggerAttack is
+    called, but before triggerRelease is invoked.</p>
+</div>
+		</div>
+		<div id="release" class="member listItem">
+			<span id="title">.release</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>After triggerRelease is called, the envelope&#39;s
+ value will fall to it&#39;s miminum value over the
+ duration of the release time.</p>
+</div>
+		</div>
+		<div id="value" class="member listItem">
+			<span id="title">.value</span>
+			<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>Read the current value of the envelope. Useful for 
+syncronizing visual output to the envelope.</p>
+</div>
+		</div>
+		<div id="attackCurve" class="member listItem">
+			<span id="title">.attackCurve</span>
+			<span class="type"><span class='paren'>{</span>string<span class='paren'>}</span></span>
+			<div id="description"><p>The slope of the attack. Either &quot;linear&quot; or &quot;exponential&quot;.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>env.attackCurve = <span class="hljs-string">"linear"</span>;</pre></div>
+		</div>
+		<div id="releaseCurve" class="member listItem">
+			<span id="title">.releaseCurve</span>
+			<span class="type"><span class='paren'>{</span>string<span class='paren'>}</span></span>
+			<div id="description"><p>The slope of the Release. Either &quot;linear&quot; or &quot;exponential&quot;.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>env.releaseCurve = <span class="hljs-string">"linear"</span>;</pre></div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#FrequencyEnvelope'>Tone.FrequencyEnvelope</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>clean up</p>
+</div>
+		</div>
+		<div id="triggerAttack" class="method listItem ">
+			<span id="title">.triggerAttack
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>][<span class='syntax'>, </span><span id='name'>velocity</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When the attack should start.</div>
+							<span id="name">velocity</span> <span class="syntax">=</span>
+							<span id="default">1</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+						<div id="description">The velocity of the envelope scales the vales.
+                              number between 0-1</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Envelope'>Tone.Envelope</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Trigger the attack/decay portion of the ADSR envelope.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//trigger the attack 0.5 seconds from now with a velocity of 0.2</span>
+ env.triggerAttack(<span class="hljs-string">"+0.5"</span>, <span class="hljs-number">0.2</span>);</pre></div>
+		</div>
+		<div id="triggerRelease" class="method listItem ">
+			<span id="title">.triggerRelease
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When the release portion of the envelope should start.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Envelope'>Tone.Envelope</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Triggers the release of the envelope.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//trigger release immediately</span>
+ env.triggerRelease();</pre></div>
+		</div>
+		<div id="getValueAtTime" class="method listItem ">
+			<span id="title">.getValueAtTime
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+						<div id="description">The time in seconds.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+					<span id="description"><p>The scheduled value at the given time.</p>
+</span>
+				</div>
+			<div id="description"><p>Get the scheduled value at the given time. This will
+ return the unconverted (raw) value.</p>
+</div>
+		</div>
+		<div id="triggerAttackRelease" class="method listItem ">
+			<span id="title">.triggerAttackRelease
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>duration</span>[<span class='syntax'>, </span><span id='name'>time</span>][<span class='syntax'>, </span><span id='name'>velocity</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">duration</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The duration of the sustain.</div>
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When the attack should be triggered.</div>
+							<span id="name">velocity</span> <span class="syntax">=</span>
+							<span id="default">1</span>
+						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+						<div id="description">The velocity of the envelope.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Envelope'>Tone.Envelope</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>triggerAttackRelease is shorthand for triggerAttack, then waiting
+ some duration, then triggerRelease.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//trigger the attack and then the release after 0.6 seconds.</span>
+env.triggerAttackRelease(<span class="hljs-number">0.6</span>);</pre></div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>
