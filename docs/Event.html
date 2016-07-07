@@ -55,7 +55,7 @@ chord.loopEnd = <span class="hljs-string">"1m"</span>;</pre></div>
 		</div>
 		<div id="probability" class="member listItem">
 			<span id="title">.probability</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
 			<div id="description"><p>The probability that the callback will be invoked
  at the scheduled time.</p>
 </div>
@@ -64,7 +64,7 @@ event.probability = <span class="hljs-number">0.5</span>;</pre></div>
 		</div>
 		<div id="humanize" class="member listItem">
 			<span id="title">.humanize</span>
-			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 			<div id="description"><p>If set to true, will apply small (+/-0.02 seconds) random variation
  to the callback time. If the value is given as a time, it will randomize
  by that amount.</p>
@@ -87,7 +87,7 @@ event.probability = <span class="hljs-number">0.5</span>;</pre></div>
 		</div>
 		<div id="loop" class="member listItem">
 			<span id="title">.loop</span>
-			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#types/Positive'>Positive</a><span class='paren'>}</span></span>
 			<div id="description"><p>If the note should loop or not
  between <a class="internalLink" href='../docs/#Event.loopStart'>Tone.Event.loopStart</a> and 
  <a class="internalLink" href='../docs/#Event.loopEnd'>Tone.Event.loopEnd</a>. An integer
@@ -97,7 +97,7 @@ event.probability = <span class="hljs-number">0.5</span>;</pre></div>
 		</div>
 		<div id="playbackRate" class="member listItem">
 			<span id="title">.playbackRate</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Positive'>Positive</a><span class='paren'>}</span></span>
 			<div id="description"><p>The playback rate of the note. Defaults to 1.</p>
 </div>
 					<div class='example'><div id=exampleTitle>code</div><pre>note.loop = <span class="hljs-literal">true</span>;
@@ -106,20 +106,20 @@ note.playbackRate = <span class="hljs-number">2</span>;</pre></div>
 		</div>
 		<div id="loopEnd" class="member listItem">
 			<span id="title">.loopEnd</span>
-			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
-			<div id="description"><p>The loopEnd point is the time the event will loop. 
- Note: only loops if <a class="internalLink" href='../docs/#Event.loop'>Tone.Event.loop</a> is true.</p>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/TransportTime'>TransportTime</a><span class='paren'>}</span></span>
+			<div id="description"><p>The loopEnd point is the time the event will loop
+ if <a class="internalLink" href='../docs/#Event.loop'>Tone.Event.loop</a> is true.</p>
 </div>
 		</div>
 		<div id="loopStart" class="member listItem">
 			<span id="title">.loopStart</span>
-			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/TransportTime'>TransportTime</a><span class='paren'>}</span></span>
 			<div id="description"><p>The time when the loop should start.</p>
 </div>
 		</div>
 		<div id="progress" class="member listItem">
 			<span id="title">.progress</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
 				<span id="readonly">READ ONLY</span>
 			<div id="description"><p>The current progress of the loop interval.
  Returns 0 if the event is not started yet or
@@ -138,7 +138,7 @@ note.playbackRate = <span class="hljs-number">2</span>;</pre></div>
 			</span>
 				<div id="paramDescriptions">
 							<span id="name">time</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span>TimelinePosition<span class='paren'>}</span></span>
 						<div id="description">When the note should start.</div>
 				</div>
 				<div id="returns">
@@ -158,7 +158,7 @@ note.playbackRate = <span class="hljs-number">2</span>;</pre></div>
 			</span>
 				<div id="paramDescriptions">
 							<span id="name">time</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span>TimelinePosition<span class='paren'>}</span></span>
 						<div id="description">When the note should stop.</div>
 				</div>
 				<div id="returns">
@@ -179,7 +179,7 @@ note.playbackRate = <span class="hljs-number">2</span>;</pre></div>
 				<div id="paramDescriptions">
 							<span id="name">time</span> <span class="syntax">=</span>
 							<span id="default">0</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span>TimelinePosition<span class='paren'>}</span></span>
 						<div id="description">The time after which events will be cancel.</div>
 				</div>
 				<div id="returns">

@@ -11,8 +11,8 @@
 		<div id="content">
 			<div id="constructor">
 	<span id="name">FMSynth</span><span id="extends"> &#8594; <a href='#Monophonic'>Tone.Monophonic</a></span>
-	<div id="description"><p>FMSynth is composed of two <a class="internalLink" href='../docs/#SimpleSynths'>Tone.SimpleSynths</a> where one <a class="internalLink" href='../docs/#SimpleSynth'>Tone.SimpleSynth</a> modulates
-         the frequency of a second <a class="internalLink" href='../docs/#SimpleSynth'>Tone.SimpleSynth</a>. A lot of spectral content 
+	<div id="description"><p>FMSynth is composed of two <a class="internalLink" href='../docs/#Synths'>Tone.Synths</a> where one <a class="internalLink" href='../docs/#Synth'>Tone.Synth</a> modulates
+         the frequency of a second <a class="internalLink" href='../docs/#Synth'>Tone.Synth</a>. A lot of spectral content 
          can be explored using the modulationIndex parameter. Read more about
          frequency modulation synthesis on <a href="http://www.soundonsound.com/sos/apr00/articles/synthsecrets.htm">SoundOnSound</a>.
          <img src="https://docs.google.com/drawings/d/1h0PUDZXPgi4Ikx6bVT6oncrYPLluFKy7lj53puxj-DM/pub?w=902&h=462"></p>
@@ -35,13 +35,13 @@
 				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> fmSynth = <span class="hljs-keyword">new</span> Tone.FMSynth().toMaster();
 fmSynth.triggerAttackRelease(<span class="hljs-string">"C5"</span>, <span class="hljs-string">"4n"</span>);</pre></div>
 		</div>
-	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>harmonicity</span><span class='syntax'>:</span><span class='value number'>3</span></div><div class='row'><span id='name'>modulationIndex</span><span class='syntax'>:</span><span class='value number'>10</span></div><div class='row'><span id='name'>oscillator</span><span class='syntax'>:</span><span class='syntax'>{</span><div class='row'><span id='name'>type</span><span class='syntax'>:</span><span class='value string'>&quot;sine&quot;</span></div><span class='syntax'>}</span></div><div class='row'><span id='name'>envelope</span><span class='syntax'>:</span><span class='syntax'>{</span><div class='row'><span id='name'>attack</span><span class='syntax'>:</span><span class='value number'>0.01</span></div><div class='row'><span id='name'>decay</span><span class='syntax'>:</span><span class='value number'>0.01</span></div><div class='row'><span id='name'>sustain</span><span class='syntax'>:</span><span class='value number'>1</span></div><div class='row'><span id='name'>release</span><span class='syntax'>:</span><span class='value number'>0.5</span></div><span class='syntax'>}</span></div><div class='row'><span id='name'>moduation</span><span class='syntax'>:</span><span class='syntax'>{</span><div class='row'><span id='name'>type</span><span class='syntax'>:</span><span class='value string'>&quot;square&quot;</span></div><span class='syntax'>}</span></div><div class='row'><span id='name'>modulationEnvelope</span><span class='syntax'>:</span><span class='syntax'>{</span><div class='row'><span id='name'>attack</span><span class='syntax'>:</span><span class='value number'>0.5</span></div><div class='row'><span id='name'>decay</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>sustain</span><span class='syntax'>:</span><span class='value number'>1</span></div><div class='row'><span id='name'>release</span><span class='syntax'>:</span><span class='value number'>0.5</span></div><span class='syntax'>}</span></div></div></div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>harmonicity</span><span class='syntax'>:</span><span class='value number'>3</span></div><div class='row'><span id='name'>modulationIndex</span><span class='syntax'>:</span><span class='value number'>10</span></div><div class='row'><span id='name'>detune</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>oscillator</span><span class='syntax'>:</span><span class='syntax'>{</span><div class='row'><span id='name'>type</span><span class='syntax'>:</span><span class='value string'>&quot;sine&quot;</span></div><span class='syntax'>}</span></div><div class='row'><span id='name'>envelope</span><span class='syntax'>:</span><span class='syntax'>{</span><div class='row'><span id='name'>attack</span><span class='syntax'>:</span><span class='value number'>0.01</span></div><div class='row'><span id='name'>decay</span><span class='syntax'>:</span><span class='value number'>0.01</span></div><div class='row'><span id='name'>sustain</span><span class='syntax'>:</span><span class='value number'>1</span></div><div class='row'><span id='name'>release</span><span class='syntax'>:</span><span class='value number'>0.5</span></div><span class='syntax'>}</span></div><div class='row'><span id='name'>moduation</span><span class='syntax'>:</span><span class='syntax'>{</span><div class='row'><span id='name'>type</span><span class='syntax'>:</span><span class='value string'>&quot;square&quot;</span></div><span class='syntax'>}</span></div><div class='row'><span id='name'>modulationEnvelope</span><span class='syntax'>:</span><span class='syntax'>{</span><div class='row'><span id='name'>attack</span><span class='syntax'>:</span><span class='value number'>0.5</span></div><div class='row'><span id='name'>decay</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>sustain</span><span class='syntax'>:</span><span class='value number'>1</span></div><div class='row'><span id='name'>release</span><span class='syntax'>:</span><span class='value number'>0.5</span></div><span class='syntax'>}</span></div></div></div>
 </div>
 			<div id="members">
 	<div id="title">members</div>
 		<div id="_carrier" class="member listItem">
 			<span id="title">._carrier</span>
-			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#SimpleSynth'>Tone.SimpleSynth</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Synth'>Tone.Synth</a><span class='paren'>}</span></span>
 			<div id="description"><p>The carrier voice.</p>
 </div>
 		</div>
@@ -59,7 +59,7 @@ fmSynth.triggerAttackRelease(<span class="hljs-string">"C5"</span>, <span class=
 		</div>
 		<div id="_modulator" class="member listItem">
 			<span id="title">._modulator</span>
-			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#SimpleSynth'>Tone.SimpleSynth</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Synth'>Tone.Synth</a><span class='paren'>}</span></span>
 			<div id="description"><p>The modulator voice.</p>
 </div>
 		</div>
@@ -79,14 +79,21 @@ fmSynth.triggerAttackRelease(<span class="hljs-string">"C5"</span>, <span class=
 		<div id="frequency" class="member listItem">
 			<span id="title">.frequency</span>
 				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a><span class='paren'>}</span></span>
 			<div id="description"><p>The frequency control.</p>
+</div>
+		</div>
+		<div id="detune" class="member listItem">
+			<span id="title">.detune</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Cents'>Cents</a><span class='paren'>}</span></span>
+			<div id="description"><p>The detune in cents</p>
 </div>
 		</div>
 		<div id="harmonicity" class="member listItem">
 			<span id="title">.harmonicity</span>
 				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Positive'>Positive</a><span class='paren'>}</span></span>
 			<div id="description"><p>Harmonicity is the ratio between the two voices. A harmonicity of
  1 is no change. Harmonicity = 2 means a change of an octave.</p>
 </div>
@@ -96,7 +103,7 @@ synth.harmonicity.value = <span class="hljs-number">0.5</span>;</pre></div>
 		<div id="modulationIndex" class="member listItem">
 			<span id="title">.modulationIndex</span>
 				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Positive'>Positive</a><span class='paren'>}</span></span>
 			<div id="description"><p>The modulation index which essentially the depth or amount of the modulation. It is the 
  ratio of the frequency of the modulating signal (mf) to the amplitude of the 
  modulating signal (ma) -- as in ma/mf.</p>
@@ -104,14 +111,14 @@ synth.harmonicity.value = <span class="hljs-number">0.5</span>;</pre></div>
 		</div>
 		<div id="portamento" class="member listItem">
 			<span id="title">.portamento</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 			<div id="description"><p>The glide time between notes.</p>
 </div>
 		</div>
 		<div id="volume" class="member listItem">
 			<span id="title">.volume</span>
 				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Decibels'>Decibels</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Decibels'>Decibels</a><span class='paren'>}</span></span>
 			<div id="description"><p>The volume of the output in decibels.</p>
 </div>
 					<div class='example'><div id=exampleTitle>code</div><pre>source.volume.value = -<span class="hljs-number">6</span>;</pre></div>
@@ -143,11 +150,11 @@ synth.harmonicity.value = <span class="hljs-number">0.5</span>;</pre></div>
 			</span>
 				<div id="paramDescriptions">
 							<span id="name">note</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a><span class='paren'>}</span></span>
 						<div id="description">The note to trigger.</div>
 							<span id="name">time</span> <span class="syntax">=</span>
 							<span id="default">now</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">When the note should start.</div>
 							<span id="name">velocity</span> <span class="syntax">=</span>
 							<span id="default">1</span>
@@ -177,7 +184,7 @@ synth.triggerAttack(<span class="hljs-string">"C4"</span>, <span class="hljs-str
 				<div id="paramDescriptions">
 							<span id="name">time</span> <span class="syntax">=</span>
 							<span id="default">now</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">If no time is given, the release happens immediatly</div>
 				</div>
 				<div id="returns">
@@ -198,11 +205,11 @@ synth.triggerAttack(<span class="hljs-string">"C4"</span>, <span class="hljs-str
 			</span>
 				<div id="paramDescriptions">
 							<span id="name">note</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a><span class='paren'>}</span></span>
 						<div id="description">The note to change to.</div>
 							<span id="name">time</span> <span class="syntax">=</span>
 							<span id="default">now</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">The time when the note should be set.</div>
 				</div>
 				<div id="returns">
@@ -227,19 +234,19 @@ synth.setNote(<span class="hljs-string">"Bb4"</span>);</pre></div>
 			</span>
 				<div id="paramDescriptions">
 							<span id="name">note</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a><span class='paren'>}</span></span>
 						<div id="description">The note to trigger.</div>
 							<span id="name">duration</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">How long the note should be held for before
                          triggering the release.</div>
 							<span id="name">time</span> <span class="syntax">=</span>
 							<span id="default">now</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">When the note should be triggered.</div>
 							<span id="name">velocity</span> <span class="syntax">=</span>
 							<span id="default">1</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
 						<div id="description">The velocity the note should be triggered at.</div>
 				</div>
 				<div id="returns">

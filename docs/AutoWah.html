@@ -23,17 +23,17 @@
 		</span>
 		<div id="paramDescriptions">
 					<span id="name">baseFrequency</span>
-				<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a>|Object<span class='paren'>}</span></span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a>|Object<span class='paren'>}</span></span>
 				<div id="description"><p>The frequency the filter is set 
                                            to at the low point of the wah</p>
 </div>
 					<span id="name">octaves</span>
-				<span class="type"><span class='paren'>{</span><a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Positive'>Positive</a><span class='paren'>}</span></span>
 				<div id="description"><p>The number of octaves above the baseFrequency
                                the filter will sweep to when fully open</p>
 </div>
 					<span id="name">sensitivity</span>
-				<span class="type"><span class='paren'>{</span><a href='../docs/#Decibels'>Decibels</a><span class='paren'>}</span></span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Decibels'>Decibels</a><span class='paren'>}</span></span>
 				<div id="description"><p>The decibel threshold sensitivity for 
                                   the incoming signal. Normal range of -40 to 0.</p>
 </div>
@@ -42,7 +42,7 @@
 		<div id="examples">
 				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> autoWah = <span class="hljs-keyword">new</span> Tone.AutoWah(<span class="hljs-number">50</span>, <span class="hljs-number">6</span>, -<span class="hljs-number">30</span>).toMaster();
 <span class="hljs-comment">//initialize the synth and connect to autowah</span>
-<span class="hljs-keyword">var</span> synth = <span class="hljs-keyword">new</span> SimpleSynth.connect(autoWah);
+<span class="hljs-keyword">var</span> synth = <span class="hljs-keyword">new</span> Synth.connect(autoWah);
 <span class="hljs-comment">//Q value influences the effect of the wah - default is 2</span>
 autoWah.Q.value = <span class="hljs-number">6</span>;
 <span class="hljs-comment">//more audible on higher notes</span>
@@ -62,7 +62,7 @@ synth.triggerAttackRelease(<span class="hljs-string">"C4"</span>, <span class="h
 		<div id="Q" class="member listItem">
 			<span id="title">.Q</span>
 				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Positive'>Positive</a><span class='paren'>}</span></span>
 			<div id="description"><p>The quality of the filter.</p>
 </div>
 		</div>
@@ -75,20 +75,20 @@ baseFrequency.</p>
 		</div>
 		<div id="baseFrequency" class="member listItem">
 			<span id="title">.baseFrequency</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a><span class='paren'>}</span></span>
 			<div id="description"><p>The base frequency from which the sweep will start from.</p>
 </div>
 		</div>
 		<div id="sensitivity" class="member listItem">
 			<span id="title">.sensitivity</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Decibels'>Decibels</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Decibels'>Decibels</a><span class='paren'>}</span></span>
 			<div id="description"><p>The sensitivity to control how responsive to the input signal the filter is.</p>
 </div>
 		</div>
 		<div id="wet" class="member listItem">
 			<span id="title">.wet</span>
 				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
 			<div id="description"><p>The wet control is how much of the effected
  will pass through to the output. 1 = 100% effected
  signal, 0 = 100% dry signal.</p>

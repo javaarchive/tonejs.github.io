@@ -32,19 +32,15 @@
 	</div>
 		<div id="examples">
 				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//repeated event every 8th note</span>
-Tone.Transport.setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">time</span>)</span>{
+Tone.Transport.scheduleRepeat(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">time</span>)</span>{
 	<span class="hljs-comment">//do something with the time</span>
 }, <span class="hljs-string">"8n"</span>);</pre></div>
-				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//one time event 1 second in the future</span>
-Tone.Transport.setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">time</span>)</span>{
-	<span class="hljs-comment">//do something with the time</span>
-}, <span class="hljs-number">1</span>);</pre></div>
-				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//event fixed to the Transports timeline. </span>
-Tone.Transport.setTimeline(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">time</span>)</span>{
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//schedule an event on the 16th measure</span>
+Tone.Transport.schedule(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">time</span>)</span>{
 	<span class="hljs-comment">//do something with the time</span>
 }, <span class="hljs-string">"16:0:0"</span>);</pre></div>
 		</div>
-	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>bpm</span><span class='syntax'>:</span><span class='value number'>120</span></div><div class='row'><span id='name'>swing</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>swingSubdivision</span><span class='syntax'>:</span><span class='value string'>&quot;16n&quot;</span></div><div class='row'><span id='name'>timeSignature</span><span class='syntax'>:</span><span class='value number'>4</span></div><div class='row'><span id='name'>loopStart</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>loopEnd</span><span class='syntax'>:</span><span class='value string'>&quot;4m&quot;</span></div><div class='row'><span id='name'>PPQ</span><span class='syntax'>:</span><span class='value number'>48</span></div></div></div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>bpm</span><span class='syntax'>:</span><span class='value number'>120</span></div><div class='row'><span id='name'>swing</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>swingSubdivision</span><span class='syntax'>:</span><span class='value string'>&quot;8n&quot;</span></div><div class='row'><span id='name'>timeSignature</span><span class='syntax'>:</span><span class='value number'>4</span></div><div class='row'><span id='name'>loopStart</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>loopEnd</span><span class='syntax'>:</span><span class='value string'>&quot;4m&quot;</span></div><div class='row'><span id='name'>PPQ</span><span class='syntax'>:</span><span class='value number'>192</span></div></div></div>
 </div>
 			<div id="members">
 	<div id="title">members</div>
@@ -57,7 +53,7 @@ Tone.Transport.setTimeline(<span class="hljs-function"><span class="hljs-keyword
 		<div id="bpm" class="member listItem">
 			<span id="title">.bpm</span>
 				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#BPM'>BPM</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/BPM'>BPM</a><span class='paren'>}</span></span>
 			<div id="description"><p>The Beats Per Minute of the Transport.</p>
 </div>
 					<div class='example'><div id=exampleTitle>code</div><pre>Tone.Transport.bpm.value = <span class="hljs-number">80</span>;
@@ -86,26 +82,26 @@ Tone.Transport.timeSignature; <span class="hljs-comment">//returns 3.5</span></p
 		</div>
 		<div id="loopStart" class="member listItem">
 			<span id="title">.loopStart</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/TransportTime'>TransportTime</a><span class='paren'>}</span></span>
 			<div id="description"><p>When the <a class="internalLink" href='../docs/#Transport.loop'>Tone.Transport.loop</a> = true, this is the starting position of the loop.</p>
 </div>
 		</div>
 		<div id="loopEnd" class="member listItem">
 			<span id="title">.loopEnd</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/TransportTime'>TransportTime</a><span class='paren'>}</span></span>
 			<div id="description"><p>When the <a class="internalLink" href='../docs/#Transport.loop'>Tone.Transport.loop</a> = true, this is the ending position of the loop.</p>
 </div>
 		</div>
 		<div id="swing" class="member listItem">
 			<span id="title">.swing</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
 			<div id="description"><p>The swing value. Between 0-1 where 1 equal to 
  the note + half the subdivision.</p>
 </div>
 		</div>
 		<div id="swingSubdivision" class="member listItem">
 			<span id="title">.swingSubdivision</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 			<div id="description"><p>Set the subdivision which the swing will be applied to. 
  The default values is a 16th note. Value must be less 
  than a quarter note.</p>
@@ -113,21 +109,21 @@ Tone.Transport.timeSignature; <span class="hljs-comment">//returns 3.5</span></p
 		</div>
 		<div id="position" class="member listItem">
 			<span id="title">.position</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#TransportTime'>TransportTime</a><span class='paren'>}</span></span>
-			<div id="description"><p>The Transport&#39;s position in MEASURES:BEATS:SIXTEENTHS.
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/BarsBeatsSixteenths'>BarsBeatsSixteenths</a><span class='paren'>}</span></span>
+			<div id="description"><p>The Transport&#39;s position in Bars:Beats:Sixteenths.
  Setting the value will jump to that position right away.</p>
 </div>
 		</div>
 		<div id="progress" class="member listItem">
 			<span id="title">.progress</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
 			<div id="description"><p>The Transport&#39;s loop position as a normalized value. Always
  returns 0 if the transport if loop is not true.</p>
 </div>
 		</div>
 		<div id="ticks" class="member listItem">
 			<span id="title">.ticks</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Ticks'>Ticks</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Ticks'>Ticks</a><span class='paren'>}</span></span>
 			<div id="description"><p>The transports current tick position.</p>
 </div>
 		</div>
@@ -155,7 +151,7 @@ Tone.Transport.timeSignature; <span class="hljs-comment">//returns 3.5</span></p
 						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
 						<div id="description">The callback to be invoked at the time.</div>
 							<span id="name">time</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/TransportTime'>TransportTime</a><span class='paren'>}</span></span>
 						<div id="description">The time to invoke the callback at.</div>
 				</div>
 				<div id="returns">
@@ -182,16 +178,16 @@ Tone.Transport.schedule(<span class="hljs-function"><span class="hljs-keyword">f
 						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
 						<div id="description">The callback to invoke.</div>
 							<span id="name">interval</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">The duration between successive
                               callbacks.</div>
 							<span id="name">startTime</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span>TimelinePosition<span class='paren'>}</span></span>
 						<div id="description">When along the timeline the events should
                               start being invoked.</div>
 							<span id="name">duration</span> <span class="syntax">=</span>
 							<span id="default">Infinity</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">How long the event should repeat.</div>
 				</div>
 				<div id="returns">
@@ -219,7 +215,7 @@ Tone.Transport.scheduleRepeat(callback, <span class="hljs-string">"8n"</span>, <
 						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
 						<div id="description">The callback to invoke once.</div>
 							<span id="name">time</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/TransportTime'>TransportTime</a><span class='paren'>}</span></span>
 						<div id="description">The time the callback should be invoked.</div>
 				</div>
 				<div id="returns">
@@ -262,7 +258,7 @@ Tone.Transport.scheduleRepeat(callback, <span class="hljs-string">"8n"</span>, <
 				<div id="paramDescriptions">
 							<span id="name">after</span> <span class="syntax">=</span>
 							<span id="default">0</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/TransportTime'>TransportTime</a><span class='paren'>}</span></span>
 						<div id="description">Clear all events after
                          this time.</div>
 				</div>
@@ -277,34 +273,6 @@ Tone.Transport.scheduleRepeat(callback, <span class="hljs-string">"8n"</span>, <
  if their startTime is after the given time</p>
 </div>
 		</div>
-		<div id="quantize" class="method listItem ">
-			<span id="title">.quantize
-				<span class="params">
-					<span class='syntax'>(</span><span id='name'>time</span>[<span class='syntax'>, </span><span id='name'>subdivision</span>]<span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">time</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
-						<div id="description">The time value to quantize to the given subdivision</div>
-							<span id="name">subdivision</span> <span class="syntax">=</span>
-							<span id="default">&quot;4n&quot;</span>
-						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
-						<div id="description">The subdivision to quantize to.</div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
-					<span id="description"><p>the time in seconds until the next subdivision.</p>
-</span>
-				</div>
-			<div id="description"><p>Returns the time closest time (equal to or after the given time) that aligns 
- to the subidivision.</p>
-</div>
-					<div class='example'><div id=exampleTitle>code</div><pre>Tone.Transport.bpm.value = <span class="hljs-number">120</span>;
-Tone.Transport.quantize(<span class="hljs-string">"3 * 4n"</span>, <span class="hljs-string">"1m"</span>); <span class="hljs-comment">//return 0.5</span>
-<span class="hljs-comment">//if the clock is started, it will return a value less than 0.5</span></pre></div>
-		</div>
 		<div id="start" class="method listItem ">
 			<span id="title">.start
 				<span class="params">
@@ -314,10 +282,10 @@ Tone.Transport.quantize(<span class="hljs-string">"3 * 4n"</span>, <span class="
 				<div id="paramDescriptions">
 							<span id="name">time</span> <span class="syntax">=</span>
 							<span id="default">now</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">The time when the transport should start.</div>
 							<span id="name">offset</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/TransportTime'>TransportTime</a><span class='paren'>}</span></span>
 						<div id="description">The timeline offset to start the transport.</div>
 				</div>
 				<div id="returns">
@@ -340,7 +308,7 @@ Tone.Transport.start(<span class="hljs-string">"+1"</span>, <span class="hljs-st
 				<div id="paramDescriptions">
 							<span id="name">time</span> <span class="syntax">=</span>
 							<span id="default">now</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">The time when the transport should stop.</div>
 				</div>
 				<div id="returns">
@@ -362,7 +330,7 @@ Tone.Transport.start(<span class="hljs-string">"+1"</span>, <span class="hljs-st
 				<div id="paramDescriptions">
 							<span id="name">time</span> <span class="syntax">=</span>
 							<span id="default">now</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description"></div>
 				</div>
 				<div id="returns">
@@ -382,10 +350,10 @@ Tone.Transport.start(<span class="hljs-string">"+1"</span>, <span class="hljs-st
 			</span>
 				<div id="paramDescriptions">
 							<span id="name">startPosition</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/TransportTime'>TransportTime</a><span class='paren'>}</span></span>
 						<div id="description"></div>
 							<span id="name">endPosition</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/TransportTime'>TransportTime</a><span class='paren'>}</span></span>
 						<div id="description"></div>
 				</div>
 				<div id="returns">
@@ -399,6 +367,31 @@ Tone.Transport.start(<span class="hljs-string">"+1"</span>, <span class="hljs-st
 					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//loop over the first measure</span>
 Tone.Transport.setLoopPoints(<span class="hljs-number">0</span>, <span class="hljs-string">"1m"</span>);
 Tone.Transport.loop = <span class="hljs-literal">true</span>;</pre></div>
+		</div>
+		<div id="nextSubdivision" class="method listItem ">
+			<span id="title">.nextSubdivision
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>subdivision</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">subdivision</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The subdivision to quantize to</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+					<span id="description"><p>The context time of the next subdivision.</p>
+</span>
+				</div>
+			<div id="description"><p>Returns the time aligned to the next subdivision
+ of the Transport. If the Transport is not started,
+ it will return 0.
+ Note: this will not work precisely during tempo ramps.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>Tone.Transport.start(); <span class="hljs-comment">//the transport must be started</span>
+Tone.Transport.nextSubdivision(<span class="hljs-string">"4n"</span>);</pre></div>
 		</div>
 		<div id="syncSignal" class="method listItem ">
 			<span id="title">.syncSignal

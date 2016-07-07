@@ -60,7 +60,7 @@ motu.open(<span class="hljs-function"><span class="hljs-keyword">function</span>
 		<div id="volume" class="member listItem">
 			<span id="title">.volume</span>
 				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Decibels'>Decibels</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Decibels'>Decibels</a><span class='paren'>}</span></span>
 			<div id="description"><p>The volume of the output in decibels.</p>
 </div>
 					<div class='example'><div id=exampleTitle>code</div><pre>source.volume.value = -<span class="hljs-number">6</span>;</pre></div>
@@ -71,6 +71,14 @@ motu.open(<span class="hljs-function"><span class="hljs-keyword">function</span>
 				<span id="readonly">READ ONLY</span>
 			<div id="description"><p>Returns the playback state of the source, either &quot;started&quot; or &quot;stopped&quot;.</p>
 </div>
+		</div>
+		<div id="mute" class="member listItem">
+			<span id="title">.mute</span>
+			<span class="type"><span class='paren'>{</span>boolean<span class='paren'>}</span></span>
+			<div id="description"><p>Mute the output.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//mute the output</span>
+source.mute = <span class="hljs-literal">true</span>;</pre></div>
 		</div>
 </div>
 
@@ -178,7 +186,7 @@ Tone.ExternalInput.getSources(selectSoundflower);
 				<div id="paramDescriptions">
 							<span id="name">time</span> <span class="syntax">=</span>
 							<span id="default">now</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">When the source should be started.</div>
 				</div>
 				<div id="returns">
@@ -201,7 +209,7 @@ Tone.ExternalInput.getSources(selectSoundflower);
 				<div id="paramDescriptions">
 							<span id="name">time</span> <span class="syntax">=</span>
 							<span id="default">now</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">When the source should be stopped.</div>
 				</div>
 				<div id="returns">
@@ -224,7 +232,7 @@ Tone.ExternalInput.getSources(selectSoundflower);
 				<div id="paramDescriptions">
 							<span id="name">delay</span> <span class="syntax">=</span>
 							<span id="default">0</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">Delay time before starting the source after the
                               Transport has started.</div>
 				</div>

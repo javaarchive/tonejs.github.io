@@ -10,6 +10,7 @@
 	<script type="text/javascript" src="../build/Tone.js"></script>
 	<script type="text/javascript" src="./scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="./scripts/draggabilly.js"></script>
+	<script type="text/javascript" src="./scripts/StartAudioContext.js"></script>
 	<script type="text/javascript" src="./scripts/Interface.js"></script>
 	<script type="text/javascript" src="./scripts/Logo.js"></script>
 	<script type="text/javascript" src="./scripts/qwerty-hancock.js"></script>
@@ -38,7 +39,7 @@
 	<script type="text/javascript">
 
 		//the synth
-		var synth = new Tone.SimpleSynth().toMaster()
+		var synth = new Tone.Synth().toMaster()
 			.set("envelope.attack", 0.04);
 
 		//send audio to each of the effect channels

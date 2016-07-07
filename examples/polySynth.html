@@ -10,6 +10,7 @@
 	<script type="text/javascript" src="../build/Tone.js"></script>
 	<script type="text/javascript" src="./scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="./scripts/draggabilly.js"></script>
+	<script type="text/javascript" src="./scripts/StartAudioContext.js"></script>
 	<script type="text/javascript" src="./scripts/Interface.js"></script>
 	<script type="text/javascript" src="./scripts/Logo.js"></script>
 	<script type="text/javascript" src="./scripts/qwerty-hancock.js"></script>
@@ -40,7 +41,7 @@
 
 	<script type="text/javascript">
 
-		var synth = new Tone.PolySynth(6, Tone.SimpleSynth, {
+		var synth = new Tone.PolySynth(6, Tone.Synth, {
 			"oscillator" : {
 				"partials" : [0, 2, 3, 4],
 			}

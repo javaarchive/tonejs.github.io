@@ -7,9 +7,9 @@
 	<title>SCRATCH</title>
 
 	<script type="text/javascript" src="./scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../Graph/SignalGraph.js"></script>
 	<script type="text/javascript" src="./scripts/require.js"></script>
 
-	<!-- <script type="text/javascript" src="../build/Tone.min.js"></script> -->
 
 </head>
 <body>
@@ -24,7 +24,6 @@
 	</style>
 	<script type="text/javascript">
 
-
 		
 		require.config({
 			baseUrl : "./",
@@ -33,18 +32,24 @@
 			},
 		});
 
-		require(["Tone/core/Time"],
-		function(Time){
+		require(["Tone/source/Noise", "Tone/event/Loop", "Tone/core/Transport"],
+		function(Noise, Loop, Transport){
 
-			var t = new Time();
-			window.t = t;
-			console.log(t._tokenize("8 + 2"));
+			window.Transport = Transport;
+			Transport.PPQ = 12;
+
+			var noise = new Noise().toMaster();
+
+			var loop = new Loop(function(time){
+				noise.start(time).stop(time + 0.01);
+			}, "4n").start();
 			
-			function loop(){
-				requestAnimationFrame(loop);
-				// document.querySelector("#meter").textContent = meter.getValue();
-			}
-			loop();
+			/*function loop(){
+				requestAnimationFrame(loop)
+				$("#meter").text(source.state);
+			}*/
+
+
 		});
 	
 

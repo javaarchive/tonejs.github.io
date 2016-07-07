@@ -123,7 +123,7 @@
 						<span class="type"><span class='paren'>{</span>*<span class='paren'>}</span></span>
 						<div id="description">The value to set the signal.</div>
 							<span id="name">time</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">The time when the change should occur.</div>
 				</div>
 				<div id="returns">
@@ -170,7 +170,7 @@ freq.setValueAtTime(<span class="hljs-string">"G4"</span>, <span class="hljs-str
 						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
 						<div id="description"></div>
 							<span id="name">endTime</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description"></div>
 				</div>
 				<div id="returns">
@@ -194,7 +194,7 @@ freq.setValueAtTime(<span class="hljs-string">"G4"</span>, <span class="hljs-str
 						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
 						<div id="description"></div>
 							<span id="name">endTime</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description"></div>
 				</div>
 				<div id="returns">
@@ -210,7 +210,7 @@ freq.setValueAtTime(<span class="hljs-string">"G4"</span>, <span class="hljs-str
 		<div id="exponentialRampToValue" class="method listItem ">
 			<span id="title">.exponentialRampToValue
 				<span class="params">
-					<span class='syntax'>(</span><span id='name'>value</span><span class='syntax'>, </span><span id='name'>rampTime</span><span class='syntax'>)</span>
+					<span class='syntax'>(</span><span id='name'>value</span><span class='syntax'>, </span><span id='name'>rampTime</span>[<span class='syntax'>, </span><span id='name'>startTime</span>]<span class='syntax'>)</span>
 				</span>
 			</span>
 				<div id="paramDescriptions">
@@ -218,9 +218,13 @@ freq.setValueAtTime(<span class="hljs-string">"G4"</span>, <span class="hljs-str
 						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
 						<div id="description">The value to ramp to.</div>
 							<span id="name">rampTime</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">the time that it takes the 
                               value to ramp from it&#x27;s current value</div>
+							<span id="name">startTime</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When the ramp should start.</div>
 				</div>
 				<div id="returns">
 					<span id="keyword">returns</span>
@@ -238,7 +242,7 @@ signal.exponentialRampToValue(<span class="hljs-number">2</span>, <span class="h
 		<div id="linearRampToValue" class="method listItem ">
 			<span id="title">.linearRampToValue
 				<span class="params">
-					<span class='syntax'>(</span><span id='name'>value</span><span class='syntax'>, </span><span id='name'>rampTime</span><span class='syntax'>)</span>
+					<span class='syntax'>(</span><span id='name'>value</span><span class='syntax'>, </span><span id='name'>rampTime</span>[<span class='syntax'>, </span><span id='name'>startTime</span>]<span class='syntax'>)</span>
 				</span>
 			</span>
 				<div id="paramDescriptions">
@@ -246,9 +250,13 @@ signal.exponentialRampToValue(<span class="hljs-number">2</span>, <span class="h
 						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
 						<div id="description">The value to ramp to.</div>
 							<span id="name">rampTime</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">the time that it takes the 
                               value to ramp from it&#x27;s current value</div>
+							<span id="name">startTime</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When the ramp should start.</div>
 				</div>
 				<div id="returns">
 					<span id="keyword">returns</span>
@@ -274,7 +282,7 @@ signal.linearRampToValue(<span class="hljs-number">4</span>, <span class="hljs-n
 						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
 						<div id="description"></div>
 							<span id="name">startTime</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description"></div>
 							<span id="name">timeConstant</span>
 						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
@@ -301,10 +309,10 @@ signal.linearRampToValue(<span class="hljs-number">4</span>, <span class="hljs-n
 						<span class="type"><span class='paren'>{</span>Array<span class='paren'>}</span></span>
 						<div id="description"></div>
 							<span id="name">startTime</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description"></div>
 							<span id="name">duration</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description"></div>
 				</div>
 				<div id="returns">
@@ -325,7 +333,7 @@ signal.linearRampToValue(<span class="hljs-number">4</span>, <span class="hljs-n
 			</span>
 				<div id="paramDescriptions">
 							<span id="name">startTime</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description"></div>
 				</div>
 				<div id="returns">
@@ -341,7 +349,7 @@ signal.linearRampToValue(<span class="hljs-number">4</span>, <span class="hljs-n
 		<div id="rampTo" class="method listItem ">
 			<span id="title">.rampTo
 				<span class="params">
-					<span class='syntax'>(</span><span id='name'>value</span><span class='syntax'>, </span><span id='name'>rampTime</span><span class='syntax'>)</span>
+					<span class='syntax'>(</span><span id='name'>value</span><span class='syntax'>, </span><span id='name'>rampTime</span>[<span class='syntax'>, </span><span id='name'>startTime</span>]<span class='syntax'>)</span>
 				</span>
 			</span>
 				<div id="paramDescriptions">
@@ -349,9 +357,13 @@ signal.linearRampToValue(<span class="hljs-number">4</span>, <span class="hljs-n
 						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
 						<div id="description"></div>
 							<span id="name">rampTime</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
-						<div id="description">the time that it takes the 
-                              value to ramp from it&#x27;s current value</div>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The time that it takes the 
+                             value to ramp from it&#x27;s current value</div>
+							<span id="name">startTime</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When the ramp should start.</div>
 				</div>
 				<div id="returns">
 					<span id="keyword">returns</span>
@@ -366,6 +378,8 @@ signal.linearRampToValue(<span class="hljs-number">4</span>, <span class="hljs-n
 					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//ramp to the value either linearly or exponentially </span>
 <span class="hljs-comment">//depending on the "units" value of the signal</span>
 signal.rampTo(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>);</pre></div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//schedule it to ramp starting at a specific time</span>
+signal.rampTo(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>, <span class="hljs-number">5</span>)</pre></div>
 		</div>
 </div>
 			<div id="footer"></div>	

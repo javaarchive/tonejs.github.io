@@ -34,7 +34,7 @@
 				<div id="description"><p>The sequence</p>
 </div>
 					<span id="name">subdivision</span>
-				<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 				<div id="description"><p>The subdivision between which events are placed.</p>
 </div>
 		</div>
@@ -55,7 +55,7 @@
 	<div id="title">members</div>
 		<div id="subdivision" class="member listItem">
 			<span id="title">.subdivision</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 				<span id="readonly">READ ONLY</span>
 			<div id="description"><p>The subdivision of the sequence. This can only be 
  set in the constructor. The subdivision is the 
@@ -77,13 +77,13 @@
 		</div>
 		<div id="probability" class="member listItem">
 			<span id="title">.probability</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
 			<div id="description"><p>The probability of the notes being triggered.</p>
 </div>
 		</div>
 		<div id="loop" class="member listItem">
 			<span id="title">.loop</span>
-			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#types/Positive'>Positive</a><span class='paren'>}</span></span>
 			<div id="description"><p>If the part should loop or not
  between <a class="internalLink" href='../docs/#Part.loopStart'>Tone.Part.loopStart</a> and 
  <a class="internalLink" href='../docs/#Part.loopEnd'>Tone.Part.loopEnd</a>. An integer
@@ -95,34 +95,34 @@ part.loop = <span class="hljs-number">8</span>;</pre></div>
 		</div>
 		<div id="loopEnd" class="member listItem">
 			<span id="title">.loopEnd</span>
-			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/TransportTime'>TransportTime</a><span class='paren'>}</span></span>
 			<div id="description"><p>The loopEnd point determines when it will 
  loop if <a class="internalLink" href='../docs/#Part.loop'>Tone.Part.loop</a> is true.</p>
 </div>
 		</div>
 		<div id="loopStart" class="member listItem">
 			<span id="title">.loopStart</span>
-			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/TransportTime'>TransportTime</a><span class='paren'>}</span></span>
 			<div id="description"><p>The loopStart point determines when it will 
  loop if <a class="internalLink" href='../docs/#Part.loop'>Tone.Part.loop</a> is true.</p>
 </div>
 		</div>
 		<div id="playbackRate" class="member listItem">
 			<span id="title">.playbackRate</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Positive'>Positive</a><span class='paren'>}</span></span>
 			<div id="description"><p>The playback rate of the part</p>
 </div>
 		</div>
 		<div id="length" class="member listItem">
 			<span id="title">.length</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Positive'>Positive</a><span class='paren'>}</span></span>
 				<span id="readonly">READ ONLY</span>
 			<div id="description"><p>The number of scheduled notes in the part.</p>
 </div>
 		</div>
 		<div id="humanize" class="member listItem">
 			<span id="title">.humanize</span>
-			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 			<div id="description"><p>If set to true, will apply small (+/-0.02 seconds) random variation
  to the callback time. If the value is given as a time, it will randomize
  by that amount.</p>
@@ -138,7 +138,7 @@ part.loop = <span class="hljs-number">8</span>;</pre></div>
 		</div>
 		<div id="progress" class="member listItem">
 			<span id="title">.progress</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
 				<span id="readonly">READ ONLY</span>
 			<div id="description"><p>The current progress of the loop interval.
  Returns 0 if the event is not started yet or
@@ -157,7 +157,7 @@ part.loop = <span class="hljs-number">8</span>;</pre></div>
 			</span>
 				<div id="paramDescriptions">
 							<span id="name">index</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Positive'>Positive</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Positive'>Positive</a><span class='paren'>}</span></span>
 						<div id="description">The index to get or set</div>
 							<span id="name">value</span>
 						<span class="type"><span class='paren'>{</span>*<span class='paren'>}</span></span>
@@ -241,10 +241,10 @@ sequence.at(<span class="hljs-number">3</span>).at(<span class="hljs-number">1</
 			</span>
 				<div id="paramDescriptions">
 							<span id="name">time</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/TransportTime'>TransportTime</a><span class='paren'>}</span></span>
 						<div id="description">When to start the part.</div>
 							<span id="name">offset</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">The offset from the start of the part
                           to begin playing at.</div>
 				</div>
@@ -265,7 +265,7 @@ sequence.at(<span class="hljs-number">3</span>).at(<span class="hljs-number">1</
 			</span>
 				<div id="paramDescriptions">
 							<span id="name">time</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span>TimelinePosition<span class='paren'>}</span></span>
 						<div id="description">When to stop the part.</div>
 				</div>
 				<div id="returns">
@@ -300,7 +300,7 @@ sequence.at(<span class="hljs-number">3</span>).at(<span class="hljs-number">1</
 			</span>
 				<div id="paramDescriptions">
 							<span id="name">after</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span>TimelinePosition<span class='paren'>}</span></span>
 						<div id="description">The time after which to cancel the scheduled events.</div>
 				</div>
 				<div id="returns">

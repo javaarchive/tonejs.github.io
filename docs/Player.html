@@ -34,9 +34,8 @@
 	</div>
 		<div id="examples">
 				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> player = <span class="hljs-keyword">new</span> Tone.Player(<span class="hljs-string">"./path/to/sample.mp3"</span>).toMaster();
-Tone.Buffer.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-	player.start();
-}</pre></div>
+<span class="hljs-comment">//play as soon as the buffer is loaded</span>
+player.autostart = <span class="hljs-literal">true</span>;</pre></div>
 		</div>
 	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>onload</span><span class='syntax'>:</span><span class='value Tone'>Tone.noOp</span></div><div class='row'><span id='name'>playbackRate</span><span class='syntax'>:</span><span class='value number'>1</span></div><div class='row'><span id='name'>loop</span><span class='syntax'>:</span><span class='value number'>false</span></div><div class='row'><span id='name'>autostart</span><span class='syntax'>:</span><span class='value number'>false</span></div><div class='row'><span id='name'>loopStart</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>loopEnd</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>retrigger</span><span class='syntax'>:</span><span class='value number'>false</span></div><div class='row'><span id='name'>reverse</span><span class='syntax'>:</span><span class='value number'>false</span></div></div></div>
 </div>
@@ -65,13 +64,13 @@ Tone.Buffer.onload = <span class="hljs-function"><span class="hljs-keyword">func
 		</div>
 		<div id="loopStart" class="member listItem">
 			<span id="title">.loopStart</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 			<div id="description"><p>If loop is true, the loop will start at this position.</p>
 </div>
 		</div>
 		<div id="loopEnd" class="member listItem">
 			<span id="title">.loopEnd</span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 			<div id="description"><p>If loop is true, the loop will end at this position.</p>
 </div>
 		</div>
@@ -103,7 +102,7 @@ Safari and iOS currently don&#39;t support playbackRate as a signal.</p>
 		<div id="volume" class="member listItem">
 			<span id="title">.volume</span>
 				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
-			<span class="type"><span class='paren'>{</span><a href='../docs/#Decibels'>Decibels</a><span class='paren'>}</span></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Decibels'>Decibels</a><span class='paren'>}</span></span>
 			<div id="description"><p>The volume of the output in decibels.</p>
 </div>
 					<div class='example'><div id=exampleTitle>code</div><pre>source.volume.value = -<span class="hljs-number">6</span>;</pre></div>
@@ -114,6 +113,14 @@ Safari and iOS currently don&#39;t support playbackRate as a signal.</p>
 				<span id="readonly">READ ONLY</span>
 			<div id="description"><p>Returns the playback state of the source, either &quot;started&quot; or &quot;stopped&quot;.</p>
 </div>
+		</div>
+		<div id="mute" class="member listItem">
+			<span id="title">.mute</span>
+			<span class="type"><span class='paren'>{</span>boolean<span class='paren'>}</span></span>
+			<div id="description"><p>Mute the output.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//mute the output</span>
+source.mute = <span class="hljs-literal">true</span>;</pre></div>
 		</div>
 </div>
 
@@ -150,6 +157,39 @@ Safari and iOS currently don&#39;t support playbackRate as a signal.</p>
  if you want to manually load a new url.</p>
 </div>
 		</div>
+		<div id="start" class="method listItem ">
+			<span id="title">.start
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>startTime</span>][<span class='syntax'>, </span><span id='name'>offset</span>][<span class='syntax'>, </span><span id='name'>duration</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">startTime</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When the player should start.</div>
+							<span id="name">offset</span> <span class="syntax">=</span>
+							<span id="default">0</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The offset from the beginning of the sample
+                                to start at.</div>
+							<span id="name">duration</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">How long the sample should play. If no duration
+                               is given, it will default to the full length 
+                               of the sample (minus any offset)</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Player'>Tone.Player</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Play the buffer at the given startTime. Optionally add an offset
+ and/or duration which will play the buffer from a position
+ within the buffer for the given duration.</p>
+</div>
+		</div>
 		<div id="setLoopPoints" class="method listItem ">
 			<span id="title">.setLoopPoints
 				<span class="params">
@@ -158,10 +198,10 @@ Safari and iOS currently don&#39;t support playbackRate as a signal.</p>
 			</span>
 				<div id="paramDescriptions">
 							<span id="name">loopStart</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">The loop end time</div>
 							<span id="name">loopEnd</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">The loop end time</div>
 				</div>
 				<div id="returns">
@@ -192,29 +232,6 @@ player.loop = <span class="hljs-literal">true</span>;</pre></div>
 			<div id="description"><p>Dispose and disconnect.</p>
 </div>
 		</div>
-		<div id="start" class="method listItem ">
-			<span id="title">.start
-				<span class="params">
-					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="paramDescriptions">
-							<span id="name">time</span> <span class="syntax">=</span>
-							<span id="default">now</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
-						<div id="description">When the source should be started.</div>
-				</div>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Source'>Tone.Source</a><span class='paren'>}</span></span>
-					<span id="description"><p>this</p>
-</span>
-				</div>
-			<div id="description"><p>Start the source at the specified time. If no time is given, 
- start the source now.</p>
-</div>
-					<div class='example'><div id=exampleTitle>code</div><pre>source.start(<span class="hljs-string">"+0.5"</span>); <span class="hljs-comment">//starts the source 0.5 seconds from now</span></pre></div>
-		</div>
 		<div id="stop" class="method listItem ">
 			<span id="title">.stop
 				<span class="params">
@@ -224,7 +241,7 @@ player.loop = <span class="hljs-literal">true</span>;</pre></div>
 				<div id="paramDescriptions">
 							<span id="name">time</span> <span class="syntax">=</span>
 							<span id="default">now</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">When the source should be stopped.</div>
 				</div>
 				<div id="returns">
@@ -247,7 +264,7 @@ player.loop = <span class="hljs-literal">true</span>;</pre></div>
 				<div id="paramDescriptions">
 							<span id="name">delay</span> <span class="syntax">=</span>
 							<span id="default">0</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">Delay time before starting the source after the
                               Transport has started.</div>
 				</div>
