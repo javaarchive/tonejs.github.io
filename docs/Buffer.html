@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">Buffer</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<div id="description"><p>Buffer loading and storage. <a class="internalLink" href='../docs/#Buffer'>Tone.Buffer</a> is used internally by all 
+         classes that make requests for audio files such as <a class="internalLink" href='../docs/#Player'>Tone.Player</a>,
+         <a class="internalLink" href='../docs/#Sampler'>Tone.Sampler</a> and <a class="internalLink" href='../docs/#Convolver'>Tone.Convolver</a>.
+         <br><br>
+         Aside from load callbacks from individual buffers, <a class="internalLink" href='../docs/#Buffer'>Tone.Buffer</a> 
+         provides static methods which keep track of the loading progress 
+         of all of the buffers. These methods are <a class="internalLink" href='../docs/#Buffer.onload'>Tone.Buffer.onload</a>, <a class="internalLink" href='../docs/#Buffer.onprogress'>Tone.Buffer.onprogress</a>,
+         and <a class="internalLink" href='../docs/#Buffer.onerror'>Tone.Buffer.onerror</a>.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">Buffer</span>
+		<span class="params">
+			<span class='syntax'>(</span><span id='name'>url</span>[<span class='syntax'>, </span><span id='name'>onload</span>]<span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">url</span>
+				<span class="type"><span class='paren'>{</span>AudioBuffer|string<span class='paren'>}</span></span>
+				<div id="description"><p>The url to load, or the audio buffer to set.</p>
+</div>
+					<span id="name">onload</span>
+				<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+				<div id="description"><p>A callback which is invoked after the buffer is loaded. 
+                           It&#39;s recommended to use <a class="internalLink" href='../docs/#Buffer.onload'>Tone.Buffer.onload</a> instead 
+                           since it will give you a callback when ALL buffers are loaded.</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> buffer = <span class="hljs-keyword">new</span> Tone.Buffer(<span class="hljs-string">"path/to/sound.mp3"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+	<span class="hljs-comment">//the buffer is now available.</span>
+	<span class="hljs-keyword">var</span> buff = buffer.get();
+});</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>url</span><span class='syntax'>:</span><span class='value undefined'>undefined</span></div><div class='row'><span id='name'>onload</span><span class='syntax'>:</span><span class='value Tone'>Tone.noOp</span></div><div class='row'><span id='name'>reverse</span><span class='syntax'>:</span><span class='value number'>false</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="url" class="member listItem">
+			<span id="title">.url</span>
+			<span class="type"><span class='paren'>{</span>string<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>The url of the buffer. <code>undefined</code> if it was 
+ constructed with a buffer</p>
+</div>
+		</div>
+		<div id="loaded" class="member listItem">
+			<span id="title">.loaded</span>
+			<span class="type"><span class='paren'>{</span>boolean<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>Indicates if the buffer is loaded or not.</p>
+</div>
+		</div>
+		<div id="onload" class="member listItem">
+			<span id="title">.onload</span>
+			<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+			<div id="description"><p>The callback to invoke when everything is loaded.</p>
+</div>
+		</div>
+		<div id="duration" class="member listItem">
+			<span id="title">.duration</span>
+			<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>The duration of the buffer.</p>
+</div>
+		</div>
+		<div id="reverse" class="member listItem">
+			<span id="title">.reverse</span>
+			<span class="type"><span class='paren'>{</span>boolean<span class='paren'>}</span></span>
+			<div id="description"><p>Reverse the buffer.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="set" class="method listItem ">
+			<span id="title">.set
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>buffer</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">buffer</span>
+						<span class="type"><span class='paren'>{</span>AudioBuffer|<a class="internalLink" href='../docs/#Buffer'>Tone.Buffer</a><span class='paren'>}</span></span>
+						<div id="description">the buffer</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Buffer'>Tone.Buffer</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Pass in an AudioBuffer or <a class="internalLink" href='../docs/#Buffer'>Tone.Buffer</a> to set the value
+ of this buffer.</p>
+</div>
+		</div>
+		<div id="get" class="method listItem ">
+			<span id="title">.get
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>AudioBuffer<span class='paren'>}</span></span>
+					<span id="description"><p>The audio buffer stored in the object.</p>
+</span>
+				</div>
+			<div id="description"></div>
+		</div>
+		<div id="load" class="method listItem static">
+			<span id="title">.load
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>url</span><span class='syntax'>, </span><span id='name'>callback</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">url</span>
+						<span class="type"><span class='paren'>{</span>string<span class='paren'>}</span></span>
+						<div id="description">The url of the buffer to load.
+                     filetype support depends on the
+                     browser.</div>
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">The function to invoke when the url is loaded.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>XMLHttpRequest<span class='paren'>}</span></span>
+					<span id="description"><p>returns the XHR</p>
+</span>
+				</div>
+			<div id="description"><p>Makes an xhr reqest for the selected url then decodes
+ the file as an audio buffer. Invokes
+ the callback once the audio buffer loads.</p>
+</div>
+		</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Buffer'>Tone.Buffer</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>dispose and disconnect</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

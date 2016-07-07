@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">Clock</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<div id="description"><p>A sample accurate clock which provides a callback at the given rate. 
+         While the callback is not sample-accurate (it is still susceptible to
+         loose JS timing), the time passed in as the argument to the callback
+         is precise. For most applications, it is better to use <a class="internalLink" href='../docs/#Transport'>Tone.Transport</a>
+         instead of the Clock by itself since you can synchronize multiple callbacks.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">Clock</span>
+		<span class="params">
+			<span class='syntax'>(</span><span id='name'>callback</span><span class='syntax'>, </span><span id='name'>frequency</span><span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">callback</span>
+				<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+				<div id="description"><p>The callback to be invoked with the time of the audio event</p>
+</div>
+					<span id="name">frequency</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a><span class='paren'>}</span></span>
+				<div id="description"><p>The rate of the callback</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//the callback will be invoked approximately once a second</span>
+<span class="hljs-comment">//and will print the time exactly once a second apart.</span>
+<span class="hljs-keyword">var</span> clock = <span class="hljs-keyword">new</span> Tone.Clock(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">time</span>)</span>{
+	<span class="hljs-built_in">console</span>.log(time);
+}, <span class="hljs-number">1</span>);</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>callback</span><span class='syntax'>:</span><span class='value Tone'>Tone.noOp</span></div><div class='row'><span id='name'>frequency</span><span class='syntax'>:</span><span class='value number'>1</span></div><div class='row'><span id='name'>lookAhead</span><span class='syntax'>:</span><span class='value string'>&quot;auto&quot;</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="callback" class="member listItem">
+			<span id="title">.callback</span>
+			<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+			<div id="description"><p>The callback function to invoke at the scheduled tick.</p>
+</div>
+		</div>
+		<div id="_lookAhead" class="member listItem">
+			<span id="title">._lookAhead</span>
+			<span class="type"><span class='paren'>{</span>Number|String<span class='paren'>}</span></span>
+			<div id="description"><p>The time which the clock will schedule events in advance
+ of the current time. Scheduling notes in advance improves
+ performance and decreases the chance for clicks caused
+ by scheduling events in the past. If set to &quot;auto&quot;,
+ this value will be automatically computed based on the 
+ rate of requestAnimationFrame (0.016 seconds). Larger values
+ will yeild better performance, but at the cost of latency. 
+ Values less than 0.016 are not recommended.</p>
+</div>
+		</div>
+		<div id="frequency" class="member listItem">
+			<span id="title">.frequency</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#BPM'>BPM</a><span class='paren'>}</span></span>
+			<div id="description"><p>The rate the callback function should be invoked.</p>
+</div>
+		</div>
+		<div id="ticks" class="member listItem">
+			<span id="title">.ticks</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Ticks'>Ticks</a><span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>The number of times the callback was invoked. Starts counting at 0
+ and increments after the callback was invoked.</p>
+</div>
+		</div>
+		<div id="state" class="member listItem">
+			<span id="title">.state</span>
+			<span class="type"><span class='paren'>{</span>Tone.State<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>Returns the playback state of the source, either &quot;started&quot;, &quot;stopped&quot; or &quot;paused&quot;.</p>
+</div>
+		</div>
+		<div id="lookAhead" class="member listItem">
+			<span id="title">.lookAhead</span>
+			<span class="type"><span class='paren'>{</span>Number|String<span class='paren'>}</span></span>
+			<div id="description"><p>The time which the clock will schedule events in advance
+ of the current time. Scheduling notes in advance improves
+ performance and decreases the chance for clicks caused
+ by scheduling events in the past. If set to &quot;auto&quot;,
+ this value will be automatically computed based on the 
+ rate of requestAnimationFrame (0.016 seconds). Larger values
+ will yeild better performance, but at the cost of latency. 
+ Values less than 0.016 are not recommended.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="start" class="method listItem ">
+			<span id="title">.start
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span>[<span class='syntax'>, </span><span id='name'>offset</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The time the clock should start</div>
+							<span id="name">offset</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Ticks'>Ticks</a><span class='paren'>}</span></span>
+						<div id="description">Where the tick counter starts counting from.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Clock'>Tone.Clock</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Start the clock at the given time. Optionally pass in an offset
+ of where to start the tick counter from.</p>
+</div>
+		</div>
+		<div id="stop" class="method listItem ">
+			<span id="title">.stop
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The time when the clock should stop.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Clock'>Tone.Clock</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Stop the clock. Stopping the clock resets the tick counter to 0.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>clock.stop();</pre></div>
+		</div>
+		<div id="pause" class="method listItem ">
+			<span id="title">.pause
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The time when the clock should stop.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Clock'>Tone.Clock</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Pause the clock. Pausing does not reset the tick counter.</p>
+</div>
+		</div>
+		<div id="getStateAtTime" class="method listItem ">
+			<span id="title">.getStateAtTime
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The time to query.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+					<span id="description"><p>The name of the state input in setStateAtTime.</p>
+</span>
+				</div>
+			<div id="description"><p>Returns the scheduled state at the given time.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>clock.start(<span class="hljs-string">"+0.1"</span>);
+clock.getStateAtTime(<span class="hljs-string">"+0.1"</span>); <span class="hljs-comment">//returns "started"</span></pre></div>
+		</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Clock'>Tone.Clock</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">MultiPlayer</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<div id="description"><p><a class="internalLink" href='../docs/#MultiPlayer'>Tone.MultiPlayer</a> implements a &quot;fire and forget&quot;
+       style buffer player. This is very good for short samples
+       like drum hits, sound effects and instruments samples. 
+       Unlike <a class="internalLink" href='../docs/#Player'>Tone.Player</a>, <a class="internalLink" href='../docs/#MultiPlayer'>Tone.MultiPlayer</a> cannot loop samples
+       or change any attributes of a playing sample.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">MultiPlayer</span>
+		<span class="params">
+			<span class='syntax'>(</span><span id='name'>buffers</span><span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">buffers</span>
+				<span class="type"><span class='paren'>{</span>Object<span class='paren'>}</span></span>
+				<div id="description"><p>An object with sample names as the keys and either
+                        urls or <a class="internalLink" href='../docs/#Buffers'>Tone.Buffers</a> as the values.</p>
+</div>
+		</div>
+	</div>
+	
+</div>
+			
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="start" class="method listItem ">
+			<span id="title">.start
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>sampleName</span><span class='syntax'>, </span><span id='name'>time</span><span class='syntax'>, </span><span id='name'>options</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">sampleName</span>
+						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+						<div id="description">The name of the buffer to trigger</div>
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The time to play the sample</div>
+							<span id="name">options</span>
+						<span class="type"><span class='paren'>{</span>Object<span class='paren'>}</span></span>
+						<div id="description">An object literal of options: gain, 
+                           duration, playbackRate, and offset</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#MultiPlayer'>Tone.MultiPlayer</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Start the given sampleName with</p>
+</div>
+		</div>
+		<div id="stopAll" class="method listItem ">
+			<span id="title">.stopAll
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span>[<span class='syntax'>, </span><span id='name'>fadeTime</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When to stop the samples.</div>
+							<span id="name">fadeTime</span> <span class="syntax">=</span>
+							<span id="default">0.01</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">How long to fade out for.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#MultiPlayer'>Tone.MultiPlayer</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Stop all the samples that are currently playing</p>
+</div>
+		</div>
+		<div id="addBuffer" class="method listItem ">
+			<span id="title">.addBuffer
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>name</span><span class='syntax'>, </span><span id='name'>url</span>[<span class='syntax'>, </span><span id='name'>callback</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">name</span>
+						<span class="type"><span class='paren'>{</span>String|Object<span class='paren'>}</span></span>
+						<div id="description">The name of the buffer. Or pass in an object
+                            with the name as the keys and urls as the values</div>
+							<span id="name">url</span>
+						<span class="type"><span class='paren'>{</span>String|<a class="internalLink" href='../docs/#Buffer'>Tone.Buffer</a><span class='paren'>}</span></span>
+						<div id="description">Either the url to load, or the
+                                 Tone.Buffer which corresponds to the name.</div>
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">The callback to invoke when the buffer is loaded.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#MultiPlayer'>Tone.MultiPlayer</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Add a buffer to the list of buffers, or load the given url</p>
+</div>
+		</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#MultiPlayer'>Tone.MultiPlayer</a><span class='paren'>}</span></span>
+					<span id="description"><p>[description]</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">NoiseSynth</span><span id="extends"> &#8594; <a href='#Instrument'>Tone.Instrument</a></span>
+	<div id="description"><p><a class="internalLink" href='../docs/#NoiseSynth'>Tone.NoiseSynth</a> is composed of a noise generator (<a class="internalLink" href='../docs/#Noise'>Tone.Noise</a>), one filter (<a class="internalLink" href='../docs/#Filter'>Tone.Filter</a>), 
+         and two envelopes (Tone.Envelop). One envelope controls the amplitude
+         of the noise and the other is controls the cutoff frequency of the filter. 
+         <img src="https://docs.google.com/drawings/d/1rqzuX9rBlhT50MRvD2TKml9bnZhcZmzXF1rf_o7vdnE/pub?w=918&h=242"></p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">NoiseSynth</span>
+		<span class="params">
+			<span class='syntax'>(</span>[<span id='name'>options</span>]<span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">options</span>
+				<span class="type"><span class='paren'>{</span>Object<span class='paren'>}</span></span>
+				<div id="description"><p>the options available for the synth 
+                         see defaults below</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> noiseSynth = <span class="hljs-keyword">new</span> Tone.NoiseSynth().toMaster();
+noiseSynth.triggerAttackRelease(<span class="hljs-string">"8n"</span>);</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>noise</span><span class='syntax'>:</span><span class='syntax'>{</span><div class='row'><span id='name'>type</span><span class='syntax'>:</span><span class='value string'>&quot;white&quot;</span></div><span class='syntax'>}</span></div><div class='row'><span id='name'>filter</span><span class='syntax'>:</span><span class='syntax'>{</span><div class='row'><span id='name'>Q</span><span class='syntax'>:</span><span class='value number'>6</span></div><div class='row'><span id='name'>type</span><span class='syntax'>:</span><span class='value string'>&quot;highpass&quot;</span></div><div class='row'><span id='name'>rolloff</span><span class='syntax'>:</span><span class='value number'>-24</span></div><span class='syntax'>}</span></div><div class='row'><span id='name'>envelope</span><span class='syntax'>:</span><span class='syntax'>{</span><div class='row'><span id='name'>attack</span><span class='syntax'>:</span><span class='value number'>0.005</span></div><div class='row'><span id='name'>decay</span><span class='syntax'>:</span><span class='value number'>0.1</span></div><div class='row'><span id='name'>sustain</span><span class='syntax'>:</span><span class='value number'>0</span></div><span class='syntax'>}</span></div><div class='row'><span id='name'>filterEnvelope</span><span class='syntax'>:</span><span class='syntax'>{</span><div class='row'><span id='name'>attack</span><span class='syntax'>:</span><span class='value number'>0.06</span></div><div class='row'><span id='name'>decay</span><span class='syntax'>:</span><span class='value number'>0.2</span></div><div class='row'><span id='name'>sustain</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>release</span><span class='syntax'>:</span><span class='value number'>2</span></div><div class='row'><span id='name'>baseFrequency</span><span class='syntax'>:</span><span class='value number'>20</span></div><div class='row'><span id='name'>octaves</span><span class='syntax'>:</span><span class='value number'>5</span></div><span class='syntax'>}</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="noise" class="member listItem">
+			<span id="title">.noise</span>
+			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Noise'>Tone.Noise</a><span class='paren'>}</span></span>
+			<div id="description"><p>The noise source.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>noiseSynth.set(<span class="hljs-string">"noise.type"</span>, <span class="hljs-string">"brown"</span>);</pre></div>
+		</div>
+		<div id="filter" class="member listItem">
+			<span id="title">.filter</span>
+			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Filter'>Tone.Filter</a><span class='paren'>}</span></span>
+			<div id="description"><p>The filter.</p>
+</div>
+		</div>
+		<div id="filterEnvelope" class="member listItem">
+			<span id="title">.filterEnvelope</span>
+			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#FrequencyEnvelope'>Tone.FrequencyEnvelope</a><span class='paren'>}</span></span>
+			<div id="description"><p>The filter envelope.</p>
+</div>
+		</div>
+		<div id="envelope" class="member listItem">
+			<span id="title">.envelope</span>
+			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#AmplitudeEnvelope'>Tone.AmplitudeEnvelope</a><span class='paren'>}</span></span>
+			<div id="description"><p>The amplitude envelope.</p>
+</div>
+		</div>
+		<div id="volume" class="member listItem">
+			<span id="title">.volume</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Decibels'>Decibels</a><span class='paren'>}</span></span>
+			<div id="description"><p>The volume of the output in decibels.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>source.volume.value = -<span class="hljs-number">6</span>;</pre></div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="triggerAttack" class="method listItem ">
+			<span id="title">.triggerAttack
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>][<span class='syntax'>, </span><span id='name'>velocity</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">the time the attack should start</div>
+							<span id="name">velocity</span> <span class="syntax">=</span>
+							<span id="default">1</span>
+						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+						<div id="description">the velocity of the note (0-1)</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#NoiseSynth'>Tone.NoiseSynth</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Start the attack portion of the envelopes. Unlike other 
+ instruments, <a class="internalLink" href='../docs/#NoiseSynth'>Tone.NoiseSynth</a> doesn&#39;t have a note.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>noiseSynth.triggerAttack();</pre></div>
+		</div>
+		<div id="triggerRelease" class="method listItem ">
+			<span id="title">.triggerRelease
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">the time the release should start</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#NoiseSynth'>Tone.NoiseSynth</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Start the release portion of the envelopes.</p>
+</div>
+		</div>
+		<div id="triggerAttackRelease" class="method listItem ">
+			<span id="title">.triggerAttackRelease
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>duration</span>[<span class='syntax'>, </span><span id='name'>time</span>][<span class='syntax'>, </span><span id='name'>velocity</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">duration</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">the duration of the note</div>
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">the time of the attack</div>
+							<span id="name">velocity</span> <span class="syntax">=</span>
+							<span id="default">1</span>
+						<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+						<div id="description">the velocity</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#NoiseSynth'>Tone.NoiseSynth</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Trigger the attack and then the release.</p>
+</div>
+		</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#NoiseSynth'>Tone.NoiseSynth</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up.</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

@@ -1,0 +1,86 @@
+<html>
+<head>
+
+	<script type="text/javascript">
+		// jshint ignore: start
+	</script>
+	<title>SCRATCH</title>
+
+	<script type="text/javascript" src="./scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="./scripts/require.js"></script>
+
+	<!-- <script type="text/javascript" src="../build/Tone.min.js"></script> -->
+
+</head>
+<body>
+	<div id="meter"></div>
+	<canvas></canvas>
+	<style type="text/css">
+
+		canvas {
+			width: 1000px;
+			height: 200px;
+		}
+	</style>
+	<script type="text/javascript">
+
+
+		
+		require.config({
+			baseUrl : "./",
+			"paths" : {
+				"Tone" : "../Tone/",
+			},
+		});
+
+		require(["Tone/source/Oscillator", "Tone/core/Tone", "../test/helper/Offline"],
+		function(Oscillator, Tone, Offline){
+
+			var width = $("canvas").width() * 2;
+			var height = $("canvas").height() * 2;
+
+			var context = $("canvas").get(0).getContext("2d");
+			context.canvas.width = width;
+			context.canvas.height = height;
+
+			var duration = 3;
+			var offline = new Offline(duration);
+			offline.before(function(dest){
+				/*var osc = Tone.context.createOscillator();
+				osc.connect(dest);
+				osc.type = "square";
+				osc.frequency.value = 0.5;
+				osc.start(0);*/
+
+				var osc2 = Tone.context.createOscillator();
+				osc2.connect(dest);
+				osc2.type = "square";
+				osc2.frequency.value = 0.5;
+				osc2.start(0);
+			});
+			var max = 0;
+			//test for discontinuities
+			offline.test(function(sample, time){
+				if (sample > max){
+					max = sample;
+				}
+
+				//draw each of the samples
+				var x = Math.floor(time * (width / duration));
+				var y = height / 2 - sample * height / 2;
+				context.fillStyle = "blue";
+				context.beginPath();
+				context.fillRect( x, y, 1, 1 );
+			}); 
+			offline.after(function(){
+				console.log(max);
+			});
+			offline.run();
+			
+			// loop();
+		});
+	
+
+	</script>
+</body>
+</html>

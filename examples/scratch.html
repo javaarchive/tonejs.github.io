@@ -1,0 +1,53 @@
+<html>
+<head>
+
+	<script type="text/javascript">
+		// jshint ignore: start
+	</script>
+	<title>SCRATCH</title>
+
+	<script type="text/javascript" src="./scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="./scripts/require.js"></script>
+
+	<!-- <script type="text/javascript" src="../build/Tone.min.js"></script> -->
+
+</head>
+<body>
+	<button>start</button>
+	<div id="meter"></div>
+	<canvas></canvas>
+	<style type="text/css">
+
+		div {
+			font-size: 80px;
+		}
+	</style>
+	<script type="text/javascript">
+
+
+		
+		require.config({
+			baseUrl : "./",
+			"paths" : {
+				"Tone" : "../Tone/",
+			},
+		});
+
+		require(["Tone/core/Time"],
+		function(Time){
+
+			var t = new Time();
+			window.t = t;
+			console.log(t._tokenize("8 + 2"));
+			
+			function loop(){
+				requestAnimationFrame(loop);
+				// document.querySelector("#meter").textContent = meter.getValue();
+			}
+			loop();
+		});
+	
+
+	</script>
+</body>
+</html>

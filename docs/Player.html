@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">Player</span><span id="extends"> &#8594; <a href='#Source'>Tone.Source</a></span>
+	<div id="description"><p><a class="internalLink" href='../docs/#Player'>Tone.Player</a> is an audio file player with start, loop, and stop functions.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">Player</span>
+		<span class="params">
+			<span class='syntax'>(</span><span id='name'>url</span>[<span class='syntax'>, </span><span id='name'>onload</span>]<span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">url</span>
+				<span class="type"><span class='paren'>{</span>string|AudioBuffer<span class='paren'>}</span></span>
+				<div id="description"><p>Either the AudioBuffer or the url from
+                                 which to load the AudioBuffer</p>
+</div>
+					<span id="name">onload</span>
+				<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+				<div id="description"><p>The function to invoke when the buffer is loaded. 
+                           Recommended to use <a class="internalLink" href='../docs/#Buffer.onload'>Tone.Buffer.onload</a> instead.</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> player = <span class="hljs-keyword">new</span> Tone.Player(<span class="hljs-string">"./path/to/sample.mp3"</span>).toMaster();
+Tone.Buffer.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+	player.start();
+}</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>onload</span><span class='syntax'>:</span><span class='value Tone'>Tone.noOp</span></div><div class='row'><span id='name'>playbackRate</span><span class='syntax'>:</span><span class='value number'>1</span></div><div class='row'><span id='name'>loop</span><span class='syntax'>:</span><span class='value number'>false</span></div><div class='row'><span id='name'>autostart</span><span class='syntax'>:</span><span class='value number'>false</span></div><div class='row'><span id='name'>loopStart</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>loopEnd</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>retrigger</span><span class='syntax'>:</span><span class='value number'>false</span></div><div class='row'><span id='name'>reverse</span><span class='syntax'>:</span><span class='value number'>false</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="autostart" class="member listItem">
+			<span id="title">.autostart</span>
+			<span class="type"><span class='paren'>{</span>boolean<span class='paren'>}</span></span>
+			<div id="description"><p>If the file should play as soon
+ as the buffer is loaded.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//will play as soon as it's loaded</span>
+<span class="hljs-keyword">var</span> player = <span class="hljs-keyword">new</span> Tone.Player({
+	<span class="hljs-string">"url"</span> : <span class="hljs-string">"./path/to/sample.mp3"</span>,
+	<span class="hljs-string">"autostart"</span> : <span class="hljs-literal">true</span>,
+}).toMaster();</pre></div>
+		</div>
+		<div id="retrigger" class="member listItem">
+			<span id="title">.retrigger</span>
+			<span class="type"><span class='paren'>{</span>boolean<span class='paren'>}</span></span>
+			<div id="description"><p>Enabling retrigger will allow a player to be restarted
+ before the the previous &#39;start&#39; is done playing. Otherwise, 
+ successive calls to <a class="internalLink" href='../docs/#Player.start'>Tone.Player.start</a> will only start
+ the sample if it had played all the way through.</p>
+</div>
+		</div>
+		<div id="loopStart" class="member listItem">
+			<span id="title">.loopStart</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>If loop is true, the loop will start at this position.</p>
+</div>
+		</div>
+		<div id="loopEnd" class="member listItem">
+			<span id="title">.loopEnd</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>If loop is true, the loop will end at this position.</p>
+</div>
+		</div>
+		<div id="buffer" class="member listItem">
+			<span id="title">.buffer</span>
+			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Buffer'>Tone.Buffer</a><span class='paren'>}</span></span>
+			<div id="description"><p>The audio buffer belonging to the player.</p>
+</div>
+		</div>
+		<div id="loop" class="member listItem">
+			<span id="title">.loop</span>
+			<span class="type"><span class='paren'>{</span>boolean<span class='paren'>}</span></span>
+			<div id="description"><p>If the buffer should loop once it&#39;s over.</p>
+</div>
+		</div>
+		<div id="playbackRate" class="member listItem">
+			<span id="title">.playbackRate</span>
+			<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+			<div id="description"><p>The playback speed. 1 is normal speed. This is not a signal because
+Safari and iOS currently don&#39;t support playbackRate as a signal.</p>
+</div>
+		</div>
+		<div id="reverse" class="member listItem">
+			<span id="title">.reverse</span>
+			<span class="type"><span class='paren'>{</span>boolean<span class='paren'>}</span></span>
+			<div id="description"><p>The direction the buffer should play in</p>
+</div>
+		</div>
+		<div id="volume" class="member listItem">
+			<span id="title">.volume</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Decibels'>Decibels</a><span class='paren'>}</span></span>
+			<div id="description"><p>The volume of the output in decibels.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>source.volume.value = -<span class="hljs-number">6</span>;</pre></div>
+		</div>
+		<div id="state" class="member listItem">
+			<span id="title">.state</span>
+			<span class="type"><span class='paren'>{</span>Tone.State<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>Returns the playback state of the source, either &quot;started&quot; or &quot;stopped&quot;.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="load" class="method listItem ">
+			<span id="title">.load
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>url</span>[<span class='syntax'>, </span><span id='name'>callback</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">url</span>
+						<span class="type"><span class='paren'>{</span>string<span class='paren'>}</span></span>
+						<div id="description">The url of the buffer to load.
+                    Filetype support depends on the
+                    browser.</div>
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">The function to invoke once
+                              the sample is loaded.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Player'>Tone.Player</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Load the audio file as an audio buffer.
+ Decodes the audio asynchronously and invokes
+ the callback once the audio buffer loads. 
+ Note: this does not need to be called if a url
+ was passed in to the constructor. Only use this
+ if you want to manually load a new url.</p>
+</div>
+		</div>
+		<div id="setLoopPoints" class="method listItem ">
+			<span id="title">.setLoopPoints
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>loopStart</span><span class='syntax'>, </span><span id='name'>loopEnd</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">loopStart</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The loop end time</div>
+							<span id="name">loopEnd</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The loop end time</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Player'>Tone.Player</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Set the loop start and end. Will only loop if loop is 
+ set to true.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//loop 0.1 seconds of the file. </span>
+player.setLoopPoints(<span class="hljs-number">0.2</span>, <span class="hljs-number">0.3</span>);
+player.loop = <span class="hljs-literal">true</span>;</pre></div>
+		</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Player'>Tone.Player</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Dispose and disconnect.</p>
+</div>
+		</div>
+		<div id="start" class="method listItem ">
+			<span id="title">.start
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When the source should be started.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Source'>Tone.Source</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Start the source at the specified time. If no time is given, 
+ start the source now.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>source.start(<span class="hljs-string">"+0.5"</span>); <span class="hljs-comment">//starts the source 0.5 seconds from now</span></pre></div>
+		</div>
+		<div id="stop" class="method listItem ">
+			<span id="title">.stop
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When the source should be stopped.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Source'>Tone.Source</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Stop the source at the specified time. If no time is given, 
+ stop the source now.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>source.stop(); <span class="hljs-comment">// stops the source immediately</span></pre></div>
+		</div>
+		<div id="sync" class="method listItem ">
+			<span id="title">.sync
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>delay</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">delay</span> <span class="syntax">=</span>
+							<span id="default">0</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">Delay time before starting the source after the
+                              Transport has started.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Source'>Tone.Source</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Sync the source to the Transport so that when the transport
+ is started, this source is started and when the transport is stopped
+ or paused, so is the source.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//sync the source to start 1 measure after the transport starts</span>
+source.sync(<span class="hljs-string">"1m"</span>);
+<span class="hljs-comment">//start the transport. the source will start 1 measure later. </span>
+Tone.Transport.start();</pre></div>
+		</div>
+		<div id="unsync" class="method listItem ">
+			<span id="title">.unsync
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Source'>Tone.Source</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Unsync the source to the Transport. See <a class="internalLink" href='../docs/#Source.sync'>Tone.Source.sync</a></p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

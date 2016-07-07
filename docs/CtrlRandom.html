@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">CtrlRandom</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<div id="description"><p>Choose a random value.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">CtrlRandom</span>
+		<span class="params">
+			<span class='syntax'>(</span><span id='name'>min</span><span class='syntax'>, </span><span id='name'>max</span><span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">min</span>
+				<span class="type"><span class='paren'>{</span>Number|<a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+				<div id="description"><p>The minimum return value.</p>
+</div>
+					<span id="name">max</span>
+				<span class="type"><span class='paren'>{</span>Number|<a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+				<div id="description"><p>The maximum return value.</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> randomWalk = <span class="hljs-keyword">new</span> Tone.CtrlRandom({
+	<span class="hljs-string">"min"</span> : <span class="hljs-number">0</span>,
+	<span class="hljs-string">"max"</span> : <span class="hljs-number">10</span>,
+	<span class="hljs-string">"integer"</span> : <span class="hljs-literal">true</span>
+});
+randomWalk.eval();</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>min</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>max</span><span class='syntax'>:</span><span class='value number'>1</span></div><div class='row'><span id='name'>integer</span><span class='syntax'>:</span><span class='value number'>false</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="min" class="member listItem">
+			<span id="title">.min</span>
+			<span class="type"><span class='paren'>{</span>Number|<a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>The minimum return value</p>
+</div>
+		</div>
+		<div id="max" class="member listItem">
+			<span id="title">.max</span>
+			<span class="type"><span class='paren'>{</span>Number|<a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>The maximum return value</p>
+</div>
+		</div>
+		<div id="integer" class="member listItem">
+			<span id="title">.integer</span>
+			<span class="type"><span class='paren'>{</span>Boolean<span class='paren'>}</span></span>
+			<div id="description"><p>If the return value should be an integer</p>
+</div>
+		</div>
+		<div id="value" class="member listItem">
+			<span id="title">.value</span>
+			<span class="type"><span class='paren'>{</span>*<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>Return a random value between min and max.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

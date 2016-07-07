@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">LFO</span><span id="extends"> &#8594; <a href='#Oscillator'>Tone.Oscillator</a></span>
+	<div id="description"><p>LFO stands for low frequency oscillator. <a class="internalLink" href='../docs/#LFO'>Tone.LFO</a> produces an output signal 
+         which can be attached to an AudioParam or <a class="internalLink" href='../docs/#Signal'>Tone.Signal</a> 
+         in order to modulate that parameter with an oscillator. The LFO can 
+         also be synced to the transport to start/stop and change when the tempo changes.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">LFO</span>
+		<span class="params">
+			<span class='syntax'>(</span>[<span id='name'>frequency</span>][<span class='syntax'>, </span><span id='name'>min</span>][<span class='syntax'>, </span><span id='name'>max</span>]<span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">frequency</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a>|Object<span class='paren'>}</span></span>
+				<div id="description"><p>The frequency of the oscillation. Typically, LFOs will be
+                              in the frequency range of 0.1 to 10 hertz.</p>
+</div>
+					<span id="name">min</span>
+				<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+				<div id="description"><p>The minimum output value of the LFO.</p>
+</div>
+					<span id="name">max</span>
+				<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+				<div id="description"><p>The maximum value of the LFO.</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> lfo = <span class="hljs-keyword">new</span> Tone.LFO(<span class="hljs-string">"4n"</span>, <span class="hljs-number">400</span>, <span class="hljs-number">4000</span>);
+lfo.connect(filter.frequency);</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>type</span><span class='syntax'>:</span><span class='value string'>&quot;sine&quot;</span></div><div class='row'><span id='name'>min</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>max</span><span class='syntax'>:</span><span class='value number'>1</span></div><div class='row'><span id='name'>phase</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>frequency</span><span class='syntax'>:</span><span class='value string'>&quot;4n&quot;</span></div><div class='row'><span id='name'>amplitude</span><span class='syntax'>:</span><span class='value number'>1</span></div><div class='row'><span id='name'>units</span><span class='syntax'>:</span><span class='value Tone'>Tone.Type.Default</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="frequency" class="member listItem">
+			<span id="title">.frequency</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Frequency'>Frequency</a><span class='paren'>}</span></span>
+			<div id="description"><p>the lfo&#39;s frequency</p>
+</div>
+		</div>
+		<div id="amplitude" class="member listItem">
+			<span id="title">.amplitude</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+			<div id="description"><p>The amplitude of the LFO, which controls the output range between
+the min and max output. For example if the min is -10 and the max 
+is 10, setting the amplitude to 0.5 would make the LFO modulate
+between -5 and 5.</p>
+</div>
+		</div>
+		<div id="min" class="member listItem">
+			<span id="title">.min</span>
+			<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+			<div id="description"><p>The miniumum output of the LFO.</p>
+</div>
+		</div>
+		<div id="max" class="member listItem">
+			<span id="title">.max</span>
+			<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+			<div id="description"><p>The maximum output of the LFO.</p>
+</div>
+		</div>
+		<div id="type" class="member listItem">
+			<span id="title">.type</span>
+			<span class="type"><span class='paren'>{</span>string<span class='paren'>}</span></span>
+			<div id="description"><p>The type of the oscillator: sine, square, sawtooth, triangle.</p>
+</div>
+		</div>
+		<div id="phase" class="member listItem">
+			<span id="title">.phase</span>
+			<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+			<div id="description"><p>The phase of the LFO.</p>
+</div>
+		</div>
+		<div id="units" class="member listItem">
+			<span id="title">.units</span>
+			<span class="type"><span class='paren'>{</span>Tone.Type<span class='paren'>}</span></span>
+			<div id="description"><p>The output units of the LFO.</p>
+</div>
+		</div>
+		<div id="state" class="member listItem">
+			<span id="title">.state</span>
+			<span class="type"><span class='paren'>{</span>Tone.State<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>Returns the playback state of the source, either &quot;started&quot; or &quot;stopped&quot;.</p>
+</div>
+		</div>
+		<div id="detune" class="member listItem">
+			<span id="title">.detune</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Cents'>Cents</a><span class='paren'>}</span></span>
+			<div id="description"><p>The detune control signal.</p>
+</div>
+		</div>
+		<div id="partials" class="member listItem">
+			<span id="title">.partials</span>
+			<span class="type"><span class='paren'>{</span>Array<span class='paren'>}</span></span>
+			<div id="description"><p>The partials of the waveform. A partial represents 
+the amplitude at a harmonic. The first harmonic is the 
+fundamental frequency, the second is the octave and so on
+following the harmonic series. 
+Setting this value will automatically set the type to &quot;custom&quot;. 
+The value is an empty array when the type is not &quot;custom&quot;.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>osc.partials = [<span class="hljs-number">1</span>, <span class="hljs-number">0.2</span>, <span class="hljs-number">0.01</span>];</pre></div>
+		</div>
+		<div id="volume" class="member listItem">
+			<span id="title">.volume</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#Decibels'>Decibels</a><span class='paren'>}</span></span>
+			<div id="description"><p>The volume of the output in decibels.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>source.volume.value = -<span class="hljs-number">6</span>;</pre></div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="start" class="method listItem ">
+			<span id="title">.start
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">the time the LFO will start</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#LFO'>Tone.LFO</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Start the LFO.</p>
+</div>
+		</div>
+		<div id="stop" class="method listItem ">
+			<span id="title">.stop
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">the time the LFO will stop</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#LFO'>Tone.LFO</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Stop the LFO.</p>
+</div>
+		</div>
+		<div id="sync" class="method listItem ">
+			<span id="title">.sync
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>delay</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">delay</span> <span class="syntax">=</span>
+							<span id="default">0</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">the time to delay the start of the
+                               LFO from the start of the transport</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#LFO'>Tone.LFO</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Sync the start/stop/pause to the transport 
+ and the frequency to the bpm of the transport</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>lfo.frequency.value = <span class="hljs-string">"8n"</span>;
+ lfo.sync();
+ <span class="hljs-comment">//the rate of the LFO will always be an eighth note, </span>
+ <span class="hljs-comment">//even as the tempo changes</span></pre></div>
+		</div>
+		<div id="unsync" class="method listItem ">
+			<span id="title">.unsync
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#LFO'>Tone.LFO</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>unsync the LFO from transport control</p>
+</div>
+		</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#LFO'>Tone.LFO</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>disconnect and dispose</p>
+</div>
+		</div>
+		<div id="syncFrequency" class="method listItem ">
+			<span id="title">.syncFrequency
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Oscillator'>Tone.Oscillator</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Sync the signal to the Transport&#39;s bpm. Any changes to the transports bpm,
+ will also affect the oscillators frequency.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>Tone.Transport.bpm.value = <span class="hljs-number">120</span>;
+osc.frequency.value = <span class="hljs-number">440</span>;
+<span class="hljs-comment">//the ration between the bpm and the frequency will be maintained</span>
+osc.syncFrequency();
+Tone.Transport.bpm.value = <span class="hljs-number">240</span>; 
+<span class="hljs-comment">// the frequency of the oscillator is doubled to 880</span></pre></div>
+		</div>
+		<div id="unsyncFrequency" class="method listItem ">
+			<span id="title">.unsyncFrequency
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Oscillator'>Tone.Oscillator</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Unsync the oscillator&#39;s frequency from the Transport. 
+ See <a class="internalLink" href='../docs/#Oscillator.syncFrequency'>Tone.Oscillator.syncFrequency</a></p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

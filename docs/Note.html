@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Note</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="content">
+			<div id="typedef">
+				<div id="name">Note</div>
+				<div id="description"><p>A frequency represented by a letter name, 
+ accidental and octave. This system is known as
+ <a href="https://en.wikipedia.org/wiki/Scientific_pitch_notation">Scientific Pitch Notation</a>.</p>
+</div>
+			</div>
+		</div>
+	</body>
+</html>
+callback 
+         which will be invoked on the channel at the time with
+         whatever value was specified.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">Note</span>
+		<span class="params">
+			<span class='syntax'>(</span><span id='name'>channel</span><span class='syntax'>, </span><span id='name'>time</span><span class='syntax'>, </span><span id='name'>value</span><span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">channel</span>
+				<span class="type"><span class='paren'>{</span>number|string<span class='paren'>}</span></span>
+				<div id="description"><p>the channel name of the note</p>
+</div>
+					<span id="name">time</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#Time'>Time</a><span class='paren'>}</span></span>
+				<div id="description"><p>the time when the note will occur</p>
+</div>
+					<span id="name">value</span>
+				<span class="type"><span class='paren'>{</span>string|number|Object|Array<span class='paren'>}</span></span>
+				<div id="description"><p>the value of the note</p>
+</div>
+		</div>
+	</div>
+	
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="value" class="member listItem">
+			<span id="title">.value</span>
+			<span class="type"><span class='paren'>{</span>string|number|Object<span class='paren'>}</span></span>
+			<div id="description"><p>the value of the note. This value is returned
+ when the channel callback is invoked.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#<a href='../docs/#Note'>Note</a>'>Tone.<a href='../docs/#Note'>Note</a></a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>clean up</p>
+</div>
+		</div>
+		<div id="route" class="method listItem static">
+			<span id="title">.route
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>channel</span><span class='syntax'>, </span><span id='name'>callback</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">channel</span>
+						<span class="type"><span class='paren'>{</span>string|number<span class='paren'>}</span></span>
+						<div id="description">the channel to route note events from</div>
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">callback to be invoked when a note will occur
+                                       on the specified channel</div>
+				</div>
+			<div id="description"><p>listen to a specific channel, get all of the note callbacks</p>
+</div>
+		</div>
+		<div id="unroute" class="method listItem static">
+			<span id="title">.unroute
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>channel</span><span class='syntax'>, </span><span id='name'>callback</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">channel</span>
+						<span class="type"><span class='paren'>{</span>string|number<span class='paren'>}</span></span>
+						<div id="description">The channel to unroute note events from</div>
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">Callback which was registered to the channel.</div>
+				</div>
+			<div id="description"><p>Remove a previously routed callback from a channel.</p>
+</div>
+		</div>
+		<div id="parseScore" class="method listItem static">
+			<span id="title">.parseScore
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>score</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">score</span>
+						<span class="type"><span class='paren'>{</span>Object<span class='paren'>}</span></span>
+						<div id="description"></div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Array<span class='paren'>}</span></span>
+					<span id="description"><p>an array of all of the notes that were created</p>
+</span>
+				</div>
+			<div id="description"><p>Parses a score and registers all of the notes along the timeline. 
+ <br><br>
+ Scores are a JSON object with instruments at the top level
+ and an array of time and values. The value of a note can be 0 or more 
+ parameters. 
+ <br><br>
+ The only requirement for the score format is that the time is the first (or only)
+ value in the array. All other values are optional and will be passed into the callback
+ function registered using <code>Note.route(channelName, callback)</code>.
+ <br><br>
+ To convert MIDI files to score notation, take a look at utils/MidiToScore.js</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//an example JSON score which sets up events on channels</span>
+<span class="hljs-keyword">var</span> score = { 
+	<span class="hljs-string">"synth"</span>  : [[<span class="hljs-string">"0"</span>, <span class="hljs-string">"C3"</span>], [<span class="hljs-string">"0:1"</span>, <span class="hljs-string">"D3"</span>], [<span class="hljs-string">"0:2"</span>, <span class="hljs-string">"E3"</span>], ... ],
+	<span class="hljs-string">"bass"</span>  : [[<span class="hljs-string">"0"</span>, <span class="hljs-string">"C2"</span>], [<span class="hljs-string">"1:0"</span>, <span class="hljs-string">"A2"</span>], [<span class="hljs-string">"2:0"</span>, <span class="hljs-string">"C2"</span>], [<span class="hljs-string">"3:0"</span>, <span class="hljs-string">"A2"</span>], ... ],
+	<span class="hljs-string">"kick"</span>  : [<span class="hljs-string">"0"</span>, <span class="hljs-string">"0:2"</span>, <span class="hljs-string">"1:0"</span>, <span class="hljs-string">"1:2"</span>, <span class="hljs-string">"2:0"</span>, ... ],
+	<span class="hljs-comment">//...</span>
+};
+<span class="hljs-comment">//parse the score into Notes</span>
+Tone.Note.parseScore(score);
+<span class="hljs-comment">//route all notes on the "synth" channel</span>
+Tone.Note.route(<span class="hljs-string">"synth"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">time, note</span>)</span>{
+	<span class="hljs-comment">//trigger synth</span>
+});</pre></div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>
