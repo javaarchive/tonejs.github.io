@@ -3,6 +3,7 @@
 	<head>
 	<title>Tone Docs</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
 </head>
@@ -10,7 +11,7 @@
 	<body>
 		<div id="content">
 			<div id="constructor">
-	<span id="name">Clock</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<span id="name">Clock</span><span id="extends"> &#8594; <a href='#Emitter'>Tone.Emitter</a></span>
 	<div id="description"><p>A sample accurate clock which provides a callback at the given rate. 
          While the callback is not sample-accurate (it is still susceptible to
          loose JS timing), the time passed in as the argument to the callback
@@ -51,19 +52,6 @@
 			<div id="description"><p>The callback function to invoke at the scheduled tick.</p>
 </div>
 		</div>
-		<div id="_lookAhead" class="member listItem">
-			<span id="title">._lookAhead</span>
-			<span class="type"><span class='paren'>{</span>Number|String<span class='paren'>}</span></span>
-			<div id="description"><p>The time which the clock will schedule events in advance
- of the current time. Scheduling notes in advance improves
- performance and decreases the chance for clicks caused
- by scheduling events in the past. If set to &quot;auto&quot;,
- this value will be automatically computed based on the 
- rate of requestAnimationFrame (0.016 seconds). Larger values
- will yeild better performance, but at the cost of latency. 
- Values less than 0.016 are not recommended.</p>
-</div>
-		</div>
 		<div id="frequency" class="member listItem">
 			<span id="title">.frequency</span>
 				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
@@ -94,7 +82,7 @@
  performance and decreases the chance for clicks caused
  by scheduling events in the past. If set to &quot;auto&quot;,
  this value will be automatically computed based on the 
- rate of requestAnimationFrame (0.016 seconds). Larger values
+ rate of the update (~0.02 seconds). Larger values
  will yeild better performance, but at the cost of latency. 
  Values less than 0.016 are not recommended.</p>
 </div>
@@ -205,6 +193,80 @@ clock.getStateAtTime(<span class="hljs-string">"+0.1"</span>); <span class="hljs
 </span>
 				</div>
 			<div id="description"><p>Clean up</p>
+</div>
+		</div>
+		<div id="on" class="method listItem ">
+			<span id="title">.on
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>event</span><span class='syntax'>, </span><span id='name'>callback</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">event</span>
+						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+						<div id="description">The name of the event to listen for.</div>
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">The callback to invoke when the
+                               event is emitted</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Emitter'>Tone.Emitter</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Bind a callback to a specific event.</p>
+</div>
+		</div>
+		<div id="off" class="method listItem ">
+			<span id="title">.off
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>event</span>[<span class='syntax'>, </span><span id='name'>callback</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">event</span>
+						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+						<div id="description">The event to stop listening to.</div>
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">The callback which was bound to 
+                               the event with Tone.Emitter.on.
+                               If no callback is given, all callbacks
+                               events are removed.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Emitter'>Tone.Emitter</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Remove the event listener.</p>
+</div>
+		</div>
+		<div id="emit" class="method listItem ">
+			<span id="title">.emit
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>event</span><span class='syntax'>, </span><span id='name'></span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">event</span>
+						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+						<div id="description">The name of the event.</div>
+							<span id="name"></span>
+						<span class="type"></span>
+						<div id="description"></div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Emitter'>Tone.Emitter</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Invoke all of the callbacks bound to the event
+ with any arguments passed in.</p>
 </div>
 		</div>
 </div>

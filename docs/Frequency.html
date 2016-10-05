@@ -3,6 +3,7 @@
 	<head>
 	<title>Tone Docs</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
 </head>
@@ -129,6 +130,20 @@ Tone.Frequency(<span class="hljs-string">"C3"</span>).transpose(<span class="hlj
 			<div id="description"><p>Return the duration of one cycle in seconds.</p>
 </div>
 		</div>
+		<div id="toFrequency" class="method listItem ">
+			<span id="title">.toFrequency
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a><span class='paren'>}</span></span>
+					<span id="description"></span>
+				</div>
+			<div id="description"><p>Return the value in Hertz</p>
+</div>
+		</div>
 		<div id="toTicks" class="method listItem ">
 			<span id="title">.toTicks
 				<span class="params">
@@ -203,6 +218,40 @@ Tone.Frequency(<span class="hljs-string">"C3"</span>).transpose(<span class="hlj
 				</div>
 			<div id="description"><p>Repalce the current time value with the value
  given by the expression string.</p>
+</div>
+		</div>
+		<div id="clone" class="method listItem ">
+			<span id="title">.clone
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#TimeBase'>Tone.TimeBase</a><span class='paren'>}</span></span>
+					<span id="description"><p>The new cloned <a class="internalLink" href='../docs/#TimeBase'>Tone.TimeBase</a></p>
+</span>
+				</div>
+			<div id="description"><p>Return a clone of the TimeBase object.</p>
+</div>
+		</div>
+		<div id="copy" class="method listItem ">
+			<span id="title">.copy
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#TimeBase'>Tone.TimeBase</a><span class='paren'>}</span></span>
+						<div id="description"></div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>TimeBase<span class='paren'>}</span></span>
+					<span id="description"></span>
+				</div>
+			<div id="description"><p>Copies the value of time to this Time</p>
 </div>
 		</div>
 		<div id="add" class="method listItem ">

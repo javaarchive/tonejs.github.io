@@ -3,6 +3,7 @@
 	<head>
 	<title>Tone Docs</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
 </head>
@@ -111,6 +112,13 @@ Tone.Transport.timeSignature; <span class="hljs-comment">//returns 3.5</span></p
 			<span id="title">.position</span>
 			<span class="type"><span class='paren'>{</span><a href='../docs/#types/BarsBeatsSixteenths'>BarsBeatsSixteenths</a><span class='paren'>}</span></span>
 			<div id="description"><p>The Transport&#39;s position in Bars:Beats:Sixteenths.
+ Setting the value will jump to that position right away.</p>
+</div>
+		</div>
+		<div id="seconds" class="member listItem">
+			<span id="title">.seconds</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Seconds'>Seconds</a><span class='paren'>}</span></span>
+			<div id="description"><p>The Transport&#39;s position in seconds
  Setting the value will jump to that position right away.</p>
 </div>
 		</div>
@@ -271,6 +279,15 @@ Tone.Transport.scheduleRepeat(callback, <span class="hljs-string">"8n"</span>, <
 			<div id="description"><p>Remove scheduled events from the timeline after
  the given time. Repeated events will be removed
  if their startTime is after the given time</p>
+</div>
+		</div>
+		<div id="_bindClockEvents" class="method listItem ">
+			<span id="title">._bindClockEvents
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+			<div id="description"><p>Bind start/stop/pause events from the clock and emit them.</p>
 </div>
 		</div>
 		<div id="start" class="method listItem ">
@@ -454,7 +471,7 @@ Tone.Transport.nextSubdivision(<span class="hljs-string">"4n"</span>);</pre></di
 							<span id="name">callback</span>
 						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
 						<div id="description">The callback to invoke when the
-                               event is triggered</div>
+                               event is emitted</div>
 				</div>
 				<div id="returns">
 					<span id="keyword">returns</span>
@@ -491,8 +508,8 @@ Tone.Transport.nextSubdivision(<span class="hljs-string">"4n"</span>);</pre></di
 			<div id="description"><p>Remove the event listener.</p>
 </div>
 		</div>
-		<div id="trigger" class="method listItem ">
-			<span id="title">.trigger
+		<div id="emit" class="method listItem ">
+			<span id="title">.emit
 				<span class="params">
 					<span class='syntax'>(</span><span id='name'>event</span><span class='syntax'>, </span><span id='name'></span><span class='syntax'>)</span>
 				</span>

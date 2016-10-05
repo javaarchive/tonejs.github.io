@@ -3,6 +3,7 @@
 	<head>
 	<title>Tone Docs</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
 </head>
@@ -182,16 +183,9 @@ The value is an empty array when the type is not &quot;custom&quot;.</p>
 		<div id="sync" class="method listItem ">
 			<span id="title">.sync
 				<span class="params">
-					<span class='syntax'>(</span>[<span id='name'>delay</span>]<span class='syntax'>)</span>
+					<span class='syntax'>(</span><span class='syntax'>)</span>
 				</span>
 			</span>
-				<div id="paramDescriptions">
-							<span id="name">delay</span> <span class="syntax">=</span>
-							<span id="default">0</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
-						<div id="description">the time to delay the start of the
-                               LFO from the start of the transport</div>
-				</div>
 				<div id="returns">
 					<span id="keyword">returns</span>
 					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#LFO'>Tone.LFO</a><span class='paren'>}</span></span>
@@ -202,7 +196,7 @@ The value is an empty array when the type is not &quot;custom&quot;.</p>
  and the frequency to the bpm of the transport</p>
 </div>
 					<div class='example'><div id=exampleTitle>code</div><pre>lfo.frequency.value = <span class="hljs-string">"8n"</span>;
- lfo.sync();
+ lfo.sync().start(<span class="hljs-number">0</span>)
  <span class="hljs-comment">//the rate of the LFO will always be an eighth note, </span>
  <span class="hljs-comment">//even as the tempo changes</span></pre></div>
 		</div>

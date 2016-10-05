@@ -85,7 +85,7 @@ $(function(){
 	var topbar = $("#topBar");
 
 	var logo = new Logo({
-		"container" : topbar,
+		"container" : topbar.get(0),
 		"height" : 29,
 		"width" : 140
 	});
