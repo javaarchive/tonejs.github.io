@@ -15,9 +15,9 @@ $(function(){
 	var topbar = $("<div>").attr("id", "TopBar");
 	$("body").prepend(topbar);
 	
-	if (typeof Tone !== "undefined"){
-		var logo = new Logo({
-			"container" : topbar,
+	if (typeof Logo !== "undefined"){
+		Logo({
+			"container" : topbar.get(0),
 			"height" : topbar.height() - 6,
 			"width" : 140
 		});
@@ -269,31 +269,36 @@ Interface.Slider = function(params){
 	 */
 	if (this.parameter || typeof params.value !== "undefined"){
 
-		var maxSize = this.container[this.maxAxis]() - this.element[this.maxAxis]();
-
-		//y gets inverted
-		if (this.axis === "y"){
-			maxSize = this.container[this.maxAxis]() - maxSize;
-		}
-
 		var paramValue = typeof params.value !== "undefined" ? params.value : this.tone.get(this.parameter);
-		if (paramValue.hasOwnProperty(this.parameter)){
-			paramValue = paramValue[this.parameter];
-		}
 
-		if (this.options){
-			paramValue = this.options.indexOf(paramValue);
-		}
-
-		var pos = (paramValue - this.min) / (this.max - this.min);
-		pos = Math.pow(pos, 1 / this.exp) * (maxSize );
-		this.element.css(this.posAxis, pos);
-
-		if (this.options){
-			this._setParam(this.options[paramValue]);
-		} 
+		this.value(paramValue);		
 	}
 };
+
+Interface.Slider.prototype.value = function(val){
+	var maxSize = this.container[this.maxAxis]() - this.element[this.maxAxis]();
+	//y gets inverted
+	if (this.axis === "y"){
+		maxSize = this.container[this.maxAxis]() - maxSize;
+	}
+
+	if (val.hasOwnProperty(this.parameter)){
+		val = val[this.parameter];
+	}
+
+	if (this.options){
+		val = this.options.indexOf(val);
+	}
+
+	var pos = (val - this.min) / (this.max - this.min);
+	pos = Math.pow(pos, 1 / this.exp) * (maxSize );
+	this.element.css(this.posAxis, pos);
+
+	if (this.options){
+		this._setParam(this.options[val]);
+	} 
+};
+
 
 Interface.Slider.prototype._ondrag = function(e, pointer){
 	if (typeof this.top === "undefined"){

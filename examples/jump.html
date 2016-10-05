@@ -10,7 +10,7 @@
 	<script type="text/javascript" src="../build/Tone.js"></script>
 	<script type="text/javascript" src="./scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="./scripts/draggabilly.js"></script>
-	<script type="text/javascript" src="./scripts/Logo.js"></script>
+	<script type="text/javascript" src="https://tonejs.github.io/Logo/build/Logo.js"></script>
 	<script type="text/javascript" src="./scripts/StartAudioContext.js"></script>
 	<script type="text/javascript" src="./scripts/Interface.js"></script>
 
@@ -28,11 +28,11 @@
 	<div id="Content">
 		<div id="Title">Supersaw</div>
 		<div id="Explanation">
-			<a href="http://tonejs.org/docs/#FatOscillator">Tone.FatOscillator</a> creates multiple oscillators
+			<a href="https://tonejs.github.io/docs/#FatOscillator">Tone.FatOscillator</a> creates multiple oscillators
 			and detunes them slightly from each other to thicken the sound. The <code>count</code> parameter sets 
 			the number of oscillators and <code>spread</code> sets the total spread (in cents) between the oscillators. 
 			<br><br>
-			FatOscillator is also available in <a href="http://tonejs.org/docs/#OmniOscillator">Tone.OmniOscillator</a> 
+			FatOscillator is also available in <a href="https://tonejs.github.io/docs/#OmniOscillator">Tone.OmniOscillator</a> 
 			by prefixing another type with "fat", then use the count and spread to control the number and detune of the oscillators. To create a "supersaw": <code>omniOscillator.type = "fatsawtooth"</code>.
 			<br><br>
 			<a href="http://www.midiworld.com/files/1121/">Jump by Van Halen MIDI</a> converted using <a href="http://tonejs.github.io/MidiConvert/">MidiConvert</a>
@@ -271,7 +271,7 @@
 				text : "Start",
 				activeText : "Stop",
 				start : function(){
-					Tone.Transport.start();
+					Tone.Transport.start("+0.1");
 				},
 				end : function(){
 					Tone.Transport.stop();
