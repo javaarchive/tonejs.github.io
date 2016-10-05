@@ -6,8 +6,9 @@
 	</script>
 	<title>SCRATCH</title>
 
-	<script type="text/javascript" src="./scripts/jquery.min.js"></script>
-	<script type="text/javascript" src="../../Graph/SignalGraph.js"></script>
+	<script type="text/javascript" src="./scripts/three.min.js"></script>
+	<script type="text/javascript" src="./scripts/OrbitControls.js"></script>
+	<!-- <script type="text/javascript" src="../../Graph/SignalGraph.js"></script> -->
 	<script type="text/javascript" src="./scripts/require.js"></script>
 
 
@@ -15,11 +16,23 @@
 <body>
 	<button>start</button>
 	<div id="meter"></div>
-	<canvas></canvas>
+	<div id="three"></div>
 	<style type="text/css">
 
 		div {
 			font-size: 80px;
+		}
+
+		body {
+			margin: 0px;
+			top: 0px;
+			left: 0px;
+		}
+
+		#three {
+			width: 100%;
+			height: 100%;
+
 		}
 	</style>
 	<script type="text/javascript">
@@ -32,28 +45,113 @@
 			},
 		});
 
-		require(["Tone/source/Oscillator", "Tone/component/AmplitudeEnvelope"],
-		function(Noise, Envelope){
+		require(["Tone/source/Player", "Tone/core/Listener", "Tone/component/Panner3D"],
+		function(Player, Listener, Panner3D){
 
-			window.envelope = new Envelope({
-				attackCurve : "bounce",
-				releaseCurve : "step",
-				attack : 0.5,
-				release : 1
-			}).toMaster();
+			window.panner = new Panner3D(0, 0, 1).toMaster();
+			window.Listener = Listener;
 
-			var noise = new Noise().connect(envelope).start();
 
-			setTimeout(function(){
-				envelope.triggerAttackRelease(2);
-			}, 1000);
+			//THREE.js/////////////////////////////////////////
+			var SCREEN_WIDTH = document.querySelector("#three").clientWidth;
+			var SCREEN_HEIGHT = document.querySelector("#three").clientHeight;
+			var aspect = SCREEN_WIDTH / SCREEN_HEIGHT;
 
-			
-			/*function loop(){
-				requestAnimationFrame(loop)
-				$("#meter").text(source.state);
-			}*/
+			var scene = new THREE.Scene()
+			var camera = new THREE.PerspectiveCamera( 50, aspect, 1, 10000 );
+			camera.position.z = 10;
 
+			var mesh = new THREE.Mesh(
+				new THREE.SphereBufferGeometry( 100, 16, 8 ),
+				new THREE.MeshBasicMaterial( { color: 0xffffff, wireframe: true } )
+			);
+			scene.add(mesh);
+			var mesh2 = new THREE.Mesh(
+				new THREE.SphereBufferGeometry( 50, 16, 8 ),
+				new THREE.MeshBasicMaterial( { color: 0x00ff00, wireframe: true } )
+			);
+			scene.add(mesh2);
+			var mesh3 = new THREE.Mesh(
+				new THREE.SphereBufferGeometry( 5, 16, 8 ),
+				new THREE.MeshBasicMaterial( { color: 0x0000ff, wireframe: true } )
+			);
+			mesh3.position.z = -100
+			scene.add(mesh3);
+
+			var renderer = new THREE.WebGLRenderer( { antialias: true } );
+			renderer.setPixelRatio( window.devicePixelRatio );
+			onWindowResize();
+			renderer.domElement.style.position = "relative";
+			document.querySelector("#three").appendChild( renderer.domElement );
+
+			controls = new THREE.OrbitControls( camera, renderer.domElement );
+			// controls.enableDamping = true;
+			// controls.dampingFactor = 0.25;
+			// controls.enableZoom = false;
+
+			function onWindowResize( event ) {
+				SCREEN_WIDTH = document.querySelector("#three").clientWidth;
+				SCREEN_HEIGHT = document.querySelector("#three").clientHeight;
+				aspect = SCREEN_WIDTH / SCREEN_HEIGHT;
+				renderer.setSize( SCREEN_WIDTH, SCREEN_HEIGHT );
+				camera.updateProjectionMatrix();
+			}
+
+			function animate() {
+				requestAnimationFrame( animate );
+				var r = Date.now() * 0.0005;
+				mesh.position.x = 700 * Math.cos( r );
+				mesh.position.z = 500 * Math.cos( r );
+				mesh.position.y = 500 * Math.sin( r );
+				mesh2.position.x = 1000 * Math.cos( 2 * r );
+				mesh2.position.z = 1000 * Math.sin( 2 * r );
+				// mesh.children[ 0 ].position.x = 70 * Math.cos( 2 * r );
+				// mesh.children[ 0 ].position.z = 70 * Math.sin( r );
+				renderer.render( scene, camera );
+				controls.update();
+
+				panner.updatePosition(camera);
+			}
+			animate()
+
+			/*window.player = new Player({ 
+				url : "./audio/FWDL.mp3", 
+				loop: true, 
+				autostart : true
+			}).connect(panner);*/
+
+			/*panner.followObject3D(object)
+			Listener.followObject3D(camera)*/
+
+
+			// var delay = new Freeverb(0.95).toMaster();
+
+			/*const synth = new Synth().toMaster();
+			const loop = new Loop(function(time){
+				synth.triggerAttackRelease("C2", "4n", time);
+			}, "2n");
+			loop.start(0);
+
+			Transport.start()*/
+
+			/*document.querySelector('button').addEventListener('click', () => {
+				const note = flag ? 'C4' : 'C3';
+				// var now = Date.now()
+				osc.triggerAttackRelease(note, '16n');
+				// console.log(Date.now() - now)
+				flag = !flag;
+			})*/
+
+
+
+			// setInterval(function(){
+			// }, 300)
+
+			/*function animationLoop(){
+				requestAnimationFrame(animationLoop)
+				document.querySelector('#meter').textContent = meter.value.toFixed(1)
+			}
+			animationLoop()*/
 
 		});
 	
