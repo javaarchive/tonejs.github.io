@@ -3,6 +3,7 @@
 	<head>
 	<title>Tone Docs</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
 </head>
@@ -20,7 +21,7 @@
 			<span id="newKeyword">new</span>
 			<span>Tone.</span><span id="class">Convolver</span>
 		<span class="params">
-			<span class='syntax'>(</span>[<span id='name'>url</span>]<span class='syntax'>)</span>
+			<span class='syntax'>(</span>[<span id='name'>url</span>]<span class='syntax'>, </span><span id='name'>onload</span><span class='syntax'>)</span>
 		</span>
 		<div id="paramDescriptions">
 					<span id="name">url</span>
@@ -28,20 +29,17 @@
 				<div id="description"><p>The URL of the impulse response or the <a class="internalLink" href='../docs/#Buffer'>Tone.Buffer</a>
                                           contianing the impulse response.</p>
 </div>
+					<span id="name">onload</span>
+				<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+				<div id="description"><p>The callback to invoke when the url is loaded.</p>
+</div>
 		</div>
 	</div>
 		<div id="examples">
 				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//initializing the convolver with an impulse response</span>
-<span class="hljs-keyword">var</span> convolver = <span class="hljs-keyword">new</span> Tone.Convolver(<span class="hljs-string">"./path/to/ir.wav"</span>);
-convolver.toMaster();
-<span class="hljs-comment">//after the buffer has loaded</span>
-Tone.Buffer.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-	<span class="hljs-comment">//testing out convolution with a noise burst</span>
-	<span class="hljs-keyword">var</span> burst = <span class="hljs-keyword">new</span> Tone.NoiseSynth().connect(convolver);
-	burst.triggerAttackRelease(<span class="hljs-string">"16n"</span>);
-};</pre></div>
+<span class="hljs-keyword">var</span> convolver = <span class="hljs-keyword">new</span> Tone.Convolver(<span class="hljs-string">"./path/to/ir.wav"</span>).toMaster();</pre></div>
 		</div>
-	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>url</span><span class='syntax'>:</span><span class='value string'>&quot;&quot;</span></div><div class='row'><span id='name'>onload</span><span class='syntax'>:</span><span class='value Tone'>Tone.noOp</span></div></div></div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>onload</span><span class='syntax'>:</span><span class='value Tone'>Tone.noOp</span></div></div></div>
 </div>
 			<div id="members">
 	<div id="title">members</div>

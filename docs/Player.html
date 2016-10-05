@@ -3,6 +3,7 @@
 	<head>
 	<title>Tone Docs</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
 </head>
@@ -28,7 +29,7 @@
 					<span id="name">onload</span>
 				<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
 				<div id="description"><p>The function to invoke when the buffer is loaded. 
-                           Recommended to use <a class="internalLink" href='../docs/#Buffer.onload'>Tone.Buffer.onload</a> instead.</p>
+                           Recommended to use <a class="internalLink" href='../docs/#Buffer.on'>Tone.Buffer.on</a>(&#39;load&#39;) instead.</p>
 </div>
 		</div>
 	</div>
@@ -190,6 +191,33 @@ source.mute = <span class="hljs-literal">true</span>;</pre></div>
  within the buffer for the given duration.</p>
 </div>
 		</div>
+		<div id="seek" class="method listItem ">
+			<span id="title">.seek
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>offset</span>[<span class='syntax'>, </span><span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">offset</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The time to seek to.</div>
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The time for the seek event to occur.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Player'>Tone.Player</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Seek to a specific time in the player&#39;s buffer. If the 
+ source is no longer playing at that time, it will stop.
+ If you seek to a time that</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>source.start(<span class="hljs-number">0.2</span>);
+source.stop(<span class="hljs-number">0.4</span>);</pre></div>
+		</div>
 		<div id="setLoopPoints" class="method listItem ">
 			<span id="title">.setLoopPoints
 				<span class="params">
@@ -258,30 +286,28 @@ player.loop = <span class="hljs-literal">true</span>;</pre></div>
 		<div id="sync" class="method listItem ">
 			<span id="title">.sync
 				<span class="params">
-					<span class='syntax'>(</span>[<span id='name'>delay</span>]<span class='syntax'>)</span>
+					<span class='syntax'>(</span><span class='syntax'>)</span>
 				</span>
 			</span>
-				<div id="paramDescriptions">
-							<span id="name">delay</span> <span class="syntax">=</span>
-							<span id="default">0</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
-						<div id="description">Delay time before starting the source after the
-                              Transport has started.</div>
-				</div>
 				<div id="returns">
 					<span id="keyword">returns</span>
 					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Source'>Tone.Source</a><span class='paren'>}</span></span>
 					<span id="description"><p>this</p>
 </span>
 				</div>
-			<div id="description"><p>Sync the source to the Transport so that when the transport
- is started, this source is started and when the transport is stopped
- or paused, so is the source.</p>
+			<div id="description"><p>Sync the source to the Transport so that all subsequent
+ calls to <code>start</code> and <code>stop</code> are synced to the TransportTime
+ instead of the AudioContext time.</p>
 </div>
-					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//sync the source to start 1 measure after the transport starts</span>
-source.sync(<span class="hljs-string">"1m"</span>);
-<span class="hljs-comment">//start the transport. the source will start 1 measure later. </span>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//sync the source so that it plays between 0 and 0.3 on the Transport's timeline</span>
+source.sync().start(<span class="hljs-number">0</span>).stop(<span class="hljs-number">0.3</span>);
+<span class="hljs-comment">//start the transport.</span>
 Tone.Transport.start();</pre></div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//start the transport with an offset and the sync'ed sources</span>
+<span class="hljs-comment">//will start in the correct position</span>
+source.sync().start(<span class="hljs-number">0.1</span>);
+<span class="hljs-comment">//the source will be invoked with an offset of 0.4</span>
+Tone.Transport.start(<span class="hljs-string">"+0.5"</span>, <span class="hljs-number">0.5</span>);</pre></div>
 		</div>
 		<div id="unsync" class="method listItem ">
 			<span id="title">.unsync

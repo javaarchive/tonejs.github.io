@@ -3,6 +3,7 @@
 	<head>
 	<title>Tone Docs</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
 </head>
@@ -12,7 +13,7 @@
 			<div id="constructor">
 	<span id="name">Emitter</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
 	<div id="description"><p><a class="internalLink" href='../docs/#Emitter'>Tone.Emitter</a> gives classes which extend it
-        the ability to listen for and trigger events. 
+        the ability to listen for and emit events. 
         Inspiration and reference from Jerome Etienne&#39;s <a href="https://github.com/jeromeetienne/microevent.js">MicroEvent</a>.
         MIT (c) 2011 Jerome Etienne.</p>
 </div>
@@ -43,7 +44,7 @@
 							<span id="name">callback</span>
 						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
 						<div id="description">The callback to invoke when the
-                               event is triggered</div>
+                               event is emitted</div>
 				</div>
 				<div id="returns">
 					<span id="keyword">returns</span>
@@ -80,8 +81,8 @@
 			<div id="description"><p>Remove the event listener.</p>
 </div>
 		</div>
-		<div id="trigger" class="method listItem ">
-			<span id="title">.trigger
+		<div id="emit" class="method listItem ">
+			<span id="title">.emit
 				<span class="params">
 					<span class='syntax'>(</span><span id='name'>event</span><span class='syntax'>, </span><span id='name'></span><span class='syntax'>)</span>
 				</span>
@@ -115,7 +116,7 @@
 						<span class="type"><span class='paren'>{</span>Object|function<span class='paren'>}</span></span>
 						<div id="description">The object or class to extend.</div>
 				</div>
-			<div id="description"><p>Add Emitter functions (on/off/trigger) to the object</p>
+			<div id="description"><p>Add Emitter functions (on/off/emit) to the object</p>
 </div>
 		</div>
 		<div id="dispose" class="method listItem ">

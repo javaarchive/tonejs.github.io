@@ -3,6 +3,7 @@
 	<head>
 	<title>Tone Docs</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
 </head>
@@ -56,10 +57,37 @@
 			<div id="description"><p>A path which is prefixed before every url.</p>
 </div>
 		</div>
+		<div id="loaded" class="member listItem">
+			<span id="title">.loaded</span>
+			<span class="type"><span class='paren'>{</span>Boolean<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>If the buffers are loaded or not</p>
+</div>
+		</div>
 </div>
 
 			<div id="methods">
 	<div id="title">methods</div>
+		<div id="has" class="method listItem ">
+			<span id="title">.has
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>name</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">name</span>
+						<span class="type"><span class='paren'>{</span>String|Number<span class='paren'>}</span></span>
+						<div id="description">The key or index of the 
+                                buffer.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Boolean<span class='paren'>}</span></span>
+					<span id="description"></span>
+				</div>
+			<div id="description"><p>True if the buffers object has a buffer by that name.</p>
+</div>
+		</div>
 		<div id="get" class="method listItem ">
 			<span id="title">.get
 				<span class="params">

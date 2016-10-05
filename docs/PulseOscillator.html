@@ -3,6 +3,7 @@
 	<head>
 	<title>Tone Docs</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
 </head>
@@ -204,30 +205,28 @@ Tone.Transport.bpm.value = <span class="hljs-number">240</span>;
 		<div id="sync" class="method listItem ">
 			<span id="title">.sync
 				<span class="params">
-					<span class='syntax'>(</span>[<span id='name'>delay</span>]<span class='syntax'>)</span>
+					<span class='syntax'>(</span><span class='syntax'>)</span>
 				</span>
 			</span>
-				<div id="paramDescriptions">
-							<span id="name">delay</span> <span class="syntax">=</span>
-							<span id="default">0</span>
-						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
-						<div id="description">Delay time before starting the source after the
-                              Transport has started.</div>
-				</div>
 				<div id="returns">
 					<span id="keyword">returns</span>
 					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Source'>Tone.Source</a><span class='paren'>}</span></span>
 					<span id="description"><p>this</p>
 </span>
 				</div>
-			<div id="description"><p>Sync the source to the Transport so that when the transport
- is started, this source is started and when the transport is stopped
- or paused, so is the source.</p>
+			<div id="description"><p>Sync the source to the Transport so that all subsequent
+ calls to <code>start</code> and <code>stop</code> are synced to the TransportTime
+ instead of the AudioContext time.</p>
 </div>
-					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//sync the source to start 1 measure after the transport starts</span>
-source.sync(<span class="hljs-string">"1m"</span>);
-<span class="hljs-comment">//start the transport. the source will start 1 measure later. </span>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//sync the source so that it plays between 0 and 0.3 on the Transport's timeline</span>
+source.sync().start(<span class="hljs-number">0</span>).stop(<span class="hljs-number">0.3</span>);
+<span class="hljs-comment">//start the transport.</span>
 Tone.Transport.start();</pre></div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//start the transport with an offset and the sync'ed sources</span>
+<span class="hljs-comment">//will start in the correct position</span>
+source.sync().start(<span class="hljs-number">0.1</span>);
+<span class="hljs-comment">//the source will be invoked with an offset of 0.4</span>
+Tone.Transport.start(<span class="hljs-string">"+0.5"</span>, <span class="hljs-number">0.5</span>);</pre></div>
 		</div>
 		<div id="unsync" class="method listItem ">
 			<span id="title">.unsync

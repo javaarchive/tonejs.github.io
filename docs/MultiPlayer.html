@@ -3,6 +3,7 @@
 	<head>
 	<title>Tone Docs</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
 </head>
@@ -101,7 +102,7 @@ source.mute = <span class="hljs-literal">true</span>;</pre></div>
 		<div id="start" class="method listItem ">
 			<span id="title">.start
 				<span class="params">
-					<span class='syntax'>(</span><span id='name'>buffer</span><span class='syntax'>, </span><span id='name'>time</span>[<span class='syntax'>, </span><span id='name'>offset</span>][<span class='syntax'>, </span><span id='name'>duration</span>][<span class='syntax'>, </span><span id='name'>interval</span>][<span class='syntax'>, </span><span id='name'>gain</span>]<span class='syntax'>)</span>
+					<span class='syntax'>(</span><span id='name'>buffer</span><span class='syntax'>, </span><span id='name'>time</span>[<span class='syntax'>, </span><span id='name'>offset</span>][<span class='syntax'>, </span><span id='name'>duration</span>][<span class='syntax'>, </span><span id='name'>pitch</span>][<span class='syntax'>, </span><span id='name'>gain</span>]<span class='syntax'>)</span>
 				</span>
 			</span>
 				<div id="paramDescriptions">
@@ -119,7 +120,7 @@ source.mute = <span class="hljs-literal">true</span>;</pre></div>
 							<span id="name">duration</span>
 						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">How long to play the buffer for.</div>
-							<span id="name">interval</span> <span class="syntax">=</span>
+							<span id="name">pitch</span> <span class="syntax">=</span>
 							<span id="default">0</span>
 						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Interval'>Interval</a><span class='paren'>}</span></span>
 						<div id="description">The interval to repitch the buffer.</div>
@@ -137,6 +138,49 @@ source.mute = <span class="hljs-literal">true</span>;</pre></div>
 			<div id="description"><p>Start a buffer by name. The <code>start</code> method allows a number of options
  to be passed in such as offset, interval, and gain. This is good for multi-sampled 
  instruments and sound sprites where samples are repitched played back at different velocities.</p>
+</div>
+		</div>
+		<div id="startLoop" class="method listItem ">
+			<span id="title">.startLoop
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>buffer</span><span class='syntax'>, </span><span id='name'>time</span>[<span class='syntax'>, </span><span id='name'>offset</span>][<span class='syntax'>, </span><span id='name'>loopStart</span>][<span class='syntax'>, </span><span id='name'>loopEnd</span>][<span class='syntax'>, </span><span id='name'>pitch</span>][<span class='syntax'>, </span><span id='name'>gain</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">buffer</span>
+						<span class="type"><span class='paren'>{</span>String|AudioBuffer<span class='paren'>}</span></span>
+						<div id="description">The name of the buffer to start.
+                                         Or pass in a buffer which will be started.</div>
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When to start the buffer.</div>
+							<span id="name">offset</span> <span class="syntax">=</span>
+							<span id="default">0</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The offset into the buffer to play from.</div>
+							<span id="name">loopStart</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The start of the loop.</div>
+							<span id="name">loopEnd</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The end of the loop.</div>
+							<span id="name">pitch</span> <span class="syntax">=</span>
+							<span id="default">0</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Interval'>Interval</a><span class='paren'>}</span></span>
+						<div id="description">The interval to repitch the buffer.</div>
+							<span id="name">gain</span> <span class="syntax">=</span>
+							<span id="default">1</span>
+						<span class="type"><span class='paren'>{</span>Gain<span class='paren'>}</span></span>
+						<div id="description">The gain to play the sample at.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#MultiPlayer'>Tone.MultiPlayer</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Start a looping buffer by name. Similar to <code>start</code>, but the buffer
+ is looped instead of played straight through. Can still be stopped with <code>stop</code>.</p>
 </div>
 		</div>
 		<div id="stop" class="method listItem ">
