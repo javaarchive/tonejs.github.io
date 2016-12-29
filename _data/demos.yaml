@@ -1,0 +1,111 @@
+- image: musiclab.jpg
+  url: https://musiclab.chromeexperiments.com
+  title : Chrome Music Lab
+
+- image: groovepizza.png
+  url: https://apps.musedlab.org/groovepizza/
+  title : Groove Pizza
+
+- image: jazzcomputer.jpg
+  url: http://jazz.computer/
+  title: Jazz.Computer
+
+- image: motionemotion.jpg
+  url: https://motionemotion.herokuapp.com/
+  title: motionEmotion
+
+- image: hypercube.png
+  url: http://eddietree.github.io/hypercube/
+  title: Hypercube
+
+- image: arpeggiator.png
+  url: http://codepen.io/jakealbaugh/full/qNrZyw/
+  title: Musical Chord Progression Arpeggiator
+
+- image: solarbeats.png
+  url: http://www.whitevinyldesign.com/solarbeat/
+  title: Solarbeat
+
+- image: blockchords.png
+  url: http://dev.abe.sh/block-chords/
+  title: Block Chords
+
+- image: notmachinelearning.png
+  url: http://posttool.github.io/
+  title: This is Not a Machine Learning
+
+- image: scratch.png
+  url: http://ericrosenbaum.github.io/tone-synth-extension/
+  title: Scratch + Tone.js
+
+- image: gameofreich.png
+  url: http://nexusosc.com/gameofreich/
+  title: Game of Reich
+
+- image: yume.jpg
+  url: http://www.unseen-music.com/yume/
+  title: Yume - Helios
+
+- image: 808.png
+  url: http://codepen.io/pixelass/full/adyLPR
+  title: TR-808
+
+- image: tweet-fm.png
+  url: https://tweet-fm.herokuapp.com/
+  title: Tweet FM
+
+- image: XoX.png
+  url: http://rustleworks.com/textxox/
+  title: TextXoX
+
+- image: stepping.png
+  url: http://stepping.audio/
+  title: Stepping
+
+- image: bodybeat.png
+  url: http://www.adultswim.com/etcetera/limp-body-beat/
+  title: Limp Body Beat
+
+- image: mscompose.png
+  url: http://autotel.co/mscompose95/
+  title: MsCompose 95
+
+- image: pedalboard.png
+  url: https://deermichel.github.io/pedalboard/
+  title: Pedalboard
+
+- image: keyboardboogie.png
+  url: http://douglastarr.com/keyboard-boogie
+  title: Keyboard Boogie
+
+- image: reflect.png
+  url: http://reflect.sydneyzh.com/
+  title: Reflect
+
+- image: anxietybrain.jpg
+  url: http://anxietybrain.net/
+  title: Anxiety
+
+- image: ramsophone.png
+  url: http://robertvinluan.com/Ramsophone/
+  title: Ramsophone
+
+- image: pgb-vsu.png
+  url: http://www.pgb-vsu.club/
+  title: PGB-VSU
+
+- image : beat-machine.png
+  url : http://emicida.com/beat-machine/
+  title: Yasuke
+
+- image : office-traffic.png
+  url : http://gastonfig.com/office-traffic/
+  title: Office Traffic
+
+- image : music-blocks.png
+  url : http://walterbender.github.io/musicblocks/
+  title: Music Blocks
+
+- image : uduk.png
+  url : https://uduk.org/
+  title: zhredBoard
