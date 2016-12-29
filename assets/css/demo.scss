@@ -1,0 +1,77 @@
+---
+---
+
+#demos {
+	$break-small: 450px;
+	$small-devisor : 2;
+	$break-medium: 800px;
+	$medium-devisor : 3;
+	$large-devisor : 4;
+
+	width: 100%;
+	margin-bottom : 20px;
+	display: inline-block;
+
+	.demo {
+		position: relative;
+		float: left;
+		margin: 0px;
+		overflow: hidden;
+
+		@media screen and (max-width: $break-small) {
+			width: calc(100% / 2);
+			padding-bottom: calc(100% / 2);
+		}
+		@media screen and (min-width: $break-small) and (max-width: $break-medium){
+			width: calc(100% / 3);
+			padding-bottom: calc(100% / 3);
+		}
+		@media screen and (min-width: $break-medium){
+			width: calc(100% / 5);
+			padding-bottom: calc(100% / 5);
+		}
+
+		#title {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			background-color: black;
+			color: white;
+			pointer-events: none;
+			transition: opacity 0.2s;
+
+			#text {
+				position: absolute;
+				$textHeight : 20px;
+				transform: translate(-50%, -50%);
+				top: 50%;
+				left: 50%;
+				width: 90%;
+				line-height: $textHeight;
+				text-align: center;
+			}
+		}
+
+		a {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+
+			img {
+				width: 100%; 
+				height: 100%;
+			}
+		}
+
+		&:hover {
+			#title {
+				opacity: 0.7;
+			}
+		}
+
+	}
+}
+
