@@ -1,0 +1,89 @@
+---
+---
+
+@import "common.scss";
+
+body {
+	min-height: 80px;
+	font-family : 'Inconsolata', monospace;
+}
+
+#InterfaceContainer {
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	.Monitor {
+		text-align: center;
+		color: black;
+		background-color: white;
+		border: $margin solid black;
+		display: inline-block;
+
+		.Label {
+			display: inline-block;
+			padding: $margin;
+			background-color: black;
+			color: white;
+			margin-right: $margin;
+		}
+
+		.Value {
+			padding: $margin;
+			display: inline-block;
+		}
+	}
+
+	.MomentaryButton , .Toggle{
+		background-color: black;
+		color: white;
+		padding: $margin;
+		min-width: 40px;
+		text-align: center;
+		display: inline-block;
+		cursor: pointer;
+		margin: $margin;
+		height: 30px;
+		line-height: 30px;
+
+		&:hover {
+			background-color: white;
+			color: $purple;
+
+			&:active {
+				color: $teal;
+			}
+		}
+	}
+
+	.Toggle {
+		
+		&.Active {
+			background-color: $purple;
+
+			&:hover {
+				color: $teal;
+
+				&:active {
+					color: $pink;
+				}
+			}
+		}
+	}
+
+	.TransportControls {
+		width: 160px;
+		border: $margin solid black;
+		.Toggle {
+			margin: 0px;
+		}
+		.Monitor {
+			width: calc(100% - 50px);
+			border: none;
+			text-align: center;
+		}
+	}
+}
