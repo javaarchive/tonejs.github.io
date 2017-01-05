@@ -21,7 +21,8 @@ body {
 		color: black;
 		background-color: white;
 		border: $margin solid black;
-		display: inline-block;
+		display: block;
+		margin-bottom: 3px;
 
 		.Label {
 			display: inline-block;
@@ -29,6 +30,7 @@ body {
 			background-color: black;
 			color: white;
 			margin-right: $margin;
+			float: left;
 		}
 
 		.Value {
@@ -46,8 +48,6 @@ body {
 		display: inline-block;
 		cursor: pointer;
 		margin: $margin;
-		height: 30px;
-		line-height: 30px;
 
 		&:hover {
 			background-color: white;
@@ -77,10 +77,13 @@ body {
 	.TransportControls {
 		width: 160px;
 		border: $margin solid black;
+		margin-bottom: $margin;
 		.Toggle {
 			margin: 0px;
 		}
 		.Monitor {
+			display: inline-block;
+			margin: 0px;
 			width: calc(100% - 50px);
 			border: none;
 			text-align: center;
