@@ -105,4 +105,85 @@ body {
 			background-color: white;
 		}
 	}
+
+	$track-color: #aaa;
+	$thumb-color: black;
+
+	$thumb-height: 30px;
+	$thumb-width: 20px;
+
+	$track-width: 100%;
+	$track-height: 10px;
+	$contrast: 10%;
+
+	@mixin track {
+		width: $track-width;
+		height: $track-height;
+		cursor: pointer;
+		animate: 0.2s;
+	}
+
+	@mixin thumb {
+		height: $thumb-height;
+		width: $thumb-width;
+		background: $thumb-color;
+		cursor: pointer;
+	}
+
+	input[type=range] {
+		-webkit-appearance: none;
+		margin: $thumb-height/2 0;
+		width: $track-width;
+
+		&:focus {
+			outline: none;
+		}
+
+		&::-webkit-slider-runnable-track {
+			@include track;
+			background: $track-color;
+		}
+		
+		&::-webkit-slider-thumb {
+			@include thumb;
+			-webkit-appearance: none;
+			margin-top: (($track-height) / 2) - ($thumb-height / 2);
+		}
+
+		&:focus::-webkit-slider-runnable-track {
+			background: lighten($track-color, $contrast);
+		}
+
+		&::-moz-range-track {
+			@include track;
+			background: $track-color;
+		}
+		&::-moz-range-thumb {
+			@include thumb;
+		}
+
+		&::-ms-track {
+			@include track;
+			background: transparent;
+			border-color: transparent;
+			border-width: $thumb-width 0;
+			color: transparent;
+		}
+
+		&::-ms-fill-lower {
+			background: darken($track-color, $contrast);
+		}
+		&::-ms-fill-upper {
+			background: $track-color;
+		}
+		&::-ms-thumb {
+		 	@include thumb;
+		}
+		&:focus::-ms-fill-lower {
+			background: $track-color;
+		}
+		&:focus::-ms-fill-upper {
+			background: lighten($track-color, $contrast);
+		}
+	}
 }
