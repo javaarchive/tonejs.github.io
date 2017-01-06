@@ -47,4 +47,62 @@ body {
 		z-index: 1;
 		transform: translate(-50%, -50%);
 	}
+
+	.playToggle{
+		$toggleSize : 40px;
+		border: none;
+		width: $toggleSize;
+		height: $toggleSize;
+		color: white;
+		background-color: black;
+		-webkit-appearance: none;
+		appearance: none;
+		cursor: pointer;
+		position: relative;
+		outline: none;
+
+		&:hover {
+			background-color: white;
+
+			&:before {
+				color: $purple;
+			}
+			&:checked:before {
+				background-color: $purple;
+			}
+
+			&:active {
+				background-color: white;
+
+				&:before {
+					color: $teal;
+				}
+				&:checked:before {
+					background-color: $teal;
+				}
+			}
+		}
+
+		&:before {
+			content: '▶';
+			color: white;
+			line-height: $toggleSize;
+			text-align: center;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			font-size: $toggleSize * 0.7;
+		}
+
+		&:checked:before {
+			content: ' ';
+			width: 50%;
+			height: 50%;
+			top: 25%;
+			left: 25%;
+			background-color: white;
+		}
+	}
 }
