@@ -6,17 +6,43 @@
 	</script>
 	<title>SCRATCH</title>
 
-	<script type="text/javascript" src="./scripts/three.min.js"></script>
-	<script type="text/javascript" src="./scripts/OrbitControls.js"></script>
+	<!-- <script type="text/javascript" src="./scripts/three.min.js"></script>
+	<script type="text/javascript" src="./scripts/OrbitControls.js"></script> -->
 	<!-- <script type="text/javascript" src="../../Graph/SignalGraph.js"></script> -->
 	<script type="text/javascript" src="./scripts/require.js"></script>
+	
+	<script type="text/javascript" src="./scripts/jquery.min.js"></script>
 
+
+	<style type="text/css">
+		#Notes{
+			width: 100%;
+			height: 20px;
+			margin-top: 3px;
+			position: relative;
+		}
+		.Note {
+			width: 20%;
+			height: 100%;
+			position: relative;
+			float: left;
+			background-color: black;
+			opacity: 0;
+		}
+	</style>
 
 </head>
 <body>
+	<div id="Notes">
+			<div id="C4" class="Note"></div>
+			<div id="E4" class="Note"></div>
+			<div id="G4" class="Note"></div>
+			<div id="B4" class="Note"></div>
+			<div id="D5" class="Note"></div>
+		</div>
 	<button>start</button>
 	<div id="meter"></div>
-	<div id="three"></div>
+	<div id="lookAhead"></div>
 	<style type="text/css">
 
 		div {
@@ -27,12 +53,6 @@
 			margin: 0px;
 			top: 0px;
 			left: 0px;
-		}
-
-		#three {
-			width: 100%;
-			height: 100%;
-
 		}
 	</style>
 	<script type="text/javascript">
@@ -45,113 +65,56 @@
 			},
 		});
 
-		require(["Tone/source/Player", "Tone/core/Listener", "Tone/component/Panner3D"],
-		function(Player, Listener, Panner3D){
+		require(["Tone/core/Transport", "Tone/instrument/Synth", 
+			"Tone/event/Pattern", "Tone/core/Draw", "jquery", "Tone/core/Clock", 
+			"Tone/source/OmniOscillator"],
+		function(Transport, Synth, Pattern, Draw, $, Clock, Oscillator){
 
-			window.panner = new Panner3D(0, 0, 1).toMaster();
-			window.Listener = Listener;
+			var piano = new Synth({
+				envelope : {
+					release : 1
+				},
+				"oscillator" : {
+					"type" : "fmsine4",
+					"modulationType" : "square"
+				}
+			}).toMaster();
+
+			var loop = new Pattern(function(time, note){
+				piano.triggerAttackRelease(note, "16n", time);
+				// osc.frequency.value = note
+				// osc.start(time).stop(time + 0.2)
+
+				/*$("#meter").text((time - Transport.now()).toFixed(3));
+				if (time - Transport.now() < Transport.lookAhead){
+					console.log(time - Transport.now())
+				}*/
 
 
-			//THREE.js/////////////////////////////////////////
-			var SCREEN_WIDTH = document.querySelector("#three").clientWidth;
-			var SCREEN_HEIGHT = document.querySelector("#three").clientHeight;
-			var aspect = SCREEN_WIDTH / SCREEN_HEIGHT;
+				//schedule all drawing in with Draw which is synced to the animation frame
+				/*Draw.schedule(function(){
+					$("#"+note).css("opacity", 1).animate({"opacity" : 0}, 300)
+				}, time);*/
+			}, ["C4", "E4", "G4", "B4", "D5"]).start(0);
 
-			var scene = new THREE.Scene()
-			var camera = new THREE.PerspectiveCamera( 50, aspect, 1, 10000 );
-			camera.position.z = 10;
+			loop.interval = "4n";
 
-			var mesh = new THREE.Mesh(
-				new THREE.SphereBufferGeometry( 100, 16, 8 ),
-				new THREE.MeshBasicMaterial( { color: 0xffffff, wireframe: true } )
-			);
-			scene.add(mesh);
-			var mesh2 = new THREE.Mesh(
-				new THREE.SphereBufferGeometry( 50, 16, 8 ),
-				new THREE.MeshBasicMaterial( { color: 0x00ff00, wireframe: true } )
-			);
-			scene.add(mesh2);
-			var mesh3 = new THREE.Mesh(
-				new THREE.SphereBufferGeometry( 5, 16, 8 ),
-				new THREE.MeshBasicMaterial( { color: 0x0000ff, wireframe: true } )
-			);
-			mesh3.position.z = -100
-			scene.add(mesh3);
-
-			var renderer = new THREE.WebGLRenderer( { antialias: true } );
-			renderer.setPixelRatio( window.devicePixelRatio );
-			onWindowResize();
-			renderer.domElement.style.position = "relative";
-			document.querySelector("#three").appendChild( renderer.domElement );
-
-			controls = new THREE.OrbitControls( camera, renderer.domElement );
-			// controls.enableDamping = true;
-			// controls.dampingFactor = 0.25;
-			// controls.enableZoom = false;
-
-			function onWindowResize( event ) {
-				SCREEN_WIDTH = document.querySelector("#three").clientWidth;
-				SCREEN_HEIGHT = document.querySelector("#three").clientHeight;
-				aspect = SCREEN_WIDTH / SCREEN_HEIGHT;
-				renderer.setSize( SCREEN_WIDTH, SCREEN_HEIGHT );
-				camera.updateProjectionMatrix();
+			function updateLoop(){
+				requestAnimationFrame(updateLoop);
+				$("#lookAhead").text(Clock.lag);
 			}
+			updateLoop()
 
-			function animate() {
-				requestAnimationFrame( animate );
-				var r = Date.now() * 0.0005;
-				mesh.position.x = 700 * Math.cos( r );
-				mesh.position.z = 500 * Math.cos( r );
-				mesh.position.y = 500 * Math.sin( r );
-				mesh2.position.x = 1000 * Math.cos( 2 * r );
-				mesh2.position.z = 1000 * Math.sin( 2 * r );
-				// mesh.children[ 0 ].position.x = 70 * Math.cos( 2 * r );
-				// mesh.children[ 0 ].position.z = 70 * Math.sin( r );
-				renderer.render( scene, camera );
-				controls.update();
+			$('button').click(function(){
+				if (Transport.state === "started"){
+					Transport.stop()
+				} else {
+					Transport.start("+0.1")
+				}
+			})
 
-				panner.updatePosition(camera);
-			}
-			animate()
-
-			/*window.player = new Player({ 
-				url : "./audio/FWDL.mp3", 
-				loop: true, 
-				autostart : true
-			}).connect(panner);*/
-
-			/*panner.followObject3D(object)
-			Listener.followObject3D(camera)*/
-
-
-			// var delay = new Freeverb(0.95).toMaster();
-
-			/*const synth = new Synth().toMaster();
-			const loop = new Loop(function(time){
-				synth.triggerAttackRelease("C2", "4n", time);
-			}, "2n");
-			loop.start(0);
-
-			Transport.start()*/
-
-			/*document.querySelector('button').addEventListener('click', () => {
-				const note = flag ? 'C4' : 'C3';
-				// var now = Date.now()
-				osc.triggerAttackRelease(note, '16n');
-				// console.log(Date.now() - now)
-				flag = !flag;
-			})*/
-
-
-
-			// setInterval(function(){
-			// }, 300)
-
-			/*function animationLoop(){
-				requestAnimationFrame(animationLoop)
-				document.querySelector('#meter').textContent = meter.value.toFixed(1)
-			}
-			animationLoop()*/
+			window.Transport = Transport;
+			window.Clock = Clock;
 
 		});
 	
