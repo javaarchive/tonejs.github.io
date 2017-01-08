@@ -105,7 +105,7 @@ Pass in JSON settings for any of the Tone.js instruments, effects and components
 
 All instruments are monophonic (one voice) but can be made polyphonic when the constructor is passed in as the second argument to [Tone.PolySynth](https://tonejs.github.io/docs/#PolySynth). Tone.PolySynth creates multiple instances of an instrument and manages the voice allocations.
 
-<script async src="//jsfiddle.net/yotammann/xthqjv1w/4/embed/js,result/"></script>
+<script async src="//jsfiddle.net/yotammann/xthqjv1w/5/embed/js,result/"></script>
 
 [Read more about Instruments](https://github.com/Tonejs/Tone.js/wiki/Instruments).
 
@@ -113,7 +113,7 @@ All instruments are monophonic (one voice) but can be made polyphonic when the c
 
 In the above examples, the synthesizer was always connected directly to the [master output](https://tonejs.github.io/docs/#Master), but the output of the synth could also be routed through one (or more) effects before going to the speakers. 
 
-<script async src="//jsfiddle.net/yotammann/o6cfwp2k/3/embed/js,result/"></script>
+<script async src="//jsfiddle.net/yotammann/o6cfwp2k/4/embed/js,result/"></script>
 
 [Read more about Effects](https://github.com/Tonejs/Tone.js/wiki/Effects).
 
@@ -121,7 +121,7 @@ In the above examples, the synthesizer was always connected directly to the [mas
 
 Tone has a few basic audio sources like [Tone.Oscillator](https://tonejs.github.io/docs/#Oscillator) which has sine, square, triangle, and sawtooth waveforms, a buffer player ([Tone.Player](https://tonejs.github.io/docs/#Player)), a noise generator ([Tone.Noise](https://tonejs.github.io/docs/#Noise)), a few additional oscillator types ([pwm](https://tonejs.github.io/docs/#PWMOscillator), [pulse](https://tonejs.github.io/docs/#PulseOscillator), [fat](https://tonejs.github.io/docs/#FatOscillator), [fm](https://tonejs.github.io/docs/#FMOscillator)) and [external audio input](https://tonejs.github.io/docs/#Microphone) (when [WebRTC is supported](http://caniuse.com/#feat=stream)).
 
-<script async src="//jsfiddle.net/yotammann/vt4d1aob/3/embed/js,result/"></script>
+<script async src="//jsfiddle.net/yotammann/vt4d1aob/4/embed/js,result/"></script>
 
 [Read more about Sources](https://github.com/Tonejs/Tone.js/wiki/Sources).
 
