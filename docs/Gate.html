@@ -40,7 +40,7 @@
 	</div>
 		<div id="examples">
 				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> gate = <span class="hljs-keyword">new</span> Tone.Gate(-<span class="hljs-number">30</span>, <span class="hljs-number">0.2</span>, <span class="hljs-number">0.3</span>).toMaster();
-<span class="hljs-keyword">var</span> mic = <span class="hljs-keyword">new</span> Tone.Microphone().connect(gate);
+<span class="hljs-keyword">var</span> mic = <span class="hljs-keyword">new</span> Tone.UserMedia().connect(gate);
 <span class="hljs-comment">//the gate will only pass through the incoming </span>
 <span class="hljs-comment">//signal when it's louder than -30db</span></pre></div>
 		</div>

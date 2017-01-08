@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">Draw</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<div id="description"><p><a class="internalLink" href='../docs/#Draw'>Tone.Draw</a> is useful for synchronizing visuals and audio events.
+        Callbacks from <a class="internalLink" href='../docs/#Transport'>Tone.Transport</a> or any of the <a class="internalLink" href='../docs/#Event'>Tone.Event</a> classes
+        always happen <em>before</em> the scheduled time and are not synchronized
+        to the animation frame so they are not good for triggering tightly
+        synchronized visuals and sound. <a class="internalLink" href='../docs/#Draw'>Tone.Draw</a> makes it easy to schedule
+        callbacks using the AudioContext time and uses requestAnimationFrame.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">singleton</span>
+			<span>Tone.</span><span id="class">Draw</span>
+		<span class="params">
+			<span class='syntax'>(</span><span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre>Tone.Transport.schedule(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">time</span>)</span>{
+	<span class="hljs-comment">//use the time argument to schedule a callback with Tone.Draw</span>
+	Tone.Draw.schedule(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+		<span class="hljs-comment">//do drawing or DOM manipulation here</span>
+	}, time)
+}, <span class="hljs-string">"+0.5"</span>)</pre></div>
+		</div>
+	
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="expiration" class="member listItem">
+			<span id="title">.expiration</span>
+			<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+			<div id="description"><p>The duration after which events are not invoked.</p>
+</div>
+		</div>
+		<div id="anticipation" class="member listItem">
+			<span id="title">.anticipation</span>
+			<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+			<div id="description"><p>The amount of time before the scheduled time 
+ that the callback can be invoked. Default is
+ half the time of an animation frame (0.008 seconds).</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="schedule" class="method listItem ">
+			<span id="title">.schedule
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>callback</span><span class='syntax'>, </span><span id='name'>time</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">Callback is invoked at the given time.</div>
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The time relative to the AudioContext time
+                             to invoke the callback.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Draw'>Tone.Draw</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Schedule a function at the given time to be invoked
+ on the nearest animation frame.</p>
+</div>
+		</div>
+		<div id="cancel" class="method listItem ">
+			<span id="title">.cancel
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>after</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">after</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">Time after which scheduled events will 
+                         be removed from the scheduling timeline.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Draw'>Tone.Draw</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Cancel events scheduled after the given time</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

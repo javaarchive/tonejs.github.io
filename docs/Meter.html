@@ -35,7 +35,7 @@
 	</div>
 		<div id="examples">
 				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> meter = <span class="hljs-keyword">new</span> Tone.Meter();
-<span class="hljs-keyword">var</span> mic = <span class="hljs-keyword">new</span> Tone.Microphone().start();
+<span class="hljs-keyword">var</span> mic = <span class="hljs-keyword">new</span> Tone.UserMedia().start();
 <span class="hljs-comment">//connect mic to the meter</span>
 mic.connect(meter);
 <span class="hljs-comment">//the current level of the mic input</span>

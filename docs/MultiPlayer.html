@@ -12,7 +12,7 @@
 		<div id="content">
 			<div id="constructor">
 	<span id="name">MultiPlayer</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
-	<div id="description"><p><a class="internalLink" href='../docs/#MultiPlayer'>Tone.MultiPlayer</a> is well suited for one-shots, multi-sampled istruments
+	<div id="description"><p><a class="internalLink" href='../docs/#MultiPlayer'>Tone.MultiPlayer</a> is well suited for one-shots, multi-sampled instruments
         or any time you need to play a bunch of audio buffers.</p>
 </div>
 	<div id="new">
@@ -102,14 +102,13 @@ source.mute = <span class="hljs-literal">true</span>;</pre></div>
 		<div id="start" class="method listItem ">
 			<span id="title">.start
 				<span class="params">
-					<span class='syntax'>(</span><span id='name'>buffer</span><span class='syntax'>, </span><span id='name'>time</span>[<span class='syntax'>, </span><span id='name'>offset</span>][<span class='syntax'>, </span><span id='name'>duration</span>][<span class='syntax'>, </span><span id='name'>pitch</span>][<span class='syntax'>, </span><span id='name'>gain</span>]<span class='syntax'>)</span>
+					<span class='syntax'>(</span><span id='name'>bufferName</span><span class='syntax'>, </span><span id='name'>time</span>[<span class='syntax'>, </span><span id='name'>offset</span>][<span class='syntax'>, </span><span id='name'>duration</span>][<span class='syntax'>, </span><span id='name'>pitch</span>][<span class='syntax'>, </span><span id='name'>gain</span>]<span class='syntax'>)</span>
 				</span>
 			</span>
 				<div id="paramDescriptions">
-							<span id="name">buffer</span>
-						<span class="type"><span class='paren'>{</span>String|AudioBuffer<span class='paren'>}</span></span>
-						<div id="description">The name of the buffer to start.
-                                         Or pass in a buffer which will be started.</div>
+							<span id="name">bufferName</span>
+						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+						<div id="description">The name of the buffer to start.</div>
 							<span id="name">time</span>
 						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">When to start the buffer.</div>
@@ -143,14 +142,13 @@ source.mute = <span class="hljs-literal">true</span>;</pre></div>
 		<div id="startLoop" class="method listItem ">
 			<span id="title">.startLoop
 				<span class="params">
-					<span class='syntax'>(</span><span id='name'>buffer</span><span class='syntax'>, </span><span id='name'>time</span>[<span class='syntax'>, </span><span id='name'>offset</span>][<span class='syntax'>, </span><span id='name'>loopStart</span>][<span class='syntax'>, </span><span id='name'>loopEnd</span>][<span class='syntax'>, </span><span id='name'>pitch</span>][<span class='syntax'>, </span><span id='name'>gain</span>]<span class='syntax'>)</span>
+					<span class='syntax'>(</span><span id='name'>bufferName</span><span class='syntax'>, </span><span id='name'>time</span>[<span class='syntax'>, </span><span id='name'>offset</span>][<span class='syntax'>, </span><span id='name'>loopStart</span>][<span class='syntax'>, </span><span id='name'>loopEnd</span>][<span class='syntax'>, </span><span id='name'>pitch</span>][<span class='syntax'>, </span><span id='name'>gain</span>]<span class='syntax'>)</span>
 				</span>
 			</span>
 				<div id="paramDescriptions">
-							<span id="name">buffer</span>
-						<span class="type"><span class='paren'>{</span>String|AudioBuffer<span class='paren'>}</span></span>
-						<div id="description">The name of the buffer to start.
-                                         Or pass in a buffer which will be started.</div>
+							<span id="name">bufferName</span>
+						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+						<div id="description">The name of the buffer to start.</div>
 							<span id="name">time</span>
 						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
 						<div id="description">When to start the buffer.</div>
@@ -186,12 +184,12 @@ source.mute = <span class="hljs-literal">true</span>;</pre></div>
 		<div id="stop" class="method listItem ">
 			<span id="title">.stop
 				<span class="params">
-					<span class='syntax'>(</span><span id='name'>buffer</span>[<span class='syntax'>, </span><span id='name'>time</span>]<span class='syntax'>)</span>
+					<span class='syntax'>(</span><span id='name'>bufferName</span>[<span class='syntax'>, </span><span id='name'>time</span>]<span class='syntax'>)</span>
 				</span>
 			</span>
 				<div id="paramDescriptions">
-							<span id="name">buffer</span>
-						<span class="type"><span class='paren'>{</span>String|AudioBuffer<span class='paren'>}</span></span>
+							<span id="name">bufferName</span>
+						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
 						<div id="description">The buffer to stop.</div>
 							<span id="name">time</span>
 						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
@@ -203,7 +201,7 @@ source.mute = <span class="hljs-literal">true</span>;</pre></div>
 					<span id="description"><p>this</p>
 </span>
 				</div>
-			<div id="description"><p>Stop all instances of the currently playing buffer at the given time.</p>
+			<div id="description"><p>Stop the first played instance of the buffer name.</p>
 </div>
 		</div>
 		<div id="stopAll" class="method listItem ">

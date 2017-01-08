@@ -13,7 +13,7 @@
 			<div id="constructor">
 	<span id="name">TimelineState</span><span id="extends"> &#8594; <a href='#Timeline'>Tone.Timeline</a></span>
 	<div id="description"><p>A Timeline State. Provides the methods: <code>setStateAtTime(&quot;state&quot;, time)</code>
-         and <code>getStateAtTime(time)</code>.</p>
+         and <code>getValueAtTime(time)</code>.</p>
 </div>
 	<div id="new">
 			<span id="newKeyword">new</span>
@@ -51,8 +51,8 @@
 
 			<div id="methods">
 	<div id="title">methods</div>
-		<div id="getStateAtTime" class="method listItem ">
-			<span id="title">.getStateAtTime
+		<div id="getValueAtTime" class="method listItem ">
+			<span id="title">.getValueAtTime
 				<span class="params">
 					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>)</span>
 				</span>
@@ -90,8 +90,8 @@
  the given time.</p>
 </div>
 		</div>
-		<div id="addEvent" class="method listItem ">
-			<span id="title">.addEvent
+		<div id="add" class="method listItem ">
+			<span id="title">.add
 				<span class="params">
 					<span class='syntax'>(</span><span id='name'>event</span><span class='syntax'>)</span>
 				</span>
@@ -111,8 +111,8 @@
 			<div id="description"><p>Insert an event object onto the timeline. Events must have a &quot;time&quot; attribute.</p>
 </div>
 		</div>
-		<div id="removeEvent" class="method listItem ">
-			<span id="title">.removeEvent
+		<div id="remove" class="method listItem ">
+			<span id="title">.remove
 				<span class="params">
 					<span class='syntax'>(</span><span id='name'>event</span><span class='syntax'>)</span>
 				</span>
@@ -131,8 +131,8 @@
 			<div id="description"><p>Remove an event from the timeline.</p>
 </div>
 		</div>
-		<div id="getEvent" class="method listItem ">
-			<span id="title">.getEvent
+		<div id="get" class="method listItem ">
+			<span id="title">.get
 				<span class="params">
 					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>)</span>
 				</span>
@@ -151,8 +151,38 @@
 			<div id="description"><p>Get the nearest event whose time is less than or equal to the given time.</p>
 </div>
 		</div>
-		<div id="getEventAfter" class="method listItem ">
-			<span id="title">.getEventAfter
+		<div id="peek" class="method listItem ">
+			<span id="title">.peek
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Object<span class='paren'>}</span></span>
+					<span id="description"><p>The first event object</p>
+</span>
+				</div>
+			<div id="description"><p>Return the first event in the timeline without removing it</p>
+</div>
+		</div>
+		<div id="shift" class="method listItem ">
+			<span id="title">.shift
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Object<span class='paren'>}</span></span>
+					<span id="description"><p>The first event object</p>
+</span>
+				</div>
+			<div id="description"><p>Return the first event in the timeline and remove it</p>
+</div>
+		</div>
+		<div id="getAfter" class="method listItem ">
+			<span id="title">.getAfter
 				<span class="params">
 					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>)</span>
 				</span>
@@ -171,8 +201,8 @@
 			<div id="description"><p>Get the event which is scheduled after the given time.</p>
 </div>
 		</div>
-		<div id="getEventBefore" class="method listItem ">
-			<span id="title">.getEventBefore
+		<div id="getBefore" class="method listItem ">
+			<span id="title">.getBefore
 				<span class="params">
 					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>)</span>
 				</span>
