@@ -27,13 +27,13 @@ Tone.js is a framework for creating interactive music in the browser. It provide
 
 # Hello Tone
 
-<script async src="//jsfiddle.net/yotammann/8ozo3v9e/embed/js,result/"></script>
+<script async src="//jsfiddle.net/yotammann/8ozo3v9e/3/embed/js,result/"></script>
 
 [Tone.Synth](https://tonejs.github.io/docs/#Synth) is a basic synthesizer with a single envelope and single [oscillator](https://tonejs.github.io/docs/#OmniOscillator).
 
 `triggerAttackRelease` is a combination of two methods: `triggerAttack` when the amplitude is rising (for example from a 'key down' or 'note on' event), and `triggerRelease` is when the amplitude is going back to 0 ('key up' / 'note off').
 
-<script async src="//jsfiddle.net/yotammann/jqnLgyja/19/embed/js,result/"></script>
+<script async src="//jsfiddle.net/yotammann/jqnLgyja/22/embed/js,result/"></script>
 
 ### triggerAttackRelease
 
@@ -47,11 +47,11 @@ The third (optional) argument is when the note should be scheduled to play. With
 
 Web Audio has advanced, sample accurate scheduling capabilities. The AudioContext time, which is the reference clock that Web Audio uses to schedule events, starts at 0 when the page (or iframe) loads and counts up in seconds. 
 
-<script async src="//jsfiddle.net/yotammann/z9v63k5b/9/embed/js,result/"></script>
+<script async src="//jsfiddle.net/yotammann/z9v63k5b/10/embed/js,result/"></script>
 
 The third argument of `triggerAttackRelease` is _when_ along the AudioContext time the note should play. It can be used to schedule events in the future.
 
-<script async src="//jsfiddle.net/yotammann/zxsthhmq/6/embed/js,result/"></script>
+<script async src="//jsfiddle.net/yotammann/zxsthhmq/7/embed/js,result/"></script>
 
 ### Tempo-Relative
 
@@ -59,13 +59,13 @@ Tone.js abstracts away the AudioContext time. Instead of defining all values in 
 
 Read more about [Time encodings](https://github.com/Tonejs/Tone.js/wiki/Time).
 
-<script async src="//jsfiddle.net/yotammann/meodck51/4/embed/js,result/"></script>
+<script async src="//jsfiddle.net/yotammann/meodck51/6/embed/js,result/"></script>
 
 # Scheduling
 
 Instead of scheduling relative when the page load (AudioContext time = 0) like the examples above, Tone.js provides the [Tone.Transport](https://tonejs.github.io/docs/#Transport) which allows events to be scheduled along a seekable, restartable and editable timeline.
 
-<script async src="//jsfiddle.net/yotammann/sw8wy7rb/21/embed/js,result/"></script>
+<script async src="//jsfiddle.net/yotammann/sw8wy7rb/22/embed/js,result/"></script>
 
 One-time and repeated events can be scheduled relative to the Transport's position (instead of just the AudioContext time) using `schedule` and `scheduleRepeat`. The Transport will invoke the scheduled callback and return the precise AudioContext time of the scheduled event. 
 
@@ -73,19 +73,19 @@ Since Javascript callbacks are **not** precisely timed, the sample-accurate time
 
 Unlike the AudioContext, the Transport can be looped, stopped and restarted.
 
-<script async src="//jsfiddle.net/yotammann/4z1nkdyb/6/embed/js,result/"></script>
+<script async src="//jsfiddle.net/yotammann/4z1nkdyb/7/embed/js,result/"></script>
 
 ### Tempo
 
 The Transport is the master timekeeper, allowing for application-wide synchronization of sources, signals and events along a shared timeline. Time expressions (like `"4n"` and `"2:0"`) are evaluated against the Transport's BPM which can be set like this: `Tone.Transport.bpm.value = 120`.
 
-<script async src="//jsfiddle.net/yotammann/k0caxzwt/19/embed/js,result/"></script>
+<script async src="//jsfiddle.net/yotammann/k0caxzwt/20/embed/js,result/"></script>
 
 ### Loops
 
 Tone.js provides even higher-level abstractions for scheduling events. [Tone.Loop](https://tonejs.github.io/docs/#Loop) is a simple way to create a looped callback that can be scheduled to start, stop and repeat along the Tone.Transport.
 
-<script async src="//jsfiddle.net/yotammann/cve19w8r/2/embed/js,result/"></script>
+<script async src="//jsfiddle.net/yotammann/cve19w8r/3/embed/js,result/"></script>
 
 [Read about Tone.js' Event classes](https://github.com/Tonejs/Tone.js/wiki/Events).
 
@@ -93,7 +93,7 @@ Tone.js provides even higher-level abstractions for scheduling events. [Tone.Loo
 
 Tone.Part allows you to schedule an array of events which can be started, stopped, and looped along the Transport.
 
-<script async src="//jsfiddle.net/yotammann/w39e6450/8/embed/js,result/"></script>
+<script async src="//jsfiddle.net/yotammann/w39e6450/9/embed/js,result/"></script>
 
 All of the Tone.Event classes also allow you to adjust the playbackRate separate from the Transport's bpm. This can create some interesting [phasing](https://tonejs.github.io/examples/pianoPhase.html). 
 
@@ -101,11 +101,11 @@ All of the Tone.Event classes also allow you to adjust the playbackRate separate
 
 Pass in JSON settings for any of the Tone.js instruments, effects and components to set their values. The synths and effects are capable of a diverse range of sounds. 
 
-<script async src="//jsfiddle.net/yotammann/47cnLxn6/5/embed/js,result/"></script>
+<script async src="//jsfiddle.net/yotammann/47cnLxn6/6/embed/js,result/"></script>
 
 All instruments are monophonic (one voice) but can be made polyphonic when the constructor is passed in as the second argument to [Tone.PolySynth](https://tonejs.github.io/docs/#PolySynth). Tone.PolySynth creates multiple instances of an instrument and manages the voice allocations.
 
-<script async src="//jsfiddle.net/yotammann/xthqjv1w/2/embed/js,result/"></script>
+<script async src="//jsfiddle.net/yotammann/xthqjv1w/3/embed/js,result/"></script>
 
 [Read more about Instruments](https://github.com/Tonejs/Tone.js/wiki/Instruments).
 
@@ -113,7 +113,7 @@ All instruments are monophonic (one voice) but can be made polyphonic when the c
 
 In the above examples, the synthesizer was always connected directly to the [master output](https://tonejs.github.io/docs/#Master), but the output of the synth could also be routed through one (or more) effects before going to the speakers. 
 
-<script async src="//jsfiddle.net/yotammann/o6cfwp2k/1/embed/js,result/"></script>
+<script async src="//jsfiddle.net/yotammann/o6cfwp2k/2/embed/js,result/"></script>
 
 [Read more about Effects](https://github.com/Tonejs/Tone.js/wiki/Effects).
 
@@ -121,7 +121,7 @@ In the above examples, the synthesizer was always connected directly to the [mas
 
 Tone has a few basic audio sources like [Tone.Oscillator](https://tonejs.github.io/docs/#Oscillator) which has sine, square, triangle, and sawtooth waveforms, a buffer player ([Tone.Player](https://tonejs.github.io/docs/#Player)), a noise generator ([Tone.Noise](https://tonejs.github.io/docs/#Noise)), a few additional oscillator types ([pwm](https://tonejs.github.io/docs/#PWMOscillator), [pulse](https://tonejs.github.io/docs/#PulseOscillator), [fat](https://tonejs.github.io/docs/#FatOscillator), [fm](https://tonejs.github.io/docs/#FMOscillator)) and [external audio input](https://tonejs.github.io/docs/#Microphone) (when [WebRTC is supported](http://caniuse.com/#feat=stream)).
 
-<script async src="//jsfiddle.net/yotammann/vt4d1aob/1/embed/js,result/"></script>
+<script async src="//jsfiddle.net/yotammann/vt4d1aob/2/embed/js,result/"></script>
 
 [Read more about Sources](https://github.com/Tonejs/Tone.js/wiki/Sources).
 
@@ -129,7 +129,7 @@ Tone has a few basic audio sources like [Tone.Oscillator](https://tonejs.github.
 
 Like the underlying Web Audio API, Tone.js is built with audio-rate signal control over nearly everything. This is a powerful feature which allows for sample-accurate synchronization and scheduling of parameters. 
 
-<script async src="//jsfiddle.net/yotammann/x3kehc9x/2/embed/js,result/"></script>
+<script async src="//jsfiddle.net/yotammann/x3kehc9x/3/embed/js,result/"></script>
 
 [Read more about Signals](https://github.com/Tonejs/Tone.js/wiki/Signals).
 
