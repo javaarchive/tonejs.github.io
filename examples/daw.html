@@ -7,16 +7,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="icon" type="image/png" sizes="174x174" href="./style/favicon.png">
 	
-	<script type="text/javascript" src="../build/Tone.js"></script>
-	<script type="text/javascript" src="./scripts/jquery.min.js"></script>
-	<script type="text/javascript" src="./scripts/draggabilly.js"></script>
-	<script type="text/javascript" src="https://tonejs.github.io/Logo/build/Logo.js"></script>
-	<script type="text/javascript" src="./scripts/StartAudioContext.js"></script>
-	<script type="text/javascript" src="./scripts/Interface.js"></script>
+	<script src="../build/Tone.js"></script>
+	<script src="./scripts/jquery.min.js"></script>
+	<script src="./scripts/draggabilly.js"></script>
+	<script src="https://tonejs.github.io/Logo/build/Logo.js"></script>
+	<script src="./scripts/StartAudioContext.js"></script>
+	<script src="./scripts/Interface.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="./style/examples.css">
 
-	<script type="text/javascript">
+	<script>
 		// jshint ignore: start
 	</script>
 
@@ -84,7 +84,7 @@
 		</div>
 	</div>
 
-	<script type="text/javascript">
+	<script>
 
 		Tone.Transport.bpm.value = 108;
 		
@@ -106,67 +106,60 @@
 		Tone.Transport.loop = true;
 		Tone.Transport.loopStart = "4m";
 		Tone.Transport.loopEnd = "8m";
+
+		// GUI //
 		
-	</script>
+		Interface.Loader();
 
-	<script id="GUI" type="text/javascript">
+		var dragging = false;
 
+		window.slider = new Interface.Slider({
 
-		$(function(){
+			max : Tone.Transport.loopEnd,
 
-			Interface.Loader();
-
-			var dragging = false;
-
-			window.slider = new Interface.Slider({
-
-				max : Tone.Transport.loopEnd,
-
-				start : function(){
-					dragging = true;
-					if (started){
-						Tone.Transport.pause();
-					}
-				},
-				end : function(){
-					dragging = false;
-					if (started){
-						Tone.Transport.start("+0.1");
-					}
-				},
-				drag : function(val){
-					Tone.Transport.seconds = val;
-				}
-			})
-
-			var started = false;
-			
-			Interface.Button({
-				key : 32,
-				type : "toggle",
-				text : "Start",
-				activeText : "Pause",
-				start : function(){
-					started = true;
-					Tone.Transport.start("+0.1");
-				},
-				end : function(){
-					started = false;
+			start : function(){
+				dragging = true;
+				if (started){
 					Tone.Transport.pause();
 				}
-			});
-
-			function loop(){
-				requestAnimationFrame(loop);
-				if (!dragging){
-					slider.value(Tone.Transport.seconds);
+			},
+			end : function(){
+				dragging = false;
+				if (started){
+					Tone.Transport.start("+0.1");
 				}
-				var progress = Tone.Transport.seconds / Tone.Transport.loopEnd;
-				$("#Bar").css("left", (progress * 100).toFixed(2) + "%");
+			},
+			drag : function(val){
+				Tone.Transport.seconds = val;
 			}
-			loop();
+		})
 
+		var started = false;
+		
+		Interface.Button({
+			key : 32,
+			type : "toggle",
+			text : "Start",
+			activeText : "Pause",
+			start : function(){
+				started = true;
+				Tone.Transport.start("+0.1");
+			},
+			end : function(){
+				started = false;
+				Tone.Transport.pause();
+			}
 		});
+
+		function loop(){
+			requestAnimationFrame(loop);
+			if (!dragging){
+				slider.value(Tone.Transport.seconds);
+			}
+			var progress = Tone.Transport.seconds / Tone.Transport.loopEnd;
+			$("#Bar").css("left", (progress * 100).toFixed(2) + "%");
+		}
+		loop();
 
 		var loadedPromise = new Promise(function(done){
 			Tone.Buffer.on("load", done);
@@ -223,7 +216,5 @@
 			loadedPromise.then(draw);
 		});
 	</script>
-
-	</style>
 </body>
 </html>

@@ -10,38 +10,13 @@
 	<script type="text/javascript" src="./scripts/OrbitControls.js"></script> -->
 	<!-- <script type="text/javascript" src="../../Graph/SignalGraph.js"></script> -->
 	<script type="text/javascript" src="./scripts/require.js"></script>
-	
-	<script type="text/javascript" src="./scripts/jquery.min.js"></script>
-
-
-	<style type="text/css">
-		#Notes{
-			width: 100%;
-			height: 20px;
-			margin-top: 3px;
-			position: relative;
-		}
-		.Note {
-			width: 20%;
-			height: 100%;
-			position: relative;
-			float: left;
-			background-color: black;
-			opacity: 0;
-		}
-	</style>
 
 </head>
 <body>
-	<div id="Notes">
-			<div id="C4" class="Note"></div>
-			<div id="E4" class="Note"></div>
-			<div id="G4" class="Note"></div>
-			<div id="B4" class="Note"></div>
-			<div id="D5" class="Note"></div>
-		</div>
+
 	<button>start</button>
 	<div id="meter"></div>
+	<canvas></canvas>
 	<div id="lookAhead"></div>
 	<style type="text/css">
 
@@ -65,56 +40,14 @@
 			},
 		});
 
-		require(["Tone/core/Transport", "Tone/instrument/Synth", 
-			"Tone/event/Pattern", "Tone/core/Draw", "jquery", "Tone/core/Clock", 
-			"Tone/source/OmniOscillator"],
-		function(Transport, Synth, Pattern, Draw, $, Clock, Oscillator){
+		require(["Tone/source/Oscillator"],
+		function(Oscillator){
 
-			var piano = new Synth({
-				envelope : {
-					release : 1
-				},
-				"oscillator" : {
-					"type" : "fmsine4",
-					"modulationType" : "square"
-				}
-			}).toMaster();
-
-			var loop = new Pattern(function(time, note){
-				piano.triggerAttackRelease(note, "16n", time);
-				// osc.frequency.value = note
-				// osc.start(time).stop(time + 0.2)
-
-				/*$("#meter").text((time - Transport.now()).toFixed(3));
-				if (time - Transport.now() < Transport.lookAhead){
-					console.log(time - Transport.now())
-				}*/
-
-
-				//schedule all drawing in with Draw which is synced to the animation frame
-				/*Draw.schedule(function(){
-					$("#"+note).css("opacity", 1).animate({"opacity" : 0}, 300)
-				}, time);*/
-			}, ["C4", "E4", "G4", "B4", "D5"]).start(0);
-
-			loop.interval = "4n";
-
-			function updateLoop(){
-				requestAnimationFrame(updateLoop);
-				$("#lookAhead").text(Clock.lag);
-			}
-			updateLoop()
-
-			$('button').click(function(){
-				if (Transport.state === "started"){
-					Transport.stop()
-				} else {
-					Transport.start("+0.1")
-				}
-			})
-
-			window.Transport = Transport;
-			window.Clock = Clock;
+			var osc = new Oscillator({ 
+				"volume" : -Infinity, 
+				"type" : "square6",
+				"frequency" : "A4"
+			}).toMaster().start()
 
 		});
 	

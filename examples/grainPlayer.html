@@ -7,16 +7,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="icon" type="image/png" sizes="174x174" href="./style/favicon.png">
 	
-	<script type="text/javascript" src="../build/Tone.js"></script>
-	<script type="text/javascript" src="./scripts/jquery.min.js"></script>
-	<script type="text/javascript" src="./scripts/draggabilly.js"></script>
-	<script type="text/javascript" src="./scripts/StartAudioContext.js"></script>
-	<script type="text/javascript" src="./scripts/Interface.js"></script>
-	<script type="text/javascript" src="https://tonejs.github.io/Logo/build/Logo.js"></script>
+	<script src="../build/Tone.js"></script>
+	<script src="./scripts/jquery.min.js"></script>
+	<script src="./scripts/draggabilly.js"></script>
+	<script src="./scripts/StartAudioContext.js"></script>
+	<script src="./scripts/Interface.js"></script>
+	<script src="https://tonejs.github.io/Logo/build/Logo.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="./style/examples.css">
 
-	<script type="text/javascript">
+	<script>
 		// jshint ignore: start
 	</script>
 
@@ -33,7 +33,7 @@
 		</div>
 		<div id="Sliders"></div>
 	</div>
-	<script type="text/javascript">
+	<script>
 
 		//the player
 		var player = new Tone.GrainPlayer({
@@ -42,62 +42,59 @@
 			"grainSize" : 0.1,
 			"overlap" : 0.05,
 		}).toMaster();
-	</script>
-	
-	<script id="GUI" type="text/javascript">
-		$(function(){
 
-			Interface.Loader();
+		// GUI //
 
-			Interface.Button({
-				text : "Start",
-				activeText : "Stop",
-				type : "toggle",
-				start : function(){
-					player.start();
-				},
-				end : function(){
-					player.stop();
-				}
-			});
+		Interface.Loader();
 
-			Interface.Slider({
-				param : "playbackRate",
-				name : "playbackRate",
-				parent : $("#Sliders"),
-				tone : player,
-				min : 0.5,
-				max : 2,
-			});
-
-			Interface.Slider({
-				param : "detune",
-				name : "detune",
-				parent : $("#Sliders"),
-				tone : player,
-				min : -1200,
-				max : 1200,
-			});
-
-			Interface.Slider({
-				param : "grainSize",
-				name : "grainSize",
-				parent : $("#Sliders"),
-				tone : player,
-				min : 0.01,
-				max : 0.2,
-			});
-
-			Interface.Slider({
-				param : "overlap",
-				name : "overlap",
-				parent : $("#Sliders"),
-				tone : player,
-				min : 0,
-				max : 0.2,
-			});
-
+		Interface.Button({
+			text : "Start",
+			activeText : "Stop",
+			type : "toggle",
+			start : function(){
+				player.start();
+			},
+			end : function(){
+				player.stop();
+			}
 		});
+
+		Interface.Slider({
+			param : "playbackRate",
+			name : "playbackRate",
+			parent : $("#Sliders"),
+			tone : player,
+			min : 0.5,
+			max : 2,
+		});
+
+		Interface.Slider({
+			param : "detune",
+			name : "detune",
+			parent : $("#Sliders"),
+			tone : player,
+			min : -1200,
+			max : 1200,
+		});
+
+		Interface.Slider({
+			param : "grainSize",
+			name : "grainSize",
+			parent : $("#Sliders"),
+			tone : player,
+			min : 0.01,
+			max : 0.2,
+		});
+
+		Interface.Slider({
+			param : "overlap",
+			name : "overlap",
+			parent : $("#Sliders"),
+			tone : player,
+			min : 0,
+			max : 0.2,
+		});
+
 	</script>
 </body>
 </html>

@@ -7,18 +7,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="icon" type="image/png" sizes="174x174" href="./style/favicon.png">
 	
-	<script type="text/javascript" src="../build/Tone.js"></script>
-	<script type="text/javascript" src="./scripts/jquery.min.js"></script>
-	<script type="text/javascript" src="./scripts/draggabilly.js"></script>
-	<script type="text/javascript" src="./scripts/StartAudioContext.js"></script>
-	<script type="text/javascript" src="./scripts/Interface.js"></script>
-	<script type="text/javascript" src="https://tonejs.github.io/Logo/build/Logo.js"></script>
-	<script type="text/javascript" src="./scripts/Keyboard.js"></script>
+	<script src="../build/Tone.js"></script>
+	<script src="./scripts/jquery.min.js"></script>
+	<script src="./scripts/draggabilly.js"></script>
+	<script src="./scripts/StartAudioContext.js"></script>
+	<script src="./scripts/Interface.js"></script>
+	<script src="https://tonejs.github.io/Logo/build/Logo.js"></script>
+	<script src="./scripts/Keyboard.js"></script>
 
 
 	<link rel="stylesheet" type="text/css" href="./style/examples.css">
 
-	<script type="text/javascript">
+	<script>
 		// jshint ignore: start
 	</script>
 
@@ -34,7 +34,7 @@
 		</div>
 	</div>
 
-	<script type="text/javascript">			
+	<script>			
 		var synth = new Tone.FMSynth({
 			"modulationIndex" : 12.22,
 			"envelope" : {
@@ -49,29 +49,26 @@
 				"decay" : 0.01
 			}
 		}).toMaster();
-	</script>
 
-	<script type="text/javascript">
+		// GUI //
 
-		$(function(){
-		
-			Interface.Slider({
-				tone : synth,
-				param : "modulationIndex",
-				name : "mod index",
-				max : 100
-			});
-
-			var keyboard = Interface.Keyboard();
-
-			keyboard.keyDown = function (note) {
-			    synth.triggerAttack(note);
-			};
-
-			keyboard.keyUp = function (note) {
-			    synth.triggerRelease();
-			};
+		Interface.Slider({
+			tone : synth,
+			param : "modulationIndex",
+			name : "mod index",
+			max : 100
 		});
+
+		var keyboard = Interface.Keyboard();
+
+		keyboard.keyDown = function (note) {
+			synth.triggerAttack(note);
+		};
+
+		keyboard.keyUp = function (note) {
+			synth.triggerRelease();
+		};
+
 	</script>
 </body>
 </html>

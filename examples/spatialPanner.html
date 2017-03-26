@@ -7,19 +7,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="icon" type="image/png" sizes="174x174" href="./style/favicon.png">
 	
-	<script type="text/javascript" src="../build/Tone.js"></script>
-	<script type="text/javascript" src="./scripts/three.min.js"></script>
-	<script type="text/javascript" src="./scripts/OrbitControls.js"></script>
-	<script type="text/javascript" src="./scripts/THREE.Tone.js"></script>
-	<script type="text/javascript" src="./scripts/jquery.min.js"></script>
-	<script type="text/javascript" src="./scripts/draggabilly.js"></script>
-	<script type="text/javascript" src="https://tonejs.github.io/Logo/build/Logo.js"></script>
-	<script type="text/javascript" src="./scripts/StartAudioContext.js"></script>
-	<script type="text/javascript" src="./scripts/Interface.js"></script>
+	<script src="../build/Tone.js"></script>
+	<script src="./scripts/three.min.js"></script>
+	<script src="./scripts/OrbitControls.js"></script>
+	<script src="./scripts/WebGLDetector.js"></script>
+	<script src="./scripts/THREE.Tone.js"></script>
+	<script src="./scripts/jquery.min.js"></script>
+	<script src="./scripts/draggabilly.js"></script>
+	<script src="https://tonejs.github.io/Logo/build/Logo.js"></script>
+	<script src="./scripts/StartAudioContext.js"></script>
+	<script src="./scripts/Interface.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="./style/examples.css">
 
-	<script type="text/javascript">
+	<script>
 		// jshint ignore: start
 	</script>
 
@@ -40,7 +41,7 @@
 		<div id="three"></div>
 	</div>
 
-	<script type="text/javascript">
+	<script>
 
 		var greenSphere = new Tone.Panner3D().toMaster();
 		var drone = new Tone.Player({
@@ -62,26 +63,26 @@
 		
 	</script>
 
-	<script id="GUI" type="text/javascript">
-		$(function(){
+	<script id="GUI">
+		Interface.Loader()
+		
+		Interface.Button({
+			key : 32,
+			type : "toggle",
+			text : "Start Sound",
+			activeText : "Stop",
+			start : function(){
+				Tone.Transport.start("+0.1");
+			},
+			end : function(){
+				Tone.Transport.stop();
+			}
+		});
 
-			Interface.Loader()
-			
-			Interface.Button({
-				key : 32,
-				type : "toggle",
-				text : "Start Sound",
-				activeText : "Stop",
-				start : function(){
-					Tone.Transport.start("+0.1");
-				},
-				end : function(){
-					Tone.Transport.stop();
-				}
-			});
+		// THREE.JS //
+		
+		if (Detector.webgl){
 
-
-			//THREE.js/////////////////////////////////////////
 			var SCREEN_WIDTH = document.querySelector("#three").clientWidth;
 			var SCREEN_HEIGHT = document.querySelector("#three").clientHeight;
 			var aspect = SCREEN_WIDTH / SCREEN_HEIGHT;
@@ -151,7 +152,7 @@
 			}
 
 			animate()
-		});
+		}
 	</script>
 
 	</style>
