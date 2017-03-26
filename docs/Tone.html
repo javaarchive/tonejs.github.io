@@ -41,14 +41,43 @@
 	<div id="title">members</div>
 		<div id="context" class="member listItem">
 			<span id="title">.context</span>
-			<span class="type"><span class='paren'>{</span>AudioContext<span class='paren'>}</span></span>
-			<div id="description"><p>The audio context.</p>
+			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Context'>Tone.Context</a><span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>The AudioContext</p>
+</div>
+		</div>
+		<div id="blockTime" class="member listItem">
+			<span id="title">.blockTime</span>
+			<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>The number of seconds of 1 processing block (128 samples)</p>
+</div>
+		</div>
+		<div id="sampleTime" class="member listItem">
+			<span id="title">.sampleTime</span>
+			<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>The duration in seconds of one sample.</p>
 </div>
 		</div>
 </div>
 
 			<div id="methods">
 	<div id="title">methods</div>
+		<div id="loaded" class="method listItem static">
+			<span id="title">.loaded
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Promise<span class='paren'>}</span></span>
+					<span id="description"></span>
+				</div>
+			<div id="description"><p>Returns a Promise which resolves when all of the buffers have loaded</p>
+</div>
+		</div>
 		<div id="send" class="method listItem ">
 			<span id="title">.send
 				<span class="params">
@@ -139,6 +168,51 @@
 </div>
 					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//connect an oscillator to the master output</span>
 <span class="hljs-keyword">var</span> osc = <span class="hljs-keyword">new</span> Tone.Oscillator().toMaster();</pre></div>
+		</div>
+		<div id="Offline" class="method listItem static">
+			<span id="title">.Offline
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>callback</span><span class='syntax'>, </span><span id='name'>duration</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">All Tone.js nodes which are created and scheduled within this callback are recorded into the output Buffer.</div>
+							<span id="name">duration</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">the amount of time to record for.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Promise<span class='paren'>}</span></span>
+					<span id="description"><p>The promise which is invoked with the <a class="internalLink" href='../docs/#Buffer'>Tone.Buffer</a> of the recorded output.</p>
+</span>
+				</div>
+			<div id="description"><p>Generate a buffer by rendering all of the Tone.js code within the callback using the OfflineAudioContext. 
+ The OfflineAudioContext is capable of rendering much faster than real time in many cases. 
+ The callback function also passes in an offline instance of <a class="internalLink" href='../docs/#Transport'>Tone.Transport</a> which can be used
+ to schedule events along the Transport.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//render 2 seconds of the oscillator</span>
+Tone.Offline(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+	<span class="hljs-comment">//only nodes created in this callback will be recorded</span>
+	<span class="hljs-keyword">var</span> oscillator = <span class="hljs-keyword">new</span> Tone.Oscillator().toMaster().start(<span class="hljs-number">0</span>)
+	<span class="hljs-comment">//schedule their events</span>
+}, <span class="hljs-number">2</span>).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">buffer</span>)</span>{
+	<span class="hljs-comment">//do something with the output buffer</span>
+})</pre></div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//can also schedule events along the Transport</span>
+<span class="hljs-comment">//using the passed in Offline Transport</span>
+Tone.Offline(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">Transport</span>)</span>{
+	<span class="hljs-keyword">var</span> osc = <span class="hljs-keyword">new</span> Tone.Oscillator().toMaster()
+	Transport.schedule(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">time</span>)</span>{
+		osc.start(time).stop(time + <span class="hljs-number">0.1</span>)
+	}, <span class="hljs-number">1</span>)
+	Transport.start(<span class="hljs-number">0.2</span>)
+}, <span class="hljs-number">4</span>).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">buffer</span>)</span>{
+	<span class="hljs-comment">//do something with the output buffer</span>
+})</pre></div>
 		</div>
 		<div id="set" class="method listItem ">
 			<span id="title">.set
@@ -239,23 +313,6 @@ synth.get([<span class="hljs-string">"envelope.attack"</span>, <span class="hljs
 </span>
 				</div>
 			<div id="description"><p>disconnect and dispose</p>
-</div>
-		</div>
-		<div id="noGC" class="method listItem ">
-			<span id="title">.noGC
-				<span class="params">
-					<span class='syntax'>(</span><span class='syntax'>)</span>
-				</span>
-			</span>
-				<div id="returns">
-					<span id="keyword">returns</span>
-					<span class="type"><span class='paren'>{</span>Tone<span class='paren'>}</span></span>
-					<span id="description"><p>this</p>
-</span>
-				</div>
-			<div id="description"><p>makes a connection to ensure that the node will not be garbage collected
- until &#39;dispose&#39; is explicitly called</p>
-<p> use carefully. circumvents JS and WebAudio&#39;s normal Garbage Collection behavior</p>
 </div>
 		</div>
 		<div id="connect" class="method listItem ">

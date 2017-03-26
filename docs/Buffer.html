@@ -197,6 +197,25 @@ is loaded.</p>
 			<div id="description"><p>Set the audio buffer from the array</p>
 </div>
 		</div>
+		<div id="toMono" class="method listItem ">
+			<span id="title">.toMono
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>channel</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">channel</span>
+						<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+						<div id="description">Optionally only copy a single channel from the array.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Array<span class='paren'>}</span></span>
+					<span id="description"></span>
+				</div>
+			<div id="description"><p>Sums muliple channels into 1 channel</p>
+</div>
+		</div>
 		<div id="toArray" class="method listItem ">
 			<span id="title">.toArray
 				<span class="params">
@@ -215,6 +234,26 @@ is loaded.</p>
 				</div>
 			<div id="description"><p>Get the buffer as an array. Single channel buffers will return a 1-dimensional 
     Float32Array, and multichannel buffers will return multidimensional arrays.</p>
+</div>
+		</div>
+		<div id="getChannelData" class="method listItem ">
+			<span id="title">.getChannelData
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>channel</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">channel</span>
+						<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+						<div id="description">The channel number to return</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Float32Array<span class='paren'>}</span></span>
+					<span id="description"><p>The audio as a TypedArray</p>
+</span>
+				</div>
+			<div id="description"><p>Returns the Float32Array representing the PCM audio data for the specific channel.</p>
 </div>
 		</div>
 		<div id="slice" class="method listItem ">
@@ -242,8 +281,8 @@ is loaded.</p>
  subsection. Does not modify the original buffer</p>
 </div>
 		</div>
-		<div id="stopDownloads" class="method listItem static">
-			<span id="title">.stopDownloads
+		<div id="cancelDownloads" class="method listItem static">
+			<span id="title">.cancelDownloads
 				<span class="params">
 					<span class='syntax'>(</span><span class='syntax'>)</span>
 				</span>

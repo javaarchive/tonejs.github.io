@@ -74,19 +74,6 @@
 			<div id="description"><p>Returns the playback state of the source, either &quot;started&quot;, &quot;stopped&quot; or &quot;paused&quot;.</p>
 </div>
 		</div>
-		<div id="latencyHint" class="member listItem">
-			<span id="title">.latencyHint</span>
-			<span class="type"><span class='paren'>{</span>String|<a href='../docs/#types/Seconds'>Seconds</a><span class='paren'>}</span></span>
-			<div id="description"><p>The type of playback, which affects tradeoffs between audio 
- output latency and responsiveness. </p>
-<p> In addition to setting the value in seconds, the latencyHint also
- accepts the strings &quot;interactive&quot; (prioritizes low latency), 
- &quot;playback&quot; (prioritizes sustained playback), &quot;balanced&quot; (balances
- latency and performance), and &quot;fastest&quot; (lowest latency, might glitch more often).</p>
-</div>
-					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//set the lookAhead to 0.3 seconds</span>
-Tone.Clock.latencyHint = <span class="hljs-number">0.3</span>;</pre></div>
-		</div>
 </div>
 
 			<div id="methods">
