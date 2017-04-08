@@ -46,10 +46,6 @@
   url: http://www.unseen-music.com/yume/
   title: Yume - Helios
 
-- image: 808.png
-  url: http://codepen.io/pixelass/full/adyLPR
-  title: TR-808
-
 - image: tweet-fm.png
   url: https://tweet-fm.herokuapp.com/
   title: Tweet FM
