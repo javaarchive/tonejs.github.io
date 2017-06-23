@@ -137,4 +137,8 @@
 - image : sequ_thumb.png
   url : http://sequ.timpulver.de/
   title : Sequ
+  
+- image : dulynoted_square.png
+  url : https://p5js.org/assets/p5_featured/maya-dulynoted/
+  title : duly noted
 
