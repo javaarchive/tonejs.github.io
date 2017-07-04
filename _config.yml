@@ -1,4 +1,20 @@
 sass:
     sass_dir: assets/css
 
-highlighter: rouge
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+collections:
+  documentation:
+    output: true
+    permalink: docs2/:path
+
+exclude:
+  - .DS_Store
+  - Gemfile.lock
+  - node_modules
+  - images/original
+  - images/scripts
