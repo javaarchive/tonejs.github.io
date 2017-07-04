@@ -15,9 +15,9 @@ title: Tone.js
 	<span class="introSegment">
 		<a href="https://tonejs.github.io/examples/">Examples</a>
 	</span>
-	<!-- <span class="introSegment">
+	<span class="introSegment">
 		<a href="https://tonejs.github.io/demos">Demos</a>
-	</span> -->
+	</span>
 </div>
 
 # Tone.js
