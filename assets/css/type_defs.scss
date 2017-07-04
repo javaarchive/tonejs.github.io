@@ -1,0 +1,24 @@
+---
+---
+
+@import "common.scss";
+
+#content {
+	@for $i from 1 through 36 {
+
+		h2:nth-of-type(#{$i}) {
+			$color : adjust-hue($purple, (($i - 1) / 36) * 200);
+			color: $color;
+			border-color: $color;
+		}
+	}	
+
+	h2 {
+		margin-bottom: $padding;
+		font-size: 1.2em;
+	}
+
+	a {
+		text-decoration: underline;
+	}
+}

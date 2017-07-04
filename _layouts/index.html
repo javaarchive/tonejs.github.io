@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% include head.html %}
+	<link rel="stylesheet" type="text/css" href="/assets/css/docs.css">
+</head>
+<body>
+	{% include sidebar.html jsdocs=site.data.jsdocs visible=true%}
+
+	<div id="content">
+		{{content}}
+	</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{% assign file_name =  include.data.meta.filename %}
+{% assign full_path =  include.data.meta.path | split: "/" %}
+{% assign last_index =  full_path | size | minus: 1 %}
+{% assign dir =  full_path[last_index] %}
+{% assign line_number = include.data.meta.lineno %}
+
+{% capture link_addr %}
+	https://github.com/Tonejs/Tone.js/tree/{{page.branch}}/Tone/{{dir}}/{{file_name}}#L{{line_number}}
+{% endcapture %}
+
+<div id="line_num">
+	<a target="_blank" href="{{link_addr}}">&lt;&#47;&gt;</a>
+</div>
