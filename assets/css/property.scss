@@ -102,9 +102,9 @@ div.member, div.method, div.staticMethod, div.staticMember{
 	}
 
 	#signal{
-		color: $teal;
+		color: $orange;
 		background-color: $lightPurple;
-		border: 1px solid $teal;
+		border: 1px solid $orange;
 		width: 14px;
 		height: 14px;
 		display: inline-block;
@@ -113,8 +113,8 @@ div.member, div.method, div.staticMethod, div.staticMember{
 		border-radius: 50%;
 
 		&:hover {
-			color: $orange;
-			border-color: $orange;
+			color: $teal;
+			border-color: $teal;
 		}
 	}
 }
