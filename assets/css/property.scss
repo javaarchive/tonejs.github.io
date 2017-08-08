@@ -10,6 +10,10 @@ div.member, div.method, div.staticMethod, div.staticMember{
 	h4 {
 		display: inline-block;
 		margin: 0px;
+
+		&:target {
+			border-bottom: 2px solid $yellow;
+		}
 	}
 
 	#attribute {
