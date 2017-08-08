@@ -102,10 +102,19 @@ div.member, div.method, div.staticMethod, div.staticMember{
 	}
 
 	#signal{
-		color: $orange;
+		color: $teal;
+		background-color: $lightPurple;
+		border: 1px solid $teal;
+		width: 14px;
+		height: 14px;
+		display: inline-block;
+		line-height: 10px;
+		text-align: center;
+		border-radius: 50%;
 
 		&:hover {
-			color: $teal;
+			color: $orange;
+			border-color: $orange;
 		}
 	}
 }

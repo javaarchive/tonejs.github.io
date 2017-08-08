@@ -27,16 +27,6 @@
 			{% include util/markdown.html data=include.data.classdesc %}
 		</div>
 
-		<div id="class_index">
-			{% include class_index/class_index.html 
-					methods=include.methods 
-					static_methods=include.static_methods 
-					members=include.members 
-					static_members=include.static_members 
-					data=include.constructor 
-					class_name=include.class_name %}
-		</div>
-
 		<div id="invocation">
 			{% unless singleton %}
 
@@ -50,10 +40,20 @@
 				{% include parameters.html params=include.data.params types=include.types %}
 			{% endunless %}
 		</div>
-		
+
 		{% include constructor/defaults.html data=include.jsdocs class_name=include.class_name %}
 
 		{% include examples.html examples=include.data.examples %}
+
+		<div id="class_index">
+			{% include class_index/class_index.html 
+					methods=include.methods 
+					static_methods=include.static_methods 
+					members=include.members 
+					static_members=include.static_members 
+					data=include.constructor 
+					class_name=include.class_name %}
+		</div>
 
 	</div>
 {% endif %}

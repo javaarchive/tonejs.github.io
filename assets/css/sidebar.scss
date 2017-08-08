@@ -43,10 +43,9 @@
 		display: block;
 
 		h1 {
-			width: 100%;
+			width: 90%;
 			font-size: 0.9em;
 			line-height: 1em;
-			width: 150px;
 			border-bottom: 3px solid black;
 			color: black;
 			text-transform: uppercase;
@@ -95,6 +94,8 @@
 		margin-top: 10px;
 		margin-left: 10px;
 		position: relative;
+		font-family: inherit;
+		line-height: $height;
 
 		input {
 			border: none;
@@ -103,6 +104,9 @@
 			width: calc(100% - #{$height});
 			background-color: transparent;
 			outline: none;
+			line-height: $height;
+			font-size: 0.9em;
+			font-family: inherit;
 		}
 
 		#clear {

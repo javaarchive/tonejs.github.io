@@ -140,17 +140,19 @@
 		#values {
 			margin-left: 5px;
 			font-size: 0.9em;
-			display: table;
+			line-height: 1em;
 
-			.key, .value, .punc {
-				display: table-cell;
-				vertical-align: top;
-				white-space: nowrap;
+			.block {
+				margin-left: 20px;
+			}
+
+			.key, .value, .punc, .paren {
+				display: inline-block;
 			}
 
 			.key {
 				padding-left: 0px;
-				width: 80px;
+				width: auto;
 				color: $blue;
 				margin-right: 10px;
 			}
@@ -161,17 +163,21 @@
 			}
 
 			.punc {
-				width: 30px;
+				width: 10px;
 				text-align: center;
 				color: $purple;
 			}
 
 			.comma {
-				padding-left: 5px;
+				margin-left: -5px;
 			}
 
 			.break {
-				display: table-row;
+				display: block;
+			}
+
+			.paren {
+				color: $darkGray;
 			}
 		}
 	}

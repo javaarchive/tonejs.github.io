@@ -10,10 +10,10 @@ $gray : #8C8C8C;
 $lightGray : #ECECEC;
 $lighterGray : rgba($lightGray, 0.5);
 $orange : #f5871f;
-$lightPurple : #ECECFF;
+$lightPurple : #ecfbff;
 
 $margin: 3px;
-$padding: 20px;
+$padding: 25px;
 $indent : 30px;
 $border : 3px solid black;
 
@@ -23,5 +23,5 @@ $methodColor: adjust-hue($purple, 1 * $degMult);
 $staticMemberColor: adjust-hue($purple, 2 * $degMult);
 $staticMethodColor: adjust-hue($purple, 3 * $degMult);
 
-$sidebarWidth : 200px;
+$sidebarWidth : 250px;
 $mobileWidth: 700px;

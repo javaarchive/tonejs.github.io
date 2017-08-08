@@ -8,22 +8,28 @@
 	</div>
 
 	<div id="scroller">
+
 		{% comment %} list all of the classes by category {% endcomment %}
-		{% assign categories = site.documentation 
-			| where_exp: "item","item.category" 
-			| group_by: "category" 
-			| sort: "name" %}
+		{% capture paths %}
+			{% for item in include.jsdocs %}
+				{% assign category =  item.meta.path | split: '/' | last  %}
+				{{category}}
+			{% endfor %}
+		{% endcapture %}
+		{% assign categories =  paths | split: ' ' | uniq | sort %}
+
+		{% assign constructors = include.jsdocs 
+			| where: "kind","class" %}
 
 		{% for category in categories %}
 			<div class="group">
-				<h1>{{category.name}}</h1>
-				{% for item in category.items %}
-					{% comment %}test if there is a class description with that name{% endcomment %}
-					{% assign class_desc = include.jsdocs | where: "kind","class" | where: "name",item.title  %}
-					{% if class_desc.size > 0 %}
-						<a href="{{item.title}}" {% if item.title == page.title %} class="active item" {% else %} class="item" {% endif %}>{{item.title}}</a>
-					{% endif %}
+				<h1>{{category}}</h1>
 
+				{% for class in constructors %}
+					{% assign item_category =  class.meta.path | split: '/' | last  %}
+					{% if item_category == category %}
+						<a href="{{class.name}}" {% if class.name == page.title %} class="active item" {% else %} class="item" {% endif %}>{{class.name}}</a>
+					{% endif %}
 				{% endfor %}
 			</div>
 		{% endfor %}

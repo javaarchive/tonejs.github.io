@@ -7,7 +7,9 @@
 </head>
 <body>
 
-	{% assign jsdocs = site.data.jsdocs %}
+	{% assign jsdoc_version =  page.version | prepend: 'jsdocs-' %}
+
+	{% assign jsdocs = site.data[jsdoc_version] %}
 
 	{% assign class_name = page.title %}
 	{% if class_name != 'Tone' %}
@@ -17,7 +19,7 @@
 	{% assign constructor = jsdocs 
 			| where: "kind","class"
 			| where: "name",page.title
-			| where_exp: "item","item.access == private" | first %}
+			| first %}
 
 	{% assign members = jsdocs 
 			| where: "kind","member" 
@@ -73,7 +75,7 @@
 
 	{% comment %}SIDEBAR{% endcomment %}
 
-	{% include sidebar.html jsdocs=jsdocs class_name=class_name %}
+	{% include sidebar.html jsdocs=jsdocs class_name=class_name version=page.version %}
 
 	{% comment %}CONTENT{% endcomment %}
 

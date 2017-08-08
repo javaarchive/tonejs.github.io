@@ -45,13 +45,16 @@ body {
 	}
 	
 	#content {
-		width: calc(100% - #{$sidebarWidth} - 2 * 10px);
+
+		$contentPadding : 20px;
+
+		width: calc(100% - #{$sidebarWidth} - 2 * #{$contentPadding});
 		left: $sidebarWidth;
-		margin-left: 10px;
+		margin-left: $contentPadding;
 		position: relative;
 
 		@media (max-width: $mobileWidth){
-			width: calc(100% - 2 * 10px);
+			width: calc(100% - 2 * #{$contentPadding});
 			left: 0px;
 		}
 	}
@@ -94,8 +97,8 @@ body {
 
 		h3 {
 			margin-top: 0px;
-			color: $gray;
-			border-color: $gray;
+			color: $red;
+			border-color: $red;
 		}
 
 		pre {
