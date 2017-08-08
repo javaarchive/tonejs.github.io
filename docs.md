@@ -25,5 +25,11 @@ Methods are functions which belong to the class. Each has a function signature w
 
 Both the members and methods have a link to the source code in the bottom right side of their descriptions. 
 
-
+<script>
+	// check if there's a hash, to forward from previous doc versions
+	if (window.location.hash !== ""){
+		var hash = window.location.hash.substr(1)
+		window.location = window.location.pathname + hash
+	}
+</script>
 
