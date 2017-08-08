@@ -12,7 +12,9 @@
 </head>
 <body>
 
-	{% assign jsdocs = site.data.jsdocs %}
+	{% assign jsdoc_version =  site.data.version | prepend: 'jsdocs-' %}
+
+	{% assign jsdocs = site.data[jsdoc_version] %}
 
 	{% assign types = jsdocs 
 			| where: "kind","typedef" 
@@ -26,12 +28,15 @@
 		<h1>Types</h1>
 
 		{% for type in types %}
-			<h2 id="{{type.name | slugify}}">
-				{{type.name}}
-			</h2>
-			<div id="description">
-				{% include util/markdown.html data=type.description %}
-			</div>
+
+			<span id="{{type.name | slugify}}" class="typeblock">
+				<h2 >
+					{{type.name}}
+				</h2>
+				<div id="description">
+					{% include util/markdown.html data=type.description %}
+				</div>
+			</span>
 		{% endfor %}
 
 	</div>
