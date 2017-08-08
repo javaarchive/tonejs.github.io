@@ -1,0 +1,4 @@
+---
+title: MidSideCompressor
+layout: forward
+---

@@ -1,0 +1,4 @@
+---
+title: Buffer
+layout: forward
+---

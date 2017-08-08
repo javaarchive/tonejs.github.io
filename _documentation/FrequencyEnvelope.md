@@ -1,0 +1,4 @@
+---
+title: FrequencyEnvelope
+layout: forward
+---
