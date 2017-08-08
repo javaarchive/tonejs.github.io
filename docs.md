@@ -17,7 +17,7 @@ The constructor function shows the parameter names, types and a short descriptio
 
 Next are the class members. If the class member has a "<span class="orange">&#8767;</span>" before the name, it is a signal rate property. [Signals](https://github.com/Tonejs/Tone.js/wiki/Signals) are properties which can be scheduled to change and smoothly ramp between values at audio-rate. 
 
-Some members have custom types like [Time](Type#time) or [Frequency](Type#frequency). Follow the link to read more about them. 
+Some members have custom types like [Time]({{site.data.version}}/Type#time) or [Frequency]({{site.data.version}}/Type#frequency). Follow the link to read more about them. 
 
 ## Methods
 
@@ -27,9 +27,16 @@ Both the members and methods have a link to the source code in the bottom right 
 
 <script>
 	// check if there's a hash, to forward from previous doc versions
-	if (window.location.hash !== ""){
-		var hash = window.location.hash.substr(1)
-		window.location = window.location.pathname + hash
+	var hash = window.location.hash
+	if (hash !== ""){
+		// test if it's a class and property
+		var match = hash.match(/#(\w+)\.(\w+)/)
+		if (match){
+			window.location = match[1] + '#' + match[2].toLowerCase()
+		} else {
+			//just a class
+			window.location = window.location.pathname + hash.substr(1)
+		}
 	}
 </script>
 
