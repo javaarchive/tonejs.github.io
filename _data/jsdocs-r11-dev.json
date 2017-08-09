@@ -46967,11 +46967,11 @@
 		"scope": "instance"
 	},
 	{
-		"comment": "/**\n\t *  @class Tone.MultiPlayer is well suited for one-shots, multi-sampled instruments\n\t *         or any time you need to play a bunch of audio buffers. \n\t *\n\t *  @deprecated Use Tone.Players instead.\n\t *  @param  {Object|Array|Tone.Buffers}  buffers  The buffers which are available\n\t *                                                to the MultiPlayer\n\t *  @param {Function} onload The callback to invoke when all of the buffers are loaded.\n\t *  @extends {Tone}\n\t *  @example\n\t * var multiPlayer = new MultiPlayer({\n\t * \t\"kick\" : \"path/to/kick.mp3\",\n\t * \t\"snare\" : \"path/to/snare.mp3\",\n\t * }, function(){\n\t * \tmultiPlayer.start(\"kick\");\n\t * });\n\t *  @example\n\t * //can also store the values in an array\n\t * var multiPlayer = new MultiPlayer([\"path/to/kick.mp3\", \"path/to/snare.mp3\"], \n\t * function(){\n\t * \t//if an array is passed in, the samples are referenced to by index\n\t * \tmultiPlayer.start(1);\n\t * });\n\t */",
+		"comment": "/**\n\t *  @class Tone.MultiPlayer is well suited for one-shots, multi-sampled instruments\n\t *         or any time you need to play a bunch of audio buffers. \n\t *\n\t *  @deprecated Use [Tone.Players](Players) instead.\n\t *  @param  {Object|Array|Tone.Buffers}  buffers  The buffers which are available\n\t *                                                to the MultiPlayer\n\t *  @param {Function} onload The callback to invoke when all of the buffers are loaded.\n\t *  @extends {Tone}\n\t *  @example\n\t * var multiPlayer = new MultiPlayer({\n\t * \t\"kick\" : \"path/to/kick.mp3\",\n\t * \t\"snare\" : \"path/to/snare.mp3\",\n\t * }, function(){\n\t * \tmultiPlayer.start(\"kick\");\n\t * });\n\t *  @example\n\t * //can also store the values in an array\n\t * var multiPlayer = new MultiPlayer([\"path/to/kick.mp3\", \"path/to/snare.mp3\"], \n\t * function(){\n\t * \t//if an array is passed in, the samples are referenced to by index\n\t * \tmultiPlayer.start(1);\n\t * });\n\t */",
 		"meta": {
 			"range": [
-				1065,
-				2149
+				1076,
+				2160
 			],
 			"filename": "MultiPlayer.js",
 			"lineno": 29,
@@ -46996,7 +46996,7 @@
 		},
 		"kind": "class",
 		"classdesc": "Tone.MultiPlayer is well suited for one-shots, multi-sampled instruments\n        or any time you need to play a bunch of audio buffers.",
-		"deprecated": "Use Tone.Players instead.",
+		"deprecated": "Use [Tone.Players](Players) instead.",
 		"params": [
 			{
 				"type": {
@@ -47035,8 +47035,8 @@
 		"comment": "/**\n\t\t\t *  All the buffers belonging to the player.\n\t\t\t *  @type  {Tone.Buffers}\n\t\t\t */",
 		"meta": {
 			"range": [
-				1606,
-				1633
+				1617,
+				1644
 			],
 			"filename": "MultiPlayer.js",
 			"lineno": 45,
@@ -47066,8 +47066,8 @@
 		"comment": "/**\n\t\t *  The fade in envelope which is applied\n\t\t *  to the beginning of the BufferSource\n\t\t *  @type  {Time}\n\t\t */",
 		"meta": {
 			"range": [
-				1968,
-				1996
+				1979,
+				2007
 			],
 			"filename": "MultiPlayer.js",
 			"lineno": 62,
@@ -47097,8 +47097,8 @@
 		"comment": "/**\n\t\t *  The fade out envelope which is applied\n\t\t *  to the end of the BufferSource\n\t\t *  @type  {Time}\n\t\t */",
 		"meta": {
 			"range": [
-				2115,
-				2145
+				2126,
+				2156
 			],
 			"filename": "MultiPlayer.js",
 			"lineno": 69,
@@ -47128,8 +47128,8 @@
 		"comment": "/**\n\t *  The defaults\n\t *  @type  {Object}\n\t */",
 		"meta": {
 			"range": [
-				2248,
-				2336
+				2259,
+				2347
 			],
 			"filename": "MultiPlayer.js",
 			"lineno": 78,
@@ -47159,8 +47159,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				2280,
-				2300
+				2291,
+				2311
 			],
 			"filename": "MultiPlayer.js",
 			"lineno": 79,
@@ -47184,8 +47184,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				2304,
-				2316
+				2315,
+				2327
 			],
 			"filename": "MultiPlayer.js",
 			"lineno": 80,
@@ -47209,8 +47209,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				2320,
-				2333
+				2331,
+				2344
 			],
 			"filename": "MultiPlayer.js",
 			"lineno": 81,
@@ -47234,8 +47234,8 @@
 		"comment": "/**\n\t *  Start a buffer by name. The `start` method allows a number of options\n\t *  to be passed in such as offset, interval, and gain. This is good for multi-sampled \n\t *  instruments and sound sprites where samples are repitched played back at different velocities.\n\t *  @param  {String}  bufferName    The name of the buffer to start.\n\t *  @param  {Time}  time      When to start the buffer.\n\t *  @param  {Time}  [offset=0]    The offset into the buffer to play from.\n\t *  @param  {Time=}  duration   How long to play the buffer for.\n\t *  @param  {Interval}  [pitch=0]  The interval to repitch the buffer.\n\t *  @param  {Gain}  [gain=1]      The gain to play the sample at.\n\t *  @return  {Tone.MultiPlayer}  this\n\t */",
 		"meta": {
 			"range": [
-				3771,
-				4226
+				3782,
+				4237
 			],
 			"filename": "MultiPlayer.js",
 			"lineno": 119,
@@ -47345,8 +47345,8 @@
 		"comment": "/**\n\t *  Start a looping buffer by name. Similar to `start`, but the buffer\n\t *  is looped instead of played straight through. Can still be stopped with `stop`. \n\t *  @param  {String}  bufferName    The name of the buffer to start.\n\t *  @param  {Time}  time      When to start the buffer.\n\t *  @param  {Time}  [offset=0]    The offset into the buffer to play from.\n\t *  @param  {Time=}  loopStart   The start of the loop.\n\t *  @param  {Time=}  loopEnd\tThe end of the loop.\n\t *  @param  {Interval}  [pitch=0]  The interval to repitch the buffer.\n\t *  @param  {Gain}  [gain=1]      The gain to play the sample at.\n\t *  @return  {Tone.MultiPlayer}  this\n\t */",
 		"meta": {
 			"range": [
-				4887,
-				5427
+				4898,
+				5438
 			],
 			"filename": "MultiPlayer.js",
 			"lineno": 143,
@@ -47470,8 +47470,8 @@
 		"comment": "/**\n\t *  Stop the first played instance of the buffer name.\n\t *  @param  {String}  bufferName  The buffer to stop.\n\t *  @param  {Time=}  time    When to stop the buffer\n\t *  @return  {Tone.MultiPlayer}  this\n\t */",
 		"meta": {
 			"range": [
-				5645,
-				6031
+				5656,
+				6042
 			],
 			"filename": "MultiPlayer.js",
 			"lineno": 161,
@@ -47532,8 +47532,8 @@
 		"comment": "/**\n\t *  Stop all currently playing buffers at the given time.\n\t *  @param  {Time=}  time  When to stop the buffers.\n\t *  @return  {Tone.MultiPlayer}  this\n\t */",
 		"meta": {
 			"range": [
-				6197,
-				6476
+				6208,
+				6487
 			],
 			"filename": "MultiPlayer.js",
 			"lineno": 176,
@@ -47587,8 +47587,8 @@
 		"comment": "/**\n\t *  Add another buffer to the available buffers.\n\t *  @param {String} name The name to that the buffer is refered\n\t *                       to in start/stop methods. \n\t *  @param {String|Tone.Buffer} url The url of the buffer to load\n\t *                                  or the buffer.\n\t *  @param {Function} callback The function to invoke after the buffer is loaded.\n\t */",
 		"meta": {
 			"range": [
-				6860,
-				6982
+				6871,
+				6993
 			],
 			"filename": "MultiPlayer.js",
 			"lineno": 195,
@@ -47692,8 +47692,8 @@
 		"comment": "/**\n\t *  Clean up.\n\t *  @return  {Tone.MultiPlayer}  this\n\t */",
 		"meta": {
 			"range": [
-				7779,
-				8109
+				7790,
+				8120
 			],
 			"filename": "MultiPlayer.js",
 			"lineno": 236,
