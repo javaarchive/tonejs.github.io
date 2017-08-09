@@ -2,8 +2,7 @@
 <html>
 <head>
 	{% include head.html %}
-	
-	<link rel="stylesheet" type="text/css" href="/assets/css/docs.css">
+
 </head>
 <body>
 
@@ -132,6 +131,10 @@
 	</div>
 	{% comment %}GENERATED TIME{% endcomment %}
 	<div id="generated">docs generated {{ site.time | date: "%h %d %Y" }}</div>
+
+	{% include analytics.html  %}
+
+	<script src="//tonejs.github.io/build/{{page.version}}/Tone.min.js"></script>
 	
 </body>
 </html>
