@@ -8566,7 +8566,7 @@
 		"meta": {
 			"range": [
 				437,
-				1156
+				1171
 			],
 			"filename": "PanVol.js",
 			"lineno": 16,
@@ -8660,45 +8660,14 @@
 		"scope": "instance"
 	},
 	{
-		"comment": "/**\n\t\t *  The volume node\n\t\t *  @type {Tone.Volume}\n\t\t */",
-		"meta": {
-			"range": [
-				873,
-				933
-			],
-			"filename": "PanVol.js",
-			"lineno": 39,
-			"columnno": 2,
-			"path": "/home/travis/build/Tonejs/Tone.js/Tone/component",
-			"code": {
-				"id": "astnode100009669",
-				"name": "this._volume",
-				"type": "AssignmentExpression",
-				"value": "this.output",
-				"paramnames": []
-			}
-		},
-		"description": "The volume node",
-		"type": {
-			"names": [
-				"Tone.Volume"
-			]
-		},
-		"name": "_volume",
-		"longname": "Tone.PanVol#_volume",
-		"kind": "member",
-		"memberof": "Tone.PanVol",
-		"scope": "instance"
-	},
-	{
 		"comment": "/**\n\t\t *  The volume control in decibels. \n\t\t *  @type {Decibels}\n\t\t *  @signal\n\t\t */",
 		"meta": {
 			"range": [
-				1026,
-				1059
+				1041,
+				1074
 			],
 			"filename": "PanVol.js",
-			"lineno": 46,
+			"lineno": 47,
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/component",
 			"code": {
@@ -8732,11 +8701,11 @@
 		"comment": "/**\n\t *  The defaults\n\t *  @type  {Object}\n\t *  @const\n\t *  @static\n\t */",
 		"meta": {
 			"range": [
-				1262,
-				1319
+				1277,
+				1334
 			],
 			"filename": "PanVol.js",
-			"lineno": 62,
+			"lineno": 63,
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/component",
 			"code": {
@@ -8763,11 +8732,11 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				1289,
-				1300
+				1304,
+				1315
 			],
 			"filename": "PanVol.js",
-			"lineno": 63,
+			"lineno": 64,
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/component",
 			"code": {
@@ -8788,11 +8757,11 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				1304,
-				1316
+				1319,
+				1331
 			],
 			"filename": "PanVol.js",
-			"lineno": 64,
+			"lineno": 65,
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/component",
 			"code": {
@@ -8813,11 +8782,11 @@
 		"comment": "/**\n\t *  clean up\n\t *  @returns {Tone.PanVol} this\n\t */",
 		"meta": {
 			"range": [
-				1380,
-				1654
+				1395,
+				1669
 			],
 			"filename": "PanVol.js",
-			"lineno": 71,
+			"lineno": 72,
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/component",
 			"code": {
