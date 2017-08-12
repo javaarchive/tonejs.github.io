@@ -3,9 +3,16 @@
 {% assign last_index =  full_path | size | minus: 1 %}
 {% assign dir =  full_path[last_index] %}
 {% assign line_number = include.data.meta.lineno %}
+{% assign version = page.version %}
+
+{% if version contains "dev" %}
+	{% assign version = "dev" %}
+{% endif %}
 
 {% capture link_addr %}
-	https://github.com/Tonejs/Tone.js/tree/{{page.branch}}/Tone/{{dir}}/{{file_name}}#L{{line_number}}
+{% comment %}if it's got dev in the name, it's a dev branch{% endcomment %}
+	https://github.com/Tonejs/Tone.js/blob/{{version}}/Tone/{{dir}}/{{file_name}}#L{{line_number}}
+{% comment %}otherwise go with the version number{% endcomment %}
 {% endcapture %}
 
 <div id="line_num">
