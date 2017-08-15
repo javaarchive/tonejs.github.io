@@ -25458,11 +25458,11 @@
 		"overrides": "Tone.Effect#dispose"
 	},
 	{
-		"comment": "/**\n\t *  @class Tone.Freeverb is a reverb based on [Freeverb](https://ccrma.stanford.edu/~jos/pasp/Freeverb.html).\n\t *         Read more on reverb on [SoundOnSound](http://www.soundonsound.com/sos/may00/articles/reverb.htm).\n\t *\n\t *  @extends {Tone.Effect}\n\t *  @constructor\n\t *  @param {NormalRange|Object} [roomSize] Correlated to the decay time. \n\t *  @param {Frequency} [dampening] The cutoff frequency of a lowpass filter as part \n\t *                                 of the reverb. \n\t *  @example\n\t * var freeverb = new Tone.Freeverb().toMaster();\n\t * freeverb.dampening.value = 1000;\n\t * //routing synth through the reverb\n\t * var synth = new Tone.AMSynth().connect(freeverb);\n\t */",
+		"comment": "/**\n\t *  @class Tone.Freeverb is a reverb based on [Freeverb](https://ccrma.stanford.edu/~jos/pasp/Freeverb.html).\n\t *         Read more on reverb on [Sound On Sound](https://web.archive.org/web/20160404083902/http://www.soundonsound.com:80/sos/feb01/articles/synthsecrets.asp).\n\t *\n\t *  @extends {Tone.Effect}\n\t *  @constructor\n\t *  @param {NormalRange|Object} [roomSize] Correlated to the decay time.\n\t *  @param {Frequency} [dampening] The cutoff frequency of a lowpass filter as part\n\t *                                 of the reverb.\n\t *  @example\n\t * var freeverb = new Tone.Freeverb().toMaster();\n\t * freeverb.dampening.value = 1000;\n\t * //routing synth through the reverb\n\t * var synth = new Tone.AMSynth().connect(freeverb);\n\t */",
 		"meta": {
 			"range": [
-				1367,
-				3657
+				1416,
+				3704
 			],
 			"filename": "Freeverb.js",
 			"lineno": 38,
@@ -25494,7 +25494,7 @@
 			}
 		},
 		"kind": "class",
-		"classdesc": "Tone.Freeverb is a reverb based on [Freeverb](https://ccrma.stanford.edu/~jos/pasp/Freeverb.html).\n        Read more on reverb on [SoundOnSound](http://www.soundonsound.com/sos/may00/articles/reverb.htm).",
+		"classdesc": "Tone.Freeverb is a reverb based on [Freeverb](https://ccrma.stanford.edu/~jos/pasp/Freeverb.html).\n        Read more on reverb on [Sound On Sound](https://web.archive.org/web/20160404083902/http://www.soundonsound.com:80/sos/feb01/articles/synthsecrets.asp).",
 		"augments": [
 			"Tone.Effect"
 		],
@@ -25517,7 +25517,7 @@
 					]
 				},
 				"optional": true,
-				"description": "The cutoff frequency of a lowpass filter as part \n                                of the reverb.",
+				"description": "The cutoff frequency of a lowpass filter as part\n                                of the reverb.",
 				"name": "dampening"
 			}
 		],
@@ -25530,11 +25530,11 @@
 		"scope": "static"
 	},
 	{
-		"comment": "/**\n\t\t *  The roomSize value between. A larger roomSize\n\t\t *  will result in a longer decay. \n\t\t *  @type {NormalRange}\n\t\t *  @signal\n\t\t */",
+		"comment": "/**\n\t\t *  The roomSize value between. A larger roomSize\n\t\t *  will result in a longer decay.\n\t\t *  @type {NormalRange}\n\t\t *  @signal\n\t\t */",
 		"meta": {
 			"range": [
-				1666,
-				1738
+				1714,
+				1786
 			],
 			"filename": "Freeverb.js",
 			"lineno": 49,
@@ -25568,11 +25568,11 @@
 		"scope": "instance"
 	},
 	{
-		"comment": "/**\n\t\t *  The amount of dampening of the reverberant signal. \n\t\t *  @type {Frequency}\n\t\t *  @signal\n\t\t */",
+		"comment": "/**\n\t\t *  The amount of dampening of the reverberant signal.\n\t\t *  @type {Frequency}\n\t\t *  @signal\n\t\t */",
 		"meta": {
 			"range": [
-				1851,
-				1923
+				1898,
+				1970
 			],
 			"filename": "Freeverb.js",
 			"lineno": 56,
@@ -25609,8 +25609,8 @@
 		"comment": "/**\n\t *  @static\n\t *  @type {Object}\n\t */",
 		"meta": {
 			"range": [
-				3753,
-				3824
+				3800,
+				3870
 			],
 			"filename": "Freeverb.js",
 			"lineno": 122,
@@ -25639,8 +25639,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3782,
-				3798
+				3829,
+				3845
 			],
 			"filename": "Freeverb.js",
 			"lineno": 123,
@@ -25664,8 +25664,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3803,
-				3821
+				3849,
+				3867
 			],
 			"filename": "Freeverb.js",
 			"lineno": 124,
@@ -25686,11 +25686,11 @@
 		"scope": "static"
 	},
 	{
-		"comment": "/**\n\t *  Clean up. \n\t *  @returns {Tone.Freeverb} this\n\t */",
+		"comment": "/**\n\t *  Clean up.\n\t *  @returns {Tone.Freeverb} this\n\t */",
 		"meta": {
 			"range": [
-				3889,
-				4666
+				3934,
+				4711
 			],
 			"filename": "Freeverb.js",
 			"lineno": 131,
@@ -31319,11 +31319,11 @@
 		"overrides": "Tone.Part#dispose"
 	},
 	{
-		"comment": "/**\n\t *  @class  AMSynth uses the output of one Tone.Synth to modulate the\n\t *          amplitude of another Tone.Synth. The harmonicity (the ratio between\n\t *          the two signals) affects the timbre of the output signal greatly.\n\t *          Read more about Amplitude Modulation Synthesis on \n\t *          [SoundOnSound](http://www.soundonsound.com/sos/mar00/articles/synthsecrets.htm).\n\t *          <img src=\"https://docs.google.com/drawings/d/1TQu8Ed4iFr1YTLKpB3U1_hur-UwBrh5gdBXc8BxfGKw/pub?w=1009&h=457\">\n\t *\n\t *  @constructor\n\t *  @extends {Tone.Monophonic}\n\t *  @param {Object} [options] the options available for the synth \n\t *                            see defaults below\n\t *  @example\n\t * var synth = new Tone.AMSynth().toMaster();\n\t * synth.triggerAttackRelease(\"C4\", \"4n\");\n\t */",
+		"comment": "/**\n\t *  @class  AMSynth uses the output of one Tone.Synth to modulate the\n\t *          amplitude of another Tone.Synth. The harmonicity (the ratio between\n\t *          the two signals) affects the timbre of the output signal greatly.\n\t *          Read more about Amplitude Modulation Synthesis on\n\t *          [SoundOnSound](https://web.archive.org/web/20160404103653/http://www.soundonsound.com:80/sos/mar00/articles/synthsecrets.htm).\n\t *          <img src=\"https://docs.google.com/drawings/d/1TQu8Ed4iFr1YTLKpB3U1_hur-UwBrh5gdBXc8BxfGKw/pub?w=1009&h=457\">\n\t *\n\t *  @constructor\n\t *  @extends {Tone.Monophonic}\n\t *  @param {Object} [options] the options available for the synth\n\t *                            see defaults below\n\t *  @example\n\t * var synth = new Tone.AMSynth().toMaster();\n\t * synth.triggerAttackRelease(\"C4\", \"4n\");\n\t */",
 		"meta": {
 			"range": [
-				1008,
-				3514
+				1050,
+				3553
 			],
 			"filename": "AMSynth.js",
 			"lineno": 23,
@@ -31356,7 +31356,7 @@
 			}
 		},
 		"kind": "class",
-		"classdesc": "AMSynth uses the output of one Tone.Synth to modulate the\n         amplitude of another Tone.Synth. The harmonicity (the ratio between\n         the two signals) affects the timbre of the output signal greatly.\n         Read more about Amplitude Modulation Synthesis on \n         [SoundOnSound](http://www.soundonsound.com/sos/mar00/articles/synthsecrets.htm).\n         <img src=\"https://docs.google.com/drawings/d/1TQu8Ed4iFr1YTLKpB3U1_hur-UwBrh5gdBXc8BxfGKw/pub?w=1009&h=457\">",
+		"classdesc": "AMSynth uses the output of one Tone.Synth to modulate the\n         amplitude of another Tone.Synth. The harmonicity (the ratio between\n         the two signals) affects the timbre of the output signal greatly.\n         Read more about Amplitude Modulation Synthesis on\n         [SoundOnSound](https://web.archive.org/web/20160404103653/http://www.soundonsound.com:80/sos/mar00/articles/synthsecrets.htm).\n         <img src=\"https://docs.google.com/drawings/d/1TQu8Ed4iFr1YTLKpB3U1_hur-UwBrh5gdBXc8BxfGKw/pub?w=1009&h=457\">",
 		"augments": [
 			"Tone.Monophonic"
 		],
@@ -31368,7 +31368,7 @@
 					]
 				},
 				"optional": true,
-				"description": "the options available for the synth \n                           see defaults below",
+				"description": "the options available for the synth\n                           see defaults below",
 				"name": "options"
 			}
 		],
@@ -31384,8 +31384,8 @@
 		"comment": "/**\n\t\t *  The carrier's oscillator\n\t\t *  @type {Tone.Oscillator}\n\t\t */",
 		"meta": {
 			"range": [
-				1370,
-				1412
+				1411,
+				1453
 			],
 			"filename": "AMSynth.js",
 			"lineno": 40,
@@ -31415,8 +31415,8 @@
 		"comment": "/**\n\t\t *  The carrier's envelope\n\t\t *  @type {Tone.AmplitudeEnvelope}\n\t\t */",
 		"meta": {
 			"range": [
-				1495,
-				1555
+				1536,
+				1596
 			],
 			"filename": "AMSynth.js",
 			"lineno": 46,
@@ -31446,8 +31446,8 @@
 		"comment": "/**\n\t\t *  The modulator's oscillator which is applied\n\t\t *  to the amplitude of the oscillator\n\t\t *  @type {Tone.Oscillator}\n\t\t */",
 		"meta": {
 			"range": [
-				1850,
-				1918
+				1890,
+				1958
 			],
 			"filename": "AMSynth.js",
 			"lineno": 61,
@@ -31477,8 +31477,8 @@
 		"comment": "/**\n\t\t *  The modulator's envelope\n\t\t *  @type {Tone.AmplitudeEnvelope}\n\t\t */",
 		"meta": {
 			"range": [
-				2003,
-				2085
+				2043,
+				2125
 			],
 			"filename": "AMSynth.js",
 			"lineno": 67,
@@ -31508,8 +31508,8 @@
 		"comment": "/**\n\t\t *  The frequency.\n\t\t *  @type {Frequency}\n\t\t *  @signal\n\t\t */",
 		"meta": {
 			"range": [
-				2161,
-				2219
+				2201,
+				2259
 			],
 			"filename": "AMSynth.js",
 			"lineno": 74,
@@ -31546,8 +31546,8 @@
 		"comment": "/**\n\t\t *  The detune in cents\n\t\t *  @type {Cents}\n\t\t *  @signal\n\t\t */",
 		"meta": {
 			"range": [
-				2296,
-				2358
+				2336,
+				2398
 			],
 			"filename": "AMSynth.js",
 			"lineno": 81,
@@ -31581,11 +31581,11 @@
 		"scope": "instance"
 	},
 	{
-		"comment": "/**\n\t\t *  Harmonicity is the ratio between the two voices. A harmonicity of\n\t\t *  1 is no change. Harmonicity = 2 means a change of an octave. \n\t\t *  @type {Positive}\n\t\t *  @signal\n\t\t *  @example\n\t\t * //pitch voice1 an octave below voice0\n\t\t * synth.harmonicity.value = 0.5;\n\t\t */",
+		"comment": "/**\n\t\t *  Harmonicity is the ratio between the two voices. A harmonicity of\n\t\t *  1 is no change. Harmonicity = 2 means a change of an octave.\n\t\t *  @type {Positive}\n\t\t *  @signal\n\t\t *  @example\n\t\t * //pitch voice1 an octave below voice0\n\t\t * synth.harmonicity.value = 0.5;\n\t\t */",
 		"meta": {
 			"range": [
-				2646,
-				2703
+				2685,
+				2742
 			],
 			"filename": "AMSynth.js",
 			"lineno": 92,
@@ -31625,8 +31625,8 @@
 		"comment": "/**\n\t *  @static\n\t *  @type {Object}\n\t */",
 		"meta": {
 			"range": [
-				3607,
-				3963
+				3646,
+				4002
 			],
 			"filename": "AMSynth.js",
 			"lineno": 124,
@@ -31655,8 +31655,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3635,
-				3652
+				3674,
+				3691
 			],
 			"filename": "AMSynth.js",
 			"lineno": 125,
@@ -31680,8 +31680,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3656,
-				3668
+				3695,
+				3707
 			],
 			"filename": "AMSynth.js",
 			"lineno": 126,
@@ -31705,8 +31705,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3672,
-				3711
+				3711,
+				3750
 			],
 			"filename": "AMSynth.js",
 			"lineno": 127,
@@ -31730,8 +31730,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3692,
-				3707
+				3731,
+				3746
 			],
 			"filename": "AMSynth.js",
 			"lineno": 128,
@@ -31755,8 +31755,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3715,
-				3809
+				3754,
+				3848
 			],
 			"filename": "AMSynth.js",
 			"lineno": 130,
@@ -31780,8 +31780,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3733,
-				3748
+				3772,
+				3787
 			],
 			"filename": "AMSynth.js",
 			"lineno": 131,
@@ -31805,8 +31805,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3753,
-				3767
+				3792,
+				3806
 			],
 			"filename": "AMSynth.js",
 			"lineno": 132,
@@ -31830,8 +31830,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3772,
-				3785
+				3811,
+				3824
 			],
 			"filename": "AMSynth.js",
 			"lineno": 133,
@@ -31855,8 +31855,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3790,
-				3805
+				3829,
+				3844
 			],
 			"filename": "AMSynth.js",
 			"lineno": 134,
@@ -31880,8 +31880,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3813,
-				3854
+				3852,
+				3893
 			],
 			"filename": "AMSynth.js",
 			"lineno": 136,
@@ -31905,8 +31905,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3833,
-				3850
+				3872,
+				3889
 			],
 			"filename": "AMSynth.js",
 			"lineno": 137,
@@ -31930,8 +31930,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3858,
-				3960
+				3897,
+				3999
 			],
 			"filename": "AMSynth.js",
 			"lineno": 139,
@@ -31955,8 +31955,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3886,
-				3900
+				3925,
+				3939
 			],
 			"filename": "AMSynth.js",
 			"lineno": 140,
@@ -31980,8 +31980,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3905,
-				3918
+				3944,
+				3957
 			],
 			"filename": "AMSynth.js",
 			"lineno": 141,
@@ -32005,8 +32005,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3923,
-				3936
+				3962,
+				3975
 			],
 			"filename": "AMSynth.js",
 			"lineno": 142,
@@ -32030,8 +32030,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3941,
-				3956
+				3980,
+				3995
 			],
 			"filename": "AMSynth.js",
 			"lineno": 143,
@@ -32055,8 +32055,8 @@
 		"comment": "/**\n\t *  clean up\n\t *  @returns {Tone.AMSynth} this\n\t */",
 		"meta": {
 			"range": [
-				4867,
-				5602
+				4902,
+				5637
 			],
 			"filename": "AMSynth.js",
 			"lineno": 181,
@@ -33278,11 +33278,11 @@
 		"overrides": "Tone.Monophonic#dispose"
 	},
 	{
-		"comment": "/**\n\t *  @class  FMSynth is composed of two Tone.Synths where one Tone.Synth modulates\n\t *          the frequency of a second Tone.Synth. A lot of spectral content \n\t *          can be explored using the modulationIndex parameter. Read more about\n\t *          frequency modulation synthesis on [SoundOnSound](http://www.soundonsound.com/sos/apr00/articles/synthsecrets.htm).\n\t *          <img src=\"https://docs.google.com/drawings/d/1h0PUDZXPgi4Ikx6bVT6oncrYPLluFKy7lj53puxj-DM/pub?w=902&h=462\">\n\t *\n\t *  @constructor\n\t *  @extends {Tone.Monophonic}\n\t *  @param {Object} [options] the options available for the synth \n\t *                          see defaults below\n\t *  @example\n\t * var fmSynth = new Tone.FMSynth().toMaster();\n\t * fmSynth.triggerAttackRelease(\"C5\", \"4n\");\n\t */",
+		"comment": "/**\n\t *  @class  FMSynth is composed of two Tone.Synths where one Tone.Synth modulates\n\t *          the frequency of a second Tone.Synth. A lot of spectral content \n\t *          can be explored using the modulationIndex parameter. Read more about\n\t *          frequency modulation synthesis on Sound On Sound: [Part 1](https://web.archive.org/web/20160403123704/http://www.soundonsound.com/sos/apr00/articles/synthsecrets.htm), [Part 2](https://web.archive.org/web/20160403115835/http://www.soundonsound.com/sos/may00/articles/synth.htm).\n\t *          <img src=\"https://docs.google.com/drawings/d/1h0PUDZXPgi4Ikx6bVT6oncrYPLluFKy7lj53puxj-DM/pub?w=902&h=462\">\n\t *\n\t *  @constructor\n\t *  @extends {Tone.Monophonic}\n\t *  @param {Object} [options] the options available for the synth\n\t *                          see defaults below\n\t *  @example\n\t * var fmSynth = new Tone.FMSynth().toMaster();\n\t * fmSynth.triggerAttackRelease(\"C5\", \"4n\");\n\t */",
 		"meta": {
 			"range": [
-				944,
-				3826
+				1106,
+				3984
 			],
 			"filename": "FMSynth.js",
 			"lineno": 21,
@@ -33316,7 +33316,7 @@
 			}
 		},
 		"kind": "class",
-		"classdesc": "FMSynth is composed of two Tone.Synths where one Tone.Synth modulates\n         the frequency of a second Tone.Synth. A lot of spectral content \n         can be explored using the modulationIndex parameter. Read more about\n         frequency modulation synthesis on [SoundOnSound](http://www.soundonsound.com/sos/apr00/articles/synthsecrets.htm).\n         <img src=\"https://docs.google.com/drawings/d/1h0PUDZXPgi4Ikx6bVT6oncrYPLluFKy7lj53puxj-DM/pub?w=902&h=462\">",
+		"classdesc": "FMSynth is composed of two Tone.Synths where one Tone.Synth modulates\n         the frequency of a second Tone.Synth. A lot of spectral content \n         can be explored using the modulationIndex parameter. Read more about\n         frequency modulation synthesis on Sound On Sound: [Part 1](https://web.archive.org/web/20160403123704/http://www.soundonsound.com/sos/apr00/articles/synthsecrets.htm), [Part 2](https://web.archive.org/web/20160403115835/http://www.soundonsound.com/sos/may00/articles/synth.htm).\n         <img src=\"https://docs.google.com/drawings/d/1h0PUDZXPgi4Ikx6bVT6oncrYPLluFKy7lj53puxj-DM/pub?w=902&h=462\">",
 		"augments": [
 			"Tone.Monophonic"
 		],
@@ -33328,7 +33328,7 @@
 					]
 				},
 				"optional": true,
-				"description": "the options available for the synth \n                         see defaults below",
+				"description": "the options available for the synth\n                         see defaults below",
 				"name": "options"
 			}
 		],
@@ -33344,8 +33344,8 @@
 		"comment": "/**\n\t\t *  The carrier's oscillator\n\t\t *  @type {Tone.Oscillator}\n\t\t */",
 		"meta": {
 			"range": [
-				1321,
-				1363
+				1483,
+				1525
 			],
 			"filename": "FMSynth.js",
 			"lineno": 39,
@@ -33375,8 +33375,8 @@
 		"comment": "/**\n\t\t *  The carrier's envelope\n\t\t *  @type {Tone.Oscillator}\n\t\t */",
 		"meta": {
 			"range": [
-				1439,
-				1499
+				1601,
+				1661
 			],
 			"filename": "FMSynth.js",
 			"lineno": 45,
@@ -33406,8 +33406,8 @@
 		"comment": "/**\n\t\t *  The modulator's oscillator which is applied\n\t\t *  to the amplitude of the oscillator\n\t\t *  @type {Tone.Oscillator}\n\t\t */",
 		"meta": {
 			"range": [
-				1811,
-				1879
+				1973,
+				2041
 			],
 			"filename": "FMSynth.js",
 			"lineno": 61,
@@ -33437,8 +33437,8 @@
 		"comment": "/**\n\t\t *  The modulator's envelope\n\t\t *  @type {Tone.Oscillator}\n\t\t */",
 		"meta": {
 			"range": [
-				1957,
-				2039
+				2119,
+				2201
 			],
 			"filename": "FMSynth.js",
 			"lineno": 67,
@@ -33468,8 +33468,8 @@
 		"comment": "/**\n\t\t *  The frequency control.\n\t\t *  @type {Frequency}\n\t\t *  @signal\n\t\t */",
 		"meta": {
 			"range": [
-				2123,
-				2181
+				2285,
+				2343
 			],
 			"filename": "FMSynth.js",
 			"lineno": 74,
@@ -33506,8 +33506,8 @@
 		"comment": "/**\n\t\t *  The detune in cents\n\t\t *  @type {Cents}\n\t\t *  @signal\n\t\t */",
 		"meta": {
 			"range": [
-				2258,
-				2320
+				2420,
+				2482
 			],
 			"filename": "FMSynth.js",
 			"lineno": 81,
@@ -33541,11 +33541,11 @@
 		"scope": "instance"
 	},
 	{
-		"comment": "/**\n\t\t *  Harmonicity is the ratio between the two voices. A harmonicity of\n\t\t *  1 is no change. Harmonicity = 2 means a change of an octave. \n\t\t *  @type {Positive}\n\t\t *  @signal\n\t\t *  @example\n\t\t * //pitch voice1 an octave below voice0\n\t\t * synth.harmonicity.value = 0.5;\n\t\t */",
+		"comment": "/**\n\t\t *  Harmonicity is the ratio between the two voices. A harmonicity of\n\t\t *  1 is no change. Harmonicity = 2 means a change of an octave.\n\t\t *  @type {Positive}\n\t\t *  @signal\n\t\t *  @example\n\t\t * //pitch voice1 an octave below voice0\n\t\t * synth.harmonicity.value = 0.5;\n\t\t */",
 		"meta": {
 			"range": [
-				2608,
-				2665
+				2769,
+				2826
 			],
 			"filename": "FMSynth.js",
 			"lineno": 92,
@@ -33582,11 +33582,11 @@
 		"scope": "instance"
 	},
 	{
-		"comment": "/**\n\t\t *  The modulation index which essentially the depth or amount of the modulation. It is the \n\t\t *  ratio of the frequency of the modulating signal (mf) to the amplitude of the \n\t\t *  modulating signal (ma) -- as in ma/mf. \n\t\t *\t@type {Positive}\n\t\t *\t@signal\n\t\t */",
+		"comment": "/**\n\t\t *  The modulation index which essentially the depth or amount of the modulation. It is the\n\t\t *  ratio of the frequency of the modulating signal (mf) to the amplitude of the\n\t\t *  modulating signal (ma) -- as in ma/mf.\n\t\t *\t@type {Positive}\n\t\t *\t@signal\n\t\t */",
 		"meta": {
 			"range": [
-				2989,
-				3054
+				3147,
+				3212
 			],
 			"filename": "FMSynth.js",
 			"lineno": 102,
@@ -33600,7 +33600,7 @@
 				"paramnames": []
 			}
 		},
-		"description": "The modulation index which essentially the depth or amount of the modulation. It is the \n ratio of the frequency of the modulating signal (mf) to the amplitude of the \n modulating signal (ma) -- as in ma/mf.",
+		"description": "The modulation index which essentially the depth or amount of the modulation. It is the\n ratio of the frequency of the modulating signal (mf) to the amplitude of the\n modulating signal (ma) -- as in ma/mf.",
 		"type": {
 			"names": [
 				"Positive"
@@ -33623,8 +33623,8 @@
 		"comment": "/**\n\t *  @static\n\t *  @type {Object}\n\t */",
 		"meta": {
 			"range": [
-				3919,
-				4301
+				4077,
+				4459
 			],
 			"filename": "FMSynth.js",
 			"lineno": 129,
@@ -33653,8 +33653,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3947,
-				3964
+				4105,
+				4122
 			],
 			"filename": "FMSynth.js",
 			"lineno": 130,
@@ -33678,8 +33678,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3968,
-				3990
+				4126,
+				4148
 			],
 			"filename": "FMSynth.js",
 			"lineno": 131,
@@ -33703,8 +33703,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3994,
-				4006
+				4152,
+				4164
 			],
 			"filename": "FMSynth.js",
 			"lineno": 132,
@@ -33728,8 +33728,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				4010,
-				4049
+				4168,
+				4207
 			],
 			"filename": "FMSynth.js",
 			"lineno": 133,
@@ -33753,8 +33753,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				4030,
-				4045
+				4188,
+				4203
 			],
 			"filename": "FMSynth.js",
 			"lineno": 134,
@@ -33778,8 +33778,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				4053,
-				4147
+				4211,
+				4305
 			],
 			"filename": "FMSynth.js",
 			"lineno": 136,
@@ -33803,8 +33803,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				4071,
-				4086
+				4229,
+				4244
 			],
 			"filename": "FMSynth.js",
 			"lineno": 137,
@@ -33828,8 +33828,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				4091,
-				4105
+				4249,
+				4263
 			],
 			"filename": "FMSynth.js",
 			"lineno": 138,
@@ -33853,8 +33853,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				4110,
-				4123
+				4268,
+				4281
 			],
 			"filename": "FMSynth.js",
 			"lineno": 139,
@@ -33878,8 +33878,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				4128,
-				4143
+				4286,
+				4301
 			],
 			"filename": "FMSynth.js",
 			"lineno": 140,
@@ -33903,8 +33903,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				4151,
-				4192
+				4309,
+				4350
 			],
 			"filename": "FMSynth.js",
 			"lineno": 142,
@@ -33928,8 +33928,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				4171,
-				4188
+				4329,
+				4346
 			],
 			"filename": "FMSynth.js",
 			"lineno": 143,
@@ -33953,8 +33953,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				4196,
-				4298
+				4354,
+				4456
 			],
 			"filename": "FMSynth.js",
 			"lineno": 145,
@@ -33978,8 +33978,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				4224,
-				4238
+				4382,
+				4396
 			],
 			"filename": "FMSynth.js",
 			"lineno": 146,
@@ -34003,8 +34003,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				4243,
-				4256
+				4401,
+				4414
 			],
 			"filename": "FMSynth.js",
 			"lineno": 147,
@@ -34028,8 +34028,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				4261,
-				4274
+				4419,
+				4432
 			],
 			"filename": "FMSynth.js",
 			"lineno": 148,
@@ -34053,8 +34053,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				4279,
-				4294
+				4437,
+				4452
 			],
 			"filename": "FMSynth.js",
 			"lineno": 149,
@@ -34078,8 +34078,8 @@
 		"comment": "/**\n\t *  clean up\n\t *  @returns {Tone.FMSynth} this\n\t */",
 		"meta": {
 			"range": [
-				5202,
-				5954
+				5356,
+				6108
 			],
 			"filename": "FMSynth.js",
 			"lineno": 187,
@@ -35112,11 +35112,11 @@
 		"overrides": "Tone.Instrument#dispose"
 	},
 	{
-		"comment": "/**\n\t *  @class  A highly inharmonic and spectrally complex source with a highpass filter\n\t *          and amplitude envelope which is good for making metalophone sounds. Based\n\t *          on CymbalSynth by [@polyrhythmatic](https://github.com/polyrhythmatic).\n\t *          Inspiration from [Sound on Sound](http://www.soundonsound.com/sos/jul02/articles/synthsecrets0702.asp).\n\t *\n\t *  @constructor\n\t *  @extends {Tone.Instrument}\n\t *  @param {Object} [options] The options availble for the synth\n\t *                             see defaults below\n\t */",
+		"comment": "/**\n\t *  @class  A highly inharmonic and spectrally complex source with a highpass filter\n\t *          and amplitude envelope which is good for making metalophone sounds. Based\n\t *          on CymbalSynth by [@polyrhythmatic](https://github.com/polyrhythmatic).\n\t *          Inspiration from [Sound on Sound](https://web.archive.org/web/20160610143924/https://www.soundonsound.com/sos/jul02/articles/synthsecrets0702.asp).\n\t *\n\t *  @constructor\n\t *  @extends {Tone.Instrument}\n\t *  @param {Object} [options] The options availble for the synth\n\t *                             see defaults below\n\t */",
 		"meta": {
 			"range": [
-				1123,
-				3279
+				1165,
+				3320
 			],
 			"filename": "MetalSynth.js",
 			"lineno": 25,
@@ -35149,7 +35149,7 @@
 			}
 		},
 		"kind": "class",
-		"classdesc": "A highly inharmonic and spectrally complex source with a highpass filter\n         and amplitude envelope which is good for making metalophone sounds. Based\n         on CymbalSynth by [@polyrhythmatic](https://github.com/polyrhythmatic).\n         Inspiration from [Sound on Sound](http://www.soundonsound.com/sos/jul02/articles/synthsecrets0702.asp).",
+		"classdesc": "A highly inharmonic and spectrally complex source with a highpass filter\n         and amplitude envelope which is good for making metalophone sounds. Based\n         on CymbalSynth by [@polyrhythmatic](https://github.com/polyrhythmatic).\n         Inspiration from [Sound on Sound](https://web.archive.org/web/20160610143924/https://www.soundonsound.com/sos/jul02/articles/synthsecrets0702.asp).",
 		"augments": [
 			"Tone.Instrument"
 		],
@@ -35174,8 +35174,8 @@
 		"comment": "/**\n\t\t *  The frequency of the cymbal\n\t\t *  @type  {Frequency}\n\t\t *  @signal\n\t\t */",
 		"meta": {
 			"range": [
-				1352,
-				1424
+				1394,
+				1466
 			],
 			"filename": "MetalSynth.js",
 			"lineno": 35,
@@ -35209,11 +35209,11 @@
 		"scope": "instance"
 	},
 	{
-		"comment": "/**\n\t\t *  The envelope which is connected both to the \n\t\t *  amplitude and highpass filter's cutoff frequency\n\t\t *  @type  {Tone.Envelope}\n\t\t */",
+		"comment": "/**\n\t\t *  The envelope which is connected both to the\n\t\t *  amplitude and highpass filter's cutoff frequency\n\t\t *  @type  {Tone.Envelope}\n\t\t */",
 		"meta": {
 			"range": [
-				2465,
-				2725
+				2506,
+				2766
 			],
 			"filename": "MetalSynth.js",
 			"lineno": 89,
@@ -35227,7 +35227,7 @@
 				"paramnames": []
 			}
 		},
-		"description": "The envelope which is connected both to the \n amplitude and highpass filter's cutoff frequency",
+		"description": "The envelope which is connected both to the\n amplitude and highpass filter's cutoff frequency",
 		"type": {
 			"names": [
 				"Tone.Envelope"
@@ -35243,8 +35243,8 @@
 		"comment": "/**\n\t *  default values\n\t *  @static\n\t *  @const\n\t *  @type {Object}\n\t */",
 		"meta": {
 			"range": [
-				3407,
-				3628
+				3448,
+				3669
 			],
 			"filename": "MetalSynth.js",
 			"lineno": 126,
@@ -35274,8 +35274,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3438,
-				3455
+				3479,
+				3496
 			],
 			"filename": "MetalSynth.js",
 			"lineno": 127,
@@ -35299,8 +35299,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3459,
-				3535
+				3500,
+				3576
 			],
 			"filename": "MetalSynth.js",
 			"lineno": 128,
@@ -35324,8 +35324,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3477,
-				3493
+				3518,
+				3534
 			],
 			"filename": "MetalSynth.js",
 			"lineno": 129,
@@ -35349,8 +35349,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3498,
-				3511
+				3539,
+				3552
 			],
 			"filename": "MetalSynth.js",
 			"lineno": 130,
@@ -35374,8 +35374,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3516,
-				3531
+				3557,
+				3572
 			],
 			"filename": "MetalSynth.js",
 			"lineno": 131,
@@ -35399,8 +35399,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3539,
-				3558
+				3580,
+				3599
 			],
 			"filename": "MetalSynth.js",
 			"lineno": 133,
@@ -35424,8 +35424,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3562,
-				3584
+				3603,
+				3625
 			],
 			"filename": "MetalSynth.js",
 			"lineno": 134,
@@ -35449,8 +35449,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3588,
-				3606
+				3629,
+				3647
 			],
 			"filename": "MetalSynth.js",
 			"lineno": 135,
@@ -35474,8 +35474,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				3610,
-				3625
+				3651,
+				3666
 			],
 			"filename": "MetalSynth.js",
 			"lineno": 136,
@@ -35499,8 +35499,8 @@
 		"comment": "/**\n\t *  Trigger the attack.\n\t *  @param  {Time}  time      When the attack should be triggered.\n\t *  @param  {NormalRange}  [velocity=1]  The velocity that the envelope should be triggered at.\n\t *  @return  {Tone.MetalSynth}  this\n\t */",
 		"meta": {
 			"range": [
-				3870,
-				4057
+				3911,
+				4098
 			],
 			"filename": "MetalSynth.js",
 			"lineno": 145,
@@ -35564,8 +35564,8 @@
 		"comment": "/**\n\t *  Trigger the release of the envelope.\n\t *  @param  {Time}  time      When the release should be triggered.\n\t *  @return  {Tone.MetalSynth}  this\n\t */",
 		"meta": {
 			"range": [
-				4220,
-				4366
+				4261,
+				4407
 			],
 			"filename": "MetalSynth.js",
 			"lineno": 157,
@@ -35613,11 +35613,11 @@
 		"overrides": "Tone.Instrument#triggerRelease"
 	},
 	{
-		"comment": "/**\n\t *  Trigger the attack and release of the envelope after the given \n\t *  duration. \n\t *  @param  {Time}  duration  The duration before triggering the release\n\t *  @param  {Time}  time      When the attack should be triggered.\n\t *  @param  {NormalRange}  [velocity=1]  The velocity that the envelope should be triggered at.\n\t *  @return  {Tone.MetalSynth}  this\n\t */",
+		"comment": "/**\n\t *  Trigger the attack and release of the envelope after the given\n\t *  duration.\n\t *  @param  {Time}  duration  The duration before triggering the release\n\t *  @param  {Time}  time      When the attack should be triggered.\n\t *  @param  {NormalRange}  [velocity=1]  The velocity that the envelope should be triggered at.\n\t *  @return  {Tone.MetalSynth}  this\n\t */",
 		"meta": {
 			"range": [
-				4742,
-				4993
+				4781,
+				5032
 			],
 			"filename": "MetalSynth.js",
 			"lineno": 171,
@@ -35638,7 +35638,7 @@
 				"duration": "Tone.MetalSynth#triggerAttackRelease~duration"
 			}
 		},
-		"description": "Trigger the attack and release of the envelope after the given \n duration.",
+		"description": "Trigger the attack and release of the envelope after the given\n duration.",
 		"params": [
 			{
 				"type": {
@@ -35775,8 +35775,8 @@
 		"comment": "/**\n\t *  Clean up\n\t *  @returns {Tone.MetalSynth} this\n\t */",
 		"meta": {
 			"range": [
-				6876,
-				7445
+				6915,
+				7484
 			],
 			"filename": "MetalSynth.js",
 			"lineno": 252,
