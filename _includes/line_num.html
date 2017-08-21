@@ -5,9 +5,6 @@
 {% assign line_number = include.data.meta.lineno %}
 {% assign version = page.version %}
 
-{% if version contains "dev" %}
-	{% assign version = "dev" %}
-{% endif %}
 
 {% capture link_addr %}
 {% comment %}if it's got dev in the name, it's a dev branch{% endcomment %}
