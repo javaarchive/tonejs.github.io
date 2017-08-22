@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	{% assign jsdoc_version =  site.data.version | prepend: 'jsdocs-' %}
+	{% assign jsdoc_version =  page.version | prepend: 'jsdocs-' %}
 
 	{% assign jsdocs = site.data[jsdoc_version] %}
 
