@@ -12,32 +12,32 @@
 
 	{% assign class_name = page.title %}
 	{% if class_name != 'Tone' %}
-		{% assign class_name = {{class_name | prepend: 'Tone.' }} %}
+		{% assign class_name = class_name | prepend: 'Tone.'  %}
 	{% endif %}
 
-	{% assign constructor = jsdocs 
+	{% assign constructor = jsdocs
 			| where: "kind","class"
 			| where: "name",page.title
 			| first %}
 
-	{% assign members = jsdocs 
-			| where: "kind","member" 
-			| where: "memberof",class_name
-			| where: "scope","instance" 
-			| where_exp: "item","item.undocumented != true"
-			| sort: "name"
-			| sort: "inherits" %}
-
-	{% assign methods = jsdocs 
-			| where: "kind","function" 
+	{% assign members = jsdocs
+			| where: "kind","member"
 			| where: "memberof",class_name
 			| where: "scope","instance"
 			| where_exp: "item","item.undocumented != true"
 			| sort: "name"
 			| sort: "inherits" %}
 
-	{% assign static_members = jsdocs 
-			| where: "kind","member" 
+	{% assign methods = jsdocs
+			| where: "kind","function"
+			| where: "memberof",class_name
+			| where: "scope","instance"
+			| where_exp: "item","item.undocumented != true"
+			| sort: "name"
+			| sort: "inherits" %}
+
+	{% assign static_members = jsdocs
+			| where: "kind","member"
 			| where: "memberof",class_name
 			| where: "scope","static"
 			| where_exp: "item","item.undocumented != true"
@@ -45,16 +45,16 @@
 			| sort: "name"
 			| sort: "inherits" %}
 
-	{% assign static_methods = jsdocs 
-			| where: "kind","function" 
-			| where: "scope","static" 
+	{% assign static_methods = jsdocs
+			| where: "kind","function"
+			| where: "scope","static"
 			| where: "memberof",class_name
 			| where_exp: "item","item.undocumented != true"
 			| sort: "name"
 			| sort: "inherits" %}
 
-	{% assign types = jsdocs 
-			| where: "kind","typedef" 
+	{% assign types = jsdocs
+			| where: "kind","typedef"
 			| where: "memberof","Tone.Type"
 			| sort: "name" %}
 
@@ -70,14 +70,14 @@
 
 		{% comment %}CONSTRUCTOR{% endcomment %}
 
-		{% include constructor/constructor.html 
-			methods=methods 
-			static_methods=static_methods 
-			members=members 
-			types=types 
-			static_members=static_members 
-			jsdocs=jsdocs 
-			data=constructor 
+		{% include constructor/constructor.html
+			methods=methods
+			static_methods=static_methods
+			members=members
+			types=types
+			static_members=static_members
+			jsdocs=jsdocs
+			data=constructor
 			class_name=class_name %}
 
 		{% comment %}MEMBERS{% endcomment %}
@@ -135,6 +135,6 @@
 	{% include analytics.html  %}
 
 	<script src="//tonejs.github.io/build/{{page.version}}/Tone.min.js"></script>
-	
+
 </body>
 </html>

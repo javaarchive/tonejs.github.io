@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<title>{{page.title}}</title>
-	<link rel="icon" type="image/png" sizes="174x174" href="assets/images/favicon.png">
-	<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/docs.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/type_defs.css">
 
-	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+	{% include head.html %}
+
+	<link rel="stylesheet" type="text/css" href="/assets/css/type_defs.css">
 </head>
 <body>
 
@@ -16,8 +12,8 @@
 
 	{% assign jsdocs = site.data[jsdoc_version] %}
 
-	{% assign types = jsdocs 
-			| where: "kind","typedef" 
+	{% assign types = jsdocs
+			| where: "kind","typedef"
 			| where: "memberof","Tone.Type"
 			| sort: "name" %}
 
@@ -42,7 +38,7 @@
 	</div>
 	{% comment %}GENERATED TIME{% endcomment %}
 	<div id="generated">docs generated {{ site.time | date: "%h %d %Y" }}</div>
-	
+
 	{% include analytics.html  %}
 </body>
 </html>
