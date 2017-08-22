@@ -1,5 +1,5 @@
 ---
 title: Pattern
 layout: doc
-version: r11-dev
+version: dev
 ---
