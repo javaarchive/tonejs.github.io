@@ -43318,6 +43318,521 @@
 		"overrides": "Tone.Signal#dispose"
 	},
 	{
+		"comment": "/**\n\t * @class Tone.TransportTimelineSignal extends Tone.TimelineSignal, but adds the ability to synchronize the signal to the signal to the Tone.Transport\n\t * @extends {Tone.TimelineSignal}\n\t */",
+		"meta": {
+			"range": [
+				319,
+				1110
+			],
+			"filename": "TransportTimelineSignal.js",
+			"lineno": 7,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
+			"code": {
+				"id": "astnode100053275",
+				"name": "Tone.TransportTimelineSignal",
+				"type": "FunctionExpression",
+				"paramnames": []
+			},
+			"vars": {
+				"this.output": "Tone.TransportTimelineSignal#output",
+				"this._outputSig": "Tone.TransportTimelineSignal#_outputSig",
+				"this._lastVal": "Tone.TransportTimelineSignal#_lastVal",
+				"this._synced": "Tone.TransportTimelineSignal#_synced",
+				"this._bindAnchorValue": "Tone.TransportTimelineSignal#_bindAnchorValue",
+				"this._events.memory": "Tone.TransportTimelineSignal#_events.memory"
+			}
+		},
+		"kind": "class",
+		"classdesc": "Tone.TransportTimelineSignal extends Tone.TimelineSignal, but adds the ability to synchronize the signal to the signal to the Tone.Transport",
+		"augments": [
+			"Tone.TimelineSignal"
+		],
+		"name": "TransportTimelineSignal",
+		"longname": "Tone.TransportTimelineSignal",
+		"memberof": "Tone",
+		"scope": "static"
+	},
+	{
+		"comment": "/**\n\t *  Get the scheduled value at the given time. This will\n\t *  return the unconverted (raw) value.\n\t *  @param  {TransportTime}  time  The time in seconds.\n\t *  @return  {Number}  The scheduled value at the given time.\n\t */",
+		"meta": {
+			"range": [
+				2286,
+				2461
+			],
+			"filename": "TransportTimelineSignal.js",
+			"lineno": 79,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
+			"code": {
+				"id": "astnode100053471",
+				"name": "Tone.TransportTimelineSignal.prototype.getValueAtTime",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"time"
+				]
+			},
+			"vars": {
+				"time": "Tone.TransportTimelineSignal#getValueAtTime~time"
+			}
+		},
+		"description": "Get the scheduled value at the given time. This will\n return the unconverted (raw) value.",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"TransportTime"
+					]
+				},
+				"description": "The time in seconds.",
+				"name": "time"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Number"
+					]
+				},
+				"description": "The scheduled value at the given time."
+			}
+		],
+		"name": "getValueAtTime",
+		"longname": "Tone.TransportTimelineSignal#getValueAtTime",
+		"kind": "function",
+		"memberof": "Tone.TransportTimelineSignal",
+		"scope": "instance",
+		"overrides": "Tone.TimelineSignal#getValueAtTime"
+	},
+	{
+		"comment": "/**\n\t * Set the output of the signal at the given time\n\t * @param  {Number} value The value to change to at the given time\n\t * @param  {TransportTime} time  The time to change the signal\n\t * @return {Tone.TransportTimelineSignal}       this\n\t */",
+		"meta": {
+			"range": [
+				2712,
+				2909
+			],
+			"filename": "TransportTimelineSignal.js",
+			"lineno": 90,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
+			"code": {
+				"id": "astnode100053504",
+				"name": "Tone.TransportTimelineSignal.prototype.setValueAtTime",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"value",
+					"time"
+				]
+			},
+			"vars": {
+				"time": "Tone.TransportTimelineSignal#setValueAtTime~time"
+			}
+		},
+		"description": "Set the output of the signal at the given time",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"Number"
+					]
+				},
+				"description": "The value to change to at the given time",
+				"name": "value"
+			},
+			{
+				"type": {
+					"names": [
+						"TransportTime"
+					]
+				},
+				"description": "The time to change the signal",
+				"name": "time"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.TransportTimelineSignal"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "setValueAtTime",
+		"longname": "Tone.TransportTimelineSignal#setValueAtTime",
+		"kind": "function",
+		"memberof": "Tone.TransportTimelineSignal",
+		"scope": "instance",
+		"overrides": "Tone.TimelineSignal#setValueAtTime"
+	},
+	{
+		"comment": "/**\n\t * Linear ramp to the given value from the previous scheduled point to the given value\n\t * @param  {Number} value The value to change to at the given time\n\t * @param  {TransportTime} time  The time to change the signal\n\t * @return {Tone.TransportTimelineSignal}       this\n\t */",
+		"meta": {
+			"range": [
+				3197,
+				3412
+			],
+			"filename": "TransportTimelineSignal.js",
+			"lineno": 102,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
+			"code": {
+				"id": "astnode100053541",
+				"name": "Tone.TransportTimelineSignal.prototype.linearRampToValueAtTime",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"value",
+					"time"
+				]
+			},
+			"vars": {
+				"time": "Tone.TransportTimelineSignal#linearRampToValueAtTime~time"
+			}
+		},
+		"description": "Linear ramp to the given value from the previous scheduled point to the given value",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"Number"
+					]
+				},
+				"description": "The value to change to at the given time",
+				"name": "value"
+			},
+			{
+				"type": {
+					"names": [
+						"TransportTime"
+					]
+				},
+				"description": "The time to change the signal",
+				"name": "time"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.TransportTimelineSignal"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "linearRampToValueAtTime",
+		"longname": "Tone.TransportTimelineSignal#linearRampToValueAtTime",
+		"kind": "function",
+		"memberof": "Tone.TransportTimelineSignal",
+		"scope": "instance",
+		"overrides": "Tone.TimelineSignal#linearRampToValueAtTime"
+	},
+	{
+		"comment": "/**\n\t * Exponential ramp to the given value from the previous scheduled point to the given value\n\t * @param  {Number} value The value to change to at the given time\n\t * @param  {TransportTime} time  The time to change the signal\n\t * @return {Tone.TransportTimelineSignal}       this\n\t */",
+		"meta": {
+			"range": [
+				3705,
+				3930
+			],
+			"filename": "TransportTimelineSignal.js",
+			"lineno": 114,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
+			"code": {
+				"id": "astnode100053578",
+				"name": "Tone.TransportTimelineSignal.prototype.exponentialRampToValueAtTime",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"value",
+					"time"
+				]
+			},
+			"vars": {
+				"time": "Tone.TransportTimelineSignal#exponentialRampToValueAtTime~time"
+			}
+		},
+		"description": "Exponential ramp to the given value from the previous scheduled point to the given value",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"Number"
+					]
+				},
+				"description": "The value to change to at the given time",
+				"name": "value"
+			},
+			{
+				"type": {
+					"names": [
+						"TransportTime"
+					]
+				},
+				"description": "The time to change the signal",
+				"name": "time"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.TransportTimelineSignal"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "exponentialRampToValueAtTime",
+		"longname": "Tone.TransportTimelineSignal#exponentialRampToValueAtTime",
+		"kind": "function",
+		"memberof": "Tone.TransportTimelineSignal",
+		"scope": "instance",
+		"overrides": "Tone.TimelineSignal#exponentialRampToValueAtTime"
+	},
+	{
+		"comment": "/**\n\t *  Start exponentially approaching the target value at the given time with\n\t *  a rate having the given time constant.\n\t *  @param {number} value\n\t *  @param {TransportTime} startTime\n\t *  @param {number} timeConstant\n\t * @return {Tone.TransportTimelineSignal}       this\n\t */",
+		"meta": {
+			"range": [
+				4218,
+				4465
+			],
+			"filename": "TransportTimelineSignal.js",
+			"lineno": 128,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
+			"code": {
+				"id": "astnode100053615",
+				"name": "Tone.TransportTimelineSignal.prototype.setTargetAtTime",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"value",
+					"startTime",
+					"timeConstant"
+				]
+			},
+			"vars": {
+				"startTime": "Tone.TransportTimelineSignal#setTargetAtTime~startTime"
+			}
+		},
+		"description": "Start exponentially approaching the target value at the given time with\n a rate having the given time constant.",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"number"
+					]
+				},
+				"name": "value"
+			},
+			{
+				"type": {
+					"names": [
+						"TransportTime"
+					]
+				},
+				"name": "startTime"
+			},
+			{
+				"type": {
+					"names": [
+						"number"
+					]
+				},
+				"name": "timeConstant"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.TransportTimelineSignal"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "setTargetAtTime",
+		"longname": "Tone.TransportTimelineSignal#setTargetAtTime",
+		"kind": "function",
+		"memberof": "Tone.TransportTimelineSignal",
+		"scope": "instance",
+		"overrides": "Tone.TimelineSignal#setTargetAtTime"
+	},
+	{
+		"comment": "/**\n\t *  Cancels all scheduled parameter changes with times greater than or\n\t *  equal to startTime.\n\t *  @param  {TransportTime} startTime\n\t *  @returns {Tone.Param} this\n\t */",
+		"meta": {
+			"range": [
+				4647,
+				4864
+			],
+			"filename": "TransportTimelineSignal.js",
+			"lineno": 140,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
+			"code": {
+				"id": "astnode100053654",
+				"name": "Tone.TransportTimelineSignal.prototype.cancelScheduledValues",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"startTime"
+				]
+			},
+			"vars": {
+				"startTime": "Tone.TransportTimelineSignal#cancelScheduledValues~startTime"
+			}
+		},
+		"description": "Cancels all scheduled parameter changes with times greater than or\n equal to startTime.",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"TransportTime"
+					]
+				},
+				"name": "startTime"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.Param"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "cancelScheduledValues",
+		"longname": "Tone.TransportTimelineSignal#cancelScheduledValues",
+		"kind": "function",
+		"memberof": "Tone.TransportTimelineSignal",
+		"scope": "instance",
+		"overrides": "Tone.TimelineSignal#cancelScheduledValues"
+	},
+	{
+		"comment": "/**\n\t *  Set an array of arbitrary values starting at the given time for the given duration.\n\t *  @param {Float32Array} values\n\t *  @param {Time} startTime\n\t *  @param {Time} duration\n\t *  @param {NormalRange} [scaling=1] If the values in the curve should be scaled by some value\n\t *  @returns {Tone.TimelineSignal} this\n\t */",
+		"meta": {
+			"range": [
+				5195,
+				5501
+			],
+			"filename": "TransportTimelineSignal.js",
+			"lineno": 154,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
+			"code": {
+				"id": "astnode100053689",
+				"name": "Tone.TransportTimelineSignal.prototype.setValueCurveAtTime",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"values",
+					"startTime",
+					"duration",
+					"scaling"
+				]
+			},
+			"vars": {
+				"startTime": "Tone.TransportTimelineSignal#setValueCurveAtTime~startTime",
+				"duration": "Tone.TransportTimelineSignal#setValueCurveAtTime~duration"
+			}
+		},
+		"description": "Set an array of arbitrary values starting at the given time for the given duration.",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"Float32Array"
+					]
+				},
+				"name": "values"
+			},
+			{
+				"type": {
+					"names": [
+						"Time"
+					]
+				},
+				"name": "startTime"
+			},
+			{
+				"type": {
+					"names": [
+						"Time"
+					]
+				},
+				"name": "duration"
+			},
+			{
+				"type": {
+					"names": [
+						"NormalRange"
+					]
+				},
+				"optional": true,
+				"defaultvalue": 1,
+				"description": "If the values in the curve should be scaled by some value",
+				"name": "scaling"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.TimelineSignal"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "setValueCurveAtTime",
+		"longname": "Tone.TransportTimelineSignal#setValueCurveAtTime",
+		"kind": "function",
+		"memberof": "Tone.TransportTimelineSignal",
+		"scope": "instance",
+		"overrides": "Tone.TimelineSignal#setValueCurveAtTime"
+	},
+	{
+		"comment": "/**\n\t * Dispose and disconnect\n\t * @return {Tone.TransportTimelineSignal} this\n\t */",
+		"meta": {
+			"range": [
+				5590,
+				5888
+			],
+			"filename": "TransportTimelineSignal.js",
+			"lineno": 165,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
+			"code": {
+				"id": "astnode100053738",
+				"name": "Tone.TransportTimelineSignal.prototype.dispose",
+				"type": "FunctionExpression",
+				"paramnames": []
+			},
+			"vars": {
+				"this._outputSig": "Tone.TransportTimelineSignal#_outputSig"
+			}
+		},
+		"description": "Dispose and disconnect",
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.TransportTimelineSignal"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "dispose",
+		"longname": "Tone.TransportTimelineSignal#dispose",
+		"kind": "function",
+		"memberof": "Tone.TransportTimelineSignal",
+		"scope": "instance",
+		"overrides": "Tone.TimelineSignal#dispose"
+	},
+	{
 		"comment": "/**\n\t *  @class Wraps the native Web Audio API \n\t *         [WaveShaperNode](http://webaudio.github.io/web-audio-api/#the-waveshapernode-interface).\n\t *\n\t *  @extends {Tone.SignalBase}\n\t *  @constructor\n\t *  @param {function|Array|Number} mapping The function used to define the values. \n\t *                                    The mapping function should take two arguments: \n\t *                                    the first is the value at the current position \n\t *                                    and the second is the array position. \n\t *                                    If the argument is an array, that array will be\n\t *                                    set as the wave shaping function. The input\n\t *                                    signal is an AudioRange [-1, 1] value and the output\n\t *                                    signal can take on any numerical values. \n\t *                                    \n\t *  @param {Number} [bufferLen=1024] The length of the WaveShaperNode buffer.\n\t *  @example\n\t * var timesTwo = new Tone.WaveShaper(function(val){\n\t * \treturn val * 2;\n\t * }, 2048);\n\t *  @example\n\t * //a waveshaper can also be constructed with an array of values\n\t * var invert = new Tone.WaveShaper([1, -1]);\n\t */",
 		"meta": {
 			"range": [
@@ -43329,7 +43844,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
 			"code": {
-				"id": "astnode100053275",
+				"id": "astnode100053820",
 				"name": "Tone.WaveShaper",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -43395,7 +43910,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
 			"code": {
-				"id": "astnode100053391",
+				"id": "astnode100053936",
 				"name": "Tone.WaveShaper.prototype.setMap",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -43495,7 +44010,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
 			"code": {
-				"id": "astnode100053550",
+				"id": "astnode100054095",
 				"name": "Tone.WaveShaper.prototype.dispose",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -43534,7 +44049,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
 			"code": {
-				"id": "astnode100053610",
+				"id": "astnode100054155",
 				"name": "Tone.Zero",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -43567,7 +44082,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
 			"code": {
-				"id": "astnode100053667",
+				"id": "astnode100054212",
 				"name": "Tone.Zero.prototype.dispose",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -43605,7 +44120,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100053726",
+				"id": "astnode100054271",
 				"name": "Tone.AMOscillator",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -43678,7 +44193,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100053772",
+				"id": "astnode100054317",
 				"name": "this.frequency",
 				"type": "MemberExpression",
 				"value": "this._carrier.frequency",
@@ -43717,7 +44232,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100053782",
+				"id": "astnode100054327",
 				"name": "this.detune",
 				"type": "MemberExpression",
 				"value": "this._carrier.detune",
@@ -43756,7 +44271,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100053826",
+				"id": "astnode100054371",
 				"name": "this.harmonicity",
 				"type": "NewExpression",
 				"value": "",
@@ -43797,7 +44312,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100053943",
+				"id": "astnode100054488",
 				"name": "Tone.AMOscillator.defaults",
 				"type": "ObjectExpression",
 				"value": "{\"undefined\":1}",
@@ -43828,7 +44343,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100053950",
+				"id": "astnode100054495",
 				"name": "frequency",
 				"type": "Literal",
 				"value": 440
@@ -43853,7 +44368,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100053952",
+				"id": "astnode100054497",
 				"name": "detune",
 				"type": "Literal",
 				"value": 0
@@ -43878,7 +44393,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100053954",
+				"id": "astnode100054499",
 				"name": "phase",
 				"type": "Literal",
 				"value": 0
@@ -43903,7 +44418,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100053956",
+				"id": "astnode100054501",
 				"name": "modulationType",
 				"type": "Literal",
 				"value": "square"
@@ -43928,7 +44443,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100053958",
+				"id": "astnode100054503",
 				"name": "harmonicity",
 				"type": "Literal",
 				"value": 1
@@ -44043,7 +44558,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100054173",
+				"id": "astnode100054718",
 				"name": "Tone.AMOscillator.prototype.dispose",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -44088,7 +44603,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100054338",
+				"id": "astnode100054883",
 				"name": "Tone.BufferSource",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -44156,7 +44671,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100054367",
+				"id": "astnode100054912",
 				"name": "this.onended",
 				"type": "MemberExpression",
 				"value": "options.onended",
@@ -44187,7 +44702,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100054438",
+				"id": "astnode100054983",
 				"name": "this.playbackRate",
 				"type": "NewExpression",
 				"value": "",
@@ -44225,7 +44740,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100054457",
+				"id": "astnode100055002",
 				"name": "this.fadeIn",
 				"type": "MemberExpression",
 				"value": "options.fadeIn",
@@ -44256,7 +44771,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100054465",
+				"id": "astnode100055010",
 				"name": "this.fadeOut",
 				"type": "MemberExpression",
 				"value": "options.fadeOut",
@@ -44287,7 +44802,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100054531",
+				"id": "astnode100055076",
 				"name": "Tone.BufferSource.defaults",
 				"type": "ObjectExpression",
 				"value": "{\"undefined\":1}",
@@ -44318,7 +44833,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100054538",
+				"id": "astnode100055083",
 				"name": "onended",
 				"type": "MemberExpression",
 				"value": "Tone.noOp"
@@ -44343,7 +44858,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100054542",
+				"id": "astnode100055087",
 				"name": "onload",
 				"type": "MemberExpression",
 				"value": "Tone.noOp"
@@ -44368,7 +44883,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100054546",
+				"id": "astnode100055091",
 				"name": "loop",
 				"type": "Literal",
 				"value": false
@@ -44393,7 +44908,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100054548",
+				"id": "astnode100055093",
 				"name": "loopStart",
 				"type": "Literal",
 				"value": 0
@@ -44418,7 +44933,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100054550",
+				"id": "astnode100055095",
 				"name": "loopEnd",
 				"type": "Literal",
 				"value": 0
@@ -44443,7 +44958,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100054552",
+				"id": "astnode100055097",
 				"name": "fadeIn",
 				"type": "Literal",
 				"value": 0
@@ -44468,7 +44983,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100054554",
+				"id": "astnode100055099",
 				"name": "fadeOut",
 				"type": "Literal",
 				"value": 0
@@ -44493,7 +45008,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100054556",
+				"id": "astnode100055101",
 				"name": "playbackRate",
 				"type": "Literal",
 				"value": 1
@@ -44540,7 +45055,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100054614",
+				"id": "astnode100055159",
 				"name": "Tone.BufferSource.prototype.start",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -44650,7 +45165,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100054963",
+				"id": "astnode100055508",
 				"name": "Tone.BufferSource.prototype.stop",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -44801,7 +45316,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100055316",
+				"id": "astnode100055861",
 				"name": "Tone.BufferSource.prototype.dispose",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -44845,7 +45360,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100055429",
+				"id": "astnode100055974",
 				"name": "Tone.FatOscillator",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -44916,7 +45431,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100055460",
+				"id": "astnode100056005",
 				"name": "this.frequency",
 				"type": "NewExpression",
 				"value": "",
@@ -44954,7 +45469,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100055477",
+				"id": "astnode100056022",
 				"name": "this.detune",
 				"type": "NewExpression",
 				"value": "",
@@ -44992,7 +45507,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100055564",
+				"id": "astnode100056109",
 				"name": "Tone.FatOscillator.defaults",
 				"type": "ObjectExpression",
 				"value": "{\"undefined\":\"sawtooth\"}",
@@ -45023,7 +45538,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100055571",
+				"id": "astnode100056116",
 				"name": "frequency",
 				"type": "Literal",
 				"value": 440
@@ -45048,7 +45563,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100055573",
+				"id": "astnode100056118",
 				"name": "detune",
 				"type": "Literal",
 				"value": 0
@@ -45073,7 +45588,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100055575",
+				"id": "astnode100056120",
 				"name": "phase",
 				"type": "Literal",
 				"value": 0
@@ -45098,7 +45613,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100055577",
+				"id": "astnode100056122",
 				"name": "spread",
 				"type": "Literal",
 				"value": 20
@@ -45123,7 +45638,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100055579",
+				"id": "astnode100056124",
 				"name": "count",
 				"type": "Literal",
 				"value": 3
@@ -45148,7 +45663,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100055581",
+				"id": "astnode100056126",
 				"name": "type",
 				"type": "Literal",
 				"value": "sawtooth"
@@ -45281,7 +45796,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100056107",
+				"id": "astnode100056652",
 				"name": "Tone.FatOscillator.prototype.dispose",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -45324,7 +45839,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100056211",
+				"id": "astnode100056756",
 				"name": "Tone.FMOscillator",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -45398,7 +45913,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100056257",
+				"id": "astnode100056802",
 				"name": "this.frequency",
 				"type": "NewExpression",
 				"value": "",
@@ -45436,7 +45951,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100056274",
+				"id": "astnode100056819",
 				"name": "this.detune",
 				"type": "MemberExpression",
 				"value": "this._carrier.detune",
@@ -45474,7 +45989,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100056294",
+				"id": "astnode100056839",
 				"name": "this.modulationIndex",
 				"type": "NewExpression",
 				"value": "",
@@ -45512,7 +46027,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100056333",
+				"id": "astnode100056878",
 				"name": "this.harmonicity",
 				"type": "NewExpression",
 				"value": "",
@@ -45553,7 +46068,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100056482",
+				"id": "astnode100057027",
 				"name": "Tone.FMOscillator.defaults",
 				"type": "ObjectExpression",
 				"value": "{\"undefined\":1}",
@@ -45584,7 +46099,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100056489",
+				"id": "astnode100057034",
 				"name": "frequency",
 				"type": "Literal",
 				"value": 440
@@ -45609,7 +46124,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100056491",
+				"id": "astnode100057036",
 				"name": "detune",
 				"type": "Literal",
 				"value": 0
@@ -45634,7 +46149,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100056493",
+				"id": "astnode100057038",
 				"name": "phase",
 				"type": "Literal",
 				"value": 0
@@ -45659,7 +46174,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100056495",
+				"id": "astnode100057040",
 				"name": "modulationIndex",
 				"type": "Literal",
 				"value": 2
@@ -45684,7 +46199,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100056497",
+				"id": "astnode100057042",
 				"name": "modulationType",
 				"type": "Literal",
 				"value": "square"
@@ -45709,7 +46224,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100056499",
+				"id": "astnode100057044",
 				"name": "harmonicity",
 				"type": "Literal",
 				"value": 1
@@ -45821,7 +46336,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100056714",
+				"id": "astnode100057259",
 				"name": "Tone.FMOscillator.prototype.dispose",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -45866,7 +46381,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100056850",
+				"id": "astnode100057395",
 				"name": "Tone.GrainPlayer",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -45935,7 +46450,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100056880",
+				"id": "astnode100057425",
 				"name": "this.buffer",
 				"type": "NewExpression",
 				"value": "",
@@ -45966,7 +46481,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100056956",
+				"id": "astnode100057501",
 				"name": "this.detune",
 				"type": "MemberExpression",
 				"value": "options.detune",
@@ -45997,7 +46512,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100057046",
+				"id": "astnode100057591",
 				"name": "Tone.GrainPlayer.defaults",
 				"type": "ObjectExpression",
 				"value": "{\"undefined\":false}",
@@ -46028,7 +46543,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100057053",
+				"id": "astnode100057598",
 				"name": "onload",
 				"type": "MemberExpression",
 				"value": "Tone.noOp"
@@ -46053,7 +46568,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100057057",
+				"id": "astnode100057602",
 				"name": "overlap",
 				"type": "Literal",
 				"value": 0.1
@@ -46078,7 +46593,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100057059",
+				"id": "astnode100057604",
 				"name": "grainSize",
 				"type": "Literal",
 				"value": 0.2
@@ -46103,7 +46618,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100057061",
+				"id": "astnode100057606",
 				"name": "playbackRate",
 				"type": "Literal",
 				"value": 1
@@ -46128,7 +46643,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100057063",
+				"id": "astnode100057608",
 				"name": "detune",
 				"type": "Literal",
 				"value": 0
@@ -46153,7 +46668,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100057065",
+				"id": "astnode100057610",
 				"name": "loop",
 				"type": "Literal",
 				"value": false
@@ -46178,7 +46693,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100057067",
+				"id": "astnode100057612",
 				"name": "loopStart",
 				"type": "Literal",
 				"value": 0
@@ -46203,7 +46718,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100057069",
+				"id": "astnode100057614",
 				"name": "loopEnd",
 				"type": "Literal",
 				"value": 0
@@ -46228,7 +46743,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100057071",
+				"id": "astnode100057616",
 				"name": "reverse",
 				"type": "Literal",
 				"value": false
@@ -46314,7 +46829,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100057335",
+				"id": "astnode100057880",
 				"name": "Tone.GrainPlayer.prototype.seek",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -46502,7 +47017,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100057588",
+				"id": "astnode100058133",
 				"name": "Tone.GrainPlayer.prototype.dispose",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -46544,7 +47059,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100057678",
+				"id": "astnode100058223",
 				"name": "Tone.MultiPlayer",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -46609,7 +47124,7 @@
 			"columnno": 3,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100057755",
+				"id": "astnode100058300",
 				"name": "this.buffers",
 				"type": "MemberExpression",
 				"value": "options.urls",
@@ -46640,7 +47155,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100057785",
+				"id": "astnode100058330",
 				"name": "this.fadeIn",
 				"type": "MemberExpression",
 				"value": "options.fadeIn",
@@ -46671,7 +47186,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100057793",
+				"id": "astnode100058338",
 				"name": "this.fadeOut",
 				"type": "MemberExpression",
 				"value": "options.fadeOut",
@@ -46702,7 +47217,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100057812",
+				"id": "astnode100058357",
 				"name": "Tone.MultiPlayer.defaults",
 				"type": "ObjectExpression",
 				"value": "{\"undefined\":0}",
@@ -46733,7 +47248,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100057819",
+				"id": "astnode100058364",
 				"name": "onload",
 				"type": "MemberExpression",
 				"value": "Tone.noOp"
@@ -46758,7 +47273,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100057823",
+				"id": "astnode100058368",
 				"name": "fadeIn",
 				"type": "Literal",
 				"value": 0
@@ -46783,7 +47298,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100057825",
+				"id": "astnode100058370",
 				"name": "fadeOut",
 				"type": "Literal",
 				"value": 0
@@ -46808,7 +47323,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100057936",
+				"id": "astnode100058481",
 				"name": "Tone.MultiPlayer.prototype.start",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -46919,7 +47434,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100058027",
+				"id": "astnode100058572",
 				"name": "Tone.MultiPlayer.prototype.startLoop",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -47044,7 +47559,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100058137",
+				"id": "astnode100058682",
 				"name": "Tone.MultiPlayer.prototype.stop",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -47106,7 +47621,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100058196",
+				"id": "astnode100058741",
 				"name": "Tone.MultiPlayer.prototype.stopAll",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -47161,7 +47676,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100058255",
+				"id": "astnode100058800",
 				"name": "Tone.MultiPlayer.prototype.add",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -47266,7 +47781,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100058348",
+				"id": "astnode100058893",
 				"name": "Tone.MultiPlayer.prototype.dispose",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -47307,7 +47822,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100058436",
+				"id": "astnode100058981",
 				"name": "Tone.Noise",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -47355,7 +47870,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100058479",
+				"id": "astnode100059024",
 				"name": "this._playbackRate",
 				"type": "MemberExpression",
 				"value": "options.playbackRate",
@@ -47393,7 +47908,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100058498",
+				"id": "astnode100059043",
 				"name": "Tone.Noise.defaults",
 				"type": "ObjectExpression",
 				"value": "{\"undefined\":1}",
@@ -47424,7 +47939,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100058505",
+				"id": "astnode100059050",
 				"name": "type",
 				"type": "Literal",
 				"value": "white"
@@ -47449,7 +47964,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100058507",
+				"id": "astnode100059052",
 				"name": "playbackRate",
 				"type": "Literal",
 				"value": 1
@@ -47498,7 +48013,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100058745",
+				"id": "astnode100059290",
 				"name": "Tone.Noise.prototype.dispose",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -47538,7 +48053,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100059197",
+				"id": "astnode100059742",
 				"name": "Tone.OmniOscillator",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -47597,7 +48112,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100059227",
+				"id": "astnode100059772",
 				"name": "this.frequency",
 				"type": "NewExpression",
 				"value": "",
@@ -47635,7 +48150,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100059244",
+				"id": "astnode100059789",
 				"name": "this.detune",
 				"type": "NewExpression",
 				"value": "",
@@ -47673,7 +48188,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100059306",
+				"id": "astnode100059851",
 				"name": "Tone.OmniOscillator.defaults",
 				"type": "ObjectExpression",
 				"value": "{\"undefined\":0}",
@@ -47704,7 +48219,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100059313",
+				"id": "astnode100059858",
 				"name": "frequency",
 				"type": "Literal",
 				"value": 440
@@ -47729,7 +48244,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100059315",
+				"id": "astnode100059860",
 				"name": "detune",
 				"type": "Literal",
 				"value": 0
@@ -47754,7 +48269,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100059317",
+				"id": "astnode100059862",
 				"name": "type",
 				"type": "Literal",
 				"value": "sine"
@@ -47779,7 +48294,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100059319",
+				"id": "astnode100059864",
 				"name": "phase",
 				"type": "Literal",
 				"value": 0
@@ -47804,7 +48319,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100059325",
+				"id": "astnode100059870",
 				"name": "Pulse",
 				"type": "Literal",
 				"value": "PulseOscillator"
@@ -47834,7 +48349,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100059327",
+				"id": "astnode100059872",
 				"name": "PWM",
 				"type": "Literal",
 				"value": "PWMOscillator"
@@ -47864,7 +48379,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100059329",
+				"id": "astnode100059874",
 				"name": "Osc",
 				"type": "Literal",
 				"value": "Oscillator"
@@ -47894,7 +48409,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100059331",
+				"id": "astnode100059876",
 				"name": "FM",
 				"type": "Literal",
 				"value": "FMOscillator"
@@ -47924,7 +48439,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100059333",
+				"id": "astnode100059878",
 				"name": "AM",
 				"type": "Literal",
 				"value": "AMOscillator"
@@ -47954,7 +48469,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100059335",
+				"id": "astnode100059880",
 				"name": "Fat",
 				"type": "Literal",
 				"value": "FatOscillator"
@@ -48033,7 +48548,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100059614",
+				"id": "astnode100060159",
 				"name": "Tone.OmniOscillator.prototype.set",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -48304,7 +48819,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100060140",
+				"id": "astnode100060685",
 				"name": "Tone.OmniOscillator.prototype.dispose",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -48346,7 +48861,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100060313",
+				"id": "astnode100060858",
 				"name": "Tone.Oscillator",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -48411,7 +48926,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100060349",
+				"id": "astnode100060894",
 				"name": "this.frequency",
 				"type": "NewExpression",
 				"value": "",
@@ -48449,7 +48964,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100060366",
+				"id": "astnode100060911",
 				"name": "this.detune",
 				"type": "NewExpression",
 				"value": "",
@@ -48487,7 +49002,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100060452",
+				"id": "astnode100060997",
 				"name": "Tone.Oscillator.defaults",
 				"type": "ObjectExpression",
 				"value": "{\"undefined\":\"\"}",
@@ -48518,7 +49033,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100060459",
+				"id": "astnode100061004",
 				"name": "type",
 				"type": "Literal",
 				"value": "sine"
@@ -48543,7 +49058,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100060461",
+				"id": "astnode100061006",
 				"name": "frequency",
 				"type": "Literal",
 				"value": 440
@@ -48568,7 +49083,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100060463",
+				"id": "astnode100061008",
 				"name": "detune",
 				"type": "Literal",
 				"value": 0
@@ -48593,7 +49108,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100060465",
+				"id": "astnode100061010",
 				"name": "phase",
 				"type": "Literal",
 				"value": 0
@@ -48618,7 +49133,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100060467",
+				"id": "astnode100061012",
 				"name": "partials",
 				"type": "ArrayExpression",
 				"value": "[]"
@@ -48643,7 +49158,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100060470",
+				"id": "astnode100061015",
 				"name": "Tone.Oscillator.Type",
 				"type": "ObjectExpression",
 				"value": "{\"Sine\":\"sine\",\"Triangle\":\"triangle\",\"Sawtooth\":\"sawtooth\",\"Square\":\"square\",\"Custom\":\"custom\"}",
@@ -48675,7 +49190,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 					"code": {
-						"id": "astnode100060477",
+						"id": "astnode100061022",
 						"name": "Sine",
 						"type": "Literal",
 						"value": "sine"
@@ -48705,7 +49220,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 					"code": {
-						"id": "astnode100060479",
+						"id": "astnode100061024",
 						"name": "Triangle",
 						"type": "Literal",
 						"value": "triangle"
@@ -48735,7 +49250,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 					"code": {
-						"id": "astnode100060481",
+						"id": "astnode100061026",
 						"name": "Sawtooth",
 						"type": "Literal",
 						"value": "sawtooth"
@@ -48765,7 +49280,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 					"code": {
-						"id": "astnode100060483",
+						"id": "astnode100061028",
 						"name": "Square",
 						"type": "Literal",
 						"value": "square"
@@ -48795,7 +49310,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 					"code": {
-						"id": "astnode100060485",
+						"id": "astnode100061030",
 						"name": "Custom",
 						"type": "Literal",
 						"value": "custom"
@@ -48827,7 +49342,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100060477",
+				"id": "astnode100061022",
 				"name": "Sine",
 				"type": "Literal",
 				"value": "sine"
@@ -48857,7 +49372,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100060479",
+				"id": "astnode100061024",
 				"name": "Triangle",
 				"type": "Literal",
 				"value": "triangle"
@@ -48887,7 +49402,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100060481",
+				"id": "astnode100061026",
 				"name": "Sawtooth",
 				"type": "Literal",
 				"value": "sawtooth"
@@ -48917,7 +49432,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100060483",
+				"id": "astnode100061028",
 				"name": "Square",
 				"type": "Literal",
 				"value": "square"
@@ -48947,7 +49462,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100060485",
+				"id": "astnode100061030",
 				"name": "Custom",
 				"type": "Literal",
 				"value": "custom"
@@ -48977,7 +49492,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100060604",
+				"id": "astnode100061149",
 				"name": "Tone.Oscillator.prototype.syncFrequency",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -49015,7 +49530,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100060627",
+				"id": "astnode100061172",
 				"name": "Tone.Oscillator.prototype.unsyncFrequency",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -49123,7 +49638,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100061292",
+				"id": "astnode100061837",
 				"name": "Tone.Oscillator.prototype.dispose",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -49166,7 +49681,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100061402",
+				"id": "astnode100061947",
 				"name": "Tone.Player",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -49235,7 +49750,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100061465",
+				"id": "astnode100062010",
 				"name": "this.autostart",
 				"type": "MemberExpression",
 				"value": "options.autostart",
@@ -49269,7 +49784,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100061547",
+				"id": "astnode100062092",
 				"name": "this.retrigger",
 				"type": "MemberExpression",
 				"value": "options.retrigger",
@@ -49300,7 +49815,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100061555",
+				"id": "astnode100062100",
 				"name": "this.fadeIn",
 				"type": "MemberExpression",
 				"value": "options.fadeIn",
@@ -49332,7 +49847,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100061563",
+				"id": "astnode100062108",
 				"name": "this.fadeOut",
 				"type": "MemberExpression",
 				"value": "options.fadeOut",
@@ -49364,7 +49879,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100061582",
+				"id": "astnode100062127",
 				"name": "Tone.Player.defaults",
 				"type": "ObjectExpression",
 				"value": "{\"undefined\":0}",
@@ -49395,7 +49910,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100061589",
+				"id": "astnode100062134",
 				"name": "onload",
 				"type": "MemberExpression",
 				"value": "Tone.noOp"
@@ -49420,7 +49935,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100061593",
+				"id": "astnode100062138",
 				"name": "playbackRate",
 				"type": "Literal",
 				"value": 1
@@ -49445,7 +49960,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100061595",
+				"id": "astnode100062140",
 				"name": "loop",
 				"type": "Literal",
 				"value": false
@@ -49470,7 +49985,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100061597",
+				"id": "astnode100062142",
 				"name": "autostart",
 				"type": "Literal",
 				"value": false
@@ -49495,7 +50010,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100061599",
+				"id": "astnode100062144",
 				"name": "loopStart",
 				"type": "Literal",
 				"value": 0
@@ -49520,7 +50035,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100061601",
+				"id": "astnode100062146",
 				"name": "loopEnd",
 				"type": "Literal",
 				"value": 0
@@ -49545,7 +50060,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100061603",
+				"id": "astnode100062148",
 				"name": "retrigger",
 				"type": "Literal",
 				"value": false
@@ -49570,7 +50085,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100061605",
+				"id": "astnode100062150",
 				"name": "reverse",
 				"type": "Literal",
 				"value": false
@@ -49595,7 +50110,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100061607",
+				"id": "astnode100062152",
 				"name": "fadeIn",
 				"type": "Literal",
 				"value": 0
@@ -49620,7 +50135,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100061609",
+				"id": "astnode100062154",
 				"name": "fadeOut",
 				"type": "Literal",
 				"value": 0
@@ -49645,7 +50160,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100061612",
+				"id": "astnode100062157",
 				"name": "Tone.Player.prototype.load",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -49764,7 +50279,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100061890",
+				"id": "astnode100062435",
 				"name": "Tone.Player.prototype.seek",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -49830,7 +50345,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100061949",
+				"id": "astnode100062494",
 				"name": "Tone.Player.prototype.setLoopPoints",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -50043,7 +50558,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100062239",
+				"id": "astnode100062784",
 				"name": "Tone.Player.prototype.dispose",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -50083,7 +50598,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100062316",
+				"id": "astnode100062861",
 				"name": "Tone.Players",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -50149,7 +50664,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100062376",
+				"id": "astnode100062921",
 				"name": "this.volume",
 				"type": "MemberExpression",
 				"value": "this._volume.volume",
@@ -50190,7 +50705,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100062493",
+				"id": "astnode100063038",
 				"name": "Tone.Players.defaults",
 				"type": "ObjectExpression",
 				"value": "{\"undefined\":0}",
@@ -50221,7 +50736,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100062500",
+				"id": "astnode100063045",
 				"name": "volume",
 				"type": "Literal",
 				"value": 0
@@ -50246,7 +50761,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100062502",
+				"id": "astnode100063047",
 				"name": "mute",
 				"type": "Literal",
 				"value": false
@@ -50271,7 +50786,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100062504",
+				"id": "astnode100063049",
 				"name": "onload",
 				"type": "MemberExpression",
 				"value": "Tone.noOp"
@@ -50296,7 +50811,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100062508",
+				"id": "astnode100063053",
 				"name": "fadeIn",
 				"type": "Literal",
 				"value": 0
@@ -50321,7 +50836,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100062510",
+				"id": "astnode100063055",
 				"name": "fadeOut",
 				"type": "Literal",
 				"value": 0
@@ -50434,7 +50949,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100062716",
+				"id": "astnode100063261",
 				"name": "Tone.Players.prototype.has",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -50482,7 +50997,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100062736",
+				"id": "astnode100063281",
 				"name": "Tone.Players.prototype.get",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -50551,7 +51066,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100062836",
+				"id": "astnode100063381",
 				"name": "Tone.Players.prototype.add",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -50617,7 +51132,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100062895",
+				"id": "astnode100063440",
 				"name": "Tone.Players.prototype.stopAll",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -50668,7 +51183,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100062921",
+				"id": "astnode100063466",
 				"name": "Tone.Players.prototype.dispose",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -50711,7 +51226,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063017",
+				"id": "astnode100063562",
 				"name": "Tone.PulseOscillator",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -50774,7 +51289,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063047",
+				"id": "astnode100063592",
 				"name": "this.width",
 				"type": "NewExpression",
 				"value": "",
@@ -50812,7 +51327,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063097",
+				"id": "astnode100063642",
 				"name": "this.frequency",
 				"type": "MemberExpression",
 				"value": "this._sawtooth.frequency",
@@ -50850,7 +51365,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063107",
+				"id": "astnode100063652",
 				"name": "this.detune",
 				"type": "MemberExpression",
 				"value": "this._sawtooth.detune",
@@ -50888,7 +51403,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063186",
+				"id": "astnode100063731",
 				"name": "Tone.PulseOscillator.defaults",
 				"type": "ObjectExpression",
 				"value": "{\"undefined\":0.2}",
@@ -50919,7 +51434,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063193",
+				"id": "astnode100063738",
 				"name": "frequency",
 				"type": "Literal",
 				"value": 440
@@ -50944,7 +51459,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063195",
+				"id": "astnode100063740",
 				"name": "detune",
 				"type": "Literal",
 				"value": 0
@@ -50969,7 +51484,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063197",
+				"id": "astnode100063742",
 				"name": "phase",
 				"type": "Literal",
 				"value": 0
@@ -50994,7 +51509,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063199",
+				"id": "astnode100063744",
 				"name": "width",
 				"type": "Literal",
 				"value": 0.2
@@ -51062,7 +51577,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063347",
+				"id": "astnode100063892",
 				"name": "Tone.PulseOscillator.prototype.dispose",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -51106,7 +51621,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063465",
+				"id": "astnode100064010",
 				"name": "Tone.PWMOscillator",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -51167,7 +51682,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063549",
+				"id": "astnode100064094",
 				"name": "this.frequency",
 				"type": "MemberExpression",
 				"value": "this._modulator.frequency",
@@ -51205,7 +51720,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063559",
+				"id": "astnode100064104",
 				"name": "this.detune",
 				"type": "MemberExpression",
 				"value": "this._modulator.detune",
@@ -51243,7 +51758,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063569",
+				"id": "astnode100064114",
 				"name": "this.modulationFrequency",
 				"type": "MemberExpression",
 				"value": "this._pulse.frequency",
@@ -51281,7 +51796,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063624",
+				"id": "astnode100064169",
 				"name": "Tone.PWMOscillator.defaults",
 				"type": "ObjectExpression",
 				"value": "{\"undefined\":0.4}",
@@ -51312,7 +51827,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063631",
+				"id": "astnode100064176",
 				"name": "frequency",
 				"type": "Literal",
 				"value": 440
@@ -51337,7 +51852,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063633",
+				"id": "astnode100064178",
 				"name": "detune",
 				"type": "Literal",
 				"value": 0
@@ -51362,7 +51877,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063635",
+				"id": "astnode100064180",
 				"name": "phase",
 				"type": "Literal",
 				"value": 0
@@ -51387,7 +51902,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063637",
+				"id": "astnode100064182",
 				"name": "modulationFrequency",
 				"type": "Literal",
 				"value": 0.4
@@ -51455,7 +51970,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063779",
+				"id": "astnode100064324",
 				"name": "Tone.PWMOscillator.prototype.dispose",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -51499,7 +52014,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063893",
+				"id": "astnode100064438",
 				"name": "Tone.Source",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -51545,7 +52060,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063938",
+				"id": "astnode100064483",
 				"name": "this.volume",
 				"type": "MemberExpression",
 				"value": "this._volume.volume",
@@ -51586,7 +52101,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064031",
+				"id": "astnode100064576",
 				"name": "Tone.Source.defaults",
 				"type": "ObjectExpression",
 				"value": "{\"undefined\":false}",
@@ -51617,7 +52132,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064038",
+				"id": "astnode100064583",
 				"name": "volume",
 				"type": "Literal",
 				"value": 0
@@ -51642,7 +52157,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064040",
+				"id": "astnode100064585",
 				"name": "mute",
 				"type": "Literal",
 				"value": false
@@ -51713,7 +52228,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064164",
+				"id": "astnode100064709",
 				"name": "Tone.Source.prototype.start",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -51776,7 +52291,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064322",
+				"id": "astnode100064867",
 				"name": "Tone.Source.prototype.stop",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -51833,7 +52348,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064426",
+				"id": "astnode100064971",
 				"name": "Tone.Source.prototype.sync",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -51878,7 +52393,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064599",
+				"id": "astnode100065144",
 				"name": "Tone.Source.prototype.unsync",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -51919,7 +52434,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064690",
+				"id": "astnode100065235",
 				"name": "Tone.Source.prototype.dispose",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -51961,7 +52476,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064780",
+				"id": "astnode100065325",
 				"name": "Tone.UserMedia",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -52014,7 +52529,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064842",
+				"id": "astnode100065387",
 				"name": "this.volume",
 				"type": "MemberExpression",
 				"value": "this._volume.volume",
@@ -52055,7 +52570,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064877",
+				"id": "astnode100065422",
 				"name": "Tone.UserMedia.defaults",
 				"type": "ObjectExpression",
 				"value": "{\"undefined\":false}",
@@ -52086,7 +52601,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064884",
+				"id": "astnode100065429",
 				"name": "volume",
 				"type": "Literal",
 				"value": 0
@@ -52111,7 +52626,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064886",
+				"id": "astnode100065431",
 				"name": "mute",
 				"type": "Literal",
 				"value": false
@@ -52136,7 +52651,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064889",
+				"id": "astnode100065434",
 				"name": "Tone.UserMedia.prototype.open",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -52191,7 +52706,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100065054",
+				"id": "astnode100065599",
 				"name": "Tone.UserMedia.prototype.close",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -52232,7 +52747,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100065115",
+				"id": "astnode100065660",
 				"name": "Tone.UserMedia.enumerateDevices",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -52385,7 +52900,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100065298",
+				"id": "astnode100065843",
 				"name": "Tone.UserMedia.prototype.dispose",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -52447,7 +52962,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100065400",
+				"id": "astnode100065945",
 				"name": "Tone.Frequency",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -52503,7 +53018,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100065619",
+				"id": "astnode100066164",
 				"name": "Tone.Frequency.prototype.transpose",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -52557,7 +53072,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100065663",
+				"id": "astnode100066208",
 				"name": "Tone.Frequency.prototype.harmonize",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -52611,7 +53126,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100065732",
+				"id": "astnode100066277",
 				"name": "Tone.Frequency.prototype.toMidi",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -52648,7 +53163,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100065752",
+				"id": "astnode100066297",
 				"name": "Tone.Frequency.prototype.toNote",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -52692,7 +53207,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100065837",
+				"id": "astnode100066382",
 				"name": "Tone.Frequency.prototype.toSeconds",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -52727,7 +53242,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100065855",
+				"id": "astnode100066400",
 				"name": "Tone.Frequency.prototype.toFrequency",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -52762,7 +53277,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100065871",
+				"id": "astnode100066416",
 				"name": "Tone.Frequency.prototype.toTicks",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -52801,7 +53316,7 @@
 			"columnno": 5,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066010",
+				"id": "astnode100066555",
 				"name": "noteToScaleIndex",
 				"type": "ObjectExpression",
 				"value": "{\"undefined\":13}"
@@ -52832,7 +53347,7 @@
 			"columnno": 5,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066086",
+				"id": "astnode100066631",
 				"name": "scaleIndexToNote",
 				"type": "ArrayExpression",
 				"value": "[\"C\",\"C#\",\"D\",\"D#\",\"E\",\"F\",\"F#\",\"G\",\"G#\",\"A\",\"A#\",\"B\"]"
@@ -52863,7 +53378,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066102",
+				"id": "astnode100066647",
 				"name": "Tone.Frequency.A4",
 				"type": "Literal",
 				"value": 440,
@@ -52894,7 +53409,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066110",
+				"id": "astnode100066655",
 				"name": "Tone.Frequency.prototype.midiToFrequency",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -52945,7 +53460,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066139",
+				"id": "astnode100066684",
 				"name": "Tone.Frequency.prototype.frequencyToMidi",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -52995,7 +53510,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066190",
+				"id": "astnode100066735",
 				"name": "Tone.Time",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -53054,7 +53569,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066315",
+				"id": "astnode100066860",
 				"name": "Tone.Time.prototype.quantize",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -53123,7 +53638,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066402",
+				"id": "astnode100066947",
 				"name": "Tone.Time.prototype.addNow",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -53161,7 +53676,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066442",
+				"id": "astnode100066987",
 				"name": "Tone.Time.prototype.copy",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -53211,7 +53726,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066477",
+				"id": "astnode100067022",
 				"name": "Tone.Time.prototype.toNotation",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -53255,7 +53770,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066782",
+				"id": "astnode100067327",
 				"name": "Tone.Time.prototype.toBarsBeatsSixteenths",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -53296,7 +53811,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066883",
+				"id": "astnode100067428",
 				"name": "Tone.Time.prototype.toTicks",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -53335,7 +53850,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066923",
+				"id": "astnode100067468",
 				"name": "Tone.Time.prototype.toSamples",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -53369,7 +53884,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066945",
+				"id": "astnode100067490",
 				"name": "Tone.Time.prototype.toFrequency",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -53407,7 +53922,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066963",
+				"id": "astnode100067508",
 				"name": "Tone.Time.prototype.toSeconds",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -53442,7 +53957,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066979",
+				"id": "astnode100067524",
 				"name": "Tone.Time.prototype.toMilliseconds",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -53476,7 +53991,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066997",
+				"id": "astnode100067542",
 				"name": "Tone.Time.prototype.valueOf",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -53514,7 +54029,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100067041",
+				"id": "astnode100067586",
 				"name": "Tone.TimeBase",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -53574,7 +54089,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100067169",
+				"id": "astnode100067714",
 				"name": "Tone.TimeBase.prototype.set",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -53624,7 +54139,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100067193",
+				"id": "astnode100067738",
 				"name": "Tone.TimeBase.prototype.clone",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -53662,7 +54177,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100067219",
+				"id": "astnode100067764",
 				"name": "Tone.TimeBase.prototype.copy",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -53711,7 +54226,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068402",
+				"id": "astnode100068947",
 				"name": "Tone.TimeBase.prototype.add",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -53773,7 +54288,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068423",
+				"id": "astnode100068968",
 				"name": "Tone.TimeBase.prototype.sub",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -53835,7 +54350,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068444",
+				"id": "astnode100068989",
 				"name": "Tone.TimeBase.prototype.mult",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -53897,7 +54412,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068465",
+				"id": "astnode100069010",
 				"name": "Tone.TimeBase.prototype.div",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -53959,7 +54474,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068486",
+				"id": "astnode100069031",
 				"name": "Tone.TimeBase.prototype.valueOf",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -53993,7 +54508,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068502",
+				"id": "astnode100069047",
 				"name": "Tone.TimeBase.prototype.dispose",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -54031,7 +54546,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068534",
+				"id": "astnode100069079",
 				"name": "Tone.TransportTime",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -54083,7 +54598,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068686",
+				"id": "astnode100069231",
 				"name": "Tone.TransportTime.prototype.valueOf",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -54121,7 +54636,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068721",
+				"id": "astnode100069266",
 				"name": "Tone.TransportTime.prototype.toTicks",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -54156,7 +54671,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068737",
+				"id": "astnode100069282",
 				"name": "Tone.TransportTime.prototype.toSeconds",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -54194,7 +54709,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068768",
+				"id": "astnode100069313",
 				"name": "Tone.TransportTime.prototype.toFrequency",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -54229,7 +54744,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068804",
+				"id": "astnode100069349",
 				"name": "Tone.Type",
 				"type": "ObjectExpression",
 				"value": "{\"Default\":\"number\",\"Time\":\"time\",\"Frequency\":\"frequency\",\"TransportTime\":\"transportTime\",\"Ticks\":\"ticks\",\"NormalRange\":\"normalRange\",\"AudioRange\":\"audioRange\",\"Decibels\":\"db\",\"Interval\":\"interval\",\"BPM\":\"bpm\",\"Positive\":\"positive\",\"Gain\":\"gain\",\"Cents\":\"cents\",\"Degrees\":\"degrees\",\"MIDI\":\"midi\",\"BarsBeatsSixteenths\":\"barsBeatsSixteenths\",\"Samples\":\"samples\",\"Hertz\":\"hertz\",\"Note\":\"note\",\"Milliseconds\":\"milliseconds\",\"Seconds\":\"seconds\",\"Notation\":\"notation\"}",
@@ -54261,7 +54776,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 					"code": {
-						"id": "astnode100068809",
+						"id": "astnode100069354",
 						"name": "Default",
 						"type": "Literal",
 						"value": "number"
@@ -54292,7 +54807,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 					"code": {
-						"id": "astnode100068811",
+						"id": "astnode100069356",
 						"name": "Time",
 						"type": "Literal",
 						"value": "time"
@@ -54323,7 +54838,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 					"code": {
-						"id": "astnode100068813",
+						"id": "astnode100069358",
 						"name": "Frequency",
 						"type": "Literal",
 						"value": "frequency"
@@ -54354,7 +54869,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 					"code": {
-						"id": "astnode100068815",
+						"id": "astnode100069360",
 						"name": "TransportTime",
 						"type": "Literal",
 						"value": "transportTime"
@@ -54385,7 +54900,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 					"code": {
-						"id": "astnode100068817",
+						"id": "astnode100069362",
 						"name": "Ticks",
 						"type": "Literal",
 						"value": "ticks"
@@ -54416,7 +54931,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 					"code": {
-						"id": "astnode100068819",
+						"id": "astnode100069364",
 						"name": "NormalRange",
 						"type": "Literal",
 						"value": "normalRange"
@@ -54447,7 +54962,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 					"code": {
-						"id": "astnode100068821",
+						"id": "astnode100069366",
 						"name": "AudioRange",
 						"type": "Literal",
 						"value": "audioRange"
@@ -54478,7 +54993,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 					"code": {
-						"id": "astnode100068823",
+						"id": "astnode100069368",
 						"name": "Decibels",
 						"type": "Literal",
 						"value": "db"
@@ -54509,7 +55024,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 					"code": {
-						"id": "astnode100068825",
+						"id": "astnode100069370",
 						"name": "Interval",
 						"type": "Literal",
 						"value": "interval"
@@ -54540,7 +55055,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 					"code": {
-						"id": "astnode100068827",
+						"id": "astnode100069372",
 						"name": "BPM",
 						"type": "Literal",
 						"value": "bpm"
@@ -54571,7 +55086,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 					"code": {
-						"id": "astnode100068829",
+						"id": "astnode100069374",
 						"name": "Positive",
 						"type": "Literal",
 						"value": "positive"
@@ -54602,7 +55117,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 					"code": {
-						"id": "astnode100068831",
+						"id": "astnode100069376",
 						"name": "Gain",
 						"type": "Literal",
 						"value": "gain"
@@ -54633,7 +55148,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 					"code": {
-						"id": "astnode100068833",
+						"id": "astnode100069378",
 						"name": "Cents",
 						"type": "Literal",
 						"value": "cents"
@@ -54664,7 +55179,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 					"code": {
-						"id": "astnode100068835",
+						"id": "astnode100069380",
 						"name": "Degrees",
 						"type": "Literal",
 						"value": "degrees"
@@ -54695,7 +55210,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 					"code": {
-						"id": "astnode100068837",
+						"id": "astnode100069382",
 						"name": "MIDI",
 						"type": "Literal",
 						"value": "midi"
@@ -54726,7 +55241,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 					"code": {
-						"id": "astnode100068839",
+						"id": "astnode100069384",
 						"name": "BarsBeatsSixteenths",
 						"type": "Literal",
 						"value": "barsBeatsSixteenths"
@@ -54757,7 +55272,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 					"code": {
-						"id": "astnode100068841",
+						"id": "astnode100069386",
 						"name": "Samples",
 						"type": "Literal",
 						"value": "samples"
@@ -54788,7 +55303,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 					"code": {
-						"id": "astnode100068843",
+						"id": "astnode100069388",
 						"name": "Hertz",
 						"type": "Literal",
 						"value": "hertz"
@@ -54819,7 +55334,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 					"code": {
-						"id": "astnode100068845",
+						"id": "astnode100069390",
 						"name": "Note",
 						"type": "Literal",
 						"value": "note"
@@ -54850,7 +55365,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 					"code": {
-						"id": "astnode100068847",
+						"id": "astnode100069392",
 						"name": "Milliseconds",
 						"type": "Literal",
 						"value": "milliseconds"
@@ -54881,7 +55396,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 					"code": {
-						"id": "astnode100068849",
+						"id": "astnode100069394",
 						"name": "Seconds",
 						"type": "Literal",
 						"value": "seconds"
@@ -54912,7 +55427,7 @@
 					"columnno": 2,
 					"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 					"code": {
-						"id": "astnode100068851",
+						"id": "astnode100069396",
 						"name": "Notation",
 						"type": "Literal",
 						"value": "notation"
@@ -54945,7 +55460,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068809",
+				"id": "astnode100069354",
 				"name": "Default",
 				"type": "Literal",
 				"value": "number"
@@ -54976,7 +55491,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068811",
+				"id": "astnode100069356",
 				"name": "Time",
 				"type": "Literal",
 				"value": "time"
@@ -55007,7 +55522,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068813",
+				"id": "astnode100069358",
 				"name": "Frequency",
 				"type": "Literal",
 				"value": "frequency"
@@ -55038,7 +55553,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068815",
+				"id": "astnode100069360",
 				"name": "TransportTime",
 				"type": "Literal",
 				"value": "transportTime"
@@ -55069,7 +55584,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068817",
+				"id": "astnode100069362",
 				"name": "Ticks",
 				"type": "Literal",
 				"value": "ticks"
@@ -55100,7 +55615,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068819",
+				"id": "astnode100069364",
 				"name": "NormalRange",
 				"type": "Literal",
 				"value": "normalRange"
@@ -55131,7 +55646,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068821",
+				"id": "astnode100069366",
 				"name": "AudioRange",
 				"type": "Literal",
 				"value": "audioRange"
@@ -55162,7 +55677,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068823",
+				"id": "astnode100069368",
 				"name": "Decibels",
 				"type": "Literal",
 				"value": "db"
@@ -55193,7 +55708,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068825",
+				"id": "astnode100069370",
 				"name": "Interval",
 				"type": "Literal",
 				"value": "interval"
@@ -55224,7 +55739,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068827",
+				"id": "astnode100069372",
 				"name": "BPM",
 				"type": "Literal",
 				"value": "bpm"
@@ -55255,7 +55770,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068829",
+				"id": "astnode100069374",
 				"name": "Positive",
 				"type": "Literal",
 				"value": "positive"
@@ -55286,7 +55801,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068831",
+				"id": "astnode100069376",
 				"name": "Gain",
 				"type": "Literal",
 				"value": "gain"
@@ -55317,7 +55832,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068833",
+				"id": "astnode100069378",
 				"name": "Cents",
 				"type": "Literal",
 				"value": "cents"
@@ -55348,7 +55863,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068835",
+				"id": "astnode100069380",
 				"name": "Degrees",
 				"type": "Literal",
 				"value": "degrees"
@@ -55379,7 +55894,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068837",
+				"id": "astnode100069382",
 				"name": "MIDI",
 				"type": "Literal",
 				"value": "midi"
@@ -55410,7 +55925,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068839",
+				"id": "astnode100069384",
 				"name": "BarsBeatsSixteenths",
 				"type": "Literal",
 				"value": "barsBeatsSixteenths"
@@ -55441,7 +55956,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068841",
+				"id": "astnode100069386",
 				"name": "Samples",
 				"type": "Literal",
 				"value": "samples"
@@ -55472,7 +55987,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068843",
+				"id": "astnode100069388",
 				"name": "Hertz",
 				"type": "Literal",
 				"value": "hertz"
@@ -55503,7 +56018,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068845",
+				"id": "astnode100069390",
 				"name": "Note",
 				"type": "Literal",
 				"value": "note"
@@ -55534,7 +56049,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068847",
+				"id": "astnode100069392",
 				"name": "Milliseconds",
 				"type": "Literal",
 				"value": "milliseconds"
@@ -55565,7 +56080,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068849",
+				"id": "astnode100069394",
 				"name": "Seconds",
 				"type": "Literal",
 				"value": "seconds"
@@ -55596,7 +56111,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068851",
+				"id": "astnode100069396",
 				"name": "Notation",
 				"type": "Literal",
 				"value": "notation"
@@ -55627,7 +56142,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068854",
+				"id": "astnode100069399",
 				"name": "Tone.prototype.toSeconds",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -55673,7 +56188,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068913",
+				"id": "astnode100069458",
 				"name": "Tone.prototype.toFrequency",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -55720,7 +56235,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068966",
+				"id": "astnode100069511",
 				"name": "Tone.prototype.toTicks",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -55873,6 +56388,7 @@
 			"/home/travis/build/Tonejs/Tone.js/Tone/signal/Subtract.js",
 			"/home/travis/build/Tonejs/Tone.js/Tone/signal/TickSignal.js",
 			"/home/travis/build/Tonejs/Tone.js/Tone/signal/TimelineSignal.js",
+			"/home/travis/build/Tonejs/Tone.js/Tone/signal/TransportTimelineSignal.js",
 			"/home/travis/build/Tonejs/Tone.js/Tone/signal/WaveShaper.js",
 			"/home/travis/build/Tonejs/Tone.js/Tone/signal/Zero.js",
 			"/home/travis/build/Tonejs/Tone.js/Tone/source/AMOscillator.js",
@@ -74776,6 +75292,622 @@
 		"inherited": true
 	},
 	{
+		"comment": "/**\n\t * The current value of the signal. \n\t * @memberOf Tone.TimelineSignal#\n\t * @type {Number}\n\t * @name value\n\t */",
+		"meta": {
+			"filename": "TimelineSignal.js",
+			"lineno": 50,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
+			"code": {}
+		},
+		"description": "The current value of the signal.",
+		"memberof": "Tone.TransportTimelineSignal",
+		"type": {
+			"names": [
+				"Number"
+			]
+		},
+		"name": "value",
+		"longname": "Tone.TransportTimelineSignal#value",
+		"scope": "instance",
+		"kind": "member",
+		"inherits": "Tone.TimelineSignal#value",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Sets the computed value at the given time. This provides\n\t *  a point from which a linear or exponential curve\n\t *  can be scheduled after. Will cancel events after \n\t *  the given time and shorten the currently scheduled\n\t *  linear or exponential ramp so that it ends at `time` .\n\t *  This is to avoid discontinuities and clicks in envelopes. \n\t *  @param {Time} time When to set the ramp point\n\t *  @returns {Tone.TimelineSignal} this\n\t */",
+		"meta": {
+			"range": [
+				6802,
+				7707
+			],
+			"filename": "TimelineSignal.js",
+			"lineno": 218,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
+			"code": {
+				"id": "astnode100052672",
+				"name": "Tone.TimelineSignal.prototype.setRampPoint",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"time"
+				]
+			},
+			"vars": {
+				"time": "Tone.TimelineSignal#setRampPoint~time",
+				"val": "Tone.TimelineSignal#setRampPoint~val",
+				"before": "Tone.TimelineSignal#setRampPoint~before",
+				"after": "Tone.TimelineSignal#setRampPoint~after"
+			}
+		},
+		"description": "Sets the computed value at the given time. This provides\n a point from which a linear or exponential curve\n can be scheduled after. Will cancel events after \n the given time and shorten the currently scheduled\n linear or exponential ramp so that it ends at `time` .\n This is to avoid discontinuities and clicks in envelopes.",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"Time"
+					]
+				},
+				"description": "When to set the ramp point",
+				"name": "time"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.TimelineSignal"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "setRampPoint",
+		"longname": "Tone.TransportTimelineSignal#setRampPoint",
+		"kind": "function",
+		"memberof": "Tone.TransportTimelineSignal",
+		"scope": "instance",
+		"inherits": "Tone.TimelineSignal#setRampPoint",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Do a linear ramp to the given value between the start and finish times.\n\t *  @param {Number} value The value to ramp to.\n\t *  @param {Time} start The beginning anchor point to do the linear ramp\n\t *  @param {Time} finish The ending anchor point by which the value of\n\t *                       the signal will equal the given value.\n\t *  @returns {Tone.TimelineSignal} this\n\t */",
+		"meta": {
+			"range": [
+				8099,
+				8282
+			],
+			"filename": "TimelineSignal.js",
+			"lineno": 253,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
+			"code": {
+				"id": "astnode100052798",
+				"name": "Tone.TimelineSignal.prototype.linearRampToValueBetween",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"value",
+					"start",
+					"finish"
+				]
+			}
+		},
+		"description": "Do a linear ramp to the given value between the start and finish times.",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"Number"
+					]
+				},
+				"description": "The value to ramp to.",
+				"name": "value"
+			},
+			{
+				"type": {
+					"names": [
+						"Time"
+					]
+				},
+				"description": "The beginning anchor point to do the linear ramp",
+				"name": "start"
+			},
+			{
+				"type": {
+					"names": [
+						"Time"
+					]
+				},
+				"description": "The ending anchor point by which the value of\n                      the signal will equal the given value.",
+				"name": "finish"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.TimelineSignal"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "linearRampToValueBetween",
+		"longname": "Tone.TransportTimelineSignal#linearRampToValueBetween",
+		"kind": "function",
+		"memberof": "Tone.TransportTimelineSignal",
+		"scope": "instance",
+		"inherits": "Tone.TimelineSignal#linearRampToValueBetween",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Do a exponential ramp to the given value between the start and finish times.\n\t *  @param {Number} value The value to ramp to.\n\t *  @param {Time} start The beginning anchor point to do the exponential ramp\n\t *  @param {Time} finish The ending anchor point by which the value of\n\t *                       the signal will equal the given value.\n\t *  @returns {Tone.TimelineSignal} this\n\t */",
+		"meta": {
+			"range": [
+				8684,
+				8877
+			],
+			"filename": "TimelineSignal.js",
+			"lineno": 267,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
+			"code": {
+				"id": "astnode100052827",
+				"name": "Tone.TimelineSignal.prototype.exponentialRampToValueBetween",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"value",
+					"start",
+					"finish"
+				]
+			}
+		},
+		"description": "Do a exponential ramp to the given value between the start and finish times.",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"Number"
+					]
+				},
+				"description": "The value to ramp to.",
+				"name": "value"
+			},
+			{
+				"type": {
+					"names": [
+						"Time"
+					]
+				},
+				"description": "The beginning anchor point to do the exponential ramp",
+				"name": "start"
+			},
+			{
+				"type": {
+					"names": [
+						"Time"
+					]
+				},
+				"description": "The ending anchor point by which the value of\n                      the signal will equal the given value.",
+				"name": "finish"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.TimelineSignal"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "exponentialRampToValueBetween",
+		"longname": "Tone.TransportTimelineSignal#exponentialRampToValueBetween",
+		"kind": "function",
+		"memberof": "Tone.TransportTimelineSignal",
+		"scope": "instance",
+		"inherits": "Tone.TimelineSignal#exponentialRampToValueBetween",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  When signals connect to other signals or AudioParams, \n\t *  they take over the output value of that signal or AudioParam. \n\t *  For all other nodes, the behavior is the same as a default <code>connect</code>. \n\t *\n\t *  @override\n\t *  @param {AudioParam|AudioNode|Tone.Signal|Tone} node \n\t *  @param {number} [outputNumber=0] The output number to connect from.\n\t *  @param {number} [inputNumber=0] The input number to connect to.\n\t *  @returns {Tone.SignalBase} this\n\t *  @method\n\t */",
+		"meta": {
+			"range": [
+				2369,
+				2434
+			],
+			"filename": "Signal.js",
+			"lineno": 73,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
+			"code": {
+				"id": "astnode100050953",
+				"name": "Tone.Signal.prototype.connect",
+				"type": "MemberExpression",
+				"value": "Tone.SignalBase.prototype.connect",
+				"paramnames": []
+			}
+		},
+		"description": "When signals connect to other signals or AudioParams, \n they take over the output value of that signal or AudioParam. \n For all other nodes, the behavior is the same as a default <code>connect</code>.",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"AudioParam",
+						"AudioNode",
+						"Tone.Signal",
+						"Tone"
+					]
+				},
+				"name": "node"
+			},
+			{
+				"type": {
+					"names": [
+						"number"
+					]
+				},
+				"optional": true,
+				"defaultvalue": 0,
+				"description": "The output number to connect from.",
+				"name": "outputNumber"
+			},
+			{
+				"type": {
+					"names": [
+						"number"
+					]
+				},
+				"optional": true,
+				"defaultvalue": 0,
+				"description": "The input number to connect to.",
+				"name": "inputNumber"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.SignalBase"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"kind": "function",
+		"name": "connect",
+		"longname": "Tone.TransportTimelineSignal#connect",
+		"memberof": "Tone.TransportTimelineSignal",
+		"scope": "instance",
+		"inherits": "Tone.Signal#connect",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t\t *  The units of the parameter\n\t\t *  @type {Tone.Type}\n\t\t */",
+		"meta": {
+			"range": [
+				880,
+				906
+			],
+			"filename": "Param.js",
+			"lineno": 31,
+			"columnno": 2,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100022628",
+				"name": "this.units",
+				"type": "MemberExpression",
+				"value": "options.units",
+				"paramnames": []
+			}
+		},
+		"description": "The units of the parameter",
+		"type": {
+			"names": [
+				"Tone.Type"
+			]
+		},
+		"name": "units",
+		"longname": "Tone.TransportTimelineSignal#units",
+		"kind": "member",
+		"memberof": "Tone.TransportTimelineSignal",
+		"scope": "instance",
+		"inherits": "Tone.Param#units",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t\t *  If the value should be converted or not\n\t\t *  @type {Boolean}\n\t\t */",
+		"meta": {
+			"range": [
+				991,
+				1021
+			],
+			"filename": "Param.js",
+			"lineno": 37,
+			"columnno": 2,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100022636",
+				"name": "this.convert",
+				"type": "MemberExpression",
+				"value": "options.convert",
+				"paramnames": []
+			}
+		},
+		"description": "If the value should be converted or not",
+		"type": {
+			"names": [
+				"Boolean"
+			]
+		},
+		"name": "convert",
+		"longname": "Tone.TransportTimelineSignal#convert",
+		"kind": "member",
+		"memberof": "Tone.TransportTimelineSignal",
+		"scope": "instance",
+		"inherits": "Tone.Param#convert",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Schedules an exponential continuous change in parameter value from\n\t *  the current time and current value to the given value over the\n\t *  duration of the rampTime.\n\t *\n\t *  @param  {number} value   The value to ramp to.\n\t *  @param  {Time} rampTime the time that it takes the\n\t *                               value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //exponentially ramp to the value 2 over 4 seconds.\n\t * signal.exponentialRampToValue(2, 4);\n\t */",
+		"meta": {
+			"range": [
+				6516,
+				6772
+			],
+			"filename": "Param.js",
+			"lineno": 238,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100023176",
+				"name": "Tone.Param.prototype.exponentialRampToValue",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"value",
+					"rampTime",
+					"startTime"
+				]
+			},
+			"vars": {
+				"startTime": "Tone.Param#exponentialRampToValue~startTime"
+			}
+		},
+		"description": "Schedules an exponential continuous change in parameter value from\n the current time and current value to the given value over the\n duration of the rampTime.",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"number"
+					]
+				},
+				"description": "The value to ramp to.",
+				"name": "value"
+			},
+			{
+				"type": {
+					"names": [
+						"Time"
+					]
+				},
+				"description": "the time that it takes the\n                              value to ramp from it's current value",
+				"name": "rampTime"
+			},
+			{
+				"type": {
+					"names": [
+						"Time"
+					]
+				},
+				"optional": true,
+				"defaultvalue": "now",
+				"description": "When the ramp should start.",
+				"name": "startTime"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.Param"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"examples": [
+			"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampToValue(2, 4);"
+		],
+		"name": "exponentialRampToValue",
+		"longname": "Tone.TransportTimelineSignal#exponentialRampToValue",
+		"kind": "function",
+		"memberof": "Tone.TransportTimelineSignal",
+		"scope": "instance",
+		"inherits": "Tone.Param#exponentialRampToValue",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Schedules an linear continuous change in parameter value from\n\t *  the current time and current value to the given value over the\n\t *  duration of the rampTime.\n\t *\n\t *  @param  {number} value   The value to ramp to.\n\t *  @param  {Time} rampTime the time that it takes the\n\t *                               value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //linearly ramp to the value 4 over 3 seconds.\n\t * signal.linearRampToValue(4, 3);\n\t */",
+		"meta": {
+			"range": [
+				7333,
+				7579
+			],
+			"filename": "Param.js",
+			"lineno": 259,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100023219",
+				"name": "Tone.Param.prototype.linearRampToValue",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"value",
+					"rampTime",
+					"startTime"
+				]
+			},
+			"vars": {
+				"startTime": "Tone.Param#linearRampToValue~startTime"
+			}
+		},
+		"description": "Schedules an linear continuous change in parameter value from\n the current time and current value to the given value over the\n duration of the rampTime.",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"number"
+					]
+				},
+				"description": "The value to ramp to.",
+				"name": "value"
+			},
+			{
+				"type": {
+					"names": [
+						"Time"
+					]
+				},
+				"description": "the time that it takes the\n                              value to ramp from it's current value",
+				"name": "rampTime"
+			},
+			{
+				"type": {
+					"names": [
+						"Time"
+					]
+				},
+				"optional": true,
+				"defaultvalue": "now",
+				"description": "When the ramp should start.",
+				"name": "startTime"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.Param"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"examples": [
+			"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampToValue(4, 3);"
+		],
+		"name": "linearRampToValue",
+		"longname": "Tone.TransportTimelineSignal#linearRampToValue",
+		"kind": "function",
+		"memberof": "Tone.TransportTimelineSignal",
+		"scope": "instance",
+		"inherits": "Tone.Param#linearRampToValue",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Ramps to the given value over the duration of the rampTime.\n\t *  Automatically selects the best ramp type (exponential or linear)\n\t *  depending on the `units` of the signal\n\t *\n\t *  @param  {number} value\n\t *  @param  {Time} rampTime \tThe time that it takes the\n\t *                              value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //ramp to the value either linearly or exponentially\n\t * //depending on the \"units\" value of the signal\n\t * signal.rampTo(0, 10);\n\t *  @example\n\t * //schedule it to ramp starting at a specific time\n\t * signal.rampTo(0, 10, 5)\n\t */",
+		"meta": {
+			"range": [
+				10014,
+				10384
+			],
+			"filename": "Param.js",
+			"lineno": 335,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100023431",
+				"name": "Tone.Param.prototype.rampTo",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"value",
+					"rampTime",
+					"startTime"
+				]
+			},
+			"vars": {
+				"rampTime": "Tone.Param#rampTo~rampTime"
+			}
+		},
+		"description": "Ramps to the given value over the duration of the rampTime.\n Automatically selects the best ramp type (exponential or linear)\n depending on the `units` of the signal",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"number"
+					]
+				},
+				"name": "value"
+			},
+			{
+				"type": {
+					"names": [
+						"Time"
+					]
+				},
+				"description": "The time that it takes the\n                             value to ramp from it's current value",
+				"name": "rampTime"
+			},
+			{
+				"type": {
+					"names": [
+						"Time"
+					]
+				},
+				"optional": true,
+				"defaultvalue": "now",
+				"description": "When the ramp should start.",
+				"name": "startTime"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.Param"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"examples": [
+			"//ramp to the value either linearly or exponentially\n//depending on the \"units\" value of the signal\nsignal.rampTo(0, 10);\n ",
+			"//schedule it to ramp starting at a specific time\nsignal.rampTo(0, 10, 5)"
+		],
+		"name": "rampTo",
+		"longname": "Tone.TransportTimelineSignal#rampTo",
+		"kind": "function",
+		"memberof": "Tone.TransportTimelineSignal",
+		"scope": "instance",
+		"inherits": "Tone.Param#rampTo",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  The LFO created by the signal instance. If none\n\t *  was created, this is null.\n\t *  @type {Tone.LFO}\n\t *  @readOnly\n\t *  @memberOf Tone.Param#\n\t *  @name lfo\n\t */",
+		"meta": {
+			"filename": "Param.js",
+			"lineno": 345,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {}
+		},
+		"description": "The LFO created by the signal instance. If none\n was created, this is null.",
+		"type": {
+			"names": [
+				"Tone.LFO"
+			]
+		},
+		"readonly": true,
+		"memberof": "Tone.TransportTimelineSignal",
+		"name": "lfo",
+		"longname": "Tone.TransportTimelineSignal#lfo",
+		"scope": "instance",
+		"kind": "member",
+		"inherits": "Tone.Param#lfo",
+		"inherited": true
+	},
+	{
 		"comment": "/**\n\t *  When signals connect to other signals or AudioParams,\n\t *  they take over the output value of that signal or AudioParam.\n\t *  For all other nodes, the behavior is the same as a default <code>connect</code>.\n\t *\n\t *  @override\n\t *  @param {AudioParam|AudioNode|Tone.Signal|Tone} node\n\t *  @param {number} [outputNumber=0] The output number to connect from.\n\t *  @param {number} [inputNumber=0] The input number to connect to.\n\t *  @returns {Tone.SignalBase} this\n\t */",
 		"meta": {
 			"range": [
@@ -75088,7 +76220,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063938",
+				"id": "astnode100064483",
 				"name": "this.volume",
 				"type": "MemberExpression",
 				"value": "this._volume.volume",
@@ -75155,7 +76287,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064164",
+				"id": "astnode100064709",
 				"name": "Tone.Source.prototype.start",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -75220,7 +76352,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064322",
+				"id": "astnode100064867",
 				"name": "Tone.Source.prototype.stop",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -75279,7 +76411,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064426",
+				"id": "astnode100064971",
 				"name": "Tone.Source.prototype.sync",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -75326,7 +76458,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064599",
+				"id": "astnode100065144",
 				"name": "Tone.Source.prototype.unsync",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -75433,7 +76565,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100060604",
+				"id": "astnode100061149",
 				"name": "Tone.Oscillator.prototype.syncFrequency",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -75473,7 +76605,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100060627",
+				"id": "astnode100061172",
 				"name": "Tone.Oscillator.prototype.unsyncFrequency",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -75582,7 +76714,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063938",
+				"id": "astnode100064483",
 				"name": "this.volume",
 				"type": "MemberExpression",
 				"value": "this._volume.volume",
@@ -75649,7 +76781,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064164",
+				"id": "astnode100064709",
 				"name": "Tone.Source.prototype.start",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -75714,7 +76846,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064322",
+				"id": "astnode100064867",
 				"name": "Tone.Source.prototype.stop",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -75773,7 +76905,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064426",
+				"id": "astnode100064971",
 				"name": "Tone.Source.prototype.sync",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -75820,7 +76952,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064599",
+				"id": "astnode100065144",
 				"name": "Tone.Source.prototype.unsync",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -76064,7 +77196,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063938",
+				"id": "astnode100064483",
 				"name": "this.volume",
 				"type": "MemberExpression",
 				"value": "this._volume.volume",
@@ -76131,7 +77263,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064164",
+				"id": "astnode100064709",
 				"name": "Tone.Source.prototype.start",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -76196,7 +77328,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064322",
+				"id": "astnode100064867",
 				"name": "Tone.Source.prototype.stop",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -76255,7 +77387,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064426",
+				"id": "astnode100064971",
 				"name": "Tone.Source.prototype.sync",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -76302,7 +77434,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064599",
+				"id": "astnode100065144",
 				"name": "Tone.Source.prototype.unsync",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -76482,7 +77614,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063938",
+				"id": "astnode100064483",
 				"name": "this.volume",
 				"type": "MemberExpression",
 				"value": "this._volume.volume",
@@ -76549,7 +77681,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064164",
+				"id": "astnode100064709",
 				"name": "Tone.Source.prototype.start",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -76614,7 +77746,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064322",
+				"id": "astnode100064867",
 				"name": "Tone.Source.prototype.stop",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -76673,7 +77805,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064426",
+				"id": "astnode100064971",
 				"name": "Tone.Source.prototype.sync",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -76720,7 +77852,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064599",
+				"id": "astnode100065144",
 				"name": "Tone.Source.prototype.unsync",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -76900,7 +78032,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063938",
+				"id": "astnode100064483",
 				"name": "this.volume",
 				"type": "MemberExpression",
 				"value": "this._volume.volume",
@@ -76967,7 +78099,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064322",
+				"id": "astnode100064867",
 				"name": "Tone.Source.prototype.stop",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -77026,7 +78158,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064426",
+				"id": "astnode100064971",
 				"name": "Tone.Source.prototype.sync",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -77073,7 +78205,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064599",
+				"id": "astnode100065144",
 				"name": "Tone.Source.prototype.unsync",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -77253,7 +78385,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063938",
+				"id": "astnode100064483",
 				"name": "this.volume",
 				"type": "MemberExpression",
 				"value": "this._volume.volume",
@@ -77320,7 +78452,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064164",
+				"id": "astnode100064709",
 				"name": "Tone.Source.prototype.start",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -77385,7 +78517,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064322",
+				"id": "astnode100064867",
 				"name": "Tone.Source.prototype.stop",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -77444,7 +78576,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064426",
+				"id": "astnode100064971",
 				"name": "Tone.Source.prototype.sync",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -77491,7 +78623,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064599",
+				"id": "astnode100065144",
 				"name": "Tone.Source.prototype.unsync",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -77671,7 +78803,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063938",
+				"id": "astnode100064483",
 				"name": "this.volume",
 				"type": "MemberExpression",
 				"value": "this._volume.volume",
@@ -77738,7 +78870,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064164",
+				"id": "astnode100064709",
 				"name": "Tone.Source.prototype.start",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -77803,7 +78935,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064322",
+				"id": "astnode100064867",
 				"name": "Tone.Source.prototype.stop",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -77862,7 +78994,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064426",
+				"id": "astnode100064971",
 				"name": "Tone.Source.prototype.sync",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -77909,7 +79041,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064599",
+				"id": "astnode100065144",
 				"name": "Tone.Source.prototype.unsync",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -78043,7 +79175,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063938",
+				"id": "astnode100064483",
 				"name": "this.volume",
 				"type": "MemberExpression",
 				"value": "this._volume.volume",
@@ -78110,7 +79242,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064322",
+				"id": "astnode100064867",
 				"name": "Tone.Source.prototype.stop",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -78169,7 +79301,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064426",
+				"id": "astnode100064971",
 				"name": "Tone.Source.prototype.sync",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -78216,7 +79348,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064599",
+				"id": "astnode100065144",
 				"name": "Tone.Source.prototype.unsync",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -78460,7 +79592,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063938",
+				"id": "astnode100064483",
 				"name": "this.volume",
 				"type": "MemberExpression",
 				"value": "this._volume.volume",
@@ -78527,7 +79659,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064164",
+				"id": "astnode100064709",
 				"name": "Tone.Source.prototype.start",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -78592,7 +79724,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064322",
+				"id": "astnode100064867",
 				"name": "Tone.Source.prototype.stop",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -78651,7 +79783,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064426",
+				"id": "astnode100064971",
 				"name": "Tone.Source.prototype.sync",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -78698,7 +79830,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064599",
+				"id": "astnode100065144",
 				"name": "Tone.Source.prototype.unsync",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -78878,7 +80010,7 @@
 			"columnno": 2,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100063938",
+				"id": "astnode100064483",
 				"name": "this.volume",
 				"type": "MemberExpression",
 				"value": "this._volume.volume",
@@ -78945,7 +80077,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064164",
+				"id": "astnode100064709",
 				"name": "Tone.Source.prototype.start",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -79010,7 +80142,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064322",
+				"id": "astnode100064867",
 				"name": "Tone.Source.prototype.stop",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -79069,7 +80201,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064426",
+				"id": "astnode100064971",
 				"name": "Tone.Source.prototype.sync",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -79116,7 +80248,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/source",
 			"code": {
-				"id": "astnode100064599",
+				"id": "astnode100065144",
 				"name": "Tone.Source.prototype.unsync",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -79287,7 +80419,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100067169",
+				"id": "astnode100067714",
 				"name": "Tone.TimeBase.prototype.set",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -79339,7 +80471,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100067193",
+				"id": "astnode100067738",
 				"name": "Tone.TimeBase.prototype.clone",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -79379,7 +80511,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100067219",
+				"id": "astnode100067764",
 				"name": "Tone.TimeBase.prototype.copy",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -79430,7 +80562,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068402",
+				"id": "astnode100068947",
 				"name": "Tone.TimeBase.prototype.add",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -79494,7 +80626,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068423",
+				"id": "astnode100068968",
 				"name": "Tone.TimeBase.prototype.sub",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -79558,7 +80690,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068444",
+				"id": "astnode100068989",
 				"name": "Tone.TimeBase.prototype.mult",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -79622,7 +80754,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068465",
+				"id": "astnode100069010",
 				"name": "Tone.TimeBase.prototype.div",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -79686,7 +80818,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068486",
+				"id": "astnode100069031",
 				"name": "Tone.TimeBase.prototype.valueOf",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -79722,7 +80854,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068502",
+				"id": "astnode100069047",
 				"name": "Tone.TimeBase.prototype.dispose",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -79762,7 +80894,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100067169",
+				"id": "astnode100067714",
 				"name": "Tone.TimeBase.prototype.set",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -79814,7 +80946,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100067193",
+				"id": "astnode100067738",
 				"name": "Tone.TimeBase.prototype.clone",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -79854,7 +80986,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068402",
+				"id": "astnode100068947",
 				"name": "Tone.TimeBase.prototype.add",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -79918,7 +81050,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068423",
+				"id": "astnode100068968",
 				"name": "Tone.TimeBase.prototype.sub",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -79982,7 +81114,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068444",
+				"id": "astnode100068989",
 				"name": "Tone.TimeBase.prototype.mult",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -80046,7 +81178,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068465",
+				"id": "astnode100069010",
 				"name": "Tone.TimeBase.prototype.div",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -80110,7 +81242,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068502",
+				"id": "astnode100069047",
 				"name": "Tone.TimeBase.prototype.dispose",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -80150,7 +81282,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066315",
+				"id": "astnode100066860",
 				"name": "Tone.Time.prototype.quantize",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -80221,7 +81353,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066402",
+				"id": "astnode100066947",
 				"name": "Tone.Time.prototype.addNow",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -80261,7 +81393,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066442",
+				"id": "astnode100066987",
 				"name": "Tone.Time.prototype.copy",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -80312,7 +81444,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066477",
+				"id": "astnode100067022",
 				"name": "Tone.Time.prototype.toNotation",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -80358,7 +81490,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066782",
+				"id": "astnode100067327",
 				"name": "Tone.Time.prototype.toBarsBeatsSixteenths",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -80401,7 +81533,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066923",
+				"id": "astnode100067468",
 				"name": "Tone.Time.prototype.toSamples",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -80437,7 +81569,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100066979",
+				"id": "astnode100067524",
 				"name": "Tone.Time.prototype.toMilliseconds",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -80473,7 +81605,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100067169",
+				"id": "astnode100067714",
 				"name": "Tone.TimeBase.prototype.set",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -80525,7 +81657,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100067193",
+				"id": "astnode100067738",
 				"name": "Tone.TimeBase.prototype.clone",
 				"type": "FunctionExpression",
 				"paramnames": []
@@ -80565,7 +81697,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068402",
+				"id": "astnode100068947",
 				"name": "Tone.TimeBase.prototype.add",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -80629,7 +81761,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068423",
+				"id": "astnode100068968",
 				"name": "Tone.TimeBase.prototype.sub",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -80693,7 +81825,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068444",
+				"id": "astnode100068989",
 				"name": "Tone.TimeBase.prototype.mult",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -80757,7 +81889,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068465",
+				"id": "astnode100069010",
 				"name": "Tone.TimeBase.prototype.div",
 				"type": "FunctionExpression",
 				"paramnames": [
@@ -80821,7 +81953,7 @@
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/type",
 			"code": {
-				"id": "astnode100068502",
+				"id": "astnode100069047",
 				"name": "Tone.TimeBase.prototype.dispose",
 				"type": "FunctionExpression",
 				"paramnames": []
