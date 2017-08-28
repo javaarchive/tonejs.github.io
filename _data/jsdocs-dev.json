@@ -41952,11 +41952,11 @@
 		"overrides": "Tone.Signal#dispose"
 	},
 	{
-		"comment": "/**\n\t * @class Tone.TickSignal extends Tone.TimelineSignal, but adds the capability\n\t *        to calculate the number of elapsed ticks. exponential and target curves\n\t *        are approximated with multiple linear ramps. \n\t *        \n\t *        Thank you Bruno Dias, H. Sofia Pinto, and David M. Matos, for your [WAC paper](https://smartech.gatech.edu/bitstream/handle/1853/54588/WAC2016-49.pdf)\n\t *        describing integrating timing functions for tempo calculations. \n\t *\n\t * @param {Number} value The initial value of the signal\n\t * @extends {Tone.TimelineSignal}\n\t */",
+		"comment": "/**\n\t * @class Tone.TickSignal extends Tone.TimelineSignal, but adds the capability\n\t *        to calculate the number of elapsed ticks. exponential and target curves\n\t *        are approximated with multiple linear ramps.\n\t *\n\t *        Thank you Bruno Dias, H. Sofia Pinto, and David M. Matos, for your [WAC paper](https://smartech.gatech.edu/bitstream/handle/1853/54588/WAC2016-49.pdf)\n\t *        describing integrating timing functions for tempo calculations.\n\t *\n\t * @param {Number} value The initial value of the signal\n\t * @extends {Tone.TimelineSignal}\n\t */",
 		"meta": {
 			"range": [
-				654,
-				877
+				644,
+				867
 			],
 			"filename": "TickSignal.js",
 			"lineno": 14,
@@ -41976,7 +41976,7 @@
 			}
 		},
 		"kind": "class",
-		"classdesc": "Tone.TickSignal extends Tone.TimelineSignal, but adds the capability\n       to calculate the number of elapsed ticks. exponential and target curves\n       are approximated with multiple linear ramps. \n       \n       Thank you Bruno Dias, H. Sofia Pinto, and David M. Matos, for your [WAC paper](https://smartech.gatech.edu/bitstream/handle/1853/54588/WAC2016-49.pdf)\n       describing integrating timing functions for tempo calculations.",
+		"classdesc": "Tone.TickSignal extends Tone.TimelineSignal, but adds the capability\n       to calculate the number of elapsed ticks. exponential and target curves\n       are approximated with multiple linear ramps.\n\n       Thank you Bruno Dias, H. Sofia Pinto, and David M. Matos, for your [WAC paper](https://smartech.gatech.edu/bitstream/handle/1853/54588/WAC2016-49.pdf)\n       describing integrating timing functions for tempo calculations.",
 		"params": [
 			{
 				"type": {
@@ -41997,11 +41997,11 @@
 		"scope": "static"
 	},
 	{
-		"comment": "/**\n\t *  Start exponentially approaching the target value at the given time with\n\t *  a rate having the given time constant.\n\t *  @param {number} value        \n\t *  @param {Time} startTime    \n\t *  @param {number} timeConstant \n\t *  @returns {Tone.TickSignal} this \n\t */",
+		"comment": "/**\n\t *  Start exponentially approaching the target value at the given time with\n\t *  a rate having the given time constant.\n\t *  @param {number} value\n\t *  @param {Time} startTime\n\t *  @param {number} timeConstant\n\t *  @returns {Tone.TickSignal} this\n\t */",
 		"meta": {
 			"range": [
-				1998,
-				2584
+				1973,
+				2559
 			],
 			"filename": "TickSignal.js",
 			"lineno": 59,
@@ -42072,11 +42072,11 @@
 		"overrides": "Tone.TimelineSignal#setTargetAtTime"
 	},
 	{
-		"comment": "/**\n\t *  Schedules an exponential continuous change in parameter value from \n\t *  the previous scheduled parameter value to the given value.\n\t *  @param  {number} value   \n\t *  @param  {Time} endTime \n\t *  @returns {Tone.TickSignal} this\n\t */",
+		"comment": "/**\n\t *  Schedules an exponential continuous change in parameter value from\n\t *  the previous scheduled parameter value to the given value.\n\t *  @param  {number} value\n\t *  @param  {Time} endTime\n\t *  @returns {Tone.TickSignal} this\n\t */",
 		"meta": {
 			"range": [
-				2832,
-				3558
+				2802,
+				3528
 			],
 			"filename": "TickSignal.js",
 			"lineno": 83,
@@ -42102,7 +42102,7 @@
 				"rampVal": "Tone.TickSignal#exponentialRampToValueAtTime~rampVal"
 			}
 		},
-		"description": "Schedules an exponential continuous change in parameter value from \n the previous scheduled parameter value to the given value.",
+		"description": "Schedules an exponential continuous change in parameter value from\n the previous scheduled parameter value to the given value.",
 		"params": [
 			{
 				"type": {
@@ -42139,68 +42139,14 @@
 		"overrides": "Tone.TimelineSignal#exponentialRampToValueAtTime"
 	},
 	{
-		"comment": "/**\n\t * Returns the tick value at the time. Takes into account\n\t * any automation curves scheduled on the signal.\n\t * @param  {Time} time The time to get the tick count at\n\t * @return {Ticks}      The number of ticks which have elapsed at the time\n\t *                          given any automations. \n\t */",
+		"comment": "/**\n\t * Returns the tick value at the time. Takes into account\n\t * any automation curves scheduled on the signal.\n\t * @param  {Time} time The time to get the tick count at\n\t * @return {Ticks}      The number of ticks which have elapsed at the time\n\t *                          given any automations.\n\t */",
 		"meta": {
 			"range": [
-				3869,
-				4171
+				4463,
+				4639
 			],
 			"filename": "TickSignal.js",
-			"lineno": 113,
-			"columnno": 1,
-			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
-			"code": {
-				"id": "astnode100051631",
-				"name": "Tone.TickSignal.prototype._getTickUntilEvent",
-				"type": "FunctionExpression",
-				"paramnames": [
-					"event",
-					"time"
-				]
-			},
-			"vars": {
-				"event": "Tone.TickSignal#_getTickUntilEvent~event",
-				"val0": "Tone.TickSignal#_getTickUntilEvent~val0",
-				"val1": "Tone.TickSignal#_getTickUntilEvent~val1"
-			}
-		},
-		"description": "Returns the tick value at the time. Takes into account\nany automation curves scheduled on the signal.",
-		"params": [
-			{
-				"type": {
-					"names": [
-						"Time"
-					]
-				},
-				"description": "The time to get the tick count at",
-				"name": "time"
-			}
-		],
-		"returns": [
-			{
-				"type": {
-					"names": [
-						"Ticks"
-					]
-				},
-				"description": "The number of ticks which have elapsed at the time\n                         given any automations."
-			}
-		],
-		"name": "_getTickUntilEvent",
-		"longname": "Tone.TickSignal#_getTickUntilEvent",
-		"kind": "function",
-		"memberof": "Tone.TickSignal",
-		"scope": "instance"
-	},
-	{
-		"comment": "/**\n\t * Returns the tick value at the time. Takes into account\n\t * any automation curves scheduled on the signal.\n\t * @param  {Time} time The time to get the tick count at\n\t * @return {Ticks}      The number of ticks which have elapsed at the time\n\t *                          given any automations. \n\t */",
-		"meta": {
-			"range": [
-				4482,
-				4658
-			],
-			"filename": "TickSignal.js",
-			"lineno": 132,
+			"lineno": 133,
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
 			"code": {
@@ -42248,11 +42194,11 @@
 		"comment": "/**\n\t * Return the elapsed time of the number of ticks from the given time\n\t * @param {Ticks} ticks The number of ticks to calculate\n\t * @param  {Time} time The time to get the next tick from\n\t * @return {Seconds} The duration of the number of ticks from the given time in seconds\n\t */",
 		"meta": {
 			"range": [
-				4949,
-				5155
+				4930,
+				5136
 			],
 			"filename": "TickSignal.js",
-			"lineno": 144,
+			"lineno": 145,
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
 			"code": {
@@ -42307,14 +42253,14 @@
 		"scope": "instance"
 	},
 	{
-		"comment": "/**\n\t * Given a tick, returns the time that tick occurs at. \n\t * @param  {Ticks} tick\n\t * @return {Time}      The time that the tick occurs. \n\t */",
+		"comment": "/**\n\t * Given a tick, returns the time that tick occurs at.\n\t * @param  {Ticks} tick\n\t * @return {Time}      The time that the tick occurs.\n\t */",
 		"meta": {
 			"range": [
-				5307,
-				6200
+				5286,
+				6177
 			],
 			"filename": "TickSignal.js",
-			"lineno": 155,
+			"lineno": 156,
 			"columnno": 1,
 			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
 			"code": {
