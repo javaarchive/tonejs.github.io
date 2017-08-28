@@ -31,7 +31,7 @@ body {
 		border-bottom: $border;
 		font-size: 0.7em;
 		line-height: 1.2em;
-		color: black;		
+		color: black;
 	}
 
 	.notice {
@@ -43,7 +43,7 @@ body {
 	#sidebar {
 		width: $sidebarWidth;
 	}
-	
+
 	#content {
 
 		$contentPadding : 20px;
@@ -93,7 +93,7 @@ body {
 		border-radius: 2px;
 		margin-top: $padding;
 		margin-bottom: 5px;
-		overflow-x: scroll;
+		overflow-x: auto;
 
 		h3 {
 			margin-top: 0px;
@@ -105,6 +105,6 @@ body {
 			margin: 0px;
 			padding: 0px;
 		}
-		
+
 	}
 }
