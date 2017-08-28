@@ -85,6 +85,6 @@
 	//also offset the sidebar when an item is selected
 	var activeEl = document.querySelector('#sidebar .active.item')
 	if (activeEl){
-		document.querySelector('#sidebar').scrollTop = activeEl.offsetTop
+		document.querySelector('#sidebar').scrollTop = activeEl.parentElement.offsetTop - 10
 	}
 </script>
