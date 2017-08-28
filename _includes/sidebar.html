@@ -18,7 +18,7 @@
 		{% endcapture %}
 		{% assign categories =  paths | split: ' ' | uniq | sort %}
 
-		{% assign constructors = include.jsdocs 
+		{% assign constructors = include.jsdocs
 			| where: "kind","class" %}
 
 		{% for category in categories %}
@@ -70,7 +70,7 @@
 		document.querySelector("#searchbox input").value = "";
 		allListItems.forEach(function(item){ item.element.style.display = "inherit" })
 	})
-	
+
 	//the hamburger menu
 	document.querySelector("#hamburger").addEventListener("click", function(){
 		var sidebar = document.querySelector("#sidebar")
@@ -81,4 +81,10 @@
 			sidebar.classList.add("visible")
 		}
 	})
+
+	//also offset the sidebar when an item is selected
+	var activeEl = document.querySelector('#sidebar .active.item')
+	if (activeEl){
+		document.querySelector('#sidebar').scrollTop = activeEl.offsetTop
+	}
 </script>
