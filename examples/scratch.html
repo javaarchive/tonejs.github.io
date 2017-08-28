@@ -32,7 +32,7 @@
 	</style>
 	<script type="text/javascript">
 
-		
+
 		require.config({
 			baseUrl : "./",
 			"paths" : {
@@ -40,17 +40,30 @@
 			},
 		});
 
-		require(["Tone/source/Oscillator"],
-		function(Oscillator){
+		require(["Tone/component/Meter", "Tone/signal/SyncedTimelineSignal", "Tone/core/Transport"],
+		function(Meter, TimelineSignal, Transport){
 
-			var osc = new Oscillator({ 
-				"volume" : -Infinity, 
-				"type" : "square6",
-				"frequency" : "A4"
-			}).toMaster().start()
+			window.Transport = Transport
+			Transport.setLoopPoints(0, 3)
+			Transport.loop = true
 
-		});
-	
+			var meter = new Meter("signal")
+
+			var signal = new TimelineSignal(0).connect(meter)
+
+			signal.setValueAtTime(0, 0)
+			signal.setValueAtTime(10, 1)
+			signal.setValueAtTime(10, 2)
+			signal.linearRampToValueAtTime(-100, 3)
+
+			function loop(){
+				requestAnimationFrame(loop)
+				document.querySelector('#meter').textContent = meter.value
+			}
+			loop()
+
+		})
+
 
 	</script>
 </body>
