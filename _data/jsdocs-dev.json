@@ -16874,11 +16874,11 @@
 		"scope": "instance"
 	},
 	{
-		"comment": "/**\n\t *  @class Tone.Param wraps the native Web Audio's AudioParam to provide\n\t *         additional unit conversion functionality. It also\n\t *         serves as a base-class for classes which have a single,\n\t *         automatable parameter.\n\t *  @extends {Tone}\n\t *  @param  {AudioParam}  param  The parameter to wrap.\n\t *  @param  {Tone.Type} units The units of the audio param.\n\t *  @param  {Boolean} convert If the param should be converted.\n\t */",
+		"comment": "/**\n\t *  @class Tone.Param wraps the native Web Audio's AudioParam to provide\n\t *         additional unit conversion functionality. It also\n\t *         serves as a base-class for classes which have a single,\n\t *         automatable parameter.\n\t *  @extends {Tone.AudioNode}\n\t *  @param  {AudioParam}  param  The parameter to wrap.\n\t *  @param  {Tone.Type} units The units of the audio param.\n\t *  @param  {Boolean} convert If the param should be converted.\n\t */",
 		"meta": {
 			"range": [
-				532,
-				1467
+				542,
+				1477
 			],
 			"filename": "Param.js",
 			"lineno": 15,
@@ -16904,7 +16904,7 @@
 		"kind": "class",
 		"classdesc": "Tone.Param wraps the native Web Audio's AudioParam to provide\n        additional unit conversion functionality. It also\n        serves as a base-class for classes which have a single,\n        automatable parameter.",
 		"augments": [
-			"Tone"
+			"Tone.AudioNode"
 		],
 		"params": [
 			{
@@ -16944,8 +16944,8 @@
 		"comment": "/**\n\t\t *  The units of the parameter\n\t\t *  @type {Tone.Type}\n\t\t */",
 		"meta": {
 			"range": [
-				880,
-				906
+				890,
+				916
 			],
 			"filename": "Param.js",
 			"lineno": 31,
@@ -16975,8 +16975,8 @@
 		"comment": "/**\n\t\t *  If the value should be converted or not\n\t\t *  @type {Boolean}\n\t\t */",
 		"meta": {
 			"range": [
-				991,
-				1021
+				1001,
+				1031
 			],
 			"filename": "Param.js",
 			"lineno": 37,
@@ -17006,8 +17006,8 @@
 		"comment": "/**\n\t *  Defaults\n\t *  @type  {Object}\n\t *  @const\n\t */",
 		"meta": {
 			"range": [
-				1571,
-				1670
+				1581,
+				1680
 			],
 			"filename": "Param.js",
 			"lineno": 69,
@@ -17037,8 +17037,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				1597,
-				1624
+				1607,
+				1634
 			],
 			"filename": "Param.js",
 			"lineno": 70,
@@ -17062,8 +17062,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				1628,
-				1644
+				1638,
+				1654
 			],
 			"filename": "Param.js",
 			"lineno": 71,
@@ -17087,8 +17087,8 @@
 		"comment": "",
 		"meta": {
 			"range": [
-				1648,
-				1667
+				1658,
+				1677
 			],
 			"filename": "Param.js",
 			"lineno": 72,
@@ -17133,8 +17133,8 @@
 		"comment": "/**\n\t *  Schedules a parameter value change at the given time.\n\t *  @param {*}\tvalue The value to set the signal.\n\t *  @param {Time}  time The time when the change should occur.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //set the frequency to \"G4\" in exactly 1 second from now.\n\t * freq.setValueAtTime(\"G4\", \"+1\");\n\t */",
 		"meta": {
 			"range": [
-				4171,
-				4325
+				4181,
+				4335
 			],
 			"filename": "Param.js",
 			"lineno": 170,
@@ -17194,8 +17194,8 @@
 		"comment": "/**\n\t *  Creates a schedule point with the current value at the current time.\n\t *  This is useful for creating an automation anchor point in order to\n\t *  schedule changes from the current value.\n\t *\n\t *  @param {number=} now (Optionally) pass the now value in.\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				4629,
-				5018
+				4639,
+				5028
 			],
 			"filename": "Param.js",
 			"lineno": 183,
@@ -17247,8 +17247,8 @@
 		"comment": "/**\n\t *  Schedules a linear continuous change in parameter value from the\n\t *  previous scheduled parameter value to the given value.\n\t *\n\t *  @param  {number} value\n\t *  @param  {Time} endTime\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				5254,
-				5449
+				5264,
+				5459
 			],
 			"filename": "Param.js",
 			"lineno": 203,
@@ -17306,8 +17306,8 @@
 		"comment": "/**\n\t *  Schedules an exponential continuous change in parameter value from\n\t *  the previous scheduled parameter value to the given value.\n\t *\n\t *  @param  {number} value\n\t *  @param  {Time} endTime\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				5691,
-				5940
+				5701,
+				5950
 			],
 			"filename": "Param.js",
 			"lineno": 217,
@@ -17365,8 +17365,8 @@
 		"comment": "/**\n\t *  Schedules an exponential continuous change in parameter value from\n\t *  the current time and current value to the given value over the\n\t *  duration of the rampTime.\n\t *\n\t *  @param  {number} value   The value to ramp to.\n\t *  @param  {Time} rampTime the time that it takes the\n\t *                               value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //exponentially ramp to the value 2 over 4 seconds.\n\t * signal.exponentialRampToValue(2, 4);\n\t */",
 		"meta": {
 			"range": [
-				6516,
-				6772
+				6526,
+				6782
 			],
 			"filename": "Param.js",
 			"lineno": 238,
@@ -17441,8 +17441,8 @@
 		"comment": "/**\n\t *  Schedules an linear continuous change in parameter value from\n\t *  the current time and current value to the given value over the\n\t *  duration of the rampTime.\n\t *\n\t *  @param  {number} value   The value to ramp to.\n\t *  @param  {Time} rampTime the time that it takes the\n\t *                               value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //linearly ramp to the value 4 over 3 seconds.\n\t * signal.linearRampToValue(4, 3);\n\t */",
 		"meta": {
 			"range": [
-				7333,
-				7579
+				7343,
+				7589
 			],
 			"filename": "Param.js",
 			"lineno": 259,
@@ -17517,8 +17517,8 @@
 		"comment": "/**\n\t *  Start exponentially approaching the target value at the given time with\n\t *  a rate having the given time constant.\n\t *  @param {number} value\n\t *  @param {Time} startTime\n\t *  @param {number} timeConstant\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				7836,
-				8346
+				7846,
+				8356
 			],
 			"filename": "Param.js",
 			"lineno": 274,
@@ -17586,8 +17586,8 @@
 		"comment": "/**\n\t *  Sets an array of arbitrary parameter values starting at the given time\n\t *  for the given duration.\n\t *\n\t *  @param {Array} values\n\t *  @param {Time} startTime\n\t *  @param {Time} duration\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				8585,
-				8997
+				8595,
+				9007
 			],
 			"filename": "Param.js",
 			"lineno": 294,
@@ -17657,8 +17657,8 @@
 		"comment": "/**\n\t *  Cancels all scheduled parameter changes with times greater than or\n\t *  equal to startTime.\n\t *\n\t *  @param  {Time} startTime\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				9174,
-				9321
+				9184,
+				9331
 			],
 			"filename": "Param.js",
 			"lineno": 312,
@@ -17704,8 +17704,8 @@
 		"comment": "/**\n\t *  Ramps to the given value over the duration of the rampTime.\n\t *  Automatically selects the best ramp type (exponential or linear)\n\t *  depending on the `units` of the signal\n\t *\n\t *  @param  {number} value\n\t *  @param  {Time} rampTime \tThe time that it takes the\n\t *                              value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //ramp to the value either linearly or exponentially\n\t * //depending on the \"units\" value of the signal\n\t * signal.rampTo(0, 10);\n\t *  @example\n\t * //schedule it to ramp starting at a specific time\n\t * signal.rampTo(0, 10, 5)\n\t */",
 		"meta": {
 			"range": [
-				10014,
-				10384
+				10024,
+				10394
 			],
 			"filename": "Param.js",
 			"lineno": 335,
@@ -17802,8 +17802,8 @@
 		"comment": "/**\n\t *  Clean up\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				10723,
-				10919
+				10733,
+				10929
 			],
 			"filename": "Param.js",
 			"lineno": 363,
@@ -17835,7 +17835,8 @@
 		"longname": "Tone.Param#dispose",
 		"kind": "function",
 		"memberof": "Tone.Param",
-		"scope": "instance"
+		"scope": "instance",
+		"overrides": "Tone.AudioNode#dispose"
 	},
 	{
 		"comment": "/**\n\t *  @class A Timeline class for scheduling and maintaining state\n\t *         along a timeline. All events must have a \"time\" property. \n\t *         Internally, events are stored in time order for fast \n\t *         retrieval.\n\t *  @extends {Tone}\n\t *  @param {Positive} [memory=Infinity] The number of previous events that are retained.\n\t */",
@@ -20757,7 +20758,7 @@
 		"meta": {
 			"range": [
 				18157,
-				18181
+				18177
 			],
 			"filename": "Tone.js",
 			"lineno": 683,
@@ -20768,7 +20769,7 @@
 				"name": "Tone.version",
 				"type": "Literal",
 				"funcscope": "<anonymous>",
-				"value": "r11-dev",
+				"value": "r11",
 				"paramnames": []
 			}
 		},
@@ -41676,7 +41677,8 @@
 		"name": "connect",
 		"longname": "Tone.Signal#connect",
 		"memberof": "Tone.Signal",
-		"scope": "instance"
+		"scope": "instance",
+		"ignore": true
 	},
 	{
 		"comment": "/**\n\t *  dispose and disconnect\n\t *  @returns {Tone.Signal} this\n\t */",
@@ -67248,6 +67250,313 @@
 		"inherited": true
 	},
 	{
+		"comment": "/**\n\t * Get the audio context belonging to this instance.\n\t * @type {AudioNode}\n\t * @memberOf Tone.AudioNode#\n\t * @name context\n\t * @readOnly\n\t */",
+		"meta": {
+			"filename": "AudioNode.js",
+			"lineno": 27,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {}
+		},
+		"description": "Get the audio context belonging to this instance.",
+		"type": {
+			"names": [
+				"AudioNode"
+			]
+		},
+		"memberof": "Tone.Param",
+		"name": "context",
+		"readonly": true,
+		"longname": "Tone.Param#context",
+		"scope": "instance",
+		"kind": "member",
+		"inherits": "Tone.AudioNode#context",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode\n\t *  @param  {Tone | AudioParam | AudioNode} unit\n\t *  @param {number} [outputNum=0] optionally which output to connect from\n\t *  @param {number} [inputNum=0] optionally which input to connect to\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				2598,
+				2887
+			],
+			"filename": "AudioNode.js",
+			"lineno": 110,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013358",
+				"name": "Tone.AudioNode.prototype.connect",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"unit",
+					"outputNum",
+					"inputNum"
+				]
+			},
+			"vars": {
+				"outputNum": "Tone.AudioNode#connect~outputNum"
+			}
+		},
+		"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					]
+				},
+				"name": "unit"
+			},
+			{
+				"type": {
+					"names": [
+						"number"
+					]
+				},
+				"optional": true,
+				"defaultvalue": 0,
+				"description": "optionally which output to connect from",
+				"name": "outputNum"
+			},
+			{
+				"type": {
+					"names": [
+						"number"
+					]
+				},
+				"optional": true,
+				"defaultvalue": 0,
+				"description": "optionally which input to connect to",
+				"name": "inputNum"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "connect",
+		"longname": "Tone.Param#connect",
+		"kind": "function",
+		"memberof": "Tone.Param",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#connect",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  disconnect the output\n\t *  @param {Number|AudioNode} output Either the output index to disconnect\n\t *                                   if the output is an array, or the\n\t *                                   node to disconnect from.\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				3175,
+				3573
+			],
+			"filename": "AudioNode.js",
+			"lineno": 127,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013415",
+				"name": "Tone.AudioNode.prototype.disconnect",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"destination",
+					"outputNum",
+					"inputNum"
+				]
+			},
+			"vars": {
+				"outputNum": "Tone.AudioNode#disconnect~outputNum"
+			}
+		},
+		"description": "disconnect the output",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"Number",
+						"AudioNode"
+					]
+				},
+				"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+				"name": "output"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "disconnect",
+		"longname": "Tone.Param#disconnect",
+		"kind": "function",
+		"memberof": "Tone.Param",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#disconnect",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Connect the output of this node to the rest of the nodes in series.\n\t *  @example\n\t *  //connect a node to an effect, panVol and then to the master output\n\t *  node.chain(effect, panVol, Tone.Master);\n\t *  @param {...AudioParam|Tone|AudioNode} nodes\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				3878,
+				4103
+			],
+			"filename": "AudioNode.js",
+			"lineno": 148,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013490",
+				"name": "Tone.AudioNode.prototype.chain",
+				"type": "FunctionExpression",
+				"paramnames": []
+			},
+			"vars": {
+				"currentUnit": "Tone.AudioNode#chain~currentUnit",
+				"i": "Tone.AudioNode#chain~i",
+				"toUnit": "Tone.AudioNode#chain~toUnit"
+			}
+		},
+		"description": "Connect the output of this node to the rest of the nodes in series.",
+		"examples": [
+			"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+		],
+		"params": [
+			{
+				"type": {
+					"names": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					]
+				},
+				"name": "nodes"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "chain",
+		"longname": "Tone.Param#chain",
+		"kind": "function",
+		"memberof": "Tone.Param",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#chain",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  connect the output of this node to the rest of the nodes in parallel.\n\t *  @param {...AudioParam|Tone|AudioNode} nodes\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				4277,
+				4418
+			],
+			"filename": "AudioNode.js",
+			"lineno": 163,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013536",
+				"name": "Tone.AudioNode.prototype.fan",
+				"type": "FunctionExpression",
+				"paramnames": []
+			},
+			"vars": {
+				"i": "Tone.AudioNode#fan~i"
+			}
+		},
+		"description": "connect the output of this node to the rest of the nodes in parallel.",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					]
+				},
+				"name": "nodes"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "fan",
+		"longname": "Tone.Param#fan",
+		"kind": "function",
+		"memberof": "Tone.Param",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#fan",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)\n\t *  @returns {Tone.AudioNode} this\n\t *  @example\n\t * //connect an oscillator to the master output\n\t * var osc = new Tone.Oscillator().toMaster();\n\t */",
+		"meta": {
+			"range": [
+				3590,
+				3684
+			],
+			"filename": "Master.js",
+			"lineno": 129,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100022090",
+				"name": "Tone.AudioNode.prototype.toMaster",
+				"type": "FunctionExpression",
+				"paramnames": []
+			}
+		},
+		"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"examples": [
+			"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+		],
+		"name": "toMaster",
+		"longname": "Tone.Param#toMaster",
+		"kind": "function",
+		"memberof": "Tone.Param",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#toMaster",
+		"inherited": true
+	},
+	{
 		"comment": "/**\n\t\t *  The memory of the timeline, i.e.\n\t\t *  how many events in the past it will retain\n\t\t *  @type {Positive}\n\t\t */",
 		"meta": {
 			"range": [
@@ -84054,8 +84363,8 @@
 		"comment": "/**\n\t\t *  The units of the parameter\n\t\t *  @type {Tone.Type}\n\t\t */",
 		"meta": {
 			"range": [
-				880,
-				906
+				890,
+				916
 			],
 			"filename": "Param.js",
 			"lineno": 31,
@@ -84087,8 +84396,8 @@
 		"comment": "/**\n\t\t *  If the value should be converted or not\n\t\t *  @type {Boolean}\n\t\t */",
 		"meta": {
 			"range": [
-				991,
-				1021
+				1001,
+				1031
 			],
 			"filename": "Param.js",
 			"lineno": 37,
@@ -84143,8 +84452,8 @@
 		"comment": "/**\n\t *  Schedules a parameter value change at the given time.\n\t *  @param {*}\tvalue The value to set the signal.\n\t *  @param {Time}  time The time when the change should occur.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //set the frequency to \"G4\" in exactly 1 second from now.\n\t * freq.setValueAtTime(\"G4\", \"+1\");\n\t */",
 		"meta": {
 			"range": [
-				4171,
-				4325
+				4181,
+				4335
 			],
 			"filename": "Param.js",
 			"lineno": 170,
@@ -84206,8 +84515,8 @@
 		"comment": "/**\n\t *  Creates a schedule point with the current value at the current time.\n\t *  This is useful for creating an automation anchor point in order to\n\t *  schedule changes from the current value.\n\t *\n\t *  @param {number=} now (Optionally) pass the now value in.\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				4629,
-				5018
+				4639,
+				5028
 			],
 			"filename": "Param.js",
 			"lineno": 183,
@@ -84261,8 +84570,8 @@
 		"comment": "/**\n\t *  Schedules a linear continuous change in parameter value from the\n\t *  previous scheduled parameter value to the given value.\n\t *\n\t *  @param  {number} value\n\t *  @param  {Time} endTime\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				5254,
-				5449
+				5264,
+				5459
 			],
 			"filename": "Param.js",
 			"lineno": 203,
@@ -84322,8 +84631,8 @@
 		"comment": "/**\n\t *  Schedules an exponential continuous change in parameter value from\n\t *  the previous scheduled parameter value to the given value.\n\t *\n\t *  @param  {number} value\n\t *  @param  {Time} endTime\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				5691,
-				5940
+				5701,
+				5950
 			],
 			"filename": "Param.js",
 			"lineno": 217,
@@ -84383,8 +84692,8 @@
 		"comment": "/**\n\t *  Schedules an exponential continuous change in parameter value from\n\t *  the current time and current value to the given value over the\n\t *  duration of the rampTime.\n\t *\n\t *  @param  {number} value   The value to ramp to.\n\t *  @param  {Time} rampTime the time that it takes the\n\t *                               value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //exponentially ramp to the value 2 over 4 seconds.\n\t * signal.exponentialRampToValue(2, 4);\n\t */",
 		"meta": {
 			"range": [
-				6516,
-				6772
+				6526,
+				6782
 			],
 			"filename": "Param.js",
 			"lineno": 238,
@@ -84461,8 +84770,8 @@
 		"comment": "/**\n\t *  Schedules an linear continuous change in parameter value from\n\t *  the current time and current value to the given value over the\n\t *  duration of the rampTime.\n\t *\n\t *  @param  {number} value   The value to ramp to.\n\t *  @param  {Time} rampTime the time that it takes the\n\t *                               value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //linearly ramp to the value 4 over 3 seconds.\n\t * signal.linearRampToValue(4, 3);\n\t */",
 		"meta": {
 			"range": [
-				7333,
-				7579
+				7343,
+				7589
 			],
 			"filename": "Param.js",
 			"lineno": 259,
@@ -84539,8 +84848,8 @@
 		"comment": "/**\n\t *  Start exponentially approaching the target value at the given time with\n\t *  a rate having the given time constant.\n\t *  @param {number} value\n\t *  @param {Time} startTime\n\t *  @param {number} timeConstant\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				7836,
-				8346
+				7846,
+				8356
 			],
 			"filename": "Param.js",
 			"lineno": 274,
@@ -84610,8 +84919,8 @@
 		"comment": "/**\n\t *  Sets an array of arbitrary parameter values starting at the given time\n\t *  for the given duration.\n\t *\n\t *  @param {Array} values\n\t *  @param {Time} startTime\n\t *  @param {Time} duration\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				8585,
-				8997
+				8595,
+				9007
 			],
 			"filename": "Param.js",
 			"lineno": 294,
@@ -84683,8 +84992,8 @@
 		"comment": "/**\n\t *  Cancels all scheduled parameter changes with times greater than or\n\t *  equal to startTime.\n\t *\n\t *  @param  {Time} startTime\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				9174,
-				9321
+				9184,
+				9331
 			],
 			"filename": "Param.js",
 			"lineno": 312,
@@ -84732,8 +85041,8 @@
 		"comment": "/**\n\t *  Ramps to the given value over the duration of the rampTime.\n\t *  Automatically selects the best ramp type (exponential or linear)\n\t *  depending on the `units` of the signal\n\t *\n\t *  @param  {number} value\n\t *  @param  {Time} rampTime \tThe time that it takes the\n\t *                              value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //ramp to the value either linearly or exponentially\n\t * //depending on the \"units\" value of the signal\n\t * signal.rampTo(0, 10);\n\t *  @example\n\t * //schedule it to ramp starting at a specific time\n\t * signal.rampTo(0, 10, 5)\n\t */",
 		"meta": {
 			"range": [
-				10014,
-				10384
+				10024,
+				10394
 			],
 			"filename": "Param.js",
 			"lineno": 335,
@@ -84831,37 +85140,65 @@
 		"inherited": true
 	},
 	{
-		"comment": "/**\n\t *  When signals connect to other signals or AudioParams, \n\t *  they take over the output value of that signal or AudioParam. \n\t *  For all other nodes, the behavior is the same as a default <code>connect</code>. \n\t *\n\t *  @override\n\t *  @param {AudioParam|AudioNode|Tone.Signal|Tone} node \n\t *  @param {number} [outputNumber=0] The output number to connect from.\n\t *  @param {number} [inputNumber=0] The input number to connect to.\n\t *  @returns {Tone.SignalBase} this\n\t *  @method\n\t */",
+		"comment": "/**\n\t * Get the audio context belonging to this instance.\n\t * @type {AudioNode}\n\t * @memberOf Tone.AudioNode#\n\t * @name context\n\t * @readOnly\n\t */",
+		"meta": {
+			"filename": "AudioNode.js",
+			"lineno": 27,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {}
+		},
+		"description": "Get the audio context belonging to this instance.",
+		"type": {
+			"names": [
+				"AudioNode"
+			]
+		},
+		"memberof": "Tone.Signal",
+		"name": "context",
+		"readonly": true,
+		"longname": "Tone.Signal#context",
+		"scope": "instance",
+		"kind": "member",
+		"inherits": "Tone.AudioNode#context",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode\n\t *  @param  {Tone | AudioParam | AudioNode} unit\n\t *  @param {number} [outputNum=0] optionally which output to connect from\n\t *  @param {number} [inputNum=0] optionally which input to connect to\n\t *  @returns {Tone.AudioNode} this\n\t */",
 		"meta": {
 			"range": [
-				2369,
-				2434
+				2598,
+				2887
 			],
-			"filename": "Signal.js",
-			"lineno": 73,
+			"filename": "AudioNode.js",
+			"lineno": 110,
 			"columnno": 1,
-			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
 			"code": {
-				"id": "astnode100050888",
-				"name": "Tone.Signal.prototype.connect",
-				"type": "MemberExpression",
-				"value": "Tone.SignalBase.prototype.connect",
-				"paramnames": []
+				"id": "astnode100013358",
+				"name": "Tone.AudioNode.prototype.connect",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"unit",
+					"outputNum",
+					"inputNum"
+				]
+			},
+			"vars": {
+				"outputNum": "Tone.AudioNode#connect~outputNum"
 			}
 		},
-		"description": "When signals connect to other signals or AudioParams, \n they take over the output value of that signal or AudioParam. \n For all other nodes, the behavior is the same as a default <code>connect</code>.",
-		"override": true,
+		"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 		"params": [
 			{
 				"type": {
 					"names": [
+						"Tone",
 						"AudioParam",
-						"AudioNode",
-						"Tone.Signal",
-						"Tone"
+						"AudioNode"
 					]
 				},
-				"name": "node"
+				"name": "unit"
 			},
 			{
 				"type": {
@@ -84871,8 +85208,8 @@
 				},
 				"optional": true,
 				"defaultvalue": 0,
-				"description": "The output number to connect from.",
-				"name": "outputNumber"
+				"description": "optionally which output to connect from",
+				"name": "outputNum"
 			},
 			{
 				"type": {
@@ -84882,34 +85219,318 @@
 				},
 				"optional": true,
 				"defaultvalue": 0,
-				"description": "The input number to connect to.",
-				"name": "inputNumber"
+				"description": "optionally which input to connect to",
+				"name": "inputNum"
 			}
 		],
 		"returns": [
 			{
 				"type": {
 					"names": [
-						"Tone.SignalBase"
+						"Tone.AudioNode"
 					]
 				},
 				"description": "this"
 			}
 		],
+		"name": "connect",
+		"longname": "Tone.Signal#connect",
 		"kind": "function",
+		"memberof": "Tone.Signal",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#connect",
+		"inherited": true,
+		"overrides": "Tone.Param#connect"
+	},
+	{
+		"comment": "/**\n\t *  disconnect the output\n\t *  @param {Number|AudioNode} output Either the output index to disconnect\n\t *                                   if the output is an array, or the\n\t *                                   node to disconnect from.\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				3175,
+				3573
+			],
+			"filename": "AudioNode.js",
+			"lineno": 127,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013415",
+				"name": "Tone.AudioNode.prototype.disconnect",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"destination",
+					"outputNum",
+					"inputNum"
+				]
+			},
+			"vars": {
+				"outputNum": "Tone.AudioNode#disconnect~outputNum"
+			}
+		},
+		"description": "disconnect the output",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"Number",
+						"AudioNode"
+					]
+				},
+				"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+				"name": "output"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "disconnect",
+		"longname": "Tone.Signal#disconnect",
+		"kind": "function",
+		"memberof": "Tone.Signal",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#disconnect",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Connect the output of this node to the rest of the nodes in series.\n\t *  @example\n\t *  //connect a node to an effect, panVol and then to the master output\n\t *  node.chain(effect, panVol, Tone.Master);\n\t *  @param {...AudioParam|Tone|AudioNode} nodes\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				3878,
+				4103
+			],
+			"filename": "AudioNode.js",
+			"lineno": 148,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013490",
+				"name": "Tone.AudioNode.prototype.chain",
+				"type": "FunctionExpression",
+				"paramnames": []
+			},
+			"vars": {
+				"currentUnit": "Tone.AudioNode#chain~currentUnit",
+				"i": "Tone.AudioNode#chain~i",
+				"toUnit": "Tone.AudioNode#chain~toUnit"
+			}
+		},
+		"description": "Connect the output of this node to the rest of the nodes in series.",
+		"examples": [
+			"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+		],
+		"params": [
+			{
+				"type": {
+					"names": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					]
+				},
+				"name": "nodes"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "chain",
+		"longname": "Tone.Signal#chain",
+		"kind": "function",
+		"memberof": "Tone.Signal",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#chain",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  connect the output of this node to the rest of the nodes in parallel.\n\t *  @param {...AudioParam|Tone|AudioNode} nodes\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				4277,
+				4418
+			],
+			"filename": "AudioNode.js",
+			"lineno": 163,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013536",
+				"name": "Tone.AudioNode.prototype.fan",
+				"type": "FunctionExpression",
+				"paramnames": []
+			},
+			"vars": {
+				"i": "Tone.AudioNode#fan~i"
+			}
+		},
+		"description": "connect the output of this node to the rest of the nodes in parallel.",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					]
+				},
+				"name": "nodes"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "fan",
+		"longname": "Tone.Signal#fan",
+		"kind": "function",
+		"memberof": "Tone.Signal",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#fan",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)\n\t *  @returns {Tone.AudioNode} this\n\t *  @example\n\t * //connect an oscillator to the master output\n\t * var osc = new Tone.Oscillator().toMaster();\n\t */",
+		"meta": {
+			"range": [
+				3590,
+				3684
+			],
+			"filename": "Master.js",
+			"lineno": 129,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100022090",
+				"name": "Tone.AudioNode.prototype.toMaster",
+				"type": "FunctionExpression",
+				"paramnames": []
+			}
+		},
+		"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"examples": [
+			"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+		],
+		"name": "toMaster",
+		"longname": "Tone.Signal#toMaster",
+		"kind": "function",
+		"memberof": "Tone.Signal",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#toMaster",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode\n\t *  @param  {Tone | AudioParam | AudioNode} unit\n\t *  @param {number} [outputNum=0] optionally which output to connect from\n\t *  @param {number} [inputNum=0] optionally which input to connect to\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				2598,
+				2887
+			],
+			"filename": "AudioNode.js",
+			"lineno": 110,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013358",
+				"name": "Tone.AudioNode.prototype.connect",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"unit",
+					"outputNum",
+					"inputNum"
+				]
+			},
+			"vars": {
+				"outputNum": "Tone.AudioNode#connect~outputNum"
+			}
+		},
+		"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					]
+				},
+				"name": "unit"
+			},
+			{
+				"type": {
+					"names": [
+						"number"
+					]
+				},
+				"optional": true,
+				"defaultvalue": 0,
+				"description": "optionally which output to connect from",
+				"name": "outputNum"
+			},
+			{
+				"type": {
+					"names": [
+						"number"
+					]
+				},
+				"optional": true,
+				"defaultvalue": 0,
+				"description": "optionally which input to connect to",
+				"name": "inputNum"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
 		"name": "connect",
 		"longname": "Tone.Add#connect",
+		"kind": "function",
 		"memberof": "Tone.Add",
 		"scope": "instance",
-		"inherits": "Tone.Signal#connect",
+		"inherits": "Tone.AudioNode#connect",
 		"inherited": true
 	},
 	{
 		"comment": "/**\n\t\t *  The units of the parameter\n\t\t *  @type {Tone.Type}\n\t\t */",
 		"meta": {
 			"range": [
-				880,
-				906
+				890,
+				916
 			],
 			"filename": "Param.js",
 			"lineno": 31,
@@ -84941,8 +85562,8 @@
 		"comment": "/**\n\t\t *  If the value should be converted or not\n\t\t *  @type {Boolean}\n\t\t */",
 		"meta": {
 			"range": [
-				991,
-				1021
+				1001,
+				1031
 			],
 			"filename": "Param.js",
 			"lineno": 37,
@@ -84997,8 +85618,8 @@
 		"comment": "/**\n\t *  Schedules a parameter value change at the given time.\n\t *  @param {*}\tvalue The value to set the signal.\n\t *  @param {Time}  time The time when the change should occur.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //set the frequency to \"G4\" in exactly 1 second from now.\n\t * freq.setValueAtTime(\"G4\", \"+1\");\n\t */",
 		"meta": {
 			"range": [
-				4171,
-				4325
+				4181,
+				4335
 			],
 			"filename": "Param.js",
 			"lineno": 170,
@@ -85060,8 +85681,8 @@
 		"comment": "/**\n\t *  Creates a schedule point with the current value at the current time.\n\t *  This is useful for creating an automation anchor point in order to\n\t *  schedule changes from the current value.\n\t *\n\t *  @param {number=} now (Optionally) pass the now value in.\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				4629,
-				5018
+				4639,
+				5028
 			],
 			"filename": "Param.js",
 			"lineno": 183,
@@ -85115,8 +85736,8 @@
 		"comment": "/**\n\t *  Schedules a linear continuous change in parameter value from the\n\t *  previous scheduled parameter value to the given value.\n\t *\n\t *  @param  {number} value\n\t *  @param  {Time} endTime\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				5254,
-				5449
+				5264,
+				5459
 			],
 			"filename": "Param.js",
 			"lineno": 203,
@@ -85176,8 +85797,8 @@
 		"comment": "/**\n\t *  Schedules an exponential continuous change in parameter value from\n\t *  the previous scheduled parameter value to the given value.\n\t *\n\t *  @param  {number} value\n\t *  @param  {Time} endTime\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				5691,
-				5940
+				5701,
+				5950
 			],
 			"filename": "Param.js",
 			"lineno": 217,
@@ -85237,8 +85858,8 @@
 		"comment": "/**\n\t *  Schedules an exponential continuous change in parameter value from\n\t *  the current time and current value to the given value over the\n\t *  duration of the rampTime.\n\t *\n\t *  @param  {number} value   The value to ramp to.\n\t *  @param  {Time} rampTime the time that it takes the\n\t *                               value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //exponentially ramp to the value 2 over 4 seconds.\n\t * signal.exponentialRampToValue(2, 4);\n\t */",
 		"meta": {
 			"range": [
-				6516,
-				6772
+				6526,
+				6782
 			],
 			"filename": "Param.js",
 			"lineno": 238,
@@ -85315,8 +85936,8 @@
 		"comment": "/**\n\t *  Schedules an linear continuous change in parameter value from\n\t *  the current time and current value to the given value over the\n\t *  duration of the rampTime.\n\t *\n\t *  @param  {number} value   The value to ramp to.\n\t *  @param  {Time} rampTime the time that it takes the\n\t *                               value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //linearly ramp to the value 4 over 3 seconds.\n\t * signal.linearRampToValue(4, 3);\n\t */",
 		"meta": {
 			"range": [
-				7333,
-				7579
+				7343,
+				7589
 			],
 			"filename": "Param.js",
 			"lineno": 259,
@@ -85393,8 +86014,8 @@
 		"comment": "/**\n\t *  Start exponentially approaching the target value at the given time with\n\t *  a rate having the given time constant.\n\t *  @param {number} value\n\t *  @param {Time} startTime\n\t *  @param {number} timeConstant\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				7836,
-				8346
+				7846,
+				8356
 			],
 			"filename": "Param.js",
 			"lineno": 274,
@@ -85464,8 +86085,8 @@
 		"comment": "/**\n\t *  Sets an array of arbitrary parameter values starting at the given time\n\t *  for the given duration.\n\t *\n\t *  @param {Array} values\n\t *  @param {Time} startTime\n\t *  @param {Time} duration\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				8585,
-				8997
+				8595,
+				9007
 			],
 			"filename": "Param.js",
 			"lineno": 294,
@@ -85537,8 +86158,8 @@
 		"comment": "/**\n\t *  Cancels all scheduled parameter changes with times greater than or\n\t *  equal to startTime.\n\t *\n\t *  @param  {Time} startTime\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				9174,
-				9321
+				9184,
+				9331
 			],
 			"filename": "Param.js",
 			"lineno": 312,
@@ -85586,8 +86207,8 @@
 		"comment": "/**\n\t *  Ramps to the given value over the duration of the rampTime.\n\t *  Automatically selects the best ramp type (exponential or linear)\n\t *  depending on the `units` of the signal\n\t *\n\t *  @param  {number} value\n\t *  @param  {Time} rampTime \tThe time that it takes the\n\t *                              value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //ramp to the value either linearly or exponentially\n\t * //depending on the \"units\" value of the signal\n\t * signal.rampTo(0, 10);\n\t *  @example\n\t * //schedule it to ramp starting at a specific time\n\t * signal.rampTo(0, 10, 5)\n\t */",
 		"meta": {
 			"range": [
-				10014,
-				10384
+				10024,
+				10394
 			],
 			"filename": "Param.js",
 			"lineno": 335,
@@ -85682,6 +86303,235 @@
 		"scope": "instance",
 		"kind": "member",
 		"inherits": "Tone.Param#lfo",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t * Get the audio context belonging to this instance.\n\t * @type {AudioNode}\n\t * @memberOf Tone.AudioNode#\n\t * @name context\n\t * @readOnly\n\t */",
+		"meta": {
+			"filename": "AudioNode.js",
+			"lineno": 27,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {}
+		},
+		"description": "Get the audio context belonging to this instance.",
+		"type": {
+			"names": [
+				"AudioNode"
+			]
+		},
+		"memberof": "Tone.Add",
+		"name": "context",
+		"readonly": true,
+		"longname": "Tone.Add#context",
+		"scope": "instance",
+		"kind": "member",
+		"inherits": "Tone.AudioNode#context",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  disconnect the output\n\t *  @param {Number|AudioNode} output Either the output index to disconnect\n\t *                                   if the output is an array, or the\n\t *                                   node to disconnect from.\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				3175,
+				3573
+			],
+			"filename": "AudioNode.js",
+			"lineno": 127,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013415",
+				"name": "Tone.AudioNode.prototype.disconnect",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"destination",
+					"outputNum",
+					"inputNum"
+				]
+			},
+			"vars": {
+				"outputNum": "Tone.AudioNode#disconnect~outputNum"
+			}
+		},
+		"description": "disconnect the output",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"Number",
+						"AudioNode"
+					]
+				},
+				"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+				"name": "output"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "disconnect",
+		"longname": "Tone.Add#disconnect",
+		"kind": "function",
+		"memberof": "Tone.Add",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#disconnect",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Connect the output of this node to the rest of the nodes in series.\n\t *  @example\n\t *  //connect a node to an effect, panVol and then to the master output\n\t *  node.chain(effect, panVol, Tone.Master);\n\t *  @param {...AudioParam|Tone|AudioNode} nodes\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				3878,
+				4103
+			],
+			"filename": "AudioNode.js",
+			"lineno": 148,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013490",
+				"name": "Tone.AudioNode.prototype.chain",
+				"type": "FunctionExpression",
+				"paramnames": []
+			},
+			"vars": {
+				"currentUnit": "Tone.AudioNode#chain~currentUnit",
+				"i": "Tone.AudioNode#chain~i",
+				"toUnit": "Tone.AudioNode#chain~toUnit"
+			}
+		},
+		"description": "Connect the output of this node to the rest of the nodes in series.",
+		"examples": [
+			"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+		],
+		"params": [
+			{
+				"type": {
+					"names": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					]
+				},
+				"name": "nodes"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "chain",
+		"longname": "Tone.Add#chain",
+		"kind": "function",
+		"memberof": "Tone.Add",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#chain",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  connect the output of this node to the rest of the nodes in parallel.\n\t *  @param {...AudioParam|Tone|AudioNode} nodes\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				4277,
+				4418
+			],
+			"filename": "AudioNode.js",
+			"lineno": 163,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013536",
+				"name": "Tone.AudioNode.prototype.fan",
+				"type": "FunctionExpression",
+				"paramnames": []
+			},
+			"vars": {
+				"i": "Tone.AudioNode#fan~i"
+			}
+		},
+		"description": "connect the output of this node to the rest of the nodes in parallel.",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					]
+				},
+				"name": "nodes"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "fan",
+		"longname": "Tone.Add#fan",
+		"kind": "function",
+		"memberof": "Tone.Add",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#fan",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)\n\t *  @returns {Tone.AudioNode} this\n\t *  @example\n\t * //connect an oscillator to the master output\n\t * var osc = new Tone.Oscillator().toMaster();\n\t */",
+		"meta": {
+			"range": [
+				3590,
+				3684
+			],
+			"filename": "Master.js",
+			"lineno": 129,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100022090",
+				"name": "Tone.AudioNode.prototype.toMaster",
+				"type": "FunctionExpression",
+				"paramnames": []
+			}
+		},
+		"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"examples": [
+			"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+		],
+		"name": "toMaster",
+		"longname": "Tone.Add#toMaster",
+		"kind": "function",
+		"memberof": "Tone.Add",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#toMaster",
 		"inherited": true
 	},
 	{
@@ -86013,37 +86863,41 @@
 		"inherited": true
 	},
 	{
-		"comment": "/**\n\t *  When signals connect to other signals or AudioParams, \n\t *  they take over the output value of that signal or AudioParam. \n\t *  For all other nodes, the behavior is the same as a default <code>connect</code>. \n\t *\n\t *  @override\n\t *  @param {AudioParam|AudioNode|Tone.Signal|Tone} node \n\t *  @param {number} [outputNumber=0] The output number to connect from.\n\t *  @param {number} [inputNumber=0] The input number to connect to.\n\t *  @returns {Tone.SignalBase} this\n\t *  @method\n\t */",
+		"comment": "/**\n\t *  connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode\n\t *  @param  {Tone | AudioParam | AudioNode} unit\n\t *  @param {number} [outputNum=0] optionally which output to connect from\n\t *  @param {number} [inputNum=0] optionally which input to connect to\n\t *  @returns {Tone.AudioNode} this\n\t */",
 		"meta": {
 			"range": [
-				2369,
-				2434
+				2598,
+				2887
 			],
-			"filename": "Signal.js",
-			"lineno": 73,
+			"filename": "AudioNode.js",
+			"lineno": 110,
 			"columnno": 1,
-			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
 			"code": {
-				"id": "astnode100050888",
-				"name": "Tone.Signal.prototype.connect",
-				"type": "MemberExpression",
-				"value": "Tone.SignalBase.prototype.connect",
-				"paramnames": []
+				"id": "astnode100013358",
+				"name": "Tone.AudioNode.prototype.connect",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"unit",
+					"outputNum",
+					"inputNum"
+				]
+			},
+			"vars": {
+				"outputNum": "Tone.AudioNode#connect~outputNum"
 			}
 		},
-		"description": "When signals connect to other signals or AudioParams, \n they take over the output value of that signal or AudioParam. \n For all other nodes, the behavior is the same as a default <code>connect</code>.",
-		"override": true,
+		"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 		"params": [
 			{
 				"type": {
 					"names": [
+						"Tone",
 						"AudioParam",
-						"AudioNode",
-						"Tone.Signal",
-						"Tone"
+						"AudioNode"
 					]
 				},
-				"name": "node"
+				"name": "unit"
 			},
 			{
 				"type": {
@@ -86053,8 +86907,8 @@
 				},
 				"optional": true,
 				"defaultvalue": 0,
-				"description": "The output number to connect from.",
-				"name": "outputNumber"
+				"description": "optionally which output to connect from",
+				"name": "outputNum"
 			},
 			{
 				"type": {
@@ -86064,34 +86918,34 @@
 				},
 				"optional": true,
 				"defaultvalue": 0,
-				"description": "The input number to connect to.",
-				"name": "inputNumber"
+				"description": "optionally which input to connect to",
+				"name": "inputNum"
 			}
 		],
 		"returns": [
 			{
 				"type": {
 					"names": [
-						"Tone.SignalBase"
+						"Tone.AudioNode"
 					]
 				},
 				"description": "this"
 			}
 		],
-		"kind": "function",
 		"name": "connect",
 		"longname": "Tone.GreaterThan#connect",
+		"kind": "function",
 		"memberof": "Tone.GreaterThan",
 		"scope": "instance",
-		"inherits": "Tone.Signal#connect",
+		"inherits": "Tone.AudioNode#connect",
 		"inherited": true
 	},
 	{
 		"comment": "/**\n\t\t *  The units of the parameter\n\t\t *  @type {Tone.Type}\n\t\t */",
 		"meta": {
 			"range": [
-				880,
-				906
+				890,
+				916
 			],
 			"filename": "Param.js",
 			"lineno": 31,
@@ -86123,8 +86977,8 @@
 		"comment": "/**\n\t\t *  If the value should be converted or not\n\t\t *  @type {Boolean}\n\t\t */",
 		"meta": {
 			"range": [
-				991,
-				1021
+				1001,
+				1031
 			],
 			"filename": "Param.js",
 			"lineno": 37,
@@ -86179,8 +87033,8 @@
 		"comment": "/**\n\t *  Schedules a parameter value change at the given time.\n\t *  @param {*}\tvalue The value to set the signal.\n\t *  @param {Time}  time The time when the change should occur.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //set the frequency to \"G4\" in exactly 1 second from now.\n\t * freq.setValueAtTime(\"G4\", \"+1\");\n\t */",
 		"meta": {
 			"range": [
-				4171,
-				4325
+				4181,
+				4335
 			],
 			"filename": "Param.js",
 			"lineno": 170,
@@ -86242,8 +87096,8 @@
 		"comment": "/**\n\t *  Creates a schedule point with the current value at the current time.\n\t *  This is useful for creating an automation anchor point in order to\n\t *  schedule changes from the current value.\n\t *\n\t *  @param {number=} now (Optionally) pass the now value in.\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				4629,
-				5018
+				4639,
+				5028
 			],
 			"filename": "Param.js",
 			"lineno": 183,
@@ -86297,8 +87151,8 @@
 		"comment": "/**\n\t *  Schedules a linear continuous change in parameter value from the\n\t *  previous scheduled parameter value to the given value.\n\t *\n\t *  @param  {number} value\n\t *  @param  {Time} endTime\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				5254,
-				5449
+				5264,
+				5459
 			],
 			"filename": "Param.js",
 			"lineno": 203,
@@ -86358,8 +87212,8 @@
 		"comment": "/**\n\t *  Schedules an exponential continuous change in parameter value from\n\t *  the previous scheduled parameter value to the given value.\n\t *\n\t *  @param  {number} value\n\t *  @param  {Time} endTime\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				5691,
-				5940
+				5701,
+				5950
 			],
 			"filename": "Param.js",
 			"lineno": 217,
@@ -86419,8 +87273,8 @@
 		"comment": "/**\n\t *  Schedules an exponential continuous change in parameter value from\n\t *  the current time and current value to the given value over the\n\t *  duration of the rampTime.\n\t *\n\t *  @param  {number} value   The value to ramp to.\n\t *  @param  {Time} rampTime the time that it takes the\n\t *                               value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //exponentially ramp to the value 2 over 4 seconds.\n\t * signal.exponentialRampToValue(2, 4);\n\t */",
 		"meta": {
 			"range": [
-				6516,
-				6772
+				6526,
+				6782
 			],
 			"filename": "Param.js",
 			"lineno": 238,
@@ -86497,8 +87351,8 @@
 		"comment": "/**\n\t *  Schedules an linear continuous change in parameter value from\n\t *  the current time and current value to the given value over the\n\t *  duration of the rampTime.\n\t *\n\t *  @param  {number} value   The value to ramp to.\n\t *  @param  {Time} rampTime the time that it takes the\n\t *                               value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //linearly ramp to the value 4 over 3 seconds.\n\t * signal.linearRampToValue(4, 3);\n\t */",
 		"meta": {
 			"range": [
-				7333,
-				7579
+				7343,
+				7589
 			],
 			"filename": "Param.js",
 			"lineno": 259,
@@ -86575,8 +87429,8 @@
 		"comment": "/**\n\t *  Start exponentially approaching the target value at the given time with\n\t *  a rate having the given time constant.\n\t *  @param {number} value\n\t *  @param {Time} startTime\n\t *  @param {number} timeConstant\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				7836,
-				8346
+				7846,
+				8356
 			],
 			"filename": "Param.js",
 			"lineno": 274,
@@ -86646,8 +87500,8 @@
 		"comment": "/**\n\t *  Sets an array of arbitrary parameter values starting at the given time\n\t *  for the given duration.\n\t *\n\t *  @param {Array} values\n\t *  @param {Time} startTime\n\t *  @param {Time} duration\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				8585,
-				8997
+				8595,
+				9007
 			],
 			"filename": "Param.js",
 			"lineno": 294,
@@ -86719,8 +87573,8 @@
 		"comment": "/**\n\t *  Cancels all scheduled parameter changes with times greater than or\n\t *  equal to startTime.\n\t *\n\t *  @param  {Time} startTime\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				9174,
-				9321
+				9184,
+				9331
 			],
 			"filename": "Param.js",
 			"lineno": 312,
@@ -86768,8 +87622,8 @@
 		"comment": "/**\n\t *  Ramps to the given value over the duration of the rampTime.\n\t *  Automatically selects the best ramp type (exponential or linear)\n\t *  depending on the `units` of the signal\n\t *\n\t *  @param  {number} value\n\t *  @param  {Time} rampTime \tThe time that it takes the\n\t *                              value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //ramp to the value either linearly or exponentially\n\t * //depending on the \"units\" value of the signal\n\t * signal.rampTo(0, 10);\n\t *  @example\n\t * //schedule it to ramp starting at a specific time\n\t * signal.rampTo(0, 10, 5)\n\t */",
 		"meta": {
 			"range": [
-				10014,
-				10384
+				10024,
+				10394
 			],
 			"filename": "Param.js",
 			"lineno": 335,
@@ -86864,6 +87718,235 @@
 		"scope": "instance",
 		"kind": "member",
 		"inherits": "Tone.Param#lfo",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t * Get the audio context belonging to this instance.\n\t * @type {AudioNode}\n\t * @memberOf Tone.AudioNode#\n\t * @name context\n\t * @readOnly\n\t */",
+		"meta": {
+			"filename": "AudioNode.js",
+			"lineno": 27,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {}
+		},
+		"description": "Get the audio context belonging to this instance.",
+		"type": {
+			"names": [
+				"AudioNode"
+			]
+		},
+		"memberof": "Tone.GreaterThan",
+		"name": "context",
+		"readonly": true,
+		"longname": "Tone.GreaterThan#context",
+		"scope": "instance",
+		"kind": "member",
+		"inherits": "Tone.AudioNode#context",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  disconnect the output\n\t *  @param {Number|AudioNode} output Either the output index to disconnect\n\t *                                   if the output is an array, or the\n\t *                                   node to disconnect from.\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				3175,
+				3573
+			],
+			"filename": "AudioNode.js",
+			"lineno": 127,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013415",
+				"name": "Tone.AudioNode.prototype.disconnect",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"destination",
+					"outputNum",
+					"inputNum"
+				]
+			},
+			"vars": {
+				"outputNum": "Tone.AudioNode#disconnect~outputNum"
+			}
+		},
+		"description": "disconnect the output",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"Number",
+						"AudioNode"
+					]
+				},
+				"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+				"name": "output"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "disconnect",
+		"longname": "Tone.GreaterThan#disconnect",
+		"kind": "function",
+		"memberof": "Tone.GreaterThan",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#disconnect",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Connect the output of this node to the rest of the nodes in series.\n\t *  @example\n\t *  //connect a node to an effect, panVol and then to the master output\n\t *  node.chain(effect, panVol, Tone.Master);\n\t *  @param {...AudioParam|Tone|AudioNode} nodes\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				3878,
+				4103
+			],
+			"filename": "AudioNode.js",
+			"lineno": 148,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013490",
+				"name": "Tone.AudioNode.prototype.chain",
+				"type": "FunctionExpression",
+				"paramnames": []
+			},
+			"vars": {
+				"currentUnit": "Tone.AudioNode#chain~currentUnit",
+				"i": "Tone.AudioNode#chain~i",
+				"toUnit": "Tone.AudioNode#chain~toUnit"
+			}
+		},
+		"description": "Connect the output of this node to the rest of the nodes in series.",
+		"examples": [
+			"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+		],
+		"params": [
+			{
+				"type": {
+					"names": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					]
+				},
+				"name": "nodes"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "chain",
+		"longname": "Tone.GreaterThan#chain",
+		"kind": "function",
+		"memberof": "Tone.GreaterThan",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#chain",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  connect the output of this node to the rest of the nodes in parallel.\n\t *  @param {...AudioParam|Tone|AudioNode} nodes\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				4277,
+				4418
+			],
+			"filename": "AudioNode.js",
+			"lineno": 163,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013536",
+				"name": "Tone.AudioNode.prototype.fan",
+				"type": "FunctionExpression",
+				"paramnames": []
+			},
+			"vars": {
+				"i": "Tone.AudioNode#fan~i"
+			}
+		},
+		"description": "connect the output of this node to the rest of the nodes in parallel.",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					]
+				},
+				"name": "nodes"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "fan",
+		"longname": "Tone.GreaterThan#fan",
+		"kind": "function",
+		"memberof": "Tone.GreaterThan",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#fan",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)\n\t *  @returns {Tone.AudioNode} this\n\t *  @example\n\t * //connect an oscillator to the master output\n\t * var osc = new Tone.Oscillator().toMaster();\n\t */",
+		"meta": {
+			"range": [
+				3590,
+				3684
+			],
+			"filename": "Master.js",
+			"lineno": 129,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100022090",
+				"name": "Tone.AudioNode.prototype.toMaster",
+				"type": "FunctionExpression",
+				"paramnames": []
+			}
+		},
+		"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"examples": [
+			"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+		],
+		"name": "toMaster",
+		"longname": "Tone.GreaterThan#toMaster",
+		"kind": "function",
+		"memberof": "Tone.GreaterThan",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#toMaster",
 		"inherited": true
 	},
 	{
@@ -87031,37 +88114,41 @@
 		"inherited": true
 	},
 	{
-		"comment": "/**\n\t *  When signals connect to other signals or AudioParams, \n\t *  they take over the output value of that signal or AudioParam. \n\t *  For all other nodes, the behavior is the same as a default <code>connect</code>. \n\t *\n\t *  @override\n\t *  @param {AudioParam|AudioNode|Tone.Signal|Tone} node \n\t *  @param {number} [outputNumber=0] The output number to connect from.\n\t *  @param {number} [inputNumber=0] The input number to connect to.\n\t *  @returns {Tone.SignalBase} this\n\t *  @method\n\t */",
+		"comment": "/**\n\t *  connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode\n\t *  @param  {Tone | AudioParam | AudioNode} unit\n\t *  @param {number} [outputNum=0] optionally which output to connect from\n\t *  @param {number} [inputNum=0] optionally which input to connect to\n\t *  @returns {Tone.AudioNode} this\n\t */",
 		"meta": {
 			"range": [
-				2369,
-				2434
+				2598,
+				2887
 			],
-			"filename": "Signal.js",
-			"lineno": 73,
+			"filename": "AudioNode.js",
+			"lineno": 110,
 			"columnno": 1,
-			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
 			"code": {
-				"id": "astnode100050888",
-				"name": "Tone.Signal.prototype.connect",
-				"type": "MemberExpression",
-				"value": "Tone.SignalBase.prototype.connect",
-				"paramnames": []
+				"id": "astnode100013358",
+				"name": "Tone.AudioNode.prototype.connect",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"unit",
+					"outputNum",
+					"inputNum"
+				]
+			},
+			"vars": {
+				"outputNum": "Tone.AudioNode#connect~outputNum"
 			}
 		},
-		"description": "When signals connect to other signals or AudioParams, \n they take over the output value of that signal or AudioParam. \n For all other nodes, the behavior is the same as a default <code>connect</code>.",
-		"override": true,
+		"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 		"params": [
 			{
 				"type": {
 					"names": [
+						"Tone",
 						"AudioParam",
-						"AudioNode",
-						"Tone.Signal",
-						"Tone"
+						"AudioNode"
 					]
 				},
-				"name": "node"
+				"name": "unit"
 			},
 			{
 				"type": {
@@ -87071,8 +88158,8 @@
 				},
 				"optional": true,
 				"defaultvalue": 0,
-				"description": "The output number to connect from.",
-				"name": "outputNumber"
+				"description": "optionally which output to connect from",
+				"name": "outputNum"
 			},
 			{
 				"type": {
@@ -87082,34 +88169,34 @@
 				},
 				"optional": true,
 				"defaultvalue": 0,
-				"description": "The input number to connect to.",
-				"name": "inputNumber"
+				"description": "optionally which input to connect to",
+				"name": "inputNum"
 			}
 		],
 		"returns": [
 			{
 				"type": {
 					"names": [
-						"Tone.SignalBase"
+						"Tone.AudioNode"
 					]
 				},
 				"description": "this"
 			}
 		],
-		"kind": "function",
 		"name": "connect",
 		"longname": "Tone.Multiply#connect",
+		"kind": "function",
 		"memberof": "Tone.Multiply",
 		"scope": "instance",
-		"inherits": "Tone.Signal#connect",
+		"inherits": "Tone.AudioNode#connect",
 		"inherited": true
 	},
 	{
 		"comment": "/**\n\t\t *  The units of the parameter\n\t\t *  @type {Tone.Type}\n\t\t */",
 		"meta": {
 			"range": [
-				880,
-				906
+				890,
+				916
 			],
 			"filename": "Param.js",
 			"lineno": 31,
@@ -87141,8 +88228,8 @@
 		"comment": "/**\n\t\t *  If the value should be converted or not\n\t\t *  @type {Boolean}\n\t\t */",
 		"meta": {
 			"range": [
-				991,
-				1021
+				1001,
+				1031
 			],
 			"filename": "Param.js",
 			"lineno": 37,
@@ -87197,8 +88284,8 @@
 		"comment": "/**\n\t *  Schedules a parameter value change at the given time.\n\t *  @param {*}\tvalue The value to set the signal.\n\t *  @param {Time}  time The time when the change should occur.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //set the frequency to \"G4\" in exactly 1 second from now.\n\t * freq.setValueAtTime(\"G4\", \"+1\");\n\t */",
 		"meta": {
 			"range": [
-				4171,
-				4325
+				4181,
+				4335
 			],
 			"filename": "Param.js",
 			"lineno": 170,
@@ -87260,8 +88347,8 @@
 		"comment": "/**\n\t *  Creates a schedule point with the current value at the current time.\n\t *  This is useful for creating an automation anchor point in order to\n\t *  schedule changes from the current value.\n\t *\n\t *  @param {number=} now (Optionally) pass the now value in.\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				4629,
-				5018
+				4639,
+				5028
 			],
 			"filename": "Param.js",
 			"lineno": 183,
@@ -87315,8 +88402,8 @@
 		"comment": "/**\n\t *  Schedules a linear continuous change in parameter value from the\n\t *  previous scheduled parameter value to the given value.\n\t *\n\t *  @param  {number} value\n\t *  @param  {Time} endTime\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				5254,
-				5449
+				5264,
+				5459
 			],
 			"filename": "Param.js",
 			"lineno": 203,
@@ -87376,8 +88463,8 @@
 		"comment": "/**\n\t *  Schedules an exponential continuous change in parameter value from\n\t *  the previous scheduled parameter value to the given value.\n\t *\n\t *  @param  {number} value\n\t *  @param  {Time} endTime\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				5691,
-				5940
+				5701,
+				5950
 			],
 			"filename": "Param.js",
 			"lineno": 217,
@@ -87437,8 +88524,8 @@
 		"comment": "/**\n\t *  Schedules an exponential continuous change in parameter value from\n\t *  the current time and current value to the given value over the\n\t *  duration of the rampTime.\n\t *\n\t *  @param  {number} value   The value to ramp to.\n\t *  @param  {Time} rampTime the time that it takes the\n\t *                               value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //exponentially ramp to the value 2 over 4 seconds.\n\t * signal.exponentialRampToValue(2, 4);\n\t */",
 		"meta": {
 			"range": [
-				6516,
-				6772
+				6526,
+				6782
 			],
 			"filename": "Param.js",
 			"lineno": 238,
@@ -87515,8 +88602,8 @@
 		"comment": "/**\n\t *  Schedules an linear continuous change in parameter value from\n\t *  the current time and current value to the given value over the\n\t *  duration of the rampTime.\n\t *\n\t *  @param  {number} value   The value to ramp to.\n\t *  @param  {Time} rampTime the time that it takes the\n\t *                               value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //linearly ramp to the value 4 over 3 seconds.\n\t * signal.linearRampToValue(4, 3);\n\t */",
 		"meta": {
 			"range": [
-				7333,
-				7579
+				7343,
+				7589
 			],
 			"filename": "Param.js",
 			"lineno": 259,
@@ -87593,8 +88680,8 @@
 		"comment": "/**\n\t *  Start exponentially approaching the target value at the given time with\n\t *  a rate having the given time constant.\n\t *  @param {number} value\n\t *  @param {Time} startTime\n\t *  @param {number} timeConstant\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				7836,
-				8346
+				7846,
+				8356
 			],
 			"filename": "Param.js",
 			"lineno": 274,
@@ -87664,8 +88751,8 @@
 		"comment": "/**\n\t *  Sets an array of arbitrary parameter values starting at the given time\n\t *  for the given duration.\n\t *\n\t *  @param {Array} values\n\t *  @param {Time} startTime\n\t *  @param {Time} duration\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				8585,
-				8997
+				8595,
+				9007
 			],
 			"filename": "Param.js",
 			"lineno": 294,
@@ -87737,8 +88824,8 @@
 		"comment": "/**\n\t *  Cancels all scheduled parameter changes with times greater than or\n\t *  equal to startTime.\n\t *\n\t *  @param  {Time} startTime\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				9174,
-				9321
+				9184,
+				9331
 			],
 			"filename": "Param.js",
 			"lineno": 312,
@@ -87786,8 +88873,8 @@
 		"comment": "/**\n\t *  Ramps to the given value over the duration of the rampTime.\n\t *  Automatically selects the best ramp type (exponential or linear)\n\t *  depending on the `units` of the signal\n\t *\n\t *  @param  {number} value\n\t *  @param  {Time} rampTime \tThe time that it takes the\n\t *                              value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //ramp to the value either linearly or exponentially\n\t * //depending on the \"units\" value of the signal\n\t * signal.rampTo(0, 10);\n\t *  @example\n\t * //schedule it to ramp starting at a specific time\n\t * signal.rampTo(0, 10, 5)\n\t */",
 		"meta": {
 			"range": [
-				10014,
-				10384
+				10024,
+				10394
 			],
 			"filename": "Param.js",
 			"lineno": 335,
@@ -87882,6 +88969,235 @@
 		"scope": "instance",
 		"kind": "member",
 		"inherits": "Tone.Param#lfo",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t * Get the audio context belonging to this instance.\n\t * @type {AudioNode}\n\t * @memberOf Tone.AudioNode#\n\t * @name context\n\t * @readOnly\n\t */",
+		"meta": {
+			"filename": "AudioNode.js",
+			"lineno": 27,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {}
+		},
+		"description": "Get the audio context belonging to this instance.",
+		"type": {
+			"names": [
+				"AudioNode"
+			]
+		},
+		"memberof": "Tone.Multiply",
+		"name": "context",
+		"readonly": true,
+		"longname": "Tone.Multiply#context",
+		"scope": "instance",
+		"kind": "member",
+		"inherits": "Tone.AudioNode#context",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  disconnect the output\n\t *  @param {Number|AudioNode} output Either the output index to disconnect\n\t *                                   if the output is an array, or the\n\t *                                   node to disconnect from.\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				3175,
+				3573
+			],
+			"filename": "AudioNode.js",
+			"lineno": 127,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013415",
+				"name": "Tone.AudioNode.prototype.disconnect",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"destination",
+					"outputNum",
+					"inputNum"
+				]
+			},
+			"vars": {
+				"outputNum": "Tone.AudioNode#disconnect~outputNum"
+			}
+		},
+		"description": "disconnect the output",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"Number",
+						"AudioNode"
+					]
+				},
+				"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+				"name": "output"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "disconnect",
+		"longname": "Tone.Multiply#disconnect",
+		"kind": "function",
+		"memberof": "Tone.Multiply",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#disconnect",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Connect the output of this node to the rest of the nodes in series.\n\t *  @example\n\t *  //connect a node to an effect, panVol and then to the master output\n\t *  node.chain(effect, panVol, Tone.Master);\n\t *  @param {...AudioParam|Tone|AudioNode} nodes\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				3878,
+				4103
+			],
+			"filename": "AudioNode.js",
+			"lineno": 148,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013490",
+				"name": "Tone.AudioNode.prototype.chain",
+				"type": "FunctionExpression",
+				"paramnames": []
+			},
+			"vars": {
+				"currentUnit": "Tone.AudioNode#chain~currentUnit",
+				"i": "Tone.AudioNode#chain~i",
+				"toUnit": "Tone.AudioNode#chain~toUnit"
+			}
+		},
+		"description": "Connect the output of this node to the rest of the nodes in series.",
+		"examples": [
+			"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+		],
+		"params": [
+			{
+				"type": {
+					"names": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					]
+				},
+				"name": "nodes"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "chain",
+		"longname": "Tone.Multiply#chain",
+		"kind": "function",
+		"memberof": "Tone.Multiply",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#chain",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  connect the output of this node to the rest of the nodes in parallel.\n\t *  @param {...AudioParam|Tone|AudioNode} nodes\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				4277,
+				4418
+			],
+			"filename": "AudioNode.js",
+			"lineno": 163,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013536",
+				"name": "Tone.AudioNode.prototype.fan",
+				"type": "FunctionExpression",
+				"paramnames": []
+			},
+			"vars": {
+				"i": "Tone.AudioNode#fan~i"
+			}
+		},
+		"description": "connect the output of this node to the rest of the nodes in parallel.",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					]
+				},
+				"name": "nodes"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "fan",
+		"longname": "Tone.Multiply#fan",
+		"kind": "function",
+		"memberof": "Tone.Multiply",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#fan",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)\n\t *  @returns {Tone.AudioNode} this\n\t *  @example\n\t * //connect an oscillator to the master output\n\t * var osc = new Tone.Oscillator().toMaster();\n\t */",
+		"meta": {
+			"range": [
+				3590,
+				3684
+			],
+			"filename": "Master.js",
+			"lineno": 129,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100022090",
+				"name": "Tone.AudioNode.prototype.toMaster",
+				"type": "FunctionExpression",
+				"paramnames": []
+			}
+		},
+		"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"examples": [
+			"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+		],
+		"name": "toMaster",
+		"longname": "Tone.Multiply#toMaster",
+		"kind": "function",
+		"memberof": "Tone.Multiply",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#toMaster",
 		"inherited": true
 	},
 	{
@@ -88295,37 +89611,41 @@
 		"inherited": true
 	},
 	{
-		"comment": "/**\n\t *  When signals connect to other signals or AudioParams, \n\t *  they take over the output value of that signal or AudioParam. \n\t *  For all other nodes, the behavior is the same as a default <code>connect</code>. \n\t *\n\t *  @override\n\t *  @param {AudioParam|AudioNode|Tone.Signal|Tone} node \n\t *  @param {number} [outputNumber=0] The output number to connect from.\n\t *  @param {number} [inputNumber=0] The input number to connect to.\n\t *  @returns {Tone.SignalBase} this\n\t *  @method\n\t */",
+		"comment": "/**\n\t *  connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode\n\t *  @param  {Tone | AudioParam | AudioNode} unit\n\t *  @param {number} [outputNum=0] optionally which output to connect from\n\t *  @param {number} [inputNum=0] optionally which input to connect to\n\t *  @returns {Tone.AudioNode} this\n\t */",
 		"meta": {
 			"range": [
-				2369,
-				2434
+				2598,
+				2887
 			],
-			"filename": "Signal.js",
-			"lineno": 73,
+			"filename": "AudioNode.js",
+			"lineno": 110,
 			"columnno": 1,
-			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
 			"code": {
-				"id": "astnode100050888",
-				"name": "Tone.Signal.prototype.connect",
-				"type": "MemberExpression",
-				"value": "Tone.SignalBase.prototype.connect",
-				"paramnames": []
+				"id": "astnode100013358",
+				"name": "Tone.AudioNode.prototype.connect",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"unit",
+					"outputNum",
+					"inputNum"
+				]
+			},
+			"vars": {
+				"outputNum": "Tone.AudioNode#connect~outputNum"
 			}
 		},
-		"description": "When signals connect to other signals or AudioParams, \n they take over the output value of that signal or AudioParam. \n For all other nodes, the behavior is the same as a default <code>connect</code>.",
-		"override": true,
+		"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 		"params": [
 			{
 				"type": {
 					"names": [
+						"Tone",
 						"AudioParam",
-						"AudioNode",
-						"Tone.Signal",
-						"Tone"
+						"AudioNode"
 					]
 				},
-				"name": "node"
+				"name": "unit"
 			},
 			{
 				"type": {
@@ -88335,8 +89655,8 @@
 				},
 				"optional": true,
 				"defaultvalue": 0,
-				"description": "The output number to connect from.",
-				"name": "outputNumber"
+				"description": "optionally which output to connect from",
+				"name": "outputNum"
 			},
 			{
 				"type": {
@@ -88346,34 +89666,34 @@
 				},
 				"optional": true,
 				"defaultvalue": 0,
-				"description": "The input number to connect to.",
-				"name": "inputNumber"
+				"description": "optionally which input to connect to",
+				"name": "inputNum"
 			}
 		],
 		"returns": [
 			{
 				"type": {
 					"names": [
-						"Tone.SignalBase"
+						"Tone.AudioNode"
 					]
 				},
 				"description": "this"
 			}
 		],
-		"kind": "function",
 		"name": "connect",
 		"longname": "Tone.Subtract#connect",
+		"kind": "function",
 		"memberof": "Tone.Subtract",
 		"scope": "instance",
-		"inherits": "Tone.Signal#connect",
+		"inherits": "Tone.AudioNode#connect",
 		"inherited": true
 	},
 	{
 		"comment": "/**\n\t\t *  The units of the parameter\n\t\t *  @type {Tone.Type}\n\t\t */",
 		"meta": {
 			"range": [
-				880,
-				906
+				890,
+				916
 			],
 			"filename": "Param.js",
 			"lineno": 31,
@@ -88405,8 +89725,8 @@
 		"comment": "/**\n\t\t *  If the value should be converted or not\n\t\t *  @type {Boolean}\n\t\t */",
 		"meta": {
 			"range": [
-				991,
-				1021
+				1001,
+				1031
 			],
 			"filename": "Param.js",
 			"lineno": 37,
@@ -88461,8 +89781,8 @@
 		"comment": "/**\n\t *  Schedules a parameter value change at the given time.\n\t *  @param {*}\tvalue The value to set the signal.\n\t *  @param {Time}  time The time when the change should occur.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //set the frequency to \"G4\" in exactly 1 second from now.\n\t * freq.setValueAtTime(\"G4\", \"+1\");\n\t */",
 		"meta": {
 			"range": [
-				4171,
-				4325
+				4181,
+				4335
 			],
 			"filename": "Param.js",
 			"lineno": 170,
@@ -88524,8 +89844,8 @@
 		"comment": "/**\n\t *  Creates a schedule point with the current value at the current time.\n\t *  This is useful for creating an automation anchor point in order to\n\t *  schedule changes from the current value.\n\t *\n\t *  @param {number=} now (Optionally) pass the now value in.\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				4629,
-				5018
+				4639,
+				5028
 			],
 			"filename": "Param.js",
 			"lineno": 183,
@@ -88579,8 +89899,8 @@
 		"comment": "/**\n\t *  Schedules a linear continuous change in parameter value from the\n\t *  previous scheduled parameter value to the given value.\n\t *\n\t *  @param  {number} value\n\t *  @param  {Time} endTime\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				5254,
-				5449
+				5264,
+				5459
 			],
 			"filename": "Param.js",
 			"lineno": 203,
@@ -88640,8 +89960,8 @@
 		"comment": "/**\n\t *  Schedules an exponential continuous change in parameter value from\n\t *  the previous scheduled parameter value to the given value.\n\t *\n\t *  @param  {number} value\n\t *  @param  {Time} endTime\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				5691,
-				5940
+				5701,
+				5950
 			],
 			"filename": "Param.js",
 			"lineno": 217,
@@ -88701,8 +90021,8 @@
 		"comment": "/**\n\t *  Schedules an exponential continuous change in parameter value from\n\t *  the current time and current value to the given value over the\n\t *  duration of the rampTime.\n\t *\n\t *  @param  {number} value   The value to ramp to.\n\t *  @param  {Time} rampTime the time that it takes the\n\t *                               value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //exponentially ramp to the value 2 over 4 seconds.\n\t * signal.exponentialRampToValue(2, 4);\n\t */",
 		"meta": {
 			"range": [
-				6516,
-				6772
+				6526,
+				6782
 			],
 			"filename": "Param.js",
 			"lineno": 238,
@@ -88779,8 +90099,8 @@
 		"comment": "/**\n\t *  Schedules an linear continuous change in parameter value from\n\t *  the current time and current value to the given value over the\n\t *  duration of the rampTime.\n\t *\n\t *  @param  {number} value   The value to ramp to.\n\t *  @param  {Time} rampTime the time that it takes the\n\t *                               value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //linearly ramp to the value 4 over 3 seconds.\n\t * signal.linearRampToValue(4, 3);\n\t */",
 		"meta": {
 			"range": [
-				7333,
-				7579
+				7343,
+				7589
 			],
 			"filename": "Param.js",
 			"lineno": 259,
@@ -88857,8 +90177,8 @@
 		"comment": "/**\n\t *  Start exponentially approaching the target value at the given time with\n\t *  a rate having the given time constant.\n\t *  @param {number} value\n\t *  @param {Time} startTime\n\t *  @param {number} timeConstant\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				7836,
-				8346
+				7846,
+				8356
 			],
 			"filename": "Param.js",
 			"lineno": 274,
@@ -88928,8 +90248,8 @@
 		"comment": "/**\n\t *  Sets an array of arbitrary parameter values starting at the given time\n\t *  for the given duration.\n\t *\n\t *  @param {Array} values\n\t *  @param {Time} startTime\n\t *  @param {Time} duration\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				8585,
-				8997
+				8595,
+				9007
 			],
 			"filename": "Param.js",
 			"lineno": 294,
@@ -89001,8 +90321,8 @@
 		"comment": "/**\n\t *  Cancels all scheduled parameter changes with times greater than or\n\t *  equal to startTime.\n\t *\n\t *  @param  {Time} startTime\n\t *  @returns {Tone.Param} this\n\t */",
 		"meta": {
 			"range": [
-				9174,
-				9321
+				9184,
+				9331
 			],
 			"filename": "Param.js",
 			"lineno": 312,
@@ -89050,8 +90370,8 @@
 		"comment": "/**\n\t *  Ramps to the given value over the duration of the rampTime.\n\t *  Automatically selects the best ramp type (exponential or linear)\n\t *  depending on the `units` of the signal\n\t *\n\t *  @param  {number} value\n\t *  @param  {Time} rampTime \tThe time that it takes the\n\t *                              value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //ramp to the value either linearly or exponentially\n\t * //depending on the \"units\" value of the signal\n\t * signal.rampTo(0, 10);\n\t *  @example\n\t * //schedule it to ramp starting at a specific time\n\t * signal.rampTo(0, 10, 5)\n\t */",
 		"meta": {
 			"range": [
-				10014,
-				10384
+				10024,
+				10394
 			],
 			"filename": "Param.js",
 			"lineno": 335,
@@ -89149,76 +90469,310 @@
 		"inherited": true
 	},
 	{
-		"comment": "/**\n\t *  When signals connect to other signals or AudioParams, \n\t *  they take over the output value of that signal or AudioParam. \n\t *  For all other nodes, the behavior is the same as a default <code>connect</code>. \n\t *\n\t *  @override\n\t *  @param {AudioParam|AudioNode|Tone.Signal|Tone} node \n\t *  @param {number} [outputNumber=0] The output number to connect from.\n\t *  @param {number} [inputNumber=0] The input number to connect to.\n\t *  @returns {Tone.SignalBase} this\n\t *  @method\n\t */",
+		"comment": "/**\n\t * Get the audio context belonging to this instance.\n\t * @type {AudioNode}\n\t * @memberOf Tone.AudioNode#\n\t * @name context\n\t * @readOnly\n\t */",
+		"meta": {
+			"filename": "AudioNode.js",
+			"lineno": 27,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {}
+		},
+		"description": "Get the audio context belonging to this instance.",
+		"type": {
+			"names": [
+				"AudioNode"
+			]
+		},
+		"memberof": "Tone.Subtract",
+		"name": "context",
+		"readonly": true,
+		"longname": "Tone.Subtract#context",
+		"scope": "instance",
+		"kind": "member",
+		"inherits": "Tone.AudioNode#context",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  disconnect the output\n\t *  @param {Number|AudioNode} output Either the output index to disconnect\n\t *                                   if the output is an array, or the\n\t *                                   node to disconnect from.\n\t *  @returns {Tone.AudioNode} this\n\t */",
 		"meta": {
 			"range": [
-				2369,
-				2434
+				3175,
+				3573
 			],
-			"filename": "Signal.js",
-			"lineno": 73,
+			"filename": "AudioNode.js",
+			"lineno": 127,
 			"columnno": 1,
-			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
 			"code": {
-				"id": "astnode100050888",
-				"name": "Tone.Signal.prototype.connect",
-				"type": "MemberExpression",
-				"value": "Tone.SignalBase.prototype.connect",
-				"paramnames": []
+				"id": "astnode100013415",
+				"name": "Tone.AudioNode.prototype.disconnect",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"destination",
+					"outputNum",
+					"inputNum"
+				]
+			},
+			"vars": {
+				"outputNum": "Tone.AudioNode#disconnect~outputNum"
 			}
 		},
-		"description": "When signals connect to other signals or AudioParams, \n they take over the output value of that signal or AudioParam. \n For all other nodes, the behavior is the same as a default <code>connect</code>.",
+		"description": "disconnect the output",
 		"params": [
 			{
 				"type": {
 					"names": [
-						"AudioParam",
-						"AudioNode",
-						"Tone.Signal",
-						"Tone"
+						"Number",
+						"AudioNode"
 					]
 				},
-				"name": "node"
-			},
-			{
-				"type": {
-					"names": [
-						"number"
-					]
-				},
-				"optional": true,
-				"defaultvalue": 0,
-				"description": "The output number to connect from.",
-				"name": "outputNumber"
-			},
-			{
-				"type": {
-					"names": [
-						"number"
-					]
-				},
-				"optional": true,
-				"defaultvalue": 0,
-				"description": "The input number to connect to.",
-				"name": "inputNumber"
+				"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+				"name": "output"
 			}
 		],
 		"returns": [
 			{
 				"type": {
 					"names": [
-						"Tone.SignalBase"
+						"Tone.AudioNode"
 					]
 				},
 				"description": "this"
 			}
 		],
+		"name": "disconnect",
+		"longname": "Tone.Subtract#disconnect",
 		"kind": "function",
+		"memberof": "Tone.Subtract",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#disconnect",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Connect the output of this node to the rest of the nodes in series.\n\t *  @example\n\t *  //connect a node to an effect, panVol and then to the master output\n\t *  node.chain(effect, panVol, Tone.Master);\n\t *  @param {...AudioParam|Tone|AudioNode} nodes\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				3878,
+				4103
+			],
+			"filename": "AudioNode.js",
+			"lineno": 148,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013490",
+				"name": "Tone.AudioNode.prototype.chain",
+				"type": "FunctionExpression",
+				"paramnames": []
+			},
+			"vars": {
+				"currentUnit": "Tone.AudioNode#chain~currentUnit",
+				"i": "Tone.AudioNode#chain~i",
+				"toUnit": "Tone.AudioNode#chain~toUnit"
+			}
+		},
+		"description": "Connect the output of this node to the rest of the nodes in series.",
+		"examples": [
+			"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+		],
+		"params": [
+			{
+				"type": {
+					"names": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					]
+				},
+				"name": "nodes"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "chain",
+		"longname": "Tone.Subtract#chain",
+		"kind": "function",
+		"memberof": "Tone.Subtract",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#chain",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  connect the output of this node to the rest of the nodes in parallel.\n\t *  @param {...AudioParam|Tone|AudioNode} nodes\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				4277,
+				4418
+			],
+			"filename": "AudioNode.js",
+			"lineno": 163,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013536",
+				"name": "Tone.AudioNode.prototype.fan",
+				"type": "FunctionExpression",
+				"paramnames": []
+			},
+			"vars": {
+				"i": "Tone.AudioNode#fan~i"
+			}
+		},
+		"description": "connect the output of this node to the rest of the nodes in parallel.",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					]
+				},
+				"name": "nodes"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "fan",
+		"longname": "Tone.Subtract#fan",
+		"kind": "function",
+		"memberof": "Tone.Subtract",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#fan",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)\n\t *  @returns {Tone.AudioNode} this\n\t *  @example\n\t * //connect an oscillator to the master output\n\t * var osc = new Tone.Oscillator().toMaster();\n\t */",
+		"meta": {
+			"range": [
+				3590,
+				3684
+			],
+			"filename": "Master.js",
+			"lineno": 129,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100022090",
+				"name": "Tone.AudioNode.prototype.toMaster",
+				"type": "FunctionExpression",
+				"paramnames": []
+			}
+		},
+		"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"examples": [
+			"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+		],
+		"name": "toMaster",
+		"longname": "Tone.Subtract#toMaster",
+		"kind": "function",
+		"memberof": "Tone.Subtract",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#toMaster",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode\n\t *  @param  {Tone | AudioParam | AudioNode} unit\n\t *  @param {number} [outputNum=0] optionally which output to connect from\n\t *  @param {number} [inputNum=0] optionally which input to connect to\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				2598,
+				2887
+			],
+			"filename": "AudioNode.js",
+			"lineno": 110,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013358",
+				"name": "Tone.AudioNode.prototype.connect",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"unit",
+					"outputNum",
+					"inputNum"
+				]
+			},
+			"vars": {
+				"outputNum": "Tone.AudioNode#connect~outputNum"
+			}
+		},
+		"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					]
+				},
+				"name": "unit"
+			},
+			{
+				"type": {
+					"names": [
+						"number"
+					]
+				},
+				"optional": true,
+				"defaultvalue": 0,
+				"description": "optionally which output to connect from",
+				"name": "outputNum"
+			},
+			{
+				"type": {
+					"names": [
+						"number"
+					]
+				},
+				"optional": true,
+				"defaultvalue": 0,
+				"description": "optionally which input to connect to",
+				"name": "inputNum"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
 		"name": "connect",
 		"longname": "Tone.TimelineSignal#connect",
+		"kind": "function",
 		"memberof": "Tone.TimelineSignal",
 		"scope": "instance",
-		"inherits": "Tone.Signal#connect",
+		"inherits": "Tone.AudioNode#connect",
 		"inherited": true,
 		"overrides": "Tone.Signal#connect"
 	},
@@ -89226,8 +90780,8 @@
 		"comment": "/**\n\t\t *  The units of the parameter\n\t\t *  @type {Tone.Type}\n\t\t */",
 		"meta": {
 			"range": [
-				880,
-				906
+				890,
+				916
 			],
 			"filename": "Param.js",
 			"lineno": 31,
@@ -89259,8 +90813,8 @@
 		"comment": "/**\n\t\t *  If the value should be converted or not\n\t\t *  @type {Boolean}\n\t\t */",
 		"meta": {
 			"range": [
-				991,
-				1021
+				1001,
+				1031
 			],
 			"filename": "Param.js",
 			"lineno": 37,
@@ -89292,8 +90846,8 @@
 		"comment": "/**\n\t *  Schedules an exponential continuous change in parameter value from\n\t *  the current time and current value to the given value over the\n\t *  duration of the rampTime.\n\t *\n\t *  @param  {number} value   The value to ramp to.\n\t *  @param  {Time} rampTime the time that it takes the\n\t *                               value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //exponentially ramp to the value 2 over 4 seconds.\n\t * signal.exponentialRampToValue(2, 4);\n\t */",
 		"meta": {
 			"range": [
-				6516,
-				6772
+				6526,
+				6782
 			],
 			"filename": "Param.js",
 			"lineno": 238,
@@ -89370,8 +90924,8 @@
 		"comment": "/**\n\t *  Schedules an linear continuous change in parameter value from\n\t *  the current time and current value to the given value over the\n\t *  duration of the rampTime.\n\t *\n\t *  @param  {number} value   The value to ramp to.\n\t *  @param  {Time} rampTime the time that it takes the\n\t *                               value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //linearly ramp to the value 4 over 3 seconds.\n\t * signal.linearRampToValue(4, 3);\n\t */",
 		"meta": {
 			"range": [
-				7333,
-				7579
+				7343,
+				7589
 			],
 			"filename": "Param.js",
 			"lineno": 259,
@@ -89448,8 +91002,8 @@
 		"comment": "/**\n\t *  Ramps to the given value over the duration of the rampTime.\n\t *  Automatically selects the best ramp type (exponential or linear)\n\t *  depending on the `units` of the signal\n\t *\n\t *  @param  {number} value\n\t *  @param  {Time} rampTime \tThe time that it takes the\n\t *                              value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //ramp to the value either linearly or exponentially\n\t * //depending on the \"units\" value of the signal\n\t * signal.rampTo(0, 10);\n\t *  @example\n\t * //schedule it to ramp starting at a specific time\n\t * signal.rampTo(0, 10, 5)\n\t */",
 		"meta": {
 			"range": [
-				10014,
-				10384
+				10024,
+				10394
 			],
 			"filename": "Param.js",
 			"lineno": 335,
@@ -89544,6 +91098,235 @@
 		"scope": "instance",
 		"kind": "member",
 		"inherits": "Tone.Param#lfo",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t * Get the audio context belonging to this instance.\n\t * @type {AudioNode}\n\t * @memberOf Tone.AudioNode#\n\t * @name context\n\t * @readOnly\n\t */",
+		"meta": {
+			"filename": "AudioNode.js",
+			"lineno": 27,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {}
+		},
+		"description": "Get the audio context belonging to this instance.",
+		"type": {
+			"names": [
+				"AudioNode"
+			]
+		},
+		"memberof": "Tone.TimelineSignal",
+		"name": "context",
+		"readonly": true,
+		"longname": "Tone.TimelineSignal#context",
+		"scope": "instance",
+		"kind": "member",
+		"inherits": "Tone.AudioNode#context",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  disconnect the output\n\t *  @param {Number|AudioNode} output Either the output index to disconnect\n\t *                                   if the output is an array, or the\n\t *                                   node to disconnect from.\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				3175,
+				3573
+			],
+			"filename": "AudioNode.js",
+			"lineno": 127,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013415",
+				"name": "Tone.AudioNode.prototype.disconnect",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"destination",
+					"outputNum",
+					"inputNum"
+				]
+			},
+			"vars": {
+				"outputNum": "Tone.AudioNode#disconnect~outputNum"
+			}
+		},
+		"description": "disconnect the output",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"Number",
+						"AudioNode"
+					]
+				},
+				"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+				"name": "output"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "disconnect",
+		"longname": "Tone.TimelineSignal#disconnect",
+		"kind": "function",
+		"memberof": "Tone.TimelineSignal",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#disconnect",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Connect the output of this node to the rest of the nodes in series.\n\t *  @example\n\t *  //connect a node to an effect, panVol and then to the master output\n\t *  node.chain(effect, panVol, Tone.Master);\n\t *  @param {...AudioParam|Tone|AudioNode} nodes\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				3878,
+				4103
+			],
+			"filename": "AudioNode.js",
+			"lineno": 148,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013490",
+				"name": "Tone.AudioNode.prototype.chain",
+				"type": "FunctionExpression",
+				"paramnames": []
+			},
+			"vars": {
+				"currentUnit": "Tone.AudioNode#chain~currentUnit",
+				"i": "Tone.AudioNode#chain~i",
+				"toUnit": "Tone.AudioNode#chain~toUnit"
+			}
+		},
+		"description": "Connect the output of this node to the rest of the nodes in series.",
+		"examples": [
+			"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+		],
+		"params": [
+			{
+				"type": {
+					"names": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					]
+				},
+				"name": "nodes"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "chain",
+		"longname": "Tone.TimelineSignal#chain",
+		"kind": "function",
+		"memberof": "Tone.TimelineSignal",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#chain",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  connect the output of this node to the rest of the nodes in parallel.\n\t *  @param {...AudioParam|Tone|AudioNode} nodes\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				4277,
+				4418
+			],
+			"filename": "AudioNode.js",
+			"lineno": 163,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013536",
+				"name": "Tone.AudioNode.prototype.fan",
+				"type": "FunctionExpression",
+				"paramnames": []
+			},
+			"vars": {
+				"i": "Tone.AudioNode#fan~i"
+			}
+		},
+		"description": "connect the output of this node to the rest of the nodes in parallel.",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					]
+				},
+				"name": "nodes"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "fan",
+		"longname": "Tone.TimelineSignal#fan",
+		"kind": "function",
+		"memberof": "Tone.TimelineSignal",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#fan",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)\n\t *  @returns {Tone.AudioNode} this\n\t *  @example\n\t * //connect an oscillator to the master output\n\t * var osc = new Tone.Oscillator().toMaster();\n\t */",
+		"meta": {
+			"range": [
+				3590,
+				3684
+			],
+			"filename": "Master.js",
+			"lineno": 129,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100022090",
+				"name": "Tone.AudioNode.prototype.toMaster",
+				"type": "FunctionExpression",
+				"paramnames": []
+			}
+		},
+		"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"examples": [
+			"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+		],
+		"name": "toMaster",
+		"longname": "Tone.TimelineSignal#toMaster",
+		"kind": "function",
+		"memberof": "Tone.TimelineSignal",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#toMaster",
 		"inherited": true
 	},
 	{
@@ -90093,36 +91876,41 @@
 		"inherited": true
 	},
 	{
-		"comment": "/**\n\t *  When signals connect to other signals or AudioParams, \n\t *  they take over the output value of that signal or AudioParam. \n\t *  For all other nodes, the behavior is the same as a default <code>connect</code>. \n\t *\n\t *  @override\n\t *  @param {AudioParam|AudioNode|Tone.Signal|Tone} node \n\t *  @param {number} [outputNumber=0] The output number to connect from.\n\t *  @param {number} [inputNumber=0] The input number to connect to.\n\t *  @returns {Tone.SignalBase} this\n\t *  @method\n\t */",
+		"comment": "/**\n\t *  connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode\n\t *  @param  {Tone | AudioParam | AudioNode} unit\n\t *  @param {number} [outputNum=0] optionally which output to connect from\n\t *  @param {number} [inputNum=0] optionally which input to connect to\n\t *  @returns {Tone.AudioNode} this\n\t */",
 		"meta": {
 			"range": [
-				2369,
-				2434
+				2598,
+				2887
 			],
-			"filename": "Signal.js",
-			"lineno": 73,
+			"filename": "AudioNode.js",
+			"lineno": 110,
 			"columnno": 1,
-			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
 			"code": {
-				"id": "astnode100050888",
-				"name": "Tone.Signal.prototype.connect",
-				"type": "MemberExpression",
-				"value": "Tone.SignalBase.prototype.connect",
-				"paramnames": []
+				"id": "astnode100013358",
+				"name": "Tone.AudioNode.prototype.connect",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"unit",
+					"outputNum",
+					"inputNum"
+				]
+			},
+			"vars": {
+				"outputNum": "Tone.AudioNode#connect~outputNum"
 			}
 		},
-		"description": "When signals connect to other signals or AudioParams, \n they take over the output value of that signal or AudioParam. \n For all other nodes, the behavior is the same as a default <code>connect</code>.",
+		"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 		"params": [
 			{
 				"type": {
 					"names": [
+						"Tone",
 						"AudioParam",
-						"AudioNode",
-						"Tone.Signal",
-						"Tone"
+						"AudioNode"
 					]
 				},
-				"name": "node"
+				"name": "unit"
 			},
 			{
 				"type": {
@@ -90132,8 +91920,8 @@
 				},
 				"optional": true,
 				"defaultvalue": 0,
-				"description": "The output number to connect from.",
-				"name": "outputNumber"
+				"description": "optionally which output to connect from",
+				"name": "outputNum"
 			},
 			{
 				"type": {
@@ -90143,26 +91931,26 @@
 				},
 				"optional": true,
 				"defaultvalue": 0,
-				"description": "The input number to connect to.",
-				"name": "inputNumber"
+				"description": "optionally which input to connect to",
+				"name": "inputNum"
 			}
 		],
 		"returns": [
 			{
 				"type": {
 					"names": [
-						"Tone.SignalBase"
+						"Tone.AudioNode"
 					]
 				},
 				"description": "this"
 			}
 		],
-		"kind": "function",
 		"name": "connect",
 		"longname": "Tone.TickSignal#connect",
+		"kind": "function",
 		"memberof": "Tone.TickSignal",
 		"scope": "instance",
-		"inherits": "Tone.Signal#connect",
+		"inherits": "Tone.AudioNode#connect",
 		"inherited": true
 	},
 	{
@@ -90209,8 +91997,8 @@
 		"comment": "/**\n\t\t *  The units of the parameter\n\t\t *  @type {Tone.Type}\n\t\t */",
 		"meta": {
 			"range": [
-				880,
-				906
+				890,
+				916
 			],
 			"filename": "Param.js",
 			"lineno": 31,
@@ -90242,8 +92030,8 @@
 		"comment": "/**\n\t\t *  If the value should be converted or not\n\t\t *  @type {Boolean}\n\t\t */",
 		"meta": {
 			"range": [
-				991,
-				1021
+				1001,
+				1031
 			],
 			"filename": "Param.js",
 			"lineno": 37,
@@ -90275,8 +92063,8 @@
 		"comment": "/**\n\t *  Schedules an exponential continuous change in parameter value from\n\t *  the current time and current value to the given value over the\n\t *  duration of the rampTime.\n\t *\n\t *  @param  {number} value   The value to ramp to.\n\t *  @param  {Time} rampTime the time that it takes the\n\t *                               value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //exponentially ramp to the value 2 over 4 seconds.\n\t * signal.exponentialRampToValue(2, 4);\n\t */",
 		"meta": {
 			"range": [
-				6516,
-				6772
+				6526,
+				6782
 			],
 			"filename": "Param.js",
 			"lineno": 238,
@@ -90353,8 +92141,8 @@
 		"comment": "/**\n\t *  Schedules an linear continuous change in parameter value from\n\t *  the current time and current value to the given value over the\n\t *  duration of the rampTime.\n\t *\n\t *  @param  {number} value   The value to ramp to.\n\t *  @param  {Time} rampTime the time that it takes the\n\t *                               value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //linearly ramp to the value 4 over 3 seconds.\n\t * signal.linearRampToValue(4, 3);\n\t */",
 		"meta": {
 			"range": [
-				7333,
-				7579
+				7343,
+				7589
 			],
 			"filename": "Param.js",
 			"lineno": 259,
@@ -90431,8 +92219,8 @@
 		"comment": "/**\n\t *  Ramps to the given value over the duration of the rampTime.\n\t *  Automatically selects the best ramp type (exponential or linear)\n\t *  depending on the `units` of the signal\n\t *\n\t *  @param  {number} value\n\t *  @param  {Time} rampTime \tThe time that it takes the\n\t *                              value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //ramp to the value either linearly or exponentially\n\t * //depending on the \"units\" value of the signal\n\t * signal.rampTo(0, 10);\n\t *  @example\n\t * //schedule it to ramp starting at a specific time\n\t * signal.rampTo(0, 10, 5)\n\t */",
 		"meta": {
 			"range": [
-				10014,
-				10384
+				10024,
+				10394
 			],
 			"filename": "Param.js",
 			"lineno": 335,
@@ -90527,6 +92315,235 @@
 		"scope": "instance",
 		"kind": "member",
 		"inherits": "Tone.Param#lfo",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t * Get the audio context belonging to this instance.\n\t * @type {AudioNode}\n\t * @memberOf Tone.AudioNode#\n\t * @name context\n\t * @readOnly\n\t */",
+		"meta": {
+			"filename": "AudioNode.js",
+			"lineno": 27,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {}
+		},
+		"description": "Get the audio context belonging to this instance.",
+		"type": {
+			"names": [
+				"AudioNode"
+			]
+		},
+		"memberof": "Tone.TickSignal",
+		"name": "context",
+		"readonly": true,
+		"longname": "Tone.TickSignal#context",
+		"scope": "instance",
+		"kind": "member",
+		"inherits": "Tone.AudioNode#context",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  disconnect the output\n\t *  @param {Number|AudioNode} output Either the output index to disconnect\n\t *                                   if the output is an array, or the\n\t *                                   node to disconnect from.\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				3175,
+				3573
+			],
+			"filename": "AudioNode.js",
+			"lineno": 127,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013415",
+				"name": "Tone.AudioNode.prototype.disconnect",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"destination",
+					"outputNum",
+					"inputNum"
+				]
+			},
+			"vars": {
+				"outputNum": "Tone.AudioNode#disconnect~outputNum"
+			}
+		},
+		"description": "disconnect the output",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"Number",
+						"AudioNode"
+					]
+				},
+				"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+				"name": "output"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "disconnect",
+		"longname": "Tone.TickSignal#disconnect",
+		"kind": "function",
+		"memberof": "Tone.TickSignal",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#disconnect",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Connect the output of this node to the rest of the nodes in series.\n\t *  @example\n\t *  //connect a node to an effect, panVol and then to the master output\n\t *  node.chain(effect, panVol, Tone.Master);\n\t *  @param {...AudioParam|Tone|AudioNode} nodes\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				3878,
+				4103
+			],
+			"filename": "AudioNode.js",
+			"lineno": 148,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013490",
+				"name": "Tone.AudioNode.prototype.chain",
+				"type": "FunctionExpression",
+				"paramnames": []
+			},
+			"vars": {
+				"currentUnit": "Tone.AudioNode#chain~currentUnit",
+				"i": "Tone.AudioNode#chain~i",
+				"toUnit": "Tone.AudioNode#chain~toUnit"
+			}
+		},
+		"description": "Connect the output of this node to the rest of the nodes in series.",
+		"examples": [
+			"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+		],
+		"params": [
+			{
+				"type": {
+					"names": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					]
+				},
+				"name": "nodes"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "chain",
+		"longname": "Tone.TickSignal#chain",
+		"kind": "function",
+		"memberof": "Tone.TickSignal",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#chain",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  connect the output of this node to the rest of the nodes in parallel.\n\t *  @param {...AudioParam|Tone|AudioNode} nodes\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				4277,
+				4418
+			],
+			"filename": "AudioNode.js",
+			"lineno": 163,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013536",
+				"name": "Tone.AudioNode.prototype.fan",
+				"type": "FunctionExpression",
+				"paramnames": []
+			},
+			"vars": {
+				"i": "Tone.AudioNode#fan~i"
+			}
+		},
+		"description": "connect the output of this node to the rest of the nodes in parallel.",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					]
+				},
+				"name": "nodes"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "fan",
+		"longname": "Tone.TickSignal#fan",
+		"kind": "function",
+		"memberof": "Tone.TickSignal",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#fan",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)\n\t *  @returns {Tone.AudioNode} this\n\t *  @example\n\t * //connect an oscillator to the master output\n\t * var osc = new Tone.Oscillator().toMaster();\n\t */",
+		"meta": {
+			"range": [
+				3590,
+				3684
+			],
+			"filename": "Master.js",
+			"lineno": 129,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100022090",
+				"name": "Tone.AudioNode.prototype.toMaster",
+				"type": "FunctionExpression",
+				"paramnames": []
+			}
+		},
+		"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"examples": [
+			"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+		],
+		"name": "toMaster",
+		"longname": "Tone.TickSignal#toMaster",
+		"kind": "function",
+		"memberof": "Tone.TickSignal",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#toMaster",
 		"inherited": true
 	},
 	{
@@ -90749,36 +92766,41 @@
 		"inherited": true
 	},
 	{
-		"comment": "/**\n\t *  When signals connect to other signals or AudioParams, \n\t *  they take over the output value of that signal or AudioParam. \n\t *  For all other nodes, the behavior is the same as a default <code>connect</code>. \n\t *\n\t *  @override\n\t *  @param {AudioParam|AudioNode|Tone.Signal|Tone} node \n\t *  @param {number} [outputNumber=0] The output number to connect from.\n\t *  @param {number} [inputNumber=0] The input number to connect to.\n\t *  @returns {Tone.SignalBase} this\n\t *  @method\n\t */",
+		"comment": "/**\n\t *  connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode\n\t *  @param  {Tone | AudioParam | AudioNode} unit\n\t *  @param {number} [outputNum=0] optionally which output to connect from\n\t *  @param {number} [inputNum=0] optionally which input to connect to\n\t *  @returns {Tone.AudioNode} this\n\t */",
 		"meta": {
 			"range": [
-				2369,
-				2434
+				2598,
+				2887
 			],
-			"filename": "Signal.js",
-			"lineno": 73,
+			"filename": "AudioNode.js",
+			"lineno": 110,
 			"columnno": 1,
-			"path": "/home/travis/build/Tonejs/Tone.js/Tone/signal",
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
 			"code": {
-				"id": "astnode100050888",
-				"name": "Tone.Signal.prototype.connect",
-				"type": "MemberExpression",
-				"value": "Tone.SignalBase.prototype.connect",
-				"paramnames": []
+				"id": "astnode100013358",
+				"name": "Tone.AudioNode.prototype.connect",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"unit",
+					"outputNum",
+					"inputNum"
+				]
+			},
+			"vars": {
+				"outputNum": "Tone.AudioNode#connect~outputNum"
 			}
 		},
-		"description": "When signals connect to other signals or AudioParams, \n they take over the output value of that signal or AudioParam. \n For all other nodes, the behavior is the same as a default <code>connect</code>.",
+		"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 		"params": [
 			{
 				"type": {
 					"names": [
+						"Tone",
 						"AudioParam",
-						"AudioNode",
-						"Tone.Signal",
-						"Tone"
+						"AudioNode"
 					]
 				},
-				"name": "node"
+				"name": "unit"
 			},
 			{
 				"type": {
@@ -90788,8 +92810,8 @@
 				},
 				"optional": true,
 				"defaultvalue": 0,
-				"description": "The output number to connect from.",
-				"name": "outputNumber"
+				"description": "optionally which output to connect from",
+				"name": "outputNum"
 			},
 			{
 				"type": {
@@ -90799,34 +92821,34 @@
 				},
 				"optional": true,
 				"defaultvalue": 0,
-				"description": "The input number to connect to.",
-				"name": "inputNumber"
+				"description": "optionally which input to connect to",
+				"name": "inputNum"
 			}
 		],
 		"returns": [
 			{
 				"type": {
 					"names": [
-						"Tone.SignalBase"
+						"Tone.AudioNode"
 					]
 				},
 				"description": "this"
 			}
 		],
-		"kind": "function",
 		"name": "connect",
 		"longname": "Tone.TransportTimelineSignal#connect",
+		"kind": "function",
 		"memberof": "Tone.TransportTimelineSignal",
 		"scope": "instance",
-		"inherits": "Tone.Signal#connect",
+		"inherits": "Tone.AudioNode#connect",
 		"inherited": true
 	},
 	{
 		"comment": "/**\n\t\t *  The units of the parameter\n\t\t *  @type {Tone.Type}\n\t\t */",
 		"meta": {
 			"range": [
-				880,
-				906
+				890,
+				916
 			],
 			"filename": "Param.js",
 			"lineno": 31,
@@ -90858,8 +92880,8 @@
 		"comment": "/**\n\t\t *  If the value should be converted or not\n\t\t *  @type {Boolean}\n\t\t */",
 		"meta": {
 			"range": [
-				991,
-				1021
+				1001,
+				1031
 			],
 			"filename": "Param.js",
 			"lineno": 37,
@@ -90891,8 +92913,8 @@
 		"comment": "/**\n\t *  Schedules an exponential continuous change in parameter value from\n\t *  the current time and current value to the given value over the\n\t *  duration of the rampTime.\n\t *\n\t *  @param  {number} value   The value to ramp to.\n\t *  @param  {Time} rampTime the time that it takes the\n\t *                               value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //exponentially ramp to the value 2 over 4 seconds.\n\t * signal.exponentialRampToValue(2, 4);\n\t */",
 		"meta": {
 			"range": [
-				6516,
-				6772
+				6526,
+				6782
 			],
 			"filename": "Param.js",
 			"lineno": 238,
@@ -90969,8 +92991,8 @@
 		"comment": "/**\n\t *  Schedules an linear continuous change in parameter value from\n\t *  the current time and current value to the given value over the\n\t *  duration of the rampTime.\n\t *\n\t *  @param  {number} value   The value to ramp to.\n\t *  @param  {Time} rampTime the time that it takes the\n\t *                               value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //linearly ramp to the value 4 over 3 seconds.\n\t * signal.linearRampToValue(4, 3);\n\t */",
 		"meta": {
 			"range": [
-				7333,
-				7579
+				7343,
+				7589
 			],
 			"filename": "Param.js",
 			"lineno": 259,
@@ -91047,8 +93069,8 @@
 		"comment": "/**\n\t *  Ramps to the given value over the duration of the rampTime.\n\t *  Automatically selects the best ramp type (exponential or linear)\n\t *  depending on the `units` of the signal\n\t *\n\t *  @param  {number} value\n\t *  @param  {Time} rampTime \tThe time that it takes the\n\t *                              value to ramp from it's current value\n\t *  @param {Time}\t[startTime=now] \tWhen the ramp should start.\n\t *  @returns {Tone.Param} this\n\t *  @example\n\t * //ramp to the value either linearly or exponentially\n\t * //depending on the \"units\" value of the signal\n\t * signal.rampTo(0, 10);\n\t *  @example\n\t * //schedule it to ramp starting at a specific time\n\t * signal.rampTo(0, 10, 5)\n\t */",
 		"meta": {
 			"range": [
-				10014,
-				10384
+				10024,
+				10394
 			],
 			"filename": "Param.js",
 			"lineno": 335,
@@ -91143,6 +93165,235 @@
 		"scope": "instance",
 		"kind": "member",
 		"inherits": "Tone.Param#lfo",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t * Get the audio context belonging to this instance.\n\t * @type {AudioNode}\n\t * @memberOf Tone.AudioNode#\n\t * @name context\n\t * @readOnly\n\t */",
+		"meta": {
+			"filename": "AudioNode.js",
+			"lineno": 27,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {}
+		},
+		"description": "Get the audio context belonging to this instance.",
+		"type": {
+			"names": [
+				"AudioNode"
+			]
+		},
+		"memberof": "Tone.TransportTimelineSignal",
+		"name": "context",
+		"readonly": true,
+		"longname": "Tone.TransportTimelineSignal#context",
+		"scope": "instance",
+		"kind": "member",
+		"inherits": "Tone.AudioNode#context",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  disconnect the output\n\t *  @param {Number|AudioNode} output Either the output index to disconnect\n\t *                                   if the output is an array, or the\n\t *                                   node to disconnect from.\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				3175,
+				3573
+			],
+			"filename": "AudioNode.js",
+			"lineno": 127,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013415",
+				"name": "Tone.AudioNode.prototype.disconnect",
+				"type": "FunctionExpression",
+				"paramnames": [
+					"destination",
+					"outputNum",
+					"inputNum"
+				]
+			},
+			"vars": {
+				"outputNum": "Tone.AudioNode#disconnect~outputNum"
+			}
+		},
+		"description": "disconnect the output",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"Number",
+						"AudioNode"
+					]
+				},
+				"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+				"name": "output"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "disconnect",
+		"longname": "Tone.TransportTimelineSignal#disconnect",
+		"kind": "function",
+		"memberof": "Tone.TransportTimelineSignal",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#disconnect",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Connect the output of this node to the rest of the nodes in series.\n\t *  @example\n\t *  //connect a node to an effect, panVol and then to the master output\n\t *  node.chain(effect, panVol, Tone.Master);\n\t *  @param {...AudioParam|Tone|AudioNode} nodes\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				3878,
+				4103
+			],
+			"filename": "AudioNode.js",
+			"lineno": 148,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013490",
+				"name": "Tone.AudioNode.prototype.chain",
+				"type": "FunctionExpression",
+				"paramnames": []
+			},
+			"vars": {
+				"currentUnit": "Tone.AudioNode#chain~currentUnit",
+				"i": "Tone.AudioNode#chain~i",
+				"toUnit": "Tone.AudioNode#chain~toUnit"
+			}
+		},
+		"description": "Connect the output of this node to the rest of the nodes in series.",
+		"examples": [
+			"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+		],
+		"params": [
+			{
+				"type": {
+					"names": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					]
+				},
+				"name": "nodes"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "chain",
+		"longname": "Tone.TransportTimelineSignal#chain",
+		"kind": "function",
+		"memberof": "Tone.TransportTimelineSignal",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#chain",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  connect the output of this node to the rest of the nodes in parallel.\n\t *  @param {...AudioParam|Tone|AudioNode} nodes\n\t *  @returns {Tone.AudioNode} this\n\t */",
+		"meta": {
+			"range": [
+				4277,
+				4418
+			],
+			"filename": "AudioNode.js",
+			"lineno": 163,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100013536",
+				"name": "Tone.AudioNode.prototype.fan",
+				"type": "FunctionExpression",
+				"paramnames": []
+			},
+			"vars": {
+				"i": "Tone.AudioNode#fan~i"
+			}
+		},
+		"description": "connect the output of this node to the rest of the nodes in parallel.",
+		"params": [
+			{
+				"type": {
+					"names": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					]
+				},
+				"name": "nodes"
+			}
+		],
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"name": "fan",
+		"longname": "Tone.TransportTimelineSignal#fan",
+		"kind": "function",
+		"memberof": "Tone.TransportTimelineSignal",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#fan",
+		"inherited": true
+	},
+	{
+		"comment": "/**\n\t *  Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)\n\t *  @returns {Tone.AudioNode} this\n\t *  @example\n\t * //connect an oscillator to the master output\n\t * var osc = new Tone.Oscillator().toMaster();\n\t */",
+		"meta": {
+			"range": [
+				3590,
+				3684
+			],
+			"filename": "Master.js",
+			"lineno": 129,
+			"columnno": 1,
+			"path": "/home/travis/build/Tonejs/Tone.js/Tone/core",
+			"code": {
+				"id": "astnode100022090",
+				"name": "Tone.AudioNode.prototype.toMaster",
+				"type": "FunctionExpression",
+				"paramnames": []
+			}
+		},
+		"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+		"returns": [
+			{
+				"type": {
+					"names": [
+						"Tone.AudioNode"
+					]
+				},
+				"description": "this"
+			}
+		],
+		"examples": [
+			"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+		],
+		"name": "toMaster",
+		"longname": "Tone.TransportTimelineSignal#toMaster",
+		"kind": "function",
+		"memberof": "Tone.TransportTimelineSignal",
+		"scope": "instance",
+		"inherits": "Tone.AudioNode#toMaster",
 		"inherited": true
 	},
 	{
