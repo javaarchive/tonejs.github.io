@@ -7,7 +7,7 @@ JSDOC_OUTPUT=./tmp/docs.json
 SIMPLIFY_JSDOC_OUTPUT=./tmp/docs_simple.json
 
 # run jsdocs on all of it
-/usr/local/bin/jsdoc -X $TONE_FILES > $JSDOC_OUTPUT
+jsdoc -X $TONE_FILES > $JSDOC_OUTPUT
 
 # get the version number
 VERSION=$(node jsdoc_version.js $JSDOC_OUTPUT)
