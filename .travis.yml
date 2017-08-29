@@ -10,3 +10,11 @@ before_script:
 script:
     - cd ./travis
     - sh travis.sh
+deploy:
+    provider: pages
+    target_branch: travis
+    skip_cleanup: true
+    github_token: $GH_TOKEN
+    local_dir: ../
+    on:
+        branch: travis
