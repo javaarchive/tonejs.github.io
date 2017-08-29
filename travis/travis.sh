@@ -30,4 +30,4 @@ git add ../_documentations
 git commit -m 'updated documentation'
 
 git remote add origin-pages https://${GH_TOKEN}@github.com/Tonejs/tonejs.github.io.git > /dev/null 2>&1
-git push --set-upstream origin-pages travis
+git push --set-upstream origin-pages travis-two
