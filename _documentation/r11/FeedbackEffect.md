@@ -1,5 +1,6 @@
 ---
-title: FeedbackEffect
-layout: doc
-version: r11
+title : FeedbackEffect
+version : r11
+layout : docs
+category : effect
 ---

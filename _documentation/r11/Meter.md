@@ -1,5 +1,6 @@
 ---
-title: Meter
-layout: doc
-version: r11
+title : Meter
+version : r11
+layout : docs
+category : component
 ---

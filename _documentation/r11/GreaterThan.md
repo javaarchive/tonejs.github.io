@@ -1,5 +1,6 @@
 ---
-title: GreaterThan
-layout: doc
-version: r11
+title : GreaterThan
+version : r11
+layout : docs
+category : signal
 ---

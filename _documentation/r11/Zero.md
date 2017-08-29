@@ -1,5 +1,6 @@
 ---
-title: Zero
-layout: doc
-version: r11
+title : Zero
+version : r11
+layout : docs
+category : signal
 ---

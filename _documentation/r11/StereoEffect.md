@@ -1,5 +1,6 @@
 ---
-title: StereoEffect
-layout: doc
-version: r11
+title : StereoEffect
+version : r11
+layout : docs
+category : effect
 ---

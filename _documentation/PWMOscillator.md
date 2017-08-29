@@ -1,4 +1,4 @@
 ---
-title: PWMOscillator
-layout: forward
+title : PWMOscillator
+layout : forward
 ---

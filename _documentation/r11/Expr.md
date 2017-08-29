@@ -1,5 +1,6 @@
 ---
-title: Expr
-layout: doc
-version: r11
+title : Expr
+version : r11
+layout : docs
+category : signal
 ---

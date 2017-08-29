@@ -1,4 +1,4 @@
 ---
-title: StereoWidener
-layout: forward
+title : StereoWidener
+layout : forward
 ---

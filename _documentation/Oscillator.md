@@ -1,4 +1,4 @@
 ---
-title: Oscillator
-layout: forward
+title : Oscillator
+layout : forward
 ---

@@ -1,4 +1,4 @@
 ---
-title: Master
-layout: forward
+title : Master
+layout : forward
 ---

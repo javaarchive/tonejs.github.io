@@ -1,4 +1,4 @@
 ---
-title: FeedbackEffect
-layout: forward
+title : FeedbackEffect
+layout : forward
 ---

@@ -1,4 +1,4 @@
 ---
-title: NoiseSynth
-layout: forward
+title : NoiseSynth
+layout : forward
 ---

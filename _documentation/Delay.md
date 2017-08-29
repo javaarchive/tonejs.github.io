@@ -1,4 +1,4 @@
 ---
-title: Delay
-layout: forward
+title : Delay
+layout : forward
 ---

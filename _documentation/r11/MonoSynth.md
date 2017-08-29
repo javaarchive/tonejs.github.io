@@ -1,5 +1,6 @@
 ---
-title: MonoSynth
-layout: doc
-version: r11
+title : MonoSynth
+version : r11
+layout : docs
+category : instrument
 ---

@@ -1,4 +1,4 @@
 ---
-title: Split
-layout: forward
+title : Split
+layout : forward
 ---

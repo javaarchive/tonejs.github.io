@@ -1,5 +1,6 @@
 ---
-title: MultiPlayer
-layout: doc
-version: r11
+title : MultiPlayer
+version : r11
+layout : docs
+category : source
 ---

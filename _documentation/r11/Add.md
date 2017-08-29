@@ -1,5 +1,6 @@
 ---
-title: Add
-layout: doc
-version: r11
+title : Add
+version : r11
+layout : docs
+category : signal
 ---

@@ -1,5 +1,6 @@
 ---
-title: TickSignal
-layout: doc
-version: r11
+title : TickSignal
+version : r11
+layout : docs
+category : signal
 ---

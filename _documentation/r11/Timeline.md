@@ -1,5 +1,6 @@
 ---
-title: Timeline
-layout: doc
-version: r11
+title : Timeline
+version : r11
+layout : docs
+category : core
 ---

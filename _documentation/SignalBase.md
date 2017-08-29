@@ -1,4 +1,4 @@
 ---
-title: SignalBase
-layout: forward
+title : SignalBase
+layout : forward
 ---

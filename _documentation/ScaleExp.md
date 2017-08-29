@@ -1,4 +1,4 @@
 ---
-title: ScaleExp
-layout: forward
+title : ScaleExp
+layout : forward
 ---

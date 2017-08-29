@@ -1,5 +1,6 @@
 ---
-title: Subtract
-layout: doc
-version: r11
+title : Subtract
+version : r11
+layout : docs
+category : signal
 ---

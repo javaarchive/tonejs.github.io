@@ -1,4 +1,4 @@
 ---
-title: Distortion
-layout: forward
+title : Distortion
+layout : forward
 ---

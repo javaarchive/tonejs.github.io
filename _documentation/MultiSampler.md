@@ -1,4 +1,0 @@
----
-title: MultiSampler
-layout: forward
----

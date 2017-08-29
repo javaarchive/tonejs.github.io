@@ -1,4 +1,4 @@
 ---
-title: Multiply
-layout: forward
+title : Multiply
+layout : forward
 ---

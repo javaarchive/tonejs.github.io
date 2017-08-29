@@ -1,5 +1,6 @@
 ---
-title: BitCrusher
-layout: doc
-version: r11
+title : BitCrusher
+version : r11
+layout : docs
+category : effect
 ---

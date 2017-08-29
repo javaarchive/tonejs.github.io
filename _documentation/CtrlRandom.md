@@ -1,4 +1,4 @@
 ---
-title: CtrlRandom
-layout: forward
+title : CtrlRandom
+layout : forward
 ---

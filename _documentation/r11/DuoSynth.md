@@ -1,5 +1,6 @@
 ---
-title: DuoSynth
-layout: doc
-version: r11
+title : DuoSynth
+version : r11
+layout : docs
+category : instrument
 ---

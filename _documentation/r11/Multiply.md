@@ -1,5 +1,6 @@
 ---
-title: Multiply
-layout: doc
-version: r11
+title : Multiply
+version : r11
+layout : docs
+category : signal
 ---

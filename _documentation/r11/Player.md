@@ -1,5 +1,6 @@
 ---
-title: Player
-layout: doc
-version: r11
+title : Player
+version : r11
+layout : docs
+category : source
 ---

@@ -1,4 +1,4 @@
 ---
-title: PanVol
-layout: forward
+title : PanVol
+layout : forward
 ---

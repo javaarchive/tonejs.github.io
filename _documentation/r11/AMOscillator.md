@@ -1,5 +1,6 @@
 ---
-title: AMOscillator
-layout: doc
-version: r11
+title : AMOscillator
+version : r11
+layout : docs
+category : source
 ---

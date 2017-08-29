@@ -1,5 +1,6 @@
 ---
-title: FMSynth
-layout: doc
-version: r11
+title : FMSynth
+version : r11
+layout : docs
+category : instrument
 ---

@@ -1,5 +1,6 @@
 ---
-title: GreaterThanZero
-layout: doc
-version: r11
+title : GreaterThanZero
+version : r11
+layout : docs
+category : signal
 ---

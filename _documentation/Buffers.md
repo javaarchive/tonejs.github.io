@@ -1,4 +1,4 @@
 ---
-title: Buffers
-layout: forward
+title : Buffers
+layout : forward
 ---

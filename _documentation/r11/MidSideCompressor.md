@@ -1,5 +1,6 @@
 ---
-title: MidSideCompressor
-layout: doc
-version: r11
+title : MidSideCompressor
+version : r11
+layout : docs
+category : component
 ---

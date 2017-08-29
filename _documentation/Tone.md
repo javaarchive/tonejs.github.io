@@ -1,4 +1,4 @@
 ---
-title: Tone
-layout: forward
+title : Tone
+layout : forward
 ---

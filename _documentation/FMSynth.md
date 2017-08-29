@@ -1,4 +1,4 @@
 ---
-title: FMSynth
-layout: forward
+title : FMSynth
+layout : forward
 ---

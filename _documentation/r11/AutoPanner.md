@@ -1,5 +1,6 @@
 ---
-title: AutoPanner
-layout: doc
-version: r11
+title : AutoPanner
+version : r11
+layout : docs
+category : effect
 ---

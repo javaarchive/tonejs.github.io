@@ -1,5 +1,6 @@
 ---
-title: CtrlPattern
-layout: doc
-version: r11
+title : CtrlPattern
+version : r11
+layout : docs
+category : control
 ---

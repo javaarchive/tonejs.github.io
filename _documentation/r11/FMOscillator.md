@@ -1,5 +1,6 @@
 ---
-title: FMOscillator
-layout: doc
-version: r11
+title : FMOscillator
+version : r11
+layout : docs
+category : source
 ---

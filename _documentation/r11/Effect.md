@@ -1,5 +1,6 @@
 ---
-title: Effect
-layout: doc
-version: r11
+title : Effect
+version : r11
+layout : docs
+category : effect
 ---

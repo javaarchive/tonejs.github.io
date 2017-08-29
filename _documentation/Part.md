@@ -1,4 +1,4 @@
 ---
-title: Part
-layout: forward
+title : Part
+layout : forward
 ---

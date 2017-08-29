@@ -1,5 +1,6 @@
 ---
-title: Mono
-layout: doc
-version: r11
+title : Mono
+version : r11
+layout : docs
+category : component
 ---

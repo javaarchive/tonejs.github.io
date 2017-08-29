@@ -1,5 +1,6 @@
 ---
-title: OmniOscillator
-layout: doc
-version: r11
+title : OmniOscillator
+version : r11
+layout : docs
+category : source
 ---

@@ -1,4 +1,4 @@
 ---
-title: Clock
-layout: forward
+title : Clock
+layout : forward
 ---

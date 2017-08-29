@@ -1,4 +1,4 @@
 ---
-title: StereoFeedbackEffect
-layout: forward
+title : StereoFeedbackEffect
+layout : forward
 ---

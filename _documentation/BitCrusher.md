@@ -1,4 +1,4 @@
 ---
-title: BitCrusher
-layout: forward
+title : BitCrusher
+layout : forward
 ---

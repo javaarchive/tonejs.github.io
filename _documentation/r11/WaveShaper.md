@@ -1,5 +1,6 @@
 ---
-title: WaveShaper
-layout: doc
-version: r11
+title : WaveShaper
+version : r11
+layout : docs
+category : signal
 ---

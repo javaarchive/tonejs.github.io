@@ -1,4 +1,4 @@
 ---
-title: Merge
-layout: forward
+title : Merge
+layout : forward
 ---

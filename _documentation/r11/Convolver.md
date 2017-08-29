@@ -1,5 +1,6 @@
 ---
-title: Convolver
-layout: doc
-version: r11
+title : Convolver
+version : r11
+layout : docs
+category : effect
 ---

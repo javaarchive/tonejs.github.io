@@ -1,5 +1,6 @@
 ---
-title: ScaledEnvelope
-layout: doc
-version: r11
+title : ScaledEnvelope
+version : r11
+layout : docs
+category : component
 ---

@@ -1,4 +1,4 @@
 ---
-title: Zero
-layout: forward
+title : Zero
+layout : forward
 ---

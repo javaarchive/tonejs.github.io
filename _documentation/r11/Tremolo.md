@@ -1,5 +1,6 @@
 ---
-title: Tremolo
-layout: doc
-version: r11
+title : Tremolo
+version : r11
+layout : docs
+category : effect
 ---

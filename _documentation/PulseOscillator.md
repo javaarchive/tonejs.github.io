@@ -1,4 +1,4 @@
 ---
-title: PulseOscillator
-layout: forward
+title : PulseOscillator
+layout : forward
 ---

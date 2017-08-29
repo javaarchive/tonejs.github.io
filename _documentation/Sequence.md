@@ -1,4 +1,4 @@
 ---
-title: Sequence
-layout: forward
+title : Sequence
+layout : forward
 ---

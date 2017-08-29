@@ -1,5 +1,6 @@
 ---
-title: TimelineSignal
-layout: doc
-version: r11
+title : TimelineSignal
+version : r11
+layout : docs
+category : signal
 ---

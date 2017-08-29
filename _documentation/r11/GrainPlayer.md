@@ -1,5 +1,6 @@
 ---
-title: GrainPlayer
-layout: doc
-version: r11
+title : GrainPlayer
+version : r11
+layout : docs
+category : source
 ---

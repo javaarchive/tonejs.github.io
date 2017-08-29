@@ -1,4 +1,4 @@
 ---
-title: Pattern
-layout: forward
+title : Pattern
+layout : forward
 ---

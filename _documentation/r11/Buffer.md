@@ -1,5 +1,6 @@
 ---
-title: Buffer
-layout: doc
-version: r11
+title : Buffer
+version : r11
+layout : docs
+category : core
 ---

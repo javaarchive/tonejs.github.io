@@ -1,4 +1,4 @@
 ---
-title: CtrlInterpolate
-layout: forward
+title : CtrlInterpolate
+layout : forward
 ---

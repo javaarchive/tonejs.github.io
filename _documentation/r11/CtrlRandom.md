@@ -1,5 +1,6 @@
 ---
-title: CtrlRandom
-layout: doc
-version: r11
+title : CtrlRandom
+version : r11
+layout : docs
+category : control
 ---

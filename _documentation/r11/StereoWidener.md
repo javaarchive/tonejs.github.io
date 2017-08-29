@@ -1,5 +1,6 @@
 ---
-title: StereoWidener
-layout: doc
-version: r11
+title : StereoWidener
+version : r11
+layout : docs
+category : effect
 ---

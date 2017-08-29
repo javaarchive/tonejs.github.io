@@ -1,5 +1,6 @@
 ---
-title: Master
-layout: doc
-version: r11
+title : Master
+version : r11
+layout : docs
+category : core
 ---

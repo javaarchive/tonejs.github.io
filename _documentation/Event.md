@@ -1,4 +1,4 @@
 ---
-title: Event
-layout: forward
+title : Event
+layout : forward
 ---

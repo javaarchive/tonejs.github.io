@@ -1,4 +1,4 @@
 ---
-title: TimelineSignal
-layout: forward
+title : TimelineSignal
+layout : forward
 ---

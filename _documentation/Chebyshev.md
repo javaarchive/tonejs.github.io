@@ -1,4 +1,4 @@
 ---
-title: Chebyshev
-layout: forward
+title : Chebyshev
+layout : forward
 ---

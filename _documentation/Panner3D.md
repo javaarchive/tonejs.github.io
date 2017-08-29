@@ -1,4 +1,4 @@
 ---
-title: Panner3D
-layout: forward
+title : Panner3D
+layout : forward
 ---

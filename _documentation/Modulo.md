@@ -1,4 +1,4 @@
 ---
-title: Modulo
-layout: forward
+title : Modulo
+layout : forward
 ---

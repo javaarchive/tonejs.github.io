@@ -1,5 +1,6 @@
 ---
-title: Filter
-layout: doc
-version: r11
+title : Filter
+version : r11
+layout : docs
+category : component
 ---

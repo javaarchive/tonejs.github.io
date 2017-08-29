@@ -1,4 +1,4 @@
 ---
-title: MembraneSynth
-layout: forward
+title : MembraneSynth
+layout : forward
 ---

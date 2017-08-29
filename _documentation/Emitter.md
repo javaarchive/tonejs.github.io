@@ -1,4 +1,4 @@
 ---
-title: Emitter
-layout: forward
+title : Emitter
+layout : forward
 ---

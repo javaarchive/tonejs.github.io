@@ -1,4 +1,4 @@
 ---
-title: Sampler
-layout: forward
+title : Sampler
+layout : forward
 ---

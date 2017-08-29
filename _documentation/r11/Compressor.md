@@ -1,5 +1,6 @@
 ---
-title: Compressor
-layout: doc
-version: r11
+title : Compressor
+version : r11
+layout : docs
+category : component
 ---

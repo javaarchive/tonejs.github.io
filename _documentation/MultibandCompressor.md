@@ -1,4 +1,4 @@
 ---
-title: MultibandCompressor
-layout: forward
+title : MultibandCompressor
+layout : forward
 ---

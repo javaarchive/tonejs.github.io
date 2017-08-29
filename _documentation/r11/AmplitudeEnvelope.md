@@ -1,5 +1,6 @@
 ---
-title: AmplitudeEnvelope
-layout: doc
-version: r11
+title : AmplitudeEnvelope
+version : r11
+layout : docs
+category : component
 ---

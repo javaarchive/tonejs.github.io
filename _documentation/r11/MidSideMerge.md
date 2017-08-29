@@ -1,5 +1,6 @@
 ---
-title: MidSideMerge
-layout: doc
-version: r11
+title : MidSideMerge
+version : r11
+layout : docs
+category : component
 ---

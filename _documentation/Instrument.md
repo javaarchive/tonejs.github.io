@@ -1,4 +1,4 @@
 ---
-title : ScaledEnvelope
+title : Instrument
 layout : forward
 ---

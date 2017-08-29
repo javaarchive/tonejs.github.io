@@ -1,5 +1,6 @@
 ---
-title: Source
-layout: doc
-version: r11
+title : Source
+version : r11
+layout : docs
+category : source
 ---

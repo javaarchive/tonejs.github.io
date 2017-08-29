@@ -1,5 +1,6 @@
 ---
-title: Loop
-layout: doc
-version: r11
+title : Loop
+version : r11
+layout : docs
+category : event
 ---

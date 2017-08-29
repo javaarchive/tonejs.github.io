@@ -1,4 +1,4 @@
 ---
-title: PolySynth
-layout: forward
+title : PolySynth
+layout : forward
 ---

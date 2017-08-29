@@ -1,5 +1,6 @@
 ---
-title: Chebyshev
-layout: doc
-version: r11
+title : Chebyshev
+version : r11
+layout : docs
+category : effect
 ---

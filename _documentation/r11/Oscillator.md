@@ -1,5 +1,6 @@
 ---
-title: Oscillator
-layout: doc
-version: r11
+title : Oscillator
+version : r11
+layout : docs
+category : source
 ---

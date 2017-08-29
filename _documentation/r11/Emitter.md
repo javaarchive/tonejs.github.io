@@ -1,5 +1,6 @@
 ---
-title: Emitter
-layout: doc
-version: r11
+title : Emitter
+version : r11
+layout : docs
+category : core
 ---

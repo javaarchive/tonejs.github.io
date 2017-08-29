@@ -1,5 +1,6 @@
 ---
-title: PWMOscillator
-layout: doc
-version: r11
+title : PWMOscillator
+version : r11
+layout : docs
+category : source
 ---
