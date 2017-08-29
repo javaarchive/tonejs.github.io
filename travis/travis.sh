@@ -33,4 +33,4 @@ git add ../_data
 git commit -m 'updated data'
 git add ../_documentations
 git commit -m 'updated documentation'
-git push -f
+git push -f origin travis
