@@ -29,8 +29,8 @@ sh jsdoc.sh
 rm -rf $TMP_DIR
 
 # add and push the changes
-# git add ../_data
-# git commit -m 'updated data'
-# git add ../_documentations
-# git commit -m 'updated documentation'
-# git push -f
+git add ../_data
+git commit -m 'updated data'
+git add ../_documentations
+git commit -m 'updated documentation'
+git push -f

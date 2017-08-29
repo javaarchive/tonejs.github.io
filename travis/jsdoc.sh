@@ -4,7 +4,6 @@
 TONE_FILES=$(find $PWD/tmp/Tone.js/Tone -type f )
 
 JSDOC_OUTPUT=./tmp/docs.json
-SIMPLIFY_JSDOC_OUTPUT=./tmp/docs_simple.json
 
 # run jsdocs on all of it
 jsdoc -X $TONE_FILES > $JSDOC_OUTPUT
