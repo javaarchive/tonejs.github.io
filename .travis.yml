@@ -4,6 +4,9 @@ language: node_js
 node_js:
     - "8"
 
+before_script:
+    - git config --global user.email "travis@travis-ci.org"
+    - git config --global user.name "Travis CI"
 script:
     - cd ./travis
     - sh travis.sh
