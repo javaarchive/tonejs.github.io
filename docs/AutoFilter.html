@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">AutoFilter</span><span id="extends"> &#8594; <a href='#Effect'>Tone.Effect</a></span>
+	<div id="description"><p><a class="internalLink" href='../docs/#AutoFilter'>Tone.AutoFilter</a> is a <a class="internalLink" href='../docs/#Filter'>Tone.Filter</a> with a <a class="internalLink" href='../docs/#LFO'>Tone.LFO</a> connected to the filter cutoff frequency.
+        Setting the LFO rate and depth allows for control over the filter modulation rate 
+        and depth.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">AutoFilter</span>
+		<span class="params">
+			<span class='syntax'>(</span>[<span id='name'>frequency</span>][<span class='syntax'>, </span><span id='name'>baseFrequency</span>][<span class='syntax'>, </span><span id='name'>octaves</span>]<span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">frequency</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a>|Object<span class='paren'>}</span></span>
+				<div id="description"><p>The rate of the LFO.</p>
+</div>
+					<span id="name">baseFrequency</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a><span class='paren'>}</span></span>
+				<div id="description"><p>The lower value of the LFOs oscillation</p>
+</div>
+					<span id="name">octaves</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a><span class='paren'>}</span></span>
+				<div id="description"><p>The number of octaves above the baseFrequency</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//create an autofilter and start it's LFO</span>
+<span class="hljs-keyword">var</span> autoFilter = <span class="hljs-keyword">new</span> Tone.AutoFilter(<span class="hljs-string">"4n"</span>).toMaster().start();
+<span class="hljs-comment">//route an oscillator through the filter and start it</span>
+<span class="hljs-keyword">var</span> oscillator = <span class="hljs-keyword">new</span> Tone.Oscillator().connect(autoFilter).start();</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>frequency</span><span class='syntax'>:</span><span class='value number'>1</span></div><div class='row'><span id='name'>type</span><span class='syntax'>:</span><span class='value string'>&quot;sine&quot;</span></div><div class='row'><span id='name'>depth</span><span class='syntax'>:</span><span class='value number'>1</span></div><div class='row'><span id='name'>baseFrequency</span><span class='syntax'>:</span><span class='value number'>200</span></div><div class='row'><span id='name'>octaves</span><span class='syntax'>:</span><span class='value number'>2.6</span></div><div class='row'><span id='name'>filter</span><span class='syntax'>:</span><span class='syntax'>{</span><div class='row'><span id='name'>type</span><span class='syntax'>:</span><span class='value string'>&quot;lowpass&quot;</span></div><div class='row'><span id='name'>rolloff</span><span class='syntax'>:</span><span class='value number'>-12</span></div><div class='row'><span id='name'>Q</span><span class='syntax'>:</span><span class='value number'>1</span></div><span class='syntax'>}</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="depth" class="member listItem">
+			<span id="title">.depth</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<div id="description"><p>The range of the filter modulating between the min and max frequency. 
+0 = no modulation. 1 = full modulation.</p>
+</div>
+		</div>
+		<div id="frequency" class="member listItem">
+			<span id="title">.frequency</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a><span class='paren'>}</span></span>
+			<div id="description"><p>How fast the filter modulates between min and max.</p>
+</div>
+		</div>
+		<div id="filter" class="member listItem">
+			<span id="title">.filter</span>
+			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Filter'>Tone.Filter</a><span class='paren'>}</span></span>
+			<div id="description"><p>The filter node</p>
+</div>
+		</div>
+		<div id="type" class="member listItem">
+			<span id="title">.type</span>
+			<span class="type"><span class='paren'>{</span>string<span class='paren'>}</span></span>
+			<div id="description"><p>Type of oscillator attached to the AutoFilter. 
+Possible values: &quot;sine&quot;, &quot;square&quot;, &quot;triangle&quot;, &quot;sawtooth&quot;.</p>
+</div>
+		</div>
+		<div id="min" class="member listItem">
+			<span id="title">.min</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a><span class='paren'>}</span></span>
+			<div id="description"><p>The minimum value of the filter&#39;s cutoff frequency.</p>
+</div>
+		</div>
+		<div id="octaves" class="member listItem">
+			<span id="title">.octaves</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Positive'>Positive</a><span class='paren'>}</span></span>
+			<div id="description"><p>The maximum value of the filter&#39;s cutoff frequency.</p>
+</div>
+		</div>
+		<div id="wet" class="member listItem">
+			<span id="title">.wet</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<div id="description"><p>The wet control is how much of the effected
+ will pass through to the output. 1 = 100% effected
+ signal, 0 = 100% dry signal.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="start" class="method listItem ">
+			<span id="title">.start
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When the LFO will start.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#AutoFilter'>Tone.AutoFilter</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Start the effect.</p>
+</div>
+		</div>
+		<div id="stop" class="method listItem ">
+			<span id="title">.stop
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">now</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">When the LFO will stop.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#AutoFilter'>Tone.AutoFilter</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Stop the effect.</p>
+</div>
+		</div>
+		<div id="sync" class="method listItem ">
+			<span id="title">.sync
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>delay</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">delay</span> <span class="syntax">=</span>
+							<span id="default">0</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">Delay time before starting the effect after the
+                              Transport has started.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#AutoFilter'>Tone.AutoFilter</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Sync the filter to the transport.</p>
+</div>
+		</div>
+		<div id="unsync" class="method listItem ">
+			<span id="title">.unsync
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#AutoFilter'>Tone.AutoFilter</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Unsync the filter from the transport.</p>
+</div>
+		</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#AutoFilter'>Tone.AutoFilter</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up.</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

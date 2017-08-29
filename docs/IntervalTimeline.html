@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">IntervalTimeline</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<div id="description"><p>Similar to <a class="internalLink" href='../docs/#Timeline'>Tone.Timeline</a>, but all events represent
+        intervals with both &quot;time&quot; and &quot;duration&quot; times. The 
+        events are placed in a tree structure optimized
+        for querying an intersection point with the timeline
+        events. Internally uses an <a href="https://en.wikipedia.org/wiki/Interval_tree">Interval Tree</a>
+        to represent the data.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">IntervalTimeline</span>
+		<span class="params">
+			<span class='syntax'>(</span><span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+		</div>
+	</div>
+	
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="length" class="member listItem">
+			<span id="title">.length</span>
+			<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>The number of items in the timeline.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="add" class="method listItem ">
+			<span id="title">.add
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>event</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">event</span>
+						<span class="type"><span class='paren'>{</span>Object<span class='paren'>}</span></span>
+						<div id="description">The event to add to the timeline</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#IntervalTimeline'>Tone.IntervalTimeline</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>The event to add to the timeline. All events must 
+ have a time and duration value</p>
+</div>
+		</div>
+		<div id="remove" class="method listItem ">
+			<span id="title">.remove
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>event</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">event</span>
+						<span class="type"><span class='paren'>{</span>Object<span class='paren'>}</span></span>
+						<div id="description">The event to remove from the timeline</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#IntervalTimeline'>Tone.IntervalTimeline</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Remove an event from the timeline.</p>
+</div>
+		</div>
+		<div id="cancel" class="method listItem ">
+			<span id="title">.cancel
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+						<div id="description">The time to query.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#IntervalTimeline'>Tone.IntervalTimeline</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Remove events whose time time is after the given time</p>
+</div>
+		</div>
+		<div id="get" class="method listItem ">
+			<span id="title">.get
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>event</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">event</span>
+						<span class="type"><span class='paren'>{</span>Object<span class='paren'>}</span></span>
+						<div id="description">The event to add to the timeline</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Object<span class='paren'>}</span></span>
+					<span id="description"><p>The event which spans the desired time</p>
+</span>
+				</div>
+			<div id="description"><p>Get an event whose time and duration span the give time. Will
+ return the match whose &quot;time&quot; value is closest to the given time.</p>
+</div>
+		</div>
+		<div id="forEach" class="method listItem ">
+			<span id="title">.forEach
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>callback</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">The callback to invoke with every item</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#IntervalTimeline'>Tone.IntervalTimeline</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Iterate over everything in the timeline.</p>
+</div>
+		</div>
+		<div id="forEachAtTime" class="method listItem ">
+			<span id="title">.forEachAtTime
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>, </span><span id='name'>callback</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+						<div id="description">The time to check if items are overlapping</div>
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">The callback to invoke with every item</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#IntervalTimeline'>Tone.IntervalTimeline</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Iterate over everything in the array in which the given time
+ overlaps with the time and duration time of the event.</p>
+</div>
+		</div>
+		<div id="forEachAfter" class="method listItem ">
+			<span id="title">.forEachAfter
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>, </span><span id='name'>callback</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+						<div id="description">The time to check if items are before</div>
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">The callback to invoke with every item</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#IntervalTimeline'>Tone.IntervalTimeline</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Iterate over everything in the array in which the time is greater
+ than the given time.</p>
+</div>
+		</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#IntervalTimeline'>Tone.IntervalTimeline</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

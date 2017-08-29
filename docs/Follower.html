@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">Follower</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<div id="description"><p><a class="internalLink" href='../docs/#Follower'>Tone.Follower</a> is a  crude envelope follower which will follow 
+         the amplitude of an incoming signal. 
+         Take care with small (&lt; 0.02) attack or decay values 
+         as follower has some ripple which is exaggerated
+         at these values. Read more about envelope followers (also known 
+         as envelope detectors) on <a href="https://en.wikipedia.org/wiki/Envelope_detector">Wikipedia</a>.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">Follower</span>
+		<span class="params">
+			<span class='syntax'>(</span>[<span id='name'>attack</span>][<span class='syntax'>, </span><span id='name'>release</span>]<span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">attack</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a>|Object<span class='paren'>}</span></span>
+				<div id="description"><p>The rate at which the follower rises.</p>
+</div>
+					<span id="name">release</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+				<div id="description"><p>The rate at which the folower falls.</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> follower = <span class="hljs-keyword">new</span> Tone.Follower(<span class="hljs-number">0.2</span>, <span class="hljs-number">0.4</span>);</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>attack</span><span class='syntax'>:</span><span class='value number'>0.05</span></div><div class='row'><span id='name'>release</span><span class='syntax'>:</span><span class='value number'>0.5</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="attack" class="member listItem">
+			<span id="title">.attack</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>The attack time.</p>
+</div>
+		</div>
+		<div id="release" class="member listItem">
+			<span id="title">.release</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>The release time.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="connect" class="method listItem ">
+			<span id="title">.connect
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+			<div id="description"><p>Borrows the connect method from Signal so that the output can be used
+ as a <a class="internalLink" href='../docs/#Signal'>Tone.Signal</a> control signal.</p>
+</div>
+		</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Follower'>Tone.Follower</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>dispose</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

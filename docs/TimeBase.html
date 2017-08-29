@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">TimeBase</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<div id="description"><p><a class="internalLink" href='../docs/#TimeBase'>Tone.TimeBase</a> is a flexible encoding of time
+        which can be evaluated to and from a string.
+        Parsing code modified from <a href="https://code.google.com/p/tapdigit/">https://code.google.com/p/tapdigit/</a>
+        Copyright 2011 2012 Ariya Hidayat, New BSD License</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">TimeBase</span>
+		<span class="params">
+			<span class='syntax'>(</span><span id='name'>val</span>[<span class='syntax'>, </span><span id='name'>units</span>]<span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">val</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+				<div id="description"><p>The time value as a number or string</p>
+</div>
+					<span id="name">units</span>
+				<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+				<div id="description"><p>Unit values</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre>Tone.TimeBase(<span class="hljs-number">4</span>, <span class="hljs-string">"n"</span>)
+Tone.TimeBase(<span class="hljs-number">2</span>, <span class="hljs-string">"t"</span>)
+Tone.TimeBase(<span class="hljs-string">"2t"</span>).add(<span class="hljs-string">"1m"</span>)
+Tone.TimeBase(<span class="hljs-string">"2t + 1m"</span>);</pre></div>
+		</div>
+	
+</div>
+			
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="set" class="method listItem ">
+			<span id="title">.set
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>exprString</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">exprString</span>
+						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+						<div id="description"></div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#TimeBase'>Tone.TimeBase</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Repalce the current time value with the value
+ given by the expression string.</p>
+</div>
+		</div>
+		<div id="clone" class="method listItem ">
+			<span id="title">.clone
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#TimeBase'>Tone.TimeBase</a><span class='paren'>}</span></span>
+					<span id="description"><p>The new cloned <a class="internalLink" href='../docs/#TimeBase'>Tone.TimeBase</a></p>
+</span>
+				</div>
+			<div id="description"><p>Return a clone of the TimeBase object.</p>
+</div>
+		</div>
+		<div id="copy" class="method listItem ">
+			<span id="title">.copy
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#TimeBase'>Tone.TimeBase</a><span class='paren'>}</span></span>
+						<div id="description"></div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>TimeBase<span class='paren'>}</span></span>
+					<span id="description"></span>
+				</div>
+			<div id="description"><p>Copies the value of time to this Time</p>
+</div>
+		</div>
+		<div id="add" class="method listItem ">
+			<span id="title">.add
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>val</span>[<span class='syntax'>, </span><span id='name'>units</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">val</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The value to add</div>
+							<span id="name">units</span>
+						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+						<div id="description">Optional units to use with the value.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#TimeBase'>Tone.TimeBase</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Add to the current value.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>Tone.TimeBase(<span class="hljs-string">"2m"</span>).add(<span class="hljs-string">"1m"</span>); <span class="hljs-comment">//"3m"</span></pre></div>
+		</div>
+		<div id="sub" class="method listItem ">
+			<span id="title">.sub
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>val</span>[<span class='syntax'>, </span><span id='name'>units</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">val</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The value to subtract</div>
+							<span id="name">units</span>
+						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+						<div id="description">Optional units to use with the value.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#TimeBase'>Tone.TimeBase</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Subtract the value from the current time.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>Tone.TimeBase(<span class="hljs-string">"2m"</span>).sub(<span class="hljs-string">"1m"</span>); <span class="hljs-comment">//"1m"</span></pre></div>
+		</div>
+		<div id="mult" class="method listItem ">
+			<span id="title">.mult
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>val</span>[<span class='syntax'>, </span><span id='name'>units</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">val</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The value to multiply</div>
+							<span id="name">units</span>
+						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+						<div id="description">Optional units to use with the value.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#TimeBase'>Tone.TimeBase</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Multiply the current value by the given time.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>Tone.TimeBase(<span class="hljs-string">"2m"</span>).mult(<span class="hljs-string">"2"</span>); <span class="hljs-comment">//"4m"</span></pre></div>
+		</div>
+		<div id="div" class="method listItem ">
+			<span id="title">.div
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>val</span>[<span class='syntax'>, </span><span id='name'>units</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">val</span>
+						<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+						<div id="description">The value to divide by</div>
+							<span id="name">units</span>
+						<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+						<div id="description">Optional units to use with the value.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#TimeBase'>Tone.TimeBase</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Divide the current value by the given time.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>Tone.TimeBase(<span class="hljs-string">"2m"</span>).div(<span class="hljs-number">2</span>); <span class="hljs-comment">//"1m"</span></pre></div>
+		</div>
+		<div id="valueOf" class="method listItem ">
+			<span id="title">.valueOf
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a href='../docs/#types/Seconds'>Seconds</a><span class='paren'>}</span></span>
+					<span id="description"></span>
+				</div>
+			<div id="description"><p>Evaluate the time value. Returns the time
+ in seconds.</p>
+</div>
+		</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#TimeBase'>Tone.TimeBase</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">PingPongDelay</span><span id="extends"> &#8594; <a href='#StereoXFeedbackEffect'>Tone.StereoXFeedbackEffect</a></span>
+	<div id="description"><p><a class="internalLink" href='../docs/#PingPongDelay'>Tone.PingPongDelay</a> is a feedback delay effect where the echo is heard
+         first in one channel and next in the opposite channel. In a stereo
+         system these are the right and left channels.
+         PingPongDelay in more simplified terms is two <a class="internalLink" href='../docs/#FeedbackDelays'>Tone.FeedbackDelays</a> 
+         with independent delay values. Each delay is routed to one channel
+         (left or right), and the channel triggered second will always 
+         trigger at the same interval after the first.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">PingPongDelay</span>
+		<span class="params">
+			<span class='syntax'>(</span>[<span id='name'>delayTime</span>][<span class='syntax'>, </span><span id='name'>feedback</span>]<span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">delayTime</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a>|Object<span class='paren'>}</span></span>
+				<div id="description"><p>The delayTime between consecutive echos.</p>
+</div>
+					<span id="name">feedback</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+				<div id="description"><p>The amount of the effected signal which 
+                                is fed back through the delay.</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> pingPong = <span class="hljs-keyword">new</span> Tone.PingPongDelay(<span class="hljs-string">"4n"</span>, <span class="hljs-number">0.2</span>).toMaster();
+<span class="hljs-keyword">var</span> drum = <span class="hljs-keyword">new</span> Tone.DrumSynth().connect(pingPong);
+drum.triggerAttackRelease(<span class="hljs-string">"C4"</span>, <span class="hljs-string">"32n"</span>);</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>delayTime</span><span class='syntax'>:</span><span class='value number'>0.25</span></div><div class='row'><span id='name'>maxDelayTime</span><span class='syntax'>:</span><span class='value number'>1</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="delayTime" class="member listItem">
+			<span id="title">.delayTime</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>the delay time signal</p>
+</div>
+		</div>
+		<div id="feedback" class="member listItem">
+			<span id="title">.feedback</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<div id="description"><p>The amount of feedback from the output
+ back into the input of the effect (routed
+ across left and right channels).</p>
+</div>
+		</div>
+		<div id="wet" class="member listItem">
+			<span id="title">.wet</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<div id="description"><p>The wet control is how much of the effected
+ will pass through to the output. 1 = 100% effected
+ signal, 0 = 100% dry signal.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#PingPongDelay'>Tone.PingPongDelay</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up.</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

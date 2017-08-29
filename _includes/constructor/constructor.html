@@ -1,0 +1,64 @@
+{% if include.data %}
+	<div id="constructor">
+
+		<div id="top">
+
+			<h1>{{class_name}}</h1>
+			
+			{% if include.data.augments.size %}
+
+				<span id="extends">
+					&#8627; EXTENDS 
+					<a href="./{{include.data.augments | first | remove: 'Tone.'}}">
+						{{include.data.augments | first}}
+					</a>
+				</span>
+			{% endif %}
+
+		</div>
+
+		{% assign singleton = include.data.tags | where:"title","singleton" %}
+		{% if singleton %}
+			<span id="singleton" class="notice">SINGLETON</span>
+		{% endif %}
+
+		{% if include.data.deprecated %}
+			<div id="deprecated">
+				DEPRECATED: {{include.data.deprecated | markdownify }}
+			</div>
+		{% endif %}
+
+		<div id="description">
+			{% include util/markdown.html data=include.data.classdesc %}
+		</div>
+
+		<div id="invocation">
+			{% unless singleton %}
+
+				<h3>CONSTRUCTOR</h3>
+
+				<span class="red">new</span> 
+				<span id="class_name">{{include.class_name}}</span>
+
+				{% include inline_params.html data=include.data %}
+
+				{% include parameters.html params=include.data.params types=include.types %}
+			{% endunless %}
+		</div>
+
+		{% include constructor/defaults.html data=include.jsdocs class_name=include.class_name %}
+
+		{% include examples.html examples=include.data.examples %}
+
+		<div id="class_index">
+			{% include class_index/class_index.html 
+					methods=include.methods 
+					static_methods=include.static_methods 
+					members=include.members 
+					static_members=include.static_members 
+					data=include.constructor 
+					class_name=include.class_name %}
+		</div>
+
+	</div>
+{% endif %}

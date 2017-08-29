@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">PanVol</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<div id="description"><p><a class="internalLink" href='../docs/#PanVol'>Tone.PanVol</a> is a <a class="internalLink" href='../docs/#Panner'>Tone.Panner</a> and <a class="internalLink" href='../docs/#Volume'>Tone.Volume</a> in one.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">PanVol</span>
+		<span class="params">
+			<span class='syntax'>(</span><span id='name'>pan</span><span class='syntax'>, </span><span id='name'>volume</span><span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">pan</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/AudioRange'>AudioRange</a><span class='paren'>}</span></span>
+				<div id="description"><p>the initial pan</p>
+</div>
+					<span id="name">volume</span>
+				<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+				<div id="description"><p>The output volume.</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//pan the incoming signal left and drop the volume</span>
+<span class="hljs-keyword">var</span> panVol = <span class="hljs-keyword">new</span> Tone.PanVol(<span class="hljs-number">0.25</span>, -<span class="hljs-number">12</span>);</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>pan</span><span class='syntax'>:</span><span class='value number'>0.5</span></div><div class='row'><span id='name'>volume</span><span class='syntax'>:</span><span class='value number'>0</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="pan" class="member listItem">
+			<span id="title">.pan</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/AudioRange'>AudioRange</a><span class='paren'>}</span></span>
+			<div id="description"><p>The L/R panning control.</p>
+</div>
+		</div>
+		<div id="_volume" class="member listItem">
+			<span id="title">._volume</span>
+			<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Volume'>Tone.Volume</a><span class='paren'>}</span></span>
+			<div id="description"><p>The volume node</p>
+</div>
+		</div>
+		<div id="volume" class="member listItem">
+			<span id="title">.volume</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Decibels'>Decibels</a><span class='paren'>}</span></span>
+			<div id="description"><p>The volume control in decibels.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#PanVol'>Tone.PanVol</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>clean up</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

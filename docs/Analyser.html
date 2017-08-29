@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">Analyser</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<div id="description"><p>Wrapper around the native Web Audio&#39;s 
+         <a href="http://webaudio.github.io/web-audio-api/#idl-def-AnalyserNode">AnalyserNode</a>.
+         Extracts FFT or Waveform data from the incoming signal.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">Analyser</span>
+		<span class="params">
+			<span class='syntax'>(</span>[<span id='name'>type</span>][<span class='syntax'>, </span><span id='name'>size</span>]<span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">type</span>
+				<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+				<div id="description"><p>The return type of the analysis, either &quot;fft&quot;, or &quot;waveform&quot;.</p>
+</div>
+					<span id="name">size</span>
+				<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+				<div id="description"><p>The size of the FFT. Value must be a power of 
+                      two in the range 32 to 32768.</p>
+</div>
+		</div>
+	</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>size</span><span class='syntax'>:</span><span class='value number'>1024</span></div><div class='row'><span id='name'>returnType</span><span class='syntax'>:</span><span class='value string'>&quot;byte&quot;</span></div><div class='row'><span id='name'>type</span><span class='syntax'>:</span><span class='value string'>&quot;fft&quot;</span></div><div class='row'><span id='name'>smoothing</span><span class='syntax'>:</span><span class='value number'>0.8</span></div><div class='row'><span id='name'>maxDecibels</span><span class='syntax'>:</span><span class='value number'>-30</span></div><div class='row'><span id='name'>minDecibels</span><span class='syntax'>:</span><span class='value number'>-100</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="size" class="member listItem">
+			<span id="title">.size</span>
+			<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+			<div id="description"><p>The size of analysis. This must be a power of two in the range 32 to 32768.</p>
+</div>
+		</div>
+		<div id="type" class="member listItem">
+			<span id="title">.type</span>
+			<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+			<div id="description"><p>The analysis function returned by <a class="internalLink" href='../docs/#Analyser.analyse'>Tone.Analyser.analyse</a>(), either &quot;fft&quot; or &quot;waveform&quot;.</p>
+</div>
+		</div>
+		<div id="smoothing" class="member listItem">
+			<span id="title">.smoothing</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<div id="description"><p>0 represents no time averaging with the last analysis frame.</p>
+</div>
+		</div>
+		<div id="minDecibels" class="member listItem">
+			<span id="title">.minDecibels</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Decibels'>Decibels</a><span class='paren'>}</span></span>
+			<div id="description"><p>The smallest decibel value which is analysed by the FFT.</p>
+</div>
+		</div>
+		<div id="maxDecibels" class="member listItem">
+			<span id="title">.maxDecibels</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Decibels'>Decibels</a><span class='paren'>}</span></span>
+			<div id="description"><p>The largest decibel value which is analysed by the FFT.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="analyse" class="method listItem ">
+			<span id="title">.analyse
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>TypedArray<span class='paren'>}</span></span>
+					<span id="description"></span>
+				</div>
+			<div id="description"><p>Run the analysis given the current settings and return the 
+ result as a TypedArray.</p>
+</div>
+		</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Analyser'>Tone.Analyser</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up.</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

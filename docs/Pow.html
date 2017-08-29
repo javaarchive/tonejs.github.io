@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">Pow</span><span id="extends"> &#8594; <a href='#SignalBase'>Tone.SignalBase</a></span>
+	<div id="description"><p>Pow applies an exponent to the incoming signal. The incoming signal
+        must be AudioRange.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">Pow</span>
+		<span class="params">
+			<span class='syntax'>(</span><span id='name'>exp</span><span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">exp</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Positive'>Positive</a><span class='paren'>}</span></span>
+				<div id="description"><p>The exponent to apply to the incoming signal, must be at least 2.</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> pow = <span class="hljs-keyword">new</span> Tone.Pow(<span class="hljs-number">2</span>);
+<span class="hljs-keyword">var</span> sig = <span class="hljs-keyword">new</span> Tone.Signal(<span class="hljs-number">0.5</span>).connect(pow);
+<span class="hljs-comment">//output of pow is 0.25.</span></pre></div>
+		</div>
+	
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="value" class="member listItem">
+			<span id="title">.value</span>
+			<span class="type"><span class='paren'>{</span>number<span class='paren'>}</span></span>
+			<div id="description"><p>The value of the exponent.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Pow'>Tone.Pow</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up.</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

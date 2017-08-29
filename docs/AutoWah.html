@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">AutoWah</span><span id="extends"> &#8594; <a href='#Effect'>Tone.Effect</a></span>
+	<div id="description"><p><a class="internalLink" href='../docs/#AutoWah'>Tone.AutoWah</a> connects a <a class="internalLink" href='../docs/#Follower'>Tone.Follower</a> to a bandpass filter (<a class="internalLink" href='../docs/#Filter'>Tone.Filter</a>).
+         The frequency of the filter is adjusted proportionally to the 
+         incoming signal&#39;s amplitude. Inspiration from <a href="https://github.com/Dinahmoe/tuna">Tuna.js</a>.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">AutoWah</span>
+		<span class="params">
+			<span class='syntax'>(</span>[<span id='name'>baseFrequency</span>][<span class='syntax'>, </span><span id='name'>octaves</span>][<span class='syntax'>, </span><span id='name'>sensitivity</span>]<span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">baseFrequency</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a>|Object<span class='paren'>}</span></span>
+				<div id="description"><p>The frequency the filter is set 
+                                           to at the low point of the wah</p>
+</div>
+					<span id="name">octaves</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Positive'>Positive</a><span class='paren'>}</span></span>
+				<div id="description"><p>The number of octaves above the baseFrequency
+                               the filter will sweep to when fully open</p>
+</div>
+					<span id="name">sensitivity</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Decibels'>Decibels</a><span class='paren'>}</span></span>
+				<div id="description"><p>The decibel threshold sensitivity for 
+                                  the incoming signal. Normal range of -40 to 0.</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> autoWah = <span class="hljs-keyword">new</span> Tone.AutoWah(<span class="hljs-number">50</span>, <span class="hljs-number">6</span>, -<span class="hljs-number">30</span>).toMaster();
+<span class="hljs-comment">//initialize the synth and connect to autowah</span>
+<span class="hljs-keyword">var</span> synth = <span class="hljs-keyword">new</span> Synth.connect(autoWah);
+<span class="hljs-comment">//Q value influences the effect of the wah - default is 2</span>
+autoWah.Q.value = <span class="hljs-number">6</span>;
+<span class="hljs-comment">//more audible on higher notes</span>
+synth.triggerAttackRelease(<span class="hljs-string">"C4"</span>, <span class="hljs-string">"8n"</span>)</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>baseFrequency</span><span class='syntax'>:</span><span class='value number'>100</span></div><div class='row'><span id='name'>octaves</span><span class='syntax'>:</span><span class='value number'>6</span></div><div class='row'><span id='name'>sensitivity</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>Q</span><span class='syntax'>:</span><span class='value number'>2</span></div><div class='row'><span id='name'>gain</span><span class='syntax'>:</span><span class='value number'>2</span></div><div class='row'><span id='name'>follower</span><span class='syntax'>:</span><span class='syntax'>{</span><div class='row'><span id='name'>attack</span><span class='syntax'>:</span><span class='value number'>0.3</span></div><div class='row'><span id='name'>release</span><span class='syntax'>:</span><span class='value number'>0.5</span></div><span class='syntax'>}</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="gain" class="member listItem">
+			<span id="title">.gain</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+			<div id="description"><p>The gain of the filter.</p>
+</div>
+		</div>
+		<div id="Q" class="member listItem">
+			<span id="title">.Q</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Positive'>Positive</a><span class='paren'>}</span></span>
+			<div id="description"><p>The quality of the filter.</p>
+</div>
+		</div>
+		<div id="octaves" class="member listItem">
+			<span id="title">.octaves</span>
+			<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+			<div id="description"><p>The number of octaves that the filter will sweep above the 
+baseFrequency.</p>
+</div>
+		</div>
+		<div id="baseFrequency" class="member listItem">
+			<span id="title">.baseFrequency</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Frequency'>Frequency</a><span class='paren'>}</span></span>
+			<div id="description"><p>The base frequency from which the sweep will start from.</p>
+</div>
+		</div>
+		<div id="sensitivity" class="member listItem">
+			<span id="title">.sensitivity</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Decibels'>Decibels</a><span class='paren'>}</span></span>
+			<div id="description"><p>The sensitivity to control how responsive to the input signal the filter is.</p>
+</div>
+		</div>
+		<div id="wet" class="member listItem">
+			<span id="title">.wet</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<div id="description"><p>The wet control is how much of the effected
+ will pass through to the output. 1 = 100% effected
+ signal, 0 = 100% dry signal.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#AutoWah'>Tone.AutoWah</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up.</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

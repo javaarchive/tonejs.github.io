@@ -1,0 +1,6 @@
+---
+title : Frequency
+version : r11
+layout : docs
+category : type
+---

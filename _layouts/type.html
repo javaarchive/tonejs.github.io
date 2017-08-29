@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	{% include head.html %}
+
+	<link rel="stylesheet" type="text/css" href="/assets/css/type_defs.css">
+</head>
+<body>
+
+	{% assign jsdoc_version =  page.version | prepend: 'jsdocs-' %}
+
+	{% assign jsdocs = site.data[jsdoc_version] %}
+
+	{% assign types = jsdocs
+			| where: "kind","typedef"
+			| where: "memberof","Tone.Type"
+			| sort: "name" %}
+
+	{% include sidebar.html jsdocs=jsdocs class_name=class_name %}
+
+	<div id="content">
+
+		<h1>Types</h1>
+
+		{% for type in types %}
+
+			<span id="{{type.name | slugify}}" class="typeblock">
+				<h2 >
+					{{type.name}}
+				</h2>
+				<div id="description">
+					{% include util/markdown.html data=type.description %}
+				</div>
+			</span>
+		{% endfor %}
+
+	</div>
+	{% comment %}GENERATED TIME{% endcomment %}
+	<div id="generated">docs generated {{ site.time | date: "%h %d %Y" }}</div>
+
+	{% include analytics.html  %}
+</body>
+</html>

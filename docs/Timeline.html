@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">Timeline</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<div id="description"><p>A Timeline class for scheduling and maintaining state
+        along a timeline. All events must have a &quot;time&quot; property. 
+        Internally, events are stored in time order for fast 
+        retrieval.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">Timeline</span>
+		<span class="params">
+			<span class='syntax'>(</span>[<span id='name'>memory</span>]<span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">memory</span> <span class="equalSign">=</span>
+					<span id="default">Infinity</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Positive'>Positive</a><span class='paren'>}</span></span>
+				<div id="description"><p>The number of previous events that are retained.</p>
+</div>
+		</div>
+	</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>memory</span><span class='syntax'>:</span><span class='value string'>&quot;Infinity&quot;</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="memory" class="member listItem">
+			<span id="title">.memory</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Positive'>Positive</a><span class='paren'>}</span></span>
+			<div id="description"><p>The memory of the timeline, i.e.
+ how many events in the past it will retain</p>
+</div>
+		</div>
+		<div id="length" class="member listItem">
+			<span id="title">.length</span>
+			<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>The number of items in the timeline.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="add" class="method listItem ">
+			<span id="title">.add
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>event</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">event</span>
+						<span class="type"><span class='paren'>{</span>Object<span class='paren'>}</span></span>
+						<div id="description">The event object to insert into the 
+                          timeline.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Timeline'>Tone.Timeline</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Insert an event object onto the timeline. Events must have a &quot;time&quot; attribute.</p>
+</div>
+		</div>
+		<div id="remove" class="method listItem ">
+			<span id="title">.remove
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>event</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">event</span>
+						<span class="type"><span class='paren'>{</span>Object<span class='paren'>}</span></span>
+						<div id="description">The event object to remove from the list.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Timeline'>Tone.Timeline</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Remove an event from the timeline.</p>
+</div>
+		</div>
+		<div id="get" class="method listItem ">
+			<span id="title">.get
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+						<div id="description">The time to query.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Object<span class='paren'>}</span></span>
+					<span id="description"><p>The event object set after that time.</p>
+</span>
+				</div>
+			<div id="description"><p>Get the nearest event whose time is less than or equal to the given time.</p>
+</div>
+		</div>
+		<div id="peek" class="method listItem ">
+			<span id="title">.peek
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Object<span class='paren'>}</span></span>
+					<span id="description"><p>The first event object</p>
+</span>
+				</div>
+			<div id="description"><p>Return the first event in the timeline without removing it</p>
+</div>
+		</div>
+		<div id="shift" class="method listItem ">
+			<span id="title">.shift
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Object<span class='paren'>}</span></span>
+					<span id="description"><p>The first event object</p>
+</span>
+				</div>
+			<div id="description"><p>Return the first event in the timeline and remove it</p>
+</div>
+		</div>
+		<div id="getAfter" class="method listItem ">
+			<span id="title">.getAfter
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+						<div id="description">The time to query.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Object<span class='paren'>}</span></span>
+					<span id="description"><p>The event object after the given time</p>
+</span>
+				</div>
+			<div id="description"><p>Get the event which is scheduled after the given time.</p>
+</div>
+		</div>
+		<div id="getBefore" class="method listItem ">
+			<span id="title">.getBefore
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+						<div id="description">The time to query.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Object<span class='paren'>}</span></span>
+					<span id="description"><p>The event object before the given time</p>
+</span>
+				</div>
+			<div id="description"><p>Get the event before the event at the given time.</p>
+</div>
+		</div>
+		<div id="cancel" class="method listItem ">
+			<span id="title">.cancel
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+						<div id="description">The time to query.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Timeline'>Tone.Timeline</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Cancel events after the given time</p>
+</div>
+		</div>
+		<div id="cancelBefore" class="method listItem ">
+			<span id="title">.cancelBefore
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+						<div id="description">The time to cancel before.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Timeline'>Tone.Timeline</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Cancel events before or equal to the given time.</p>
+</div>
+		</div>
+		<div id="forEach" class="method listItem ">
+			<span id="title">.forEach
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>callback</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">The callback to invoke with every item</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Timeline'>Tone.Timeline</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Iterate over everything in the array</p>
+</div>
+		</div>
+		<div id="forEachBefore" class="method listItem ">
+			<span id="title">.forEachBefore
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>, </span><span id='name'>callback</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+						<div id="description">The time to check if items are before</div>
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">The callback to invoke with every item</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Timeline'>Tone.Timeline</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Iterate over everything in the array at or before the given time.</p>
+</div>
+		</div>
+		<div id="forEachAfter" class="method listItem ">
+			<span id="title">.forEachAfter
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>, </span><span id='name'>callback</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+						<div id="description">The time to check if items are before</div>
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">The callback to invoke with every item</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Timeline'>Tone.Timeline</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Iterate over everything in the array after the given time.</p>
+</div>
+		</div>
+		<div id="forEachFrom" class="method listItem ">
+			<span id="title">.forEachFrom
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>, </span><span id='name'>callback</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+						<div id="description">The time to check if items are before</div>
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">The callback to invoke with every item</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Timeline'>Tone.Timeline</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Iterate over everything in the array at or after the given time. Similar to 
+ forEachAfter, but includes the item(s) at the given time.</p>
+</div>
+		</div>
+		<div id="forEachAtTime" class="method listItem ">
+			<span id="title">.forEachAtTime
+				<span class="params">
+					<span class='syntax'>(</span><span id='name'>time</span><span class='syntax'>, </span><span id='name'>callback</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span>Number<span class='paren'>}</span></span>
+						<div id="description">The time to check if items are before</div>
+							<span id="name">callback</span>
+						<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+						<div id="description">The callback to invoke with every item</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Timeline'>Tone.Timeline</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Iterate over everything in the array at the given time</p>
+</div>
+		</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Timeline'>Tone.Timeline</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up.</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

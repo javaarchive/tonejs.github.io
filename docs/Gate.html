@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">Gate</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<div id="description"><p><a class="internalLink" href='../docs/#Gate'>Tone.Gate</a> only passes a signal through when the incoming 
+         signal exceeds a specified threshold. To do this, Gate uses 
+         a <a class="internalLink" href='../docs/#Follower'>Tone.Follower</a> to follow the amplitude of the incoming signal. 
+         A common implementation of this class is a <a href="https://en.wikipedia.org/wiki/Noise_gate">Noise Gate</a>.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">Gate</span>
+		<span class="params">
+			<span class='syntax'>(</span>[<span id='name'>threshold</span>][<span class='syntax'>, </span><span id='name'>attack</span>][<span class='syntax'>, </span><span id='name'>release</span>]<span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">threshold</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Decibels'>Decibels</a>|Object<span class='paren'>}</span></span>
+				<div id="description"><p>The threshold above which the gate will open.</p>
+</div>
+					<span id="name">attack</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+				<div id="description"><p>The follower&#39;s attack time</p>
+</div>
+					<span id="name">release</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+				<div id="description"><p>The follower&#39;s release time</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> gate = <span class="hljs-keyword">new</span> Tone.Gate(-<span class="hljs-number">30</span>, <span class="hljs-number">0.2</span>, <span class="hljs-number">0.3</span>).toMaster();
+<span class="hljs-keyword">var</span> mic = <span class="hljs-keyword">new</span> Tone.UserMedia().connect(gate);
+<span class="hljs-comment">//the gate will only pass through the incoming </span>
+<span class="hljs-comment">//signal when it's louder than -30db</span></pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>attack</span><span class='syntax'>:</span><span class='value number'>0.1</span></div><div class='row'><span id='name'>release</span><span class='syntax'>:</span><span class='value number'>0.1</span></div><div class='row'><span id='name'>threshold</span><span class='syntax'>:</span><span class='value number'>-40</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="threshold" class="member listItem">
+			<span id="title">.threshold</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Decibels'>Decibels</a><span class='paren'>}</span></span>
+			<div id="description"><p>The threshold of the gate in decibels</p>
+</div>
+		</div>
+		<div id="attack" class="member listItem">
+			<span id="title">.attack</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>The attack speed of the gate</p>
+</div>
+		</div>
+		<div id="release" class="member listItem">
+			<span id="title">.release</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>The release speed of the gate</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Gate'>Tone.Gate</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up.</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

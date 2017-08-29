@@ -1,0 +1,4 @@
+---
+title : FatOscillator
+layout : forward
+---

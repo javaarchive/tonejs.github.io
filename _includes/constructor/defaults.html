@@ -1,0 +1,19 @@
+{% assign defaults_name = {{include.class_name | append: '.defaults' }} %}
+{% assign defaults = include.data 
+	| where_exp: "item","item.memberof == defaults_name" 
+	| where: "scope","static" 
+	| sort: "name" %}
+
+{% if defaults.size > 0 %}
+	<div id="defaults">
+		<h3>DEFAULTS</h3>
+
+		<div id="values">
+
+			{% include constructor/defaults_object.html 
+				defaults_name=defaults_name 
+				data=include.data %}
+		
+		</div>
+	</div>
+{% endif %}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% include head.html %}
+	<link rel="stylesheet" type="text/css" href="/assets/css/docs.css">
+</head>
+<body>
+
+	{% assign jsdoc_version =  site.data.version | prepend: 'jsdocs-' %}
+
+	{% assign jsdocs = site.data[jsdoc_version] %}
+
+	{% include sidebar.html jsdocs=jsdocs visible=true version=site.data.version %}
+
+	<div id="content">
+		{{content}}
+	</div>
+
+	{% include analytics.html  %}
+</body>
+</html>

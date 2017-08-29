@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">Merge</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<div id="description"><p><a class="internalLink" href='../docs/#Merge'>Tone.Merge</a> brings two signals into the left and right 
+         channels of a single stereo channel.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">Merge</span>
+		<span class="params">
+			<span class='syntax'>(</span><span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> merge = <span class="hljs-keyword">new</span> Tone.Merge().toMaster();
+<span class="hljs-comment">//routing a sine tone in the left channel</span>
+<span class="hljs-comment">//and noise in the right channel</span>
+<span class="hljs-keyword">var</span> osc = <span class="hljs-keyword">new</span> Tone.Oscillator().connect(merge.left);
+<span class="hljs-keyword">var</span> noise = <span class="hljs-keyword">new</span> Tone.Noise().connect(merge.right);
+<span class="hljs-comment">//starting our oscillators</span>
+noise.start();
+osc.start();</pre></div>
+		</div>
+	
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="left" class="member listItem">
+			<span id="title">.left</span>
+			<span class="type"><span class='paren'>{</span>GainNode<span class='paren'>}</span></span>
+			<div id="description"><p>The left input channel.
+ Alias for <code>input[0]</code></p>
+</div>
+		</div>
+		<div id="right" class="member listItem">
+			<span id="title">.right</span>
+			<span class="type"><span class='paren'>{</span>GainNode<span class='paren'>}</span></span>
+			<div id="description"><p>The right input channel.
+ Alias for <code>input[1]</code>.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Merge'>Tone.Merge</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up.</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

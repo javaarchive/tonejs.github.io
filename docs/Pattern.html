@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">Pattern</span><span id="extends"> &#8594; <a href='#Loop'>Tone.Loop</a></span>
+	<div id="description"><p><a class="internalLink" href='../docs/#Pattern'>Tone.Pattern</a> arpeggiates between the given notes
+        in a number of patterns. See <a class="internalLink" href='../docs/#CtrlPattern'>Tone.CtrlPattern</a> for
+        a full list of patterns.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">Pattern</span>
+		<span class="params">
+			<span class='syntax'>(</span><span id='name'>callback</span><span class='syntax'>, </span><span id='name'>values</span><span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">callback</span>
+				<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+				<div id="description"><p>The callback to invoke with the
+                            event.</p>
+</div>
+					<span id="name">values</span>
+				<span class="type"><span class='paren'>{</span>Array<span class='paren'>}</span></span>
+				<div id="description"><p>The values to arpeggiate over.</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> pattern = <span class="hljs-keyword">new</span> Tone.Pattern(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">time, note</span>)</span>{
+  <span class="hljs-comment">//the order of the notes passed in depends on the pattern</span>
+}, [<span class="hljs-string">"C2"</span>, <span class="hljs-string">"D4"</span>, <span class="hljs-string">"E5"</span>, <span class="hljs-string">"A6"</span>], <span class="hljs-string">"upDown"</span>);</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>pattern</span><span class='syntax'>:</span><span class='value Tone'>Tone.CtrlPattern.Type.Up</span></div><div class='row'><span id='name'>values</span><span class='syntax'>:</span><span class='value string'>&quot;[]&quot;</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="index" class="member listItem">
+			<span id="title">.index</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Positive'>Positive</a><span class='paren'>}</span></span>
+			<div id="description"><p>The current index in the values array.</p>
+</div>
+		</div>
+		<div id="values" class="member listItem">
+			<span id="title">.values</span>
+			<span class="type"><span class='paren'>{</span>Array<span class='paren'>}</span></span>
+			<div id="description"><p>The array of events.</p>
+</div>
+		</div>
+		<div id="value" class="member listItem">
+			<span id="title">.value</span>
+			<span class="type"><span class='paren'>{</span>*<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>The current value of the pattern.</p>
+</div>
+		</div>
+		<div id="pattern" class="member listItem">
+			<span id="title">.pattern</span>
+			<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+			<div id="description"><p>The pattern type. See <a class="internalLink" href='../docs/#CtrlPattern'>Tone.CtrlPattern</a> for the full list of patterns.</p>
+</div>
+		</div>
+		<div id="callback" class="member listItem">
+			<span id="title">.callback</span>
+			<span class="type"><span class='paren'>{</span>function<span class='paren'>}</span></span>
+			<div id="description"><p>The callback to invoke with the next event in the pattern</p>
+</div>
+		</div>
+		<div id="state" class="member listItem">
+			<span id="title">.state</span>
+			<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>The state of the Loop, either started or stopped.</p>
+</div>
+		</div>
+		<div id="progress" class="member listItem">
+			<span id="title">.progress</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>The progress of the loop as a value between 0-1. 0, when
+ the loop is stopped or done iterating.</p>
+</div>
+		</div>
+		<div id="interval" class="member listItem">
+			<span id="title">.interval</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>The time between successive callbacks.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>loop.interval = <span class="hljs-string">"8n"</span>; <span class="hljs-comment">//loop every 8n</span></pre></div>
+		</div>
+		<div id="playbackRate" class="member listItem">
+			<span id="title">.playbackRate</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>The playback rate of the loop. The normal playback rate is 1 (no change). 
+ A <code>playbackRate</code> of 2 would be twice as fast.</p>
+</div>
+		</div>
+		<div id="humanize" class="member listItem">
+			<span id="title">.humanize</span>
+			<span class="type"><span class='paren'>{</span>Boolean|<a href='../docs/#types/Time'>Time</a><span class='paren'>}</span></span>
+			<div id="description"><p>Random variation +/-0.01s to the scheduled time. 
+ Or give it a time value which it will randomize by.</p>
+</div>
+		</div>
+		<div id="probability" class="member listItem">
+			<span id="title">.probability</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/NormalRange'>NormalRange</a><span class='paren'>}</span></span>
+			<div id="description"><p>The probably of the callback being invoked.</p>
+</div>
+		</div>
+		<div id="mute" class="member listItem">
+			<span id="title">.mute</span>
+			<span class="type"><span class='paren'>{</span>Boolean<span class='paren'>}</span></span>
+			<div id="description"><p>Muting the Loop means that no callbacks are invoked.</p>
+</div>
+		</div>
+		<div id="iterations" class="member listItem">
+			<span id="title">.iterations</span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Positive'>Positive</a><span class='paren'>}</span></span>
+			<div id="description"><p>The number of iterations of the loop. The default
+ value is Infinity (loop forever).</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Pattern'>Tone.Pattern</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up</p>
+</div>
+		</div>
+		<div id="start" class="method listItem ">
+			<span id="title">.start
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span>TimelinePosition<span class='paren'>}</span></span>
+						<div id="description">When to start the Loop.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Loop'>Tone.Loop</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Start the loop at the specified time along the Transport&#39;s
+ timeline.</p>
+</div>
+		</div>
+		<div id="stop" class="method listItem ">
+			<span id="title">.stop
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span>
+						<span class="type"><span class='paren'>{</span>TimelinePosition<span class='paren'>}</span></span>
+						<div id="description">When to stop the Arpeggio</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Loop'>Tone.Loop</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Stop the loop at the given time.</p>
+</div>
+		</div>
+		<div id="cancel" class="method listItem ">
+			<span id="title">.cancel
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>time</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">time</span> <span class="syntax">=</span>
+							<span id="default">0</span>
+						<span class="type"><span class='paren'>{</span>TimelinePosition<span class='paren'>}</span></span>
+						<div id="description">The time after which events will be cancel.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#Loop'>Tone.Loop</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Cancel all scheduled events greater than or equal to the given time</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

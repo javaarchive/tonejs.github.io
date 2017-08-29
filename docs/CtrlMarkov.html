@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">CtrlMarkov</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<div id="description"><p><a class="internalLink" href='../docs/#CtrlMarkov'>Tone.CtrlMarkov</a> represents a Markov Chain where each call
+        to <a class="internalLink" href='../docs/#CtrlMarkov.next'>Tone.CtrlMarkov.next</a> will move to the next state. If the next
+        state choice is an array, the next state is chosen randomly with
+        even probability for all of the choices. For a weighted probability
+        of the next choices, pass in an object with &quot;state&quot; and &quot;probability&quot; attributes. 
+        The probabilities will be normalized and then chosen. If no next options
+        are given for the current state, the state will stay there.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">CtrlMarkov</span>
+		<span class="params">
+			<span class='syntax'>(</span><span id='name'>values</span><span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">values</span>
+				<span class="type"><span class='paren'>{</span>Object<span class='paren'>}</span></span>
+				<div id="description"><p>An object with the state names as the keys
+                        and the next state(s) as the values.</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> chain = <span class="hljs-keyword">new</span> Tone.CtrlMarkov({
+	<span class="hljs-string">"beginning"</span> : [<span class="hljs-string">"end"</span>, <span class="hljs-string">"middle"</span>],
+	<span class="hljs-string">"middle"</span> : <span class="hljs-string">"end"</span>
+});
+chain.value = <span class="hljs-string">"beginning"</span>;
+chain.next(); <span class="hljs-comment">//returns "end" or "middle" with 50% probability</span></pre></div>
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-keyword">var</span> chain = <span class="hljs-keyword">new</span> Tone.CtrlMarkov({
+	<span class="hljs-string">"beginning"</span> : [{<span class="hljs-string">"value"</span> : <span class="hljs-string">"end"</span>, <span class="hljs-string">"probability"</span> : <span class="hljs-number">0.8</span>}, 
+					{<span class="hljs-string">"value"</span> : <span class="hljs-string">"middle"</span>, <span class="hljs-string">"probability"</span> : <span class="hljs-number">0.2</span>}],
+	<span class="hljs-string">"middle"</span> : <span class="hljs-string">"end"</span>
+});
+chain.value = <span class="hljs-string">"beginning"</span>;
+chain.next(); <span class="hljs-comment">//returns "end" with 80% probability or "middle" with 20%.</span></pre></div>
+		</div>
+	
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="values" class="member listItem">
+			<span id="title">.values</span>
+			<span class="type"><span class='paren'>{</span>Object<span class='paren'>}</span></span>
+			<div id="description"><p>The Markov values with states as the keys
+ and next state(s) as the values.</p>
+</div>
+		</div>
+		<div id="value" class="member listItem">
+			<span id="title">.value</span>
+			<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+			<div id="description"><p>The current state of the Markov values. The next
+ state will be evaluated and returned when <a class="internalLink" href='../docs/#CtrlMarkov.next'>Tone.CtrlMarkov.next</a>
+ is invoked.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="next" class="method listItem ">
+			<span id="title">.next
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+					<span id="description"></span>
+				</div>
+			<div id="description"><p>Returns the next state of the Markov values.</p>
+</div>
+		</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#CtrlMarkov'>Tone.CtrlMarkov</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>

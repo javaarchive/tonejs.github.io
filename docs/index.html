@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script type="text/javascript" src="https://tonejs.github.io/Logo/build/Logo.js"></script>
+	<script type="text/javascript" src="scripts/loader.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<link rel="icon" type="image/png" sizes="174x174" href="style/favicon.png">
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="topBar">
+	<div id="hamburger">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</div>
+		<div id="sidebar">
+	<div id="search">
+		<input type="text" placeholder="search">
+		<span id="clear">&#215;</span>
+	</div>
+
+	<div id="sidebarContents">
+				<div class="section">Event</div>
+				<!-- for each of the components -->
+					<div class="item">
+						<a href="#Event">Event</a>
+					</div>
+					<div class="item">
+						<a href="#Loop">Loop</a>
+					</div>
+					<div class="item">
+						<a href="#Part">Part</a>
+					</div>
+					<div class="item">
+						<a href="#Pattern">Pattern</a>
+					</div>
+					<div class="item">
+						<a href="#Sequence">Sequence</a>
+					</div>
+				<div class="section">Instrument</div>
+				<!-- for each of the components -->
+					<div class="item">
+						<a href="#AMSynth">AMSynth</a>
+					</div>
+					<div class="item">
+						<a href="#DuoSynth">DuoSynth</a>
+					</div>
+					<div class="item">
+						<a href="#FMSynth">FMSynth</a>
+					</div>
+					<div class="item">
+						<a href="#Instrument">Instrument</a>
+					</div>
+					<div class="item">
+						<a href="#MembraneSynth">MembraneSynth</a>
+					</div>
+					<div class="item">
+						<a href="#MetalSynth">MetalSynth</a>
+					</div>
+					<div class="item">
+						<a href="#MonoSynth">MonoSynth</a>
+					</div>
+					<div class="item">
+						<a href="#Monophonic">Monophonic</a>
+					</div>
+					<div class="item">
+						<a href="#NoiseSynth">NoiseSynth</a>
+					</div>
+					<div class="item">
+						<a href="#PluckSynth">PluckSynth</a>
+					</div>
+					<div class="item">
+						<a href="#PolySynth">PolySynth</a>
+					</div>
+					<div class="item">
+						<a href="#Sampler">Sampler</a>
+					</div>
+					<div class="item">
+						<a href="#Synth">Synth</a>
+					</div>
+				<div class="section">Effect</div>
+				<!-- for each of the components -->
+					<div class="item">
+						<a href="#AutoFilter">AutoFilter</a>
+					</div>
+					<div class="item">
+						<a href="#AutoPanner">AutoPanner</a>
+					</div>
+					<div class="item">
+						<a href="#AutoWah">AutoWah</a>
+					</div>
+					<div class="item">
+						<a href="#BitCrusher">BitCrusher</a>
+					</div>
+					<div class="item">
+						<a href="#Chebyshev">Chebyshev</a>
+					</div>
+					<div class="item">
+						<a href="#Chorus">Chorus</a>
+					</div>
+					<div class="item">
+						<a href="#Convolver">Convolver</a>
+					</div>
+					<div class="item">
+						<a href="#Distortion">Distortion</a>
+					</div>
+					<div class="item">
+						<a href="#Effect">Effect</a>
+					</div>
+					<div class="item">
+						<a href="#FeedbackDelay">FeedbackDelay</a>
+					</div>
+					<div class="item">
+						<a href="#FeedbackEffect">FeedbackEffect</a>
+					</div>
+					<div class="item">
+						<a href="#Freeverb">Freeverb</a>
+					</div>
+					<div class="item">
+						<a href="#JCReverb">JCReverb</a>
+					</div>
+					<div class="item">
+						<a href="#MidSideEffect">MidSideEffect</a>
+					</div>
+					<div class="item">
+						<a href="#Phaser">Phaser</a>
+					</div>
+					<div class="item">
+						<a href="#PingPongDelay">PingPongDelay</a>
+					</div>
+					<div class="item">
+						<a href="#PitchShift">PitchShift</a>
+					</div>
+					<div class="item">
+						<a href="#StereoEffect">StereoEffect</a>
+					</div>
+					<div class="item">
+						<a href="#StereoFeedbackEffect">StereoFeedbackEffect</a>
+					</div>
+					<div class="item">
+						<a href="#StereoWidener">StereoWidener</a>
+					</div>
+					<div class="item">
+						<a href="#StereoXFeedbackEffect">StereoXFeedbackEffect</a>
+					</div>
+					<div class="item">
+						<a href="#Tremolo">Tremolo</a>
+					</div>
+					<div class="item">
+						<a href="#Vibrato">Vibrato</a>
+					</div>
+				<div class="section">Source</div>
+				<!-- for each of the components -->
+					<div class="item">
+						<a href="#AMOscillator">AMOscillator</a>
+					</div>
+					<div class="item">
+						<a href="#BufferSource">BufferSource</a>
+					</div>
+					<div class="item">
+						<a href="#FMOscillator">FMOscillator</a>
+					</div>
+					<div class="item">
+						<a href="#FatOscillator">FatOscillator</a>
+					</div>
+					<div class="item">
+						<a href="#GrainPlayer">GrainPlayer</a>
+					</div>
+					<div class="item">
+						<a href="#MultiPlayer">MultiPlayer</a>
+					</div>
+					<div class="item">
+						<a href="#Noise">Noise</a>
+					</div>
+					<div class="item">
+						<a href="#OmniOscillator">OmniOscillator</a>
+					</div>
+					<div class="item">
+						<a href="#Oscillator">Oscillator</a>
+					</div>
+					<div class="item">
+						<a href="#PWMOscillator">PWMOscillator</a>
+					</div>
+					<div class="item">
+						<a href="#Player">Player</a>
+					</div>
+					<div class="item">
+						<a href="#PulseOscillator">PulseOscillator</a>
+					</div>
+					<div class="item">
+						<a href="#Source">Source</a>
+					</div>
+					<div class="item">
+						<a href="#UserMedia">UserMedia</a>
+					</div>
+				<div class="section">Core</div>
+				<!-- for each of the components -->
+					<div class="item">
+						<a href="#Buffer">Buffer</a>
+					</div>
+					<div class="item">
+						<a href="#Buffers">Buffers</a>
+					</div>
+					<div class="item">
+						<a href="#Clock">Clock</a>
+					</div>
+					<div class="item">
+						<a href="#Context">Context</a>
+					</div>
+					<div class="item">
+						<a href="#Delay">Delay</a>
+					</div>
+					<div class="item">
+						<a href="#Draw">Draw</a>
+					</div>
+					<div class="item">
+						<a href="#Emitter">Emitter</a>
+					</div>
+					<div class="item">
+						<a href="#Gain">Gain</a>
+					</div>
+					<div class="item">
+						<a href="#IntervalTimeline">IntervalTimeline</a>
+					</div>
+					<div class="item">
+						<a href="#Listener">Listener</a>
+					</div>
+					<div class="item">
+						<a href="#Master">Master</a>
+					</div>
+					<div class="item">
+						<a href="#OfflineContext">OfflineContext</a>
+					</div>
+					<div class="item">
+						<a href="#Param">Param</a>
+					</div>
+					<div class="item">
+						<a href="#Timeline">Timeline</a>
+					</div>
+					<div class="item">
+						<a href="#TimelineState">TimelineState</a>
+					</div>
+					<div class="item">
+						<a href="#Tone">Tone</a>
+					</div>
+					<div class="item">
+						<a href="#Transport">Transport</a>
+					</div>
+				<div class="section">Type</div>
+				<!-- for each of the components -->
+					<div class="item">
+						<a href="#Frequency">Frequency</a>
+					</div>
+					<div class="item">
+						<a href="#Time">Time</a>
+					</div>
+					<div class="item">
+						<a href="#TimeBase">TimeBase</a>
+					</div>
+					<div class="item">
+						<a href="#TransportTime">TransportTime</a>
+					</div>
+				<div class="section">Component</div>
+				<!-- for each of the components -->
+					<div class="item">
+						<a href="#AmplitudeEnvelope">AmplitudeEnvelope</a>
+					</div>
+					<div class="item">
+						<a href="#Analyser">Analyser</a>
+					</div>
+					<div class="item">
+						<a href="#Compressor">Compressor</a>
+					</div>
+					<div class="item">
+						<a href="#CrossFade">CrossFade</a>
+					</div>
+					<div class="item">
+						<a href="#EQ3">EQ3</a>
+					</div>
+					<div class="item">
+						<a href="#Envelope">Envelope</a>
+					</div>
+					<div class="item">
+						<a href="#FeedbackCombFilter">FeedbackCombFilter</a>
+					</div>
+					<div class="item">
+						<a href="#Filter">Filter</a>
+					</div>
+					<div class="item">
+						<a href="#Follower">Follower</a>
+					</div>
+					<div class="item">
+						<a href="#FrequencyEnvelope">FrequencyEnvelope</a>
+					</div>
+					<div class="item">
+						<a href="#Gate">Gate</a>
+					</div>
+					<div class="item">
+						<a href="#LFO">LFO</a>
+					</div>
+					<div class="item">
+						<a href="#Limiter">Limiter</a>
+					</div>
+					<div class="item">
+						<a href="#LowpassCombFilter">LowpassCombFilter</a>
+					</div>
+					<div class="item">
+						<a href="#Merge">Merge</a>
+					</div>
+					<div class="item">
+						<a href="#Meter">Meter</a>
+					</div>
+					<div class="item">
+						<a href="#MidSideCompressor">MidSideCompressor</a>
+					</div>
+					<div class="item">
+						<a href="#MidSideMerge">MidSideMerge</a>
+					</div>
+					<div class="item">
+						<a href="#MidSideSplit">MidSideSplit</a>
+					</div>
+					<div class="item">
+						<a href="#Mono">Mono</a>
+					</div>
+					<div class="item">
+						<a href="#MultibandCompressor">MultibandCompressor</a>
+					</div>
+					<div class="item">
+						<a href="#MultibandSplit">MultibandSplit</a>
+					</div>
+					<div class="item">
+						<a href="#PanVol">PanVol</a>
+					</div>
+					<div class="item">
+						<a href="#Panner">Panner</a>
+					</div>
+					<div class="item">
+						<a href="#Panner3D">Panner3D</a>
+					</div>
+					<div class="item">
+						<a href="#ScaledEnvelope">ScaledEnvelope</a>
+					</div>
+					<div class="item">
+						<a href="#Split">Split</a>
+					</div>
+					<div class="item">
+						<a href="#Volume">Volume</a>
+					</div>
+				<div class="section">Signal</div>
+				<!-- for each of the components -->
+					<div class="item">
+						<a href="#Abs">Abs</a>
+					</div>
+					<div class="item">
+						<a href="#Add">Add</a>
+					</div>
+					<div class="item">
+						<a href="#AudioToGain">AudioToGain</a>
+					</div>
+					<div class="item">
+						<a href="#EqualPowerGain">EqualPowerGain</a>
+					</div>
+					<div class="item">
+						<a href="#Expr">Expr</a>
+					</div>
+					<div class="item">
+						<a href="#GainToAudio">GainToAudio</a>
+					</div>
+					<div class="item">
+						<a href="#GreaterThan">GreaterThan</a>
+					</div>
+					<div class="item">
+						<a href="#GreaterThanZero">GreaterThanZero</a>
+					</div>
+					<div class="item">
+						<a href="#Modulo">Modulo</a>
+					</div>
+					<div class="item">
+						<a href="#Multiply">Multiply</a>
+					</div>
+					<div class="item">
+						<a href="#Negate">Negate</a>
+					</div>
+					<div class="item">
+						<a href="#Normalize">Normalize</a>
+					</div>
+					<div class="item">
+						<a href="#Pow">Pow</a>
+					</div>
+					<div class="item">
+						<a href="#Scale">Scale</a>
+					</div>
+					<div class="item">
+						<a href="#ScaleExp">ScaleExp</a>
+					</div>
+					<div class="item">
+						<a href="#Signal">Signal</a>
+					</div>
+					<div class="item">
+						<a href="#SignalBase">SignalBase</a>
+					</div>
+					<div class="item">
+						<a href="#Subtract">Subtract</a>
+					</div>
+					<div class="item">
+						<a href="#TimelineSignal">TimelineSignal</a>
+					</div>
+					<div class="item">
+						<a href="#WaveShaper">WaveShaper</a>
+					</div>
+					<div class="item">
+						<a href="#Zero">Zero</a>
+					</div>
+				<div class="section">Control</div>
+				<!-- for each of the components -->
+					<div class="item">
+						<a href="#CtrlInterpolate">CtrlInterpolate</a>
+					</div>
+					<div class="item">
+						<a href="#CtrlMarkov">CtrlMarkov</a>
+					</div>
+					<div class="item">
+						<a href="#CtrlPattern">CtrlPattern</a>
+					</div>
+					<div class="item">
+						<a href="#CtrlRandom">CtrlRandom</a>
+					</div>
+	</div>
+</div>
+		<div id="page"></div>
+	</body>
+</html>

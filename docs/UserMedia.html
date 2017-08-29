@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tone Docs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tomorrow.css">
+</head>
+
+	<body>
+		<div id="content">
+			<div id="constructor">
+	<span id="name">UserMedia</span><span id="extends"> &#8594; <a href='#Tone'>Tone</a></span>
+	<div id="description"><p><a class="internalLink" href='../docs/#UserMedia'>Tone.UserMedia</a> uses MediaDevices.getUserMedia to open up
+         and external microphone or audio input. Check 
+         <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia">MediaDevices API Support</a>
+         to see which browsers are supported. Access to an external input
+         is limited to secure (HTTPS) connections.</p>
+</div>
+	<div id="new">
+			<span id="newKeyword">new</span>
+			<span>Tone.</span><span id="class">UserMedia</span>
+		<span class="params">
+			<span class='syntax'>(</span>[<span id='name'>volume</span>]<span class='syntax'>)</span>
+		</span>
+		<div id="paramDescriptions">
+					<span id="name">volume</span>
+				<span class="type"><span class='paren'>{</span><a href='../docs/#types/Decibels'>Decibels</a><span class='paren'>}</span></span>
+				<div id="description"><p>The level of the input</p>
+</div>
+		</div>
+	</div>
+		<div id="examples">
+				<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//list the inputs and open the third one</span>
+<span class="hljs-keyword">var</span> motu = <span class="hljs-keyword">new</span> Tone.UserMedia();
+
+<span class="hljs-comment">//opening the input asks the user to activate their mic</span>
+motu.open().then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+	<span class="hljs-comment">//opening is activates the microphone</span>
+	<span class="hljs-comment">//starting lets audio through</span>
+	motu.start(<span class="hljs-number">10</span>);
+});</pre></div>
+		</div>
+	<div id="defaults"><div id="title">default values</div><div id="values"><div class='row'><span id='name'>volume</span><span class='syntax'>:</span><span class='value number'>0</span></div><div class='row'><span id='name'>mute</span><span class='syntax'>:</span><span class='value number'>false</span></div></div></div>
+</div>
+			<div id="members">
+	<div id="title">members</div>
+		<div id="volume" class="member listItem">
+			<span id="title">.volume</span>
+				<span class='signal' title='signal'><a target='_blank' href='https://github.com/TONEnoTONE/Tone.js/wiki/Signals'>~</a></span>
+			<span class="type"><span class='paren'>{</span><a href='../docs/#types/Decibels'>Decibels</a><span class='paren'>}</span></span>
+			<div id="description"><p>The volume of the output in decibels.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>input.volume.value = -<span class="hljs-number">6</span>;</pre></div>
+		</div>
+		<div id="state" class="member listItem">
+			<span id="title">.state</span>
+			<span class="type"><span class='paren'>{</span>Tone.State<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>Returns the playback state of the source, &quot;started&quot; when the microphone is open
+ and &quot;stopped&quot; when the mic is closed.</p>
+</div>
+		</div>
+		<div id="deviceId" class="member listItem">
+			<span id="title">.deviceId</span>
+			<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>Returns an identifier for the represented device that is 
+    persisted across sessions. It is un-guessable by other applications and 
+    unique to the origin of the calling application. It is reset when the 
+    user clears cookies (for Private Browsing, a different identifier is 
+    used that is not persisted across sessions). Returns undefined when the 
+    device is not open.</p>
+</div>
+		</div>
+		<div id="groupId" class="member listItem">
+			<span id="title">.groupId</span>
+			<span class="type"><span class='paren'>{</span>String<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>Returns a label describing this device (for example &quot;Built-in Microphone&quot;). 
+    Returns undefined when the device is not open or label is not available
+    because of permissions.</p>
+</div>
+		</div>
+		<div id="mute" class="member listItem">
+			<span id="title">.mute</span>
+			<span class="type"><span class='paren'>{</span>boolean<span class='paren'>}</span></span>
+			<div id="description"><p>Mute the output.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre><span class="hljs-comment">//mute the output</span>
+userMedia.mute = <span class="hljs-literal">true</span>;</pre></div>
+		</div>
+		<div id="supported" class="member listItem">
+			<span id="title">.supported</span>
+			<span class="type"><span class='paren'>{</span>Boolean<span class='paren'>}</span></span>
+				<span id="readonly">READ ONLY</span>
+			<div id="description"><p>If getUserMedia is supported by the browser.</p>
+</div>
+		</div>
+</div>
+
+			<div id="methods">
+	<div id="title">methods</div>
+		<div id="open" class="method listItem ">
+			<span id="title">.open
+				<span class="params">
+					<span class='syntax'>(</span>[<span id='name'>labelOrId</span>]<span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="paramDescriptions">
+							<span id="name">labelOrId</span> <span class="syntax">=</span>
+							<span id="default">&quot;default&quot;</span>
+						<span class="type"><span class='paren'>{</span>String|Number<span class='paren'>}</span></span>
+						<div id="description">The label or id of the audio input media device. 
+                                               With no argument, the default stream is opened.</div>
+				</div>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Promise<span class='paren'>}</span></span>
+					<span id="description"><p>The promise is resolved when the stream is open.</p>
+</span>
+				</div>
+			<div id="description"><p>Open the media stream. If a string is passed in, it is assumed
+ to be the label or id of the stream, if a number is passed in,
+ it is the input number of the stream.</p>
+</div>
+		</div>
+		<div id="close" class="method listItem ">
+			<span id="title">.close
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#UserMedia'>Tone.UserMedia</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Close the media stream</p>
+</div>
+		</div>
+		<div id="enumerateDevices" class="method listItem ">
+			<span id="title">.enumerateDevices
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span>Promise<span class='paren'>}</span></span>
+					<span id="description"><p>The promise that is resolved with the devices</p>
+</span>
+				</div>
+			<div id="description"><p>Returns a promise which resolves with the list of audio input devices available.</p>
+</div>
+					<div class='example'><div id=exampleTitle>code</div><pre>extInput.enumerateDevices().then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">devices</span>)</span>{
+	<span class="hljs-built_in">console</span>.log(devices)
+})</pre></div>
+		</div>
+		<div id="dispose" class="method listItem ">
+			<span id="title">.dispose
+				<span class="params">
+					<span class='syntax'>(</span><span class='syntax'>)</span>
+				</span>
+			</span>
+				<div id="returns">
+					<span id="keyword">returns</span>
+					<span class="type"><span class='paren'>{</span><a class="internalLink" href='../docs/#UserMedia'>Tone.UserMedia</a><span class='paren'>}</span></span>
+					<span id="description"><p>this</p>
+</span>
+				</div>
+			<div id="description"><p>Clean up.</p>
+</div>
+		</div>
+</div>
+			<div id="footer"></div>	
+		</div>
+	</body>
+</html>
