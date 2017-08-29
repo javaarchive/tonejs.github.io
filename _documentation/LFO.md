@@ -1,4 +1,4 @@
 ---
-title: LFO
-layout: forward
+title : LFO
+layout : forward
 ---
