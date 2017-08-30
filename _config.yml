@@ -10,7 +10,7 @@ kramdown:
 collections:
   documentation:
     output: true
-    permalink: docs/:path
+    permalink: docs2/:path
 
 exclude:
   - .DS_Store
