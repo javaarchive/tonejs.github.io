@@ -24,13 +24,13 @@ cd $TMP_TONE
 git checkout master
 
 # sync the examples dir
-cp -rf $TMP_TONE/examples/ $PWD/examples/
-git add $PWD/examples
+cp -r $TMP_TONE/examples/ $PWD/examples/
+git add ./examples
 git commit -m 'updating to latest examples'
 
 # and the build
-cp -rf $TMP_TONE/build/ $PWD/build/
-git add $PWD/build/
+cp -r $TMP_TONE/build/ $PWD/build/
+git add ./build/
 git commit -m 'updating to latest build'
 
 cd $PWD
