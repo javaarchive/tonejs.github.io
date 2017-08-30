@@ -11,7 +11,7 @@
 
 		{% comment %} list all of the classes by category {% endcomment %}
 
-		{% assign classList = site.data[include.version].classList | sort %}
+		{% assign classList = site.data[include.version].classList %}
 
 		{% for category in classList %}
 			<div class="group">
