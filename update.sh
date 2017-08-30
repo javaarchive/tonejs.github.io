@@ -1,10 +1,10 @@
 #!/bin/bash
 
-PWD=$(pwd)
-DOC_GEN=$PWD/generate_docs
+SITE_DIR=$(pwd)
+DOC_GEN=$SITE_DIR/generate_docs
 
 # clone tone.js
-TMP_TONE=$PWD/tmp/Tone.js
+TMP_TONE=$SITE_DIR/tmp/Tone.js
 git clone https://github.com/Tonejs/Tone.js $TMP_TONE
 cd $TMP_TONE
 
@@ -23,15 +23,17 @@ sh generate.sh $TMP_TONE dev
 cd $TMP_TONE
 git checkout master
 
+echo dir: $TMP_TONE/examples/. $SITE_DIR/examples/
+
 # sync the examples dir
-cp -a $TMP_TONE/examples/. $PWD/examples/
+cp -a $TMP_TONE/examples/. $SITE_DIR/examples/
 git add ./examples
 git commit -m 'updating to latest examples'
 
 # and the build
-cp -a $TMP_TONE/build/. $PWD/build/
+cp -a $TMP_TONE/build/. $SITE_DIR/build/
 git add ./build/
 git commit -m 'updating to latest build'
 
-cd $PWD
+cd $SITE_DIR
 rm -rf $TMP_TONE

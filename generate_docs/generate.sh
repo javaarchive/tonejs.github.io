@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# install jsdocs
-npm install -g jsdoc
-
 # run the jsdocs
 sh jsdoc.sh $1/Tone $2
 
