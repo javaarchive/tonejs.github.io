@@ -7,10 +7,6 @@ const data = JSON.parse(fs.readFileSync(process.argv[2]))
 data.forEach(datum => {
 	if (datum.name === 'version' && datum.scope === "static"){
 		const version = datum.meta.code.value
-		if (version.includes('dev')){
-			console.log('dev')
-		} else {
-			console.log(version)
-		}
+		console.log(version)
 	}
 })
