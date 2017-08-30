@@ -130,9 +130,6 @@
 	"CtrlRandom": [
 		"Tone"
 	],
-	"AudioNode": [
-		"Tone"
-	],
 	"Buffer": [
 		"Tone"
 	],
@@ -186,6 +183,9 @@
 	],
 	"Transport": [
 		"Emitter",
+		"Tone"
+	],
+	"AudioNode": [
 		"Tone"
 	],
 	"AutoFilter": [

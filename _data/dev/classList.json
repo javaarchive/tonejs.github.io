@@ -37,7 +37,6 @@
 		"CtrlRandom"
 	],
 	"core": [
-		"AudioNode",
 		"Buffer",
 		"Buffers",
 		"Clock",
@@ -54,7 +53,8 @@
 		"Timeline",
 		"TimelineState",
 		"Tone",
-		"Transport"
+		"Transport",
+		"AudioNode"
 	],
 	"effect": [
 		"AutoFilter",

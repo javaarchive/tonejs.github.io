@@ -30,7 +30,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -93,7 +93,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -134,7 +134,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -207,7 +207,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -293,7 +293,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -326,7 +326,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -397,7 +397,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -428,7 +428,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -548,7 +548,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -588,7 +588,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -685,7 +685,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -708,7 +708,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -751,7 +751,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -782,7 +782,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -823,7 +823,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -854,7 +854,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -885,7 +885,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -916,7 +916,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -976,7 +976,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -1046,7 +1046,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -1088,7 +1088,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -1121,7 +1121,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -1260,7 +1260,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -1380,7 +1380,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -1421,7 +1421,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -1452,7 +1452,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -1487,7 +1487,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -1627,18 +1627,6 @@
 			"scope": "instance",
 			"name": "value",
 			"lineno": "Tone/control/CtrlRandom.js#L56"
-		}
-	],
-	"AudioNode": [
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"AudioNode"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27"
 		}
 	],
 	"Buffer": [
@@ -1991,7 +1979,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2161,6 +2149,18 @@
 			"lineno": "Tone/core/Transport.js#L645"
 		}
 	],
+	"AudioNode": [
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27"
+		}
+	],
 	"AutoFilter": [
 		{
 			"description": "The range of the filter modulating between the min and max frequency. \n0 = no modulation. 1 = full modulation.",
@@ -2241,7 +2241,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2285,7 +2285,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2356,7 +2356,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2389,7 +2389,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2431,7 +2431,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2512,7 +2512,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2545,7 +2545,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2587,7 +2587,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2610,7 +2610,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2655,7 +2655,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2689,7 +2689,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2733,7 +2733,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2767,7 +2767,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2828,7 +2828,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2873,7 +2873,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2942,7 +2942,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2965,7 +2965,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2999,7 +2999,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -3033,7 +3033,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -3067,7 +3067,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -3129,7 +3129,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -3182,7 +3182,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -3823,7 +3823,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -3921,7 +3921,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4037,7 +4037,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4063,7 +4063,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4126,7 +4126,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4208,7 +4208,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4301,7 +4301,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4337,7 +4337,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4385,7 +4385,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4441,7 +4441,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4487,7 +4487,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4542,7 +4542,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4617,7 +4617,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4781,7 +4781,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4944,7 +4944,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -5040,7 +5040,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -5193,7 +5193,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -5332,7 +5332,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -5475,7 +5475,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -5619,7 +5619,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -5807,7 +5807,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -5935,7 +5935,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6055,7 +6055,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6209,7 +6209,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6255,7 +6255,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6333,7 +6333,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6453,7 +6453,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6541,7 +6541,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6634,7 +6634,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6647,7 +6647,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6730,7 +6730,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6784,7 +6784,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6838,7 +6838,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6892,7 +6892,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6946,7 +6946,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -7000,7 +7000,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -7054,7 +7054,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -7108,7 +7108,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",

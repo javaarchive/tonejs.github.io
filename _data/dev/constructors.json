@@ -744,20 +744,6 @@
 		],
 		"extends": "Tone"
 	},
-	"AudioNode": {
-		"description": "Tone.AudioNode is a base class for classes which process audio.\n        AudioNodes have inputs and outputs.",
-		"params": [
-			{
-				"type": [
-					"AudioContext"
-				],
-				"optional": true,
-				"description": "The audio context to use with the class",
-				"name": "context"
-			}
-		],
-		"extends": "Tone"
-	},
 	"Buffer": {
 		"description": "Buffer loading and storage. Tone.Buffer is used internally by all \n         classes that make requests for audio files such as Tone.Player,\n         Tone.Sampler and Tone.Convolver.\n         \n         Aside from load callbacks from individual buffers, Tone.Buffer \n \t\tprovides events which keep track of the loading progress \n \t\tof _all_ of the buffers. These are Tone.Buffer.on(\"load\" / \"progress\" / \"error\")",
 		"params": [
@@ -1022,6 +1008,20 @@
 		],
 		"singleton": true,
 		"extends": "Tone.Emitter"
+	},
+	"AudioNode": {
+		"description": "Tone.AudioNode is a base class for classes which process audio.\n        AudioNodes have inputs and outputs.",
+		"params": [
+			{
+				"type": [
+					"AudioContext"
+				],
+				"optional": true,
+				"description": "The audio context to use with the class",
+				"name": "context"
+			}
+		],
+		"extends": "Tone"
 	},
 	"AutoFilter": {
 		"description": "Tone.AutoFilter is a Tone.Filter with a Tone.LFO connected to the filter cutoff frequency.\n        Setting the LFO rate and depth allows for control over the filter modulation rate \n        and depth.",
