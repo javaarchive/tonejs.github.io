@@ -1,27 +1,18 @@
-{% assign defaults = include.data 
-	| where_exp: "item","item.memberof == include.defaults_name" 
-	| where: "scope","static" 
-	| sort: "name" %}
-
 <div class="paren">{% raw %} { {% endraw %}</div>
 <div class="break"></div>
 
-{% for default in defaults %}
+{% for default in include.defaults %}
 
 	<div class="block">
-		<span class="key"> {{default.name}} </span>
+		<span class="key"> {{default[0]}} </span>
 
 		<span class="punc">:</span>
 
-		{% if default.meta.code.type == "ObjectExpression" %}
-			{% assign defaults_name = include.defaults_name | append: '.' | append: default.name %}
-			{% include constructor/defaults_object.html 
-				data=include.data 
-				defaults_name=defaults_name %}
+		{% if default[1].first %}
+			{% assign sub = default[1] %}
+			{% include constructor/defaults_object.html defaults=sub %}
 		{% else %}
-
-			<span class="value">{{default.meta.code.value}}</span>
-			 
+			<span class="value">{{default[1]}}</span>
 		{% endif %}
 		{% comment %}add a comma{% endcomment %}
 		{% if forloop.rindex != 1 %}

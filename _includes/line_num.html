@@ -1,16 +1,4 @@
-{% assign file_name =  include.data.meta.filename %}
-{% assign full_path =  include.data.meta.path | split: "/" %}
-{% assign last_index =  full_path | size | minus: 1 %}
-{% assign dir =  full_path[last_index] %}
-{% assign line_number = include.data.meta.lineno %}
-{% assign version = page.version %}
-
-
-{% capture link_addr %}
-{% comment %}if it's got dev in the name, it's a dev branch{% endcomment %}
-	https://github.com/Tonejs/Tone.js/blob/{{version}}/Tone/{{dir}}/{{file_name}}#L{{line_number}}
-{% comment %}otherwise go with the version number{% endcomment %}
-{% endcapture %}
+{% capture link_addr %}https://github.com/Tonejs/Tone.js/blob/{{page.version}}/{{include.lineno}}{% endcapture %}
 
 <div id="line_num">
 	<a target="_blank" href="{{link_addr}}">&lt;&#47;&gt;</a>

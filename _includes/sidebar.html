@@ -10,26 +10,15 @@
 	<div id="scroller">
 
 		{% comment %} list all of the classes by category {% endcomment %}
-		{% capture paths %}
-			{% for item in include.jsdocs %}
-				{% assign category =  item.meta.path | split: '/' | last  %}
-				{{category}}
-			{% endfor %}
-		{% endcapture %}
-		{% assign categories =  paths | split: ' ' | uniq | sort %}
 
-		{% assign constructors = include.jsdocs
-			| where: "kind","class" %}
+		{% assign classList = site.data[include.version].classList | sort %}
 
-		{% for category in categories %}
+		{% for category in classList %}
 			<div class="group">
-				<h1>{{category}}</h1>
+				<h1>{{category[0]}}</h1>
 
-				{% for class in constructors %}
-					{% assign item_category =  class.meta.path | split: '/' | last  %}
-					{% if item_category == category %}
-						<a href="{{class.name}}" {% if class.name == page.title %} class="active item" {% else %} class="item" {% endif %}>{{class.name}}</a>
-					{% endif %}
+				{% for class in category[1] %}
+					<a href="{{class}}" {% if class == page.title %} class="active item" {% else %} class="item" {% endif %}>{{class}}</a>
 				{% endfor %}
 			</div>
 		{% endfor %}

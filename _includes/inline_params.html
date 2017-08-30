@@ -1,32 +1,29 @@
-{% if include.data.kind == "function" or include.data.kind == "class" %}
+{% capture params %}
+	{% for param in include.params %}
+		{% if param.optional %}
+			<span class="optional">[</span>
+		{% endif %}
 
-	{% capture params %}
-		{% for param in include.data.params %}
-			{% if param.optional %}
-				<span class="optional">[</span>
-			{% endif %}
-
-				<div class="param">{{param.name}}</div>
+			<div class="param">{{param.name}}</div>
 
 
-			{% if param.defaultvalue %}
-				<span id="default"><span class="punc">= </span>{{param.defaultvalue}}</span>
-			{% endif %}
+		{% if param.defaultvalue %}
+			<span id="default"><span class="punc">= </span>{{param.defaultvalue}}</span>
+		{% endif %}
 
-			{% if param.optional %}
-				<span class="optional">]</span>
-			{% endif %}
+		{% if param.optional %}
+			<span class="optional">]</span>
+		{% endif %}
 
-			{% if forloop.rindex != 1 %}
-				<span class="punc">,</span>
-			{% endif %}
+		{% if forloop.rindex != 1 %}
+			<span class="punc">,</span>
+		{% endif %}
 
-		{% endfor %}
-	{% endcapture %}
+	{% endfor %}
+{% endcapture %}
 
-	<span id="inline_parameters">
-		<span class="punc">(</span>
-			{{ params | normalize_whitespace }}
-		<span class="punc">)</span>
-	</span>
-{% endif %}
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		{{ params | normalize_whitespace }}
+	<span class="punc">)</span>
+</span>

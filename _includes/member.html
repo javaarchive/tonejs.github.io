@@ -4,8 +4,7 @@
 
 	{% capture name_line %}
 
-		{% assign signal = include.data.tags | where:"title","signal" %}
-		{% if signal %}
+		{% if include.data.signal %}
 			<a href="https://github.com/Tonejs/Tone.js/wiki/Signals" id="signal">&#8767;</a>
 		{% endif %}
 
@@ -15,7 +14,7 @@
 
 		<span class="orange">&#8605;</span>
 
-		{% include type.html type=include.data.type types=include.types %} 	
+		{% include type.html type=include.data.type types=include.types %}
 
 		{% if include.data.readonly %}
 			<span id="readonly" class="keyword">READONLY</span>
@@ -31,6 +30,6 @@
 
 	{% include examples.html examples=include.data.examples %}
 
-	{% include line_num.html data=include.data  %}
+	{% include line_num.html lineno=include.data.lineno  %}
 
 </div>
