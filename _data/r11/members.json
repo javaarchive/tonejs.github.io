@@ -1797,17 +1797,6 @@
 			"name": "delayTime",
 			"lineno": "Tone/core/Delay.js#L37",
 			"signal": true
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"AudioNode"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
 		}
 	],
 	"Draw": [
@@ -1840,17 +1829,6 @@
 			"name": "gain",
 			"lineno": "Tone/core/Gain.js#L38",
 			"signal": true
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"AudioNode"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
 		}
 	],
 	"IntervalTimeline": [

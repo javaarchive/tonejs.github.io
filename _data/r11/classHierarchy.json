@@ -148,7 +148,6 @@
 		"Tone"
 	],
 	"Delay": [
-		"AudioNode",
 		"Tone"
 	],
 	"Draw": [
@@ -158,7 +157,6 @@
 		"Tone"
 	],
 	"Gain": [
-		"AudioNode",
 		"Tone"
 	],
 	"IntervalTimeline": [

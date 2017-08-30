@@ -185,6 +185,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -297,6 +346,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -391,6 +489,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -482,6 +629,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -682,6 +878,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -773,6 +1018,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -870,6 +1164,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -964,6 +1307,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -1020,6 +1412,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1225,6 +1666,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -1316,6 +1806,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1445,6 +1984,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -1536,6 +2124,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1633,6 +2270,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -1724,6 +2410,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1821,6 +2556,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -1912,6 +2696,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2009,6 +2842,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -2100,6 +2982,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2197,6 +3128,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -2288,6 +3268,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2385,6 +3414,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -2476,6 +3554,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2637,6 +3764,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -2728,6 +3904,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2933,6 +4158,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -3024,6 +4298,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -3121,6 +4444,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -3212,6 +4584,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -3360,6 +4781,53 @@
 			"lineno": "Tone/core/AudioNode.js#L127"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163"
+		},
+		{
 			"description": "Dispose and disconnect",
 			"returns": {
 				"type": [
@@ -3369,7 +4837,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/AudioNode.js#L182"
+			"lineno": "Tone/core/AudioNode.js#L180"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
@@ -4774,86 +6242,6 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/core/Delay.js#L62"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L110",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
 		}
 	],
 	"Draw": [
@@ -5040,86 +6428,6 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/core/Gain.js#L63"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L110",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
 		}
 	],
 	"IntervalTimeline": [
@@ -6145,6 +7453,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -7718,6 +9075,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -7893,6 +9299,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -7984,6 +9439,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -8081,6 +9585,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -8175,6 +9728,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -8266,6 +9868,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -8390,6 +10041,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -8481,6 +10181,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -8578,6 +10327,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -8669,6 +10467,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -8766,6 +10613,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -8857,6 +10753,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -8954,6 +10899,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -9045,6 +11039,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -9142,6 +11185,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -9233,6 +11325,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -9330,6 +11471,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -9421,6 +11611,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -9518,6 +11757,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -9612,6 +11900,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -9703,6 +12040,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -9881,6 +12267,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -9972,6 +12407,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10832,6 +13316,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -11079,6 +13612,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11332,6 +13914,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -11472,6 +14103,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11684,6 +14364,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -11863,6 +14592,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12111,6 +14889,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12364,6 +15191,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -12555,6 +15431,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -12726,6 +15651,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -13028,6 +16002,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -13261,6 +16284,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -13511,6 +16583,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -13980,6 +17101,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -14713,6 +17883,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -15235,6 +18454,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -15972,6 +19240,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -16425,6 +19742,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -17011,6 +20377,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -17557,6 +20972,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -18066,6 +21530,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -18409,6 +21922,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -18590,6 +22152,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -18768,6 +22379,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -18943,6 +22603,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -19163,6 +22872,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -19573,6 +23331,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -19786,6 +23593,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -19988,6 +23844,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -20273,6 +24178,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -20461,6 +24415,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -20636,6 +24639,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -20817,6 +24869,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -20991,6 +25092,55 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -21133,6 +25283,55 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L148",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{

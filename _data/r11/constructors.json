@@ -875,7 +875,7 @@
 				"name": "maxDelay"
 			}
 		],
-		"extends": "Tone.AudioNode"
+		"extends": "Tone"
 	},
 	"Draw": {
 		"description": "Tone.Draw is useful for synchronizing visuals and audio events.\n        Callbacks from Tone.Transport or any of the Tone.Event classes\n        always happen _before_ the scheduled time and are not synchronized\n        to the animation frame so they are not good for triggering tightly\n        synchronized visuals and sound. Tone.Draw makes it easy to schedule\n        callbacks using the AudioContext time and uses requestAnimationFrame.",
@@ -909,7 +909,7 @@
 				"name": "units"
 			}
 		],
-		"extends": "Tone.AudioNode"
+		"extends": "Tone"
 	},
 	"IntervalTimeline": {
 		"description": "Similar to Tone.Timeline, but all events represent\n        intervals with both \"time\" and \"duration\" times. The \n        events are placed in a tree structure optimized\n        for querying an intersection point with the timeline\n        events. Internally uses an [Interval Tree](https://en.wikipedia.org/wiki/Interval_tree)\n        to represent the data.",
