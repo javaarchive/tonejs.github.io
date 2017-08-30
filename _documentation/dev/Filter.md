@@ -1,5 +1,6 @@
 ---
-title: Filter
-layout: doc
-version: dev
+title : Filter
+version : dev
+layout : docs
+category : component
 ---

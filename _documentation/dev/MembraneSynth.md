@@ -1,5 +1,6 @@
 ---
-title: MembraneSynth
-layout: doc
-version: dev
+title : MembraneSynth
+version : dev
+layout : docs
+category : instrument
 ---

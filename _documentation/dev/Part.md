@@ -1,5 +1,6 @@
 ---
-title: Part
-layout: doc
-version: dev
+title : Part
+version : dev
+layout : docs
+category : event
 ---

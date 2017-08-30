@@ -1,5 +1,6 @@
 ---
-title: AudioNode
-layout: doc
-version: dev
+title : AudioNode
+version : dev
+layout : docs
+category : core
 ---

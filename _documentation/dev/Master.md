@@ -1,5 +1,6 @@
 ---
-title: Master
-layout: doc
-version: dev
+title : Master
+version : dev
+layout : docs
+category : core
 ---

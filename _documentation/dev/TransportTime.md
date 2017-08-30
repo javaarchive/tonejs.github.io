@@ -1,5 +1,6 @@
 ---
-title: TransportTime
-layout: doc
-version: dev
+title : TransportTime
+version : dev
+layout : docs
+category : type
 ---

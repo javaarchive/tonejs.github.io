@@ -1,5 +1,6 @@
 ---
-title: Multiply
-layout: doc
-version: dev
+title : Multiply
+version : dev
+layout : docs
+category : signal
 ---

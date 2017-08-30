@@ -1,4 +1,4 @@
 ---
-title: Negate
-layout: forward
+title : Negate
+layout : forward
 ---

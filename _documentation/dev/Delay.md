@@ -1,5 +1,6 @@
 ---
-title: Delay
-layout: doc
-version: dev
+title : Delay
+version : dev
+layout : docs
+category : core
 ---

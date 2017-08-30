@@ -1,4 +1,4 @@
 ---
-title: TickSignal
-layout: forward
+title : TickSignal
+layout : forward
 ---

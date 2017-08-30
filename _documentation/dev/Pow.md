@@ -1,5 +1,6 @@
 ---
-title: Pow
-layout: doc
-version: dev
+title : Pow
+version : dev
+layout : docs
+category : signal
 ---

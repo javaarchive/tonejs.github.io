@@ -1,5 +1,6 @@
 ---
-title: Draw
-layout: doc
-version: dev
+title : Draw
+version : dev
+layout : docs
+category : core
 ---

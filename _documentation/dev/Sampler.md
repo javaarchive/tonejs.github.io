@@ -1,5 +1,6 @@
 ---
-title: Sampler
-layout: doc
-version: dev
+title : Sampler
+version : dev
+layout : docs
+category : instrument
 ---

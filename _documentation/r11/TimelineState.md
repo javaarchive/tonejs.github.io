@@ -1,5 +1,6 @@
 ---
-title: TimelineState
-layout: doc
-version: r11
+title : TimelineState
+version : r11
+layout : docs
+category : core
 ---

@@ -1,5 +1,6 @@
 ---
-title: AutoWah
-layout: doc
-version: r11
+title : AutoWah
+version : r11
+layout : docs
+category : effect
 ---

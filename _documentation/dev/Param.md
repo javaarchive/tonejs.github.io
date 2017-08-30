@@ -1,5 +1,6 @@
 ---
-title: Param
-layout: doc
-version: dev
+title : Param
+version : dev
+layout : docs
+category : core
 ---

@@ -1,5 +1,6 @@
 ---
-title: Event
-layout: doc
-version: dev
+title : Event
+version : dev
+layout : docs
+category : event
 ---

@@ -1,5 +1,6 @@
 ---
-title: FeedbackEffect
-layout: doc
-version: dev
+title : FeedbackEffect
+version : dev
+layout : docs
+category : effect
 ---

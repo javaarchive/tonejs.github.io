@@ -1,4 +1,4 @@
 ---
-title: AMSynth
-layout: forward
+title : AMSynth
+layout : forward
 ---

@@ -1,4 +1,5 @@
 ---
+layout: type
 title: Type
-layout: forward
+version: 
 ---

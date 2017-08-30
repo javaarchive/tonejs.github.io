@@ -1,5 +1,6 @@
 ---
-title: MidSideEffect
-layout: doc
-version: dev
+title : MidSideEffect
+version : dev
+layout : docs
+category : effect
 ---

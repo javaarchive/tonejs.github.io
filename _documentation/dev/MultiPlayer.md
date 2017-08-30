@@ -1,5 +1,6 @@
 ---
-title: MultiPlayer
-layout: doc
-version: dev
+title : MultiPlayer
+version : dev
+layout : docs
+category : source
 ---

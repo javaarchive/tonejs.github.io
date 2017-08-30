@@ -1,5 +1,6 @@
 ---
-title: CtrlMarkov
-layout: doc
-version: dev
+title : CtrlMarkov
+version : dev
+layout : docs
+category : control
 ---

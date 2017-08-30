@@ -1,5 +1,6 @@
 ---
-title: Monophonic
-layout: doc
-version: dev
+title : Monophonic
+version : dev
+layout : docs
+category : instrument
 ---

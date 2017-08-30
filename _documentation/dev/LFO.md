@@ -1,5 +1,6 @@
 ---
-title: LFO
-layout: doc
-version: dev
+title : LFO
+version : dev
+layout : docs
+category : component
 ---

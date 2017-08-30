@@ -1,5 +1,6 @@
 ---
-title: Time
-layout: doc
-version: r11
+title : Time
+version : r11
+layout : docs
+category : type
 ---

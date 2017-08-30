@@ -1,4 +1,4 @@
 ---
-title: Chorus
-layout: forward
+title : Chorus
+layout : forward
 ---

@@ -1,5 +1,6 @@
 ---
-title: Split
-layout: doc
-version: dev
+title : Split
+version : dev
+layout : docs
+category : component
 ---

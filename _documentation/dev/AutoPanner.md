@@ -1,5 +1,6 @@
 ---
-title: AutoPanner
-layout: doc
-version: dev
+title : AutoPanner
+version : dev
+layout : docs
+category : effect
 ---

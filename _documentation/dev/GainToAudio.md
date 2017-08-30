@@ -1,5 +1,6 @@
 ---
-title: GainToAudio
-layout: doc
-version: dev
+title : GainToAudio
+version : dev
+layout : docs
+category : signal
 ---

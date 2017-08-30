@@ -1,4 +1,4 @@
 ---
-title: Add
-layout: forward
+title : Add
+layout : forward
 ---

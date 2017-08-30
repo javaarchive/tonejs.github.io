@@ -1,5 +1,6 @@
 ---
-title: PanVol
-layout: doc
-version: dev
+title : PanVol
+version : dev
+layout : docs
+category : component
 ---

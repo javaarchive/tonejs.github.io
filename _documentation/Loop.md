@@ -1,4 +1,4 @@
 ---
-title: Loop
-layout: forward
+title : Loop
+layout : forward
 ---

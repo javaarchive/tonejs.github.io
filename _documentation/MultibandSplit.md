@@ -1,4 +1,4 @@
 ---
-title: MultibandSplit
-layout: forward
+title : MultibandSplit
+layout : forward
 ---

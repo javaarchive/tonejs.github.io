@@ -1,4 +1,4 @@
 ---
-title: MidSideMerge
-layout: forward
+title : MidSideMerge
+layout : forward
 ---

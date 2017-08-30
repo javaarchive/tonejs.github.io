@@ -1,5 +1,6 @@
 ---
-title: Gain
-layout: doc
-version: dev
+title : Gain
+version : dev
+layout : docs
+category : core
 ---

@@ -1,5 +1,6 @@
 ---
-title: Chebyshev
-layout: doc
-version: dev
+title : Chebyshev
+version : dev
+layout : docs
+category : effect
 ---

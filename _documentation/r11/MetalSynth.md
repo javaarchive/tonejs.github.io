@@ -1,5 +1,6 @@
 ---
-title: MetalSynth
-layout: doc
-version: r11
+title : MetalSynth
+version : r11
+layout : docs
+category : instrument
 ---

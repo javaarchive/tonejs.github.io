@@ -1,4 +1,4 @@
 ---
-title: Tremolo
-layout: forward
+title : Tremolo
+layout : forward
 ---

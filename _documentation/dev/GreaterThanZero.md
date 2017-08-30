@@ -1,5 +1,6 @@
 ---
-title: GreaterThanZero
-layout: doc
-version: dev
+title : GreaterThanZero
+version : dev
+layout : docs
+category : signal
 ---

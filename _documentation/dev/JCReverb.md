@@ -1,5 +1,6 @@
 ---
-title: JCReverb
-layout: doc
-version: dev
+title : JCReverb
+version : dev
+layout : docs
+category : effect
 ---

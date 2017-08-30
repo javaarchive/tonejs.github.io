@@ -1,5 +1,6 @@
 ---
-title: CtrlRandom
-layout: doc
-version: dev
+title : CtrlRandom
+version : dev
+layout : docs
+category : control
 ---

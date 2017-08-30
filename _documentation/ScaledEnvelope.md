@@ -1,4 +1,4 @@
 ---
-title: ScaledEnvelope
-layout: forward
+title : ScaledEnvelope
+layout : forward
 ---

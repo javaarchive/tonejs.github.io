@@ -1,4 +1,4 @@
 ---
-title: MultiPlayer
-layout: forward
+title : MultiPlayer
+layout : forward
 ---

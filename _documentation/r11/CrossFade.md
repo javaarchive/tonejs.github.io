@@ -1,5 +1,6 @@
 ---
-title: CrossFade
-layout: doc
-version: r11
+title : CrossFade
+version : r11
+layout : docs
+category : component
 ---

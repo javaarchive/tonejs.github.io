@@ -1,4 +1,4 @@
 ---
-title: Vibrato
-layout: forward
+title : Vibrato
+layout : forward
 ---

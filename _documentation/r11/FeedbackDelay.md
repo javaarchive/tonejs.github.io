@@ -1,5 +1,6 @@
 ---
-title: FeedbackDelay
-layout: doc
-version: r11
+title : FeedbackDelay
+version : r11
+layout : docs
+category : effect
 ---

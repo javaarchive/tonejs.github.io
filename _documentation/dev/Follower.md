@@ -1,5 +1,6 @@
 ---
-title: Follower
-layout: doc
-version: dev
+title : Follower
+version : dev
+layout : docs
+category : component
 ---

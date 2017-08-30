@@ -1,5 +1,6 @@
 ---
-title: UserMedia
-layout: doc
-version: dev
+title : UserMedia
+version : dev
+layout : docs
+category : source
 ---

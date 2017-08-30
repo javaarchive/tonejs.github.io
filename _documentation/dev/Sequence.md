@@ -1,5 +1,6 @@
 ---
-title: Sequence
-layout: doc
-version: dev
+title : Sequence
+version : dev
+layout : docs
+category : event
 ---

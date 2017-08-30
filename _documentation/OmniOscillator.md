@@ -1,4 +1,4 @@
 ---
-title: OmniOscillator
-layout: forward
+title : OmniOscillator
+layout : forward
 ---

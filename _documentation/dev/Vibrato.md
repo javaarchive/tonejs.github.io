@@ -1,5 +1,6 @@
 ---
-title: Vibrato
-layout: doc
-version: dev
+title : Vibrato
+version : dev
+layout : docs
+category : effect
 ---

@@ -1,4 +1,4 @@
 ---
-title: EQ3
-layout: forward
+title : EQ3
+layout : forward
 ---

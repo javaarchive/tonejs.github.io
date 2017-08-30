@@ -5,10 +5,10 @@
 	{% capture line %}
 		<h4 id="{% include util/slug.html data=include.data %}">
 			<span id="main">
-				.{{ include.data.name }}	
+				.{{ include.data.name }}
 			</span>
 			{% include inline_params.html data=include.data types=include.types %}
-		</h4> 
+		</h4>
 	{% endcapture %}
 
 	{% include name.html data=include.data line=line %}
@@ -21,5 +21,5 @@
 
 	{% include examples.html examples=include.data.examples %}
 
-	{% include line_num.html data=include.data  %}
+	{% include line_num.html lineno=include.data.lineno  %}
 </div>

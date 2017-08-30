@@ -1,5 +1,5 @@
 <span class="type">
-	{% for type in include.type.names %}
+	{% for type in include.type %}
 		{% if type contains 'Tone.' %}
 			{% assign link_path =  type | remove: 'Tone.' %}
 			{% capture content %}
@@ -10,7 +10,7 @@
 				<a href="{{type}}">{{type}}</a>
 			{% endcapture %}
 		{% else %}
-			{% assign type_def = include.types | where: "name",type | first %}
+			{% assign type_def = include.types[type] %}
 			{% if type_def.size %}
 				{% capture content %}
 					<a href="Type#{{type | slugify}}">
@@ -25,8 +25,5 @@
 		{% if forloop.rindex != 1 %}
 			<span class="punc">or</span>
 		{% endif %}
-
 	{% endfor %}
-
-	{% comment %}<span>{{include.type.names | join: " or "}}</span>{% endcomment %}
 </span>

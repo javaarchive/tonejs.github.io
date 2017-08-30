@@ -1,5 +1,6 @@
 ---
-title: GrainPlayer
-layout: doc
-version: dev
+title : GrainPlayer
+version : dev
+layout : docs
+category : source
 ---

@@ -1,5 +1,6 @@
 ---
-title: Gate
-layout: doc
-version: dev
+title : Gate
+version : dev
+layout : docs
+category : component
 ---

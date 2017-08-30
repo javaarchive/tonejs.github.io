@@ -1,5 +1,6 @@
 ---
-title: Panner
-layout: doc
-version: r11
+title : Panner
+version : r11
+layout : docs
+category : component
 ---

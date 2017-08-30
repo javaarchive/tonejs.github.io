@@ -1,5 +1,6 @@
 ---
-title: Negate
-layout: doc
-version: dev
+title : Negate
+version : dev
+layout : docs
+category : signal
 ---

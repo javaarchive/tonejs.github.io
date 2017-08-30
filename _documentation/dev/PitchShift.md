@@ -1,5 +1,6 @@
 ---
-title: PitchShift
-layout: doc
-version: dev
+title : PitchShift
+version : dev
+layout : docs
+category : effect
 ---

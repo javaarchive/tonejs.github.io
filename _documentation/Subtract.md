@@ -1,4 +1,4 @@
 ---
-title: Subtract
-layout: forward
+title : Subtract
+layout : forward
 ---

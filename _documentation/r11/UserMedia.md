@@ -1,5 +1,6 @@
 ---
-title: UserMedia
-layout: doc
-version: r11
+title : UserMedia
+version : r11
+layout : docs
+category : source
 ---

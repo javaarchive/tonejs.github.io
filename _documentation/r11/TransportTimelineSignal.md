@@ -1,5 +1,6 @@
 ---
-title: TransportTimelineSignal
-layout: doc
-version: r11
+title : TransportTimelineSignal
+version : r11
+layout : docs
+category : signal
 ---

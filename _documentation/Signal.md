@@ -1,4 +1,4 @@
 ---
-title: Signal
-layout: forward
+title : Signal
+layout : forward
 ---

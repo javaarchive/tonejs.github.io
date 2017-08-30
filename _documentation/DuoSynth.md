@@ -1,4 +1,4 @@
 ---
-title: DuoSynth
-layout: forward
+title : DuoSynth
+layout : forward
 ---

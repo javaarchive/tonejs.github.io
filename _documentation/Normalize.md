@@ -1,4 +1,4 @@
 ---
-title: Normalize
-layout: forward
+title : Normalize
+layout : forward
 ---

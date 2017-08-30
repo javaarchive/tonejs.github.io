@@ -1,4 +1,4 @@
 ---
-title: StereoEffect
-layout: forward
+title : StereoEffect
+layout : forward
 ---

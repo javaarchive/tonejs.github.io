@@ -1,5 +1,6 @@
 ---
-title: PulseOscillator
-layout: doc
-version: dev
+title : PulseOscillator
+version : dev
+layout : docs
+category : source
 ---

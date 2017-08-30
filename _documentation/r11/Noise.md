@@ -1,5 +1,6 @@
 ---
-title: Noise
-layout: doc
-version: r11
+title : Noise
+version : r11
+layout : docs
+category : source
 ---

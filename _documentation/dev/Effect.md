@@ -1,5 +1,6 @@
 ---
-title: Effect
-layout: doc
-version: dev
+title : Effect
+version : dev
+layout : docs
+category : effect
 ---

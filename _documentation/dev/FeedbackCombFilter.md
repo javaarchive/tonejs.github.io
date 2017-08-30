@@ -1,5 +1,6 @@
 ---
-title: FeedbackCombFilter
-layout: doc
-version: dev
+title : FeedbackCombFilter
+version : dev
+layout : docs
+category : component
 ---

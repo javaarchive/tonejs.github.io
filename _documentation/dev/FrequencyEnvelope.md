@@ -1,5 +1,6 @@
 ---
-title: FrequencyEnvelope
-layout: doc
-version: dev
+title : FrequencyEnvelope
+version : dev
+layout : docs
+category : component
 ---

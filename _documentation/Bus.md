@@ -1,4 +1,0 @@
----
-title: Bus
-layout: forward
----

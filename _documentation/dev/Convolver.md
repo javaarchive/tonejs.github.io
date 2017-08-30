@@ -1,5 +1,6 @@
 ---
-title: Convolver
-layout: doc
-version: dev
+title : Convolver
+version : dev
+layout : docs
+category : effect
 ---

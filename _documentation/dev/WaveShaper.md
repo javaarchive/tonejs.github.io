@@ -1,5 +1,6 @@
 ---
-title: WaveShaper
-layout: doc
-version: dev
+title : WaveShaper
+version : dev
+layout : docs
+category : signal
 ---

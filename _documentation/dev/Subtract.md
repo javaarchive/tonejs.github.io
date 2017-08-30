@@ -1,5 +1,6 @@
 ---
-title: Subtract
-layout: doc
-version: dev
+title : Subtract
+version : dev
+layout : docs
+category : signal
 ---

@@ -6,9 +6,9 @@
 </head>
 <body>
 
-	{% assign jsdoc_version =  page.version | prepend: 'jsdocs-' %}
+	{% assign version =  page.version %}
 
-	{% assign jsdocs = site.data[jsdoc_version] %}
+	{% assign jsdocs_dir = site.data[jsdoc_version] %}
 
 	{% assign class_name = page.title %}
 	{% if class_name != 'Tone' %}

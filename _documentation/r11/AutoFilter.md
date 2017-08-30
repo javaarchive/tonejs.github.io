@@ -1,5 +1,6 @@
 ---
-title: AutoFilter
-layout: doc
-version: r11
+title : AutoFilter
+version : r11
+layout : docs
+category : effect
 ---

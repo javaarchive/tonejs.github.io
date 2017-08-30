@@ -1,5 +1,6 @@
 ---
-title: PingPongDelay
-layout: doc
-version: dev
+title : PingPongDelay
+version : dev
+layout : docs
+category : effect
 ---

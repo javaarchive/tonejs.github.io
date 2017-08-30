@@ -1,5 +1,6 @@
 ---
-title: Clock
-layout: doc
-version: dev
+title : Clock
+version : dev
+layout : docs
+category : core
 ---

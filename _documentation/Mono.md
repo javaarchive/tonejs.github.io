@@ -1,4 +1,4 @@
 ---
-title: Mono
-layout: forward
+title : Mono
+layout : forward
 ---

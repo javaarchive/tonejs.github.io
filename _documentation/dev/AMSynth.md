@@ -1,5 +1,6 @@
 ---
-title: AMSynth
-layout: doc
-version: dev
+title : AMSynth
+version : dev
+layout : docs
+category : instrument
 ---

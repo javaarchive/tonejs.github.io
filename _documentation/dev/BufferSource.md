@@ -1,5 +1,6 @@
 ---
-title: BufferSource
-layout: doc
-version: dev
+title : BufferSource
+version : dev
+layout : docs
+category : source
 ---

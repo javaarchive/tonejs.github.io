@@ -1,4 +1,4 @@
 ---
-title: Analyser
-layout: forward
+title : Analyser
+layout : forward
 ---

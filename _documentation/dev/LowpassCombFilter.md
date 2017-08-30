@@ -1,5 +1,6 @@
 ---
-title: LowpassCombFilter
-layout: doc
-version: dev
+title : LowpassCombFilter
+version : dev
+layout : docs
+category : component
 ---

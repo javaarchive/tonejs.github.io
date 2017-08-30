@@ -1,5 +1,6 @@
 ---
-title: Modulo
-layout: doc
-version: dev
+title : Modulo
+version : dev
+layout : docs
+category : signal
 ---

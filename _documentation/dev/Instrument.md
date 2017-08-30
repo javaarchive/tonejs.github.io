@@ -1,5 +1,6 @@
 ---
-title: Instrument
-layout: doc
-version: dev
+title : Instrument
+version : dev
+layout : docs
+category : instrument
 ---

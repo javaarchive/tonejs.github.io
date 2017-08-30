@@ -1,4 +1,4 @@
 ---
-title: Synth
-layout: forward
+title : Synth
+layout : forward
 ---

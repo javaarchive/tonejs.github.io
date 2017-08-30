@@ -1,5 +1,6 @@
 ---
-title: TimeBase
-layout: doc
-version: r11
+title : TimeBase
+version : r11
+layout : docs
+category : type
 ---

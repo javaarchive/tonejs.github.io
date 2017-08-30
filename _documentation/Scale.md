@@ -1,4 +1,4 @@
 ---
-title: Scale
-layout: forward
+title : Scale
+layout : forward
 ---

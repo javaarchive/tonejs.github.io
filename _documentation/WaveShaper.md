@@ -1,4 +1,4 @@
 ---
-title: WaveShaper
-layout: forward
+title : WaveShaper
+layout : forward
 ---

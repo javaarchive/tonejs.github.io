@@ -1,4 +1,4 @@
 ---
-title: Players
-layout: forward
+title : Players
+layout : forward
 ---

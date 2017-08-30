@@ -1,5 +1,6 @@
 ---
-title: AutoFilter
-layout: doc
-version: dev
+title : AutoFilter
+version : dev
+layout : docs
+category : effect
 ---

@@ -1,5 +1,6 @@
 ---
-title: StereoEffect
-layout: doc
-version: dev
+title : StereoEffect
+version : dev
+layout : docs
+category : effect
 ---

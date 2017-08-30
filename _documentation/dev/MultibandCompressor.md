@@ -1,5 +1,6 @@
 ---
-title: MultibandCompressor
-layout: doc
-version: dev
+title : MultibandCompressor
+version : dev
+layout : docs
+category : component
 ---

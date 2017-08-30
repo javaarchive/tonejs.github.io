@@ -2,13 +2,13 @@
 	{% for param in include.params %}
 		<div class="param">
 
-			
+
 			<span id="param_name">
 				{{param.name}}
 			</span>
 
 			<span id="param_description">
-				
+
 				{% if param.description %}
 
 					{% include util/markdown.html data=param.description %}
@@ -22,12 +22,12 @@
 				{% if param.defaultvalue %}
 					<div id="default">
 						<span class="keyword">default:</span>
-						<span class="default_value">{{param.defaultvalue}}</span> 
+						<span class="default_value">{{param.defaultvalue}}</span>
 					</div>
 				{% elsif param.optional %}
 					<div id="optional" class="keyword">optional</div>
 				{% endif %}
-			
+
 
 			</span>
 
@@ -35,17 +35,17 @@
 	{% endfor %}
 
 	{% if include.returns %}
-		
+
 		<div id="returns">
 
-			{% assign ret = include.returns[0] %}
+			{% assign ret = include.returns %}
 
 
 			<span id="type">
 
-				<span id="ret_text" class="keyword">&#8618; returns</span> 
+				<span id="ret_text" class="keyword">&#8618; returns</span>
 
-				{% include type.html type=ret.type types=include.types %} 
+				{% include type.html type=ret.type types=include.types %}
 			</span>
 
 			<span id="param_description">
@@ -57,4 +57,3 @@
 	{% endif %}
 
 </div>
-

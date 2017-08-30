@@ -1,5 +1,6 @@
 ---
-title: Oscillator
-layout: doc
-version: dev
+title : Oscillator
+version : dev
+layout : docs
+category : source
 ---

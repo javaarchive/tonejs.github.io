@@ -1,4 +1,4 @@
 ---
-title: Freeverb
-layout: forward
+title : Freeverb
+layout : forward
 ---

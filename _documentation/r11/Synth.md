@@ -1,5 +1,6 @@
 ---
-title: Synth
-layout: doc
-version: r11
+title : Synth
+version : r11
+layout : docs
+category : instrument
 ---

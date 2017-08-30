@@ -1,4 +1,4 @@
 ---
-title: CtrlMarkov
-layout: forward
+title : CtrlMarkov
+layout : forward
 ---

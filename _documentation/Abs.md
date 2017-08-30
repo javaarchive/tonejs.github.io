@@ -1,4 +1,4 @@
 ---
-title: Abs
-layout: forward
+title : Abs
+layout : forward
 ---

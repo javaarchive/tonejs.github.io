@@ -1,4 +1,4 @@
 ---
-title: Frequency
-layout: forward
+title : Frequency
+layout : forward
 ---

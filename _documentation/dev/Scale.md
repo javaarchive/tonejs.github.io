@@ -1,5 +1,6 @@
 ---
-title: Scale
-layout: doc
-version: dev
+title : Scale
+version : dev
+layout : docs
+category : signal
 ---

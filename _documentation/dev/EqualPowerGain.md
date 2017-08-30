@@ -1,5 +1,6 @@
 ---
-title: EqualPowerGain
-layout: doc
-version: dev
+title : EqualPowerGain
+version : dev
+layout : docs
+category : signal
 ---

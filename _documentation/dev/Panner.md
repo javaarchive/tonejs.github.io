@@ -1,5 +1,6 @@
 ---
-title: Panner
-layout: doc
-version: dev
+title : Panner
+version : dev
+layout : docs
+category : component
 ---

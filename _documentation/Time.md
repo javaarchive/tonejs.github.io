@@ -1,4 +1,4 @@
 ---
-title: Time
-layout: forward
+title : Time
+layout : forward
 ---

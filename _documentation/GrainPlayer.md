@@ -1,4 +1,4 @@
 ---
-title: GrainPlayer
-layout: forward
+title : GrainPlayer
+layout : forward
 ---

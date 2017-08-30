@@ -1,5 +1,6 @@
 ---
-title: Buffer
-layout: doc
-version: dev
+title : Buffer
+version : dev
+layout : docs
+category : core
 ---

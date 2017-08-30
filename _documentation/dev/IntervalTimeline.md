@@ -1,5 +1,6 @@
 ---
-title: IntervalTimeline
-layout: doc
-version: dev
+title : IntervalTimeline
+version : dev
+layout : docs
+category : core
 ---

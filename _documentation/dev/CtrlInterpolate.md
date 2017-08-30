@@ -1,5 +1,6 @@
 ---
-title: CtrlInterpolate
-layout: doc
-version: dev
+title : CtrlInterpolate
+version : dev
+layout : docs
+category : control
 ---

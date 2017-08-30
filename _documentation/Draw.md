@@ -1,4 +1,4 @@
 ---
-title: Draw
-layout: forward
+title : Draw
+layout : forward
 ---

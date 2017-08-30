@@ -1,4 +1,4 @@
 ---
-title: Gate
-layout: forward
+title : Gate
+layout : forward
 ---

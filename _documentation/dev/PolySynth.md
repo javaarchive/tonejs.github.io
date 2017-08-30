@@ -1,5 +1,6 @@
 ---
-title: PolySynth
-layout: doc
-version: dev
+title : PolySynth
+version : dev
+layout : docs
+category : instrument
 ---

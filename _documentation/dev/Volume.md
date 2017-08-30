@@ -1,5 +1,6 @@
 ---
-title: Volume
-layout: doc
-version: dev
+title : Volume
+version : dev
+layout : docs
+category : component
 ---

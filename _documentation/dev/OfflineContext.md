@@ -1,5 +1,6 @@
 ---
-title: OfflineContext
-layout: doc
-version: dev
+title : OfflineContext
+version : dev
+layout : docs
+category : core
 ---

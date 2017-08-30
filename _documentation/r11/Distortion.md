@@ -1,5 +1,6 @@
 ---
-title: Distortion
-layout: doc
-version: r11
+title : Distortion
+version : r11
+layout : docs
+category : effect
 ---

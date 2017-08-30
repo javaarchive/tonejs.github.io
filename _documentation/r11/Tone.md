@@ -1,5 +1,6 @@
 ---
-title: Tone
-layout: doc
-version: r11
+title : Tone
+version : r11
+layout : docs
+category : core
 ---

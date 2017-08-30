@@ -1,4 +1,4 @@
 ---
-title: AMOscillator
-layout: forward
+title : AMOscillator
+layout : forward
 ---

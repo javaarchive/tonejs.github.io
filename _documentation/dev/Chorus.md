@@ -1,5 +1,6 @@
 ---
-title: Chorus
-layout: doc
-version: dev
+title : Chorus
+version : dev
+layout : docs
+category : effect
 ---

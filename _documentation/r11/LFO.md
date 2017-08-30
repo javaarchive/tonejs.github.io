@@ -1,5 +1,6 @@
 ---
-title: LFO
-layout: doc
-version: r11
+title : LFO
+version : r11
+layout : docs
+category : component
 ---

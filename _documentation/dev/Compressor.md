@@ -1,5 +1,6 @@
 ---
-title: Compressor
-layout: doc
-version: dev
+title : Compressor
+version : dev
+layout : docs
+category : component
 ---

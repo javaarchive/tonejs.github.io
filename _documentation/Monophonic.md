@@ -1,4 +1,4 @@
 ---
-title: Monophonic
-layout: forward
+title : Monophonic
+layout : forward
 ---

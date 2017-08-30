@@ -1,5 +1,6 @@
 ---
-title: Analyser
-layout: doc
-version: r11
+title : Analyser
+version : r11
+layout : docs
+category : component
 ---

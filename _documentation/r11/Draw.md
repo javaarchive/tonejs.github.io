@@ -1,5 +1,6 @@
 ---
-title: Draw
-layout: doc
-version: r11
+title : Draw
+version : r11
+layout : docs
+category : core
 ---

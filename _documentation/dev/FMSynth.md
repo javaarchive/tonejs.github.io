@@ -1,5 +1,6 @@
 ---
-title: FMSynth
-layout: doc
-version: dev
+title : FMSynth
+version : dev
+layout : docs
+category : instrument
 ---

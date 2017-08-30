@@ -1,5 +1,6 @@
 ---
-title: Tremolo
-layout: doc
-version: dev
+title : Tremolo
+version : dev
+layout : docs
+category : effect
 ---

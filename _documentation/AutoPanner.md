@@ -1,4 +1,4 @@
 ---
-title: AutoPanner
-layout: forward
+title : AutoPanner
+layout : forward
 ---

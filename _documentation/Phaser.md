@@ -1,4 +1,4 @@
 ---
-title: Phaser
-layout: forward
+title : Phaser
+layout : forward
 ---

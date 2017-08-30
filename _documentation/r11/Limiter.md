@@ -1,5 +1,6 @@
 ---
-title: Limiter
-layout: doc
-version: r11
+title : Limiter
+version : r11
+layout : docs
+category : component
 ---

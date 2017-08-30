@@ -1,5 +1,6 @@
 ---
-title: Signal
-layout: doc
-version: dev
+title : Signal
+version : dev
+layout : docs
+category : signal
 ---

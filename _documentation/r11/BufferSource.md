@@ -1,5 +1,6 @@
 ---
-title: BufferSource
-layout: doc
-version: r11
+title : BufferSource
+version : r11
+layout : docs
+category : source
 ---

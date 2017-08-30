@@ -1,5 +1,6 @@
 ---
-title: PluckSynth
-layout: doc
-version: r11
+title : PluckSynth
+version : r11
+layout : docs
+category : instrument
 ---

@@ -1,5 +1,6 @@
 ---
-title: Envelope
-layout: doc
-version: r11
+title : Envelope
+version : r11
+layout : docs
+category : component
 ---

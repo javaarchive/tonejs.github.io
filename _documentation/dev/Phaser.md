@@ -1,5 +1,6 @@
 ---
-title: Phaser
-layout: doc
-version: dev
+title : Phaser
+version : dev
+layout : docs
+category : effect
 ---

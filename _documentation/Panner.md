@@ -1,4 +1,4 @@
 ---
-title: Panner
-layout: forward
+title : Panner
+layout : forward
 ---

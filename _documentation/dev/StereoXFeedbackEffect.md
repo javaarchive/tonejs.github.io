@@ -1,5 +1,6 @@
 ---
-title: StereoXFeedbackEffect
-layout: doc
-version: dev
+title : StereoXFeedbackEffect
+version : dev
+layout : docs
+category : effect
 ---

@@ -1,5 +1,6 @@
 ---
-title: BitCrusher
-layout: doc
-version: dev
+title : BitCrusher
+version : dev
+layout : docs
+category : effect
 ---

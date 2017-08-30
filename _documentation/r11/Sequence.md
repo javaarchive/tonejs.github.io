@@ -1,5 +1,6 @@
 ---
-title: Sequence
-layout: doc
-version: r11
+title : Sequence
+version : r11
+layout : docs
+category : event
 ---

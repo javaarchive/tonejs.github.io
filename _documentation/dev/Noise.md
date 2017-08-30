@@ -1,5 +1,6 @@
 ---
-title: Noise
-layout: doc
-version: dev
+title : Noise
+version : dev
+layout : docs
+category : source
 ---

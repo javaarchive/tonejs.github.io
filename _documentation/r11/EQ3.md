@@ -1,5 +1,6 @@
 ---
-title: EQ3
-layout: doc
-version: r11
+title : EQ3
+version : r11
+layout : docs
+category : component
 ---

@@ -1,5 +1,6 @@
 ---
-title: NoiseSynth
-layout: doc
-version: dev
+title : NoiseSynth
+version : dev
+layout : docs
+category : instrument
 ---

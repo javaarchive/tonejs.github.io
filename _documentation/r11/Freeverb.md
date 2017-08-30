@@ -1,5 +1,6 @@
 ---
-title: Freeverb
-layout: doc
-version: r11
+title : Freeverb
+version : r11
+layout : docs
+category : effect
 ---

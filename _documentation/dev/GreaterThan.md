@@ -1,5 +1,6 @@
 ---
-title: GreaterThan
-layout: doc
-version: dev
+title : GreaterThan
+version : dev
+layout : docs
+category : signal
 ---

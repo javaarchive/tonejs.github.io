@@ -1,4 +1,4 @@
 ---
-title: PingPongDelay
-layout: forward
+title : PingPongDelay
+layout : forward
 ---

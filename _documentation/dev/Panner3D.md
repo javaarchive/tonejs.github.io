@@ -1,5 +1,6 @@
 ---
-title: Panner3D
-layout: doc
-version: dev
+title : Panner3D
+version : dev
+layout : docs
+category : component
 ---

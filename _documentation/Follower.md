@@ -1,4 +1,4 @@
 ---
-title: Follower
-layout: forward
+title : Follower
+layout : forward
 ---

@@ -1,4 +1,4 @@
 ---
-title: MonoSynth
-layout: forward
+title : MonoSynth
+layout : forward
 ---

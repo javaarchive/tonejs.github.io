@@ -1,5 +1,6 @@
 ---
-title: Tone
-layout: doc
-version: dev
+title : Tone
+version : dev
+layout : docs
+category : core
 ---

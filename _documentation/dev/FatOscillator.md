@@ -1,5 +1,6 @@
 ---
-title: FatOscillator
-layout: doc
-version: dev
+title : FatOscillator
+version : dev
+layout : docs
+category : source
 ---

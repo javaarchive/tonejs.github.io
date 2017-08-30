@@ -1,5 +1,6 @@
 ---
-title: Zero
-layout: doc
-version: dev
+title : Zero
+version : dev
+layout : docs
+category : signal
 ---

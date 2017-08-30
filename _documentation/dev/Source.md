@@ -1,5 +1,6 @@
 ---
-title: Source
-layout: doc
-version: dev
+title : Source
+version : dev
+layout : docs
+category : source
 ---

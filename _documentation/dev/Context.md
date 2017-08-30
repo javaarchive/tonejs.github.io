@@ -1,5 +1,6 @@
 ---
-title: Context
-layout: doc
-version: dev
+title : Context
+version : dev
+layout : docs
+category : core
 ---

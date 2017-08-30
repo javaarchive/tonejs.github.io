@@ -1,5 +1,6 @@
 ---
-title: CtrlMarkov
-layout: doc
-version: r11
+title : CtrlMarkov
+version : r11
+layout : docs
+category : control
 ---

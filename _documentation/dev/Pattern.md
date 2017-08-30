@@ -1,5 +1,6 @@
 ---
-title: Pattern
-layout: doc
-version: dev
+title : Pattern
+version : dev
+layout : docs
+category : event
 ---

@@ -1,5 +1,6 @@
 ---
-title: Player
-layout: doc
-version: dev
+title : Player
+version : dev
+layout : docs
+category : source
 ---

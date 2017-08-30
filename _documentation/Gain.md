@@ -1,4 +1,4 @@
 ---
-title: Gain
-layout: forward
+title : Gain
+layout : forward
 ---

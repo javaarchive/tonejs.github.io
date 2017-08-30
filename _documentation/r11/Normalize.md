@@ -1,5 +1,6 @@
 ---
-title: Normalize
-layout: doc
-version: r11
+title : Normalize
+version : r11
+layout : docs
+category : signal
 ---

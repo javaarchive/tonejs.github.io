@@ -1,5 +1,6 @@
 ---
-title: AudioToGain
-layout: doc
-version: dev
+title : AudioToGain
+version : dev
+layout : docs
+category : signal
 ---

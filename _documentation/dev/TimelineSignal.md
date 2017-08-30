@@ -1,5 +1,6 @@
 ---
-title: TimelineSignal
-layout: doc
-version: dev
+title : TimelineSignal
+version : dev
+layout : docs
+category : signal
 ---

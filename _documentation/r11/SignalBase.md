@@ -1,5 +1,6 @@
 ---
-title: SignalBase
-layout: doc
-version: r11
+title : SignalBase
+version : r11
+layout : docs
+category : signal
 ---

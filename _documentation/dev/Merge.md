@@ -1,5 +1,6 @@
 ---
-title: Merge
-layout: doc
-version: dev
+title : Merge
+version : dev
+layout : docs
+category : component
 ---

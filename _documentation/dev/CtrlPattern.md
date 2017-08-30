@@ -1,5 +1,6 @@
 ---
-title: CtrlPattern
-layout: doc
-version: dev
+title : CtrlPattern
+version : dev
+layout : docs
+category : control
 ---

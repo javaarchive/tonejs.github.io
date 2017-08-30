@@ -1,5 +1,6 @@
 ---
-title: Solo
-layout: doc
-version: r11
+title : Solo
+version : r11
+layout : docs
+category : component
 ---

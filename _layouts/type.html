@@ -8,16 +8,9 @@
 </head>
 <body>
 
-	{% assign jsdoc_version =  page.version | prepend: 'jsdocs-' %}
+	{% assign types = site.data[page.version].types %}
 
-	{% assign jsdocs = site.data[jsdoc_version] %}
-
-	{% assign types = jsdocs
-			| where: "kind","typedef"
-			| where: "memberof","Tone.Type"
-			| sort: "name" %}
-
-	{% include sidebar.html jsdocs=jsdocs class_name=class_name %}
+	{% include sidebar.html class_name=page.title version=page.version %}
 
 	<div id="content">
 

@@ -1,5 +1,6 @@
 ---
-title: MultibandSplit
-layout: doc
-version: dev
+title : MultibandSplit
+version : dev
+layout : docs
+category : component
 ---

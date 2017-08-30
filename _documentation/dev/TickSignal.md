@@ -1,5 +1,6 @@
 ---
-title: TickSignal
-layout: doc
-version: dev
+title : TickSignal
+version : dev
+layout : docs
+category : signal
 ---

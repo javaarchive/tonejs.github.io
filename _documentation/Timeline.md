@@ -1,4 +1,4 @@
 ---
-title: Timeline
-layout: forward
+title : Timeline
+layout : forward
 ---

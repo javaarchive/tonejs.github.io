@@ -1,5 +1,6 @@
 ---
-title: Time
-layout: doc
-version: dev
+title : Time
+version : dev
+layout : docs
+category : type
 ---

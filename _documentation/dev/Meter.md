@@ -1,5 +1,6 @@
 ---
-title: Meter
-layout: doc
-version: dev
+title : Meter
+version : dev
+layout : docs
+category : component
 ---

@@ -1,5 +1,6 @@
 ---
-title: Analyser
-layout: doc
-version: dev
+title : Analyser
+version : dev
+layout : docs
+category : component
 ---

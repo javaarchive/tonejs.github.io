@@ -1,5 +1,6 @@
 ---
-title: TimeBase
-layout: doc
-version: dev
+title : TimeBase
+version : dev
+layout : docs
+category : type
 ---

@@ -1,5 +1,6 @@
 ---
-title: MidSideMerge
-layout: doc
-version: dev
+title : MidSideMerge
+version : dev
+layout : docs
+category : component
 ---

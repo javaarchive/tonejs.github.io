@@ -1,5 +1,6 @@
 ---
-title: ScaleExp
-layout: doc
-version: r11
+title : ScaleExp
+version : r11
+layout : docs
+category : signal
 ---

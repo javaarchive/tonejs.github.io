@@ -1,5 +1,6 @@
 ---
-title: MidSideSplit
-layout: doc
-version: r11
+title : MidSideSplit
+version : r11
+layout : docs
+category : component
 ---

@@ -1,5 +1,6 @@
 ---
-title: AutoWah
-layout: doc
-version: dev
+title : AutoWah
+version : dev
+layout : docs
+category : effect
 ---

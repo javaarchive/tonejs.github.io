@@ -1,5 +1,6 @@
 ---
-title: PulseOscillator
-layout: doc
-version: r11
+title : PulseOscillator
+version : r11
+layout : docs
+category : source
 ---

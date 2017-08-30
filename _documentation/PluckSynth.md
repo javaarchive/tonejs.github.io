@@ -1,4 +1,4 @@
 ---
-title: PluckSynth
-layout: forward
+title : PluckSynth
+layout : forward
 ---

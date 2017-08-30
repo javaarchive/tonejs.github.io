@@ -1,5 +1,6 @@
 ---
-title: TimelineState
-layout: doc
-version: dev
+title : TimelineState
+version : dev
+layout : docs
+category : core
 ---

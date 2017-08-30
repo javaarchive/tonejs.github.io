@@ -1,4 +1,4 @@
 ---
-title: Pow
-layout: forward
+title : Pow
+layout : forward
 ---

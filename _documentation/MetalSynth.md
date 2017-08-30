@@ -1,4 +1,4 @@
 ---
-title: MetalSynth
-layout: forward
+title : MetalSynth
+layout : forward
 ---

@@ -1,5 +1,6 @@
 ---
-title: FeedbackDelay
-layout: doc
-version: dev
+title : FeedbackDelay
+version : dev
+layout : docs
+category : effect
 ---

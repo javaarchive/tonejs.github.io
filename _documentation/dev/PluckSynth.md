@@ -1,5 +1,6 @@
 ---
-title: PluckSynth
-layout: doc
-version: dev
+title : PluckSynth
+version : dev
+layout : docs
+category : instrument
 ---

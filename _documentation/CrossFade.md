@@ -1,4 +1,4 @@
 ---
-title: CrossFade
-layout: forward
+title : CrossFade
+layout : forward
 ---

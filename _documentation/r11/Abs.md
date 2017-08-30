@@ -1,5 +1,6 @@
 ---
-title: Abs
-layout: doc
-version: r11
+title : Abs
+version : r11
+layout : docs
+category : signal
 ---

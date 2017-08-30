@@ -1,5 +1,6 @@
 ---
-title: Distortion
-layout: doc
-version: dev
+title : Distortion
+version : dev
+layout : docs
+category : effect
 ---

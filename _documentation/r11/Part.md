@@ -1,5 +1,6 @@
 ---
-title: Part
-layout: doc
-version: r11
+title : Part
+version : r11
+layout : docs
+category : event
 ---

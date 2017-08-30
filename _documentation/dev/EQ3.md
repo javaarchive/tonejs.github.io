@@ -1,5 +1,6 @@
 ---
-title: EQ3
-layout: doc
-version: dev
+title : EQ3
+version : dev
+layout : docs
+category : component
 ---
