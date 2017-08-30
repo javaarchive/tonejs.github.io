@@ -106,40 +106,6 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
-	"EQ3": {
-		"description": "Tone.EQ3 is a three band EQ with control over low, mid, and high gain as\n        well as the low and high crossover frequencies.",
-		"params": [
-			{
-				"type": [
-					"Decibels",
-					"Object"
-				],
-				"optional": true,
-				"description": "The gain applied to the lows.",
-				"name": "lowLevel"
-			},
-			{
-				"type": [
-					"Decibels"
-				],
-				"optional": true,
-				"description": "The gain applied to the mid.",
-				"name": "midLevel"
-			},
-			{
-				"type": [
-					"Decibels"
-				],
-				"optional": true,
-				"description": "The gain applied to the high.",
-				"name": "highLevel"
-			}
-		],
-		"examples": [
-			"var eq = new Tone.EQ3(-10, 3, -20);"
-		],
-		"extends": "Tone.AudioNode"
-	},
 	"Envelope": {
 		"description": "Tone.Envelope is an [ADSR](https://en.wikipedia.org/wiki/Synthesizer#ADSR_envelope)\n         envelope generator. Tone.Envelope outputs a signal which\n         can be connected to an AudioParam or Tone.Signal.\n         <img src=\"https://upload.wikimedia.org/wikipedia/commons/e/ea/ADSR_parameter.svg\">",
 		"params": [
@@ -178,6 +144,40 @@
 		],
 		"examples": [
 			"//an amplitude envelope\nvar gainNode = Tone.context.createGain();\nvar env = new Tone.Envelope({\n\t\"attack\" : 0.1,\n\t\"decay\" : 0.2,\n\t\"sustain\" : 1,\n\t\"release\" : 0.8,\n});\nenv.connect(gainNode.gain);"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"EQ3": {
+		"description": "Tone.EQ3 is a three band EQ with control over low, mid, and high gain as\n        well as the low and high crossover frequencies.",
+		"params": [
+			{
+				"type": [
+					"Decibels",
+					"Object"
+				],
+				"optional": true,
+				"description": "The gain applied to the lows.",
+				"name": "lowLevel"
+			},
+			{
+				"type": [
+					"Decibels"
+				],
+				"optional": true,
+				"description": "The gain applied to the mid.",
+				"name": "midLevel"
+			},
+			{
+				"type": [
+					"Decibels"
+				],
+				"optional": true,
+				"description": "The gain applied to the high.",
+				"name": "highLevel"
+			}
+		],
+		"examples": [
+			"var eq = new Tone.EQ3(-10, 3, -20);"
 		],
 		"extends": "Tone.AudioNode"
 	},
@@ -515,29 +515,6 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
-	"PanVol": {
-		"description": "Tone.PanVol is a Tone.Panner and Tone.Volume in one.",
-		"params": [
-			{
-				"type": [
-					"AudioRange"
-				],
-				"description": "the initial pan",
-				"name": "pan"
-			},
-			{
-				"type": [
-					"number"
-				],
-				"description": "The output volume.",
-				"name": "volume"
-			}
-		],
-		"examples": [
-			"//pan the incoming signal left and drop the volume\nvar panVol = new Tone.PanVol(-0.25, -12);"
-		],
-		"extends": "Tone.AudioNode"
-	},
 	"Panner": {
 		"description": "Tone.Panner is an equal power Left/Right Panner and does not\n         support 3D. Panner uses the StereoPannerNode when available.",
 		"params": [
@@ -580,6 +557,29 @@
 				"description": "The initial z position.",
 				"name": "positionZ"
 			}
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"PanVol": {
+		"description": "Tone.PanVol is a Tone.Panner and Tone.Volume in one.",
+		"params": [
+			{
+				"type": [
+					"AudioRange"
+				],
+				"description": "the initial pan",
+				"name": "pan"
+			},
+			{
+				"type": [
+					"number"
+				],
+				"description": "The output volume.",
+				"name": "volume"
+			}
+		],
+		"examples": [
+			"//pan the incoming signal left and drop the volume\nvar panVol = new Tone.PanVol(-0.25, -12);"
 		],
 		"extends": "Tone.AudioNode"
 	},
@@ -1681,6 +1681,10 @@
 		],
 		"extends": "Tone.Instrument"
 	},
+	"Monophonic": {
+		"description": "This is an abstract base class for other monophonic instruments to \n         extend. IMPORTANT: It does not make any sound on its own and\n         shouldn't be directly instantiated.",
+		"extends": "Tone.Instrument"
+	},
 	"MonoSynth": {
 		"description": "Tone.MonoSynth is composed of one oscillator, one filter, and two envelopes.\n         The amplitude of the Tone.Oscillator and the cutoff frequency of the \n         Tone.Filter are controlled by Tone.Envelopes. \n         <img src=\"https://docs.google.com/drawings/d/1gaY1DF9_Hzkodqf8JI1Cg2VZfwSElpFQfI94IQwad38/pub?w=924&h=240\">",
 		"params": [
@@ -1697,10 +1701,6 @@
 			"var synth = new Tone.MonoSynth({\n\t\"oscillator\" : {\n\t\t\"type\" : \"square\"\n },\n \"envelope\" : {\n \t\"attack\" : 0.1\n }\n}).toMaster();\nsynth.triggerAttackRelease(\"C4\", \"8n\");"
 		],
 		"extends": "Tone.Monophonic"
-	},
-	"Monophonic": {
-		"description": "This is an abstract base class for other monophonic instruments to \n         extend. IMPORTANT: It does not make any sound on its own and\n         shouldn't be directly instantiated.",
-		"extends": "Tone.Instrument"
 	},
 	"NoiseSynth": {
 		"description": "Tone.NoiseSynth is composed of a noise generator (Tone.Noise), one filter (Tone.Filter), \n         and two envelopes (Tone.Envelop). One envelope controls the amplitude\n         of the noise and the other is controls the cutoff frequency of the filter. \n         <img src=\"https://docs.google.com/drawings/d/1rqzuX9rBlhT50MRvD2TKml9bnZhcZmzXF1rf_o7vdnE/pub?w=918&h=242\">",
@@ -2198,36 +2198,6 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
-	"FMOscillator": {
-		"description": "Tone.FMOscillator",
-		"params": [
-			{
-				"type": [
-					"Frequency"
-				],
-				"description": "The starting frequency of the oscillator.",
-				"name": "frequency"
-			},
-			{
-				"type": [
-					"String"
-				],
-				"description": "The type of the carrier oscillator.",
-				"name": "type"
-			},
-			{
-				"type": [
-					"String"
-				],
-				"description": "The type of the modulator oscillator.",
-				"name": "modulationType"
-			}
-		],
-		"examples": [
-			"//a sine oscillator frequency-modulated by a square wave\nvar fmOsc = new Tone.FMOscillator(\"Ab3\", \"sine\", \"square\").toMaster().start();"
-		],
-		"extends": "Tone.Source"
-	},
 	"FatOscillator": {
 		"description": "Tone.FatOscillator",
 		"params": [
@@ -2255,6 +2225,36 @@
 		],
 		"examples": [
 			"//a sine oscillator frequency-modulated by a square wave\nvar fmOsc = new Tone.FatOscillator(\"Ab3\", \"sine\", \"square\").toMaster().start();"
+		],
+		"extends": "Tone.Source"
+	},
+	"FMOscillator": {
+		"description": "Tone.FMOscillator",
+		"params": [
+			{
+				"type": [
+					"Frequency"
+				],
+				"description": "The starting frequency of the oscillator.",
+				"name": "frequency"
+			},
+			{
+				"type": [
+					"String"
+				],
+				"description": "The type of the carrier oscillator.",
+				"name": "type"
+			},
+			{
+				"type": [
+					"String"
+				],
+				"description": "The type of the modulator oscillator.",
+				"name": "modulationType"
+			}
+		],
+		"examples": [
+			"//a sine oscillator frequency-modulated by a square wave\nvar fmOsc = new Tone.FMOscillator(\"Ab3\", \"sine\", \"square\").toMaster().start();"
 		],
 		"extends": "Tone.Source"
 	},
@@ -2371,29 +2371,6 @@
 		],
 		"extends": "Tone.Source"
 	},
-	"PWMOscillator": {
-		"description": "Tone.PWMOscillator modulates the width of a Tone.PulseOscillator \n        at the modulationFrequency. This has the effect of continuously\n        changing the timbre of the oscillator by altering the harmonics \n        generated.",
-		"params": [
-			{
-				"type": [
-					"Frequency"
-				],
-				"description": "The starting frequency of the oscillator.",
-				"name": "frequency"
-			},
-			{
-				"type": [
-					"Frequency"
-				],
-				"description": "The modulation frequency of the width of the pulse.",
-				"name": "modulationFrequency"
-			}
-		],
-		"examples": [
-			"var pwm = new Tone.PWMOscillator(\"Ab3\", 0.3).toMaster().start();"
-		],
-		"extends": "Tone.Source"
-	},
 	"Player": {
 		"description": "Tone.Player is an audio file player with start, loop, and stop functions.",
 		"params": [
@@ -2462,6 +2439,29 @@
 		],
 		"examples": [
 			"var pulse = new Tone.PulseOscillator(\"E5\", 0.4).toMaster().start();"
+		],
+		"extends": "Tone.Source"
+	},
+	"PWMOscillator": {
+		"description": "Tone.PWMOscillator modulates the width of a Tone.PulseOscillator \n        at the modulationFrequency. This has the effect of continuously\n        changing the timbre of the oscillator by altering the harmonics \n        generated.",
+		"params": [
+			{
+				"type": [
+					"Frequency"
+				],
+				"description": "The starting frequency of the oscillator.",
+				"name": "frequency"
+			},
+			{
+				"type": [
+					"Frequency"
+				],
+				"description": "The modulation frequency of the width of the pulse.",
+				"name": "modulationFrequency"
+			}
+		],
+		"examples": [
+			"var pwm = new Tone.PWMOscillator(\"Ab3\", 0.3).toMaster().start();"
 		],
 		"extends": "Tone.Source"
 	},

@@ -16,11 +16,11 @@
 		"AudioNode",
 		"Tone"
 	],
-	"EQ3": [
+	"Envelope": [
 		"AudioNode",
 		"Tone"
 	],
-	"Envelope": [
+	"EQ3": [
 		"AudioNode",
 		"Tone"
 	],
@@ -89,15 +89,15 @@
 		"AudioNode",
 		"Tone"
 	],
-	"PanVol": [
-		"AudioNode",
-		"Tone"
-	],
 	"Panner": [
 		"AudioNode",
 		"Tone"
 	],
 	"Panner3D": [
+		"AudioNode",
+		"Tone"
+	],
+	"PanVol": [
 		"AudioNode",
 		"Tone"
 	],
@@ -364,13 +364,13 @@
 		"AudioNode",
 		"Tone"
 	],
-	"MonoSynth": [
-		"Monophonic",
+	"Monophonic": [
 		"Instrument",
 		"AudioNode",
 		"Tone"
 	],
-	"Monophonic": [
+	"MonoSynth": [
+		"Monophonic",
 		"Instrument",
 		"AudioNode",
 		"Tone"
@@ -519,12 +519,12 @@
 		"AudioNode",
 		"Tone"
 	],
-	"FMOscillator": [
+	"FatOscillator": [
 		"Source",
 		"AudioNode",
 		"Tone"
 	],
-	"FatOscillator": [
+	"FMOscillator": [
 		"Source",
 		"AudioNode",
 		"Tone"
@@ -552,11 +552,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"PWMOscillator": [
-		"Source",
-		"AudioNode",
-		"Tone"
-	],
 	"Player": [
 		"Source",
 		"AudioNode",
@@ -567,6 +562,11 @@
 		"Tone"
 	],
 	"PulseOscillator": [
+		"Source",
+		"AudioNode",
+		"Tone"
+	],
+	"PWMOscillator": [
 		"Source",
 		"AudioNode",
 		"Tone"
