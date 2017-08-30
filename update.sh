@@ -23,7 +23,7 @@ sh generate.sh $TMP_TONE dev
 cd $TMP_TONE
 git checkout master
 
-echo dir: $TMP_TONE/examples/. $SITE_DIR/examples/
+cd $SITE_DIR
 
 # sync the examples dir
 cp -a $TMP_TONE/examples/. $SITE_DIR/examples/
@@ -35,5 +35,7 @@ cp -a $TMP_TONE/build/. $SITE_DIR/build/
 git add ./build/
 git commit -m 'updating to latest build'
 
-cd $SITE_DIR
+# push the changes
+git push -f
+
 rm -rf $TMP_TONE
