@@ -201,118 +201,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"AnalyserNode": [
-		{
-			"scope": "instance",
-			"name": "getFloatTimeDomainData",
-			"lineno": "Tone/component/Analyser.js#L11"
-		}
-	],
-	"Analyser": [
-		{
-			"description": "Run the analysis given the current settings and return the\n result as a TypedArray.",
-			"returns": {
-				"type": [
-					"TypedArray"
-				]
-			},
-			"scope": "instance",
-			"name": "analyse",
-			"lineno": "Tone/component/Analyser.js#L88"
-		},
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.Analyser"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/Analyser.js#L150"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L110",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"Compressor": [
 		{
 			"description": "clean up",
@@ -569,203 +457,6 @@
 			"scope": "instance",
 			"name": "connect",
 			"lineno": "Tone/core/AudioNode.js#L110",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Envelope": [
-		{
-			"description": "Trigger the attack/decay portion of the ADSR envelope.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the attack should start.",
-					"name": "time"
-				},
-				{
-					"type": [
-						"NormalRange"
-					],
-					"optional": true,
-					"defaultvalue": 1,
-					"description": "The velocity of the envelope scales the vales.\n                              number between 0-1",
-					"name": "velocity"
-				}
-			],
-			"examples": [
-				"//trigger the attack 0.5 seconds from now with a velocity of 0.2\n env.triggerAttack(\"+0.5\", 0.2);"
-			],
-			"returns": {
-				"type": [
-					"Tone.Envelope"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerAttack",
-			"lineno": "Tone/component/Envelope.js#L231"
-		},
-		{
-			"description": "Triggers the release of the envelope.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the release portion of the envelope should start.",
-					"name": "time"
-				}
-			],
-			"examples": [
-				"//trigger release immediately\n env.triggerRelease();"
-			],
-			"returns": {
-				"type": [
-					"Tone.Envelope"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerRelease",
-			"lineno": "Tone/component/Envelope.js#L277"
-		},
-		{
-			"description": "Get the scheduled value at the given time. This will\n return the unconverted (raw) value.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The time in seconds.",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Number"
-				],
-				"description": "The scheduled value at the given time."
-			},
-			"scope": "instance",
-			"name": "getValueAtTime",
-			"lineno": "Tone/component/Envelope.js#L303"
-		},
-		{
-			"description": "triggerAttackRelease is shorthand for triggerAttack, then waiting\n some duration, then triggerRelease.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The duration of the sustain.",
-					"name": "duration"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the attack should be triggered.",
-					"name": "time"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 1,
-					"description": "The velocity of the envelope.",
-					"name": "velocity"
-				}
-			],
-			"examples": [
-				"//trigger the attack and then the release after 0.6 seconds.\nenv.triggerAttackRelease(0.6);"
-			],
-			"returns": {
-				"type": [
-					"Tone.Envelope"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerAttackRelease",
-			"lineno": "Tone/component/Envelope.js#L318"
-		},
-		{
-			"description": "Cancels all scheduled envelope changes after the given time.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"name": "after"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Envelope"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "cancel",
-			"lineno": "Tone/component/Envelope.js#L330"
-		},
-		{
-			"description": "Disconnect and dispose.",
-			"returns": {
-				"type": [
-					"Tone.Envelope"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/Envelope.js#L446"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1661,100 +1352,6 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/component/Merge.js#L63"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L110",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Meter": [
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.Meter"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/Meter.js#L116"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
@@ -3149,6 +2746,641 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/component/Volume.js#L88"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L110",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"AnalyserNode": [
+		{
+			"scope": "instance",
+			"name": "getFloatTimeDomainData",
+			"lineno": "Tone/component/Analyser.js#L11"
+		}
+	],
+	"Analyser": [
+		{
+			"description": "Run the analysis given the current settings and return the\n result as a TypedArray.",
+			"returns": {
+				"type": [
+					"TypedArray"
+				]
+			},
+			"scope": "instance",
+			"name": "getValue",
+			"lineno": "Tone/component/Analyser.js#L88"
+		},
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.Analyser"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/Analyser.js#L150"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L110",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Envelope": [
+		{
+			"description": "Trigger the attack/decay portion of the ADSR envelope.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the attack should start.",
+					"name": "time"
+				},
+				{
+					"type": [
+						"NormalRange"
+					],
+					"optional": true,
+					"defaultvalue": 1,
+					"description": "The velocity of the envelope scales the vales.\n                              number between 0-1",
+					"name": "velocity"
+				}
+			],
+			"examples": [
+				"//trigger the attack 0.5 seconds from now with a velocity of 0.2\n env.triggerAttack(\"+0.5\", 0.2);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Envelope"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerAttack",
+			"lineno": "Tone/component/Envelope.js#L231"
+		},
+		{
+			"description": "Triggers the release of the envelope.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the release portion of the envelope should start.",
+					"name": "time"
+				}
+			],
+			"examples": [
+				"//trigger release immediately\n env.triggerRelease();"
+			],
+			"returns": {
+				"type": [
+					"Tone.Envelope"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerRelease",
+			"lineno": "Tone/component/Envelope.js#L277"
+		},
+		{
+			"description": "Get the scheduled value at the given time. This will\n return the unconverted (raw) value.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The time in seconds.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The scheduled value at the given time."
+			},
+			"scope": "instance",
+			"name": "getValueAtTime",
+			"lineno": "Tone/component/Envelope.js#L303"
+		},
+		{
+			"description": "triggerAttackRelease is shorthand for triggerAttack, then waiting\n some duration, then triggerRelease.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The duration of the sustain.",
+					"name": "duration"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the attack should be triggered.",
+					"name": "time"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 1,
+					"description": "The velocity of the envelope.",
+					"name": "velocity"
+				}
+			],
+			"examples": [
+				"//trigger the attack and then the release after 0.6 seconds.\nenv.triggerAttackRelease(0.6);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Envelope"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerAttackRelease",
+			"lineno": "Tone/component/Envelope.js#L318"
+		},
+		{
+			"description": "Cancels all scheduled envelope changes after the given time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "after"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Envelope"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancel",
+			"lineno": "Tone/component/Envelope.js#L330"
+		},
+		{
+			"description": "Disconnect and dispose.",
+			"returns": {
+				"type": [
+					"Tone.Envelope"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/Envelope.js#L446"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"FFT": [
+		{
+			"description": "Gets the waveform of the audio source. Returns the waveform data\n of length [size](#size) as a Float32Array with values between -1 and 1.",
+			"returns": {
+				"type": [
+					"TypedArray"
+				]
+			},
+			"scope": "instance",
+			"name": "getValue",
+			"lineno": "Tone/component/FFT.js#L39"
+		},
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.FFT"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/FFT.js#L62"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L110",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Meter": [
+		{
+			"description": "Get the current decibel value of the incoming signal",
+			"returns": {
+				"type": [
+					"Decibels"
+				]
+			},
+			"scope": "instance",
+			"name": "getLevel",
+			"lineno": "Tone/component/Meter.js#L57"
+		},
+		{
+			"description": "Get the signal value of the incoming signal",
+			"returns": {
+				"type": [
+					"Number"
+				]
+			},
+			"scope": "instance",
+			"name": "getValue",
+			"lineno": "Tone/component/Meter.js#L69"
+		},
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.Meter"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/Meter.js#L95"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L110",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Waveform": [
+		{
+			"description": "Gets the waveform of the audio source. Returns the waveform data\n of length [size](#size) as a Float32Array with values between -1 and 1.",
+			"returns": {
+				"type": [
+					"TypedArray"
+				]
+			},
+			"scope": "instance",
+			"name": "getValue",
+			"lineno": "Tone/component/Waveform.js#L39"
+		},
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.Waveform"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/Waveform.js#L61"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
@@ -5601,409 +5833,6 @@
 			"lineno": "Tone/core/OfflineContext.js#L75"
 		}
 	],
-	"Param": [
-		{
-			"description": "Schedules a parameter value change at the given time.",
-			"params": [
-				{
-					"type": [
-						"*"
-					],
-					"description": "The value to set the signal.",
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The time when the change should occur.",
-					"name": "time"
-				}
-			],
-			"examples": [
-				"//set the frequency to \"G4\" in exactly 1 second from now.\nfreq.setValueAtTime(\"G4\", \"+1\");"
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "setValueAtTime",
-			"lineno": "Tone/core/Param.js#L170"
-		},
-		{
-			"description": "Creates a schedule point with the current value at the current time.\n This is useful for creating an automation anchor point in order to\n schedule changes from the current value.",
-			"params": [
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"description": "(Optionally) pass the now value in.",
-					"name": "now"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "setRampPoint",
-			"lineno": "Tone/core/Param.js#L183"
-		},
-		{
-			"description": "Schedules a linear continuous change in parameter value from the\n previous scheduled parameter value to the given value.",
-			"params": [
-				{
-					"type": [
-						"number"
-					],
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"name": "endTime"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "linearRampToValueAtTime",
-			"lineno": "Tone/core/Param.js#L203"
-		},
-		{
-			"description": "Schedules an exponential continuous change in parameter value from\n the previous scheduled parameter value to the given value.",
-			"params": [
-				{
-					"type": [
-						"number"
-					],
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"name": "endTime"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "exponentialRampToValueAtTime",
-			"lineno": "Tone/core/Param.js#L217"
-		},
-		{
-			"description": "Schedules an exponential continuous change in parameter value from\n the current time and current value to the given value over the\n duration of the rampTime.",
-			"params": [
-				{
-					"type": [
-						"number"
-					],
-					"description": "The value to ramp to.",
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "the time that it takes the\n                              value to ramp from it's current value",
-					"name": "rampTime"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the ramp should start.",
-					"name": "startTime"
-				}
-			],
-			"examples": [
-				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampToValue(2, 4);"
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "exponentialRampToValue",
-			"lineno": "Tone/core/Param.js#L238"
-		},
-		{
-			"description": "Schedules an linear continuous change in parameter value from\n the current time and current value to the given value over the\n duration of the rampTime.",
-			"params": [
-				{
-					"type": [
-						"number"
-					],
-					"description": "The value to ramp to.",
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "the time that it takes the\n                              value to ramp from it's current value",
-					"name": "rampTime"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the ramp should start.",
-					"name": "startTime"
-				}
-			],
-			"examples": [
-				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampToValue(4, 3);"
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "linearRampToValue",
-			"lineno": "Tone/core/Param.js#L259"
-		},
-		{
-			"description": "Start exponentially approaching the target value at the given time with\n a rate having the given time constant.",
-			"params": [
-				{
-					"type": [
-						"number"
-					],
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"name": "startTime"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"name": "timeConstant"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "setTargetAtTime",
-			"lineno": "Tone/core/Param.js#L274"
-		},
-		{
-			"description": "Sets an array of arbitrary parameter values starting at the given time\n for the given duration.",
-			"params": [
-				{
-					"type": [
-						"Array"
-					],
-					"name": "values"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"name": "startTime"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"name": "duration"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "setValueCurveAtTime",
-			"lineno": "Tone/core/Param.js#L294"
-		},
-		{
-			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to startTime.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"name": "startTime"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "cancelScheduledValues",
-			"lineno": "Tone/core/Param.js#L312"
-		},
-		{
-			"description": "Ramps to the given value over the duration of the rampTime.\n Automatically selects the best ramp type (exponential or linear)\n depending on the `units` of the signal",
-			"params": [
-				{
-					"type": [
-						"number"
-					],
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The time that it takes the\n                             value to ramp from it's current value",
-					"name": "rampTime"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the ramp should start.",
-					"name": "startTime"
-				}
-			],
-			"examples": [
-				"//ramp to the value either linearly or exponentially\n//depending on the \"units\" value of the signal\nsignal.rampTo(0, 10);\n ",
-				"//schedule it to ramp starting at a specific time\nsignal.rampTo(0, 10, 5)"
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L335"
-		},
-		{
-			"description": "Clean up",
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/core/Param.js#L363"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L110",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"Timeline": [
 		{
 			"description": "Insert an event object onto the timeline. Events must have a \"time\" attribute.",
@@ -7397,6 +7226,429 @@
 			"name": "emit",
 			"lineno": "Tone/core/Emitter.js#L81",
 			"inherits": "Tone.Emitter"
+		}
+	],
+	"Param": [
+		{
+			"description": "Schedules a parameter value change at the given time.",
+			"params": [
+				{
+					"type": [
+						"*"
+					],
+					"description": "The value to set the signal.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time when the change should occur.",
+					"name": "time"
+				}
+			],
+			"examples": [
+				"//set the frequency to \"G4\" in exactly 1 second from now.\nfreq.setValueAtTime(\"G4\", \"+1\");"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "setValueAtTime",
+			"lineno": "Tone/core/Param.js#L170"
+		},
+		{
+			"description": "Creates a schedule point with the current value at the current time.\n This is useful for creating an automation anchor point in order to\n schedule changes from the current value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"description": "(Optionally) pass the now value in.",
+					"name": "now"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "setRampPoint",
+			"lineno": "Tone/core/Param.js#L183"
+		},
+		{
+			"description": "Schedules a linear continuous change in parameter value from the\n previous scheduled parameter value to the given value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"name": "endTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "linearRampToValueAtTime",
+			"lineno": "Tone/core/Param.js#L203"
+		},
+		{
+			"description": "Schedules an exponential continuous change in parameter value from\n the previous scheduled parameter value to the given value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"name": "endTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "exponentialRampToValueAtTime",
+			"lineno": "Tone/core/Param.js#L217"
+		},
+		{
+			"description": "Schedules an exponential continuous change in parameter value from\n the current time and current value to the given value over the\n duration of the rampTime.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "exponentialRampTo",
+			"lineno": "Tone/core/Param.js#L238"
+		},
+		{
+			"description": "Schedules an linear continuous change in parameter value from\n the current time and current value to the given value over the\n duration of the rampTime.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampTo(4, 3);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "linearRampTo",
+			"lineno": "Tone/core/Param.js#L259"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time with\n a rate having the given time constant.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"name": "startTime"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"name": "timeConstant"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "setTargetAtTime",
+			"lineno": "Tone/core/Param.js#L274"
+		},
+		{
+			"description": "Sets an array of arbitrary parameter values starting at the given time\n for the given duration.",
+			"params": [
+				{
+					"type": [
+						"Array"
+					],
+					"name": "values"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"name": "startTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"name": "duration"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "setValueCurveAtTime",
+			"lineno": "Tone/core/Param.js#L294"
+		},
+		{
+			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to startTime.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "startTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelScheduledValues",
+			"lineno": "Tone/core/Param.js#L312"
+		},
+		{
+			"description": "This is similar to [cancelScheduledValues](#cancelScheduledValues) except\n it holds the automated value at cancelTime until the next automated event.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "cancelTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelAndHoldAtTime",
+			"lineno": "Tone/core/Param.js#L323"
+		},
+		{
+			"description": "Ramps to the given value over the duration of the rampTime.\n Automatically selects the best ramp type (exponential or linear)\n depending on the `units` of the signal",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time that it takes the\n                             value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//ramp to the value either linearly or exponentially\n//depending on the \"units\" value of the signal\nsignal.rampTo(0, 10);\n ",
+				"//schedule it to ramp starting at a specific time\nsignal.rampTo(0, 10, 5)"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "rampTo",
+			"lineno": "Tone/core/Param.js#L360"
+		},
+		{
+			"description": "Clean up",
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/core/Param.js#L388"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L110",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
 		}
 	],
 	"AutoFilter": [
@@ -13617,7 +13869,7 @@
 				}
 			],
 			"examples": [
-				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampToValue(2, 4);"
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
 			],
 			"returns": {
 				"type": [
@@ -13626,7 +13878,7 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "exponentialRampToValue",
+			"name": "exponentialRampTo",
 			"lineno": "Tone/core/Param.js#L238",
 			"inherits": "Tone.Param"
 		},
@@ -13658,7 +13910,7 @@
 				}
 			],
 			"examples": [
-				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampToValue(4, 3);"
+				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampTo(4, 3);"
 			],
 			"returns": {
 				"type": [
@@ -13667,7 +13919,7 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "linearRampToValue",
+			"name": "linearRampTo",
 			"lineno": "Tone/core/Param.js#L259",
 			"inherits": "Tone.Param"
 		},
@@ -13759,6 +14011,27 @@
 			"inherits": "Tone.Param"
 		},
 		{
+			"description": "This is similar to [cancelScheduledValues](#cancelScheduledValues) except\n it holds the automated value at cancelTime until the next automated event.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "cancelTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelAndHoldAtTime",
+			"lineno": "Tone/core/Param.js#L323",
+			"inherits": "Tone.Param"
+		},
+		{
 			"description": "Ramps to the given value over the duration of the rampTime.\n Automatically selects the best ramp type (exponential or linear)\n depending on the `units` of the signal",
 			"params": [
 				{
@@ -13796,7 +14069,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L335",
+			"lineno": "Tone/core/Param.js#L360",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -14347,7 +14620,7 @@
 				}
 			],
 			"examples": [
-				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampToValue(2, 4);"
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
 			],
 			"returns": {
 				"type": [
@@ -14356,7 +14629,7 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "exponentialRampToValue",
+			"name": "exponentialRampTo",
 			"lineno": "Tone/core/Param.js#L238",
 			"inherits": "Tone.Param"
 		},
@@ -14388,7 +14661,7 @@
 				}
 			],
 			"examples": [
-				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampToValue(4, 3);"
+				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampTo(4, 3);"
 			],
 			"returns": {
 				"type": [
@@ -14397,7 +14670,7 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "linearRampToValue",
+			"name": "linearRampTo",
 			"lineno": "Tone/core/Param.js#L259",
 			"inherits": "Tone.Param"
 		},
@@ -14489,6 +14762,27 @@
 			"inherits": "Tone.Param"
 		},
 		{
+			"description": "This is similar to [cancelScheduledValues](#cancelScheduledValues) except\n it holds the automated value at cancelTime until the next automated event.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "cancelTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelAndHoldAtTime",
+			"lineno": "Tone/core/Param.js#L323",
+			"inherits": "Tone.Param"
+		},
+		{
 			"description": "Ramps to the given value over the duration of the rampTime.\n Automatically selects the best ramp type (exponential or linear)\n depending on the `units` of the signal",
 			"params": [
 				{
@@ -14526,7 +14820,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L335",
+			"lineno": "Tone/core/Param.js#L360",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -14872,7 +15166,7 @@
 				}
 			],
 			"examples": [
-				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampToValue(2, 4);"
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
 			],
 			"returns": {
 				"type": [
@@ -14881,7 +15175,7 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "exponentialRampToValue",
+			"name": "exponentialRampTo",
 			"lineno": "Tone/core/Param.js#L238",
 			"inherits": "Tone.Param"
 		},
@@ -14913,7 +15207,7 @@
 				}
 			],
 			"examples": [
-				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampToValue(4, 3);"
+				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampTo(4, 3);"
 			],
 			"returns": {
 				"type": [
@@ -14922,7 +15216,7 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "linearRampToValue",
+			"name": "linearRampTo",
 			"lineno": "Tone/core/Param.js#L259",
 			"inherits": "Tone.Param"
 		},
@@ -15014,6 +15308,27 @@
 			"inherits": "Tone.Param"
 		},
 		{
+			"description": "This is similar to [cancelScheduledValues](#cancelScheduledValues) except\n it holds the automated value at cancelTime until the next automated event.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "cancelTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelAndHoldAtTime",
+			"lineno": "Tone/core/Param.js#L323",
+			"inherits": "Tone.Param"
+		},
+		{
 			"description": "Ramps to the given value over the duration of the rampTime.\n Automatically selects the best ramp type (exponential or linear)\n depending on the `units` of the signal",
 			"params": [
 				{
@@ -15051,7 +15366,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L335",
+			"lineno": "Tone/core/Param.js#L360",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -15565,7 +15880,7 @@
 				}
 			],
 			"examples": [
-				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampToValue(2, 4);"
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
 			],
 			"returns": {
 				"type": [
@@ -15574,7 +15889,7 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "exponentialRampToValue",
+			"name": "exponentialRampTo",
 			"lineno": "Tone/core/Param.js#L238",
 			"inherits": "Tone.Param"
 		},
@@ -15606,7 +15921,7 @@
 				}
 			],
 			"examples": [
-				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampToValue(4, 3);"
+				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampTo(4, 3);"
 			],
 			"returns": {
 				"type": [
@@ -15615,7 +15930,7 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "linearRampToValue",
+			"name": "linearRampTo",
 			"lineno": "Tone/core/Param.js#L259",
 			"inherits": "Tone.Param"
 		},
@@ -15707,6 +16022,27 @@
 			"inherits": "Tone.Param"
 		},
 		{
+			"description": "This is similar to [cancelScheduledValues](#cancelScheduledValues) except\n it holds the automated value at cancelTime until the next automated event.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "cancelTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelAndHoldAtTime",
+			"lineno": "Tone/core/Param.js#L323",
+			"inherits": "Tone.Param"
+		},
+		{
 			"description": "Ramps to the given value over the duration of the rampTime.\n Automatically selects the best ramp type (exponential or linear)\n depending on the `units` of the signal",
 			"params": [
 				{
@@ -15744,7 +16080,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L335",
+			"lineno": "Tone/core/Param.js#L360",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -16062,7 +16398,7 @@
 				}
 			],
 			"examples": [
-				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampToValue(2, 4);"
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
 			],
 			"returns": {
 				"type": [
@@ -16071,7 +16407,7 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "exponentialRampToValue",
+			"name": "exponentialRampTo",
 			"lineno": "Tone/core/Param.js#L238",
 			"inherits": "Tone.Param"
 		},
@@ -16103,7 +16439,7 @@
 				}
 			],
 			"examples": [
-				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampToValue(4, 3);"
+				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampTo(4, 3);"
 			],
 			"returns": {
 				"type": [
@@ -16112,7 +16448,7 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "linearRampToValue",
+			"name": "linearRampTo",
 			"lineno": "Tone/core/Param.js#L259",
 			"inherits": "Tone.Param"
 		},
@@ -16204,6 +16540,27 @@
 			"inherits": "Tone.Param"
 		},
 		{
+			"description": "This is similar to [cancelScheduledValues](#cancelScheduledValues) except\n it holds the automated value at cancelTime until the next automated event.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "cancelTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelAndHoldAtTime",
+			"lineno": "Tone/core/Param.js#L323",
+			"inherits": "Tone.Param"
+		},
+		{
 			"description": "Ramps to the given value over the duration of the rampTime.\n Automatically selects the best ramp type (exponential or linear)\n depending on the `units` of the signal",
 			"params": [
 				{
@@ -16241,7 +16598,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L335",
+			"lineno": "Tone/core/Param.js#L360",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -16431,7 +16788,7 @@
 				}
 			],
 			"examples": [
-				"//set the frequency to \"G4\" in exactly 1 second from now. \nfreq.setValueAtTime(\"G4\", \"+1\");"
+				"//set the frequency to \"G4\" in exactly 1 second from now.\nfreq.setValueAtTime(\"G4\", \"+1\");"
 			],
 			"returns": {
 				"type": [
@@ -16445,7 +16802,7 @@
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
-			"description": "Schedules a linear continuous change in parameter value from the \n previous scheduled parameter value to the given value.",
+			"description": "Schedules a linear continuous change in parameter value from the\n previous scheduled parameter value to the given value.",
 			"params": [
 				{
 					"type": [
@@ -16514,7 +16871,7 @@
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
-			"description": "Cancels all scheduled parameter changes with times greater than or \n equal to startTime.",
+			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to startTime.",
 			"params": [
 				{
 					"type": [
@@ -16531,11 +16888,32 @@
 			},
 			"scope": "instance",
 			"name": "cancelScheduledValues",
-			"lineno": "Tone/signal/TimelineSignal.js#L201",
+			"lineno": "Tone/signal/TimelineSignal.js#L200",
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
-			"description": "Sets the computed value at the given time. This provides\n a point from which a linear or exponential curve\n can be scheduled after. Will cancel events after \n the given time and shorten the currently scheduled\n linear or exponential ramp so that it ends at `time` .\n This is to avoid discontinuities and clicks in envelopes.",
+			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to cancelTime and sets the output of the signal to be the value\n at cancelTime. Similar to (cancelScheduledValues)[#cancelScheduledValues].",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "cancelTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.TimelineSignal"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelAndHoldAtTime",
+			"lineno": "Tone/signal/TimelineSignal.js#L214",
+			"inherits": "Tone.TimelineSignal"
+		},
+		{
+			"description": "Sets the computed value at the given time. This provides\n a point from which a linear or exponential curve\n can be scheduled after. Will cancel events after\n the given time and shorten the currently scheduled\n linear or exponential ramp so that it ends at `time` .\n This is to avoid discontinuities and clicks in envelopes.",
 			"params": [
 				{
 					"type": [
@@ -16553,7 +16931,7 @@
 			},
 			"scope": "instance",
 			"name": "setRampPoint",
-			"lineno": "Tone/signal/TimelineSignal.js#L218",
+			"lineno": "Tone/signal/TimelineSignal.js#L229",
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
@@ -16589,7 +16967,7 @@
 			},
 			"scope": "instance",
 			"name": "linearRampToValueBetween",
-			"lineno": "Tone/signal/TimelineSignal.js#L253",
+			"lineno": "Tone/signal/TimelineSignal.js#L264",
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
@@ -16625,7 +17003,7 @@
 			},
 			"scope": "instance",
 			"name": "exponentialRampToValueBetween",
-			"lineno": "Tone/signal/TimelineSignal.js#L267",
+			"lineno": "Tone/signal/TimelineSignal.js#L278",
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
@@ -16647,7 +17025,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/signal/TimelineSignal.js#L303",
+			"lineno": "Tone/signal/TimelineSignal.js#L314",
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
@@ -16701,7 +17079,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/signal/TimelineSignal.js#L381",
+			"lineno": "Tone/signal/TimelineSignal.js#L392",
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
@@ -16732,7 +17110,7 @@
 				}
 			],
 			"examples": [
-				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampToValue(2, 4);"
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
 			],
 			"returns": {
 				"type": [
@@ -16741,7 +17119,7 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "exponentialRampToValue",
+			"name": "exponentialRampTo",
 			"lineno": "Tone/core/Param.js#L238",
 			"inherits": "Tone.Param"
 		},
@@ -16773,7 +17151,7 @@
 				}
 			],
 			"examples": [
-				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampToValue(4, 3);"
+				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampTo(4, 3);"
 			],
 			"returns": {
 				"type": [
@@ -16782,7 +17160,7 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "linearRampToValue",
+			"name": "linearRampTo",
 			"lineno": "Tone/core/Param.js#L259",
 			"inherits": "Tone.Param"
 		},
@@ -16824,553 +17202,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L335",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"TimelineSignal": [
-		{
-			"description": "Schedules a parameter value change at the given time.",
-			"params": [
-				{
-					"type": [
-						"*"
-					],
-					"description": "The value to set the signal.",
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The time when the change should occur.",
-					"name": "time"
-				}
-			],
-			"examples": [
-				"//set the frequency to \"G4\" in exactly 1 second from now. \nfreq.setValueAtTime(\"G4\", \"+1\");"
-			],
-			"returns": {
-				"type": [
-					"Tone.TimelineSignal"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "setValueAtTime",
-			"lineno": "Tone/signal/TimelineSignal.js#L85"
-		},
-		{
-			"description": "Schedules a linear continuous change in parameter value from the \n previous scheduled parameter value to the given value.",
-			"params": [
-				{
-					"type": [
-						"number"
-					],
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"name": "endTime"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.TimelineSignal"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "linearRampToValueAtTime",
-			"lineno": "Tone/signal/TimelineSignal.js#L106"
-		},
-		{
-			"description": "Schedules an exponential continuous change in parameter value from \n the previous scheduled parameter value to the given value.",
-			"params": [
-				{
-					"type": [
-						"number"
-					],
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"name": "endTime"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.TimelineSignal"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "exponentialRampToValueAtTime",
-			"lineno": "Tone/signal/TimelineSignal.js#L126"
-		},
-		{
-			"description": "Start exponentially approaching the target value at the given time with\n a rate having the given time constant.",
-			"params": [
-				{
-					"type": [
-						"number"
-					],
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"name": "startTime"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"name": "timeConstant"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.TimelineSignal"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "setTargetAtTime",
-			"lineno": "Tone/signal/TimelineSignal.js#L159"
-		},
-		{
-			"description": "Set an array of arbitrary values starting at the given time for the given duration.",
-			"params": [
-				{
-					"type": [
-						"Float32Array"
-					],
-					"name": "values"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"name": "startTime"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"name": "duration"
-				},
-				{
-					"type": [
-						"NormalRange"
-					],
-					"optional": true,
-					"defaultvalue": 1,
-					"description": "If the values in the curve should be scaled by some value",
-					"name": "scaling"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.TimelineSignal"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "setValueCurveAtTime",
-			"lineno": "Tone/signal/TimelineSignal.js#L182"
-		},
-		{
-			"description": "Cancels all scheduled parameter changes with times greater than or \n equal to startTime.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"name": "startTime"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.TimelineSignal"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "cancelScheduledValues",
-			"lineno": "Tone/signal/TimelineSignal.js#L201"
-		},
-		{
-			"description": "Sets the computed value at the given time. This provides\n a point from which a linear or exponential curve\n can be scheduled after. Will cancel events after \n the given time and shorten the currently scheduled\n linear or exponential ramp so that it ends at `time` .\n This is to avoid discontinuities and clicks in envelopes.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "When to set the ramp point",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.TimelineSignal"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "setRampPoint",
-			"lineno": "Tone/signal/TimelineSignal.js#L218"
-		},
-		{
-			"description": "Do a linear ramp to the given value between the start and finish times.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The value to ramp to.",
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The beginning anchor point to do the linear ramp",
-					"name": "start"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The ending anchor point by which the value of\n                      the signal will equal the given value.",
-					"name": "finish"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.TimelineSignal"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "linearRampToValueBetween",
-			"lineno": "Tone/signal/TimelineSignal.js#L253"
-		},
-		{
-			"description": "Do a exponential ramp to the given value between the start and finish times.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The value to ramp to.",
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The beginning anchor point to do the exponential ramp",
-					"name": "start"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The ending anchor point by which the value of\n                      the signal will equal the given value.",
-					"name": "finish"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.TimelineSignal"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "exponentialRampToValueBetween",
-			"lineno": "Tone/signal/TimelineSignal.js#L267"
-		},
-		{
-			"description": "Get the scheduled value at the given time. This will\n return the unconverted (raw) value.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The time in seconds.",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Number"
-				],
-				"description": "The scheduled value at the given time."
-			},
-			"scope": "instance",
-			"name": "getValueAtTime",
-			"lineno": "Tone/signal/TimelineSignal.js#L303"
-		},
-		{
-			"description": "When signals connect to other signals or AudioParams, \n they take over the output value of that signal or AudioParam. \n For all other nodes, the behavior is the same as a default <code>connect</code>.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"AudioNode",
-						"Tone.Signal",
-						"Tone"
-					],
-					"name": "node"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "The output number to connect from.",
-					"name": "outputNumber"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "The input number to connect to.",
-					"name": "inputNumber"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.TimelineSignal"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/signal/TimelineSignal.js#L344"
-		},
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.TimelineSignal"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/signal/TimelineSignal.js#L381"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L110",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Schedules an exponential continuous change in parameter value from\n the current time and current value to the given value over the\n duration of the rampTime.",
-			"params": [
-				{
-					"type": [
-						"number"
-					],
-					"description": "The value to ramp to.",
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "the time that it takes the\n                              value to ramp from it's current value",
-					"name": "rampTime"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the ramp should start.",
-					"name": "startTime"
-				}
-			],
-			"examples": [
-				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampToValue(2, 4);"
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "exponentialRampToValue",
-			"lineno": "Tone/core/Param.js#L238",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "Schedules an linear continuous change in parameter value from\n the current time and current value to the given value over the\n duration of the rampTime.",
-			"params": [
-				{
-					"type": [
-						"number"
-					],
-					"description": "The value to ramp to.",
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "the time that it takes the\n                              value to ramp from it's current value",
-					"name": "rampTime"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the ramp should start.",
-					"name": "startTime"
-				}
-			],
-			"examples": [
-				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampToValue(4, 3);"
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "linearRampToValue",
-			"lineno": "Tone/core/Param.js#L259",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "Ramps to the given value over the duration of the rampTime.\n Automatically selects the best ramp type (exponential or linear)\n depending on the `units` of the signal",
-			"params": [
-				{
-					"type": [
-						"number"
-					],
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The time that it takes the\n                             value to ramp from it's current value",
-					"name": "rampTime"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the ramp should start.",
-					"name": "startTime"
-				}
-			],
-			"examples": [
-				"//ramp to the value either linearly or exponentially\n//depending on the \"units\" value of the signal\nsignal.rampTo(0, 10);\n ",
-				"//schedule it to ramp starting at a specific time\nsignal.rampTo(0, 10, 5)"
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L335",
+			"lineno": "Tone/core/Param.js#L360",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -17625,7 +17457,28 @@
 			"lineno": "Tone/signal/TransportTimelineSignal.js#L165"
 		},
 		{
-			"description": "Sets the computed value at the given time. This provides\n a point from which a linear or exponential curve\n can be scheduled after. Will cancel events after \n the given time and shorten the currently scheduled\n linear or exponential ramp so that it ends at `time` .\n This is to avoid discontinuities and clicks in envelopes.",
+			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to cancelTime and sets the output of the signal to be the value\n at cancelTime. Similar to (cancelScheduledValues)[#cancelScheduledValues].",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "cancelTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.TimelineSignal"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelAndHoldAtTime",
+			"lineno": "Tone/signal/TimelineSignal.js#L214",
+			"inherits": "Tone.TimelineSignal"
+		},
+		{
+			"description": "Sets the computed value at the given time. This provides\n a point from which a linear or exponential curve\n can be scheduled after. Will cancel events after\n the given time and shorten the currently scheduled\n linear or exponential ramp so that it ends at `time` .\n This is to avoid discontinuities and clicks in envelopes.",
 			"params": [
 				{
 					"type": [
@@ -17643,7 +17496,7 @@
 			},
 			"scope": "instance",
 			"name": "setRampPoint",
-			"lineno": "Tone/signal/TimelineSignal.js#L218",
+			"lineno": "Tone/signal/TimelineSignal.js#L229",
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
@@ -17679,7 +17532,7 @@
 			},
 			"scope": "instance",
 			"name": "linearRampToValueBetween",
-			"lineno": "Tone/signal/TimelineSignal.js#L253",
+			"lineno": "Tone/signal/TimelineSignal.js#L264",
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
@@ -17715,7 +17568,7 @@
 			},
 			"scope": "instance",
 			"name": "exponentialRampToValueBetween",
-			"lineno": "Tone/signal/TimelineSignal.js#L267",
+			"lineno": "Tone/signal/TimelineSignal.js#L278",
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
@@ -17787,7 +17640,7 @@
 				}
 			],
 			"examples": [
-				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampToValue(2, 4);"
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
 			],
 			"returns": {
 				"type": [
@@ -17796,7 +17649,7 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "exponentialRampToValue",
+			"name": "exponentialRampTo",
 			"lineno": "Tone/core/Param.js#L238",
 			"inherits": "Tone.Param"
 		},
@@ -17828,7 +17681,7 @@
 				}
 			],
 			"examples": [
-				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampToValue(4, 3);"
+				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampTo(4, 3);"
 			],
 			"returns": {
 				"type": [
@@ -17837,7 +17690,7 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "linearRampToValue",
+			"name": "linearRampTo",
 			"lineno": "Tone/core/Param.js#L259",
 			"inherits": "Tone.Param"
 		},
@@ -17879,7 +17732,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L335",
+			"lineno": "Tone/core/Param.js#L360",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -18056,6 +17909,572 @@
 			"name": "connect",
 			"lineno": "Tone/signal/SignalBase.js#L28",
 			"inherits": "Tone.SignalBase"
+		}
+	],
+	"TimelineSignal": [
+		{
+			"description": "Schedules a parameter value change at the given time.",
+			"params": [
+				{
+					"type": [
+						"*"
+					],
+					"description": "The value to set the signal.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time when the change should occur.",
+					"name": "time"
+				}
+			],
+			"examples": [
+				"//set the frequency to \"G4\" in exactly 1 second from now.\nfreq.setValueAtTime(\"G4\", \"+1\");"
+			],
+			"returns": {
+				"type": [
+					"Tone.TimelineSignal"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "setValueAtTime",
+			"lineno": "Tone/signal/TimelineSignal.js#L85"
+		},
+		{
+			"description": "Schedules a linear continuous change in parameter value from the\n previous scheduled parameter value to the given value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"name": "endTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.TimelineSignal"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "linearRampToValueAtTime",
+			"lineno": "Tone/signal/TimelineSignal.js#L106"
+		},
+		{
+			"description": "Schedules an exponential continuous change in parameter value from\n the previous scheduled parameter value to the given value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"name": "endTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.TimelineSignal"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "exponentialRampToValueAtTime",
+			"lineno": "Tone/signal/TimelineSignal.js#L126"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time with\n a rate having the given time constant.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"name": "startTime"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"name": "timeConstant"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.TimelineSignal"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "setTargetAtTime",
+			"lineno": "Tone/signal/TimelineSignal.js#L159"
+		},
+		{
+			"description": "Set an array of arbitrary values starting at the given time for the given duration.",
+			"params": [
+				{
+					"type": [
+						"Float32Array"
+					],
+					"name": "values"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"name": "startTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"name": "duration"
+				},
+				{
+					"type": [
+						"NormalRange"
+					],
+					"optional": true,
+					"defaultvalue": 1,
+					"description": "If the values in the curve should be scaled by some value",
+					"name": "scaling"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.TimelineSignal"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "setValueCurveAtTime",
+			"lineno": "Tone/signal/TimelineSignal.js#L182"
+		},
+		{
+			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to startTime.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "startTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.TimelineSignal"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelScheduledValues",
+			"lineno": "Tone/signal/TimelineSignal.js#L200"
+		},
+		{
+			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to cancelTime and sets the output of the signal to be the value\n at cancelTime. Similar to (cancelScheduledValues)[#cancelScheduledValues].",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "cancelTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.TimelineSignal"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelAndHoldAtTime",
+			"lineno": "Tone/signal/TimelineSignal.js#L214"
+		},
+		{
+			"description": "Sets the computed value at the given time. This provides\n a point from which a linear or exponential curve\n can be scheduled after. Will cancel events after\n the given time and shorten the currently scheduled\n linear or exponential ramp so that it ends at `time` .\n This is to avoid discontinuities and clicks in envelopes.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "When to set the ramp point",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.TimelineSignal"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "setRampPoint",
+			"lineno": "Tone/signal/TimelineSignal.js#L229"
+		},
+		{
+			"description": "Do a linear ramp to the given value between the start and finish times.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The beginning anchor point to do the linear ramp",
+					"name": "start"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The ending anchor point by which the value of\n                      the signal will equal the given value.",
+					"name": "finish"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.TimelineSignal"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "linearRampToValueBetween",
+			"lineno": "Tone/signal/TimelineSignal.js#L264"
+		},
+		{
+			"description": "Do a exponential ramp to the given value between the start and finish times.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The beginning anchor point to do the exponential ramp",
+					"name": "start"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The ending anchor point by which the value of\n                      the signal will equal the given value.",
+					"name": "finish"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.TimelineSignal"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "exponentialRampToValueBetween",
+			"lineno": "Tone/signal/TimelineSignal.js#L278"
+		},
+		{
+			"description": "Get the scheduled value at the given time. This will\n return the unconverted (raw) value.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The time in seconds.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The scheduled value at the given time."
+			},
+			"scope": "instance",
+			"name": "getValueAtTime",
+			"lineno": "Tone/signal/TimelineSignal.js#L314"
+		},
+		{
+			"description": "When signals connect to other signals or AudioParams,\n they take over the output value of that signal or AudioParam.\n For all other nodes, the behavior is the same as a default <code>connect</code>.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"AudioNode",
+						"Tone.Signal",
+						"Tone"
+					],
+					"name": "node"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "The output number to connect from.",
+					"name": "outputNumber"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "The input number to connect to.",
+					"name": "inputNumber"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.TimelineSignal"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/signal/TimelineSignal.js#L355"
+		},
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.TimelineSignal"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/signal/TimelineSignal.js#L392"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L110",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Schedules an exponential continuous change in parameter value from\n the current time and current value to the given value over the\n duration of the rampTime.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "exponentialRampTo",
+			"lineno": "Tone/core/Param.js#L238",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Schedules an linear continuous change in parameter value from\n the current time and current value to the given value over the\n duration of the rampTime.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampTo(4, 3);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "linearRampTo",
+			"lineno": "Tone/core/Param.js#L259",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Ramps to the given value over the duration of the rampTime.\n Automatically selects the best ramp type (exponential or linear)\n depending on the `units` of the signal",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time that it takes the\n                             value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//ramp to the value either linearly or exponentially\n//depending on the \"units\" value of the signal\nsignal.rampTo(0, 10);\n ",
+				"//schedule it to ramp starting at a specific time\nsignal.rampTo(0, 10, 5)"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "rampTo",
+			"lineno": "Tone/core/Param.js#L360",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
 		}
 	],
 	"AMOscillator": [

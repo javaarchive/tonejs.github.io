@@ -41,28 +41,6 @@
 		],
 		"extends": "Tone.Envelope"
 	},
-	"Analyser": {
-		"description": "Wrapper around the native Web Audio's\n         [AnalyserNode](http://webaudio.github.io/web-audio-api/#idl-def-AnalyserNode).\n         Extracts FFT or Waveform data from the incoming signal.",
-		"params": [
-			{
-				"type": [
-					"String"
-				],
-				"optional": true,
-				"description": "The return type of the analysis, either \"fft\", or \"waveform\".",
-				"name": "type"
-			},
-			{
-				"type": [
-					"Number"
-				],
-				"optional": true,
-				"description": "The size of the FFT. Value must be a power of\n                      two in the range 32 to 32768.",
-				"name": "size"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
 	"Compressor": {
 		"description": "Tone.Compressor is a thin wrapper around the Web Audio\n        [DynamicsCompressorNode](http://webaudio.github.io/web-audio-api/#the-dynamicscompressornode-interface).\n        Compression reduces the volume of loud sounds or amplifies quiet sounds\n        by narrowing or \"compressing\" an audio signal's dynamic range.\n        Read more on [Wikipedia](https://en.wikipedia.org/wiki/Dynamic_range_compression).",
 		"params": [
@@ -137,47 +115,6 @@
 		],
 		"examples": [
 			"var eq = new Tone.EQ3(-10, 3, -20);"
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"Envelope": {
-		"description": "Tone.Envelope is an [ADSR](https://en.wikipedia.org/wiki/Synthesizer#ADSR_envelope)\n         envelope generator. Tone.Envelope outputs a signal which\n         can be connected to an AudioParam or Tone.Signal.\n         <img src=\"https://upload.wikimedia.org/wikipedia/commons/e/ea/ADSR_parameter.svg\">",
-		"params": [
-			{
-				"type": [
-					"Time"
-				],
-				"optional": true,
-				"description": "The amount of time it takes for the envelope to go from\n                        0 to it's maximum value.",
-				"name": "attack"
-			},
-			{
-				"type": [
-					"Time"
-				],
-				"optional": true,
-				"description": "The period of time after the attack that it takes for the envelope\n                      \tto fall to the sustain value.",
-				"name": "decay"
-			},
-			{
-				"type": [
-					"NormalRange"
-				],
-				"optional": true,
-				"description": "The percent of the maximum value that the envelope rests at until\n                               \tthe release is triggered.",
-				"name": "sustain"
-			},
-			{
-				"type": [
-					"Time"
-				],
-				"optional": true,
-				"description": "The amount of time after the release is triggered it takes to reach 0.",
-				"name": "release"
-			}
-		],
-		"examples": [
-			"//an amplitude envelope\nvar gainNode = Tone.context.createGain();\nvar env = new Tone.Envelope({\n\t\"attack\" : 0.1,\n\t\"decay\" : 0.2,\n\t\"sustain\" : 1,\n\t\"release\" : 0.8,\n});\nenv.connect(gainNode.gain);"
 		],
 		"extends": "Tone.AudioNode"
 	},
@@ -428,29 +365,6 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
-	"Meter": {
-		"description": "Tone.Meter gets the [RMS](https://en.wikipedia.org/wiki/Root_mean_square)\n         of an input signal with some averaging applied. It can also get the raw\n         value of the input signal.",
-		"params": [
-			{
-				"type": [
-					"String"
-				],
-				"description": "Either \"level\" or \"signal\".",
-				"name": "type"
-			},
-			{
-				"type": [
-					"Number"
-				],
-				"description": "The amount of smoothing applied between frames.",
-				"name": "smoothing"
-			}
-		],
-		"examples": [
-			"var meter = new Tone.Meter();\nvar mic = new Tone.UserMedia().open();\n//connect mic to the meter\nmic.connect(meter);\n//the current level of the mic input\nvar level = meter.value;"
-		],
-		"extends": "Tone.AudioNode"
-	},
 	"MidSideCompressor": {
 		"description": "Tone.MidSideCompressor applies two different compressors to the mid\n        and side signal components. See Tone.MidSideSplit.",
 		"params": [
@@ -654,6 +568,113 @@
 		],
 		"examples": [
 			"var vol = new Tone.Volume(-12);\ninstrument.chain(vol, Tone.Master);"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"Analyser": {
+		"description": "Wrapper around the native Web Audio's\n         [AnalyserNode](http://webaudio.github.io/web-audio-api/#idl-def-AnalyserNode).\n         Extracts FFT or Waveform data from the incoming signal.",
+		"params": [
+			{
+				"type": [
+					"String"
+				],
+				"optional": true,
+				"description": "The return type of the analysis, either \"fft\", or \"waveform\".",
+				"name": "type"
+			},
+			{
+				"type": [
+					"Number"
+				],
+				"optional": true,
+				"description": "The size of the FFT. Value must be a power of\n                      two in the range 32 to 32768.",
+				"name": "size"
+			}
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"Envelope": {
+		"description": "Tone.Envelope is an [ADSR](https://en.wikipedia.org/wiki/Synthesizer#ADSR_envelope)\n         envelope generator. Tone.Envelope outputs a signal which\n         can be connected to an AudioParam or Tone.Signal.\n         <img src=\"https://upload.wikimedia.org/wikipedia/commons/e/ea/ADSR_parameter.svg\">",
+		"params": [
+			{
+				"type": [
+					"Time"
+				],
+				"optional": true,
+				"description": "The amount of time it takes for the envelope to go from\n                        0 to it's maximum value.",
+				"name": "attack"
+			},
+			{
+				"type": [
+					"Time"
+				],
+				"optional": true,
+				"description": "The period of time after the attack that it takes for the envelope\n                      \tto fall to the sustain value.",
+				"name": "decay"
+			},
+			{
+				"type": [
+					"NormalRange"
+				],
+				"optional": true,
+				"description": "The percent of the maximum value that the envelope rests at until\n                               \tthe release is triggered.",
+				"name": "sustain"
+			},
+			{
+				"type": [
+					"Time"
+				],
+				"optional": true,
+				"description": "The amount of time after the release is triggered it takes to reach 0.",
+				"name": "release"
+			}
+		],
+		"examples": [
+			"//an amplitude envelope\nvar gainNode = Tone.context.createGain();\nvar env = new Tone.Envelope({\n\t\"attack\" : 0.1,\n\t\"decay\" : 0.2,\n\t\"sustain\" : 1,\n\t\"release\" : 0.8,\n});\nenv.connect(gainNode.gain);"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"FFT": {
+		"description": "Get the current waveform data of the connected audio source.",
+		"params": [
+			{
+				"type": [
+					"Number"
+				],
+				"optional": true,
+				"description": "The size of the FFT. Value must be a power of\n                      two in the range 32 to 32768.",
+				"name": "size"
+			}
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"Meter": {
+		"description": "Tone.Meter gets the [RMS](https://en.wikipedia.org/wiki/Root_mean_square)\n         of an input signal with some averaging applied. It can also get the raw\n         value of the input signal.",
+		"params": [
+			{
+				"type": [
+					"Number"
+				],
+				"description": "The amount of smoothing applied between frames.",
+				"name": "smoothing"
+			}
+		],
+		"examples": [
+			"var meter = new Tone.Meter();\nvar mic = new Tone.UserMedia().open();\n//connect mic to the meter\nmic.connect(meter);\n//the current level of the mic input in decibels\nvar level = meter.getValue();"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"Waveform": {
+		"description": "Get the current waveform data of the connected audio source.",
+		"params": [
+			{
+				"type": [
+					"Number"
+				],
+				"optional": true,
+				"description": "The size of the FFT. Value must be a power of\n                      two in the range 32 to 32768.",
+				"name": "size"
+			}
 		],
 		"extends": "Tone.AudioNode"
 	},
@@ -941,33 +962,6 @@
 		],
 		"extends": "Tone.Context"
 	},
-	"Param": {
-		"description": "Tone.Param wraps the native Web Audio's AudioParam to provide\n        additional unit conversion functionality. It also\n        serves as a base-class for classes which have a single,\n        automatable parameter.",
-		"params": [
-			{
-				"type": [
-					"AudioParam"
-				],
-				"description": "The parameter to wrap.",
-				"name": "param"
-			},
-			{
-				"type": [
-					"Tone.Type"
-				],
-				"description": "The units of the audio param.",
-				"name": "units"
-			},
-			{
-				"type": [
-					"Boolean"
-				],
-				"description": "If the param should be converted.",
-				"name": "convert"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
 	"Timeline": {
 		"description": "A Timeline class for scheduling and maintaining state\n        along a timeline. All events must have a \"time\" property. \n        Internally, events are stored in time order for fast \n        retrieval.",
 		"params": [
@@ -1022,6 +1016,33 @@
 			}
 		],
 		"extends": "Tone"
+	},
+	"Param": {
+		"description": "Tone.Param wraps the native Web Audio's AudioParam to provide\n        additional unit conversion functionality. It also\n        serves as a base-class for classes which have a single,\n        automatable parameter.",
+		"params": [
+			{
+				"type": [
+					"AudioParam"
+				],
+				"description": "The parameter to wrap.",
+				"name": "param"
+			},
+			{
+				"type": [
+					"Tone.Type"
+				],
+				"description": "The units of the audio param.",
+				"name": "units"
+			},
+			{
+				"type": [
+					"Boolean"
+				],
+				"description": "If the param should be converted.",
+				"name": "convert"
+			}
+		],
+		"extends": "Tone.AudioNode"
 	},
 	"AutoFilter": {
 		"description": "Tone.AutoFilter is a Tone.Filter with a Tone.LFO connected to the filter cutoff frequency.\n        Setting the LFO rate and depth allows for control over the filter modulation rate \n        and depth.",
@@ -2089,28 +2110,6 @@
 		],
 		"extends": "Tone.TimelineSignal"
 	},
-	"TimelineSignal": {
-		"description": "A signal which adds the method getValueAtTime. \n        Code and inspiration from https://github.com/jsantell/web-audio-automation-timeline",
-		"params": [
-			{
-				"type": [
-					"Number"
-				],
-				"optional": true,
-				"description": "The initial value of the signal",
-				"name": "value"
-			},
-			{
-				"type": [
-					"String"
-				],
-				"optional": true,
-				"description": "The conversion units of the signal.",
-				"name": "units"
-			}
-		],
-		"extends": "Tone.Signal"
-	},
 	"TransportTimelineSignal": {
 		"description": "Tone.TransportTimelineSignal extends Tone.TimelineSignal, but adds the ability to synchronize the signal to the signal to the Tone.Transport",
 		"extends": "Tone.TimelineSignal"
@@ -2146,6 +2145,28 @@
 	"Zero": {
 		"description": "Tone.Zero outputs 0's at audio-rate. The reason this has to be\n        it's own class is that many browsers optimize out Tone.Signal\n        with a value of 0 and will not process nodes further down the graph.",
 		"extends": "Tone.SignalBase"
+	},
+	"TimelineSignal": {
+		"description": "A signal which adds the method getValueAtTime.\n        Code and inspiration from https://github.com/jsantell/web-audio-automation-timeline",
+		"params": [
+			{
+				"type": [
+					"Number"
+				],
+				"optional": true,
+				"description": "The initial value of the signal",
+				"name": "value"
+			},
+			{
+				"type": [
+					"String"
+				],
+				"optional": true,
+				"description": "The conversion units of the signal.",
+				"name": "units"
+			}
+		],
+		"extends": "Tone.Signal"
 	},
 	"AMOscillator": {
 		"description": "Tone.AMOscillator",

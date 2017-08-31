@@ -1,11 +1,9 @@
 {
 	"component": [
 		"AmplitudeEnvelope",
-		"Analyser",
 		"Compressor",
 		"CrossFade",
 		"EQ3",
-		"Envelope",
 		"FeedbackCombFilter",
 		"Filter",
 		"Follower",
@@ -15,7 +13,6 @@
 		"Limiter",
 		"LowpassCombFilter",
 		"Merge",
-		"Meter",
 		"MidSideCompressor",
 		"MidSideMerge",
 		"MidSideSplit",
@@ -28,7 +25,12 @@
 		"ScaledEnvelope",
 		"Solo",
 		"Split",
-		"Volume"
+		"Volume",
+		"Analyser",
+		"Envelope",
+		"FFT",
+		"Meter",
+		"Waveform"
 	],
 	"control": [
 		"CtrlInterpolate",
@@ -49,12 +51,12 @@
 		"Listener",
 		"Master",
 		"OfflineContext",
-		"Param",
 		"Timeline",
 		"TimelineState",
 		"Tone",
 		"Transport",
-		"AudioNode"
+		"AudioNode",
+		"Param"
 	],
 	"effect": [
 		"AutoFilter",
@@ -123,10 +125,10 @@
 		"SignalBase",
 		"Subtract",
 		"TickSignal",
-		"TimelineSignal",
 		"TransportTimelineSignal",
 		"WaveShaper",
-		"Zero"
+		"Zero",
+		"TimelineSignal"
 	],
 	"source": [
 		"AMOscillator",

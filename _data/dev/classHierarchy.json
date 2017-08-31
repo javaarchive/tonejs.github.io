@@ -4,10 +4,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Analyser": [
-		"AudioNode",
-		"Tone"
-	],
 	"Compressor": [
 		"AudioNode",
 		"Tone"
@@ -17,10 +13,6 @@
 		"Tone"
 	],
 	"EQ3": [
-		"AudioNode",
-		"Tone"
-	],
-	"Envelope": [
 		"AudioNode",
 		"Tone"
 	],
@@ -58,10 +50,6 @@
 		"Tone"
 	],
 	"Merge": [
-		"AudioNode",
-		"Tone"
-	],
-	"Meter": [
 		"AudioNode",
 		"Tone"
 	],
@@ -118,6 +106,26 @@
 		"AudioNode",
 		"Tone"
 	],
+	"Analyser": [
+		"AudioNode",
+		"Tone"
+	],
+	"Envelope": [
+		"AudioNode",
+		"Tone"
+	],
+	"FFT": [
+		"AudioNode",
+		"Tone"
+	],
+	"Meter": [
+		"AudioNode",
+		"Tone"
+	],
+	"Waveform": [
+		"AudioNode",
+		"Tone"
+	],
 	"CtrlInterpolate": [
 		"Tone"
 	],
@@ -170,10 +178,6 @@
 		"Emitter",
 		"Tone"
 	],
-	"Param": [
-		"AudioNode",
-		"Tone"
-	],
 	"Timeline": [
 		"Tone"
 	],
@@ -186,6 +190,10 @@
 		"Tone"
 	],
 	"AudioNode": [
+		"Tone"
+	],
+	"Param": [
+		"AudioNode",
 		"Tone"
 	],
 	"AutoFilter": [
@@ -488,12 +496,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"TimelineSignal": [
-		"Signal",
-		"Param",
-		"AudioNode",
-		"Tone"
-	],
 	"TransportTimelineSignal": [
 		"TimelineSignal",
 		"Signal",
@@ -507,6 +509,12 @@
 	],
 	"Zero": [
 		"SignalBase",
+		"Tone"
+	],
+	"TimelineSignal": [
+		"Signal",
+		"Param",
+		"AudioNode",
 		"Tone"
 	],
 	"AMOscillator": [

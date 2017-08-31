@@ -1,9 +1,4 @@
 {
-	"Analyser": {
-		"size": 1024,
-		"type": "fft",
-		"smoothing": 0.8
-	},
 	"Compressor": {
 		"ratio": 12,
 		"threshold": -24,
@@ -17,14 +12,6 @@
 		"high": 0,
 		"lowFrequency": 400,
 		"highFrequency": 2500
-	},
-	"Envelope": {
-		"attack": 0.01,
-		"decay": 0.1,
-		"sustain": 0.5,
-		"release": 1,
-		"attackCurve": "linear",
-		"releaseCurve": "exponential"
 	},
 	"FeedbackCombFilter": {
 		"delayTime": 0.1,
@@ -67,10 +54,6 @@
 		"delayTime": 0.1,
 		"resonance": 0.5,
 		"dampening": 3000
-	},
-	"Meter": {
-		"smoothing": 0.8,
-		"type": "Tone.Meter.Type.Level"
 	},
 	"MidSideCompressor": {
 		"mid": {
@@ -133,6 +116,28 @@
 		"volume": 0,
 		"mute": false
 	},
+	"Analyser": {
+		"size": 1024,
+		"type": "fft",
+		"smoothing": 0.8
+	},
+	"Envelope": {
+		"attack": 0.01,
+		"decay": 0.1,
+		"sustain": 0.5,
+		"release": 1,
+		"attackCurve": "linear",
+		"releaseCurve": "exponential"
+	},
+	"FFT": {
+		"size": 1024
+	},
+	"Meter": {
+		"smoothing": 0.8
+	},
+	"Waveform": {
+		"size": 1024
+	},
 	"CtrlInterpolate": {
 		"index": 0,
 		"values": "[]"
@@ -187,11 +192,6 @@
 		"volume": 0,
 		"mute": false
 	},
-	"Param": {
-		"units": "Tone.Type.Default",
-		"convert": true,
-		"param": "undefined"
-	},
 	"Timeline": {
 		"memory": "Infinity"
 	},
@@ -203,6 +203,11 @@
 		"loopStart": 0,
 		"loopEnd": "4m",
 		"PPQ": 192
+	},
+	"Param": {
+		"units": "Tone.Type.Default",
+		"convert": true,
+		"param": "undefined"
 	},
 	"AutoFilter": {
 		"frequency": 1,
