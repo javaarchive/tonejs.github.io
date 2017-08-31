@@ -16892,7 +16892,7 @@
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
-			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to cancelTime and sets the output of the signal to be the value\n at cancelTime. Similar to (cancelScheduledValues)[#cancelScheduledValues].",
+			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to cancelTime and sets the output of the signal to be the value\n at cancelTime. Similar to (cancelScheduledValues)[#cancelscheduledvalues].",
 			"params": [
 				{
 					"type": [
@@ -17457,7 +17457,7 @@
 			"lineno": "Tone/signal/TransportTimelineSignal.js#L165"
 		},
 		{
-			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to cancelTime and sets the output of the signal to be the value\n at cancelTime. Similar to (cancelScheduledValues)[#cancelScheduledValues].",
+			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to cancelTime and sets the output of the signal to be the value\n at cancelTime. Similar to (cancelScheduledValues)[#cancelscheduledvalues].",
 			"params": [
 				{
 					"type": [
@@ -18089,7 +18089,7 @@
 			"lineno": "Tone/signal/TimelineSignal.js#L200"
 		},
 		{
-			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to cancelTime and sets the output of the signal to be the value\n at cancelTime. Similar to (cancelScheduledValues)[#cancelScheduledValues].",
+			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to cancelTime and sets the output of the signal to be the value\n at cancelTime. Similar to (cancelScheduledValues)[#cancelscheduledvalues].",
 			"params": [
 				{
 					"type": [
