@@ -51,12 +51,12 @@
 		"Listener",
 		"Master",
 		"OfflineContext",
-		"Timeline",
 		"TimelineState",
 		"Tone",
 		"Transport",
 		"AudioNode",
-		"Param"
+		"Param",
+		"Timeline"
 	],
 	"effect": [
 		"AutoFilter",

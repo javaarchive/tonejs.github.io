@@ -178,9 +178,6 @@
 		"Emitter",
 		"Tone"
 	],
-	"Timeline": [
-		"Tone"
-	],
 	"TimelineState": [
 		"Timeline",
 		"Tone"
@@ -194,6 +191,9 @@
 	],
 	"Param": [
 		"AudioNode",
+		"Tone"
+	],
+	"Timeline": [
 		"Tone"
 	],
 	"AutoFilter": [

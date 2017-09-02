@@ -192,9 +192,6 @@
 		"volume": 0,
 		"mute": false
 	},
-	"Timeline": {
-		"memory": "Infinity"
-	},
 	"Transport": {
 		"bpm": 120,
 		"swing": 0,
@@ -208,6 +205,9 @@
 		"units": "Tone.Type.Default",
 		"convert": true,
 		"param": "undefined"
+	},
+	"Timeline": {
+		"memory": "Infinity"
 	},
 	"AutoFilter": {
 		"frequency": 1,

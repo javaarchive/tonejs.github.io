@@ -1973,27 +1973,6 @@
 			"lineno": "Tone/core/Master.js#L62"
 		}
 	],
-	"Timeline": [
-		{
-			"description": "The memory of the timeline, i.e.\n how many events in the past it will retain",
-			"type": [
-				"Positive"
-			],
-			"scope": "instance",
-			"name": "memory",
-			"lineno": "Tone/core/Timeline.js#L44"
-		},
-		{
-			"description": "The number of items in the timeline.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "length",
-			"lineno": "Tone/core/Timeline.js#L58"
-		}
-	],
 	"Tone": [
 		{
 			"description": "The AudioContext",
@@ -2194,6 +2173,27 @@
 			"name": "context",
 			"lineno": "Tone/core/AudioNode.js#L27",
 			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Timeline": [
+		{
+			"description": "The memory of the timeline, i.e.\n how many events in the past it will retain",
+			"type": [
+				"Positive"
+			],
+			"scope": "instance",
+			"name": "memory",
+			"lineno": "Tone/core/Timeline.js#L44"
+		},
+		{
+			"description": "The number of items in the timeline.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "length",
+			"lineno": "Tone/core/Timeline.js#L58"
 		}
 	],
 	"AutoFilter": [
