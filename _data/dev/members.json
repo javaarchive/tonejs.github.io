@@ -1973,18 +1973,6 @@
 			"lineno": "Tone/core/Master.js#L62"
 		}
 	],
-	"Tone": [
-		{
-			"description": "The AudioContext",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/Tone.js#L573"
-		}
-	],
 	"Transport": [
 		{
 			"description": "If the transport loops or not.",
@@ -2194,6 +2182,18 @@
 			"scope": "instance",
 			"name": "length",
 			"lineno": "Tone/core/Timeline.js#L58"
+		}
+	],
+	"Tone": [
+		{
+			"description": "The AudioContext",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/Tone.js#L573"
 		}
 	],
 	"AutoFilter": [

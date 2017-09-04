@@ -6258,170 +6258,6 @@
 			"inherits": "Tone.Timeline"
 		}
 	],
-	"Tone#Tone": [
-		{
-			"returns": {
-				"type": [
-					"string"
-				],
-				"description": "returns the name of the class as a string"
-			},
-			"scope": "instance",
-			"name": "toString",
-			"lineno": "Tone/core/Tone.js#L25"
-		},
-		{
-			"description": "Set the parameters at once. Either pass in an\n object mapping parameters to values, or to set a\n single parameter, by passing in a string and value.\n The last argument is an optional ramp time which\n will ramp any signal values to their destination value\n over the duration of the rampTime.",
-			"params": [
-				{
-					"type": [
-						"Object",
-						"string"
-					],
-					"name": "params"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"name": "rampTime"
-				}
-			],
-			"examples": [
-				"//set values using an object\nfilter.set({\n\t\"frequency\" : 300,\n\t\"type\" : highpass\n});\n ",
-				"filter.set(\"type\", \"highpass\");\n ",
-				"//ramp to the value 220 over 3 seconds.\noscillator.set({\n\t\"frequency\" : 220\n}, 3);"
-			],
-			"returns": {
-				"type": [
-					"Tone"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "set",
-			"lineno": "Tone/core/Tone.js#L75"
-		},
-		{
-			"description": "Get the object's attributes. Given no arguments get\n will return all available object properties and their corresponding\n values. Pass in a single attribute to retrieve or an array\n of attributes. The attribute strings can also include a \".\"\n to access deeper properties.",
-			"params": [
-				{
-					"type": [
-						"Array",
-						"string",
-						"undefined"
-					],
-					"description": "the parameters to get, otherwise will return\n \t\t\t\t\t                  all available.",
-					"name": "params"
-				}
-			],
-			"examples": [
-				"osc.get();\n//returns {\"type\" : \"sine\", \"frequency\" : 440, ...etc}\n ",
-				"osc.get(\"type\");\n//returns { \"type\" : \"sine\"}",
-				"//use dot notation to access deep properties\nsynth.get([\"envelope.attack\", \"envelope.release\"]);\n//returns {\"envelope\" : {\"attack\" : 0.2, \"release\" : 0.4}}\n "
-			],
-			"returns": {
-				"type": [
-					"Object"
-				]
-			},
-			"scope": "instance",
-			"name": "get",
-			"lineno": "Tone/core/Tone.js#L148"
-		},
-		{
-			"description": "Return the current time of the AudioContext clock.",
-			"returns": {
-				"type": [
-					"Number"
-				],
-				"description": "the currentTime from the AudioContext"
-			},
-			"scope": "instance",
-			"name": "now",
-			"lineno": "Tone/core/Tone.js#L497"
-		}
-	],
-	"Tone#\n disconnect and dispose": [
-		{
-			"returns": {
-				"type": [
-					"Tone"
-				],
-				"description": "this"
-			},
-			"scope": "static",
-			"name": "Tone#dispose",
-			"lineno": "Tone/core/Tone.js#L41"
-		}
-	],
-	"<anonymous>~Tone": [
-		{
-			"description": "An empty function.",
-			"scope": "static",
-			"name": "noOp",
-			"lineno": "Tone/core/Tone.js#L388"
-		},
-		{
-			"description": "Tone automatically creates a context on init, but if you are working\n with other libraries which also create an AudioContext, it can be\n useful to set your own. If you are going to set your own context,\n be sure to do it at the start of your code, before creating any objects.",
-			"params": [
-				{
-					"type": [
-						"AudioContext"
-					],
-					"description": "The new audio context to set",
-					"name": "ctx"
-				}
-			],
-			"scope": "static",
-			"name": "setContext",
-			"lineno": "Tone/core/Tone.js#L594"
-		},
-		{
-			"description": "Get the context when it becomes available",
-			"params": [
-				{
-					"type": [
-						"function"
-					],
-					"description": "Callback when the context is initialized",
-					"name": "resolve"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone"
-				]
-			},
-			"scope": "static",
-			"name": "getContext",
-			"lineno": "Tone/core/Tone.js#L665"
-		}
-	],
-	"extend": [
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "TempConstructor",
-			"lineno": "Tone/core/Tone.js#L533"
-		}
-	],
-	"getContext": [
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "resCallback",
-			"lineno": "Tone/core/Tone.js#L669"
-		}
-	],
 	"Transport": [
 		{
 			"description": "Schedule an event along the timeline.",
@@ -7649,6 +7485,170 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/core/Timeline.js#L392"
+		}
+	],
+	"Tone#Tone": [
+		{
+			"returns": {
+				"type": [
+					"string"
+				],
+				"description": "returns the name of the class as a string"
+			},
+			"scope": "instance",
+			"name": "toString",
+			"lineno": "Tone/core/Tone.js#L25"
+		},
+		{
+			"description": "Set the parameters at once. Either pass in an\n object mapping parameters to values, or to set a\n single parameter, by passing in a string and value.\n The last argument is an optional ramp time which\n will ramp any signal values to their destination value\n over the duration of the rampTime.",
+			"params": [
+				{
+					"type": [
+						"Object",
+						"string"
+					],
+					"name": "params"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"name": "rampTime"
+				}
+			],
+			"examples": [
+				"//set values using an object\nfilter.set({\n\t\"frequency\" : 300,\n\t\"type\" : highpass\n});\n ",
+				"filter.set(\"type\", \"highpass\");\n ",
+				"//ramp to the value 220 over 3 seconds.\noscillator.set({\n\t\"frequency\" : 220\n}, 3);"
+			],
+			"returns": {
+				"type": [
+					"Tone"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "set",
+			"lineno": "Tone/core/Tone.js#L75"
+		},
+		{
+			"description": "Get the object's attributes. Given no arguments get\n will return all available object properties and their corresponding\n values. Pass in a single attribute to retrieve or an array\n of attributes. The attribute strings can also include a \".\"\n to access deeper properties.",
+			"params": [
+				{
+					"type": [
+						"Array",
+						"string",
+						"undefined"
+					],
+					"description": "the parameters to get, otherwise will return\n \t\t\t\t\t                  all available.",
+					"name": "params"
+				}
+			],
+			"examples": [
+				"osc.get();\n//returns {\"type\" : \"sine\", \"frequency\" : 440, ...etc}\n ",
+				"osc.get(\"type\");\n//returns { \"type\" : \"sine\"}",
+				"//use dot notation to access deep properties\nsynth.get([\"envelope.attack\", \"envelope.release\"]);\n//returns {\"envelope\" : {\"attack\" : 0.2, \"release\" : 0.4}}\n "
+			],
+			"returns": {
+				"type": [
+					"Object"
+				]
+			},
+			"scope": "instance",
+			"name": "get",
+			"lineno": "Tone/core/Tone.js#L148"
+		},
+		{
+			"description": "Return the current time of the AudioContext clock.",
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "the currentTime from the AudioContext"
+			},
+			"scope": "instance",
+			"name": "now",
+			"lineno": "Tone/core/Tone.js#L497"
+		}
+	],
+	"Tone#\n disconnect and dispose": [
+		{
+			"returns": {
+				"type": [
+					"Tone"
+				],
+				"description": "this"
+			},
+			"scope": "static",
+			"name": "Tone#dispose",
+			"lineno": "Tone/core/Tone.js#L41"
+		}
+	],
+	"<anonymous>~Tone": [
+		{
+			"description": "An empty function.",
+			"scope": "static",
+			"name": "noOp",
+			"lineno": "Tone/core/Tone.js#L388"
+		},
+		{
+			"description": "Tone automatically creates a context on init, but if you are working\n with other libraries which also create an AudioContext, it can be\n useful to set your own. If you are going to set your own context,\n be sure to do it at the start of your code, before creating any objects.",
+			"params": [
+				{
+					"type": [
+						"AudioContext"
+					],
+					"description": "The new audio context to set",
+					"name": "ctx"
+				}
+			],
+			"scope": "static",
+			"name": "setContext",
+			"lineno": "Tone/core/Tone.js#L594"
+		},
+		{
+			"description": "Get the context when it becomes available",
+			"params": [
+				{
+					"type": [
+						"function"
+					],
+					"description": "Callback when the context is initialized",
+					"name": "resolve"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone"
+				]
+			},
+			"scope": "static",
+			"name": "getContext",
+			"lineno": "Tone/core/Tone.js#L665"
+		}
+	],
+	"extend": [
+		{
+			"params": [],
+			"scope": "inner",
+			"name": "TempConstructor",
+			"lineno": "Tone/core/Tone.js#L533"
+		}
+	],
+	"getContext": [
+		{
+			"params": [],
+			"scope": "inner",
+			"name": "resCallback",
+			"lineno": "Tone/core/Tone.js#L669"
 		}
 	],
 	"AutoFilter": [
