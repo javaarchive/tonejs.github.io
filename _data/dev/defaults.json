@@ -192,6 +192,14 @@
 		"volume": 0,
 		"mute": false
 	},
+	"Param": {
+		"units": "Tone.Type.Default",
+		"convert": true,
+		"param": "undefined"
+	},
+	"Timeline": {
+		"memory": "Infinity"
+	},
 	"Transport": {
 		"bpm": 120,
 		"swing": 0,
@@ -201,13 +209,13 @@
 		"loopEnd": "4m",
 		"PPQ": 192
 	},
-	"Param": {
-		"units": "Tone.Type.Default",
-		"convert": true,
-		"param": "undefined"
+	"TransportEvent": {
+		"once": false,
+		"callback": "Tone.noOp"
 	},
-	"Timeline": {
-		"memory": "Infinity"
+	"TransportRepeatEvent": {
+		"duration": "Infinity",
+		"interval": 1
 	},
 	"AutoFilter": {
 		"frequency": 1,

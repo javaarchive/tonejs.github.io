@@ -975,15 +975,6 @@
 		],
 		"extends": "Tone.Timeline"
 	},
-	"Transport": {
-		"description": "Transport for timing musical events.\n         Supports tempo curves and time changes. Unlike browser-based timing (setInterval, requestAnimationFrame)\n         Tone.Transport timing events pass in the exact time of the scheduled event\n         in the argument of the callback function. Pass that time value to the object\n         you're scheduling. <br><br>\n         A single transport is created for you when the library is initialized. \n         <br><br>\n         The transport emits the events: \"start\", \"stop\", \"pause\", and \"loop\" which are\n         called with the time of that event as the argument.",
-		"examples": [
-			"//repeated event every 8th note\nTone.Transport.scheduleRepeat(function(time){\n\t//do something with the time\n}, \"8n\");\n ",
-			"//schedule an event on the 16th measure\nTone.Transport.schedule(function(time){\n\t//do something with the time\n}, \"16:0:0\");"
-		],
-		"singleton": true,
-		"extends": "Tone.Emitter"
-	},
 	"AudioNode": {
 		"description": "Tone.AudioNode is a base class for classes which process audio.\n        AudioNodes have inputs and outputs.",
 		"params": [
@@ -1043,6 +1034,39 @@
 	"Tone": {
 		"description": "Tone is the base class of all other classes.",
 		"params": []
+	},
+	"Transport": {
+		"description": "Transport for timing musical events.\n         Supports tempo curves and time changes. Unlike browser-based timing (setInterval, requestAnimationFrame)\n         Tone.Transport timing events pass in the exact time of the scheduled event\n         in the argument of the callback function. Pass that time value to the object\n         you're scheduling. <br><br>\n         A single transport is created for you when the library is initialized.\n         <br><br>\n         The transport emits the events: \"start\", \"stop\", \"pause\", and \"loop\" which are\n         called with the time of that event as the argument.",
+		"examples": [
+			"//repeated event every 8th note\nTone.Transport.scheduleRepeat(function(time){\n\t//do something with the time\n}, \"8n\");\n ",
+			"//schedule an event on the 16th measure\nTone.Transport.schedule(function(time){\n\t//do something with the time\n}, \"16:0:0\");"
+		],
+		"singleton": true,
+		"extends": "Tone.Emitter"
+	},
+	"TransportEvent": {
+		"description": "Tone.TransportEvent is an internal class used by (Tone.Transport)[Transport]\n        to schedule events. Do no invoke this class directly, it is\n        handled from within Tone.Transport.",
+		"params": [
+			{
+				"type": [
+					"Object"
+				],
+				"name": "options"
+			}
+		],
+		"extends": "Tone"
+	},
+	"TransportRepeatEvent": {
+		"description": "Tone.TransportRepeatEvent is an internal class used by Tone.Transport\n        to schedule repeat events. This class should not be instantiated directly.",
+		"params": [
+			{
+				"type": [
+					"Object"
+				],
+				"name": "options"
+			}
+		],
+		"extends": "Tone"
 	},
 	"AutoFilter": {
 		"description": "Tone.AutoFilter is a Tone.Filter with a Tone.LFO connected to the filter cutoff frequency.\n        Setting the LFO rate and depth allows for control over the filter modulation rate \n        and depth.",

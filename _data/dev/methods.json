@@ -5902,7 +5902,7 @@
 			},
 			"scope": "instance",
 			"name": "add",
-			"lineno": "Tone/core/Timeline.js#L77",
+			"lineno": "Tone/core/Timeline.js#L84",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -5924,7 +5924,7 @@
 			},
 			"scope": "instance",
 			"name": "remove",
-			"lineno": "Tone/core/Timeline.js#L101",
+			"lineno": "Tone/core/Timeline.js#L108",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -5953,7 +5953,7 @@
 			},
 			"scope": "instance",
 			"name": "get",
-			"lineno": "Tone/core/Timeline.js#L119",
+			"lineno": "Tone/core/Timeline.js#L126",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -5966,7 +5966,7 @@
 			},
 			"scope": "instance",
 			"name": "peek",
-			"lineno": "Tone/core/Timeline.js#L133",
+			"lineno": "Tone/core/Timeline.js#L140",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -5979,7 +5979,7 @@
 			},
 			"scope": "instance",
 			"name": "shift",
-			"lineno": "Tone/core/Timeline.js#L141",
+			"lineno": "Tone/core/Timeline.js#L148",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -6008,7 +6008,7 @@
 			},
 			"scope": "instance",
 			"name": "getAfter",
-			"lineno": "Tone/core/Timeline.js#L151",
+			"lineno": "Tone/core/Timeline.js#L158",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -6037,7 +6037,7 @@
 			},
 			"scope": "instance",
 			"name": "getBefore",
-			"lineno": "Tone/core/Timeline.js#L167",
+			"lineno": "Tone/core/Timeline.js#L174",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -6059,7 +6059,7 @@
 			},
 			"scope": "instance",
 			"name": "cancel",
-			"lineno": "Tone/core/Timeline.js#L187",
+			"lineno": "Tone/core/Timeline.js#L194",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -6081,7 +6081,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelBefore",
-			"lineno": "Tone/core/Timeline.js#L221",
+			"lineno": "Tone/core/Timeline.js#L228",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -6103,7 +6103,7 @@
 			},
 			"scope": "instance",
 			"name": "previousEvent",
-			"lineno": "Tone/core/Timeline.js#L234",
+			"lineno": "Tone/core/Timeline.js#L241",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -6125,7 +6125,7 @@
 			},
 			"scope": "instance",
 			"name": "forEach",
-			"lineno": "Tone/core/Timeline.js#L318",
+			"lineno": "Tone/core/Timeline.js#L329",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -6154,7 +6154,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachBefore",
-			"lineno": "Tone/core/Timeline.js#L329",
+			"lineno": "Tone/core/Timeline.js#L340",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -6183,7 +6183,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachAfter",
-			"lineno": "Tone/core/Timeline.js#L344",
+			"lineno": "Tone/core/Timeline.js#L355",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -6212,7 +6212,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachFrom",
-			"lineno": "Tone/core/Timeline.js#L358",
+			"lineno": "Tone/core/Timeline.js#L369",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -6241,7 +6241,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachAtTime",
-			"lineno": "Tone/core/Timeline.js#L375",
+			"lineno": "Tone/core/Timeline.js#L386",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -6254,454 +6254,8 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/Timeline.js#L392",
+			"lineno": "Tone/core/Timeline.js#L403",
 			"inherits": "Tone.Timeline"
-		}
-	],
-	"Transport": [
-		{
-			"description": "Schedule an event along the timeline.",
-			"params": [
-				{
-					"type": [
-						"function"
-					],
-					"description": "The callback to be invoked at the time.",
-					"name": "callback"
-				},
-				{
-					"type": [
-						"TransportTime"
-					],
-					"description": "The time to invoke the callback at.",
-					"name": "time"
-				}
-			],
-			"examples": [
-				"//trigger the callback when the Transport reaches the desired time\nTone.Transport.schedule(function(time){\n\tenvelope.triggerAttack(time);\n}, \"128i\");"
-			],
-			"returns": {
-				"type": [
-					"Number"
-				],
-				"description": "The id of the event which can be used for canceling the event."
-			},
-			"scope": "instance",
-			"name": "schedule",
-			"lineno": "Tone/core/Transport.js#L260"
-		},
-		{
-			"description": "Schedule a repeated event along the timeline. The event will fire\n at the `interval` starting at the `startTime` and for the specified\n `duration`.",
-			"params": [
-				{
-					"type": [
-						"function"
-					],
-					"description": "The callback to invoke.",
-					"name": "callback"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The duration between successive\n                              callbacks.",
-					"name": "interval"
-				},
-				{
-					"type": [
-						"TimelinePosition"
-					],
-					"optional": true,
-					"description": "When along the timeline the events should\n                              start being invoked.",
-					"name": "startTime"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "Infinity",
-					"description": "How long the event should repeat.",
-					"name": "duration"
-				}
-			],
-			"examples": [
-				"//a callback invoked every eighth note after the first measure\nTone.Transport.scheduleRepeat(callback, \"8n\", \"1m\");"
-			],
-			"returns": {
-				"type": [
-					"Number"
-				],
-				"description": "The ID of the scheduled event. Use this to cancel\n                          the event."
-			},
-			"scope": "instance",
-			"name": "scheduleRepeat",
-			"lineno": "Tone/core/Transport.js#L290"
-		},
-		{
-			"description": "Schedule an event that will be removed after it is invoked. \n Note that if the given time is less than the current transport time, \n the event will be invoked immediately.",
-			"params": [
-				{
-					"type": [
-						"function"
-					],
-					"description": "The callback to invoke once.",
-					"name": "callback"
-				},
-				{
-					"type": [
-						"TransportTime"
-					],
-					"description": "The time the callback should be invoked.",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Number"
-				],
-				"description": "The ID of the scheduled event."
-			},
-			"scope": "instance",
-			"name": "scheduleOnce",
-			"lineno": "Tone/core/Transport.js#L317"
-		},
-		{
-			"description": "Clear the passed in event id from the timeline",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The id of the event.",
-					"name": "eventId"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Transport"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "clear",
-			"lineno": "Tone/core/Transport.js#L337"
-		},
-		{
-			"description": "Remove scheduled events from the timeline after\n the given time. Repeated events will be removed\n if their startTime is after the given time",
-			"params": [
-				{
-					"type": [
-						"TransportTime"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "Clear all events after\n                         this time.",
-					"name": "after"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Transport"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "cancel",
-			"lineno": "Tone/core/Transport.js#L354"
-		},
-		{
-			"description": "Start the transport and all sources synced to the transport.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "The time when the transport should start.",
-					"name": "time"
-				},
-				{
-					"type": [
-						"TransportTime"
-					],
-					"optional": true,
-					"description": "The timeline offset to start the transport.",
-					"name": "offset"
-				}
-			],
-			"examples": [
-				"//start the transport in one second starting at beginning of the 5th measure. \nTone.Transport.start(\"+1\", \"4:0:0\");"
-			],
-			"returns": {
-				"type": [
-					"Tone.Transport"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "start",
-			"lineno": "Tone/core/Transport.js#L408"
-		},
-		{
-			"description": "Stop the transport and all sources synced to the transport.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "The time when the transport should stop.",
-					"name": "time"
-				}
-			],
-			"examples": [
-				"Tone.Transport.stop();"
-			],
-			"returns": {
-				"type": [
-					"Tone.Transport"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "stop",
-			"lineno": "Tone/core/Transport.js#L424"
-		},
-		{
-			"description": "Pause the transport and all sources synced to the transport.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Transport"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "pause",
-			"lineno": "Tone/core/Transport.js#L434"
-		},
-		{
-			"description": "Toggle the current state of the transport. If it is\nstarted, it will stop it, otherwise it will start the Transport.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"description": "The time of the event",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Transport"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toggle",
-			"lineno": "Tone/core/Transport.js#L445"
-		},
-		{
-			"description": "Set the loop start and stop at the same time.",
-			"params": [
-				{
-					"type": [
-						"TransportTime"
-					],
-					"name": "startPosition"
-				},
-				{
-					"type": [
-						"TransportTime"
-					],
-					"name": "endPosition"
-				}
-			],
-			"examples": [
-				"//loop over the first measure\nTone.Transport.setLoopPoints(0, \"1m\");\nTone.Transport.loop = true;"
-			],
-			"returns": {
-				"type": [
-					"Tone.Transport"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "setLoopPoints",
-			"lineno": "Tone/core/Transport.js#L526"
-		},
-		{
-			"description": "Returns the time aligned to the next subdivision\n of the Transport. If the Transport is not started,\n it will return 0.\n Note: this will not work precisely during tempo ramps.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The subdivision to quantize to",
-					"name": "subdivision"
-				}
-			],
-			"examples": [
-				"Tone.Transport.start(); //the transport must be started\nTone.Transport.nextSubdivision(\"4n\");"
-			],
-			"returns": {
-				"type": [
-					"Number"
-				],
-				"description": "The context time of the next subdivision."
-			},
-			"scope": "instance",
-			"name": "nextSubdivision",
-			"lineno": "Tone/core/Transport.js#L701"
-		},
-		{
-			"description": "Attaches the signal to the tempo control signal so that \n any changes in the tempo will change the signal in the same\n ratio.",
-			"params": [
-				{
-					"type": [
-						"Tone.Signal"
-					],
-					"name": "signal"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"description": "Optionally pass in the ratio between\n                        the two signals. Otherwise it will be computed\n                        based on their current values.",
-					"name": "ratio"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Transport"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "syncSignal",
-			"lineno": "Tone/core/Transport.js#L729"
-		},
-		{
-			"description": "Unsyncs a previously synced signal from the transport's control. \n See Tone.Transport.syncSignal.",
-			"params": [
-				{
-					"type": [
-						"Tone.Signal"
-					],
-					"name": "signal"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Transport"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "unsyncSignal",
-			"lineno": "Tone/core/Transport.js#L755"
-		},
-		{
-			"description": "Bind a callback to a specific event.",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"description": "The name of the event to listen for.",
-					"name": "event"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"description": "The callback to invoke when the\n                               event is emitted",
-					"name": "callback"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Emitter"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "on",
-			"lineno": "Tone/core/Emitter.js#L32",
-			"inherits": "Tone.Emitter"
-		},
-		{
-			"description": "Remove the event listener.",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"description": "The event to stop listening to.",
-					"name": "event"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"optional": true,
-					"description": "The callback which was bound to \n                               the event with Tone.Emitter.on.\n                               If no callback is given, all callbacks\n                               events are removed.",
-					"name": "callback"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Emitter"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "off",
-			"lineno": "Tone/core/Emitter.js#L54",
-			"inherits": "Tone.Emitter"
-		},
-		{
-			"description": "Invoke all of the callbacks bound to the event\n with any arguments passed in.",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"description": "The name of the event.",
-					"name": "event"
-				},
-				{
-					"type": [
-						"*"
-					],
-					"description": "The arguments to pass to the functions listening.",
-					"name": "args..."
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Emitter"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "emit",
-			"lineno": "Tone/core/Emitter.js#L81",
-			"inherits": "Tone.Emitter"
 		}
 	],
 	"Param": [
@@ -7147,7 +6701,7 @@
 			},
 			"scope": "instance",
 			"name": "add",
-			"lineno": "Tone/core/Timeline.js#L77"
+			"lineno": "Tone/core/Timeline.js#L84"
 		},
 		{
 			"description": "Remove an event from the timeline.",
@@ -7168,7 +6722,7 @@
 			},
 			"scope": "instance",
 			"name": "remove",
-			"lineno": "Tone/core/Timeline.js#L101"
+			"lineno": "Tone/core/Timeline.js#L108"
 		},
 		{
 			"description": "Get the nearest event whose time is less than or equal to the given time.",
@@ -7196,7 +6750,7 @@
 			},
 			"scope": "instance",
 			"name": "get",
-			"lineno": "Tone/core/Timeline.js#L119"
+			"lineno": "Tone/core/Timeline.js#L126"
 		},
 		{
 			"description": "Return the first event in the timeline without removing it",
@@ -7208,7 +6762,7 @@
 			},
 			"scope": "instance",
 			"name": "peek",
-			"lineno": "Tone/core/Timeline.js#L133"
+			"lineno": "Tone/core/Timeline.js#L140"
 		},
 		{
 			"description": "Return the first event in the timeline and remove it",
@@ -7220,7 +6774,7 @@
 			},
 			"scope": "instance",
 			"name": "shift",
-			"lineno": "Tone/core/Timeline.js#L141"
+			"lineno": "Tone/core/Timeline.js#L148"
 		},
 		{
 			"description": "Get the event which is scheduled after the given time.",
@@ -7248,7 +6802,7 @@
 			},
 			"scope": "instance",
 			"name": "getAfter",
-			"lineno": "Tone/core/Timeline.js#L151"
+			"lineno": "Tone/core/Timeline.js#L158"
 		},
 		{
 			"description": "Get the event before the event at the given time.",
@@ -7276,7 +6830,7 @@
 			},
 			"scope": "instance",
 			"name": "getBefore",
-			"lineno": "Tone/core/Timeline.js#L167"
+			"lineno": "Tone/core/Timeline.js#L174"
 		},
 		{
 			"description": "Cancel events after the given time",
@@ -7297,7 +6851,7 @@
 			},
 			"scope": "instance",
 			"name": "cancel",
-			"lineno": "Tone/core/Timeline.js#L187"
+			"lineno": "Tone/core/Timeline.js#L194"
 		},
 		{
 			"description": "Cancel events before or equal to the given time.",
@@ -7318,7 +6872,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelBefore",
-			"lineno": "Tone/core/Timeline.js#L221"
+			"lineno": "Tone/core/Timeline.js#L228"
 		},
 		{
 			"description": "Returns the previous event if there is one. null otherwise",
@@ -7339,7 +6893,7 @@
 			},
 			"scope": "instance",
 			"name": "previousEvent",
-			"lineno": "Tone/core/Timeline.js#L234"
+			"lineno": "Tone/core/Timeline.js#L241"
 		},
 		{
 			"description": "Iterate over everything in the array",
@@ -7360,7 +6914,7 @@
 			},
 			"scope": "instance",
 			"name": "forEach",
-			"lineno": "Tone/core/Timeline.js#L318"
+			"lineno": "Tone/core/Timeline.js#L329"
 		},
 		{
 			"description": "Iterate over everything in the array at or before the given time.",
@@ -7388,7 +6942,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachBefore",
-			"lineno": "Tone/core/Timeline.js#L329"
+			"lineno": "Tone/core/Timeline.js#L340"
 		},
 		{
 			"description": "Iterate over everything in the array after the given time.",
@@ -7416,7 +6970,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachAfter",
-			"lineno": "Tone/core/Timeline.js#L344"
+			"lineno": "Tone/core/Timeline.js#L355"
 		},
 		{
 			"description": "Iterate over everything in the array at or after the given time. Similar to\n forEachAfter, but includes the item(s) at the given time.",
@@ -7444,7 +6998,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachFrom",
-			"lineno": "Tone/core/Timeline.js#L358"
+			"lineno": "Tone/core/Timeline.js#L369"
 		},
 		{
 			"description": "Iterate over everything in the array at the given time",
@@ -7472,7 +7026,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachAtTime",
-			"lineno": "Tone/core/Timeline.js#L375"
+			"lineno": "Tone/core/Timeline.js#L386"
 		},
 		{
 			"description": "Clean up.",
@@ -7484,7 +7038,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/Timeline.js#L392"
+			"lineno": "Tone/core/Timeline.js#L403"
 		}
 	],
 	"Tone#Tone": [
@@ -7649,6 +7203,510 @@
 			"scope": "inner",
 			"name": "resCallback",
 			"lineno": "Tone/core/Tone.js#L669"
+		}
+	],
+	"Transport": [
+		{
+			"description": "Schedule an event along the timeline.",
+			"params": [
+				{
+					"type": [
+						"function"
+					],
+					"description": "The callback to be invoked at the time.",
+					"name": "callback"
+				},
+				{
+					"type": [
+						"TransportTime"
+					],
+					"description": "The time to invoke the callback at.",
+					"name": "time"
+				}
+			],
+			"examples": [
+				"//trigger the callback when the Transport reaches the desired time\nTone.Transport.schedule(function(time){\n\tenvelope.triggerAttack(time);\n}, \"128i\");"
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The id of the event which can be used for canceling the event."
+			},
+			"scope": "instance",
+			"name": "schedule",
+			"lineno": "Tone/core/Transport.js#L232"
+		},
+		{
+			"description": "Schedule a repeated event along the timeline. The event will fire\n at the `interval` starting at the `startTime` and for the specified\n `duration`.",
+			"params": [
+				{
+					"type": [
+						"function"
+					],
+					"description": "The callback to invoke.",
+					"name": "callback"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The duration between successive\n                              callbacks. Must be a positive number.",
+					"name": "interval"
+				},
+				{
+					"type": [
+						"TimelinePosition"
+					],
+					"optional": true,
+					"description": "When along the timeline the events should\n                              start being invoked.",
+					"name": "startTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "Infinity",
+					"description": "How long the event should repeat.",
+					"name": "duration"
+				}
+			],
+			"examples": [
+				"//a callback invoked every eighth note after the first measure\nTone.Transport.scheduleRepeat(callback, \"8n\", \"1m\");"
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The ID of the scheduled event. Use this to cancel\n                          the event."
+			},
+			"scope": "instance",
+			"name": "scheduleRepeat",
+			"lineno": "Tone/core/Transport.js#L256"
+		},
+		{
+			"description": "Schedule an event that will be removed after it is invoked.\n Note that if the given time is less than the current transport time,\n the event will be invoked immediately.",
+			"params": [
+				{
+					"type": [
+						"function"
+					],
+					"description": "The callback to invoke once.",
+					"name": "callback"
+				},
+				{
+					"type": [
+						"TransportTime"
+					],
+					"description": "The time the callback should be invoked.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The ID of the scheduled event."
+			},
+			"scope": "instance",
+			"name": "scheduleOnce",
+			"lineno": "Tone/core/Transport.js#L275"
+		},
+		{
+			"description": "Clear the passed in event id from the timeline",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The id of the event.",
+					"name": "eventId"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Transport"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "clear",
+			"lineno": "Tone/core/Transport.js#L289"
+		},
+		{
+			"description": "Remove scheduled events from the timeline after\n the given time. Repeated events will be removed\n if their startTime is after the given time",
+			"params": [
+				{
+					"type": [
+						"TransportTime"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "Clear all events after\n                         this time.",
+					"name": "after"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Transport"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancel",
+			"lineno": "Tone/core/Transport.js#L324"
+		},
+		{
+			"description": "Start the transport and all sources synced to the transport.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "The time when the transport should start.",
+					"name": "time"
+				},
+				{
+					"type": [
+						"TransportTime"
+					],
+					"optional": true,
+					"description": "The timeline offset to start the transport.",
+					"name": "offset"
+				}
+			],
+			"examples": [
+				"//start the transport in one second starting at beginning of the 5th measure.\nTone.Transport.start(\"+1\", \"4:0:0\");"
+			],
+			"returns": {
+				"type": [
+					"Tone.Transport"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "start",
+			"lineno": "Tone/core/Transport.js#L377"
+		},
+		{
+			"description": "Stop the transport and all sources synced to the transport.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "The time when the transport should stop.",
+					"name": "time"
+				}
+			],
+			"examples": [
+				"Tone.Transport.stop();"
+			],
+			"returns": {
+				"type": [
+					"Tone.Transport"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "stop",
+			"lineno": "Tone/core/Transport.js#L393"
+		},
+		{
+			"description": "Pause the transport and all sources synced to the transport.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Transport"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "pause",
+			"lineno": "Tone/core/Transport.js#L403"
+		},
+		{
+			"description": "Toggle the current state of the transport. If it is\nstarted, it will stop it, otherwise it will start the Transport.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"description": "The time of the event",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Transport"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toggle",
+			"lineno": "Tone/core/Transport.js#L414"
+		},
+		{
+			"description": "Set the loop start and stop at the same time.",
+			"params": [
+				{
+					"type": [
+						"TransportTime"
+					],
+					"name": "startPosition"
+				},
+				{
+					"type": [
+						"TransportTime"
+					],
+					"name": "endPosition"
+				}
+			],
+			"examples": [
+				"//loop over the first measure\nTone.Transport.setLoopPoints(0, \"1m\");\nTone.Transport.loop = true;"
+			],
+			"returns": {
+				"type": [
+					"Tone.Transport"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "setLoopPoints",
+			"lineno": "Tone/core/Transport.js#L495"
+		},
+		{
+			"description": "Returns the time aligned to the next subdivision\n of the Transport. If the Transport is not started,\n it will return 0.\n Note: this will not work precisely during tempo ramps.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The subdivision to quantize to",
+					"name": "subdivision"
+				}
+			],
+			"examples": [
+				"Tone.Transport.start(); //the transport must be started\nTone.Transport.nextSubdivision(\"4n\");"
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The context time of the next subdivision."
+			},
+			"scope": "instance",
+			"name": "nextSubdivision",
+			"lineno": "Tone/core/Transport.js#L670"
+		},
+		{
+			"description": "Attaches the signal to the tempo control signal so that\n any changes in the tempo will change the signal in the same\n ratio.",
+			"params": [
+				{
+					"type": [
+						"Tone.Signal"
+					],
+					"name": "signal"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"description": "Optionally pass in the ratio between\n                        the two signals. Otherwise it will be computed\n                        based on their current values.",
+					"name": "ratio"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Transport"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "syncSignal",
+			"lineno": "Tone/core/Transport.js#L698"
+		},
+		{
+			"description": "Unsyncs a previously synced signal from the transport's control.\n See Tone.Transport.syncSignal.",
+			"params": [
+				{
+					"type": [
+						"Tone.Signal"
+					],
+					"name": "signal"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Transport"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "unsyncSignal",
+			"lineno": "Tone/core/Transport.js#L724"
+		},
+		{
+			"description": "Bind a callback to a specific event.",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"description": "The name of the event to listen for.",
+					"name": "event"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"description": "The callback to invoke when the\n                               event is emitted",
+					"name": "callback"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Emitter"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "on",
+			"lineno": "Tone/core/Emitter.js#L32",
+			"inherits": "Tone.Emitter"
+		},
+		{
+			"description": "Remove the event listener.",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"description": "The event to stop listening to.",
+					"name": "event"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"optional": true,
+					"description": "The callback which was bound to \n                               the event with Tone.Emitter.on.\n                               If no callback is given, all callbacks\n                               events are removed.",
+					"name": "callback"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Emitter"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "off",
+			"lineno": "Tone/core/Emitter.js#L54",
+			"inherits": "Tone.Emitter"
+		},
+		{
+			"description": "Invoke all of the callbacks bound to the event\n with any arguments passed in.",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"description": "The name of the event.",
+					"name": "event"
+				},
+				{
+					"type": [
+						"*"
+					],
+					"description": "The arguments to pass to the functions listening.",
+					"name": "args..."
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Emitter"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "emit",
+			"lineno": "Tone/core/Emitter.js#L81",
+			"inherits": "Tone.Emitter"
+		}
+	],
+	"TransportEvent": [
+		{
+			"description": "Invoke the callback even callback.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The AudioContext time in seconds of the event",
+					"name": "time"
+				}
+			],
+			"scope": "instance",
+			"name": "invoke",
+			"lineno": "Tone/core/TransportEvent.js#L71"
+		},
+		{
+			"description": "Clean up",
+			"returns": {
+				"type": [
+					"Tone.TransportEvent"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/core/TransportEvent.js#L84"
+		}
+	],
+	"TransportRepeatEvent": [
+		{
+			"description": "Invoke the callback. Returns the tick time which\nthe next event should be scheduled at.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The AudioContext time in seconds of the event",
+					"name": "time"
+				}
+			],
+			"scope": "instance",
+			"name": "invoke",
+			"lineno": "Tone/core/TransportRepeatEvent.js#L77"
+		},
+		{
+			"description": "Clean up",
+			"returns": {
+				"type": [
+					"Tone.TransportRepeatEvent"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/core/TransportRepeatEvent.js#L120"
 		}
 	],
 	"AutoFilter": [

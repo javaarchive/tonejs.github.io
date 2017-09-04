@@ -1973,134 +1973,6 @@
 			"lineno": "Tone/core/Master.js#L62"
 		}
 	],
-	"Transport": [
-		{
-			"description": "If the transport loops or not.",
-			"type": [
-				"boolean"
-			],
-			"scope": "instance",
-			"name": "loop",
-			"lineno": "Tone/core/Transport.js#L45"
-		},
-		{
-			"description": "The Beats Per Minute of the Transport.",
-			"type": [
-				"BPM"
-			],
-			"examples": [
-				"Tone.Transport.bpm.value = 80;\n//ramp the bpm to 120 over 10 seconds\nTone.Transport.bpm.rampTo(120, 10);"
-			],
-			"scope": "instance",
-			"name": "bpm",
-			"lineno": "Tone/core/Transport.js#L94",
-			"signal": true
-		},
-		{
-			"description": "Returns the playback state of the source, either \"started\", \"stopped\", or \"paused\"",
-			"type": [
-				"Tone.State"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "state",
-			"lineno": "Tone/core/Transport.js#L386"
-		},
-		{
-			"description": "The time signature as just the numerator over 4. \n For example 4/4 would be just 4 and 6/8 would be 3.",
-			"type": [
-				"Number",
-				"Array"
-			],
-			"examples": [
-				"//common time\nTone.Transport.timeSignature = 4;\n// 7/8\nTone.Transport.timeSignature = [7, 8];\n//this will be reduced to a single number\nTone.Transport.timeSignature; //returns 3.5"
-			],
-			"scope": "instance",
-			"name": "timeSignature",
-			"lineno": "Tone/core/Transport.js#L459"
-		},
-		{
-			"description": "When the Tone.Transport.loop = true, this is the starting position of the loop.",
-			"type": [
-				"TransportTime"
-			],
-			"scope": "instance",
-			"name": "loopStart",
-			"lineno": "Tone/core/Transport.js#L486"
-		},
-		{
-			"description": "When the Tone.Transport.loop = true, this is the ending position of the loop.",
-			"type": [
-				"TransportTime"
-			],
-			"scope": "instance",
-			"name": "loopEnd",
-			"lineno": "Tone/core/Transport.js#L501"
-		},
-		{
-			"description": "The swing value. Between 0-1 where 1 equal to \n the note + half the subdivision.",
-			"type": [
-				"NormalRange"
-			],
-			"scope": "instance",
-			"name": "swing",
-			"lineno": "Tone/core/Transport.js#L532"
-		},
-		{
-			"description": "Set the subdivision which the swing will be applied to. \n The default value is an 8th note. Value must be less \n than a quarter note.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "swingSubdivision",
-			"lineno": "Tone/core/Transport.js#L549"
-		},
-		{
-			"description": "The Transport's position in Bars:Beats:Sixteenths.\n Setting the value will jump to that position right away.",
-			"type": [
-				"BarsBeatsSixteenths"
-			],
-			"scope": "instance",
-			"name": "position",
-			"lineno": "Tone/core/Transport.js#L567"
-		},
-		{
-			"description": "The Transport's position in seconds\n Setting the value will jump to that position right away.",
-			"type": [
-				"Seconds"
-			],
-			"scope": "instance",
-			"name": "seconds",
-			"lineno": "Tone/core/Transport.js#L584"
-		},
-		{
-			"description": "The Transport's loop position as a normalized value. Always\n returns 0 if the transport if loop is not true.",
-			"type": [
-				"NormalRange"
-			],
-			"scope": "instance",
-			"name": "progress",
-			"lineno": "Tone/core/Transport.js#L601"
-		},
-		{
-			"description": "The transports current tick position.",
-			"type": [
-				"Ticks"
-			],
-			"scope": "instance",
-			"name": "ticks",
-			"lineno": "Tone/core/Transport.js#L618"
-		},
-		{
-			"description": "Pulses Per Quarter note. This is the smallest resolution\n the Transport timing supports. This should be set once\n on initialization and not set again. Changing this value \n after other objects have been created can cause problems.",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "PPQ",
-			"lineno": "Tone/core/Transport.js#L645"
-		}
-	],
 	"AudioNode": [
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -2171,7 +2043,7 @@
 			],
 			"scope": "instance",
 			"name": "memory",
-			"lineno": "Tone/core/Timeline.js#L44"
+			"lineno": "Tone/core/Timeline.js#L51"
 		},
 		{
 			"description": "The number of items in the timeline.",
@@ -2181,7 +2053,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "length",
-			"lineno": "Tone/core/Timeline.js#L58"
+			"lineno": "Tone/core/Timeline.js#L65"
 		}
 	],
 	"Tone": [
@@ -2194,6 +2066,172 @@
 			"scope": "instance",
 			"name": "context",
 			"lineno": "Tone/core/Tone.js#L573"
+		}
+	],
+	"Transport": [
+		{
+			"description": "If the transport loops or not.",
+			"type": [
+				"boolean"
+			],
+			"scope": "instance",
+			"name": "loop",
+			"lineno": "Tone/core/Transport.js#L46"
+		},
+		{
+			"description": "The Beats Per Minute of the Transport.",
+			"type": [
+				"BPM"
+			],
+			"examples": [
+				"Tone.Transport.bpm.value = 80;\n//ramp the bpm to 120 over 10 seconds\nTone.Transport.bpm.rampTo(120, 10);"
+			],
+			"scope": "instance",
+			"name": "bpm",
+			"lineno": "Tone/core/Transport.js#L95",
+			"signal": true
+		},
+		{
+			"description": "Returns the playback state of the source, either \"started\", \"stopped\", or \"paused\"",
+			"type": [
+				"Tone.State"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "state",
+			"lineno": "Tone/core/Transport.js#L355"
+		},
+		{
+			"description": "The time signature as just the numerator over 4.\n For example 4/4 would be just 4 and 6/8 would be 3.",
+			"type": [
+				"Number",
+				"Array"
+			],
+			"examples": [
+				"//common time\nTone.Transport.timeSignature = 4;\n// 7/8\nTone.Transport.timeSignature = [7, 8];\n//this will be reduced to a single number\nTone.Transport.timeSignature; //returns 3.5"
+			],
+			"scope": "instance",
+			"name": "timeSignature",
+			"lineno": "Tone/core/Transport.js#L428"
+		},
+		{
+			"description": "When the Tone.Transport.loop = true, this is the starting position of the loop.",
+			"type": [
+				"TransportTime"
+			],
+			"scope": "instance",
+			"name": "loopStart",
+			"lineno": "Tone/core/Transport.js#L455"
+		},
+		{
+			"description": "When the Tone.Transport.loop = true, this is the ending position of the loop.",
+			"type": [
+				"TransportTime"
+			],
+			"scope": "instance",
+			"name": "loopEnd",
+			"lineno": "Tone/core/Transport.js#L470"
+		},
+		{
+			"description": "The swing value. Between 0-1 where 1 equal to\n the note + half the subdivision.",
+			"type": [
+				"NormalRange"
+			],
+			"scope": "instance",
+			"name": "swing",
+			"lineno": "Tone/core/Transport.js#L501"
+		},
+		{
+			"description": "Set the subdivision which the swing will be applied to.\n The default value is an 8th note. Value must be less\n than a quarter note.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "swingSubdivision",
+			"lineno": "Tone/core/Transport.js#L518"
+		},
+		{
+			"description": "The Transport's position in Bars:Beats:Sixteenths.\n Setting the value will jump to that position right away.",
+			"type": [
+				"BarsBeatsSixteenths"
+			],
+			"scope": "instance",
+			"name": "position",
+			"lineno": "Tone/core/Transport.js#L536"
+		},
+		{
+			"description": "The Transport's position in seconds\n Setting the value will jump to that position right away.",
+			"type": [
+				"Seconds"
+			],
+			"scope": "instance",
+			"name": "seconds",
+			"lineno": "Tone/core/Transport.js#L553"
+		},
+		{
+			"description": "The Transport's loop position as a normalized value. Always\n returns 0 if the transport if loop is not true.",
+			"type": [
+				"NormalRange"
+			],
+			"scope": "instance",
+			"name": "progress",
+			"lineno": "Tone/core/Transport.js#L570"
+		},
+		{
+			"description": "The transports current tick position.",
+			"type": [
+				"Ticks"
+			],
+			"scope": "instance",
+			"name": "ticks",
+			"lineno": "Tone/core/Transport.js#L587"
+		},
+		{
+			"description": "Pulses Per Quarter note. This is the smallest resolution\n the Transport timing supports. This should be set once\n on initialization and not set again. Changing this value\n after other objects have been created can cause problems.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "PPQ",
+			"lineno": "Tone/core/Transport.js#L614"
+		}
+	],
+	"TransportEvent": [
+		{
+			"description": "Reference to the Transport that created it",
+			"type": [
+				"Tone.Transport"
+			],
+			"scope": "instance",
+			"name": "Transport",
+			"lineno": "Tone/core/TransportEvent.js#L19"
+		},
+		{
+			"description": "The unique id of the event",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "id",
+			"lineno": "Tone/core/TransportEvent.js#L25"
+		},
+		{
+			"description": "The time the event starts",
+			"type": [
+				"Ticks"
+			],
+			"scope": "instance",
+			"name": "time",
+			"lineno": "Tone/core/TransportEvent.js#L31"
+		},
+		{
+			"description": "The callback to invoke",
+			"type": [
+				"function"
+			],
+			"scope": "instance",
+			"name": "callback",
+			"lineno": "Tone/core/TransportEvent.js#L37"
 		}
 	],
 	"AutoFilter": [
@@ -6735,7 +6773,7 @@
 			],
 			"scope": "instance",
 			"name": "memory",
-			"lineno": "Tone/core/Timeline.js#L44",
+			"lineno": "Tone/core/Timeline.js#L51",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -6746,7 +6784,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "length",
-			"lineno": "Tone/core/Timeline.js#L58",
+			"lineno": "Tone/core/Timeline.js#L65",
 			"inherits": "Tone.Timeline"
 		}
 	],
