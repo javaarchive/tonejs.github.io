@@ -5942,7 +5942,7 @@
 						"String"
 					],
 					"description": "Which value in the object to compare",
-					"name": "comparitor"
+					"name": "comparator"
 				}
 			],
 			"returns": {
@@ -5997,7 +5997,7 @@
 						"String"
 					],
 					"description": "Which value in the object to compare",
-					"name": "comparitor"
+					"name": "comparator"
 				}
 			],
 			"returns": {
@@ -6026,7 +6026,7 @@
 						"String"
 					],
 					"description": "Which value in the object to compare",
-					"name": "comparitor"
+					"name": "comparator"
 				}
 			],
 			"returns": {
@@ -6125,7 +6125,7 @@
 			},
 			"scope": "instance",
 			"name": "forEach",
-			"lineno": "Tone/core/Timeline.js#L323",
+			"lineno": "Tone/core/Timeline.js#L318",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -6154,7 +6154,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachBefore",
-			"lineno": "Tone/core/Timeline.js#L334",
+			"lineno": "Tone/core/Timeline.js#L329",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -6183,7 +6183,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachAfter",
-			"lineno": "Tone/core/Timeline.js#L349",
+			"lineno": "Tone/core/Timeline.js#L344",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -6212,7 +6212,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachFrom",
-			"lineno": "Tone/core/Timeline.js#L363",
+			"lineno": "Tone/core/Timeline.js#L358",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -6241,7 +6241,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachAtTime",
-			"lineno": "Tone/core/Timeline.js#L380",
+			"lineno": "Tone/core/Timeline.js#L375",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -6254,7 +6254,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/Timeline.js#L397",
+			"lineno": "Tone/core/Timeline.js#L392",
 			"inherits": "Tone.Timeline"
 		}
 	],
@@ -7349,7 +7349,7 @@
 						"String"
 					],
 					"description": "Which value in the object to compare",
-					"name": "comparitor"
+					"name": "comparator"
 				}
 			],
 			"returns": {
@@ -7401,7 +7401,7 @@
 						"String"
 					],
 					"description": "Which value in the object to compare",
-					"name": "comparitor"
+					"name": "comparator"
 				}
 			],
 			"returns": {
@@ -7429,7 +7429,7 @@
 						"String"
 					],
 					"description": "Which value in the object to compare",
-					"name": "comparitor"
+					"name": "comparator"
 				}
 			],
 			"returns": {
@@ -7524,7 +7524,7 @@
 			},
 			"scope": "instance",
 			"name": "forEach",
-			"lineno": "Tone/core/Timeline.js#L323"
+			"lineno": "Tone/core/Timeline.js#L318"
 		},
 		{
 			"description": "Iterate over everything in the array at or before the given time.",
@@ -7552,7 +7552,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachBefore",
-			"lineno": "Tone/core/Timeline.js#L334"
+			"lineno": "Tone/core/Timeline.js#L329"
 		},
 		{
 			"description": "Iterate over everything in the array after the given time.",
@@ -7580,7 +7580,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachAfter",
-			"lineno": "Tone/core/Timeline.js#L349"
+			"lineno": "Tone/core/Timeline.js#L344"
 		},
 		{
 			"description": "Iterate over everything in the array at or after the given time. Similar to\n forEachAfter, but includes the item(s) at the given time.",
@@ -7608,7 +7608,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachFrom",
-			"lineno": "Tone/core/Timeline.js#L363"
+			"lineno": "Tone/core/Timeline.js#L358"
 		},
 		{
 			"description": "Iterate over everything in the array at the given time",
@@ -7636,7 +7636,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachAtTime",
-			"lineno": "Tone/core/Timeline.js#L380"
+			"lineno": "Tone/core/Timeline.js#L375"
 		},
 		{
 			"description": "Clean up.",
@@ -7648,7 +7648,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/Timeline.js#L397"
+			"lineno": "Tone/core/Timeline.js#L392"
 		}
 	],
 	"AutoFilter": [
