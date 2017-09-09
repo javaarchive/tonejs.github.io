@@ -976,7 +976,7 @@
 		"extends": "Tone.Timeline"
 	},
 	"AudioNode": {
-		"description": "Tone.AudioNode is a base class for classes which process audio.\n        AudioNodes have inputs and outputs.",
+		"description": "Tone.AudioNode is the base class for classes which process audio.\n        AudioNodes have inputs and outputs.",
 		"params": [
 			{
 				"type": [
