@@ -6788,6 +6788,48 @@
 			"inherits": "Tone.Timeline"
 		}
 	],
+	"TransportRepeatEvent": [
+		{
+			"description": "Reference to the Transport that created it",
+			"type": [
+				"Tone.Transport"
+			],
+			"scope": "instance",
+			"name": "Transport",
+			"lineno": "Tone/core/TransportEvent.js#L19",
+			"inherits": "Tone.TransportEvent"
+		},
+		{
+			"description": "The unique id of the event",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "id",
+			"lineno": "Tone/core/TransportEvent.js#L25",
+			"inherits": "Tone.TransportEvent"
+		},
+		{
+			"description": "The time the event starts",
+			"type": [
+				"Ticks"
+			],
+			"scope": "instance",
+			"name": "time",
+			"lineno": "Tone/core/TransportEvent.js#L31",
+			"inherits": "Tone.TransportEvent"
+		},
+		{
+			"description": "The callback to invoke",
+			"type": [
+				"function"
+			],
+			"scope": "instance",
+			"name": "callback",
+			"lineno": "Tone/core/TransportEvent.js#L37",
+			"inherits": "Tone.TransportEvent"
+		}
+	],
 	"MidSideEffect": [
 		{
 			"description": "The wet control is how much of the effected\n will pass through to the output. 1 = 100% effected\n signal, 0 = 100% dry signal.",

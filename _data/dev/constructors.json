@@ -1066,7 +1066,7 @@
 				"name": "options"
 			}
 		],
-		"extends": "Tone"
+		"extends": "Tone.TransportEvent"
 	},
 	"AutoFilter": {
 		"description": "Tone.AutoFilter is a Tone.Filter with a Tone.LFO connected to the filter cutoff frequency.\n        Setting the LFO rate and depth allows for control over the filter modulation rate \n        and depth.",
