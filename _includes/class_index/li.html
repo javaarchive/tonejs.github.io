@@ -1,4 +1,4 @@
-{% if include.data.size != 0 %}
+{% if include.data and include.data.size > 0 %}
 	<div class="group {{include.class}}">
 		<div>{{include.name | upcase}}</div>
 		{% for datum in include.data %}
