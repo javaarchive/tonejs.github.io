@@ -1,14 +1,34 @@
 - image: musiclab.jpg
   url: https://musiclab.chromeexperiments.com
   title : Chrome Music Lab
+  
+- image : learningmusic_ableton.png
+  url : https://learningmusic.ableton.com/
+  title : Learning Music
 
 - image: groovepizza.png
   url: https://apps.musedlab.org/groovepizza/
   title : Groove Pizza
+  
+- image : chromatic_vr.png
+  url : https://chromatic.funktroniclabs.com/
+  title : Chromatic
 
 - image: jazzcomputer.jpg
   url: http://jazz.computer/
   title: Jazz.Computer
+  
+- image: yume.jpg
+  url: http://www.unseen-music.com/yume/
+  title: Yume - Helios
+  
+- image: ramsophone.png
+  url: http://robertvinluan.com/Ramsophone/
+  title: Ramsophone
+  
+- image : solace.png
+  url : http://www.rememberspook.com/
+  title : Solace
 
 - image: motionemotion.jpg
   url: https://motionemotion.herokuapp.com/
@@ -18,6 +38,10 @@
   url: http://eddietree.github.io/hypercube/
   title: Hypercube
 
+- image : aiduet.png
+  url : https://experiments.withgoogle.com/ai/ai-duet/view/
+  title : AI Duet
+  
 - image: arpeggiator.png
   url: http://codepen.io/jakealbaugh/full/qNrZyw/
   title: Musical Chord Progression Arpeggiator
@@ -25,6 +49,14 @@
 - image: solarbeats.png
   url: http://www.whitevinyldesign.com/solarbeat/
   title: Solarbeat
+  
+- image : infinitedrums.png
+  url : https://experiments.withgoogle.com/ai/drum-machine
+  title : Infinite Drum Machine
+  
+- image : flume.png
+  url : http://skin.flu.me
+  title : Flume - Skin
 
 - image: blockchords.png
   url: http://dev.abe.sh/block-chords/
@@ -41,10 +73,6 @@
 - image: gameofreich.png
   url: http://nexusosc.com/gameofreich/
   title: Game of Reich
-
-- image: yume.jpg
-  url: http://www.unseen-music.com/yume/
-  title: Yume - Helios
 
 - image: tweet-fm.png
   url: https://tweet-fm.herokuapp.com/
@@ -82,10 +110,6 @@
   url: http://anxietybrain.net/
   title: Anxiety
 
-- image: ramsophone.png
-  url: http://robertvinluan.com/Ramsophone/
-  title: Ramsophone
-
 - image: pgb-vsu.png
   url: http://www.pgb-vsu.club/
   title: PGB-VSU
@@ -106,10 +130,6 @@
   url : https://uduk.org/
   title: zhredBoard
 
-- image : solace.png
-  url : http://www.rememberspook.com/
-  title : Solace
-
 - image : 2016management.png
   url : http://2016.management/
   title : 2016.Management
@@ -121,10 +141,6 @@
 - image : ether_dream_thumb.png
   url : http://www.etherdream.io/
   title : Ether Dream
-
-- image : learningmusic_ableton.png
-  url : https://learningmusic.ableton.com/
-  title : Learning Music
 
 - image : microscale.png
   url : http://alestsurko.by/microscale/
@@ -142,10 +158,6 @@
   url : https://p5js.org/assets/p5_featured/maya-dulynoted/
   title : duly noted
 
-- image : flume.png
-  url : http://skin.flu.me
-  title : Flume - Skin
-
 - image : ocaniemanights.png
   url : http://autotel.co/loopita-ocaniemanights/
   title : Ocaniemanights
@@ -157,3 +169,7 @@
 - image : XYSynth.jpg
   url : https://tothepoweroftom.github.io/xysynth/
   title : XY Synth
+
+- image : songexploder.png
+  url : https://experiments.withgoogle.com/webvr/inside-music
+  title : Inside Music
