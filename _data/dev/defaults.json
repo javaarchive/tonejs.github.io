@@ -550,16 +550,6 @@
 		"modulationType": "square",
 		"harmonicity": 1
 	},
-	"BufferSource": {
-		"onended": "Tone.noOp",
-		"onload": "Tone.noOp",
-		"loop": false,
-		"loopStart": 0,
-		"loopEnd": 0,
-		"fadeIn": 0,
-		"fadeOut": 0,
-		"playbackRate": 1
-	},
 	"FMOscillator": {
 		"frequency": 440,
 		"detune": 0,
@@ -647,5 +637,16 @@
 	"UserMedia": {
 		"volume": 0,
 		"mute": false
+	},
+	"BufferSource": {
+		"onended": "Tone.noOp",
+		"onload": "Tone.noOp",
+		"loop": false,
+		"loopStart": 0,
+		"loopEnd": 0,
+		"fadeIn": 0,
+		"fadeOut": 0,
+		"curve": "linear",
+		"playbackRate": 1
 	}
 }

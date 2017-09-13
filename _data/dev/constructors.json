@@ -2222,27 +2222,6 @@
 		],
 		"extends": "Tone.Oscillator"
 	},
-	"BufferSource": {
-		"description": "Wrapper around the native BufferSourceNode.",
-		"params": [
-			{
-				"type": [
-					"AudioBuffer",
-					"Tone.Buffer"
-				],
-				"description": "The buffer to play",
-				"name": "buffer"
-			},
-			{
-				"type": [
-					"function"
-				],
-				"description": "The callback to invoke when the\n                              buffer is done playing.",
-				"name": "onload"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
 	"FMOscillator": {
 		"description": "Tone.FMOscillator",
 		"params": [
@@ -2531,6 +2510,27 @@
 		],
 		"examples": [
 			"//list the inputs and open the third one\nvar motu = new Tone.UserMedia();\n\n//opening the input asks the user to activate their mic\nmotu.open().then(function(){\n\t//opening is activates the microphone\n\t//starting lets audio through\n\tmotu.start(10);\n});"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"BufferSource": {
+		"description": "Wrapper around the native BufferSourceNode.",
+		"params": [
+			{
+				"type": [
+					"AudioBuffer",
+					"Tone.Buffer"
+				],
+				"description": "The buffer to play",
+				"name": "buffer"
+			},
+			{
+				"type": [
+					"function"
+				],
+				"description": "The callback to invoke when the\n                              buffer is done playing.",
+				"name": "onload"
+			}
 		],
 		"extends": "Tone.AudioNode"
 	},

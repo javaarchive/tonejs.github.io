@@ -2021,7 +2021,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L370"
+			"lineno": "Tone/core/Param.js#L401"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -4868,7 +4868,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L370",
+			"lineno": "Tone/core/Param.js#L401",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -5013,102 +5013,6 @@
 			"name": "state",
 			"lineno": "Tone/source/Source.js#L93",
 			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"BufferSource": [
-		{
-			"description": "The callback to invoke after the\n buffer source is done playing.",
-			"type": [
-				"function"
-			],
-			"scope": "instance",
-			"name": "onended",
-			"lineno": "Tone/source/BufferSource.js#L28"
-		},
-		{
-			"description": "The playbackRate of the buffer",
-			"type": [
-				"Positive"
-			],
-			"scope": "instance",
-			"name": "playbackRate",
-			"lineno": "Tone/source/BufferSource.js#L71",
-			"signal": true
-		},
-		{
-			"description": "The fadeIn time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeIn",
-			"lineno": "Tone/source/BufferSource.js#L77"
-		},
-		{
-			"description": "The fadeOut time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeOut",
-			"lineno": "Tone/source/BufferSource.js#L83"
-		},
-		{
-			"description": "Returns the playback state of the source, either \"started\" or \"stopped\".",
-			"type": [
-				"Tone.State"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "state",
-			"lineno": "Tone/source/BufferSource.js#L123"
-		},
-		{
-			"description": "If loop is true, the loop will start at this position.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "loopStart",
-			"lineno": "Tone/source/BufferSource.js#L278"
-		},
-		{
-			"description": "If loop is true, the loop will end at this position.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "loopEnd",
-			"lineno": "Tone/source/BufferSource.js#L293"
-		},
-		{
-			"description": "The audio buffer belonging to the player.",
-			"type": [
-				"Tone.Buffer"
-			],
-			"scope": "instance",
-			"name": "buffer",
-			"lineno": "Tone/source/BufferSource.js#L308"
-		},
-		{
-			"description": "If the buffer should loop once it's over.",
-			"type": [
-				"Boolean"
-			],
-			"scope": "instance",
-			"name": "loop",
-			"lineno": "Tone/source/BufferSource.js#L323"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -6623,6 +6527,111 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
+	"BufferSource": [
+		{
+			"description": "The callback to invoke after the\n buffer source is done playing.",
+			"type": [
+				"function"
+			],
+			"scope": "instance",
+			"name": "onended",
+			"lineno": "Tone/source/BufferSource.js#L28"
+		},
+		{
+			"description": "The playbackRate of the buffer",
+			"type": [
+				"Positive"
+			],
+			"scope": "instance",
+			"name": "playbackRate",
+			"lineno": "Tone/source/BufferSource.js#L71",
+			"signal": true
+		},
+		{
+			"description": "The fadeIn time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeIn",
+			"lineno": "Tone/source/BufferSource.js#L77"
+		},
+		{
+			"description": "The fadeOut time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeOut",
+			"lineno": "Tone/source/BufferSource.js#L83"
+		},
+		{
+			"description": "The curve applied to the fades, either \"linear\" or \"exponential\"",
+			"type": [
+				"String"
+			],
+			"scope": "instance",
+			"name": "curve",
+			"lineno": "Tone/source/BufferSource.js#L89"
+		},
+		{
+			"description": "Returns the playback state of the source, either \"started\" or \"stopped\".",
+			"type": [
+				"Tone.State"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "state",
+			"lineno": "Tone/source/BufferSource.js#L131"
+		},
+		{
+			"description": "If loop is true, the loop will start at this position.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "loopStart",
+			"lineno": "Tone/source/BufferSource.js#L292"
+		},
+		{
+			"description": "If loop is true, the loop will end at this position.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "loopEnd",
+			"lineno": "Tone/source/BufferSource.js#L307"
+		},
+		{
+			"description": "The audio buffer belonging to the player.",
+			"type": [
+				"Tone.Buffer"
+			],
+			"scope": "instance",
+			"name": "buffer",
+			"lineno": "Tone/source/BufferSource.js#L322"
+		},
+		{
+			"description": "If the buffer should loop once it's over.",
+			"type": [
+				"Boolean"
+			],
+			"scope": "instance",
+			"name": "loop",
+			"lineno": "Tone/source/BufferSource.js#L337"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
 	"AmplitudeEnvelope": [
 		{
 			"description": "When triggerAttack is called, the attack time is the amount of\n time it takes for the envelope to reach it's maximum value.",
@@ -6893,7 +6902,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L370",
+			"lineno": "Tone/core/Param.js#L401",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -6947,7 +6956,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L370",
+			"lineno": "Tone/core/Param.js#L401",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -7001,7 +7010,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L370",
+			"lineno": "Tone/core/Param.js#L401",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -7055,7 +7064,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L370",
+			"lineno": "Tone/core/Param.js#L401",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -7109,7 +7118,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L370",
+			"lineno": "Tone/core/Param.js#L401",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -7163,7 +7172,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L370",
+			"lineno": "Tone/core/Param.js#L401",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -7217,7 +7226,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L370",
+			"lineno": "Tone/core/Param.js#L401",
 			"inherits": "Tone.Param"
 		},
 		{

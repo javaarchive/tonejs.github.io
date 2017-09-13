@@ -530,10 +530,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"BufferSource": [
-		"AudioNode",
-		"Tone"
-	],
 	"FMOscillator": [
 		"Source",
 		"AudioNode",
@@ -591,6 +587,10 @@
 		"Tone"
 	],
 	"UserMedia": [
+		"AudioNode",
+		"Tone"
+	],
+	"BufferSource": [
 		"AudioNode",
 		"Tone"
 	],

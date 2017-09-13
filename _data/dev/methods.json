@@ -6445,6 +6445,67 @@
 			"lineno": "Tone/core/Param.js#L259"
 		},
 		{
+			"description": "Convert between Time and time constant. The time\nconstant returned can be used in setTargetAtTime.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to convert",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The time constant to get an exponentially approaching\n                          curve to over 99% of towards the target value."
+			},
+			"scope": "instance",
+			"name": "getTimeConstant",
+			"lineno": "Tone/core/Param.js#L273"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time. Since it\n is an exponential approach it will continue approaching after the ramp duration. The\n rampTime is the time that it takes to reach over 99% of the way towards the value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "targetRampTo",
+			"lineno": "Tone/core/Param.js#L290"
+		},
+		{
 			"description": "Start exponentially approaching the target value at the given time with\n a rate having the given time constant.",
 			"params": [
 				{
@@ -6474,7 +6535,7 @@
 			},
 			"scope": "instance",
 			"name": "setTargetAtTime",
-			"lineno": "Tone/core/Param.js#L274"
+			"lineno": "Tone/core/Param.js#L305"
 		},
 		{
 			"description": "Sets an array of arbitrary parameter values starting at the given time\n for the given duration.",
@@ -6506,7 +6567,7 @@
 			},
 			"scope": "instance",
 			"name": "setValueCurveAtTime",
-			"lineno": "Tone/core/Param.js#L294"
+			"lineno": "Tone/core/Param.js#L325"
 		},
 		{
 			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to startTime.",
@@ -6526,7 +6587,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelScheduledValues",
-			"lineno": "Tone/core/Param.js#L312"
+			"lineno": "Tone/core/Param.js#L343"
 		},
 		{
 			"description": "This is similar to [cancelScheduledValues](#cancelScheduledValues) except\n it holds the automated value at cancelTime until the next automated event.",
@@ -6546,7 +6607,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelAndHoldAtTime",
-			"lineno": "Tone/core/Param.js#L323"
+			"lineno": "Tone/core/Param.js#L354"
 		},
 		{
 			"description": "Ramps to the given value over the duration of the rampTime.\n Automatically selects the best ramp type (exponential or linear)\n depending on the `units` of the signal",
@@ -6586,7 +6647,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L360"
+			"lineno": "Tone/core/Param.js#L391"
 		},
 		{
 			"description": "Clean up",
@@ -6598,7 +6659,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/Param.js#L388"
+			"lineno": "Tone/core/Param.js#L419"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
@@ -13982,6 +14043,69 @@
 			"inherits": "Tone.Param"
 		},
 		{
+			"description": "Convert between Time and time constant. The time\nconstant returned can be used in setTargetAtTime.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to convert",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The time constant to get an exponentially approaching\n                          curve to over 99% of towards the target value."
+			},
+			"scope": "instance",
+			"name": "getTimeConstant",
+			"lineno": "Tone/core/Param.js#L273",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time. Since it\n is an exponential approach it will continue approaching after the ramp duration. The\n rampTime is the time that it takes to reach over 99% of the way towards the value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "targetRampTo",
+			"lineno": "Tone/core/Param.js#L290",
+			"inherits": "Tone.Param"
+		},
+		{
 			"description": "Start exponentially approaching the target value at the given time with\n a rate having the given time constant.",
 			"params": [
 				{
@@ -14011,7 +14135,7 @@
 			},
 			"scope": "instance",
 			"name": "setTargetAtTime",
-			"lineno": "Tone/core/Param.js#L274",
+			"lineno": "Tone/core/Param.js#L305",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -14044,7 +14168,7 @@
 			},
 			"scope": "instance",
 			"name": "setValueCurveAtTime",
-			"lineno": "Tone/core/Param.js#L294",
+			"lineno": "Tone/core/Param.js#L325",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -14065,7 +14189,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelScheduledValues",
-			"lineno": "Tone/core/Param.js#L312",
+			"lineno": "Tone/core/Param.js#L343",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -14086,7 +14210,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelAndHoldAtTime",
-			"lineno": "Tone/core/Param.js#L323",
+			"lineno": "Tone/core/Param.js#L354",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -14127,7 +14251,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L360",
+			"lineno": "Tone/core/Param.js#L391",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -14733,6 +14857,69 @@
 			"inherits": "Tone.Param"
 		},
 		{
+			"description": "Convert between Time and time constant. The time\nconstant returned can be used in setTargetAtTime.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to convert",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The time constant to get an exponentially approaching\n                          curve to over 99% of towards the target value."
+			},
+			"scope": "instance",
+			"name": "getTimeConstant",
+			"lineno": "Tone/core/Param.js#L273",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time. Since it\n is an exponential approach it will continue approaching after the ramp duration. The\n rampTime is the time that it takes to reach over 99% of the way towards the value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "targetRampTo",
+			"lineno": "Tone/core/Param.js#L290",
+			"inherits": "Tone.Param"
+		},
+		{
 			"description": "Start exponentially approaching the target value at the given time with\n a rate having the given time constant.",
 			"params": [
 				{
@@ -14762,7 +14949,7 @@
 			},
 			"scope": "instance",
 			"name": "setTargetAtTime",
-			"lineno": "Tone/core/Param.js#L274",
+			"lineno": "Tone/core/Param.js#L305",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -14795,7 +14982,7 @@
 			},
 			"scope": "instance",
 			"name": "setValueCurveAtTime",
-			"lineno": "Tone/core/Param.js#L294",
+			"lineno": "Tone/core/Param.js#L325",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -14816,7 +15003,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelScheduledValues",
-			"lineno": "Tone/core/Param.js#L312",
+			"lineno": "Tone/core/Param.js#L343",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -14837,7 +15024,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelAndHoldAtTime",
-			"lineno": "Tone/core/Param.js#L323",
+			"lineno": "Tone/core/Param.js#L354",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -14878,7 +15065,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L360",
+			"lineno": "Tone/core/Param.js#L391",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -15279,6 +15466,69 @@
 			"inherits": "Tone.Param"
 		},
 		{
+			"description": "Convert between Time and time constant. The time\nconstant returned can be used in setTargetAtTime.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to convert",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The time constant to get an exponentially approaching\n                          curve to over 99% of towards the target value."
+			},
+			"scope": "instance",
+			"name": "getTimeConstant",
+			"lineno": "Tone/core/Param.js#L273",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time. Since it\n is an exponential approach it will continue approaching after the ramp duration. The\n rampTime is the time that it takes to reach over 99% of the way towards the value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "targetRampTo",
+			"lineno": "Tone/core/Param.js#L290",
+			"inherits": "Tone.Param"
+		},
+		{
 			"description": "Start exponentially approaching the target value at the given time with\n a rate having the given time constant.",
 			"params": [
 				{
@@ -15308,7 +15558,7 @@
 			},
 			"scope": "instance",
 			"name": "setTargetAtTime",
-			"lineno": "Tone/core/Param.js#L274",
+			"lineno": "Tone/core/Param.js#L305",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -15341,7 +15591,7 @@
 			},
 			"scope": "instance",
 			"name": "setValueCurveAtTime",
-			"lineno": "Tone/core/Param.js#L294",
+			"lineno": "Tone/core/Param.js#L325",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -15362,7 +15612,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelScheduledValues",
-			"lineno": "Tone/core/Param.js#L312",
+			"lineno": "Tone/core/Param.js#L343",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -15383,7 +15633,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelAndHoldAtTime",
-			"lineno": "Tone/core/Param.js#L323",
+			"lineno": "Tone/core/Param.js#L354",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -15424,7 +15674,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L360",
+			"lineno": "Tone/core/Param.js#L391",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -15993,6 +16243,69 @@
 			"inherits": "Tone.Param"
 		},
 		{
+			"description": "Convert between Time and time constant. The time\nconstant returned can be used in setTargetAtTime.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to convert",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The time constant to get an exponentially approaching\n                          curve to over 99% of towards the target value."
+			},
+			"scope": "instance",
+			"name": "getTimeConstant",
+			"lineno": "Tone/core/Param.js#L273",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time. Since it\n is an exponential approach it will continue approaching after the ramp duration. The\n rampTime is the time that it takes to reach over 99% of the way towards the value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "targetRampTo",
+			"lineno": "Tone/core/Param.js#L290",
+			"inherits": "Tone.Param"
+		},
+		{
 			"description": "Start exponentially approaching the target value at the given time with\n a rate having the given time constant.",
 			"params": [
 				{
@@ -16022,7 +16335,7 @@
 			},
 			"scope": "instance",
 			"name": "setTargetAtTime",
-			"lineno": "Tone/core/Param.js#L274",
+			"lineno": "Tone/core/Param.js#L305",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -16055,7 +16368,7 @@
 			},
 			"scope": "instance",
 			"name": "setValueCurveAtTime",
-			"lineno": "Tone/core/Param.js#L294",
+			"lineno": "Tone/core/Param.js#L325",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -16076,7 +16389,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelScheduledValues",
-			"lineno": "Tone/core/Param.js#L312",
+			"lineno": "Tone/core/Param.js#L343",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -16097,7 +16410,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelAndHoldAtTime",
-			"lineno": "Tone/core/Param.js#L323",
+			"lineno": "Tone/core/Param.js#L354",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -16138,7 +16451,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L360",
+			"lineno": "Tone/core/Param.js#L391",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -16511,6 +16824,69 @@
 			"inherits": "Tone.Param"
 		},
 		{
+			"description": "Convert between Time and time constant. The time\nconstant returned can be used in setTargetAtTime.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to convert",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The time constant to get an exponentially approaching\n                          curve to over 99% of towards the target value."
+			},
+			"scope": "instance",
+			"name": "getTimeConstant",
+			"lineno": "Tone/core/Param.js#L273",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time. Since it\n is an exponential approach it will continue approaching after the ramp duration. The\n rampTime is the time that it takes to reach over 99% of the way towards the value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "targetRampTo",
+			"lineno": "Tone/core/Param.js#L290",
+			"inherits": "Tone.Param"
+		},
+		{
 			"description": "Start exponentially approaching the target value at the given time with\n a rate having the given time constant.",
 			"params": [
 				{
@@ -16540,7 +16916,7 @@
 			},
 			"scope": "instance",
 			"name": "setTargetAtTime",
-			"lineno": "Tone/core/Param.js#L274",
+			"lineno": "Tone/core/Param.js#L305",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -16573,7 +16949,7 @@
 			},
 			"scope": "instance",
 			"name": "setValueCurveAtTime",
-			"lineno": "Tone/core/Param.js#L294",
+			"lineno": "Tone/core/Param.js#L325",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -16594,7 +16970,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelScheduledValues",
-			"lineno": "Tone/core/Param.js#L312",
+			"lineno": "Tone/core/Param.js#L343",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -16615,7 +16991,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelAndHoldAtTime",
-			"lineno": "Tone/core/Param.js#L323",
+			"lineno": "Tone/core/Param.js#L354",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -16656,7 +17032,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L360",
+			"lineno": "Tone/core/Param.js#L391",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -17223,6 +17599,69 @@
 			"inherits": "Tone.Param"
 		},
 		{
+			"description": "Convert between Time and time constant. The time\nconstant returned can be used in setTargetAtTime.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to convert",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The time constant to get an exponentially approaching\n                          curve to over 99% of towards the target value."
+			},
+			"scope": "instance",
+			"name": "getTimeConstant",
+			"lineno": "Tone/core/Param.js#L273",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time. Since it\n is an exponential approach it will continue approaching after the ramp duration. The\n rampTime is the time that it takes to reach over 99% of the way towards the value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "targetRampTo",
+			"lineno": "Tone/core/Param.js#L290",
+			"inherits": "Tone.Param"
+		},
+		{
 			"description": "Ramps to the given value over the duration of the rampTime.\n Automatically selects the best ramp type (exponential or linear)\n depending on the `units` of the signal",
 			"params": [
 				{
@@ -17260,7 +17699,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L360",
+			"lineno": "Tone/core/Param.js#L391",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -17753,6 +18192,69 @@
 			"inherits": "Tone.Param"
 		},
 		{
+			"description": "Convert between Time and time constant. The time\nconstant returned can be used in setTargetAtTime.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to convert",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The time constant to get an exponentially approaching\n                          curve to over 99% of towards the target value."
+			},
+			"scope": "instance",
+			"name": "getTimeConstant",
+			"lineno": "Tone/core/Param.js#L273",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time. Since it\n is an exponential approach it will continue approaching after the ramp duration. The\n rampTime is the time that it takes to reach over 99% of the way towards the value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "targetRampTo",
+			"lineno": "Tone/core/Param.js#L290",
+			"inherits": "Tone.Param"
+		},
+		{
 			"description": "Ramps to the given value over the duration of the rampTime.\n Automatically selects the best ramp type (exponential or linear)\n depending on the `units` of the signal",
 			"params": [
 				{
@@ -17790,7 +18292,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L360",
+			"lineno": "Tone/core/Param.js#L391",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -18455,6 +18957,69 @@
 			"inherits": "Tone.Param"
 		},
 		{
+			"description": "Convert between Time and time constant. The time\nconstant returned can be used in setTargetAtTime.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to convert",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The time constant to get an exponentially approaching\n                          curve to over 99% of towards the target value."
+			},
+			"scope": "instance",
+			"name": "getTimeConstant",
+			"lineno": "Tone/core/Param.js#L273",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time. Since it\n is an exponential approach it will continue approaching after the ramp duration. The\n rampTime is the time that it takes to reach over 99% of the way towards the value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "targetRampTo",
+			"lineno": "Tone/core/Param.js#L290",
+			"inherits": "Tone.Param"
+		},
+		{
 			"description": "Ramps to the given value over the duration of the rampTime.\n Automatically selects the best ramp type (exponential or linear)\n depending on the `units` of the signal",
 			"params": [
 				{
@@ -18492,7 +19057,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L360",
+			"lineno": "Tone/core/Param.js#L391",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -18660,187 +19225,6 @@
 			"name": "unsync",
 			"lineno": "Tone/source/Source.js#L246",
 			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L110",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"BufferSource": [
-		{
-			"description": "Start the buffer",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the player should start.",
-					"name": "startTime"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "The offset from the beginning of the sample\n                                to start at.",
-					"name": "offset"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"description": "How long the sample should play. If no duration\n                               is given, it will default to the full length\n                               of the sample (minus any offset)",
-					"name": "duration"
-				},
-				{
-					"type": [
-						"Gain"
-					],
-					"optional": true,
-					"defaultvalue": 1,
-					"description": "The gain to play the buffer back at.",
-					"name": "gain"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"description": "The optional fadeIn ramp time.",
-					"name": "fadeInTime"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.BufferSource"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "start",
-			"lineno": "Tone/source/BufferSource.js#L153"
-		},
-		{
-			"description": "Stop the buffer. Optionally add a ramp time to fade the\n buffer out.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"description": "The time the buffer should stop.",
-					"name": "time"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"description": "How long the gain should fade out for",
-					"name": "fadeOutTime"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.BufferSource"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "stop",
-			"lineno": "Tone/source/BufferSource.js#L230"
-		},
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.BufferSource"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/source/BufferSource.js#L342"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
@@ -21387,6 +21771,187 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/source/UserMedia.js#L255"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L110",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"BufferSource": [
+		{
+			"description": "Start the buffer",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the player should start.",
+					"name": "startTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "The offset from the beginning of the sample\n                                to start at.",
+					"name": "offset"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"description": "How long the sample should play. If no duration\n                               is given, it will default to the full length\n                               of the sample (minus any offset)",
+					"name": "duration"
+				},
+				{
+					"type": [
+						"Gain"
+					],
+					"optional": true,
+					"defaultvalue": 1,
+					"description": "The gain to play the buffer back at.",
+					"name": "gain"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"description": "The optional fadeIn ramp time.",
+					"name": "fadeInTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.BufferSource"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "start",
+			"lineno": "Tone/source/BufferSource.js#L161"
+		},
+		{
+			"description": "Stop the buffer. Optionally add a ramp time to fade the\n buffer out.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"description": "The time the buffer should stop.",
+					"name": "time"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"description": "How long the gain should fade out for",
+					"name": "fadeOutTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.BufferSource"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "stop",
+			"lineno": "Tone/source/BufferSource.js#L235"
+		},
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.BufferSource"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/source/BufferSource.js#L356"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
