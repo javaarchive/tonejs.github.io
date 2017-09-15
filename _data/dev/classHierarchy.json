@@ -405,13 +405,13 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Sampler": [
+	"Synth": [
+		"Monophonic",
 		"Instrument",
 		"AudioNode",
 		"Tone"
 	],
-	"Synth": [
-		"Monophonic",
+	"Sampler": [
 		"Instrument",
 		"AudioNode",
 		"Tone"

@@ -104,8 +104,8 @@
 		"NoiseSynth",
 		"PluckSynth",
 		"PolySynth",
-		"Sampler",
-		"Synth"
+		"Synth",
+		"Sampler"
 	],
 	"signal": [
 		"Abs",

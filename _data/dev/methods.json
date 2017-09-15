@@ -13255,242 +13255,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"Sampler": [
-		{
-			"params": [
-				{
-					"type": [
-						"Frequency"
-					],
-					"description": "The note to play",
-					"name": "note"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"description": "When to play the note",
-					"name": "time"
-				},
-				{
-					"type": [
-						"NormalRange"
-					],
-					"optional": true,
-					"description": "The velocity to play the sample back.",
-					"name": "velocity"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Sampler"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerAttack",
-			"lineno": "Tone/instrument/Sampler.js#L112"
-		},
-		{
-			"params": [
-				{
-					"type": [
-						"Frequency"
-					],
-					"description": "The note to release.",
-					"name": "note"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"description": "When to release the note.",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Sampler"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerRelease",
-			"lineno": "Tone/instrument/Sampler.js#L144"
-		},
-		{
-			"description": "Invoke the attack phase, then after the duration, invoke the release.",
-			"params": [
-				{
-					"type": [
-						"Frequency"
-					],
-					"description": "The note to play",
-					"name": "note"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The time the note should be held",
-					"name": "duration"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"description": "When to start the attack",
-					"name": "time"
-				},
-				{
-					"type": [
-						"NormalRange"
-					],
-					"optional": true,
-					"defaultvalue": 1,
-					"description": "The velocity of the attack",
-					"name": "velocity"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Sampler"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Sampler.js#L162"
-		},
-		{
-			"description": "Add a note to the sampler.",
-			"params": [
-				{
-					"type": [
-						"Note",
-						"Midi"
-					],
-					"description": "The buffer's pitch.",
-					"name": "note"
-				},
-				{
-					"type": [
-						"String",
-						"Tone.Buffer",
-						"Audiobuffer"
-					],
-					"description": "Either the url of the bufer,\n                                                or a buffer which will be added\n                                                with the given name.",
-					"name": "url"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"optional": true,
-					"description": "The callback to invoke\n                                when the url is loaded.",
-					"name": "callback"
-				}
-			],
-			"scope": "instance",
-			"name": "add",
-			"lineno": "Tone/instrument/Sampler.js#L179"
-		},
-		{
-			"description": "Clean up",
-			"returns": {
-				"type": [
-					"Tone.Sampler"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/instrument/Sampler.js#L209"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L110",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"Synth": [
 		{
 			"description": "clean up",
@@ -13659,6 +13423,242 @@
 			"name": "triggerAttackRelease",
 			"lineno": "Tone/instrument/Instrument.js#L72",
 			"inherits": "Tone.Instrument"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L110",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Sampler": [
+		{
+			"params": [
+				{
+					"type": [
+						"Frequency"
+					],
+					"description": "The note to play",
+					"name": "note"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"description": "When to play the note",
+					"name": "time"
+				},
+				{
+					"type": [
+						"NormalRange"
+					],
+					"optional": true,
+					"description": "The velocity to play the sample back.",
+					"name": "velocity"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Sampler"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerAttack",
+			"lineno": "Tone/instrument/Sampler.js#L112"
+		},
+		{
+			"params": [
+				{
+					"type": [
+						"Frequency"
+					],
+					"description": "The note to release.",
+					"name": "note"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"description": "When to release the note.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Sampler"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerRelease",
+			"lineno": "Tone/instrument/Sampler.js#L145"
+		},
+		{
+			"description": "Invoke the attack phase, then after the duration, invoke the release.",
+			"params": [
+				{
+					"type": [
+						"Frequency"
+					],
+					"description": "The note to play",
+					"name": "note"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time the note should be held",
+					"name": "duration"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"description": "When to start the attack",
+					"name": "time"
+				},
+				{
+					"type": [
+						"NormalRange"
+					],
+					"optional": true,
+					"defaultvalue": 1,
+					"description": "The velocity of the attack",
+					"name": "velocity"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Sampler"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerAttackRelease",
+			"lineno": "Tone/instrument/Sampler.js#L163"
+		},
+		{
+			"description": "Add a note to the sampler.",
+			"params": [
+				{
+					"type": [
+						"Note",
+						"Midi"
+					],
+					"description": "The buffer's pitch.",
+					"name": "note"
+				},
+				{
+					"type": [
+						"String",
+						"Tone.Buffer",
+						"Audiobuffer"
+					],
+					"description": "Either the url of the bufer,\n                                                or a buffer which will be added\n                                                with the given name.",
+					"name": "url"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"optional": true,
+					"description": "The callback to invoke\n                                when the url is loaded.",
+					"name": "callback"
+				}
+			],
+			"scope": "instance",
+			"name": "add",
+			"lineno": "Tone/instrument/Sampler.js#L180"
+		},
+		{
+			"description": "Clean up",
+			"returns": {
+				"type": [
+					"Tone.Sampler"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/instrument/Sampler.js#L210"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",

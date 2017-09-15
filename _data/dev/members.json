@@ -4569,61 +4569,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"Sampler": [
-		{
-			"description": "The envelope applied to the beginning of the sample.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "attack",
-			"lineno": "Tone/instrument/Sampler.js#L62"
-		},
-		{
-			"description": "The envelope applied to the end of the envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "release",
-			"lineno": "Tone/instrument/Sampler.js#L68"
-		},
-		{
-			"description": "If the buffers are loaded or not",
-			"type": [
-				"Boolean"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "loaded",
-			"lineno": "Tone/instrument/Sampler.js#L192"
-		},
-		{
-			"description": "The volume of the output in decibels.",
-			"type": [
-				"Decibels"
-			],
-			"examples": [
-				"source.volume.value = -6;"
-			],
-			"scope": "instance",
-			"name": "volume",
-			"lineno": "Tone/instrument/Instrument.js#L31",
-			"inherits": "Tone.Instrument",
-			"signal": true
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"Synth": [
 		{
 			"description": "The oscillator.",
@@ -4672,6 +4617,61 @@
 			"name": "portamento",
 			"lineno": "Tone/instrument/Monophonic.js#L24",
 			"inherits": "Tone.Monophonic"
+		},
+		{
+			"description": "The volume of the output in decibels.",
+			"type": [
+				"Decibels"
+			],
+			"examples": [
+				"source.volume.value = -6;"
+			],
+			"scope": "instance",
+			"name": "volume",
+			"lineno": "Tone/instrument/Instrument.js#L31",
+			"inherits": "Tone.Instrument",
+			"signal": true
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Sampler": [
+		{
+			"description": "The envelope applied to the beginning of the sample.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "attack",
+			"lineno": "Tone/instrument/Sampler.js#L62"
+		},
+		{
+			"description": "The envelope applied to the end of the envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "release",
+			"lineno": "Tone/instrument/Sampler.js#L68"
+		},
+		{
+			"description": "If the buffers are loaded or not",
+			"type": [
+				"Boolean"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "loaded",
+			"lineno": "Tone/instrument/Sampler.js#L193"
 		},
 		{
 			"description": "The volume of the output in decibels.",
