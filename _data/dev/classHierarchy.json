@@ -558,11 +558,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Oscillator": [
-		"Source",
-		"AudioNode",
-		"Tone"
-	],
 	"PWMOscillator": [
 		"Source",
 		"AudioNode",
@@ -591,6 +586,11 @@
 		"Tone"
 	],
 	"BufferSource": [
+		"AudioNode",
+		"Tone"
+	],
+	"Oscillator": [
+		"Source",
 		"AudioNode",
 		"Tone"
 	],

@@ -2021,7 +2021,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L401"
+			"lineno": "Tone/core/Param.js#L407"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -2065,7 +2065,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "context",
-			"lineno": "Tone/core/Tone.js#L573"
+			"lineno": "Tone/core/Tone.js#L583"
 		}
 	],
 	"Transport": [
@@ -4868,7 +4868,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L401",
+			"lineno": "Tone/core/Param.js#L407",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -5793,134 +5793,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"Oscillator": [
-		{
-			"description": "The frequency control.",
-			"type": [
-				"Frequency"
-			],
-			"scope": "instance",
-			"name": "frequency",
-			"lineno": "Tone/source/Oscillator.js#L51",
-			"signal": true
-		},
-		{
-			"description": "The detune control signal.",
-			"type": [
-				"Cents"
-			],
-			"scope": "instance",
-			"name": "detune",
-			"lineno": "Tone/source/Oscillator.js#L58",
-			"signal": true
-		},
-		{
-			"description": "The type of the oscillator: either sine, square, triangle, or sawtooth. Also capable of\nsetting the first x number of partials of the oscillator. For example: \"sine4\" would\nset be the first 4 partials of the sine wave and \"triangle8\" would set the first\n8 partials of the triangle wave.\n<br><br> \nUses PeriodicWave internally even for native types so that it can set the phase. \nPeriodicWave equations are from the \n[Webkit Web Audio implementation](https://code.google.com/p/chromium/codesearch#chromium/src/third_party/WebKit/Source/modules/webaudio/PeriodicWave.cpp&sq=package:chromium).",
-			"type": [
-				"string"
-			],
-			"examples": [
-				"//set it to a square wave\nosc.type = \"square\";",
-				"//set the first 6 partials of a sawtooth wave\nosc.type = \"sawtooth6\";"
-			],
-			"scope": "instance",
-			"name": "type",
-			"lineno": "Tone/source/Oscillator.js#L179"
-		},
-		{
-			"description": "The partials of the waveform. A partial represents \nthe amplitude at a harmonic. The first harmonic is the \nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series. \nSetting this value will automatically set the type to \"custom\". \nThe value is an empty array when the type is not \"custom\".",
-			"type": [
-				"Array"
-			],
-			"examples": [
-				"osc.partials = [1, 0.2, 0.01];"
-			],
-			"scope": "instance",
-			"name": "partials",
-			"lineno": "Tone/source/Oscillator.js#L313"
-		},
-		{
-			"description": "The phase of the oscillator in degrees.",
-			"type": [
-				"Degrees"
-			],
-			"examples": [
-				"osc.phase = 180; //flips the phase of the oscillator"
-			],
-			"scope": "instance",
-			"name": "phase",
-			"lineno": "Tone/source/Oscillator.js#L340"
-		},
-		{
-			"description": "Mute the output.",
-			"type": [
-				"boolean"
-			],
-			"examples": [
-				"//mute the output\nsource.mute = true;"
-			],
-			"scope": "instance",
-			"name": "mute",
-			"lineno": "Tone/source/Players.js#L104",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeIn time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeIn",
-			"lineno": "Tone/source/Players.js#L122",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeOut time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeOut",
-			"lineno": "Tone/source/Players.js#L140",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The volume of the output in decibels.",
-			"type": [
-				"Decibels"
-			],
-			"examples": [
-				"source.volume.value = -6;"
-			],
-			"scope": "instance",
-			"name": "volume",
-			"lineno": "Tone/source/Source.js#L48",
-			"inherits": "Tone.Source",
-			"signal": true
-		},
-		{
-			"description": "Returns the playback state of the source, either \"started\" or \"stopped\".",
-			"type": [
-				"Tone.State"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "state",
-			"lineno": "Tone/source/Source.js#L93",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"PWMOscillator": [
 		{
 			"description": "The frequency control.",
@@ -6591,7 +6463,7 @@
 			],
 			"scope": "instance",
 			"name": "loopStart",
-			"lineno": "Tone/source/BufferSource.js#L292"
+			"lineno": "Tone/source/BufferSource.js#L293"
 		},
 		{
 			"description": "If loop is true, the loop will end at this position.",
@@ -6600,7 +6472,7 @@
 			],
 			"scope": "instance",
 			"name": "loopEnd",
-			"lineno": "Tone/source/BufferSource.js#L307"
+			"lineno": "Tone/source/BufferSource.js#L308"
 		},
 		{
 			"description": "The audio buffer belonging to the player.",
@@ -6609,7 +6481,7 @@
 			],
 			"scope": "instance",
 			"name": "buffer",
-			"lineno": "Tone/source/BufferSource.js#L322"
+			"lineno": "Tone/source/BufferSource.js#L323"
 		},
 		{
 			"description": "If the buffer should loop once it's over.",
@@ -6618,7 +6490,135 @@
 			],
 			"scope": "instance",
 			"name": "loop",
-			"lineno": "Tone/source/BufferSource.js#L337"
+			"lineno": "Tone/source/BufferSource.js#L338"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Oscillator": [
+		{
+			"description": "The frequency control.",
+			"type": [
+				"Frequency"
+			],
+			"scope": "instance",
+			"name": "frequency",
+			"lineno": "Tone/source/Oscillator.js#L51",
+			"signal": true
+		},
+		{
+			"description": "The detune control signal.",
+			"type": [
+				"Cents"
+			],
+			"scope": "instance",
+			"name": "detune",
+			"lineno": "Tone/source/Oscillator.js#L58",
+			"signal": true
+		},
+		{
+			"description": "The type of the oscillator: either sine, square, triangle, or sawtooth. Also capable of\nsetting the first x number of partials of the oscillator. For example: \"sine4\" would\nset be the first 4 partials of the sine wave and \"triangle8\" would set the first\n8 partials of the triangle wave.\n<br><br>\nUses PeriodicWave internally even for native types so that it can set the phase.\nPeriodicWave equations are from the\n[Webkit Web Audio implementation](https://code.google.com/p/chromium/codesearch#chromium/src/third_party/WebKit/Source/modules/webaudio/PeriodicWave.cpp&sq=package:chromium).",
+			"type": [
+				"string"
+			],
+			"examples": [
+				"//set it to a square wave\nosc.type = \"square\";",
+				"//set the first 6 partials of a sawtooth wave\nosc.type = \"sawtooth6\";"
+			],
+			"scope": "instance",
+			"name": "type",
+			"lineno": "Tone/source/Oscillator.js#L183"
+		},
+		{
+			"description": "The partials of the waveform. A partial represents\nthe amplitude at a harmonic. The first harmonic is the\nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series.\nSetting this value will automatically set the type to \"custom\".\nThe value is an empty array when the type is not \"custom\".",
+			"type": [
+				"Array"
+			],
+			"examples": [
+				"osc.partials = [1, 0.2, 0.01];"
+			],
+			"scope": "instance",
+			"name": "partials",
+			"lineno": "Tone/source/Oscillator.js#L317"
+		},
+		{
+			"description": "The phase of the oscillator in degrees.",
+			"type": [
+				"Degrees"
+			],
+			"examples": [
+				"osc.phase = 180; //flips the phase of the oscillator"
+			],
+			"scope": "instance",
+			"name": "phase",
+			"lineno": "Tone/source/Oscillator.js#L344"
+		},
+		{
+			"description": "Mute the output.",
+			"type": [
+				"boolean"
+			],
+			"examples": [
+				"//mute the output\nsource.mute = true;"
+			],
+			"scope": "instance",
+			"name": "mute",
+			"lineno": "Tone/source/Players.js#L104",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeIn time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeIn",
+			"lineno": "Tone/source/Players.js#L122",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeOut time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeOut",
+			"lineno": "Tone/source/Players.js#L140",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The volume of the output in decibels.",
+			"type": [
+				"Decibels"
+			],
+			"examples": [
+				"source.volume.value = -6;"
+			],
+			"scope": "instance",
+			"name": "volume",
+			"lineno": "Tone/source/Source.js#L48",
+			"inherits": "Tone.Source",
+			"signal": true
+		},
+		{
+			"description": "Returns the playback state of the source, either \"started\" or \"stopped\".",
+			"type": [
+				"Tone.State"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "state",
+			"lineno": "Tone/source/Source.js#L93",
+			"inherits": "Tone.Source"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -6902,7 +6902,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L401",
+			"lineno": "Tone/core/Param.js#L407",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -6956,7 +6956,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L401",
+			"lineno": "Tone/core/Param.js#L407",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -7010,7 +7010,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L401",
+			"lineno": "Tone/core/Param.js#L407",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -7064,7 +7064,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L401",
+			"lineno": "Tone/core/Param.js#L407",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -7118,7 +7118,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L401",
+			"lineno": "Tone/core/Param.js#L407",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -7172,7 +7172,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L401",
+			"lineno": "Tone/core/Param.js#L407",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -7226,7 +7226,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L401",
+			"lineno": "Tone/core/Param.js#L407",
 			"inherits": "Tone.Param"
 		},
 		{

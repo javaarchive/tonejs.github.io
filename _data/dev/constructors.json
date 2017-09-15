@@ -2370,31 +2370,6 @@
 		],
 		"extends": "Tone.Source"
 	},
-	"Oscillator": {
-		"description": "Tone.Oscillator supports a number of features including\n        phase rotation, multiple oscillator types (see Tone.Oscillator.type), \n        and Transport syncing (see Tone.Oscillator.syncFrequency).",
-		"params": [
-			{
-				"type": [
-					"Frequency"
-				],
-				"optional": true,
-				"description": "Starting frequency",
-				"name": "frequency"
-			},
-			{
-				"type": [
-					"string"
-				],
-				"optional": true,
-				"description": "The oscillator type. Read more about type below.",
-				"name": "type"
-			}
-		],
-		"examples": [
-			"//make and start a 440hz sine tone\nvar osc = new Tone.Oscillator(440, \"sine\").toMaster().start();"
-		],
-		"extends": "Tone.Source"
-	},
 	"PWMOscillator": {
 		"description": "Tone.PWMOscillator modulates the width of a Tone.PulseOscillator \n        at the modulationFrequency. This has the effect of continuously\n        changing the timbre of the oscillator by altering the harmonics \n        generated.",
 		"params": [
@@ -2533,6 +2508,31 @@
 			}
 		],
 		"extends": "Tone.AudioNode"
+	},
+	"Oscillator": {
+		"description": "Tone.Oscillator supports a number of features including\n        phase rotation, multiple oscillator types (see Tone.Oscillator.type),\n        and Transport syncing (see Tone.Oscillator.syncFrequency).",
+		"params": [
+			{
+				"type": [
+					"Frequency"
+				],
+				"optional": true,
+				"description": "Starting frequency",
+				"name": "frequency"
+			},
+			{
+				"type": [
+					"string"
+				],
+				"optional": true,
+				"description": "The oscillator type. Read more about type below.",
+				"name": "type"
+			}
+		],
+		"examples": [
+			"//make and start a 440hz sine tone\nvar osc = new Tone.Oscillator(440, \"sine\").toMaster().start();"
+		],
+		"extends": "Tone.Source"
 	},
 	"Frequency": {
 		"description": "Tone.Frequency is a primitive type for encoding Frequency values.\n        Eventually all time values are evaluated to hertz\n        using the `eval` method.",

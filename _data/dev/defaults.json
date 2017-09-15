@@ -592,13 +592,6 @@
 		"type": "sine",
 		"phase": 0
 	},
-	"Oscillator": {
-		"type": "sine",
-		"frequency": 440,
-		"detune": 0,
-		"phase": 0,
-		"partials": "[]"
-	},
 	"PWMOscillator": {
 		"frequency": 440,
 		"detune": 0,
@@ -648,5 +641,12 @@
 		"fadeOut": 0,
 		"curve": "linear",
 		"playbackRate": 1
+	},
+	"Oscillator": {
+		"type": "sine",
+		"frequency": 440,
+		"detune": 0,
+		"phase": 0,
+		"partials": "[]"
 	}
 }
