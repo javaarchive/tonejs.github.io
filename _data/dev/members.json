@@ -4208,88 +4208,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"MetalSynth": [
-		{
-			"description": "The frequency of the cymbal",
-			"type": [
-				"Frequency"
-			],
-			"scope": "instance",
-			"name": "frequency",
-			"lineno": "Tone/instrument/MetalSynth.js#L35",
-			"signal": true
-		},
-		{
-			"description": "The envelope which is connected both to the\n amplitude and highpass filter's cutoff frequency",
-			"type": [
-				"Tone.Envelope"
-			],
-			"scope": "instance",
-			"name": "envelope",
-			"lineno": "Tone/instrument/MetalSynth.js#L89"
-		},
-		{
-			"description": "The modulationIndex of the oscillators which make up the source.\n see Tone.FMOscillator.modulationIndex",
-			"type": [
-				"Positive"
-			],
-			"scope": "instance",
-			"name": "modulationIndex",
-			"lineno": "Tone/instrument/MetalSynth.js#L179"
-		},
-		{
-			"description": "The harmonicity of the oscillators which make up the source.\n see Tone.FMOscillator.harmonicity",
-			"type": [
-				"Positive"
-			],
-			"scope": "instance",
-			"name": "harmonicity",
-			"lineno": "Tone/instrument/MetalSynth.js#L197"
-		},
-		{
-			"description": "The frequency of the highpass filter attached to the envelope",
-			"type": [
-				"Frequency"
-			],
-			"scope": "instance",
-			"name": "resonance",
-			"lineno": "Tone/instrument/MetalSynth.js#L215"
-		},
-		{
-			"description": "The number of octaves above the \"resonance\" frequency\n that the filter ramps during the attack/decay envelope",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "octaves",
-			"lineno": "Tone/instrument/MetalSynth.js#L231"
-		},
-		{
-			"description": "The volume of the output in decibels.",
-			"type": [
-				"Decibels"
-			],
-			"examples": [
-				"source.volume.value = -6;"
-			],
-			"scope": "instance",
-			"name": "volume",
-			"lineno": "Tone/instrument/Instrument.js#L31",
-			"inherits": "Tone.Instrument",
-			"signal": true
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"MonoSynth": [
 		{
 			"description": "The oscillator.",
@@ -4617,6 +4535,88 @@
 			"name": "portamento",
 			"lineno": "Tone/instrument/Monophonic.js#L24",
 			"inherits": "Tone.Monophonic"
+		},
+		{
+			"description": "The volume of the output in decibels.",
+			"type": [
+				"Decibels"
+			],
+			"examples": [
+				"source.volume.value = -6;"
+			],
+			"scope": "instance",
+			"name": "volume",
+			"lineno": "Tone/instrument/Instrument.js#L31",
+			"inherits": "Tone.Instrument",
+			"signal": true
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"MetalSynth": [
+		{
+			"description": "The frequency of the cymbal",
+			"type": [
+				"Frequency"
+			],
+			"scope": "instance",
+			"name": "frequency",
+			"lineno": "Tone/instrument/MetalSynth.js#L35",
+			"signal": true
+		},
+		{
+			"description": "The envelope which is connected both to the\n amplitude and highpass filter's cutoff frequency",
+			"type": [
+				"Tone.Envelope"
+			],
+			"scope": "instance",
+			"name": "envelope",
+			"lineno": "Tone/instrument/MetalSynth.js#L89"
+		},
+		{
+			"description": "The modulationIndex of the oscillators which make up the source.\n see Tone.FMOscillator.modulationIndex",
+			"type": [
+				"Positive"
+			],
+			"scope": "instance",
+			"name": "modulationIndex",
+			"lineno": "Tone/instrument/MetalSynth.js#L179"
+		},
+		{
+			"description": "The harmonicity of the oscillators which make up the source.\n see Tone.FMOscillator.harmonicity",
+			"type": [
+				"Positive"
+			],
+			"scope": "instance",
+			"name": "harmonicity",
+			"lineno": "Tone/instrument/MetalSynth.js#L197"
+		},
+		{
+			"description": "The frequency of the highpass filter attached to the envelope",
+			"type": [
+				"Frequency"
+			],
+			"scope": "instance",
+			"name": "resonance",
+			"lineno": "Tone/instrument/MetalSynth.js#L215"
+		},
+		{
+			"description": "The number of octaves above the \"resonance\" frequency\n that the filter ramps during the attack/decay envelope",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "octaves",
+			"lineno": "Tone/instrument/MetalSynth.js#L231"
 		},
 		{
 			"description": "The volume of the output in decibels.",

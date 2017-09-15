@@ -98,13 +98,13 @@
 		"FMSynth",
 		"Instrument",
 		"MembraneSynth",
-		"MetalSynth",
 		"MonoSynth",
 		"Monophonic",
 		"NoiseSynth",
 		"PluckSynth",
 		"PolySynth",
 		"Synth",
+		"MetalSynth",
 		"Sampler"
 	],
 	"signal": [

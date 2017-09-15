@@ -1712,20 +1712,6 @@
 		],
 		"extends": "Tone.Instrument"
 	},
-	"MetalSynth": {
-		"description": "A highly inharmonic and spectrally complex source with a highpass filter\n         and amplitude envelope which is good for making metalophone sounds. Based\n         on CymbalSynth by [@polyrhythmatic](https://github.com/polyrhythmatic).\n         Inspiration from [Sound on Sound](https://web.archive.org/web/20160610143924/https://www.soundonsound.com/sos/jul02/articles/synthsecrets0702.asp).",
-		"params": [
-			{
-				"type": [
-					"Object"
-				],
-				"optional": true,
-				"description": "The options availble for the synth\n                            see defaults below",
-				"name": "options"
-			}
-		],
-		"extends": "Tone.Instrument"
-	},
 	"MonoSynth": {
 		"description": "Tone.MonoSynth is composed of one oscillator, one filter, and two envelopes.\n         The amplitude of the Tone.Oscillator and the cutoff frequency of the \n         Tone.Filter are controlled by Tone.Envelopes. \n         <img src=\"https://docs.google.com/drawings/d/1gaY1DF9_Hzkodqf8JI1Cg2VZfwSElpFQfI94IQwad38/pub?w=924&h=240\">",
 		"params": [
@@ -1825,6 +1811,20 @@
 			"var synth = new Tone.Synth().toMaster();\nsynth.triggerAttackRelease(\"C4\", \"8n\");"
 		],
 		"extends": "Tone.Monophonic"
+	},
+	"MetalSynth": {
+		"description": "A highly inharmonic and spectrally complex source with a highpass filter\n         and amplitude envelope which is good for making metalophone sounds. Based\n         on CymbalSynth by [@polyrhythmatic](https://github.com/polyrhythmatic).\n         Inspiration from [Sound on Sound](https://web.archive.org/web/20160610143924/https://www.soundonsound.com/sos/jul02/articles/synthsecrets0702.asp).",
+		"params": [
+			{
+				"type": [
+					"Object"
+				],
+				"optional": true,
+				"description": "The options availble for the synth\n                            see defaults below",
+				"name": "options"
+			}
+		],
+		"extends": "Tone.Instrument"
 	},
 	"Sampler": {
 		"description": "Automatically interpolates between a set of pitched samples. Pass in an object which maps the note's pitch or midi value to the url, then you can trigger the attack and release of that note like other instruments. By automatically repitching the samples, it is possible to play pitches which were not explicitly included which can save loading time.\n       For sample or buffer playback where repitching is not necessary, use [Tone.Player](https://tonejs.github.io/docs/Player).",

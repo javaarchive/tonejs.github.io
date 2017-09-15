@@ -374,11 +374,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"MetalSynth": [
-		"Instrument",
-		"AudioNode",
-		"Tone"
-	],
 	"MonoSynth": [
 		"Monophonic",
 		"Instrument",
@@ -407,6 +402,11 @@
 	],
 	"Synth": [
 		"Monophonic",
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
+	"MetalSynth": [
 		"Instrument",
 		"AudioNode",
 		"Tone"
