@@ -181,6 +181,20 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
+	"FFT": {
+		"description": "Get the current waveform data of the connected audio source.",
+		"params": [
+			{
+				"type": [
+					"Number"
+				],
+				"optional": true,
+				"description": "The size of the FFT. Value must be a power of\n                      two in the range 32 to 32768.",
+				"name": "size"
+			}
+		],
+		"extends": "Tone.AudioNode"
+	},
 	"FeedbackCombFilter": {
 		"description": "Comb filters are basic building blocks for physical modeling. Read more\n        about comb filters on [CCRMA's website](https://ccrma.stanford.edu/~jos/pasp/Feedback_Comb_Filters.html).",
 		"params": [
@@ -433,13 +447,6 @@
 		"params": [
 			{
 				"type": [
-					"String"
-				],
-				"description": "Either \"level\" or \"signal\".",
-				"name": "type"
-			},
-			{
-				"type": [
 					"Number"
 				],
 				"description": "The amount of smoothing applied between frames.",
@@ -447,7 +454,7 @@
 			}
 		],
 		"examples": [
-			"var meter = new Tone.Meter();\nvar mic = new Tone.UserMedia().open();\n//connect mic to the meter\nmic.connect(meter);\n//the current level of the mic input\nvar level = meter.value;"
+			"var meter = new Tone.Meter();\nvar mic = new Tone.UserMedia().open();\n//connect mic to the meter\nmic.connect(meter);\n//the current level of the mic input in decibels\nvar level = meter.getValue();"
 		],
 		"extends": "Tone.AudioNode"
 	},
@@ -657,6 +664,20 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
+	"Waveform": {
+		"description": "Get the current waveform data of the connected audio source.",
+		"params": [
+			{
+				"type": [
+					"Number"
+				],
+				"optional": true,
+				"description": "The size of the FFT. Value must be a power of\n                      two in the range 32 to 32768.",
+				"name": "size"
+			}
+		],
+		"extends": "Tone.AudioNode"
+	},
 	"CtrlInterpolate": {
 		"description": "Tone.CtrlInterpolate will interpolate between given values based\n        on the \"index\" property. Passing in an array or object literal\n        will interpolate each of the parameters. Note (i.e. \"C3\")\n        and Time (i.e. \"4n + 2\") can be interpolated. All other values are\n        assumed to be numbers.",
 		"params": [
@@ -745,7 +766,7 @@
 		"extends": "Tone"
 	},
 	"AudioNode": {
-		"description": "Tone.AudioNode is a base class for classes which process audio.\n        AudioNodes have inputs and outputs.",
+		"description": "Tone.AudioNode is the base class for classes which process audio.\n        AudioNodes have inputs and outputs.",
 		"params": [
 			{
 				"type": [
@@ -983,7 +1004,7 @@
 		"extends": "Tone.AudioNode"
 	},
 	"Timeline": {
-		"description": "A Timeline class for scheduling and maintaining state\n        along a timeline. All events must have a \"time\" property. \n        Internally, events are stored in time order for fast \n        retrieval.",
+		"description": "A Timeline class for scheduling and maintaining state\n        along a timeline. All events must have a \"time\" property.\n        Internally, events are stored in time order for fast\n        retrieval.",
 		"params": [
 			{
 				"type": [
@@ -1015,13 +1036,37 @@
 		"params": []
 	},
 	"Transport": {
-		"description": "Transport for timing musical events.\n         Supports tempo curves and time changes. Unlike browser-based timing (setInterval, requestAnimationFrame)\n         Tone.Transport timing events pass in the exact time of the scheduled event\n         in the argument of the callback function. Pass that time value to the object\n         you're scheduling. <br><br>\n         A single transport is created for you when the library is initialized. \n         <br><br>\n         The transport emits the events: \"start\", \"stop\", \"pause\", and \"loop\" which are\n         called with the time of that event as the argument.",
+		"description": "Transport for timing musical events.\n         Supports tempo curves and time changes. Unlike browser-based timing (setInterval, requestAnimationFrame)\n         Tone.Transport timing events pass in the exact time of the scheduled event\n         in the argument of the callback function. Pass that time value to the object\n         you're scheduling. <br><br>\n         A single transport is created for you when the library is initialized.\n         <br><br>\n         The transport emits the events: \"start\", \"stop\", \"pause\", and \"loop\" which are\n         called with the time of that event as the argument.",
 		"examples": [
 			"//repeated event every 8th note\nTone.Transport.scheduleRepeat(function(time){\n\t//do something with the time\n}, \"8n\");\n ",
 			"//schedule an event on the 16th measure\nTone.Transport.schedule(function(time){\n\t//do something with the time\n}, \"16:0:0\");"
 		],
 		"singleton": true,
 		"extends": "Tone.Emitter"
+	},
+	"TransportEvent": {
+		"description": "Tone.TransportEvent is an internal class used by (Tone.Transport)[Transport]\n        to schedule events. Do no invoke this class directly, it is\n        handled from within Tone.Transport.",
+		"params": [
+			{
+				"type": [
+					"Object"
+				],
+				"name": "options"
+			}
+		],
+		"extends": "Tone"
+	},
+	"TransportRepeatEvent": {
+		"description": "Tone.TransportRepeatEvent is an internal class used by Tone.Transport\n        to schedule repeat events. This class should not be instantiated directly.",
+		"params": [
+			{
+				"type": [
+					"Object"
+				],
+				"name": "options"
+			}
+		],
+		"extends": "Tone.TransportEvent"
 	},
 	"AutoFilter": {
 		"description": "Tone.AutoFilter is a Tone.Filter with a Tone.LFO connected to the filter cutoff frequency.\n        Setting the LFO rate and depth allows for control over the filter modulation rate \n        and depth.",
@@ -2090,7 +2135,7 @@
 		"extends": "Tone.TimelineSignal"
 	},
 	"TimelineSignal": {
-		"description": "A signal which adds the method getValueAtTime. \n        Code and inspiration from https://github.com/jsantell/web-audio-automation-timeline",
+		"description": "A signal which adds the method getValueAtTime.\n        Code and inspiration from https://github.com/jsantell/web-audio-automation-timeline",
 		"params": [
 			{
 				"type": [
@@ -2347,7 +2392,7 @@
 		"extends": "Tone.Source"
 	},
 	"Oscillator": {
-		"description": "Tone.Oscillator supports a number of features including\n        phase rotation, multiple oscillator types (see Tone.Oscillator.type), \n        and Transport syncing (see Tone.Oscillator.syncFrequency).",
+		"description": "Tone.Oscillator supports a number of features including\n        phase rotation, multiple oscillator types (see Tone.Oscillator.type),\n        and Transport syncing (see Tone.Oscillator.syncFrequency).",
 		"params": [
 			{
 				"type": [

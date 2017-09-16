@@ -185,55 +185,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -266,7 +217,7 @@
 				]
 			},
 			"scope": "instance",
-			"name": "analyse",
+			"name": "getValue",
 			"lineno": "Tone/component/Analyser.js#L88"
 		},
 		{
@@ -343,55 +294,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -489,55 +391,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -632,55 +485,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -772,55 +576,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1021,19 +776,9 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
 			],
 			"returns": {
 				"type": [
@@ -1042,20 +787,86 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"FFT": [
+		{
+			"description": "Gets the waveform of the audio source. Returns the waveform data\n of length [size](#size) as a Float32Array with values between -1 and 1.",
+			"returns": {
+				"type": [
+					"TypedArray"
+				]
+			},
+			"scope": "instance",
+			"name": "getValue",
+			"lineno": "Tone/component/FFT.js#L39"
+		},
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.FFT"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/FFT.js#L62"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L110",
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"description": "disconnect the output",
 			"params": [
 				{
 					"type": [
-						"AudioParam",
-						"Tone",
+						"Number",
 						"AudioNode"
 					],
-					"name": "nodes"
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
 				}
 			],
 			"returns": {
@@ -1065,8 +876,8 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L127",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1164,55 +975,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -1307,55 +1069,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -1412,55 +1125,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1666,55 +1330,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -1806,55 +1421,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1984,55 +1550,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -2124,55 +1641,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2270,55 +1738,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -2413,55 +1832,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -2480,6 +1850,28 @@
 	],
 	"Meter": [
 		{
+			"description": "Get the current decibel value of the incoming signal",
+			"returns": {
+				"type": [
+					"Decibels"
+				]
+			},
+			"scope": "instance",
+			"name": "getLevel",
+			"lineno": "Tone/component/Meter.js#L57"
+		},
+		{
+			"description": "Get the signal value of the incoming signal",
+			"returns": {
+				"type": [
+					"Number"
+				]
+			},
+			"scope": "instance",
+			"name": "getValue",
+			"lineno": "Tone/component/Meter.js#L69"
+		},
+		{
 			"description": "Clean up.",
 			"returns": {
 				"type": [
@@ -2489,7 +1881,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/component/Meter.js#L116"
+			"lineno": "Tone/component/Meter.js#L95"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -2553,55 +1945,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2699,55 +2042,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -2839,55 +2133,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2985,55 +2230,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -3125,55 +2321,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -3271,55 +2418,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -3411,55 +2509,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -3557,55 +2606,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -3697,55 +2697,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -3904,55 +2855,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -4158,55 +3060,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -4298,55 +3151,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -4444,55 +3248,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -4587,19 +3342,9 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
 			],
 			"returns": {
 				"type": [
@@ -4608,20 +3353,86 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Waveform": [
+		{
+			"description": "Gets the waveform of the audio source. Returns the waveform data\n of length [size](#size) as a Float32Array with values between -1 and 1.",
+			"returns": {
+				"type": [
+					"TypedArray"
+				]
+			},
+			"scope": "instance",
+			"name": "getValue",
+			"lineno": "Tone/component/Waveform.js#L39"
+		},
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.Waveform"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/Waveform.js#L61"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L110",
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"description": "disconnect the output",
 			"params": [
 				{
 					"type": [
-						"AudioParam",
-						"Tone",
+						"Number",
 						"AudioNode"
 					],
-					"name": "nodes"
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
 				}
 			],
 			"returns": {
@@ -4631,8 +3442,8 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L127",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -4781,53 +3592,6 @@
 			"lineno": "Tone/core/AudioNode.js#L127"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163"
-		},
-		{
 			"description": "Dispose and disconnect",
 			"returns": {
 				"type": [
@@ -4837,7 +3601,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/AudioNode.js#L180"
+			"lineno": "Tone/core/AudioNode.js#L182"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
@@ -5632,7 +4396,7 @@
 			],
 			"scope": "static",
 			"name": "extend",
-			"lineno": "Tone/core/Tone.js#L529"
+			"lineno": "Tone/core/Tone.js#L539"
 		},
 		{
 			"description": "Convert Time into seconds.\n\n Unlike the method which it overrides, this takes into account\n transporttime and musical notation.\n\n Time : 1.40\n Notation: 4n or 1m or 2t\n Now Relative: +3n\n Math: 3n+16n or even complicated expressions ((3n*2)/6 + 1)",
@@ -7121,7 +5885,7 @@
 			},
 			"scope": "instance",
 			"name": "setRampPoint",
-			"lineno": "Tone/core/Param.js#L183"
+			"lineno": "Tone/core/Param.js#L185"
 		},
 		{
 			"description": "Schedules a linear continuous change in parameter value from the\n previous scheduled parameter value to the given value.",
@@ -7147,7 +5911,7 @@
 			},
 			"scope": "instance",
 			"name": "linearRampToValueAtTime",
-			"lineno": "Tone/core/Param.js#L203"
+			"lineno": "Tone/core/Param.js#L205"
 		},
 		{
 			"description": "Schedules an exponential continuous change in parameter value from\n the previous scheduled parameter value to the given value.",
@@ -7173,7 +5937,7 @@
 			},
 			"scope": "instance",
 			"name": "exponentialRampToValueAtTime",
-			"lineno": "Tone/core/Param.js#L217"
+			"lineno": "Tone/core/Param.js#L221"
 		},
 		{
 			"description": "Schedules an exponential continuous change in parameter value from\n the current time and current value to the given value over the\n duration of the rampTime.",
@@ -7203,7 +5967,7 @@
 				}
 			],
 			"examples": [
-				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampToValue(2, 4);"
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
 			],
 			"returns": {
 				"type": [
@@ -7212,8 +5976,8 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "exponentialRampToValue",
-			"lineno": "Tone/core/Param.js#L238"
+			"name": "exponentialRampTo",
+			"lineno": "Tone/core/Param.js#L244"
 		},
 		{
 			"description": "Schedules an linear continuous change in parameter value from\n the current time and current value to the given value over the\n duration of the rampTime.",
@@ -7243,7 +6007,7 @@
 				}
 			],
 			"examples": [
-				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampToValue(4, 3);"
+				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampTo(4, 3);"
 			],
 			"returns": {
 				"type": [
@@ -7252,8 +6016,69 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "linearRampToValue",
-			"lineno": "Tone/core/Param.js#L259"
+			"name": "linearRampTo",
+			"lineno": "Tone/core/Param.js#L265"
+		},
+		{
+			"description": "Convert between Time and time constant. The time\nconstant returned can be used in setTargetAtTime.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to convert",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The time constant to get an exponentially approaching\n                          curve to over 99% of towards the target value."
+			},
+			"scope": "instance",
+			"name": "getTimeConstant",
+			"lineno": "Tone/core/Param.js#L279"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time. Since it\n is an exponential approach it will continue approaching after the ramp duration. The\n rampTime is the time that it takes to reach over 99% of the way towards the value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "targetRampTo",
+			"lineno": "Tone/core/Param.js#L296"
 		},
 		{
 			"description": "Start exponentially approaching the target value at the given time with\n a rate having the given time constant.",
@@ -7285,7 +6110,7 @@
 			},
 			"scope": "instance",
 			"name": "setTargetAtTime",
-			"lineno": "Tone/core/Param.js#L274"
+			"lineno": "Tone/core/Param.js#L311"
 		},
 		{
 			"description": "Sets an array of arbitrary parameter values starting at the given time\n for the given duration.",
@@ -7317,7 +6142,7 @@
 			},
 			"scope": "instance",
 			"name": "setValueCurveAtTime",
-			"lineno": "Tone/core/Param.js#L294"
+			"lineno": "Tone/core/Param.js#L331"
 		},
 		{
 			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to startTime.",
@@ -7337,7 +6162,27 @@
 			},
 			"scope": "instance",
 			"name": "cancelScheduledValues",
-			"lineno": "Tone/core/Param.js#L312"
+			"lineno": "Tone/core/Param.js#L349"
+		},
+		{
+			"description": "This is similar to [cancelScheduledValues](#cancelScheduledValues) except\n it holds the automated value at cancelTime until the next automated event.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "cancelTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelAndHoldAtTime",
+			"lineno": "Tone/core/Param.js#L360"
 		},
 		{
 			"description": "Ramps to the given value over the duration of the rampTime.\n Automatically selects the best ramp type (exponential or linear)\n depending on the `units` of the signal",
@@ -7377,7 +6222,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L335"
+			"lineno": "Tone/core/Param.js#L397"
 		},
 		{
 			"description": "Clean up",
@@ -7389,7 +6234,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/Param.js#L363"
+			"lineno": "Tone/core/Param.js#L425"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -7456,55 +6301,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -7529,7 +6325,7 @@
 					"type": [
 						"Object"
 					],
-					"description": "The event object to insert into the \n                          timeline.",
+					"description": "The event object to insert into the\n                          timeline.",
 					"name": "event"
 				}
 			],
@@ -7541,7 +6337,7 @@
 			},
 			"scope": "instance",
 			"name": "add",
-			"lineno": "Tone/core/Timeline.js#L77"
+			"lineno": "Tone/core/Timeline.js#L84"
 		},
 		{
 			"description": "Remove an event from the timeline.",
@@ -7562,7 +6358,7 @@
 			},
 			"scope": "instance",
 			"name": "remove",
-			"lineno": "Tone/core/Timeline.js#L101"
+			"lineno": "Tone/core/Timeline.js#L108"
 		},
 		{
 			"description": "Get the nearest event whose time is less than or equal to the given time.",
@@ -7579,7 +6375,7 @@
 						"String"
 					],
 					"description": "Which value in the object to compare",
-					"name": "comparitor"
+					"name": "comparator"
 				}
 			],
 			"returns": {
@@ -7590,7 +6386,7 @@
 			},
 			"scope": "instance",
 			"name": "get",
-			"lineno": "Tone/core/Timeline.js#L119"
+			"lineno": "Tone/core/Timeline.js#L126"
 		},
 		{
 			"description": "Return the first event in the timeline without removing it",
@@ -7602,7 +6398,7 @@
 			},
 			"scope": "instance",
 			"name": "peek",
-			"lineno": "Tone/core/Timeline.js#L133"
+			"lineno": "Tone/core/Timeline.js#L140"
 		},
 		{
 			"description": "Return the first event in the timeline and remove it",
@@ -7614,7 +6410,7 @@
 			},
 			"scope": "instance",
 			"name": "shift",
-			"lineno": "Tone/core/Timeline.js#L141"
+			"lineno": "Tone/core/Timeline.js#L148"
 		},
 		{
 			"description": "Get the event which is scheduled after the given time.",
@@ -7631,7 +6427,7 @@
 						"String"
 					],
 					"description": "Which value in the object to compare",
-					"name": "comparitor"
+					"name": "comparator"
 				}
 			],
 			"returns": {
@@ -7642,7 +6438,7 @@
 			},
 			"scope": "instance",
 			"name": "getAfter",
-			"lineno": "Tone/core/Timeline.js#L151"
+			"lineno": "Tone/core/Timeline.js#L158"
 		},
 		{
 			"description": "Get the event before the event at the given time.",
@@ -7659,7 +6455,7 @@
 						"String"
 					],
 					"description": "Which value in the object to compare",
-					"name": "comparitor"
+					"name": "comparator"
 				}
 			],
 			"returns": {
@@ -7670,7 +6466,7 @@
 			},
 			"scope": "instance",
 			"name": "getBefore",
-			"lineno": "Tone/core/Timeline.js#L167"
+			"lineno": "Tone/core/Timeline.js#L174"
 		},
 		{
 			"description": "Cancel events after the given time",
@@ -7691,7 +6487,7 @@
 			},
 			"scope": "instance",
 			"name": "cancel",
-			"lineno": "Tone/core/Timeline.js#L187"
+			"lineno": "Tone/core/Timeline.js#L194"
 		},
 		{
 			"description": "Cancel events before or equal to the given time.",
@@ -7712,7 +6508,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelBefore",
-			"lineno": "Tone/core/Timeline.js#L221"
+			"lineno": "Tone/core/Timeline.js#L228"
 		},
 		{
 			"description": "Returns the previous event if there is one. null otherwise",
@@ -7733,7 +6529,7 @@
 			},
 			"scope": "instance",
 			"name": "previousEvent",
-			"lineno": "Tone/core/Timeline.js#L236"
+			"lineno": "Tone/core/Timeline.js#L241"
 		},
 		{
 			"description": "Iterate over everything in the array",
@@ -7754,7 +6550,7 @@
 			},
 			"scope": "instance",
 			"name": "forEach",
-			"lineno": "Tone/core/Timeline.js#L322"
+			"lineno": "Tone/core/Timeline.js#L329"
 		},
 		{
 			"description": "Iterate over everything in the array at or before the given time.",
@@ -7782,7 +6578,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachBefore",
-			"lineno": "Tone/core/Timeline.js#L333"
+			"lineno": "Tone/core/Timeline.js#L340"
 		},
 		{
 			"description": "Iterate over everything in the array after the given time.",
@@ -7810,10 +6606,10 @@
 			},
 			"scope": "instance",
 			"name": "forEachAfter",
-			"lineno": "Tone/core/Timeline.js#L348"
+			"lineno": "Tone/core/Timeline.js#L355"
 		},
 		{
-			"description": "Iterate over everything in the array at or after the given time. Similar to \n forEachAfter, but includes the item(s) at the given time.",
+			"description": "Iterate over everything in the array at or after the given time. Similar to\n forEachAfter, but includes the item(s) at the given time.",
 			"params": [
 				{
 					"type": [
@@ -7838,7 +6634,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachFrom",
-			"lineno": "Tone/core/Timeline.js#L362"
+			"lineno": "Tone/core/Timeline.js#L369"
 		},
 		{
 			"description": "Iterate over everything in the array at the given time",
@@ -7866,7 +6662,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachAtTime",
-			"lineno": "Tone/core/Timeline.js#L379"
+			"lineno": "Tone/core/Timeline.js#L386"
 		},
 		{
 			"description": "Clean up.",
@@ -7878,7 +6674,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/Timeline.js#L396"
+			"lineno": "Tone/core/Timeline.js#L403"
 		}
 	],
 	"TimelineState": [
@@ -7938,7 +6734,7 @@
 					"type": [
 						"Object"
 					],
-					"description": "The event object to insert into the \n                          timeline.",
+					"description": "The event object to insert into the\n                          timeline.",
 					"name": "event"
 				}
 			],
@@ -7950,7 +6746,7 @@
 			},
 			"scope": "instance",
 			"name": "add",
-			"lineno": "Tone/core/Timeline.js#L77",
+			"lineno": "Tone/core/Timeline.js#L84",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -7972,7 +6768,7 @@
 			},
 			"scope": "instance",
 			"name": "remove",
-			"lineno": "Tone/core/Timeline.js#L101",
+			"lineno": "Tone/core/Timeline.js#L108",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -7990,7 +6786,7 @@
 						"String"
 					],
 					"description": "Which value in the object to compare",
-					"name": "comparitor"
+					"name": "comparator"
 				}
 			],
 			"returns": {
@@ -8001,7 +6797,7 @@
 			},
 			"scope": "instance",
 			"name": "get",
-			"lineno": "Tone/core/Timeline.js#L119",
+			"lineno": "Tone/core/Timeline.js#L126",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -8014,7 +6810,7 @@
 			},
 			"scope": "instance",
 			"name": "peek",
-			"lineno": "Tone/core/Timeline.js#L133",
+			"lineno": "Tone/core/Timeline.js#L140",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -8027,7 +6823,7 @@
 			},
 			"scope": "instance",
 			"name": "shift",
-			"lineno": "Tone/core/Timeline.js#L141",
+			"lineno": "Tone/core/Timeline.js#L148",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -8045,7 +6841,7 @@
 						"String"
 					],
 					"description": "Which value in the object to compare",
-					"name": "comparitor"
+					"name": "comparator"
 				}
 			],
 			"returns": {
@@ -8056,7 +6852,7 @@
 			},
 			"scope": "instance",
 			"name": "getAfter",
-			"lineno": "Tone/core/Timeline.js#L151",
+			"lineno": "Tone/core/Timeline.js#L158",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -8074,7 +6870,7 @@
 						"String"
 					],
 					"description": "Which value in the object to compare",
-					"name": "comparitor"
+					"name": "comparator"
 				}
 			],
 			"returns": {
@@ -8085,7 +6881,7 @@
 			},
 			"scope": "instance",
 			"name": "getBefore",
-			"lineno": "Tone/core/Timeline.js#L167",
+			"lineno": "Tone/core/Timeline.js#L174",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -8107,7 +6903,7 @@
 			},
 			"scope": "instance",
 			"name": "cancel",
-			"lineno": "Tone/core/Timeline.js#L187",
+			"lineno": "Tone/core/Timeline.js#L194",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -8129,7 +6925,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelBefore",
-			"lineno": "Tone/core/Timeline.js#L221",
+			"lineno": "Tone/core/Timeline.js#L228",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -8151,7 +6947,7 @@
 			},
 			"scope": "instance",
 			"name": "previousEvent",
-			"lineno": "Tone/core/Timeline.js#L236",
+			"lineno": "Tone/core/Timeline.js#L241",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -8173,7 +6969,7 @@
 			},
 			"scope": "instance",
 			"name": "forEach",
-			"lineno": "Tone/core/Timeline.js#L322",
+			"lineno": "Tone/core/Timeline.js#L329",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -8202,7 +6998,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachBefore",
-			"lineno": "Tone/core/Timeline.js#L333",
+			"lineno": "Tone/core/Timeline.js#L340",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -8231,11 +7027,11 @@
 			},
 			"scope": "instance",
 			"name": "forEachAfter",
-			"lineno": "Tone/core/Timeline.js#L348",
+			"lineno": "Tone/core/Timeline.js#L355",
 			"inherits": "Tone.Timeline"
 		},
 		{
-			"description": "Iterate over everything in the array at or after the given time. Similar to \n forEachAfter, but includes the item(s) at the given time.",
+			"description": "Iterate over everything in the array at or after the given time. Similar to\n forEachAfter, but includes the item(s) at the given time.",
 			"params": [
 				{
 					"type": [
@@ -8260,7 +7056,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachFrom",
-			"lineno": "Tone/core/Timeline.js#L362",
+			"lineno": "Tone/core/Timeline.js#L369",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -8289,7 +7085,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachAtTime",
-			"lineno": "Tone/core/Timeline.js#L379",
+			"lineno": "Tone/core/Timeline.js#L386",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -8302,7 +7098,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/Timeline.js#L396",
+			"lineno": "Tone/core/Timeline.js#L403",
 			"inherits": "Tone.Timeline"
 		}
 	],
@@ -8419,6 +7215,12 @@
 			"lineno": "Tone/core/Tone.js#L388"
 		},
 		{
+			"description": "Adds warning in the console if the scheduled time has passed.",
+			"scope": "static",
+			"name": "isPast",
+			"lineno": "Tone/core/Tone.js#L515"
+		},
+		{
 			"description": "Tone automatically creates a context on init, but if you are working\n with other libraries which also create an AudioContext, it can be\n useful to set your own. If you are going to set your own context,\n be sure to do it at the start of your code, before creating any objects.",
 			"params": [
 				{
@@ -8431,7 +7233,7 @@
 			],
 			"scope": "static",
 			"name": "setContext",
-			"lineno": "Tone/core/Tone.js#L594"
+			"lineno": "Tone/core/Tone.js#L604"
 		},
 		{
 			"description": "Get the context when it becomes available",
@@ -8451,7 +7253,7 @@
 			},
 			"scope": "static",
 			"name": "getContext",
-			"lineno": "Tone/core/Tone.js#L665"
+			"lineno": "Tone/core/Tone.js#L675"
 		}
 	],
 	"extend": [
@@ -8459,7 +7261,7 @@
 			"params": [],
 			"scope": "inner",
 			"name": "TempConstructor",
-			"lineno": "Tone/core/Tone.js#L533"
+			"lineno": "Tone/core/Tone.js#L543"
 		}
 	],
 	"getContext": [
@@ -8467,7 +7269,7 @@
 			"params": [],
 			"scope": "inner",
 			"name": "resCallback",
-			"lineno": "Tone/core/Tone.js#L669"
+			"lineno": "Tone/core/Tone.js#L679"
 		}
 	],
 	"Transport": [
@@ -8500,7 +7302,7 @@
 			},
 			"scope": "instance",
 			"name": "schedule",
-			"lineno": "Tone/core/Transport.js#L260"
+			"lineno": "Tone/core/Transport.js#L232"
 		},
 		{
 			"description": "Schedule a repeated event along the timeline. The event will fire\n at the `interval` starting at the `startTime` and for the specified\n `duration`.",
@@ -8516,7 +7318,7 @@
 					"type": [
 						"Time"
 					],
-					"description": "The duration between successive\n                              callbacks.",
+					"description": "The duration between successive\n                              callbacks. Must be a positive number.",
 					"name": "interval"
 				},
 				{
@@ -8548,10 +7350,10 @@
 			},
 			"scope": "instance",
 			"name": "scheduleRepeat",
-			"lineno": "Tone/core/Transport.js#L290"
+			"lineno": "Tone/core/Transport.js#L256"
 		},
 		{
-			"description": "Schedule an event that will be removed after it is invoked. \n Note that if the given time is less than the current transport time, \n the event will be invoked immediately.",
+			"description": "Schedule an event that will be removed after it is invoked.\n Note that if the given time is less than the current transport time,\n the event will be invoked immediately.",
 			"params": [
 				{
 					"type": [
@@ -8576,7 +7378,7 @@
 			},
 			"scope": "instance",
 			"name": "scheduleOnce",
-			"lineno": "Tone/core/Transport.js#L317"
+			"lineno": "Tone/core/Transport.js#L275"
 		},
 		{
 			"description": "Clear the passed in event id from the timeline",
@@ -8597,7 +7399,7 @@
 			},
 			"scope": "instance",
 			"name": "clear",
-			"lineno": "Tone/core/Transport.js#L337"
+			"lineno": "Tone/core/Transport.js#L289"
 		},
 		{
 			"description": "Remove scheduled events from the timeline after\n the given time. Repeated events will be removed\n if their startTime is after the given time",
@@ -8620,7 +7422,7 @@
 			},
 			"scope": "instance",
 			"name": "cancel",
-			"lineno": "Tone/core/Transport.js#L354"
+			"lineno": "Tone/core/Transport.js#L324"
 		},
 		{
 			"description": "Start the transport and all sources synced to the transport.",
@@ -8644,7 +7446,7 @@
 				}
 			],
 			"examples": [
-				"//start the transport in one second starting at beginning of the 5th measure. \nTone.Transport.start(\"+1\", \"4:0:0\");"
+				"//start the transport in one second starting at beginning of the 5th measure.\nTone.Transport.start(\"+1\", \"4:0:0\");"
 			],
 			"returns": {
 				"type": [
@@ -8654,7 +7456,7 @@
 			},
 			"scope": "instance",
 			"name": "start",
-			"lineno": "Tone/core/Transport.js#L408"
+			"lineno": "Tone/core/Transport.js#L377"
 		},
 		{
 			"description": "Stop the transport and all sources synced to the transport.",
@@ -8680,7 +7482,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/core/Transport.js#L424"
+			"lineno": "Tone/core/Transport.js#L393"
 		},
 		{
 			"description": "Pause the transport and all sources synced to the transport.",
@@ -8702,7 +7504,7 @@
 			},
 			"scope": "instance",
 			"name": "pause",
-			"lineno": "Tone/core/Transport.js#L434"
+			"lineno": "Tone/core/Transport.js#L403"
 		},
 		{
 			"description": "Toggle the current state of the transport. If it is\nstarted, it will stop it, otherwise it will start the Transport.",
@@ -8724,7 +7526,7 @@
 			},
 			"scope": "instance",
 			"name": "toggle",
-			"lineno": "Tone/core/Transport.js#L445"
+			"lineno": "Tone/core/Transport.js#L414"
 		},
 		{
 			"description": "Set the loop start and stop at the same time.",
@@ -8753,7 +7555,7 @@
 			},
 			"scope": "instance",
 			"name": "setLoopPoints",
-			"lineno": "Tone/core/Transport.js#L526"
+			"lineno": "Tone/core/Transport.js#L495"
 		},
 		{
 			"description": "Returns the time aligned to the next subdivision\n of the Transport. If the Transport is not started,\n it will return 0.\n Note: this will not work precisely during tempo ramps.",
@@ -8777,10 +7579,10 @@
 			},
 			"scope": "instance",
 			"name": "nextSubdivision",
-			"lineno": "Tone/core/Transport.js#L701"
+			"lineno": "Tone/core/Transport.js#L670"
 		},
 		{
-			"description": "Attaches the signal to the tempo control signal so that \n any changes in the tempo will change the signal in the same\n ratio.",
+			"description": "Attaches the signal to the tempo control signal so that\n any changes in the tempo will change the signal in the same\n ratio.",
 			"params": [
 				{
 					"type": [
@@ -8805,10 +7607,10 @@
 			},
 			"scope": "instance",
 			"name": "syncSignal",
-			"lineno": "Tone/core/Transport.js#L729"
+			"lineno": "Tone/core/Transport.js#L698"
 		},
 		{
-			"description": "Unsyncs a previously synced signal from the transport's control. \n See Tone.Transport.syncSignal.",
+			"description": "Unsyncs a previously synced signal from the transport's control.\n See Tone.Transport.syncSignal.",
 			"params": [
 				{
 					"type": [
@@ -8825,7 +7627,7 @@
 			},
 			"scope": "instance",
 			"name": "unsyncSignal",
-			"lineno": "Tone/core/Transport.js#L755"
+			"lineno": "Tone/core/Transport.js#L724"
 		},
 		{
 			"description": "Bind a callback to a specific event.",
@@ -8914,6 +7716,64 @@
 			"name": "emit",
 			"lineno": "Tone/core/Emitter.js#L81",
 			"inherits": "Tone.Emitter"
+		}
+	],
+	"TransportEvent": [
+		{
+			"description": "Invoke the callback even callback.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The AudioContext time in seconds of the event",
+					"name": "time"
+				}
+			],
+			"scope": "instance",
+			"name": "invoke",
+			"lineno": "Tone/core/TransportEvent.js#L71"
+		},
+		{
+			"description": "Clean up",
+			"returns": {
+				"type": [
+					"Tone.TransportEvent"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/core/TransportEvent.js#L84"
+		}
+	],
+	"TransportRepeatEvent": [
+		{
+			"description": "Invoke the callback. Returns the tick time which\nthe next event should be scheduled at.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The AudioContext time in seconds of the event",
+					"name": "time"
+				}
+			],
+			"scope": "instance",
+			"name": "invoke",
+			"lineno": "Tone/core/TransportRepeatEvent.js#L77"
+		},
+		{
+			"description": "Clean up",
+			"returns": {
+				"type": [
+					"Tone.TransportRepeatEvent"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/core/TransportRepeatEvent.js#L120"
 		}
 	],
 	"AutoFilter": [
@@ -9072,55 +7932,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -9299,55 +8110,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -9439,55 +8201,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -9585,55 +8298,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -9728,55 +8392,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -9868,55 +8483,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10041,55 +8607,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -10181,55 +8698,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10327,55 +8795,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -10467,55 +8886,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10613,55 +8983,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -10753,55 +9074,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10899,55 +9171,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -11039,55 +9262,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11185,55 +9359,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -11325,55 +9450,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11471,55 +9547,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -11611,55 +9638,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11757,55 +9735,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -11900,55 +9829,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -12040,55 +9920,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12267,55 +10098,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -12407,55 +10189,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -13316,55 +11049,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -13612,55 +11296,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -13914,55 +11549,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -14103,55 +11689,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -14364,55 +11901,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -14592,55 +12080,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -14894,55 +12333,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -15191,55 +12581,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -15431,55 +12772,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -15651,55 +12943,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -16002,55 +13245,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -16130,7 +13324,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerRelease",
-			"lineno": "Tone/instrument/Sampler.js#L144"
+			"lineno": "Tone/instrument/Sampler.js#L145"
 		},
 		{
 			"description": "Invoke the attack phase, then after the duration, invoke the release.",
@@ -16175,7 +13369,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Sampler.js#L162"
+			"lineno": "Tone/instrument/Sampler.js#L163"
 		},
 		{
 			"description": "Add a note to the sampler.",
@@ -16208,7 +13402,7 @@
 			],
 			"scope": "instance",
 			"name": "add",
-			"lineno": "Tone/instrument/Sampler.js#L179"
+			"lineno": "Tone/instrument/Sampler.js#L180"
 		},
 		{
 			"description": "Clean up",
@@ -16220,7 +13414,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/Sampler.js#L209"
+			"lineno": "Tone/instrument/Sampler.js#L210"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -16284,55 +13478,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -16586,55 +13731,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -16813,7 +13909,7 @@
 			},
 			"scope": "instance",
 			"name": "setRampPoint",
-			"lineno": "Tone/core/Param.js#L183",
+			"lineno": "Tone/core/Param.js#L185",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -16840,7 +13936,7 @@
 			},
 			"scope": "instance",
 			"name": "linearRampToValueAtTime",
-			"lineno": "Tone/core/Param.js#L203",
+			"lineno": "Tone/core/Param.js#L205",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -16867,7 +13963,7 @@
 			},
 			"scope": "instance",
 			"name": "exponentialRampToValueAtTime",
-			"lineno": "Tone/core/Param.js#L217",
+			"lineno": "Tone/core/Param.js#L221",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -16898,7 +13994,7 @@
 				}
 			],
 			"examples": [
-				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampToValue(2, 4);"
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
 			],
 			"returns": {
 				"type": [
@@ -16907,8 +14003,8 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "exponentialRampToValue",
-			"lineno": "Tone/core/Param.js#L238",
+			"name": "exponentialRampTo",
+			"lineno": "Tone/core/Param.js#L244",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -16939,7 +14035,7 @@
 				}
 			],
 			"examples": [
-				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampToValue(4, 3);"
+				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampTo(4, 3);"
 			],
 			"returns": {
 				"type": [
@@ -16948,8 +14044,71 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "linearRampToValue",
-			"lineno": "Tone/core/Param.js#L259",
+			"name": "linearRampTo",
+			"lineno": "Tone/core/Param.js#L265",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Convert between Time and time constant. The time\nconstant returned can be used in setTargetAtTime.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to convert",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The time constant to get an exponentially approaching\n                          curve to over 99% of towards the target value."
+			},
+			"scope": "instance",
+			"name": "getTimeConstant",
+			"lineno": "Tone/core/Param.js#L279",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time. Since it\n is an exponential approach it will continue approaching after the ramp duration. The\n rampTime is the time that it takes to reach over 99% of the way towards the value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "targetRampTo",
+			"lineno": "Tone/core/Param.js#L296",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -16982,7 +14141,7 @@
 			},
 			"scope": "instance",
 			"name": "setTargetAtTime",
-			"lineno": "Tone/core/Param.js#L274",
+			"lineno": "Tone/core/Param.js#L311",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -17015,7 +14174,7 @@
 			},
 			"scope": "instance",
 			"name": "setValueCurveAtTime",
-			"lineno": "Tone/core/Param.js#L294",
+			"lineno": "Tone/core/Param.js#L331",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -17036,7 +14195,28 @@
 			},
 			"scope": "instance",
 			"name": "cancelScheduledValues",
-			"lineno": "Tone/core/Param.js#L312",
+			"lineno": "Tone/core/Param.js#L349",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "This is similar to [cancelScheduledValues](#cancelScheduledValues) except\n it holds the automated value at cancelTime until the next automated event.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "cancelTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelAndHoldAtTime",
+			"lineno": "Tone/core/Param.js#L360",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -17077,7 +14257,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L335",
+			"lineno": "Tone/core/Param.js#L397",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -17101,55 +14281,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -17592,7 +14723,7 @@
 			},
 			"scope": "instance",
 			"name": "setRampPoint",
-			"lineno": "Tone/core/Param.js#L183",
+			"lineno": "Tone/core/Param.js#L185",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -17619,7 +14750,7 @@
 			},
 			"scope": "instance",
 			"name": "linearRampToValueAtTime",
-			"lineno": "Tone/core/Param.js#L203",
+			"lineno": "Tone/core/Param.js#L205",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -17646,7 +14777,7 @@
 			},
 			"scope": "instance",
 			"name": "exponentialRampToValueAtTime",
-			"lineno": "Tone/core/Param.js#L217",
+			"lineno": "Tone/core/Param.js#L221",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -17677,7 +14808,7 @@
 				}
 			],
 			"examples": [
-				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampToValue(2, 4);"
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
 			],
 			"returns": {
 				"type": [
@@ -17686,8 +14817,8 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "exponentialRampToValue",
-			"lineno": "Tone/core/Param.js#L238",
+			"name": "exponentialRampTo",
+			"lineno": "Tone/core/Param.js#L244",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -17718,7 +14849,7 @@
 				}
 			],
 			"examples": [
-				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampToValue(4, 3);"
+				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampTo(4, 3);"
 			],
 			"returns": {
 				"type": [
@@ -17727,8 +14858,71 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "linearRampToValue",
-			"lineno": "Tone/core/Param.js#L259",
+			"name": "linearRampTo",
+			"lineno": "Tone/core/Param.js#L265",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Convert between Time and time constant. The time\nconstant returned can be used in setTargetAtTime.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to convert",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The time constant to get an exponentially approaching\n                          curve to over 99% of towards the target value."
+			},
+			"scope": "instance",
+			"name": "getTimeConstant",
+			"lineno": "Tone/core/Param.js#L279",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time. Since it\n is an exponential approach it will continue approaching after the ramp duration. The\n rampTime is the time that it takes to reach over 99% of the way towards the value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "targetRampTo",
+			"lineno": "Tone/core/Param.js#L296",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -17761,7 +14955,7 @@
 			},
 			"scope": "instance",
 			"name": "setTargetAtTime",
-			"lineno": "Tone/core/Param.js#L274",
+			"lineno": "Tone/core/Param.js#L311",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -17794,7 +14988,7 @@
 			},
 			"scope": "instance",
 			"name": "setValueCurveAtTime",
-			"lineno": "Tone/core/Param.js#L294",
+			"lineno": "Tone/core/Param.js#L331",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -17815,7 +15009,28 @@
 			},
 			"scope": "instance",
 			"name": "cancelScheduledValues",
-			"lineno": "Tone/core/Param.js#L312",
+			"lineno": "Tone/core/Param.js#L349",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "This is similar to [cancelScheduledValues](#cancelScheduledValues) except\n it holds the automated value at cancelTime until the next automated event.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "cancelTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelAndHoldAtTime",
+			"lineno": "Tone/core/Param.js#L360",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -17856,7 +15071,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L335",
+			"lineno": "Tone/core/Param.js#L397",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -17880,55 +15095,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -18166,7 +15332,7 @@
 			},
 			"scope": "instance",
 			"name": "setRampPoint",
-			"lineno": "Tone/core/Param.js#L183",
+			"lineno": "Tone/core/Param.js#L185",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -18193,7 +15359,7 @@
 			},
 			"scope": "instance",
 			"name": "linearRampToValueAtTime",
-			"lineno": "Tone/core/Param.js#L203",
+			"lineno": "Tone/core/Param.js#L205",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -18220,7 +15386,7 @@
 			},
 			"scope": "instance",
 			"name": "exponentialRampToValueAtTime",
-			"lineno": "Tone/core/Param.js#L217",
+			"lineno": "Tone/core/Param.js#L221",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -18251,7 +15417,7 @@
 				}
 			],
 			"examples": [
-				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampToValue(2, 4);"
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
 			],
 			"returns": {
 				"type": [
@@ -18260,8 +15426,8 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "exponentialRampToValue",
-			"lineno": "Tone/core/Param.js#L238",
+			"name": "exponentialRampTo",
+			"lineno": "Tone/core/Param.js#L244",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -18292,7 +15458,7 @@
 				}
 			],
 			"examples": [
-				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampToValue(4, 3);"
+				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampTo(4, 3);"
 			],
 			"returns": {
 				"type": [
@@ -18301,8 +15467,71 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "linearRampToValue",
-			"lineno": "Tone/core/Param.js#L259",
+			"name": "linearRampTo",
+			"lineno": "Tone/core/Param.js#L265",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Convert between Time and time constant. The time\nconstant returned can be used in setTargetAtTime.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to convert",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The time constant to get an exponentially approaching\n                          curve to over 99% of towards the target value."
+			},
+			"scope": "instance",
+			"name": "getTimeConstant",
+			"lineno": "Tone/core/Param.js#L279",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time. Since it\n is an exponential approach it will continue approaching after the ramp duration. The\n rampTime is the time that it takes to reach over 99% of the way towards the value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "targetRampTo",
+			"lineno": "Tone/core/Param.js#L296",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -18335,7 +15564,7 @@
 			},
 			"scope": "instance",
 			"name": "setTargetAtTime",
-			"lineno": "Tone/core/Param.js#L274",
+			"lineno": "Tone/core/Param.js#L311",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -18368,7 +15597,7 @@
 			},
 			"scope": "instance",
 			"name": "setValueCurveAtTime",
-			"lineno": "Tone/core/Param.js#L294",
+			"lineno": "Tone/core/Param.js#L331",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -18389,7 +15618,28 @@
 			},
 			"scope": "instance",
 			"name": "cancelScheduledValues",
-			"lineno": "Tone/core/Param.js#L312",
+			"lineno": "Tone/core/Param.js#L349",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "This is similar to [cancelScheduledValues](#cancelScheduledValues) except\n it holds the automated value at cancelTime until the next automated event.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "cancelTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelAndHoldAtTime",
+			"lineno": "Tone/core/Param.js#L360",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -18430,7 +15680,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L335",
+			"lineno": "Tone/core/Param.js#L397",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -18454,55 +15704,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -18908,7 +16109,7 @@
 			},
 			"scope": "instance",
 			"name": "setRampPoint",
-			"lineno": "Tone/core/Param.js#L183",
+			"lineno": "Tone/core/Param.js#L185",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -18935,7 +16136,7 @@
 			},
 			"scope": "instance",
 			"name": "linearRampToValueAtTime",
-			"lineno": "Tone/core/Param.js#L203",
+			"lineno": "Tone/core/Param.js#L205",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -18962,7 +16163,7 @@
 			},
 			"scope": "instance",
 			"name": "exponentialRampToValueAtTime",
-			"lineno": "Tone/core/Param.js#L217",
+			"lineno": "Tone/core/Param.js#L221",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -18993,7 +16194,7 @@
 				}
 			],
 			"examples": [
-				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampToValue(2, 4);"
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
 			],
 			"returns": {
 				"type": [
@@ -19002,8 +16203,8 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "exponentialRampToValue",
-			"lineno": "Tone/core/Param.js#L238",
+			"name": "exponentialRampTo",
+			"lineno": "Tone/core/Param.js#L244",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -19034,7 +16235,7 @@
 				}
 			],
 			"examples": [
-				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampToValue(4, 3);"
+				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampTo(4, 3);"
 			],
 			"returns": {
 				"type": [
@@ -19043,8 +16244,71 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "linearRampToValue",
-			"lineno": "Tone/core/Param.js#L259",
+			"name": "linearRampTo",
+			"lineno": "Tone/core/Param.js#L265",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Convert between Time and time constant. The time\nconstant returned can be used in setTargetAtTime.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to convert",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The time constant to get an exponentially approaching\n                          curve to over 99% of towards the target value."
+			},
+			"scope": "instance",
+			"name": "getTimeConstant",
+			"lineno": "Tone/core/Param.js#L279",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time. Since it\n is an exponential approach it will continue approaching after the ramp duration. The\n rampTime is the time that it takes to reach over 99% of the way towards the value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "targetRampTo",
+			"lineno": "Tone/core/Param.js#L296",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -19077,7 +16341,7 @@
 			},
 			"scope": "instance",
 			"name": "setTargetAtTime",
-			"lineno": "Tone/core/Param.js#L274",
+			"lineno": "Tone/core/Param.js#L311",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -19110,7 +16374,7 @@
 			},
 			"scope": "instance",
 			"name": "setValueCurveAtTime",
-			"lineno": "Tone/core/Param.js#L294",
+			"lineno": "Tone/core/Param.js#L331",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -19131,7 +16395,28 @@
 			},
 			"scope": "instance",
 			"name": "cancelScheduledValues",
-			"lineno": "Tone/core/Param.js#L312",
+			"lineno": "Tone/core/Param.js#L349",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "This is similar to [cancelScheduledValues](#cancelScheduledValues) except\n it holds the automated value at cancelTime until the next automated event.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "cancelTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelAndHoldAtTime",
+			"lineno": "Tone/core/Param.js#L360",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -19172,7 +16457,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L335",
+			"lineno": "Tone/core/Param.js#L397",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -19237,55 +16522,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -19454,7 +16690,7 @@
 			},
 			"scope": "instance",
 			"name": "setRampPoint",
-			"lineno": "Tone/core/Param.js#L183",
+			"lineno": "Tone/core/Param.js#L185",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -19481,7 +16717,7 @@
 			},
 			"scope": "instance",
 			"name": "linearRampToValueAtTime",
-			"lineno": "Tone/core/Param.js#L203",
+			"lineno": "Tone/core/Param.js#L205",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -19508,7 +16744,7 @@
 			},
 			"scope": "instance",
 			"name": "exponentialRampToValueAtTime",
-			"lineno": "Tone/core/Param.js#L217",
+			"lineno": "Tone/core/Param.js#L221",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -19539,7 +16775,7 @@
 				}
 			],
 			"examples": [
-				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampToValue(2, 4);"
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
 			],
 			"returns": {
 				"type": [
@@ -19548,8 +16784,8 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "exponentialRampToValue",
-			"lineno": "Tone/core/Param.js#L238",
+			"name": "exponentialRampTo",
+			"lineno": "Tone/core/Param.js#L244",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -19580,7 +16816,7 @@
 				}
 			],
 			"examples": [
-				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampToValue(4, 3);"
+				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampTo(4, 3);"
 			],
 			"returns": {
 				"type": [
@@ -19589,8 +16825,71 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "linearRampToValue",
-			"lineno": "Tone/core/Param.js#L259",
+			"name": "linearRampTo",
+			"lineno": "Tone/core/Param.js#L265",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Convert between Time and time constant. The time\nconstant returned can be used in setTargetAtTime.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to convert",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The time constant to get an exponentially approaching\n                          curve to over 99% of towards the target value."
+			},
+			"scope": "instance",
+			"name": "getTimeConstant",
+			"lineno": "Tone/core/Param.js#L279",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time. Since it\n is an exponential approach it will continue approaching after the ramp duration. The\n rampTime is the time that it takes to reach over 99% of the way towards the value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "targetRampTo",
+			"lineno": "Tone/core/Param.js#L296",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -19623,7 +16922,7 @@
 			},
 			"scope": "instance",
 			"name": "setTargetAtTime",
-			"lineno": "Tone/core/Param.js#L274",
+			"lineno": "Tone/core/Param.js#L311",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -19656,7 +16955,7 @@
 			},
 			"scope": "instance",
 			"name": "setValueCurveAtTime",
-			"lineno": "Tone/core/Param.js#L294",
+			"lineno": "Tone/core/Param.js#L331",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -19677,7 +16976,28 @@
 			},
 			"scope": "instance",
 			"name": "cancelScheduledValues",
-			"lineno": "Tone/core/Param.js#L312",
+			"lineno": "Tone/core/Param.js#L349",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "This is similar to [cancelScheduledValues](#cancelScheduledValues) except\n it holds the automated value at cancelTime until the next automated event.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "cancelTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelAndHoldAtTime",
+			"lineno": "Tone/core/Param.js#L360",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -19718,7 +17038,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L335",
+			"lineno": "Tone/core/Param.js#L397",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -19742,55 +17062,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -19957,7 +17228,7 @@
 				}
 			],
 			"examples": [
-				"//set the frequency to \"G4\" in exactly 1 second from now. \nfreq.setValueAtTime(\"G4\", \"+1\");"
+				"//set the frequency to \"G4\" in exactly 1 second from now.\nfreq.setValueAtTime(\"G4\", \"+1\");"
 			],
 			"returns": {
 				"type": [
@@ -19971,7 +17242,7 @@
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
-			"description": "Schedules a linear continuous change in parameter value from the \n previous scheduled parameter value to the given value.",
+			"description": "Schedules a linear continuous change in parameter value from the\n previous scheduled parameter value to the given value.",
 			"params": [
 				{
 					"type": [
@@ -20040,7 +17311,7 @@
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
-			"description": "Cancels all scheduled parameter changes with times greater than or \n equal to startTime.",
+			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to startTime.",
 			"params": [
 				{
 					"type": [
@@ -20057,11 +17328,32 @@
 			},
 			"scope": "instance",
 			"name": "cancelScheduledValues",
-			"lineno": "Tone/signal/TimelineSignal.js#L201",
+			"lineno": "Tone/signal/TimelineSignal.js#L200",
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
-			"description": "Sets the computed value at the given time. This provides\n a point from which a linear or exponential curve\n can be scheduled after. Will cancel events after \n the given time and shorten the currently scheduled\n linear or exponential ramp so that it ends at `time` .\n This is to avoid discontinuities and clicks in envelopes.",
+			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to cancelTime and sets the output of the signal to be the value\n at cancelTime. Similar to (cancelScheduledValues)[#cancelscheduledvalues].",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "cancelTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.TimelineSignal"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelAndHoldAtTime",
+			"lineno": "Tone/signal/TimelineSignal.js#L214",
+			"inherits": "Tone.TimelineSignal"
+		},
+		{
+			"description": "Sets the computed value at the given time. This provides\n a point from which a linear or exponential curve\n can be scheduled after. Will cancel events after\n the given time and shorten the currently scheduled\n linear or exponential ramp so that it ends at `time` .\n This is to avoid discontinuities and clicks in envelopes.",
 			"params": [
 				{
 					"type": [
@@ -20079,7 +17371,7 @@
 			},
 			"scope": "instance",
 			"name": "setRampPoint",
-			"lineno": "Tone/signal/TimelineSignal.js#L218",
+			"lineno": "Tone/signal/TimelineSignal.js#L229",
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
@@ -20115,7 +17407,7 @@
 			},
 			"scope": "instance",
 			"name": "linearRampToValueBetween",
-			"lineno": "Tone/signal/TimelineSignal.js#L253",
+			"lineno": "Tone/signal/TimelineSignal.js#L264",
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
@@ -20151,7 +17443,7 @@
 			},
 			"scope": "instance",
 			"name": "exponentialRampToValueBetween",
-			"lineno": "Tone/signal/TimelineSignal.js#L267",
+			"lineno": "Tone/signal/TimelineSignal.js#L278",
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
@@ -20173,7 +17465,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/signal/TimelineSignal.js#L303",
+			"lineno": "Tone/signal/TimelineSignal.js#L314",
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
@@ -20227,7 +17519,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/signal/TimelineSignal.js#L381",
+			"lineno": "Tone/signal/TimelineSignal.js#L392",
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
@@ -20258,7 +17550,7 @@
 				}
 			],
 			"examples": [
-				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampToValue(2, 4);"
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
 			],
 			"returns": {
 				"type": [
@@ -20267,8 +17559,8 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "exponentialRampToValue",
-			"lineno": "Tone/core/Param.js#L238",
+			"name": "exponentialRampTo",
+			"lineno": "Tone/core/Param.js#L244",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -20299,7 +17591,7 @@
 				}
 			],
 			"examples": [
-				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampToValue(4, 3);"
+				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampTo(4, 3);"
 			],
 			"returns": {
 				"type": [
@@ -20308,8 +17600,71 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "linearRampToValue",
-			"lineno": "Tone/core/Param.js#L259",
+			"name": "linearRampTo",
+			"lineno": "Tone/core/Param.js#L265",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Convert between Time and time constant. The time\nconstant returned can be used in setTargetAtTime.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to convert",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The time constant to get an exponentially approaching\n                          curve to over 99% of towards the target value."
+			},
+			"scope": "instance",
+			"name": "getTimeConstant",
+			"lineno": "Tone/core/Param.js#L279",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time. Since it\n is an exponential approach it will continue approaching after the ramp duration. The\n rampTime is the time that it takes to reach over 99% of the way towards the value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "targetRampTo",
+			"lineno": "Tone/core/Param.js#L296",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -20350,7 +17705,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L335",
+			"lineno": "Tone/core/Param.js#L397",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -20374,55 +17729,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -20462,7 +17768,7 @@
 				}
 			],
 			"examples": [
-				"//set the frequency to \"G4\" in exactly 1 second from now. \nfreq.setValueAtTime(\"G4\", \"+1\");"
+				"//set the frequency to \"G4\" in exactly 1 second from now.\nfreq.setValueAtTime(\"G4\", \"+1\");"
 			],
 			"returns": {
 				"type": [
@@ -20475,7 +17781,7 @@
 			"lineno": "Tone/signal/TimelineSignal.js#L85"
 		},
 		{
-			"description": "Schedules a linear continuous change in parameter value from the \n previous scheduled parameter value to the given value.",
+			"description": "Schedules a linear continuous change in parameter value from the\n previous scheduled parameter value to the given value.",
 			"params": [
 				{
 					"type": [
@@ -20501,7 +17807,7 @@
 			"lineno": "Tone/signal/TimelineSignal.js#L106"
 		},
 		{
-			"description": "Schedules an exponential continuous change in parameter value from \n the previous scheduled parameter value to the given value.",
+			"description": "Schedules an exponential continuous change in parameter value from\n the previous scheduled parameter value to the given value.",
 			"params": [
 				{
 					"type": [
@@ -20600,7 +17906,7 @@
 			"lineno": "Tone/signal/TimelineSignal.js#L182"
 		},
 		{
-			"description": "Cancels all scheduled parameter changes with times greater than or \n equal to startTime.",
+			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to startTime.",
 			"params": [
 				{
 					"type": [
@@ -20617,10 +17923,30 @@
 			},
 			"scope": "instance",
 			"name": "cancelScheduledValues",
-			"lineno": "Tone/signal/TimelineSignal.js#L201"
+			"lineno": "Tone/signal/TimelineSignal.js#L200"
 		},
 		{
-			"description": "Sets the computed value at the given time. This provides\n a point from which a linear or exponential curve\n can be scheduled after. Will cancel events after \n the given time and shorten the currently scheduled\n linear or exponential ramp so that it ends at `time` .\n This is to avoid discontinuities and clicks in envelopes.",
+			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to cancelTime and sets the output of the signal to be the value\n at cancelTime. Similar to (cancelScheduledValues)[#cancelscheduledvalues].",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "cancelTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.TimelineSignal"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelAndHoldAtTime",
+			"lineno": "Tone/signal/TimelineSignal.js#L214"
+		},
+		{
+			"description": "Sets the computed value at the given time. This provides\n a point from which a linear or exponential curve\n can be scheduled after. Will cancel events after\n the given time and shorten the currently scheduled\n linear or exponential ramp so that it ends at `time` .\n This is to avoid discontinuities and clicks in envelopes.",
 			"params": [
 				{
 					"type": [
@@ -20638,7 +17964,7 @@
 			},
 			"scope": "instance",
 			"name": "setRampPoint",
-			"lineno": "Tone/signal/TimelineSignal.js#L218"
+			"lineno": "Tone/signal/TimelineSignal.js#L229"
 		},
 		{
 			"description": "Do a linear ramp to the given value between the start and finish times.",
@@ -20673,7 +17999,7 @@
 			},
 			"scope": "instance",
 			"name": "linearRampToValueBetween",
-			"lineno": "Tone/signal/TimelineSignal.js#L253"
+			"lineno": "Tone/signal/TimelineSignal.js#L264"
 		},
 		{
 			"description": "Do a exponential ramp to the given value between the start and finish times.",
@@ -20708,7 +18034,7 @@
 			},
 			"scope": "instance",
 			"name": "exponentialRampToValueBetween",
-			"lineno": "Tone/signal/TimelineSignal.js#L267"
+			"lineno": "Tone/signal/TimelineSignal.js#L278"
 		},
 		{
 			"description": "Get the scheduled value at the given time. This will\n return the unconverted (raw) value.",
@@ -20729,10 +18055,10 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/signal/TimelineSignal.js#L303"
+			"lineno": "Tone/signal/TimelineSignal.js#L314"
 		},
 		{
-			"description": "When signals connect to other signals or AudioParams, \n they take over the output value of that signal or AudioParam. \n For all other nodes, the behavior is the same as a default <code>connect</code>.",
+			"description": "When signals connect to other signals or AudioParams,\n they take over the output value of that signal or AudioParam.\n For all other nodes, the behavior is the same as a default <code>connect</code>.",
 			"params": [
 				{
 					"type": [
@@ -20770,7 +18096,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/signal/TimelineSignal.js#L344"
+			"lineno": "Tone/signal/TimelineSignal.js#L355"
 		},
 		{
 			"description": "Clean up.",
@@ -20782,7 +18108,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/signal/TimelineSignal.js#L381"
+			"lineno": "Tone/signal/TimelineSignal.js#L392"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -20853,7 +18179,7 @@
 				}
 			],
 			"examples": [
-				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampToValue(2, 4);"
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
 			],
 			"returns": {
 				"type": [
@@ -20862,8 +18188,8 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "exponentialRampToValue",
-			"lineno": "Tone/core/Param.js#L238",
+			"name": "exponentialRampTo",
+			"lineno": "Tone/core/Param.js#L244",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -20894,7 +18220,7 @@
 				}
 			],
 			"examples": [
-				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampToValue(4, 3);"
+				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampTo(4, 3);"
 			],
 			"returns": {
 				"type": [
@@ -20903,8 +18229,71 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "linearRampToValue",
-			"lineno": "Tone/core/Param.js#L259",
+			"name": "linearRampTo",
+			"lineno": "Tone/core/Param.js#L265",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Convert between Time and time constant. The time\nconstant returned can be used in setTargetAtTime.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to convert",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The time constant to get an exponentially approaching\n                          curve to over 99% of towards the target value."
+			},
+			"scope": "instance",
+			"name": "getTimeConstant",
+			"lineno": "Tone/core/Param.js#L279",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time. Since it\n is an exponential approach it will continue approaching after the ramp duration. The\n rampTime is the time that it takes to reach over 99% of the way towards the value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "targetRampTo",
+			"lineno": "Tone/core/Param.js#L296",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -20945,7 +18334,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L335",
+			"lineno": "Tone/core/Param.js#L397",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -20969,55 +18358,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -21249,7 +18589,28 @@
 			"lineno": "Tone/signal/TransportTimelineSignal.js#L165"
 		},
 		{
-			"description": "Sets the computed value at the given time. This provides\n a point from which a linear or exponential curve\n can be scheduled after. Will cancel events after \n the given time and shorten the currently scheduled\n linear or exponential ramp so that it ends at `time` .\n This is to avoid discontinuities and clicks in envelopes.",
+			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to cancelTime and sets the output of the signal to be the value\n at cancelTime. Similar to (cancelScheduledValues)[#cancelscheduledvalues].",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "cancelTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.TimelineSignal"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelAndHoldAtTime",
+			"lineno": "Tone/signal/TimelineSignal.js#L214",
+			"inherits": "Tone.TimelineSignal"
+		},
+		{
+			"description": "Sets the computed value at the given time. This provides\n a point from which a linear or exponential curve\n can be scheduled after. Will cancel events after\n the given time and shorten the currently scheduled\n linear or exponential ramp so that it ends at `time` .\n This is to avoid discontinuities and clicks in envelopes.",
 			"params": [
 				{
 					"type": [
@@ -21267,7 +18628,7 @@
 			},
 			"scope": "instance",
 			"name": "setRampPoint",
-			"lineno": "Tone/signal/TimelineSignal.js#L218",
+			"lineno": "Tone/signal/TimelineSignal.js#L229",
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
@@ -21303,7 +18664,7 @@
 			},
 			"scope": "instance",
 			"name": "linearRampToValueBetween",
-			"lineno": "Tone/signal/TimelineSignal.js#L253",
+			"lineno": "Tone/signal/TimelineSignal.js#L264",
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
@@ -21339,7 +18700,7 @@
 			},
 			"scope": "instance",
 			"name": "exponentialRampToValueBetween",
-			"lineno": "Tone/signal/TimelineSignal.js#L267",
+			"lineno": "Tone/signal/TimelineSignal.js#L278",
 			"inherits": "Tone.TimelineSignal"
 		},
 		{
@@ -21411,7 +18772,7 @@
 				}
 			],
 			"examples": [
-				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampToValue(2, 4);"
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
 			],
 			"returns": {
 				"type": [
@@ -21420,8 +18781,8 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "exponentialRampToValue",
-			"lineno": "Tone/core/Param.js#L238",
+			"name": "exponentialRampTo",
+			"lineno": "Tone/core/Param.js#L244",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -21452,7 +18813,7 @@
 				}
 			],
 			"examples": [
-				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampToValue(4, 3);"
+				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampTo(4, 3);"
 			],
 			"returns": {
 				"type": [
@@ -21461,8 +18822,71 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "linearRampToValue",
-			"lineno": "Tone/core/Param.js#L259",
+			"name": "linearRampTo",
+			"lineno": "Tone/core/Param.js#L265",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Convert between Time and time constant. The time\nconstant returned can be used in setTargetAtTime.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to convert",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The time constant to get an exponentially approaching\n                          curve to over 99% of towards the target value."
+			},
+			"scope": "instance",
+			"name": "getTimeConstant",
+			"lineno": "Tone/core/Param.js#L279",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time. Since it\n is an exponential approach it will continue approaching after the ramp duration. The\n rampTime is the time that it takes to reach over 99% of the way towards the value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "targetRampTo",
+			"lineno": "Tone/core/Param.js#L296",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -21503,7 +18927,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L335",
+			"lineno": "Tone/core/Param.js#L397",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -21527,55 +18951,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -21747,7 +19122,7 @@
 		{
 			"description": "Sync the signal to the Transport's bpm. Any changes to the transports bpm,\n will also affect the oscillators frequency.",
 			"examples": [
-				"Tone.Transport.bpm.value = 120;\nosc.frequency.value = 440;\n//the ration between the bpm and the frequency will be maintained\nosc.syncFrequency();\nTone.Transport.bpm.value = 240; \n// the frequency of the oscillator is doubled to 880"
+				"Tone.Transport.bpm.value = 120;\nosc.frequency.value = 440;\n//the ration between the bpm and the frequency will be maintained\nosc.syncFrequency();\nTone.Transport.bpm.value = 240;\n// the frequency of the oscillator is doubled to 880"
 			],
 			"returns": {
 				"type": [
@@ -21757,11 +19132,11 @@
 			},
 			"scope": "instance",
 			"name": "syncFrequency",
-			"lineno": "Tone/source/Oscillator.js#L164",
+			"lineno": "Tone/source/Oscillator.js#L168",
 			"inherits": "Tone.Oscillator"
 		},
 		{
-			"description": "Unsync the oscillator's frequency from the Transport. \n See Tone.Oscillator.syncFrequency",
+			"description": "Unsync the oscillator's frequency from the Transport.\n See Tone.Oscillator.syncFrequency",
 			"returns": {
 				"type": [
 					"Tone.Oscillator"
@@ -21770,7 +19145,7 @@
 			},
 			"scope": "instance",
 			"name": "unsyncFrequency",
-			"lineno": "Tone/source/Oscillator.js#L174",
+			"lineno": "Tone/source/Oscillator.js#L178",
 			"inherits": "Tone.Oscillator"
 		},
 		{
@@ -21922,55 +19297,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -22043,7 +19369,7 @@
 			},
 			"scope": "instance",
 			"name": "start",
-			"lineno": "Tone/source/BufferSource.js#L153"
+			"lineno": "Tone/source/BufferSource.js#L161"
 		},
 		{
 			"description": "Stop the buffer. Optionally add a ramp time to fade the\n buffer out.",
@@ -22073,7 +19399,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/BufferSource.js#L230"
+			"lineno": "Tone/source/BufferSource.js#L236"
 		},
 		{
 			"description": "Clean up.",
@@ -22085,7 +19411,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/BufferSource.js#L342"
+			"lineno": "Tone/source/BufferSource.js#L357"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -22149,55 +19475,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -22379,55 +19656,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -22603,55 +19831,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -22872,55 +20051,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -23331,55 +20461,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -23593,55 +20674,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -23662,7 +20694,7 @@
 		{
 			"description": "Sync the signal to the Transport's bpm. Any changes to the transports bpm,\n will also affect the oscillators frequency.",
 			"examples": [
-				"Tone.Transport.bpm.value = 120;\nosc.frequency.value = 440;\n//the ration between the bpm and the frequency will be maintained\nosc.syncFrequency();\nTone.Transport.bpm.value = 240; \n// the frequency of the oscillator is doubled to 880"
+				"Tone.Transport.bpm.value = 120;\nosc.frequency.value = 440;\n//the ration between the bpm and the frequency will be maintained\nosc.syncFrequency();\nTone.Transport.bpm.value = 240;\n// the frequency of the oscillator is doubled to 880"
 			],
 			"returns": {
 				"type": [
@@ -23672,10 +20704,10 @@
 			},
 			"scope": "instance",
 			"name": "syncFrequency",
-			"lineno": "Tone/source/Oscillator.js#L164"
+			"lineno": "Tone/source/Oscillator.js#L168"
 		},
 		{
-			"description": "Unsync the oscillator's frequency from the Transport. \n See Tone.Oscillator.syncFrequency",
+			"description": "Unsync the oscillator's frequency from the Transport.\n See Tone.Oscillator.syncFrequency",
 			"returns": {
 				"type": [
 					"Tone.Oscillator"
@@ -23684,7 +20716,7 @@
 			},
 			"scope": "instance",
 			"name": "unsyncFrequency",
-			"lineno": "Tone/source/Oscillator.js#L174"
+			"lineno": "Tone/source/Oscillator.js#L178"
 		},
 		{
 			"description": "Dispose and disconnect.",
@@ -23696,7 +20728,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/Oscillator.js#L363"
+			"lineno": "Tone/source/Oscillator.js#L367"
 		},
 		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
@@ -23844,55 +20876,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -24071,55 +21054,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -24405,55 +21339,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -24642,55 +21527,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -24869,55 +21705,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -25092,55 +21879,6 @@
 			"inherits": "Tone.AudioNode"
 		},
 		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -25283,55 +22021,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L148",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L163",
 			"inherits": "Tone.AudioNode"
 		},
 		{

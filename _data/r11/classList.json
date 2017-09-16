@@ -6,6 +6,7 @@
 		"CrossFade",
 		"EQ3",
 		"Envelope",
+		"FFT",
 		"FeedbackCombFilter",
 		"Filter",
 		"Follower",
@@ -28,7 +29,8 @@
 		"ScaledEnvelope",
 		"Solo",
 		"Split",
-		"Volume"
+		"Volume",
+		"Waveform"
 	],
 	"control": [
 		"CtrlInterpolate",
@@ -54,7 +56,9 @@
 		"Timeline",
 		"TimelineState",
 		"Tone",
-		"Transport"
+		"Transport",
+		"TransportEvent",
+		"TransportRepeatEvent"
 	],
 	"effect": [
 		"AutoFilter",

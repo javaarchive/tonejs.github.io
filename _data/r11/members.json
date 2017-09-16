@@ -10,7 +10,7 @@
 			"lineno": "Tone/component/Analyser.js#L97"
 		},
 		{
-			"description": "The analysis function returned by Tone.Analyser.analyse(), either \"fft\" or \"waveform\".",
+			"description": "The analysis function returned by analyser.getValue(), either \"fft\" or \"waveform\".",
 			"type": [
 				"String"
 			],
@@ -30,7 +30,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -93,7 +93,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -134,7 +134,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -207,7 +207,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -293,7 +293,29 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"FFT": [
+		{
+			"description": "The size of analysis. This must be a power of two in the range 32 to 32768.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "size",
+			"lineno": "Tone/component/FFT.js#L43"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -326,7 +348,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -397,7 +419,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -428,7 +450,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -548,7 +570,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -588,7 +610,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -685,7 +707,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -708,7 +730,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -751,7 +773,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -782,7 +804,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -793,37 +815,28 @@
 	],
 	"Meter": [
 		{
-			"description": "The type of the meter, either \"level\" or \"signal\".\n A \"level\" meter will return the volume level (rms) of the\n input signal and a \"signal\" meter will return\n the signal value of the input.",
-			"type": [
-				"String"
-			],
-			"scope": "instance",
-			"name": "type",
-			"lineno": "Tone/component/Meter.js#L34"
-		},
-		{
 			"description": "The amount of carryover between the current and last frame.\n Only applied meter for \"level\" type.",
 			"type": [
 				"Number"
 			],
 			"scope": "instance",
 			"name": "smoothing",
-			"lineno": "Tone/component/Meter.js#L48"
+			"lineno": "Tone/component/Meter.js#L38"
 		},
 		{
-			"description": "The current value of the meter. A value of 1 is\n\"unity\".",
+			"description": "A value from 0 -> 1 where 0 represents no time averaging with the last analysis frame.",
 			"type": [
 				"Number"
 			],
 			"readonly": true,
 			"scope": "instance",
-			"name": "value",
-			"lineno": "Tone/component/Meter.js#L80"
+			"name": "smoothing",
+			"lineno": "Tone/component/Meter.js#L75"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -854,7 +867,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -885,7 +898,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -916,7 +929,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -976,7 +989,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -1046,7 +1059,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -1088,7 +1101,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -1121,7 +1134,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -1260,7 +1273,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -1380,7 +1393,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -1421,7 +1434,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -1452,7 +1465,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -1487,7 +1500,29 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Waveform": [
+		{
+			"description": "The size of analysis. This must be a power of two in the range 32 to 32768.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "size",
+			"lineno": "Tone/component/Waveform.js#L43"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -1633,7 +1668,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -1986,12 +2021,12 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L345"
+			"lineno": "Tone/core/Param.js#L407"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2008,7 +2043,7 @@
 			],
 			"scope": "instance",
 			"name": "memory",
-			"lineno": "Tone/core/Timeline.js#L44"
+			"lineno": "Tone/core/Timeline.js#L51"
 		},
 		{
 			"description": "The number of items in the timeline.",
@@ -2018,7 +2053,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "length",
-			"lineno": "Tone/core/Timeline.js#L58"
+			"lineno": "Tone/core/Timeline.js#L65"
 		}
 	],
 	"Tone": [
@@ -2030,7 +2065,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "context",
-			"lineno": "Tone/core/Tone.js#L573"
+			"lineno": "Tone/core/Tone.js#L583"
 		}
 	],
 	"Transport": [
@@ -2041,7 +2076,7 @@
 			],
 			"scope": "instance",
 			"name": "loop",
-			"lineno": "Tone/core/Transport.js#L45"
+			"lineno": "Tone/core/Transport.js#L46"
 		},
 		{
 			"description": "The Beats Per Minute of the Transport.",
@@ -2053,7 +2088,7 @@
 			],
 			"scope": "instance",
 			"name": "bpm",
-			"lineno": "Tone/core/Transport.js#L94",
+			"lineno": "Tone/core/Transport.js#L95",
 			"signal": true
 		},
 		{
@@ -2064,10 +2099,10 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "state",
-			"lineno": "Tone/core/Transport.js#L386"
+			"lineno": "Tone/core/Transport.js#L355"
 		},
 		{
-			"description": "The time signature as just the numerator over 4. \n For example 4/4 would be just 4 and 6/8 would be 3.",
+			"description": "The time signature as just the numerator over 4.\n For example 4/4 would be just 4 and 6/8 would be 3.",
 			"type": [
 				"Number",
 				"Array"
@@ -2077,7 +2112,7 @@
 			],
 			"scope": "instance",
 			"name": "timeSignature",
-			"lineno": "Tone/core/Transport.js#L459"
+			"lineno": "Tone/core/Transport.js#L428"
 		},
 		{
 			"description": "When the Tone.Transport.loop = true, this is the starting position of the loop.",
@@ -2086,7 +2121,7 @@
 			],
 			"scope": "instance",
 			"name": "loopStart",
-			"lineno": "Tone/core/Transport.js#L486"
+			"lineno": "Tone/core/Transport.js#L455"
 		},
 		{
 			"description": "When the Tone.Transport.loop = true, this is the ending position of the loop.",
@@ -2095,25 +2130,25 @@
 			],
 			"scope": "instance",
 			"name": "loopEnd",
-			"lineno": "Tone/core/Transport.js#L501"
+			"lineno": "Tone/core/Transport.js#L470"
 		},
 		{
-			"description": "The swing value. Between 0-1 where 1 equal to \n the note + half the subdivision.",
+			"description": "The swing value. Between 0-1 where 1 equal to\n the note + half the subdivision.",
 			"type": [
 				"NormalRange"
 			],
 			"scope": "instance",
 			"name": "swing",
-			"lineno": "Tone/core/Transport.js#L532"
+			"lineno": "Tone/core/Transport.js#L501"
 		},
 		{
-			"description": "Set the subdivision which the swing will be applied to. \n The default value is an 8th note. Value must be less \n than a quarter note.",
+			"description": "Set the subdivision which the swing will be applied to.\n The default value is an 8th note. Value must be less\n than a quarter note.",
 			"type": [
 				"Time"
 			],
 			"scope": "instance",
 			"name": "swingSubdivision",
-			"lineno": "Tone/core/Transport.js#L549"
+			"lineno": "Tone/core/Transport.js#L518"
 		},
 		{
 			"description": "The Transport's position in Bars:Beats:Sixteenths.\n Setting the value will jump to that position right away.",
@@ -2122,7 +2157,7 @@
 			],
 			"scope": "instance",
 			"name": "position",
-			"lineno": "Tone/core/Transport.js#L567"
+			"lineno": "Tone/core/Transport.js#L536"
 		},
 		{
 			"description": "The Transport's position in seconds\n Setting the value will jump to that position right away.",
@@ -2131,7 +2166,7 @@
 			],
 			"scope": "instance",
 			"name": "seconds",
-			"lineno": "Tone/core/Transport.js#L584"
+			"lineno": "Tone/core/Transport.js#L553"
 		},
 		{
 			"description": "The Transport's loop position as a normalized value. Always\n returns 0 if the transport if loop is not true.",
@@ -2140,7 +2175,7 @@
 			],
 			"scope": "instance",
 			"name": "progress",
-			"lineno": "Tone/core/Transport.js#L601"
+			"lineno": "Tone/core/Transport.js#L570"
 		},
 		{
 			"description": "The transports current tick position.",
@@ -2149,16 +2184,54 @@
 			],
 			"scope": "instance",
 			"name": "ticks",
-			"lineno": "Tone/core/Transport.js#L618"
+			"lineno": "Tone/core/Transport.js#L587"
 		},
 		{
-			"description": "Pulses Per Quarter note. This is the smallest resolution\n the Transport timing supports. This should be set once\n on initialization and not set again. Changing this value \n after other objects have been created can cause problems.",
+			"description": "Pulses Per Quarter note. This is the smallest resolution\n the Transport timing supports. This should be set once\n on initialization and not set again. Changing this value\n after other objects have been created can cause problems.",
 			"type": [
 				"Number"
 			],
 			"scope": "instance",
 			"name": "PPQ",
-			"lineno": "Tone/core/Transport.js#L645"
+			"lineno": "Tone/core/Transport.js#L614"
+		}
+	],
+	"TransportEvent": [
+		{
+			"description": "Reference to the Transport that created it",
+			"type": [
+				"Tone.Transport"
+			],
+			"scope": "instance",
+			"name": "Transport",
+			"lineno": "Tone/core/TransportEvent.js#L19"
+		},
+		{
+			"description": "The unique id of the event",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "id",
+			"lineno": "Tone/core/TransportEvent.js#L25"
+		},
+		{
+			"description": "The time the event starts",
+			"type": [
+				"Ticks"
+			],
+			"scope": "instance",
+			"name": "time",
+			"lineno": "Tone/core/TransportEvent.js#L31"
+		},
+		{
+			"description": "The callback to invoke",
+			"type": [
+				"function"
+			],
+			"scope": "instance",
+			"name": "callback",
+			"lineno": "Tone/core/TransportEvent.js#L37"
 		}
 	],
 	"AutoFilter": [
@@ -2241,7 +2314,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2285,7 +2358,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2356,7 +2429,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2389,7 +2462,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2431,7 +2504,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2512,7 +2585,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2545,7 +2618,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2587,7 +2660,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2610,7 +2683,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2655,7 +2728,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2689,7 +2762,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2733,7 +2806,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2767,7 +2840,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2828,7 +2901,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2873,7 +2946,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2942,7 +3015,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2965,7 +3038,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -2999,7 +3072,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -3033,7 +3106,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -3067,7 +3140,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -3129,7 +3202,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -3182,7 +3255,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -3823,7 +3896,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -3921,7 +3994,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4037,7 +4110,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4063,7 +4136,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4126,7 +4199,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4208,7 +4281,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4301,7 +4374,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4337,7 +4410,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4385,7 +4458,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4441,7 +4514,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4487,7 +4560,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4523,7 +4596,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "loaded",
-			"lineno": "Tone/instrument/Sampler.js#L192"
+			"lineno": "Tone/instrument/Sampler.js#L193"
 		},
 		{
 			"description": "The volume of the output in decibels.",
@@ -4542,7 +4615,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4617,7 +4690,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4775,13 +4848,13 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L345",
+			"lineno": "Tone/core/Param.js#L407",
 			"inherits": "Tone.Param"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4944,7 +5017,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -4992,6 +5065,15 @@
 			"lineno": "Tone/source/BufferSource.js#L83"
 		},
 		{
+			"description": "The curve applied to the fades, either \"linear\" or \"exponential\"",
+			"type": [
+				"String"
+			],
+			"scope": "instance",
+			"name": "curve",
+			"lineno": "Tone/source/BufferSource.js#L89"
+		},
+		{
 			"description": "Returns the playback state of the source, either \"started\" or \"stopped\".",
 			"type": [
 				"Tone.State"
@@ -4999,7 +5081,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "state",
-			"lineno": "Tone/source/BufferSource.js#L123"
+			"lineno": "Tone/source/BufferSource.js#L131"
 		},
 		{
 			"description": "If loop is true, the loop will start at this position.",
@@ -5008,7 +5090,7 @@
 			],
 			"scope": "instance",
 			"name": "loopStart",
-			"lineno": "Tone/source/BufferSource.js#L278"
+			"lineno": "Tone/source/BufferSource.js#L293"
 		},
 		{
 			"description": "If loop is true, the loop will end at this position.",
@@ -5017,7 +5099,7 @@
 			],
 			"scope": "instance",
 			"name": "loopEnd",
-			"lineno": "Tone/source/BufferSource.js#L293"
+			"lineno": "Tone/source/BufferSource.js#L308"
 		},
 		{
 			"description": "The audio buffer belonging to the player.",
@@ -5026,7 +5108,7 @@
 			],
 			"scope": "instance",
 			"name": "buffer",
-			"lineno": "Tone/source/BufferSource.js#L308"
+			"lineno": "Tone/source/BufferSource.js#L323"
 		},
 		{
 			"description": "If the buffer should loop once it's over.",
@@ -5035,12 +5117,12 @@
 			],
 			"scope": "instance",
 			"name": "loop",
-			"lineno": "Tone/source/BufferSource.js#L323"
+			"lineno": "Tone/source/BufferSource.js#L338"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -5193,7 +5275,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -5332,7 +5414,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -5475,7 +5557,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -5619,7 +5701,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -5807,7 +5889,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -5838,7 +5920,7 @@
 			"signal": true
 		},
 		{
-			"description": "The type of the oscillator: either sine, square, triangle, or sawtooth. Also capable of\nsetting the first x number of partials of the oscillator. For example: \"sine4\" would\nset be the first 4 partials of the sine wave and \"triangle8\" would set the first\n8 partials of the triangle wave.\n<br><br> \nUses PeriodicWave internally even for native types so that it can set the phase. \nPeriodicWave equations are from the \n[Webkit Web Audio implementation](https://code.google.com/p/chromium/codesearch#chromium/src/third_party/WebKit/Source/modules/webaudio/PeriodicWave.cpp&sq=package:chromium).",
+			"description": "The type of the oscillator: either sine, square, triangle, or sawtooth. Also capable of\nsetting the first x number of partials of the oscillator. For example: \"sine4\" would\nset be the first 4 partials of the sine wave and \"triangle8\" would set the first\n8 partials of the triangle wave.\n<br><br>\nUses PeriodicWave internally even for native types so that it can set the phase.\nPeriodicWave equations are from the\n[Webkit Web Audio implementation](https://code.google.com/p/chromium/codesearch#chromium/src/third_party/WebKit/Source/modules/webaudio/PeriodicWave.cpp&sq=package:chromium).",
 			"type": [
 				"string"
 			],
@@ -5848,10 +5930,10 @@
 			],
 			"scope": "instance",
 			"name": "type",
-			"lineno": "Tone/source/Oscillator.js#L179"
+			"lineno": "Tone/source/Oscillator.js#L183"
 		},
 		{
-			"description": "The partials of the waveform. A partial represents \nthe amplitude at a harmonic. The first harmonic is the \nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series. \nSetting this value will automatically set the type to \"custom\". \nThe value is an empty array when the type is not \"custom\".",
+			"description": "The partials of the waveform. A partial represents\nthe amplitude at a harmonic. The first harmonic is the\nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series.\nSetting this value will automatically set the type to \"custom\".\nThe value is an empty array when the type is not \"custom\".",
 			"type": [
 				"Array"
 			],
@@ -5860,7 +5942,7 @@
 			],
 			"scope": "instance",
 			"name": "partials",
-			"lineno": "Tone/source/Oscillator.js#L313"
+			"lineno": "Tone/source/Oscillator.js#L317"
 		},
 		{
 			"description": "The phase of the oscillator in degrees.",
@@ -5872,7 +5954,7 @@
 			],
 			"scope": "instance",
 			"name": "phase",
-			"lineno": "Tone/source/Oscillator.js#L340"
+			"lineno": "Tone/source/Oscillator.js#L344"
 		},
 		{
 			"description": "Mute the output.",
@@ -5935,7 +6017,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6055,7 +6137,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6209,7 +6291,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6255,7 +6337,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6333,7 +6415,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6453,7 +6535,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6541,7 +6623,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6634,7 +6716,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6647,7 +6729,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6700,7 +6782,7 @@
 			],
 			"scope": "instance",
 			"name": "memory",
-			"lineno": "Tone/core/Timeline.js#L44",
+			"lineno": "Tone/core/Timeline.js#L51",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -6711,8 +6793,50 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "length",
-			"lineno": "Tone/core/Timeline.js#L58",
+			"lineno": "Tone/core/Timeline.js#L65",
 			"inherits": "Tone.Timeline"
+		}
+	],
+	"TransportRepeatEvent": [
+		{
+			"description": "Reference to the Transport that created it",
+			"type": [
+				"Tone.Transport"
+			],
+			"scope": "instance",
+			"name": "Transport",
+			"lineno": "Tone/core/TransportEvent.js#L19",
+			"inherits": "Tone.TransportEvent"
+		},
+		{
+			"description": "The unique id of the event",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "id",
+			"lineno": "Tone/core/TransportEvent.js#L25",
+			"inherits": "Tone.TransportEvent"
+		},
+		{
+			"description": "The time the event starts",
+			"type": [
+				"Ticks"
+			],
+			"scope": "instance",
+			"name": "time",
+			"lineno": "Tone/core/TransportEvent.js#L31",
+			"inherits": "Tone.TransportEvent"
+		},
+		{
+			"description": "The callback to invoke",
+			"type": [
+				"function"
+			],
+			"scope": "instance",
+			"name": "callback",
+			"lineno": "Tone/core/TransportEvent.js#L37",
+			"inherits": "Tone.TransportEvent"
 		}
 	],
 	"MidSideEffect": [
@@ -6730,7 +6854,7 @@
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6778,13 +6902,13 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L345",
+			"lineno": "Tone/core/Param.js#L407",
 			"inherits": "Tone.Param"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6832,13 +6956,13 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L345",
+			"lineno": "Tone/core/Param.js#L407",
 			"inherits": "Tone.Param"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6886,13 +7010,13 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L345",
+			"lineno": "Tone/core/Param.js#L407",
 			"inherits": "Tone.Param"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6940,13 +7064,13 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L345",
+			"lineno": "Tone/core/Param.js#L407",
 			"inherits": "Tone.Param"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -6994,13 +7118,13 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L345",
+			"lineno": "Tone/core/Param.js#L407",
 			"inherits": "Tone.Param"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -7048,13 +7172,13 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L345",
+			"lineno": "Tone/core/Param.js#L407",
 			"inherits": "Tone.Param"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",
@@ -7102,13 +7226,13 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L345",
+			"lineno": "Tone/core/Param.js#L407",
 			"inherits": "Tone.Param"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
-				"AudioNode"
+				"Tone.Context"
 			],
 			"readonly": true,
 			"scope": "instance",

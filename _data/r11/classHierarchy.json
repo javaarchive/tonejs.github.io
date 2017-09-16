@@ -24,6 +24,10 @@
 		"AudioNode",
 		"Tone"
 	],
+	"FFT": [
+		"AudioNode",
+		"Tone"
+	],
 	"FeedbackCombFilter": [
 		"AudioNode",
 		"Tone"
@@ -118,6 +122,10 @@
 		"AudioNode",
 		"Tone"
 	],
+	"Waveform": [
+		"AudioNode",
+		"Tone"
+	],
 	"CtrlInterpolate": [
 		"Tone"
 	],
@@ -186,6 +194,13 @@
 	],
 	"Transport": [
 		"Emitter",
+		"Tone"
+	],
+	"TransportEvent": [
+		"Tone"
+	],
+	"TransportRepeatEvent": [
+		"TransportEvent",
 		"Tone"
 	],
 	"AutoFilter": [

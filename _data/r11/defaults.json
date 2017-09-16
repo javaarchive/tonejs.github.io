@@ -26,6 +26,9 @@
 		"attackCurve": "linear",
 		"releaseCurve": "exponential"
 	},
+	"FFT": {
+		"size": 1024
+	},
 	"FeedbackCombFilter": {
 		"delayTime": 0.1,
 		"resonance": 0.5
@@ -69,8 +72,7 @@
 		"dampening": 3000
 	},
 	"Meter": {
-		"smoothing": 0.8,
-		"type": "Tone.Meter.Type.Level"
+		"smoothing": 0.8
 	},
 	"MidSideCompressor": {
 		"mid": {
@@ -132,6 +134,9 @@
 	"Volume": {
 		"volume": 0,
 		"mute": false
+	},
+	"Waveform": {
+		"size": 1024
 	},
 	"CtrlInterpolate": {
 		"index": 0,
@@ -203,6 +208,14 @@
 		"loopStart": 0,
 		"loopEnd": "4m",
 		"PPQ": 192
+	},
+	"TransportEvent": {
+		"once": false,
+		"callback": "Tone.noOp"
+	},
+	"TransportRepeatEvent": {
+		"duration": "Infinity",
+		"interval": 1
 	},
 	"AutoFilter": {
 		"frequency": 1,
@@ -545,6 +558,7 @@
 		"loopEnd": 0,
 		"fadeIn": 0,
 		"fadeOut": 0,
+		"curve": "linear",
 		"playbackRate": 1
 	},
 	"FMOscillator": {
