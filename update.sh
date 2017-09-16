@@ -25,15 +25,21 @@ git checkout master
 
 cd $SITE_DIR
 
+if [ "$TRAVIS" = "true" ]; then
+	COMMIT_MESSAGE="- build #$TRAVIS_BUILD_NUMBER: $TRAVIS_COMMIT_MESSAGE"
+else
+	COMMIT_MESSAGE=""
+fi
+
 # sync the examples dir
 cp -a $TMP_TONE/examples/. $SITE_DIR/examples/
 git add ./examples
-git commit -m 'updating to latest examples'
+git commit -m "updating to latest examples $COMMIT_MESSAGE" -m "Automated commit"
 
 # and the build
 cp -a $TMP_TONE/build/. $SITE_DIR/build/
 git add ./build/
-git commit -m 'updating to latest build'
+git commit -m "updating to latest build $COMMIT_MESSAGE" -m "Automated commit"
 
 # push the changes
 git push -f
