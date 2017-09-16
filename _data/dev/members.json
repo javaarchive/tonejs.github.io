@@ -1,4 +1,44 @@
 {
+	"Analyser": [
+		{
+			"description": "The size of analysis. This must be a power of two in the range 32 to 32768.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "size",
+			"lineno": "Tone/component/Analyser.js#L97"
+		},
+		{
+			"description": "The analysis function returned by analyser.getValue(), either \"fft\" or \"waveform\".",
+			"type": [
+				"String"
+			],
+			"scope": "instance",
+			"name": "type",
+			"lineno": "Tone/component/Analyser.js#L113"
+		},
+		{
+			"description": "0 represents no time averaging with the last analysis frame.",
+			"type": [
+				"NormalRange"
+			],
+			"scope": "instance",
+			"name": "smoothing",
+			"lineno": "Tone/component/Analyser.js#L131"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
 	"Compressor": [
 		{
 			"description": "the threshold vaue",
@@ -163,6 +203,114 @@
 			"name": "highFrequency",
 			"lineno": "Tone/component/EQ3.js#L101",
 			"signal": true
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Envelope": [
+		{
+			"description": "When triggerAttack is called, the attack time is the amount of\n time it takes for the envelope to reach it's maximum value.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "attack",
+			"lineno": "Tone/component/Envelope.js#L43"
+		},
+		{
+			"description": "After the attack portion of the envelope, the value will fall\n over the duration of the decay time to it's sustain value.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "decay",
+			"lineno": "Tone/component/Envelope.js#L50"
+		},
+		{
+			"description": "The sustain value is the value\n\twhich the envelope rests at after triggerAttack is\n\tcalled, but before triggerRelease is invoked.",
+			"type": [
+				"NormalRange"
+			],
+			"scope": "instance",
+			"name": "sustain",
+			"lineno": "Tone/component/Envelope.js#L58"
+		},
+		{
+			"description": "After triggerRelease is called, the envelope's\n value will fall to it's miminum value over the\n duration of the release time.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "release",
+			"lineno": "Tone/component/Envelope.js#L66"
+		},
+		{
+			"description": "Read the current value of the envelope. Useful for\nsyncronizing visual output to the envelope.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "value",
+			"lineno": "Tone/component/Envelope.js#L111"
+		},
+		{
+			"description": "The shape of the attack.\nCan be any of these strings:\n<ul>\n  <li>linear</li>\n  <li>exponential</li>\n  <li>sine</li>\n  <li>cosine</li>\n  <li>bounce</li>\n  <li>ripple</li>\n  <li>step</li>\n</ul>\nCan also be an array which describes the curve. Values\nin the array are evenly subdivided and linearly\ninterpolated over the duration of the attack.",
+			"type": [
+				"String",
+				"Array"
+			],
+			"examples": [
+				"env.attackCurve = \"linear\";",
+				"//can also be an array\nenv.attackCurve = [0, 0.2, 0.3, 0.4, 1]"
+			],
+			"scope": "instance",
+			"name": "attackCurve",
+			"lineno": "Tone/component/Envelope.js#L125"
+		},
+		{
+			"description": "The shape of the release. See the attack curve types.",
+			"type": [
+				"String",
+				"Array"
+			],
+			"examples": [
+				"env.releaseCurve = \"linear\";"
+			],
+			"scope": "instance",
+			"name": "releaseCurve",
+			"lineno": "Tone/component/Envelope.js#L181"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"FFT": [
+		{
+			"description": "The size of analysis. This must be a power of two in the range 32 to 32768.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "size",
+			"lineno": "Tone/component/FFT.js#L43"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -652,6 +800,38 @@
 			"scope": "instance",
 			"name": "right",
 			"lineno": "Tone/component/Merge.js#L38"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Meter": [
+		{
+			"description": "The amount of carryover between the current and last frame.\n Only applied meter for \"level\" type.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "smoothing",
+			"lineno": "Tone/component/Meter.js#L38"
+		},
+		{
+			"description": "A value from 0 -> 1 where 0 represents no time averaging with the last analysis frame.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "smoothing",
+			"lineno": "Tone/component/Meter.js#L75"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -1329,186 +1509,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"Analyser": [
-		{
-			"description": "The size of analysis. This must be a power of two in the range 32 to 32768.",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "size",
-			"lineno": "Tone/component/Analyser.js#L97"
-		},
-		{
-			"description": "The analysis function returned by analyser.getValue(), either \"fft\" or \"waveform\".",
-			"type": [
-				"String"
-			],
-			"scope": "instance",
-			"name": "type",
-			"lineno": "Tone/component/Analyser.js#L113"
-		},
-		{
-			"description": "0 represents no time averaging with the last analysis frame.",
-			"type": [
-				"NormalRange"
-			],
-			"scope": "instance",
-			"name": "smoothing",
-			"lineno": "Tone/component/Analyser.js#L131"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Envelope": [
-		{
-			"description": "When triggerAttack is called, the attack time is the amount of\n time it takes for the envelope to reach it's maximum value.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "attack",
-			"lineno": "Tone/component/Envelope.js#L43"
-		},
-		{
-			"description": "After the attack portion of the envelope, the value will fall\n over the duration of the decay time to it's sustain value.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "decay",
-			"lineno": "Tone/component/Envelope.js#L50"
-		},
-		{
-			"description": "The sustain value is the value\n\twhich the envelope rests at after triggerAttack is\n\tcalled, but before triggerRelease is invoked.",
-			"type": [
-				"NormalRange"
-			],
-			"scope": "instance",
-			"name": "sustain",
-			"lineno": "Tone/component/Envelope.js#L58"
-		},
-		{
-			"description": "After triggerRelease is called, the envelope's\n value will fall to it's miminum value over the\n duration of the release time.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "release",
-			"lineno": "Tone/component/Envelope.js#L66"
-		},
-		{
-			"description": "Read the current value of the envelope. Useful for\nsyncronizing visual output to the envelope.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "value",
-			"lineno": "Tone/component/Envelope.js#L111"
-		},
-		{
-			"description": "The shape of the attack.\nCan be any of these strings:\n<ul>\n  <li>linear</li>\n  <li>exponential</li>\n  <li>sine</li>\n  <li>cosine</li>\n  <li>bounce</li>\n  <li>ripple</li>\n  <li>step</li>\n</ul>\nCan also be an array which describes the curve. Values\nin the array are evenly subdivided and linearly\ninterpolated over the duration of the attack.",
-			"type": [
-				"String",
-				"Array"
-			],
-			"examples": [
-				"env.attackCurve = \"linear\";",
-				"//can also be an array\nenv.attackCurve = [0, 0.2, 0.3, 0.4, 1]"
-			],
-			"scope": "instance",
-			"name": "attackCurve",
-			"lineno": "Tone/component/Envelope.js#L125"
-		},
-		{
-			"description": "The shape of the release. See the attack curve types.",
-			"type": [
-				"String",
-				"Array"
-			],
-			"examples": [
-				"env.releaseCurve = \"linear\";"
-			],
-			"scope": "instance",
-			"name": "releaseCurve",
-			"lineno": "Tone/component/Envelope.js#L181"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"FFT": [
-		{
-			"description": "The size of analysis. This must be a power of two in the range 32 to 32768.",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "size",
-			"lineno": "Tone/component/FFT.js#L43"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Meter": [
-		{
-			"description": "The amount of carryover between the current and last frame.\n Only applied meter for \"level\" type.",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "smoothing",
-			"lineno": "Tone/component/Meter.js#L38"
-		},
-		{
-			"description": "A value from 0 -> 1 where 0 represents no time averaging with the last analysis frame.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "smoothing",
-			"lineno": "Tone/component/Meter.js#L75"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"Waveform": [
 		{
 			"description": "The size of analysis. This must be a power of two in the range 32 to 32768.",
@@ -1662,6 +1662,18 @@
 			"scope": "instance",
 			"name": "value",
 			"lineno": "Tone/control/CtrlRandom.js#L56"
+		}
+	],
+	"AudioNode": [
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27"
 		}
 	],
 	"Buffer": [
@@ -1973,18 +1985,6 @@
 			"lineno": "Tone/core/Master.js#L62"
 		}
 	],
-	"AudioNode": [
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27"
-		}
-	],
 	"Param": [
 		{
 			"description": "The units of the parameter",
@@ -2054,18 +2054,6 @@
 			"scope": "instance",
 			"name": "length",
 			"lineno": "Tone/core/Timeline.js#L65"
-		}
-	],
-	"Tone": [
-		{
-			"description": "The AudioContext",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/Tone.js#L583"
 		}
 	],
 	"Transport": [
@@ -2232,6 +2220,18 @@
 			"scope": "instance",
 			"name": "callback",
 			"lineno": "Tone/core/TransportEvent.js#L37"
+		}
+	],
+	"Tone": [
+		{
+			"description": "The AudioContext",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/Tone.js#L583"
 		}
 	],
 	"AutoFilter": [
@@ -4208,6 +4208,88 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
+	"MetalSynth": [
+		{
+			"description": "The frequency of the cymbal",
+			"type": [
+				"Frequency"
+			],
+			"scope": "instance",
+			"name": "frequency",
+			"lineno": "Tone/instrument/MetalSynth.js#L35",
+			"signal": true
+		},
+		{
+			"description": "The envelope which is connected both to the\n amplitude and highpass filter's cutoff frequency",
+			"type": [
+				"Tone.Envelope"
+			],
+			"scope": "instance",
+			"name": "envelope",
+			"lineno": "Tone/instrument/MetalSynth.js#L89"
+		},
+		{
+			"description": "The modulationIndex of the oscillators which make up the source.\n see Tone.FMOscillator.modulationIndex",
+			"type": [
+				"Positive"
+			],
+			"scope": "instance",
+			"name": "modulationIndex",
+			"lineno": "Tone/instrument/MetalSynth.js#L179"
+		},
+		{
+			"description": "The harmonicity of the oscillators which make up the source.\n see Tone.FMOscillator.harmonicity",
+			"type": [
+				"Positive"
+			],
+			"scope": "instance",
+			"name": "harmonicity",
+			"lineno": "Tone/instrument/MetalSynth.js#L197"
+		},
+		{
+			"description": "The frequency of the highpass filter attached to the envelope",
+			"type": [
+				"Frequency"
+			],
+			"scope": "instance",
+			"name": "resonance",
+			"lineno": "Tone/instrument/MetalSynth.js#L215"
+		},
+		{
+			"description": "The number of octaves above the \"resonance\" frequency\n that the filter ramps during the attack/decay envelope",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "octaves",
+			"lineno": "Tone/instrument/MetalSynth.js#L231"
+		},
+		{
+			"description": "The volume of the output in decibels.",
+			"type": [
+				"Decibels"
+			],
+			"examples": [
+				"source.volume.value = -6;"
+			],
+			"scope": "instance",
+			"name": "volume",
+			"lineno": "Tone/instrument/Instrument.js#L31",
+			"inherits": "Tone.Instrument",
+			"signal": true
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
 	"MonoSynth": [
 		{
 			"description": "The oscillator.",
@@ -4487,6 +4569,61 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
+	"Sampler": [
+		{
+			"description": "The envelope applied to the beginning of the sample.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "attack",
+			"lineno": "Tone/instrument/Sampler.js#L62"
+		},
+		{
+			"description": "The envelope applied to the end of the envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "release",
+			"lineno": "Tone/instrument/Sampler.js#L68"
+		},
+		{
+			"description": "If the buffers are loaded or not",
+			"type": [
+				"Boolean"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "loaded",
+			"lineno": "Tone/instrument/Sampler.js#L193"
+		},
+		{
+			"description": "The volume of the output in decibels.",
+			"type": [
+				"Decibels"
+			],
+			"examples": [
+				"source.volume.value = -6;"
+			],
+			"scope": "instance",
+			"name": "volume",
+			"lineno": "Tone/instrument/Instrument.js#L31",
+			"inherits": "Tone.Instrument",
+			"signal": true
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
 	"Synth": [
 		{
 			"description": "The oscillator.",
@@ -4535,143 +4672,6 @@
 			"name": "portamento",
 			"lineno": "Tone/instrument/Monophonic.js#L24",
 			"inherits": "Tone.Monophonic"
-		},
-		{
-			"description": "The volume of the output in decibels.",
-			"type": [
-				"Decibels"
-			],
-			"examples": [
-				"source.volume.value = -6;"
-			],
-			"scope": "instance",
-			"name": "volume",
-			"lineno": "Tone/instrument/Instrument.js#L31",
-			"inherits": "Tone.Instrument",
-			"signal": true
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"MetalSynth": [
-		{
-			"description": "The frequency of the cymbal",
-			"type": [
-				"Frequency"
-			],
-			"scope": "instance",
-			"name": "frequency",
-			"lineno": "Tone/instrument/MetalSynth.js#L35",
-			"signal": true
-		},
-		{
-			"description": "The envelope which is connected both to the\n amplitude and highpass filter's cutoff frequency",
-			"type": [
-				"Tone.Envelope"
-			],
-			"scope": "instance",
-			"name": "envelope",
-			"lineno": "Tone/instrument/MetalSynth.js#L89"
-		},
-		{
-			"description": "The modulationIndex of the oscillators which make up the source.\n see Tone.FMOscillator.modulationIndex",
-			"type": [
-				"Positive"
-			],
-			"scope": "instance",
-			"name": "modulationIndex",
-			"lineno": "Tone/instrument/MetalSynth.js#L179"
-		},
-		{
-			"description": "The harmonicity of the oscillators which make up the source.\n see Tone.FMOscillator.harmonicity",
-			"type": [
-				"Positive"
-			],
-			"scope": "instance",
-			"name": "harmonicity",
-			"lineno": "Tone/instrument/MetalSynth.js#L197"
-		},
-		{
-			"description": "The frequency of the highpass filter attached to the envelope",
-			"type": [
-				"Frequency"
-			],
-			"scope": "instance",
-			"name": "resonance",
-			"lineno": "Tone/instrument/MetalSynth.js#L215"
-		},
-		{
-			"description": "The number of octaves above the \"resonance\" frequency\n that the filter ramps during the attack/decay envelope",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "octaves",
-			"lineno": "Tone/instrument/MetalSynth.js#L231"
-		},
-		{
-			"description": "The volume of the output in decibels.",
-			"type": [
-				"Decibels"
-			],
-			"examples": [
-				"source.volume.value = -6;"
-			],
-			"scope": "instance",
-			"name": "volume",
-			"lineno": "Tone/instrument/Instrument.js#L31",
-			"inherits": "Tone.Instrument",
-			"signal": true
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Sampler": [
-		{
-			"description": "The envelope applied to the beginning of the sample.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "attack",
-			"lineno": "Tone/instrument/Sampler.js#L62"
-		},
-		{
-			"description": "The envelope applied to the end of the envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "release",
-			"lineno": "Tone/instrument/Sampler.js#L68"
-		},
-		{
-			"description": "If the buffers are loaded or not",
-			"type": [
-				"Boolean"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "loaded",
-			"lineno": "Tone/instrument/Sampler.js#L193"
 		},
 		{
 			"description": "The volume of the output in decibels.",
@@ -4810,26 +4810,6 @@
 			"lineno": "Tone/signal/ScaleExp.js#L74"
 		}
 	],
-	"WaveShaper": [
-		{
-			"description": "The array to set as the waveshaper curve. For linear curves\narray length does not make much difference, but for complex curves\nlonger arrays will provide smoother interpolation.",
-			"type": [
-				"Array"
-			],
-			"scope": "instance",
-			"name": "curve",
-			"lineno": "Tone/signal/WaveShaper.js#L82"
-		},
-		{
-			"description": "Specifies what type of oversampling (if any) should be used when \napplying the shaping curve. Can either be \"none\", \"2x\" or \"4x\".",
-			"type": [
-				"string"
-			],
-			"scope": "instance",
-			"name": "oversample",
-			"lineno": "Tone/signal/WaveShaper.js#L100"
-		}
-	],
 	"TimelineSignal": [
 		{
 			"description": "The current value of the signal.",
@@ -4881,6 +4861,26 @@
 			"name": "context",
 			"lineno": "Tone/core/AudioNode.js#L27",
 			"inherits": "Tone.AudioNode"
+		}
+	],
+	"WaveShaper": [
+		{
+			"description": "The array to set as the waveshaper curve. For linear curves\narray length does not make much difference, but for complex curves\nlonger arrays will provide smoother interpolation.",
+			"type": [
+				"Array"
+			],
+			"scope": "instance",
+			"name": "curve",
+			"lineno": "Tone/signal/WaveShaper.js#L82"
+		},
+		{
+			"description": "Specifies what type of oversampling (if any) should be used when \napplying the shaping curve. Can either be \"none\", \"2x\" or \"4x\".",
+			"type": [
+				"string"
+			],
+			"scope": "instance",
+			"name": "oversample",
+			"lineno": "Tone/signal/WaveShaper.js#L100"
 		}
 	],
 	"AMOscillator": [
@@ -5013,6 +5013,111 @@
 			"name": "state",
 			"lineno": "Tone/source/Source.js#L93",
 			"inherits": "Tone.Source"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"BufferSource": [
+		{
+			"description": "The callback to invoke after the\n buffer source is done playing.",
+			"type": [
+				"function"
+			],
+			"scope": "instance",
+			"name": "onended",
+			"lineno": "Tone/source/BufferSource.js#L28"
+		},
+		{
+			"description": "The playbackRate of the buffer",
+			"type": [
+				"Positive"
+			],
+			"scope": "instance",
+			"name": "playbackRate",
+			"lineno": "Tone/source/BufferSource.js#L71",
+			"signal": true
+		},
+		{
+			"description": "The fadeIn time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeIn",
+			"lineno": "Tone/source/BufferSource.js#L77"
+		},
+		{
+			"description": "The fadeOut time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeOut",
+			"lineno": "Tone/source/BufferSource.js#L83"
+		},
+		{
+			"description": "The curve applied to the fades, either \"linear\" or \"exponential\"",
+			"type": [
+				"String"
+			],
+			"scope": "instance",
+			"name": "curve",
+			"lineno": "Tone/source/BufferSource.js#L89"
+		},
+		{
+			"description": "Returns the playback state of the source, either \"started\" or \"stopped\".",
+			"type": [
+				"Tone.State"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "state",
+			"lineno": "Tone/source/BufferSource.js#L131"
+		},
+		{
+			"description": "If loop is true, the loop will start at this position.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "loopStart",
+			"lineno": "Tone/source/BufferSource.js#L293"
+		},
+		{
+			"description": "If loop is true, the loop will end at this position.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "loopEnd",
+			"lineno": "Tone/source/BufferSource.js#L308"
+		},
+		{
+			"description": "The audio buffer belonging to the player.",
+			"type": [
+				"Tone.Buffer"
+			],
+			"scope": "instance",
+			"name": "buffer",
+			"lineno": "Tone/source/BufferSource.js#L323"
+		},
+		{
+			"description": "If the buffer should loop once it's over.",
+			"type": [
+				"Boolean"
+			],
+			"scope": "instance",
+			"name": "loop",
+			"lineno": "Tone/source/BufferSource.js#L338"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -5793,6 +5898,134 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
+	"Oscillator": [
+		{
+			"description": "The frequency control.",
+			"type": [
+				"Frequency"
+			],
+			"scope": "instance",
+			"name": "frequency",
+			"lineno": "Tone/source/Oscillator.js#L51",
+			"signal": true
+		},
+		{
+			"description": "The detune control signal.",
+			"type": [
+				"Cents"
+			],
+			"scope": "instance",
+			"name": "detune",
+			"lineno": "Tone/source/Oscillator.js#L58",
+			"signal": true
+		},
+		{
+			"description": "The type of the oscillator: either sine, square, triangle, or sawtooth. Also capable of\nsetting the first x number of partials of the oscillator. For example: \"sine4\" would\nset be the first 4 partials of the sine wave and \"triangle8\" would set the first\n8 partials of the triangle wave.\n<br><br>\nUses PeriodicWave internally even for native types so that it can set the phase.\nPeriodicWave equations are from the\n[Webkit Web Audio implementation](https://code.google.com/p/chromium/codesearch#chromium/src/third_party/WebKit/Source/modules/webaudio/PeriodicWave.cpp&sq=package:chromium).",
+			"type": [
+				"string"
+			],
+			"examples": [
+				"//set it to a square wave\nosc.type = \"square\";",
+				"//set the first 6 partials of a sawtooth wave\nosc.type = \"sawtooth6\";"
+			],
+			"scope": "instance",
+			"name": "type",
+			"lineno": "Tone/source/Oscillator.js#L183"
+		},
+		{
+			"description": "The partials of the waveform. A partial represents\nthe amplitude at a harmonic. The first harmonic is the\nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series.\nSetting this value will automatically set the type to \"custom\".\nThe value is an empty array when the type is not \"custom\".",
+			"type": [
+				"Array"
+			],
+			"examples": [
+				"osc.partials = [1, 0.2, 0.01];"
+			],
+			"scope": "instance",
+			"name": "partials",
+			"lineno": "Tone/source/Oscillator.js#L317"
+		},
+		{
+			"description": "The phase of the oscillator in degrees.",
+			"type": [
+				"Degrees"
+			],
+			"examples": [
+				"osc.phase = 180; //flips the phase of the oscillator"
+			],
+			"scope": "instance",
+			"name": "phase",
+			"lineno": "Tone/source/Oscillator.js#L344"
+		},
+		{
+			"description": "Mute the output.",
+			"type": [
+				"boolean"
+			],
+			"examples": [
+				"//mute the output\nsource.mute = true;"
+			],
+			"scope": "instance",
+			"name": "mute",
+			"lineno": "Tone/source/Players.js#L104",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeIn time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeIn",
+			"lineno": "Tone/source/Players.js#L122",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeOut time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeOut",
+			"lineno": "Tone/source/Players.js#L140",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The volume of the output in decibels.",
+			"type": [
+				"Decibels"
+			],
+			"examples": [
+				"source.volume.value = -6;"
+			],
+			"scope": "instance",
+			"name": "volume",
+			"lineno": "Tone/source/Source.js#L48",
+			"inherits": "Tone.Source",
+			"signal": true
+		},
+		{
+			"description": "Returns the playback state of the source, either \"started\" or \"stopped\".",
+			"type": [
+				"Tone.State"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "state",
+			"lineno": "Tone/source/Source.js#L93",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
 	"PWMOscillator": [
 		{
 			"description": "The frequency control.",
@@ -6386,239 +6619,6 @@
 			"scope": "instance",
 			"name": "supported",
 			"lineno": "Tone/source/UserMedia.js#L265"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"BufferSource": [
-		{
-			"description": "The callback to invoke after the\n buffer source is done playing.",
-			"type": [
-				"function"
-			],
-			"scope": "instance",
-			"name": "onended",
-			"lineno": "Tone/source/BufferSource.js#L28"
-		},
-		{
-			"description": "The playbackRate of the buffer",
-			"type": [
-				"Positive"
-			],
-			"scope": "instance",
-			"name": "playbackRate",
-			"lineno": "Tone/source/BufferSource.js#L71",
-			"signal": true
-		},
-		{
-			"description": "The fadeIn time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeIn",
-			"lineno": "Tone/source/BufferSource.js#L77"
-		},
-		{
-			"description": "The fadeOut time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeOut",
-			"lineno": "Tone/source/BufferSource.js#L83"
-		},
-		{
-			"description": "The curve applied to the fades, either \"linear\" or \"exponential\"",
-			"type": [
-				"String"
-			],
-			"scope": "instance",
-			"name": "curve",
-			"lineno": "Tone/source/BufferSource.js#L89"
-		},
-		{
-			"description": "Returns the playback state of the source, either \"started\" or \"stopped\".",
-			"type": [
-				"Tone.State"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "state",
-			"lineno": "Tone/source/BufferSource.js#L131"
-		},
-		{
-			"description": "If loop is true, the loop will start at this position.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "loopStart",
-			"lineno": "Tone/source/BufferSource.js#L293"
-		},
-		{
-			"description": "If loop is true, the loop will end at this position.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "loopEnd",
-			"lineno": "Tone/source/BufferSource.js#L308"
-		},
-		{
-			"description": "The audio buffer belonging to the player.",
-			"type": [
-				"Tone.Buffer"
-			],
-			"scope": "instance",
-			"name": "buffer",
-			"lineno": "Tone/source/BufferSource.js#L323"
-		},
-		{
-			"description": "If the buffer should loop once it's over.",
-			"type": [
-				"Boolean"
-			],
-			"scope": "instance",
-			"name": "loop",
-			"lineno": "Tone/source/BufferSource.js#L338"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Oscillator": [
-		{
-			"description": "The frequency control.",
-			"type": [
-				"Frequency"
-			],
-			"scope": "instance",
-			"name": "frequency",
-			"lineno": "Tone/source/Oscillator.js#L51",
-			"signal": true
-		},
-		{
-			"description": "The detune control signal.",
-			"type": [
-				"Cents"
-			],
-			"scope": "instance",
-			"name": "detune",
-			"lineno": "Tone/source/Oscillator.js#L58",
-			"signal": true
-		},
-		{
-			"description": "The type of the oscillator: either sine, square, triangle, or sawtooth. Also capable of\nsetting the first x number of partials of the oscillator. For example: \"sine4\" would\nset be the first 4 partials of the sine wave and \"triangle8\" would set the first\n8 partials of the triangle wave.\n<br><br>\nUses PeriodicWave internally even for native types so that it can set the phase.\nPeriodicWave equations are from the\n[Webkit Web Audio implementation](https://code.google.com/p/chromium/codesearch#chromium/src/third_party/WebKit/Source/modules/webaudio/PeriodicWave.cpp&sq=package:chromium).",
-			"type": [
-				"string"
-			],
-			"examples": [
-				"//set it to a square wave\nosc.type = \"square\";",
-				"//set the first 6 partials of a sawtooth wave\nosc.type = \"sawtooth6\";"
-			],
-			"scope": "instance",
-			"name": "type",
-			"lineno": "Tone/source/Oscillator.js#L183"
-		},
-		{
-			"description": "The partials of the waveform. A partial represents\nthe amplitude at a harmonic. The first harmonic is the\nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series.\nSetting this value will automatically set the type to \"custom\".\nThe value is an empty array when the type is not \"custom\".",
-			"type": [
-				"Array"
-			],
-			"examples": [
-				"osc.partials = [1, 0.2, 0.01];"
-			],
-			"scope": "instance",
-			"name": "partials",
-			"lineno": "Tone/source/Oscillator.js#L317"
-		},
-		{
-			"description": "The phase of the oscillator in degrees.",
-			"type": [
-				"Degrees"
-			],
-			"examples": [
-				"osc.phase = 180; //flips the phase of the oscillator"
-			],
-			"scope": "instance",
-			"name": "phase",
-			"lineno": "Tone/source/Oscillator.js#L344"
-		},
-		{
-			"description": "Mute the output.",
-			"type": [
-				"boolean"
-			],
-			"examples": [
-				"//mute the output\nsource.mute = true;"
-			],
-			"scope": "instance",
-			"name": "mute",
-			"lineno": "Tone/source/Players.js#L104",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeIn time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeIn",
-			"lineno": "Tone/source/Players.js#L122",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeOut time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeOut",
-			"lineno": "Tone/source/Players.js#L140",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The volume of the output in decibels.",
-			"type": [
-				"Decibels"
-			],
-			"examples": [
-				"source.volume.value = -6;"
-			],
-			"scope": "instance",
-			"name": "volume",
-			"lineno": "Tone/source/Source.js#L48",
-			"inherits": "Tone.Source",
-			"signal": true
-		},
-		{
-			"description": "Returns the playback state of the source, either \"started\" or \"stopped\".",
-			"type": [
-				"Tone.State"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "state",
-			"lineno": "Tone/source/Source.js#L93",
-			"inherits": "Tone.Source"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",

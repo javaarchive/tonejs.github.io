@@ -4,6 +4,10 @@
 		"AudioNode",
 		"Tone"
 	],
+	"Analyser": [
+		"AudioNode",
+		"Tone"
+	],
 	"Compressor": [
 		"AudioNode",
 		"Tone"
@@ -13,6 +17,14 @@
 		"Tone"
 	],
 	"EQ3": [
+		"AudioNode",
+		"Tone"
+	],
+	"Envelope": [
+		"AudioNode",
+		"Tone"
+	],
+	"FFT": [
 		"AudioNode",
 		"Tone"
 	],
@@ -50,6 +62,10 @@
 		"Tone"
 	],
 	"Merge": [
+		"AudioNode",
+		"Tone"
+	],
+	"Meter": [
 		"AudioNode",
 		"Tone"
 	],
@@ -106,22 +122,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Analyser": [
-		"AudioNode",
-		"Tone"
-	],
-	"Envelope": [
-		"AudioNode",
-		"Tone"
-	],
-	"FFT": [
-		"AudioNode",
-		"Tone"
-	],
-	"Meter": [
-		"AudioNode",
-		"Tone"
-	],
 	"Waveform": [
 		"AudioNode",
 		"Tone"
@@ -136,6 +136,9 @@
 		"Tone"
 	],
 	"CtrlRandom": [
+		"Tone"
+	],
+	"AudioNode": [
 		"Tone"
 	],
 	"Buffer": [
@@ -178,18 +181,15 @@
 		"Emitter",
 		"Tone"
 	],
-	"TimelineState": [
-		"Timeline",
-		"Tone"
-	],
-	"AudioNode": [
-		"Tone"
-	],
 	"Param": [
 		"AudioNode",
 		"Tone"
 	],
 	"Timeline": [
+		"Tone"
+	],
+	"TimelineState": [
+		"Timeline",
 		"Tone"
 	],
 	"Transport": [
@@ -374,6 +374,11 @@
 		"AudioNode",
 		"Tone"
 	],
+	"MetalSynth": [
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
 	"MonoSynth": [
 		"Monophonic",
 		"Instrument",
@@ -400,18 +405,13 @@
 		"AudioNode",
 		"Tone"
 	],
+	"Sampler": [
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
 	"Synth": [
 		"Monophonic",
-		"Instrument",
-		"AudioNode",
-		"Tone"
-	],
-	"MetalSynth": [
-		"Instrument",
-		"AudioNode",
-		"Tone"
-	],
-	"Sampler": [
 		"Instrument",
 		"AudioNode",
 		"Tone"
@@ -503,6 +503,12 @@
 		"AudioNode",
 		"Tone"
 	],
+	"TimelineSignal": [
+		"Signal",
+		"Param",
+		"AudioNode",
+		"Tone"
+	],
 	"TransportTimelineSignal": [
 		"TimelineSignal",
 		"Signal",
@@ -518,15 +524,13 @@
 		"SignalBase",
 		"Tone"
 	],
-	"TimelineSignal": [
-		"Signal",
-		"Param",
-		"AudioNode",
-		"Tone"
-	],
 	"AMOscillator": [
 		"Oscillator",
 		"Source",
+		"AudioNode",
+		"Tone"
+	],
+	"BufferSource": [
 		"AudioNode",
 		"Tone"
 	],
@@ -558,6 +562,11 @@
 		"AudioNode",
 		"Tone"
 	],
+	"Oscillator": [
+		"Source",
+		"AudioNode",
+		"Tone"
+	],
 	"PWMOscillator": [
 		"Source",
 		"AudioNode",
@@ -582,15 +591,6 @@
 		"Tone"
 	],
 	"UserMedia": [
-		"AudioNode",
-		"Tone"
-	],
-	"BufferSource": [
-		"AudioNode",
-		"Tone"
-	],
-	"Oscillator": [
-		"Source",
 		"AudioNode",
 		"Tone"
 	],

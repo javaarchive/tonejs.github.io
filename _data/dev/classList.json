@@ -1,9 +1,12 @@
 {
 	"component": [
 		"AmplitudeEnvelope",
+		"Analyser",
 		"Compressor",
 		"CrossFade",
 		"EQ3",
+		"Envelope",
+		"FFT",
 		"FeedbackCombFilter",
 		"Filter",
 		"Follower",
@@ -13,6 +16,7 @@
 		"Limiter",
 		"LowpassCombFilter",
 		"Merge",
+		"Meter",
 		"MidSideCompressor",
 		"MidSideMerge",
 		"MidSideSplit",
@@ -26,10 +30,6 @@
 		"Solo",
 		"Split",
 		"Volume",
-		"Analyser",
-		"Envelope",
-		"FFT",
-		"Meter",
 		"Waveform"
 	],
 	"control": [
@@ -39,6 +39,7 @@
 		"CtrlRandom"
 	],
 	"core": [
+		"AudioNode",
 		"Buffer",
 		"Buffers",
 		"Clock",
@@ -51,14 +52,13 @@
 		"Listener",
 		"Master",
 		"OfflineContext",
-		"TimelineState",
-		"AudioNode",
 		"Param",
 		"Timeline",
-		"Tone",
+		"TimelineState",
 		"Transport",
 		"TransportEvent",
-		"TransportRepeatEvent"
+		"TransportRepeatEvent",
+		"Tone"
 	],
 	"effect": [
 		"AutoFilter",
@@ -98,14 +98,14 @@
 		"FMSynth",
 		"Instrument",
 		"MembraneSynth",
+		"MetalSynth",
 		"MonoSynth",
 		"Monophonic",
 		"NoiseSynth",
 		"PluckSynth",
 		"PolySynth",
-		"Synth",
-		"MetalSynth",
-		"Sampler"
+		"Sampler",
+		"Synth"
 	],
 	"signal": [
 		"Abs",
@@ -127,27 +127,27 @@
 		"SignalBase",
 		"Subtract",
 		"TickSignal",
+		"TimelineSignal",
 		"TransportTimelineSignal",
 		"WaveShaper",
-		"Zero",
-		"TimelineSignal"
+		"Zero"
 	],
 	"source": [
 		"AMOscillator",
+		"BufferSource",
 		"FMOscillator",
 		"FatOscillator",
 		"GrainPlayer",
 		"MultiPlayer",
 		"Noise",
 		"OmniOscillator",
+		"Oscillator",
 		"PWMOscillator",
 		"Player",
 		"Players",
 		"PulseOscillator",
 		"Source",
-		"UserMedia",
-		"BufferSource",
-		"Oscillator"
+		"UserMedia"
 	],
 	"type": [
 		"Frequency",

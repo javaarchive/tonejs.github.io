@@ -1,4 +1,9 @@
 {
+	"Analyser": {
+		"size": 1024,
+		"type": "fft",
+		"smoothing": 0.8
+	},
 	"Compressor": {
 		"ratio": 12,
 		"threshold": -24,
@@ -12,6 +17,17 @@
 		"high": 0,
 		"lowFrequency": 400,
 		"highFrequency": 2500
+	},
+	"Envelope": {
+		"attack": 0.01,
+		"decay": 0.1,
+		"sustain": 0.5,
+		"release": 1,
+		"attackCurve": "linear",
+		"releaseCurve": "exponential"
+	},
+	"FFT": {
+		"size": 1024
 	},
 	"FeedbackCombFilter": {
 		"delayTime": 0.1,
@@ -54,6 +70,9 @@
 		"delayTime": 0.1,
 		"resonance": 0.5,
 		"dampening": 3000
+	},
+	"Meter": {
+		"smoothing": 0.8
 	},
 	"MidSideCompressor": {
 		"mid": {
@@ -115,25 +134,6 @@
 	"Volume": {
 		"volume": 0,
 		"mute": false
-	},
-	"Analyser": {
-		"size": 1024,
-		"type": "fft",
-		"smoothing": 0.8
-	},
-	"Envelope": {
-		"attack": 0.01,
-		"decay": 0.1,
-		"sustain": 0.5,
-		"release": 1,
-		"attackCurve": "linear",
-		"releaseCurve": "exponential"
-	},
-	"FFT": {
-		"size": 1024
-	},
-	"Meter": {
-		"smoothing": 0.8
 	},
 	"Waveform": {
 		"size": 1024
@@ -458,6 +458,18 @@
 			"attackCurve": "exponential"
 		}
 	},
+	"MetalSynth": {
+		"frequency": 200,
+		"envelope": {
+			"attack": 0.001,
+			"decay": 1.4,
+			"release": 0.2
+		},
+		"harmonicity": 5.1,
+		"modulationIndex": 32,
+		"resonance": 4000,
+		"octaves": 1.5
+	},
 	"MonoSynth": {
 		"frequency": "C4",
 		"detune": 0,
@@ -509,6 +521,12 @@
 		"detune": 0,
 		"voice": "Tone.Synth"
 	},
+	"Sampler": {
+		"attack": 0,
+		"release": 0.1,
+		"onload": "Tone.noOp",
+		"baseUrl": ""
+	},
 	"Synth": {
 		"oscillator": {
 			"type": "triangle"
@@ -519,24 +537,6 @@
 			"sustain": 0.3,
 			"release": 1
 		}
-	},
-	"MetalSynth": {
-		"frequency": 200,
-		"envelope": {
-			"attack": 0.001,
-			"decay": 1.4,
-			"release": 0.2
-		},
-		"harmonicity": 5.1,
-		"modulationIndex": 32,
-		"resonance": 4000,
-		"octaves": 1.5
-	},
-	"Sampler": {
-		"attack": 0,
-		"release": 0.1,
-		"onload": "Tone.noOp",
-		"baseUrl": ""
 	},
 	"Signal": {
 		"value": 0,
@@ -549,6 +549,17 @@
 		"phase": 0,
 		"modulationType": "square",
 		"harmonicity": 1
+	},
+	"BufferSource": {
+		"onended": "Tone.noOp",
+		"onload": "Tone.noOp",
+		"loop": false,
+		"loopStart": 0,
+		"loopEnd": 0,
+		"fadeIn": 0,
+		"fadeOut": 0,
+		"curve": "linear",
+		"playbackRate": 1
 	},
 	"FMOscillator": {
 		"frequency": 440,
@@ -592,6 +603,13 @@
 		"type": "sine",
 		"phase": 0
 	},
+	"Oscillator": {
+		"type": "sine",
+		"frequency": 440,
+		"detune": 0,
+		"phase": 0,
+		"partials": "[]"
+	},
 	"PWMOscillator": {
 		"frequency": 440,
 		"detune": 0,
@@ -630,23 +648,5 @@
 	"UserMedia": {
 		"volume": 0,
 		"mute": false
-	},
-	"BufferSource": {
-		"onended": "Tone.noOp",
-		"onload": "Tone.noOp",
-		"loop": false,
-		"loopStart": 0,
-		"loopEnd": 0,
-		"fadeIn": 0,
-		"fadeOut": 0,
-		"curve": "linear",
-		"playbackRate": 1
-	},
-	"Oscillator": {
-		"type": "sine",
-		"frequency": 440,
-		"detune": 0,
-		"phase": 0,
-		"partials": "[]"
 	}
 }
