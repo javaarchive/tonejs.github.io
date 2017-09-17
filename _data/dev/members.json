@@ -2011,17 +2011,7 @@
 			],
 			"scope": "instance",
 			"name": "value",
-			"lineno": "Tone/core/Param.js#L75"
-		},
-		{
-			"description": "The LFO created by the signal instance. If none\n was created, this is null.",
-			"type": [
-				"Tone.LFO"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L407"
+			"lineno": "Tone/core/Param.js#L66"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -2054,6 +2044,18 @@
 			"scope": "instance",
 			"name": "length",
 			"lineno": "Tone/core/Timeline.js#L65"
+		}
+	],
+	"Tone": [
+		{
+			"description": "The AudioContext",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/Tone.js#L583"
 		}
 	],
 	"Transport": [
@@ -2220,18 +2222,6 @@
 			"scope": "instance",
 			"name": "callback",
 			"lineno": "Tone/core/TransportEvent.js#L37"
-		}
-	],
-	"Tone": [
-		{
-			"description": "The AudioContext",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/Tone.js#L583"
 		}
 	],
 	"AutoFilter": [
@@ -4841,17 +4831,6 @@
 			"inherits": "Tone.Param"
 		},
 		{
-			"description": "The LFO created by the signal instance. If none\n was created, this is null.",
-			"type": [
-				"Tone.LFO"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L407",
-			"inherits": "Tone.Param"
-		},
-		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
 				"Tone.Context"
@@ -5564,57 +5543,6 @@
 			"name": "context",
 			"lineno": "Tone/core/AudioNode.js#L27",
 			"inherits": "Tone.AudioNode"
-		}
-	],
-	"MultiPlayer": [
-		{
-			"description": "All the buffers belonging to the player.",
-			"type": [
-				"Tone.Buffers"
-			],
-			"scope": "instance",
-			"name": "buffers",
-			"lineno": "Tone/source/MultiPlayer.js#L45"
-		},
-		{
-			"description": "The fade in envelope which is applied\n to the beginning of the BufferSource",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeIn",
-			"lineno": "Tone/source/MultiPlayer.js#L62"
-		},
-		{
-			"description": "The fade out envelope which is applied\n to the end of the BufferSource",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeOut",
-			"lineno": "Tone/source/MultiPlayer.js#L69"
-		},
-		{
-			"description": "Returns the playback state of the source. \"started\"\n if there are any buffers playing. \"stopped\" otherwise.",
-			"type": [
-				"Tone.State"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "state",
-			"lineno": "Tone/source/MultiPlayer.js#L200"
-		},
-		{
-			"description": "Mute the output.",
-			"type": [
-				"boolean"
-			],
-			"examples": [
-				"//mute the output\nsource.mute = true;"
-			],
-			"scope": "instance",
-			"name": "mute",
-			"lineno": "Tone/source/MultiPlayer.js#L214"
 		}
 	],
 	"Noise": [
@@ -6891,18 +6819,7 @@
 			],
 			"scope": "instance",
 			"name": "value",
-			"lineno": "Tone/core/Param.js#L75",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "The LFO created by the signal instance. If none\n was created, this is null.",
-			"type": [
-				"Tone.LFO"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L407",
+			"lineno": "Tone/core/Param.js#L66",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -6945,18 +6862,7 @@
 			],
 			"scope": "instance",
 			"name": "value",
-			"lineno": "Tone/core/Param.js#L75",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "The LFO created by the signal instance. If none\n was created, this is null.",
-			"type": [
-				"Tone.LFO"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L407",
+			"lineno": "Tone/core/Param.js#L66",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -6999,18 +6905,7 @@
 			],
 			"scope": "instance",
 			"name": "value",
-			"lineno": "Tone/core/Param.js#L75",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "The LFO created by the signal instance. If none\n was created, this is null.",
-			"type": [
-				"Tone.LFO"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L407",
+			"lineno": "Tone/core/Param.js#L66",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -7053,18 +6948,7 @@
 			],
 			"scope": "instance",
 			"name": "value",
-			"lineno": "Tone/core/Param.js#L75",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "The LFO created by the signal instance. If none\n was created, this is null.",
-			"type": [
-				"Tone.LFO"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L407",
+			"lineno": "Tone/core/Param.js#L66",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -7107,18 +6991,7 @@
 			],
 			"scope": "instance",
 			"name": "value",
-			"lineno": "Tone/core/Param.js#L75",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "The LFO created by the signal instance. If none\n was created, this is null.",
-			"type": [
-				"Tone.LFO"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L407",
+			"lineno": "Tone/core/Param.js#L66",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -7165,17 +7038,6 @@
 			"inherits": "Tone.Param"
 		},
 		{
-			"description": "The LFO created by the signal instance. If none\n was created, this is null.",
-			"type": [
-				"Tone.LFO"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L407",
-			"inherits": "Tone.Param"
-		},
-		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
 				"Tone.Context"
@@ -7216,17 +7078,6 @@
 			"scope": "instance",
 			"name": "convert",
 			"lineno": "Tone/core/Param.js#L37",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "The LFO created by the signal instance. If none\n was created, this is null.",
-			"type": [
-				"Tone.LFO"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L407",
 			"inherits": "Tone.Param"
 		},
 		{

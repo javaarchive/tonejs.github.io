@@ -588,11 +588,6 @@
 		"loopEnd": 0,
 		"reverse": false
 	},
-	"MultiPlayer": {
-		"onload": "Tone.noOp",
-		"fadeIn": 0,
-		"fadeOut": 0
-	},
 	"Noise": {
 		"type": "white",
 		"playbackRate": 1

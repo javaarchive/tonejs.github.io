@@ -1031,6 +1031,10 @@
 		],
 		"extends": "Tone.Timeline"
 	},
+	"Tone": {
+		"description": "Tone is the base class of all other classes.",
+		"params": []
+	},
 	"Transport": {
 		"description": "Transport for timing musical events.\n         Supports tempo curves and time changes. Unlike browser-based timing (setInterval, requestAnimationFrame)\n         Tone.Transport timing events pass in the exact time of the scheduled event\n         in the argument of the callback function. Pass that time value to the object\n         you're scheduling. <br><br>\n         A single transport is created for you when the library is initialized.\n         <br><br>\n         The transport emits the events: \"start\", \"stop\", \"pause\", and \"loop\" which are\n         called with the time of that event as the argument.",
 		"examples": [
@@ -1063,10 +1067,6 @@
 			}
 		],
 		"extends": "Tone.TransportEvent"
-	},
-	"Tone": {
-		"description": "Tone is the base class of all other classes.",
-		"params": []
 	},
 	"AutoFilter": {
 		"description": "Tone.AutoFilter is a Tone.Filter with a Tone.LFO connected to the filter cutoff frequency.\n        Setting the LFO rate and depth allows for control over the filter modulation rate \n        and depth.",
@@ -2324,33 +2324,6 @@
 			}
 		],
 		"extends": "Tone.Source"
-	},
-	"MultiPlayer": {
-		"description": "Tone.MultiPlayer is well suited for one-shots, multi-sampled instruments\n        or any time you need to play a bunch of audio buffers.",
-		"params": [
-			{
-				"type": [
-					"Object",
-					"Array",
-					"Tone.Buffers"
-				],
-				"description": "The buffers which are available\n                                               to the MultiPlayer",
-				"name": "buffers"
-			},
-			{
-				"type": [
-					"function"
-				],
-				"description": "The callback to invoke when all of the buffers are loaded.",
-				"name": "onload"
-			}
-		],
-		"examples": [
-			"var multiPlayer = new MultiPlayer({\n\t\"kick\" : \"path/to/kick.mp3\",\n\t\"snare\" : \"path/to/snare.mp3\",\n}, function(){\n\tmultiPlayer.start(\"kick\");\n});\n ",
-			"//can also store the values in an array\nvar multiPlayer = new MultiPlayer([\"path/to/kick.mp3\", \"path/to/snare.mp3\"], \nfunction(){\n\t//if an array is passed in, the samples are referenced to by index\n\tmultiPlayer.start(1);\n});"
-		],
-		"extends": "Tone",
-		"deprecated": "Use [Tone.Players](Players) instead."
 	},
 	"Noise": {
 		"description": "Tone.Noise is a noise generator. It uses looped noise buffers to save on performance.\n         Tone.Noise supports the noise types: \"pink\", \"white\", and \"brown\". Read more about\n         colors of noise on [Wikipedia](https://en.wikipedia.org/wiki/Colors_of_noise).",

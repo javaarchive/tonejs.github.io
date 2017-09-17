@@ -549,9 +549,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"MultiPlayer": [
-		"Tone"
-	],
 	"Noise": [
 		"Source",
 		"AudioNode",
