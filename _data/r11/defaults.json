@@ -11,13 +11,6 @@
 		"attack": 0.003,
 		"knee": 30
 	},
-	"EQ3": {
-		"low": 0,
-		"mid": 0,
-		"high": 0,
-		"lowFrequency": 400,
-		"highFrequency": 2500
-	},
 	"Envelope": {
 		"attack": 0.01,
 		"decay": 0.1,
@@ -26,12 +19,19 @@
 		"attackCurve": "linear",
 		"releaseCurve": "exponential"
 	},
-	"FFT": {
-		"size": 1024
+	"EQ3": {
+		"low": 0,
+		"mid": 0,
+		"high": 0,
+		"lowFrequency": 400,
+		"highFrequency": 2500
 	},
 	"FeedbackCombFilter": {
 		"delayTime": 0.1,
 		"resonance": 0.5
+	},
+	"FFT": {
+		"size": 1024
 	},
 	"Filter": {
 		"type": "lowpass",
@@ -102,11 +102,6 @@
 		"highFrequency": 2500,
 		"Q": 1
 	},
-	"PanVol": {
-		"pan": 0,
-		"volume": 0,
-		"mute": false
-	},
 	"Panner3D": {
 		"positionX": 0,
 		"positionY": 0,
@@ -122,6 +117,11 @@
 		"coneInnerAngle": 360,
 		"refDistance": 1,
 		"rolloffFactor": 1
+	},
+	"PanVol": {
+		"pan": 0,
+		"volume": 0,
+		"mute": false
 	},
 	"ScaledEnvelope": {
 		"min": 0,
@@ -470,6 +470,9 @@
 		"resonance": 4000,
 		"octaves": 1.5
 	},
+	"Monophonic": {
+		"portamento": 0
+	},
 	"MonoSynth": {
 		"frequency": "C4",
 		"detune": 0,
@@ -496,9 +499,6 @@
 			"octaves": 7,
 			"exponent": 2
 		}
-	},
-	"Monophonic": {
-		"portamento": 0
 	},
 	"NoiseSynth": {
 		"noise": {
@@ -561,14 +561,6 @@
 		"curve": "linear",
 		"playbackRate": 1
 	},
-	"FMOscillator": {
-		"frequency": 440,
-		"detune": 0,
-		"phase": 0,
-		"modulationIndex": 2,
-		"modulationType": "square",
-		"harmonicity": 1
-	},
 	"FatOscillator": {
 		"frequency": 440,
 		"detune": 0,
@@ -576,6 +568,14 @@
 		"spread": 20,
 		"count": 3,
 		"type": "sawtooth"
+	},
+	"FMOscillator": {
+		"frequency": 440,
+		"detune": 0,
+		"phase": 0,
+		"modulationIndex": 2,
+		"modulationType": "square",
+		"harmonicity": 1
 	},
 	"GrainPlayer": {
 		"onload": "Tone.noOp",
@@ -610,12 +610,6 @@
 		"phase": 0,
 		"partials": "[]"
 	},
-	"PWMOscillator": {
-		"frequency": 440,
-		"detune": 0,
-		"phase": 0,
-		"modulationFrequency": 0.4
-	},
 	"Player": {
 		"onload": "Tone.noOp",
 		"playbackRate": 1,
@@ -640,6 +634,12 @@
 		"detune": 0,
 		"phase": 0,
 		"width": 0.2
+	},
+	"PWMOscillator": {
+		"frequency": 440,
+		"detune": 0,
+		"phase": 0,
+		"modulationFrequency": 0.4
 	},
 	"Source": {
 		"volume": 0,
