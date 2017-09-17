@@ -16,19 +16,19 @@
 		"AudioNode",
 		"Tone"
 	],
-	"EQ3": [
-		"AudioNode",
-		"Tone"
-	],
 	"Envelope": [
 		"AudioNode",
 		"Tone"
 	],
-	"FFT": [
+	"EQ3": [
 		"AudioNode",
 		"Tone"
 	],
 	"FeedbackCombFilter": [
+		"AudioNode",
+		"Tone"
+	],
+	"FFT": [
 		"AudioNode",
 		"Tone"
 	],
@@ -93,15 +93,15 @@
 		"AudioNode",
 		"Tone"
 	],
-	"PanVol": [
-		"AudioNode",
-		"Tone"
-	],
 	"Panner": [
 		"AudioNode",
 		"Tone"
 	],
 	"Panner3D": [
+		"AudioNode",
+		"Tone"
+	],
+	"PanVol": [
 		"AudioNode",
 		"Tone"
 	],
@@ -379,13 +379,13 @@
 		"AudioNode",
 		"Tone"
 	],
-	"MonoSynth": [
-		"Monophonic",
+	"Monophonic": [
 		"Instrument",
 		"AudioNode",
 		"Tone"
 	],
-	"Monophonic": [
+	"MonoSynth": [
+		"Monophonic",
 		"Instrument",
 		"AudioNode",
 		"Tone"
@@ -534,12 +534,12 @@
 		"AudioNode",
 		"Tone"
 	],
-	"FMOscillator": [
+	"FatOscillator": [
 		"Source",
 		"AudioNode",
 		"Tone"
 	],
-	"FatOscillator": [
+	"FMOscillator": [
 		"Source",
 		"AudioNode",
 		"Tone"
@@ -564,11 +564,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"PWMOscillator": [
-		"Source",
-		"AudioNode",
-		"Tone"
-	],
 	"Player": [
 		"Source",
 		"AudioNode",
@@ -579,6 +574,11 @@
 		"Tone"
 	],
 	"PulseOscillator": [
+		"Source",
+		"AudioNode",
+		"Tone"
+	],
+	"PWMOscillator": [
 		"Source",
 		"AudioNode",
 		"Tone"
