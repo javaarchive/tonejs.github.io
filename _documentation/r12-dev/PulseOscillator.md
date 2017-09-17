@@ -1,0 +1,6 @@
+---
+title : PulseOscillator
+version : r12-dev
+layout : docs
+category : source
+---
