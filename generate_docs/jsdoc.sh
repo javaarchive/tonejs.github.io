@@ -15,26 +15,31 @@ jsdoc -X $TONE_FILES > $JSDOC_OUTPUT
 VERSION=$(node version.js $JSDOC_OUTPUT)
 
 if [ "${2}" = "dev" ]; then
-	VERSION=dev
+	VERSION_DIR=dev
+else
+	VERSION_DIR=$VERSION
 fi
 
+echo "VERSION_DIR : $DATA_FILES/$VERSION_DIR/"
+
 # simplify the jsdoc file
-node jsdoc_attributes.js $JSDOC_OUTPUT $DATA_FILES/$VERSION/
+node jsdoc_attributes.js $JSDOC_OUTPUT $DATA_FILES/$VERSION_DIR/
 
 # generate all of the files
-node jsdoc_generateFiles.js $VERSION $DOC_FILES
+node jsdoc_generateFiles.js $VERSION_DIR $DOC_FILES
+
 
 # make a type file
-TYPE_FILE=$DOC_FILES/$VERSION/Type.md
+TYPE_FILE=$DOC_FILES/$VERSION_DIR/Type.md
 echo "---" > $TYPE_FILE
 echo "layout: type" >> $TYPE_FILE
 echo "title: Type" >> $TYPE_FILE
-echo "version: $VERSION" >> $TYPE_FILE
+echo "version: $VERSION_DIR" >> $TYPE_FILE
 echo "---" >> $TYPE_FILE
 
 # update the current version
-if [ "${VERSION}" != "dev" ]; then
-	echo $VERSION > $DATA_FILES/version.yaml
+if [ "${VERSION_DIR}" != "dev" ]; then
+	echo $VERSION_DIR > $DATA_FILES/version.yaml
 fi
 
 rm $JSDOC_OUTPUT
