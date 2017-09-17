@@ -143,79 +143,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"EQ3": [
-		{
-			"description": "The gain in decibels of the low part",
-			"type": [
-				"Decibels"
-			],
-			"scope": "instance",
-			"name": "low",
-			"lineno": "Tone/component/EQ3.js#L66",
-			"signal": true
-		},
-		{
-			"description": "The gain in decibels of the mid part",
-			"type": [
-				"Decibels"
-			],
-			"scope": "instance",
-			"name": "mid",
-			"lineno": "Tone/component/EQ3.js#L73",
-			"signal": true
-		},
-		{
-			"description": "The gain in decibels of the high part",
-			"type": [
-				"Decibels"
-			],
-			"scope": "instance",
-			"name": "high",
-			"lineno": "Tone/component/EQ3.js#L80",
-			"signal": true
-		},
-		{
-			"description": "The Q value for all of the filters.",
-			"type": [
-				"Positive"
-			],
-			"scope": "instance",
-			"name": "Q",
-			"lineno": "Tone/component/EQ3.js#L87",
-			"signal": true
-		},
-		{
-			"description": "The low/mid crossover frequency.",
-			"type": [
-				"Frequency"
-			],
-			"scope": "instance",
-			"name": "lowFrequency",
-			"lineno": "Tone/component/EQ3.js#L94",
-			"signal": true
-		},
-		{
-			"description": "The mid/high crossover frequency.",
-			"type": [
-				"Frequency"
-			],
-			"scope": "instance",
-			"name": "highFrequency",
-			"lineno": "Tone/component/EQ3.js#L101",
-			"signal": true
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"Envelope": [
 		{
 			"description": "When triggerAttack is called, the attack time is the amount of\n time it takes for the envelope to reach it's maximum value.",
@@ -302,15 +229,66 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"FFT": [
+	"EQ3": [
 		{
-			"description": "The size of analysis. This must be a power of two in the range 32 to 32768.",
+			"description": "The gain in decibels of the low part",
 			"type": [
-				"Number"
+				"Decibels"
 			],
 			"scope": "instance",
-			"name": "size",
-			"lineno": "Tone/component/FFT.js#L43"
+			"name": "low",
+			"lineno": "Tone/component/EQ3.js#L66",
+			"signal": true
+		},
+		{
+			"description": "The gain in decibels of the mid part",
+			"type": [
+				"Decibels"
+			],
+			"scope": "instance",
+			"name": "mid",
+			"lineno": "Tone/component/EQ3.js#L73",
+			"signal": true
+		},
+		{
+			"description": "The gain in decibels of the high part",
+			"type": [
+				"Decibels"
+			],
+			"scope": "instance",
+			"name": "high",
+			"lineno": "Tone/component/EQ3.js#L80",
+			"signal": true
+		},
+		{
+			"description": "The Q value for all of the filters.",
+			"type": [
+				"Positive"
+			],
+			"scope": "instance",
+			"name": "Q",
+			"lineno": "Tone/component/EQ3.js#L87",
+			"signal": true
+		},
+		{
+			"description": "The low/mid crossover frequency.",
+			"type": [
+				"Frequency"
+			],
+			"scope": "instance",
+			"name": "lowFrequency",
+			"lineno": "Tone/component/EQ3.js#L94",
+			"signal": true
+		},
+		{
+			"description": "The mid/high crossover frequency.",
+			"type": [
+				"Frequency"
+			],
+			"scope": "instance",
+			"name": "highFrequency",
+			"lineno": "Tone/component/EQ3.js#L101",
+			"signal": true
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -344,6 +322,28 @@
 			"name": "resonance",
 			"lineno": "Tone/component/FeedbackCombFilter.js#L46",
 			"signal": true
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"FFT": [
+		{
+			"description": "The size of analysis. This must be a power of two in the range 32 to 32768.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "size",
+			"lineno": "Tone/component/FFT.js#L43"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -1068,48 +1068,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"PanVol": [
-		{
-			"description": "The L/R panning control.",
-			"type": [
-				"AudioRange"
-			],
-			"scope": "instance",
-			"name": "pan",
-			"lineno": "Tone/component/PanVol.js#L33",
-			"signal": true
-		},
-		{
-			"description": "The volume control in decibels.",
-			"type": [
-				"Decibels"
-			],
-			"scope": "instance",
-			"name": "volume",
-			"lineno": "Tone/component/PanVol.js#L47",
-			"signal": true
-		},
-		{
-			"description": "Mute/unmute the volume",
-			"type": [
-				"Boolean"
-			],
-			"scope": "instance",
-			"name": "mute",
-			"lineno": "Tone/component/PanVol.js#L70"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"Panner": [
 		{
 			"description": "The pan control. -1 = hard left, 1 = hard right.",
@@ -1269,6 +1227,48 @@
 			"scope": "instance",
 			"name": "maxDistance",
 			"lineno": "Tone/component/Panner3D.js#L302"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"PanVol": [
+		{
+			"description": "The L/R panning control.",
+			"type": [
+				"AudioRange"
+			],
+			"scope": "instance",
+			"name": "pan",
+			"lineno": "Tone/component/PanVol.js#L33",
+			"signal": true
+		},
+		{
+			"description": "The volume control in decibels.",
+			"type": [
+				"Decibels"
+			],
+			"scope": "instance",
+			"name": "volume",
+			"lineno": "Tone/component/PanVol.js#L47",
+			"signal": true
+		},
+		{
+			"description": "Mute/unmute the volume",
+			"type": [
+				"Boolean"
+			],
+			"scope": "instance",
+			"name": "mute",
+			"lineno": "Tone/component/PanVol.js#L70"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -4280,6 +4280,42 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
+	"Monophonic": [
+		{
+			"description": "The glide time between notes.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "portamento",
+			"lineno": "Tone/instrument/Monophonic.js#L24"
+		},
+		{
+			"description": "The volume of the output in decibels.",
+			"type": [
+				"Decibels"
+			],
+			"examples": [
+				"source.volume.value = -6;"
+			],
+			"scope": "instance",
+			"name": "volume",
+			"lineno": "Tone/instrument/Instrument.js#L31",
+			"inherits": "Tone.Instrument",
+			"signal": true
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
 	"MonoSynth": [
 		{
 			"description": "The oscillator.",
@@ -4346,42 +4382,6 @@
 			"name": "portamento",
 			"lineno": "Tone/instrument/Monophonic.js#L24",
 			"inherits": "Tone.Monophonic"
-		},
-		{
-			"description": "The volume of the output in decibels.",
-			"type": [
-				"Decibels"
-			],
-			"examples": [
-				"source.volume.value = -6;"
-			],
-			"scope": "instance",
-			"name": "volume",
-			"lineno": "Tone/instrument/Instrument.js#L31",
-			"inherits": "Tone.Instrument",
-			"signal": true
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Monophonic": [
-		{
-			"description": "The glide time between notes.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "portamento",
-			"lineno": "Tone/instrument/Monophonic.js#L24"
 		},
 		{
 			"description": "The volume of the output in decibels.",
@@ -5110,6 +5110,145 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
+	"FatOscillator": [
+		{
+			"description": "The oscillator's frequency",
+			"type": [
+				"Frequency"
+			],
+			"scope": "instance",
+			"name": "frequency",
+			"lineno": "Tone/source/FatOscillator.js#L28",
+			"signal": true
+		},
+		{
+			"description": "The detune control signal.",
+			"type": [
+				"Cents"
+			],
+			"scope": "instance",
+			"name": "detune",
+			"lineno": "Tone/source/FatOscillator.js#L35",
+			"signal": true
+		},
+		{
+			"description": "The type of the carrier oscillator",
+			"type": [
+				"string"
+			],
+			"scope": "instance",
+			"name": "type",
+			"lineno": "Tone/source/FatOscillator.js#L130"
+		},
+		{
+			"description": "The detune spread between the oscillators. If \"count\" is\nset to 3 oscillators and the \"spread\" is set to 40,\nthe three oscillators would be detuned like this: [-20, 0, 20]\nfor a total detune spread of 40 cents.",
+			"type": [
+				"Cents"
+			],
+			"scope": "instance",
+			"name": "spread",
+			"lineno": "Tone/source/FatOscillator.js#L148"
+		},
+		{
+			"description": "The number of detuned oscillators",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "count",
+			"lineno": "Tone/source/FatOscillator.js#L173"
+		},
+		{
+			"description": "The phase of the oscillator in degrees.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "phase",
+			"lineno": "Tone/source/FatOscillator.js#L218"
+		},
+		{
+			"description": "The partials of the carrier waveform. A partial represents \nthe amplitude at a harmonic. The first harmonic is the \nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series. \nSetting this value will automatically set the type to \"custom\". \nThe value is an empty array when the type is not \"custom\".",
+			"type": [
+				"Array"
+			],
+			"examples": [
+				"osc.partials = [1, 0.2, 0.01];"
+			],
+			"scope": "instance",
+			"name": "partials",
+			"lineno": "Tone/source/FatOscillator.js#L236"
+		},
+		{
+			"description": "Mute the output.",
+			"type": [
+				"boolean"
+			],
+			"examples": [
+				"//mute the output\nsource.mute = true;"
+			],
+			"scope": "instance",
+			"name": "mute",
+			"lineno": "Tone/source/Players.js#L104",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeIn time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeIn",
+			"lineno": "Tone/source/Players.js#L122",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeOut time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeOut",
+			"lineno": "Tone/source/Players.js#L140",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The volume of the output in decibels.",
+			"type": [
+				"Decibels"
+			],
+			"examples": [
+				"source.volume.value = -6;"
+			],
+			"scope": "instance",
+			"name": "volume",
+			"lineno": "Tone/source/Source.js#L48",
+			"inherits": "Tone.Source",
+			"signal": true
+		},
+		{
+			"description": "Returns the playback state of the source, either \"started\" or \"stopped\".",
+			"type": [
+				"Tone.State"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "state",
+			"lineno": "Tone/source/Source.js#L93",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
 	"FMOscillator": [
 		{
 			"description": "The oscillator's frequency",
@@ -5192,145 +5331,6 @@
 			"scope": "instance",
 			"name": "partials",
 			"lineno": "Tone/source/FMOscillator.js#L181"
-		},
-		{
-			"description": "Mute the output.",
-			"type": [
-				"boolean"
-			],
-			"examples": [
-				"//mute the output\nsource.mute = true;"
-			],
-			"scope": "instance",
-			"name": "mute",
-			"lineno": "Tone/source/Players.js#L104",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeIn time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeIn",
-			"lineno": "Tone/source/Players.js#L122",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeOut time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeOut",
-			"lineno": "Tone/source/Players.js#L140",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The volume of the output in decibels.",
-			"type": [
-				"Decibels"
-			],
-			"examples": [
-				"source.volume.value = -6;"
-			],
-			"scope": "instance",
-			"name": "volume",
-			"lineno": "Tone/source/Source.js#L48",
-			"inherits": "Tone.Source",
-			"signal": true
-		},
-		{
-			"description": "Returns the playback state of the source, either \"started\" or \"stopped\".",
-			"type": [
-				"Tone.State"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "state",
-			"lineno": "Tone/source/Source.js#L93",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"FatOscillator": [
-		{
-			"description": "The oscillator's frequency",
-			"type": [
-				"Frequency"
-			],
-			"scope": "instance",
-			"name": "frequency",
-			"lineno": "Tone/source/FatOscillator.js#L28",
-			"signal": true
-		},
-		{
-			"description": "The detune control signal.",
-			"type": [
-				"Cents"
-			],
-			"scope": "instance",
-			"name": "detune",
-			"lineno": "Tone/source/FatOscillator.js#L35",
-			"signal": true
-		},
-		{
-			"description": "The type of the carrier oscillator",
-			"type": [
-				"string"
-			],
-			"scope": "instance",
-			"name": "type",
-			"lineno": "Tone/source/FatOscillator.js#L130"
-		},
-		{
-			"description": "The detune spread between the oscillators. If \"count\" is\nset to 3 oscillators and the \"spread\" is set to 40,\nthe three oscillators would be detuned like this: [-20, 0, 20]\nfor a total detune spread of 40 cents.",
-			"type": [
-				"Cents"
-			],
-			"scope": "instance",
-			"name": "spread",
-			"lineno": "Tone/source/FatOscillator.js#L148"
-		},
-		{
-			"description": "The number of detuned oscillators",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "count",
-			"lineno": "Tone/source/FatOscillator.js#L173"
-		},
-		{
-			"description": "The phase of the oscillator in degrees.",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "phase",
-			"lineno": "Tone/source/FatOscillator.js#L218"
-		},
-		{
-			"description": "The partials of the carrier waveform. A partial represents \nthe amplitude at a harmonic. The first harmonic is the \nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series. \nSetting this value will automatically set the type to \"custom\". \nThe value is an empty array when the type is not \"custom\".",
-			"type": [
-				"Array"
-			],
-			"examples": [
-				"osc.partials = [1, 0.2, 0.01];"
-			],
-			"scope": "instance",
-			"name": "partials",
-			"lineno": "Tone/source/FatOscillator.js#L236"
 		},
 		{
 			"description": "Mute the output.",
@@ -5954,126 +5954,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"PWMOscillator": [
-		{
-			"description": "The frequency control.",
-			"type": [
-				"Frequency"
-			],
-			"scope": "instance",
-			"name": "frequency",
-			"lineno": "Tone/source/PWMOscillator.js#L56",
-			"signal": true
-		},
-		{
-			"description": "The detune of the oscillator.",
-			"type": [
-				"Cents"
-			],
-			"scope": "instance",
-			"name": "detune",
-			"lineno": "Tone/source/PWMOscillator.js#L63",
-			"signal": true
-		},
-		{
-			"description": "The modulation rate of the oscillator.",
-			"type": [
-				"Frequency"
-			],
-			"scope": "instance",
-			"name": "modulationFrequency",
-			"lineno": "Tone/source/PWMOscillator.js#L70",
-			"signal": true
-		},
-		{
-			"description": "The type of the oscillator. Always returns \"pwm\".",
-			"type": [
-				"string"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "type",
-			"lineno": "Tone/source/PWMOscillator.js#L115"
-		},
-		{
-			"description": "The phase of the oscillator in degrees.",
-			"type": [
-				"number"
-			],
-			"scope": "instance",
-			"name": "phase",
-			"lineno": "Tone/source/PWMOscillator.js#L141"
-		},
-		{
-			"description": "Mute the output.",
-			"type": [
-				"boolean"
-			],
-			"examples": [
-				"//mute the output\nsource.mute = true;"
-			],
-			"scope": "instance",
-			"name": "mute",
-			"lineno": "Tone/source/Players.js#L104",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeIn time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeIn",
-			"lineno": "Tone/source/Players.js#L122",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeOut time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeOut",
-			"lineno": "Tone/source/Players.js#L140",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The volume of the output in decibels.",
-			"type": [
-				"Decibels"
-			],
-			"examples": [
-				"source.volume.value = -6;"
-			],
-			"scope": "instance",
-			"name": "volume",
-			"lineno": "Tone/source/Source.js#L48",
-			"inherits": "Tone.Source",
-			"signal": true
-		},
-		{
-			"description": "Returns the playback state of the source, either \"started\" or \"stopped\".",
-			"type": [
-				"Tone.State"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "state",
-			"lineno": "Tone/source/Source.js#L93",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"Player": [
 		{
 			"description": "If the file should play as soon\n as the buffer is loaded.",
@@ -6401,6 +6281,126 @@
 			"scope": "instance",
 			"name": "type",
 			"lineno": "Tone/source/PulseOscillator.js#L139"
+		},
+		{
+			"description": "Mute the output.",
+			"type": [
+				"boolean"
+			],
+			"examples": [
+				"//mute the output\nsource.mute = true;"
+			],
+			"scope": "instance",
+			"name": "mute",
+			"lineno": "Tone/source/Players.js#L104",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeIn time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeIn",
+			"lineno": "Tone/source/Players.js#L122",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeOut time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeOut",
+			"lineno": "Tone/source/Players.js#L140",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The volume of the output in decibels.",
+			"type": [
+				"Decibels"
+			],
+			"examples": [
+				"source.volume.value = -6;"
+			],
+			"scope": "instance",
+			"name": "volume",
+			"lineno": "Tone/source/Source.js#L48",
+			"inherits": "Tone.Source",
+			"signal": true
+		},
+		{
+			"description": "Returns the playback state of the source, either \"started\" or \"stopped\".",
+			"type": [
+				"Tone.State"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "state",
+			"lineno": "Tone/source/Source.js#L93",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"PWMOscillator": [
+		{
+			"description": "The frequency control.",
+			"type": [
+				"Frequency"
+			],
+			"scope": "instance",
+			"name": "frequency",
+			"lineno": "Tone/source/PWMOscillator.js#L56",
+			"signal": true
+		},
+		{
+			"description": "The detune of the oscillator.",
+			"type": [
+				"Cents"
+			],
+			"scope": "instance",
+			"name": "detune",
+			"lineno": "Tone/source/PWMOscillator.js#L63",
+			"signal": true
+		},
+		{
+			"description": "The modulation rate of the oscillator.",
+			"type": [
+				"Frequency"
+			],
+			"scope": "instance",
+			"name": "modulationFrequency",
+			"lineno": "Tone/source/PWMOscillator.js#L70",
+			"signal": true
+		},
+		{
+			"description": "The type of the oscillator. Always returns \"pwm\".",
+			"type": [
+				"string"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "type",
+			"lineno": "Tone/source/PWMOscillator.js#L115"
+		},
+		{
+			"description": "The phase of the oscillator in degrees.",
+			"type": [
+				"number"
+			],
+			"scope": "instance",
+			"name": "phase",
+			"lineno": "Tone/source/PWMOscillator.js#L141"
 		},
 		{
 			"description": "Mute the output.",
