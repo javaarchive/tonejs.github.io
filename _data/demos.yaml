@@ -173,3 +173,11 @@
 - image : songexploder.jpg
   url : https://experiments.withgoogle.com/webvr/inside-music
   title : Inside Music
+  
+- image : geosound.jpg
+  url : https://experiments.withgoogle.com/chrome/geosound
+  title : GeoSound
+
+- image : melodyjs.jpg
+  url : http://melodyjs.surge.sh/
+  title : MelodyJS
