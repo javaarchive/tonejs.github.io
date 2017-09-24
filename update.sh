@@ -7,6 +7,7 @@ DOC_GEN=$SITE_DIR/generate_docs
 TMP_TONE=$SITE_DIR/tmp/Tone.js
 git clone https://github.com/Tonejs/Tone.js $TMP_TONE
 cd $TMP_TONE
+git checkout master
 
 cd $DOC_GEN
 sh generate.sh $TMP_TONE
