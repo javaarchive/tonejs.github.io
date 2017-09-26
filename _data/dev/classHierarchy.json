@@ -181,10 +181,6 @@
 		"Emitter",
 		"Tone"
 	],
-	"Param": [
-		"AudioNode",
-		"Tone"
-	],
 	"Timeline": [
 		"Tone"
 	],
@@ -201,6 +197,10 @@
 	],
 	"TransportRepeatEvent": [
 		"TransportEvent",
+		"Tone"
+	],
+	"Param": [
+		"AudioNode",
 		"Tone"
 	],
 	"AutoFilter": [
@@ -369,11 +369,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"MembraneSynth": [
-		"Instrument",
-		"AudioNode",
-		"Tone"
-	],
 	"MetalSynth": [
 		"Instrument",
 		"AudioNode",
@@ -405,13 +400,18 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Sampler": [
+	"Synth": [
+		"Monophonic",
 		"Instrument",
 		"AudioNode",
 		"Tone"
 	],
-	"Synth": [
-		"Monophonic",
+	"MembraneSynth": [
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
+	"Sampler": [
 		"Instrument",
 		"AudioNode",
 		"Tone"
@@ -530,21 +530,12 @@
 		"AudioNode",
 		"Tone"
 	],
-	"BufferSource": [
-		"AudioNode",
-		"Tone"
-	],
 	"FMOscillator": [
 		"Source",
 		"AudioNode",
 		"Tone"
 	],
 	"FatOscillator": [
-		"Source",
-		"AudioNode",
-		"Tone"
-	],
-	"GrainPlayer": [
 		"Source",
 		"AudioNode",
 		"Tone"
@@ -591,11 +582,16 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Frequency": [
-		"TimeBase",
+	"BufferSource": [
+		"AudioNode",
 		"Tone"
 	],
-	"Time": [
+	"GrainPlayer": [
+		"Source",
+		"AudioNode",
+		"Tone"
+	],
+	"Frequency": [
 		"TimeBase",
 		"Tone"
 	],
@@ -604,6 +600,10 @@
 	],
 	"TransportTime": [
 		"Time",
+		"TimeBase",
+		"Tone"
+	],
+	"Time": [
 		"TimeBase",
 		"Tone"
 	]

@@ -976,33 +976,6 @@
 		],
 		"extends": "Tone.Context"
 	},
-	"Param": {
-		"description": "Tone.Param wraps the native Web Audio's AudioParam to provide\n        additional unit conversion functionality. It also\n        serves as a base-class for classes which have a single,\n        automatable parameter.",
-		"params": [
-			{
-				"type": [
-					"AudioParam"
-				],
-				"description": "The parameter to wrap.",
-				"name": "param"
-			},
-			{
-				"type": [
-					"Tone.Type"
-				],
-				"description": "The units of the audio param.",
-				"name": "units"
-			},
-			{
-				"type": [
-					"Boolean"
-				],
-				"description": "If the param should be converted.",
-				"name": "convert"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
 	"Timeline": {
 		"description": "A Timeline class for scheduling and maintaining state\n        along a timeline. All events must have a \"time\" property.\n        Internally, events are stored in time order for fast\n        retrieval.",
 		"params": [
@@ -1030,10 +1003,6 @@
 			}
 		],
 		"extends": "Tone.Timeline"
-	},
-	"Tone": {
-		"description": "Tone is the base class of all other classes.",
-		"params": []
 	},
 	"Transport": {
 		"description": "Transport for timing musical events.\n         Supports tempo curves and time changes. Unlike browser-based timing (setInterval, requestAnimationFrame)\n         Tone.Transport timing events pass in the exact time of the scheduled event\n         in the argument of the callback function. Pass that time value to the object\n         you're scheduling. <br><br>\n         A single transport is created for you when the library is initialized.\n         <br><br>\n         The transport emits the events: \"start\", \"stop\", \"pause\", and \"loop\" which are\n         called with the time of that event as the argument.",
@@ -1067,6 +1036,37 @@
 			}
 		],
 		"extends": "Tone.TransportEvent"
+	},
+	"Param": {
+		"description": "Tone.Param wraps the native Web Audio's AudioParam to provide\n        additional unit conversion functionality. It also\n        serves as a base-class for classes which have a single,\n        automatable parameter.",
+		"params": [
+			{
+				"type": [
+					"AudioParam"
+				],
+				"description": "The parameter to wrap.",
+				"name": "param"
+			},
+			{
+				"type": [
+					"Tone.Type"
+				],
+				"description": "The units of the audio param.",
+				"name": "units"
+			},
+			{
+				"type": [
+					"Boolean"
+				],
+				"description": "If the param should be converted.",
+				"name": "convert"
+			}
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"Tone": {
+		"description": "Tone is the base class of all other classes.",
+		"params": []
 	},
 	"AutoFilter": {
 		"description": "Tone.AutoFilter is a Tone.Filter with a Tone.LFO connected to the filter cutoff frequency.\n        Setting the LFO rate and depth allows for control over the filter modulation rate \n        and depth.",
@@ -1695,23 +1695,6 @@
 		"description": "Base-class for all instruments",
 		"extends": "Tone.AudioNode"
 	},
-	"MembraneSynth": {
-		"description": "Tone.MembraneSynth makes kick and tom sounds using a single oscillator\n         with an amplitude envelope and frequency ramp. A Tone.OmniOscillator\n         is routed through a Tone.AmplitudeEnvelope to the output. The drum\n         quality of the sound comes from the frequency envelope applied\n         during during Tone.MembraneSynth.triggerAttack(note). The frequency\n         envelope starts at <code>note * .octaves</code> and ramps to \n         <code>note</code> over the duration of <code>.pitchDecay</code>.",
-		"params": [
-			{
-				"type": [
-					"Object"
-				],
-				"optional": true,
-				"description": "the options available for the synth \n                         see defaults below",
-				"name": "options"
-			}
-		],
-		"examples": [
-			"var synth = new Tone.MembraneSynth().toMaster();\nsynth.triggerAttackRelease(\"C2\", \"8n\");"
-		],
-		"extends": "Tone.Instrument"
-	},
 	"MetalSynth": {
 		"description": "A highly inharmonic and spectrally complex source with a highpass filter\n         and amplitude envelope which is good for making metalophone sounds. Based\n         on CymbalSynth by [@polyrhythmatic](https://github.com/polyrhythmatic).\n         Inspiration from [Sound on Sound](https://web.archive.org/web/20160610143924/https://www.soundonsound.com/sos/jul02/articles/synthsecrets0702.asp).",
 		"params": [
@@ -1809,6 +1792,40 @@
 		],
 		"extends": "Tone.Instrument"
 	},
+	"Synth": {
+		"description": "Tone.Synth is composed simply of a Tone.OmniOscillator\n         routed through a Tone.AmplitudeEnvelope. \n         <img src=\"https://docs.google.com/drawings/d/1-1_0YW2Z1J2EPI36P8fNCMcZG7N1w1GZluPs4og4evo/pub?w=1163&h=231\">",
+		"params": [
+			{
+				"type": [
+					"Object"
+				],
+				"optional": true,
+				"description": "the options available for the synth \n                         see defaults below",
+				"name": "options"
+			}
+		],
+		"examples": [
+			"var synth = new Tone.Synth().toMaster();\nsynth.triggerAttackRelease(\"C4\", \"8n\");"
+		],
+		"extends": "Tone.Monophonic"
+	},
+	"MembraneSynth": {
+		"description": "Tone.MembraneSynth makes kick and tom sounds using a single oscillator\n         with an amplitude envelope and frequency ramp. A Tone.OmniOscillator\n         is routed through a Tone.AmplitudeEnvelope to the output. The drum\n         quality of the sound comes from the frequency envelope applied\n         during Tone.MembraneSynth.triggerAttack(note). The frequency envelope\n         starts at <code>note * .octaves</code> and ramps to <code>note</code>\n         over the duration of <code>.pitchDecay</code>.",
+		"params": [
+			{
+				"type": [
+					"Object"
+				],
+				"optional": true,
+				"description": "the options available for the synth \n                         see defaults below",
+				"name": "options"
+			}
+		],
+		"examples": [
+			"var synth = new Tone.MembraneSynth().toMaster();\nsynth.triggerAttackRelease(\"C2\", \"8n\");"
+		],
+		"extends": "Tone.Instrument"
+	},
 	"Sampler": {
 		"description": "Automatically interpolates between a set of pitched samples. Pass in an object which maps the note's pitch or midi value to the url, then you can trigger the attack and release of that note like other instruments. By automatically repitching the samples, it is possible to play pitches which were not explicitly included which can save loading time.\n       For sample or buffer playback where repitching is not necessary, use [Tone.Player](https://tonejs.github.io/docs/Player).",
 		"params": [
@@ -1840,23 +1857,6 @@
 			"var sampler = new Tone.Sampler({\n\t\"C3\" : \"path/to/C3.mp3\",\n\t\"D#3\" : \"path/to/Dsharp3.mp3\",\n\t\"F#3\" : \"path/to/Fsharp3.mp3\",\n\t\"A3\" : \"path/to/A3.mp3\",\n}, function(){\n\t//sampler will repitch the closest sample\n\tsampler.triggerAttack(\"D3\")\n})"
 		],
 		"extends": "Tone.Instrument"
-	},
-	"Synth": {
-		"description": "Tone.Synth is composed simply of a Tone.OmniOscillator\n         routed through a Tone.AmplitudeEnvelope. \n         <img src=\"https://docs.google.com/drawings/d/1-1_0YW2Z1J2EPI36P8fNCMcZG7N1w1GZluPs4og4evo/pub?w=1163&h=231\">",
-		"params": [
-			{
-				"type": [
-					"Object"
-				],
-				"optional": true,
-				"description": "the options available for the synth \n                         see defaults below",
-				"name": "options"
-			}
-		],
-		"examples": [
-			"var synth = new Tone.Synth().toMaster();\nsynth.triggerAttackRelease(\"C4\", \"8n\");"
-		],
-		"extends": "Tone.Monophonic"
 	},
 	"Abs": {
 		"description": "Return the absolute value of an incoming signal.",
@@ -2238,27 +2238,6 @@
 		],
 		"extends": "Tone.Oscillator"
 	},
-	"BufferSource": {
-		"description": "Wrapper around the native BufferSourceNode.",
-		"params": [
-			{
-				"type": [
-					"AudioBuffer",
-					"Tone.Buffer"
-				],
-				"description": "The buffer to play",
-				"name": "buffer"
-			},
-			{
-				"type": [
-					"function"
-				],
-				"description": "The callback to invoke when the\n                              buffer is done playing.",
-				"name": "onload"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
 	"FMOscillator": {
 		"description": "Tone.FMOscillator",
 		"params": [
@@ -2316,28 +2295,6 @@
 		],
 		"examples": [
 			"//a sine oscillator frequency-modulated by a square wave\nvar fmOsc = new Tone.FatOscillator(\"Ab3\", \"sine\", \"square\").toMaster().start();"
-		],
-		"extends": "Tone.Source"
-	},
-	"GrainPlayer": {
-		"description": "Tone.GrainPlayer implements [granular synthesis](https://en.wikipedia.org/wiki/Granular_synthesis).\n       Granular Synthesis enables you to adjust pitch and playback rate independently. The grainSize is the\n       amount of time each small chunk of audio is played for and the overlap is the\n       amount of crossfading transition time between successive grains.",
-		"params": [
-			{
-				"type": [
-					"String",
-					"Tone.Buffer"
-				],
-				"description": "The url to load, or the Tone.Buffer to play.",
-				"name": "url"
-			},
-			{
-				"type": [
-					"function"
-				],
-				"optional": true,
-				"description": "The callback to invoke after the url is loaded.",
-				"name": "callback"
-			}
 		],
 		"extends": "Tone.Source"
 	},
@@ -2523,6 +2480,49 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
+	"BufferSource": {
+		"description": "Wrapper around the native BufferSourceNode.",
+		"params": [
+			{
+				"type": [
+					"AudioBuffer",
+					"Tone.Buffer"
+				],
+				"description": "The buffer to play",
+				"name": "buffer"
+			},
+			{
+				"type": [
+					"function"
+				],
+				"description": "The callback to invoke when the\n                              buffer is done playing.",
+				"name": "onload"
+			}
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"GrainPlayer": {
+		"description": "Tone.GrainPlayer implements [granular synthesis](https://en.wikipedia.org/wiki/Granular_synthesis).\n       Granular Synthesis enables you to adjust pitch and playback rate independently. The grainSize is the\n       amount of time each small chunk of audio is played for and the overlap is the\n       amount of crossfading transition time between successive grains.",
+		"params": [
+			{
+				"type": [
+					"String",
+					"Tone.Buffer"
+				],
+				"description": "The url to load, or the Tone.Buffer to play.",
+				"name": "url"
+			},
+			{
+				"type": [
+					"function"
+				],
+				"optional": true,
+				"description": "The callback to invoke after the url is loaded.",
+				"name": "callback"
+			}
+		],
+		"extends": "Tone.Source"
+	},
 	"Frequency": {
 		"description": "Tone.Frequency is a primitive type for encoding Frequency values.\n        Eventually all time values are evaluated to hertz\n        using the `eval` method.",
 		"params": [
@@ -2545,31 +2545,6 @@
 		],
 		"examples": [
 			"Tone.Frequency(\"C3\") // 261\nTone.Frequency(38, \"midi\") //\nTone.Frequency(\"C3\").transpose(4);"
-		],
-		"extends": "Tone.TimeBase"
-	},
-	"Time": {
-		"description": "Tone.Time is a primitive type for encoding Time values. \n        Eventually all time values are evaluated to seconds\n        using the `eval` method. Tone.Time can be constructed\n        with or without the `new` keyword. Tone.Time can be passed\n        into the parameter of any method which takes time as an argument.",
-		"params": [
-			{
-				"type": [
-					"String",
-					"Number"
-				],
-				"description": "The time value.",
-				"name": "val"
-			},
-			{
-				"type": [
-					"String"
-				],
-				"optional": true,
-				"description": "The units of the value.",
-				"name": "units"
-			}
-		],
-		"examples": [
-			"var t = Tone.Time(\"4n\");//encodes a quarter note\nt.mult(4); // multiply that value by 4\nt.toNotation(); //returns \"1m\""
 		],
 		"extends": "Tone.TimeBase"
 	},
@@ -2617,5 +2592,30 @@
 			}
 		],
 		"extends": "Tone.Time"
+	},
+	"Time": {
+		"description": "Tone.Time is a primitive type for encoding Time values. \n        Eventually all time values are evaluated to seconds\n        using the `eval` method. Tone.Time can be constructed\n        with or without the `new` keyword. Tone.Time can be passed\n        into the parameter of any method which takes time as an argument.",
+		"params": [
+			{
+				"type": [
+					"String",
+					"Number"
+				],
+				"description": "The time value.",
+				"name": "val"
+			},
+			{
+				"type": [
+					"String"
+				],
+				"optional": true,
+				"description": "The units of the value.",
+				"name": "units"
+			}
+		],
+		"examples": [
+			"var t = Tone.Time(\"4n\");//encodes a quarter note\nt.mult(4); // multiply that value by 4\nt.toNotation(); //returns \"1m\""
+		],
+		"extends": "Tone.TimeBase"
 	}
 }

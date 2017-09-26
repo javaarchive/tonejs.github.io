@@ -5833,507 +5833,6 @@
 			"lineno": "Tone/core/OfflineContext.js#L75"
 		}
 	],
-	"Param": [
-		{
-			"description": "Schedules a parameter value change at the given time.",
-			"params": [
-				{
-					"type": [
-						"*"
-					],
-					"description": "The value to set the signal.",
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The time when the change should occur.",
-					"name": "time"
-				}
-			],
-			"examples": [
-				"//set the frequency to \"G4\" in exactly 1 second from now.\nfreq.setValueAtTime(\"G4\", \"+1\");"
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "setValueAtTime",
-			"lineno": "Tone/core/Param.js#L148"
-		},
-		{
-			"description": "Creates a schedule point with the current value at the current time.\n This is useful for creating an automation anchor point in order to\n schedule changes from the current value.",
-			"params": [
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"description": "(Optionally) pass the now value in.",
-					"name": "now"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "setRampPoint",
-			"lineno": "Tone/core/Param.js#L163"
-		},
-		{
-			"description": "Schedules a linear continuous change in parameter value from the\n previous scheduled parameter value to the given value.",
-			"params": [
-				{
-					"type": [
-						"number"
-					],
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"name": "endTime"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "linearRampToValueAtTime",
-			"lineno": "Tone/core/Param.js#L183"
-		},
-		{
-			"description": "Schedules an exponential continuous change in parameter value from\n the previous scheduled parameter value to the given value.",
-			"params": [
-				{
-					"type": [
-						"number"
-					],
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"name": "endTime"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "exponentialRampToValueAtTime",
-			"lineno": "Tone/core/Param.js#L199"
-		},
-		{
-			"description": "Schedules an exponential continuous change in parameter value from\n the current time and current value to the given value over the\n duration of the rampTime.",
-			"params": [
-				{
-					"type": [
-						"number"
-					],
-					"description": "The value to ramp to.",
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "the time that it takes the\n                              value to ramp from it's current value",
-					"name": "rampTime"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the ramp should start.",
-					"name": "startTime"
-				}
-			],
-			"examples": [
-				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "exponentialRampTo",
-			"lineno": "Tone/core/Param.js#L222"
-		},
-		{
-			"description": "Schedules an linear continuous change in parameter value from\n the current time and current value to the given value over the\n duration of the rampTime.",
-			"params": [
-				{
-					"type": [
-						"number"
-					],
-					"description": "The value to ramp to.",
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "the time that it takes the\n                              value to ramp from it's current value",
-					"name": "rampTime"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the ramp should start.",
-					"name": "startTime"
-				}
-			],
-			"examples": [
-				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampTo(4, 3);"
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "linearRampTo",
-			"lineno": "Tone/core/Param.js#L243"
-		},
-		{
-			"description": "Start exponentially approaching the target value at the given time. Since it\n is an exponential approach it will continue approaching after the ramp duration. The\n rampTime is the time that it takes to reach over 99% of the way towards the value.",
-			"params": [
-				{
-					"type": [
-						"number"
-					],
-					"description": "The value to ramp to.",
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "the time that it takes the\n                              value to ramp from it's current value",
-					"name": "rampTime"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the ramp should start.",
-					"name": "startTime"
-				}
-			],
-			"examples": [
-				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "targetRampTo",
-			"lineno": "Tone/core/Param.js#L263"
-		},
-		{
-			"description": "Start exponentially approaching the target value at the given time. Since it\n is an exponential approach it will continue approaching after the ramp duration. The\n rampTime is the time that it takes to reach over 99% of the way towards the value. This methods\n is similar to setTargetAtTime except the third argument is a time instead of a 'timeConstant'",
-			"params": [
-				{
-					"type": [
-						"number"
-					],
-					"description": "The value to ramp to.",
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "When the ramp should start.",
-					"name": "time"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "the time that it takes the\n                              value to ramp from it's current value",
-					"name": "rampTime"
-				}
-			],
-			"examples": [
-				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "exponentialAppraochValueAtTime",
-			"lineno": "Tone/core/Param.js#L284"
-		},
-		{
-			"description": "Start exponentially approaching the target value at the given time with\n a rate having the given time constant.",
-			"params": [
-				{
-					"type": [
-						"number"
-					],
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"name": "startTime"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"name": "timeConstant"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "setTargetAtTime",
-			"lineno": "Tone/core/Param.js#L299"
-		},
-		{
-			"description": "Sets an array of arbitrary parameter values starting at the given time\n for the given duration.",
-			"params": [
-				{
-					"type": [
-						"Array"
-					],
-					"name": "values"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"name": "startTime"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"name": "duration"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "setValueCurveAtTime",
-			"lineno": "Tone/core/Param.js#L318"
-		},
-		{
-			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to startTime.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"name": "startTime"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "cancelScheduledValues",
-			"lineno": "Tone/core/Param.js#L336"
-		},
-		{
-			"description": "This is similar to [cancelScheduledValues](#cancelScheduledValues) except\n it holds the automated value at cancelTime until the next automated event.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"name": "cancelTime"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "cancelAndHoldAtTime",
-			"lineno": "Tone/core/Param.js#L347"
-		},
-		{
-			"description": "Ramps to the given value over the duration of the rampTime.\n Automatically selects the best ramp type (exponential or linear)\n depending on the `units` of the signal",
-			"params": [
-				{
-					"type": [
-						"number"
-					],
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The time that it takes the\n                             value to ramp from it's current value",
-					"name": "rampTime"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the ramp should start.",
-					"name": "startTime"
-				}
-			],
-			"examples": [
-				"//ramp to the value either linearly or exponentially\n//depending on the \"units\" value of the signal\nsignal.rampTo(0, 10);\n ",
-				"//schedule it to ramp starting at a specific time\nsignal.rampTo(0, 10, 5)"
-			],
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L384"
-		},
-		{
-			"description": "Clean up",
-			"returns": {
-				"type": [
-					"Tone.Param"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/core/Param.js#L398"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L110",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"Timeline": [
 		{
 			"description": "Insert an event object onto the timeline. Events must have a \"time\" attribute.",
@@ -7119,176 +6618,6 @@
 			"inherits": "Tone.Timeline"
 		}
 	],
-	"Tone#Tone": [
-		{
-			"returns": {
-				"type": [
-					"string"
-				],
-				"description": "returns the name of the class as a string"
-			},
-			"scope": "instance",
-			"name": "toString",
-			"lineno": "Tone/core/Tone.js#L25"
-		},
-		{
-			"description": "Set the parameters at once. Either pass in an\n object mapping parameters to values, or to set a\n single parameter, by passing in a string and value.\n The last argument is an optional ramp time which\n will ramp any signal values to their destination value\n over the duration of the rampTime.",
-			"params": [
-				{
-					"type": [
-						"Object",
-						"string"
-					],
-					"name": "params"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"name": "rampTime"
-				}
-			],
-			"examples": [
-				"//set values using an object\nfilter.set({\n\t\"frequency\" : 300,\n\t\"type\" : highpass\n});\n ",
-				"filter.set(\"type\", \"highpass\");\n ",
-				"//ramp to the value 220 over 3 seconds.\noscillator.set({\n\t\"frequency\" : 220\n}, 3);"
-			],
-			"returns": {
-				"type": [
-					"Tone"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "set",
-			"lineno": "Tone/core/Tone.js#L75"
-		},
-		{
-			"description": "Get the object's attributes. Given no arguments get\n will return all available object properties and their corresponding\n values. Pass in a single attribute to retrieve or an array\n of attributes. The attribute strings can also include a \".\"\n to access deeper properties.",
-			"params": [
-				{
-					"type": [
-						"Array",
-						"string",
-						"undefined"
-					],
-					"description": "the parameters to get, otherwise will return\n \t\t\t\t\t                  all available.",
-					"name": "params"
-				}
-			],
-			"examples": [
-				"osc.get();\n//returns {\"type\" : \"sine\", \"frequency\" : 440, ...etc}\n ",
-				"osc.get(\"type\");\n//returns { \"type\" : \"sine\"}",
-				"//use dot notation to access deep properties\nsynth.get([\"envelope.attack\", \"envelope.release\"]);\n//returns {\"envelope\" : {\"attack\" : 0.2, \"release\" : 0.4}}\n "
-			],
-			"returns": {
-				"type": [
-					"Object"
-				]
-			},
-			"scope": "instance",
-			"name": "get",
-			"lineno": "Tone/core/Tone.js#L148"
-		},
-		{
-			"description": "Return the current time of the AudioContext clock.",
-			"returns": {
-				"type": [
-					"Number"
-				],
-				"description": "the currentTime from the AudioContext"
-			},
-			"scope": "instance",
-			"name": "now",
-			"lineno": "Tone/core/Tone.js#L497"
-		}
-	],
-	"Tone#\n disconnect and dispose": [
-		{
-			"returns": {
-				"type": [
-					"Tone"
-				],
-				"description": "this"
-			},
-			"scope": "static",
-			"name": "Tone#dispose",
-			"lineno": "Tone/core/Tone.js#L41"
-		}
-	],
-	"<anonymous>~Tone": [
-		{
-			"description": "An empty function.",
-			"scope": "static",
-			"name": "noOp",
-			"lineno": "Tone/core/Tone.js#L388"
-		},
-		{
-			"description": "Adds warning in the console if the scheduled time has passed.",
-			"scope": "static",
-			"name": "isPast",
-			"lineno": "Tone/core/Tone.js#L515"
-		},
-		{
-			"description": "Tone automatically creates a context on init, but if you are working\n with other libraries which also create an AudioContext, it can be\n useful to set your own. If you are going to set your own context,\n be sure to do it at the start of your code, before creating any objects.",
-			"params": [
-				{
-					"type": [
-						"AudioContext"
-					],
-					"description": "The new audio context to set",
-					"name": "ctx"
-				}
-			],
-			"scope": "static",
-			"name": "setContext",
-			"lineno": "Tone/core/Tone.js#L604"
-		},
-		{
-			"description": "Get the context when it becomes available",
-			"params": [
-				{
-					"type": [
-						"function"
-					],
-					"description": "Callback when the context is initialized",
-					"name": "resolve"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone"
-				]
-			},
-			"scope": "static",
-			"name": "getContext",
-			"lineno": "Tone/core/Tone.js#L675"
-		}
-	],
-	"extend": [
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "TempConstructor",
-			"lineno": "Tone/core/Tone.js#L543"
-		}
-	],
-	"getContext": [
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "resCallback",
-			"lineno": "Tone/core/Tone.js#L679"
-		}
-	],
 	"Transport": [
 		{
 			"description": "Schedule an event along the timeline.",
@@ -7791,6 +7120,677 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/core/TransportRepeatEvent.js#L120"
+		}
+	],
+	"Param": [
+		{
+			"description": "Schedules a parameter value change at the given time.",
+			"params": [
+				{
+					"type": [
+						"*"
+					],
+					"description": "The value to set the signal.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time when the change should occur.",
+					"name": "time"
+				}
+			],
+			"examples": [
+				"//set the frequency to \"G4\" in exactly 1 second from now.\nfreq.setValueAtTime(\"G4\", \"+1\");"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "setValueAtTime",
+			"lineno": "Tone/core/Param.js#L148"
+		},
+		{
+			"description": "Creates a schedule point with the current value at the current time.\n This is useful for creating an automation anchor point in order to\n schedule changes from the current value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"description": "(Optionally) pass the now value in.",
+					"name": "now"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "setRampPoint",
+			"lineno": "Tone/core/Param.js#L163"
+		},
+		{
+			"description": "Schedules a linear continuous change in parameter value from the\n previous scheduled parameter value to the given value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"name": "endTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "linearRampToValueAtTime",
+			"lineno": "Tone/core/Param.js#L183"
+		},
+		{
+			"description": "Schedules an exponential continuous change in parameter value from\n the previous scheduled parameter value to the given value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"name": "endTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "exponentialRampToValueAtTime",
+			"lineno": "Tone/core/Param.js#L199"
+		},
+		{
+			"description": "Schedules an exponential continuous change in parameter value from\n the current time and current value to the given value over the\n duration of the rampTime.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "exponentialRampTo",
+			"lineno": "Tone/core/Param.js#L222"
+		},
+		{
+			"description": "Schedules an linear continuous change in parameter value from\n the current time and current value to the given value over the\n duration of the rampTime.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//linearly ramp to the value 4 over 3 seconds.\nsignal.linearRampTo(4, 3);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "linearRampTo",
+			"lineno": "Tone/core/Param.js#L243"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time. Since it\n is an exponential approach it will continue approaching after the ramp duration. The\n rampTime is the time that it takes to reach over 99% of the way towards the value.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "targetRampTo",
+			"lineno": "Tone/core/Param.js#L263"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time. Since it\n is an exponential approach it will continue approaching after the ramp duration. The\n rampTime is the time that it takes to reach over 99% of the way towards the value. This methods\n is similar to setTargetAtTime except the third argument is a time instead of a 'timeConstant'",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"description": "The value to ramp to.",
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "When the ramp should start.",
+					"name": "time"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the time that it takes the\n                              value to ramp from it's current value",
+					"name": "rampTime"
+				}
+			],
+			"examples": [
+				"//exponentially ramp to the value 2 over 4 seconds.\nsignal.exponentialRampTo(2, 4);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "exponentialAppraochValueAtTime",
+			"lineno": "Tone/core/Param.js#L284"
+		},
+		{
+			"description": "Start exponentially approaching the target value at the given time with\n a rate having the given time constant.",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"name": "startTime"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"name": "timeConstant"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "setTargetAtTime",
+			"lineno": "Tone/core/Param.js#L299"
+		},
+		{
+			"description": "Sets an array of arbitrary parameter values starting at the given time\n for the given duration.",
+			"params": [
+				{
+					"type": [
+						"Array"
+					],
+					"name": "values"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"name": "startTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"name": "duration"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "setValueCurveAtTime",
+			"lineno": "Tone/core/Param.js#L318"
+		},
+		{
+			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to startTime.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "startTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelScheduledValues",
+			"lineno": "Tone/core/Param.js#L336"
+		},
+		{
+			"description": "This is similar to [cancelScheduledValues](#cancelScheduledValues) except\n it holds the automated value at cancelTime until the next automated event.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "cancelTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelAndHoldAtTime",
+			"lineno": "Tone/core/Param.js#L347"
+		},
+		{
+			"description": "Ramps to the given value over the duration of the rampTime.\n Automatically selects the best ramp type (exponential or linear)\n depending on the `units` of the signal",
+			"params": [
+				{
+					"type": [
+						"number"
+					],
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time that it takes the\n                             value to ramp from it's current value",
+					"name": "rampTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the ramp should start.",
+					"name": "startTime"
+				}
+			],
+			"examples": [
+				"//ramp to the value either linearly or exponentially\n//depending on the \"units\" value of the signal\nsignal.rampTo(0, 10);\n ",
+				"//schedule it to ramp starting at a specific time\nsignal.rampTo(0, 10, 5)"
+			],
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "rampTo",
+			"lineno": "Tone/core/Param.js#L384"
+		},
+		{
+			"description": "Clean up",
+			"returns": {
+				"type": [
+					"Tone.Param"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/core/Param.js#L398"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L110",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Tone#Tone": [
+		{
+			"returns": {
+				"type": [
+					"string"
+				],
+				"description": "returns the name of the class as a string"
+			},
+			"scope": "instance",
+			"name": "toString",
+			"lineno": "Tone/core/Tone.js#L25"
+		},
+		{
+			"description": "Set the parameters at once. Either pass in an\n object mapping parameters to values, or to set a\n single parameter, by passing in a string and value.\n The last argument is an optional ramp time which\n will ramp any signal values to their destination value\n over the duration of the rampTime.",
+			"params": [
+				{
+					"type": [
+						"Object",
+						"string"
+					],
+					"name": "params"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"name": "rampTime"
+				}
+			],
+			"examples": [
+				"//set values using an object\nfilter.set({\n\t\"frequency\" : 300,\n\t\"type\" : highpass\n});\n ",
+				"filter.set(\"type\", \"highpass\");\n ",
+				"//ramp to the value 220 over 3 seconds.\noscillator.set({\n\t\"frequency\" : 220\n}, 3);"
+			],
+			"returns": {
+				"type": [
+					"Tone"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "set",
+			"lineno": "Tone/core/Tone.js#L75"
+		},
+		{
+			"description": "Get the object's attributes. Given no arguments get\n will return all available object properties and their corresponding\n values. Pass in a single attribute to retrieve or an array\n of attributes. The attribute strings can also include a \".\"\n to access deeper properties.",
+			"params": [
+				{
+					"type": [
+						"Array",
+						"string",
+						"undefined"
+					],
+					"description": "the parameters to get, otherwise will return\n \t\t\t\t\t                  all available.",
+					"name": "params"
+				}
+			],
+			"examples": [
+				"osc.get();\n//returns {\"type\" : \"sine\", \"frequency\" : 440, ...etc}\n ",
+				"osc.get(\"type\");\n//returns { \"type\" : \"sine\"}",
+				"//use dot notation to access deep properties\nsynth.get([\"envelope.attack\", \"envelope.release\"]);\n//returns {\"envelope\" : {\"attack\" : 0.2, \"release\" : 0.4}}\n "
+			],
+			"returns": {
+				"type": [
+					"Object"
+				]
+			},
+			"scope": "instance",
+			"name": "get",
+			"lineno": "Tone/core/Tone.js#L148"
+		},
+		{
+			"description": "Return the current time of the AudioContext clock.",
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "the currentTime from the AudioContext"
+			},
+			"scope": "instance",
+			"name": "now",
+			"lineno": "Tone/core/Tone.js#L497"
+		}
+	],
+	"Tone#\n disconnect and dispose": [
+		{
+			"returns": {
+				"type": [
+					"Tone"
+				],
+				"description": "this"
+			},
+			"scope": "static",
+			"name": "Tone#dispose",
+			"lineno": "Tone/core/Tone.js#L41"
+		}
+	],
+	"<anonymous>~Tone": [
+		{
+			"description": "An empty function.",
+			"scope": "static",
+			"name": "noOp",
+			"lineno": "Tone/core/Tone.js#L388"
+		},
+		{
+			"description": "Adds warning in the console if the scheduled time has passed.",
+			"scope": "static",
+			"name": "isPast",
+			"lineno": "Tone/core/Tone.js#L515"
+		},
+		{
+			"description": "Tone automatically creates a context on init, but if you are working\n with other libraries which also create an AudioContext, it can be\n useful to set your own. If you are going to set your own context,\n be sure to do it at the start of your code, before creating any objects.",
+			"params": [
+				{
+					"type": [
+						"AudioContext"
+					],
+					"description": "The new audio context to set",
+					"name": "ctx"
+				}
+			],
+			"scope": "static",
+			"name": "setContext",
+			"lineno": "Tone/core/Tone.js#L604"
+		},
+		{
+			"description": "Get the context when it becomes available",
+			"params": [
+				{
+					"type": [
+						"function"
+					],
+					"description": "Callback when the context is initialized",
+					"name": "resolve"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone"
+				]
+			},
+			"scope": "static",
+			"name": "getContext",
+			"lineno": "Tone/core/Tone.js#L675"
+		}
+	],
+	"extend": [
+		{
+			"params": [],
+			"scope": "inner",
+			"name": "TempConstructor",
+			"lineno": "Tone/core/Tone.js#L543"
+		}
+	],
+	"getContext": [
+		{
+			"params": [],
+			"scope": "inner",
+			"name": "resCallback",
+			"lineno": "Tone/core/Tone.js#L679"
 		}
 	],
 	"AutoFilter": [
@@ -11725,215 +11725,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"MembraneSynth": [
-		{
-			"description": "Trigger the note at the given time with the given velocity.",
-			"params": [
-				{
-					"type": [
-						"Frequency"
-					],
-					"description": "the note",
-					"name": "note"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "the time, if not given is now",
-					"name": "time"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 1,
-					"description": "velocity defaults to 1",
-					"name": "velocity"
-				}
-			],
-			"examples": [
-				"kick.triggerAttack(60);"
-			],
-			"returns": {
-				"type": [
-					"Tone.MembraneSynth"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerAttack",
-			"lineno": "Tone/instrument/MembraneSynth.js#L88"
-		},
-		{
-			"description": "Trigger the release portion of the note.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "the time the note will release",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.MembraneSynth"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerRelease",
-			"lineno": "Tone/instrument/MembraneSynth.js#L104"
-		},
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.MembraneSynth"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/instrument/MembraneSynth.js#L113"
-		},
-		{
-			"description": "Trigger the attack and then the release after the duration.",
-			"params": [
-				{
-					"type": [
-						"Frequency"
-					],
-					"description": "The note to trigger.",
-					"name": "note"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "How long the note should be held for before\n                         triggering the release. This value must be greater than 0.",
-					"name": "duration"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the note should be triggered.",
-					"name": "time"
-				},
-				{
-					"type": [
-						"NormalRange"
-					],
-					"optional": true,
-					"defaultvalue": 1,
-					"description": "The velocity the note should be triggered at.",
-					"name": "velocity"
-				}
-			],
-			"examples": [
-				"//trigger \"C4\" for the duration of an 8th note\nsynth.triggerAttackRelease(\"C4\", \"8n\");"
-			],
-			"returns": {
-				"type": [
-					"Tone.Instrument"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Instrument.js#L72",
-			"inherits": "Tone.Instrument"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L110",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"MetalSynth": [
 		{
 			"description": "Trigger the attack.",
@@ -13278,242 +13069,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"Sampler": [
-		{
-			"params": [
-				{
-					"type": [
-						"Frequency"
-					],
-					"description": "The note to play",
-					"name": "note"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"description": "When to play the note",
-					"name": "time"
-				},
-				{
-					"type": [
-						"NormalRange"
-					],
-					"optional": true,
-					"description": "The velocity to play the sample back.",
-					"name": "velocity"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Sampler"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerAttack",
-			"lineno": "Tone/instrument/Sampler.js#L114"
-		},
-		{
-			"params": [
-				{
-					"type": [
-						"Frequency"
-					],
-					"description": "The note to release.",
-					"name": "note"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"description": "When to release the note.",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Sampler"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerRelease",
-			"lineno": "Tone/instrument/Sampler.js#L147"
-		},
-		{
-			"description": "Invoke the attack phase, then after the duration, invoke the release.",
-			"params": [
-				{
-					"type": [
-						"Frequency"
-					],
-					"description": "The note to play",
-					"name": "note"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The time the note should be held",
-					"name": "duration"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"description": "When to start the attack",
-					"name": "time"
-				},
-				{
-					"type": [
-						"NormalRange"
-					],
-					"optional": true,
-					"defaultvalue": 1,
-					"description": "The velocity of the attack",
-					"name": "velocity"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Sampler"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Sampler.js#L165"
-		},
-		{
-			"description": "Add a note to the sampler.",
-			"params": [
-				{
-					"type": [
-						"Note",
-						"Midi"
-					],
-					"description": "The buffer's pitch.",
-					"name": "note"
-				},
-				{
-					"type": [
-						"String",
-						"Tone.Buffer",
-						"Audiobuffer"
-					],
-					"description": "Either the url of the bufer,\n                                                or a buffer which will be added\n                                                with the given name.",
-					"name": "url"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"optional": true,
-					"description": "The callback to invoke\n                                when the url is loaded.",
-					"name": "callback"
-				}
-			],
-			"scope": "instance",
-			"name": "add",
-			"lineno": "Tone/instrument/Sampler.js#L182"
-		},
-		{
-			"description": "Clean up",
-			"returns": {
-				"type": [
-					"Tone.Sampler"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/instrument/Sampler.js#L212"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L110",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"Synth": [
 		{
 			"description": "clean up",
@@ -13682,6 +13237,451 @@
 			"name": "triggerAttackRelease",
 			"lineno": "Tone/instrument/Instrument.js#L72",
 			"inherits": "Tone.Instrument"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L110",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"MembraneSynth": [
+		{
+			"description": "Trigger the note at the given time with the given velocity.",
+			"params": [
+				{
+					"type": [
+						"Frequency"
+					],
+					"description": "the note",
+					"name": "note"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "the time, if not given is now",
+					"name": "time"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 1,
+					"description": "velocity defaults to 1",
+					"name": "velocity"
+				}
+			],
+			"examples": [
+				"kick.triggerAttack(60);"
+			],
+			"returns": {
+				"type": [
+					"Tone.MembraneSynth"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerAttack",
+			"lineno": "Tone/instrument/MembraneSynth.js#L88"
+		},
+		{
+			"description": "Trigger the release portion of the note.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "the time the note will release",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.MembraneSynth"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerRelease",
+			"lineno": "Tone/instrument/MembraneSynth.js#L104"
+		},
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.MembraneSynth"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/instrument/MembraneSynth.js#L113"
+		},
+		{
+			"description": "Trigger the attack and then the release after the duration.",
+			"params": [
+				{
+					"type": [
+						"Frequency"
+					],
+					"description": "The note to trigger.",
+					"name": "note"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "How long the note should be held for before\n                         triggering the release. This value must be greater than 0.",
+					"name": "duration"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the note should be triggered.",
+					"name": "time"
+				},
+				{
+					"type": [
+						"NormalRange"
+					],
+					"optional": true,
+					"defaultvalue": 1,
+					"description": "The velocity the note should be triggered at.",
+					"name": "velocity"
+				}
+			],
+			"examples": [
+				"//trigger \"C4\" for the duration of an 8th note\nsynth.triggerAttackRelease(\"C4\", \"8n\");"
+			],
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerAttackRelease",
+			"lineno": "Tone/instrument/Instrument.js#L72",
+			"inherits": "Tone.Instrument"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L110",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Sampler": [
+		{
+			"params": [
+				{
+					"type": [
+						"Frequency"
+					],
+					"description": "The note to play",
+					"name": "note"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"description": "When to play the note",
+					"name": "time"
+				},
+				{
+					"type": [
+						"NormalRange"
+					],
+					"optional": true,
+					"description": "The velocity to play the sample back.",
+					"name": "velocity"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Sampler"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerAttack",
+			"lineno": "Tone/instrument/Sampler.js#L114"
+		},
+		{
+			"params": [
+				{
+					"type": [
+						"Frequency"
+					],
+					"description": "The note to release.",
+					"name": "note"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"description": "When to release the note.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Sampler"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerRelease",
+			"lineno": "Tone/instrument/Sampler.js#L147"
+		},
+		{
+			"description": "Invoke the attack phase, then after the duration, invoke the release.",
+			"params": [
+				{
+					"type": [
+						"Frequency"
+					],
+					"description": "The note to play",
+					"name": "note"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time the note should be held",
+					"name": "duration"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"description": "When to start the attack",
+					"name": "time"
+				},
+				{
+					"type": [
+						"NormalRange"
+					],
+					"optional": true,
+					"defaultvalue": 1,
+					"description": "The velocity of the attack",
+					"name": "velocity"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Sampler"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerAttackRelease",
+			"lineno": "Tone/instrument/Sampler.js#L165"
+		},
+		{
+			"description": "Add a note to the sampler.",
+			"params": [
+				{
+					"type": [
+						"Note",
+						"Midi"
+					],
+					"description": "The buffer's pitch.",
+					"name": "note"
+				},
+				{
+					"type": [
+						"String",
+						"Tone.Buffer",
+						"Audiobuffer"
+					],
+					"description": "Either the url of the bufer,\n                                                or a buffer which will be added\n                                                with the given name.",
+					"name": "url"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"optional": true,
+					"description": "The callback to invoke\n                                when the url is loaded.",
+					"name": "callback"
+				}
+			],
+			"scope": "instance",
+			"name": "add",
+			"lineno": "Tone/instrument/Sampler.js#L182"
+		},
+		{
+			"description": "Clean up",
+			"returns": {
+				"type": [
+					"Tone.Sampler"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/instrument/Sampler.js#L212"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -19466,187 +19466,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"BufferSource": [
-		{
-			"description": "Start the buffer",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the player should start.",
-					"name": "startTime"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "The offset from the beginning of the sample\n                                to start at.",
-					"name": "offset"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"description": "How long the sample should play. If no duration\n                               is given, it will default to the full length\n                               of the sample (minus any offset)",
-					"name": "duration"
-				},
-				{
-					"type": [
-						"Gain"
-					],
-					"optional": true,
-					"defaultvalue": 1,
-					"description": "The gain to play the buffer back at.",
-					"name": "gain"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"description": "The optional fadeIn ramp time.",
-					"name": "fadeInTime"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.BufferSource"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "start",
-			"lineno": "Tone/source/BufferSource.js#L161"
-		},
-		{
-			"description": "Stop the buffer. Optionally add a ramp time to fade the\n buffer out.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"description": "The time the buffer should stop.",
-					"name": "time"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"description": "How long the gain should fade out for",
-					"name": "fadeOutTime"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.BufferSource"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "stop",
-			"lineno": "Tone/source/BufferSource.js#L236"
-		},
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.BufferSource"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/source/BufferSource.js#L363"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L110",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"FMOscillator": [
 		{
 			"description": "Clean up.",
@@ -19864,226 +19683,6 @@
 			"name": "start",
 			"lineno": "Tone/source/Source.js#L144",
 			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Stop the source at the specified time. If no time is given,\n stop the source now.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the source should be stopped.",
-					"name": "time"
-				}
-			],
-			"examples": [
-				"source.stop(); // stops the source immediately"
-			],
-			"returns": {
-				"type": [
-					"Tone.Source"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "stop",
-			"lineno": "Tone/source/Source.js#L178",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Sync the source to the Transport so that all subsequent\n calls to `start` and `stop` are synced to the TransportTime\n instead of the AudioContext time.",
-			"examples": [
-				"//sync the source so that it plays between 0 and 0.3 on the Transport's timeline\nsource.sync().start(0).stop(0.3);\n//start the transport.\nTone.Transport.start();\n\n ",
-				"//start the transport with an offset and the sync'ed sources\n//will start in the correct position\nsource.sync().start(0.1);\n//the source will be invoked with an offset of 0.4\nTone.Transport.start(\"+0.5\", 0.5);"
-			],
-			"returns": {
-				"type": [
-					"Tone.Source"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "sync",
-			"lineno": "Tone/source/Source.js#L214",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Unsync the source to the Transport. See Tone.Source.sync",
-			"returns": {
-				"type": [
-					"Tone.Source"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L246",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L110",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"GrainPlayer": [
-		{
-			"description": "Play the buffer at the given startTime. Optionally add an offset\n and/or duration which will play the buffer from a position\n within the buffer for the given duration.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the player should start.",
-					"name": "startTime"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "The offset from the beginning of the sample\n                                to start at.",
-					"name": "offset"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"description": "How long the sample should play. If no duration\n                               is given, it will default to the full length\n                               of the sample (minus any offset)",
-					"name": "duration"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.GrainPlayer"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "start",
-			"lineno": "Tone/source/GrainPlayer.js#L107"
-		},
-		{
-			"description": "Jump to a specific time and play it.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The offset to jump to.",
-					"name": "offset"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"description": "When to make the jump.",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.GrainPlayer"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "seek",
-			"lineno": "Tone/source/GrainPlayer.js#L205"
-		},
-		{
-			"description": "Clean up",
-			"returns": {
-				"type": [
-					"Tone.GrainPlayer"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/source/GrainPlayer.js#L309"
 		},
 		{
 			"description": "Stop the source at the specified time. If no time is given,\n stop the source now.",
@@ -21964,6 +21563,407 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
+	"BufferSource": [
+		{
+			"description": "Start the buffer",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the player should start.",
+					"name": "startTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "The offset from the beginning of the sample\n                                to start at.",
+					"name": "offset"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"description": "How long the sample should play. If no duration\n                               is given, it will default to the full length\n                               of the sample (minus any offset)",
+					"name": "duration"
+				},
+				{
+					"type": [
+						"Gain"
+					],
+					"optional": true,
+					"defaultvalue": 1,
+					"description": "The gain to play the buffer back at.",
+					"name": "gain"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"description": "The optional fadeIn ramp time.",
+					"name": "fadeInTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.BufferSource"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "start",
+			"lineno": "Tone/source/BufferSource.js#L161"
+		},
+		{
+			"description": "Stop the buffer. Optionally add a ramp time to fade the\n buffer out.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"description": "The time the buffer should stop.",
+					"name": "time"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"description": "How long the gain should fade out for",
+					"name": "fadeOutTime"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.BufferSource"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "stop",
+			"lineno": "Tone/source/BufferSource.js#L236"
+		},
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.BufferSource"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/source/BufferSource.js#L363"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L110",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"GrainPlayer": [
+		{
+			"description": "Play the buffer at the given startTime. Optionally add an offset\n and/or duration which will play the buffer from a position\n within the buffer for the given duration.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the player should start.",
+					"name": "startTime"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "The offset from the beginning of the sample\n                                to start at.",
+					"name": "offset"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"description": "How long the sample should play. If no duration\n                               is given, it will default to the full length\n                               of the sample (minus any offset)",
+					"name": "duration"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.GrainPlayer"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "start",
+			"lineno": "Tone/source/GrainPlayer.js#L107"
+		},
+		{
+			"description": "Jump to a specific time and play it.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The offset to jump to.",
+					"name": "offset"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"description": "When to make the jump.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.GrainPlayer"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "seek",
+			"lineno": "Tone/source/GrainPlayer.js#L205"
+		},
+		{
+			"description": "Clean up",
+			"returns": {
+				"type": [
+					"Tone.GrainPlayer"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/source/GrainPlayer.js#L309"
+		},
+		{
+			"description": "Stop the source at the specified time. If no time is given,\n stop the source now.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the source should be stopped.",
+					"name": "time"
+				}
+			],
+			"examples": [
+				"source.stop(); // stops the source immediately"
+			],
+			"returns": {
+				"type": [
+					"Tone.Source"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "stop",
+			"lineno": "Tone/source/Source.js#L178",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "Sync the source to the Transport so that all subsequent\n calls to `start` and `stop` are synced to the TransportTime\n instead of the AudioContext time.",
+			"examples": [
+				"//sync the source so that it plays between 0 and 0.3 on the Transport's timeline\nsource.sync().start(0).stop(0.3);\n//start the transport.\nTone.Transport.start();\n\n ",
+				"//start the transport with an offset and the sync'ed sources\n//will start in the correct position\nsource.sync().start(0.1);\n//the source will be invoked with an offset of 0.4\nTone.Transport.start(\"+0.5\", 0.5);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Source"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "sync",
+			"lineno": "Tone/source/Source.js#L214",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "Unsync the source to the Transport. See Tone.Source.sync",
+			"returns": {
+				"type": [
+					"Tone.Source"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "unsync",
+			"lineno": "Tone/source/Source.js#L246",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L110",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		}
+	],
 	"midi": [
 		{
 			"scope": "static",
@@ -22357,365 +22357,6 @@
 			"inherits": "Tone.TimeBase"
 		}
 	],
-	"quantize": [
-		{
-			"scope": "static",
-			"name": "method",
-			"lineno": "Tone/type/Time.js#L50"
-		},
-		{
-			"scope": "static",
-			"name": "method",
-			"lineno": "Tone/type/TransportTime.js#L37"
-		}
-	],
-	"now": [
-		{
-			"scope": "static",
-			"name": "method",
-			"lineno": "Tone/type/Time.js#L63"
-		}
-	],
-	"Time": [
-		{
-			"description": "Quantize the time by the given subdivision. Optionally add a\n percentage which will move the time value towards the ideal\n quantized value by that percentage.",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"Time"
-					],
-					"description": "The subdivision to quantize to",
-					"name": "val"
-				},
-				{
-					"type": [
-						"NormalRange"
-					],
-					"optional": true,
-					"defaultvalue": 1,
-					"description": "Move the time value\n                                  towards the quantized value by\n                                  a percentage.",
-					"name": "percent"
-				}
-			],
-			"examples": [
-				"Tone.Time(21).quantize(2) //returns 22\nTone.Time(0.6).quantize(\"4n\", 0.5) //returns 0.55"
-			],
-			"returns": {
-				"type": [
-					"Tone.Time"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "quantize",
-			"lineno": "Tone/type/Time.js#L82"
-		},
-		{
-			"description": "Adds the clock time to the time expression at the \n moment of evaluation.",
-			"returns": {
-				"type": [
-					"Tone.Time"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "addNow",
-			"lineno": "Tone/type/Time.js#L100"
-		},
-		{
-			"description": "Copies the value of time to this Time",
-			"params": [
-				{
-					"type": [
-						"Tone.Time"
-					],
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Time"
-				]
-			},
-			"scope": "instance",
-			"name": "copy",
-			"lineno": "Tone/type/Time.js#L121"
-		},
-		{
-			"description": "Convert a Time to Notation. Values will be thresholded to the nearest 128th note.",
-			"examples": [
-				"//if the Transport is at 120bpm:\nTone.Time(2).toNotation();//returns \"1m\""
-			],
-			"returns": {
-				"type": [
-					"Notation"
-				]
-			},
-			"scope": "instance",
-			"name": "toNotation",
-			"lineno": "Tone/type/Time.js#L136"
-		},
-		{
-			"description": "Return the time encoded as Bars:Beats:Sixteenths.",
-			"returns": {
-				"type": [
-					"BarsBeatsSixteenths"
-				]
-			},
-			"scope": "instance",
-			"name": "toBarsBeatsSixteenths",
-			"lineno": "Tone/type/Time.js#L213"
-		},
-		{
-			"description": "Return the time in ticks.",
-			"returns": {
-				"type": [
-					"Ticks"
-				]
-			},
-			"scope": "instance",
-			"name": "toTicks",
-			"lineno": "Tone/type/Time.js#L232"
-		},
-		{
-			"description": "Return the time in samples",
-			"returns": {
-				"type": [
-					"Samples"
-				]
-			},
-			"scope": "instance",
-			"name": "toSamples",
-			"lineno": "Tone/type/Time.js#L242"
-		},
-		{
-			"description": "Return the time as a frequency value",
-			"examples": [
-				"Tone.Time(2).toFrequency(); //0.5"
-			],
-			"returns": {
-				"type": [
-					"Frequency"
-				]
-			},
-			"scope": "instance",
-			"name": "toFrequency",
-			"lineno": "Tone/type/Time.js#L252"
-		},
-		{
-			"description": "Return the time in seconds.",
-			"returns": {
-				"type": [
-					"Seconds"
-				]
-			},
-			"scope": "instance",
-			"name": "toSeconds",
-			"lineno": "Tone/type/Time.js#L260"
-		},
-		{
-			"description": "Return the time in milliseconds.",
-			"returns": {
-				"type": [
-					"Milliseconds"
-				]
-			},
-			"scope": "instance",
-			"name": "toMilliseconds",
-			"lineno": "Tone/type/Time.js#L268"
-		},
-		{
-			"description": "Return the time in seconds.",
-			"returns": {
-				"type": [
-					"Seconds"
-				]
-			},
-			"scope": "instance",
-			"name": "valueOf",
-			"lineno": "Tone/type/Time.js#L276"
-		},
-		{
-			"description": "Repalce the current time value with the value\n given by the expression string.",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"name": "exprString"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "set",
-			"lineno": "Tone/type/TimeBase.js#L56",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Return a clone of the TimeBase object.",
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "The new cloned Tone.TimeBase"
-			},
-			"scope": "instance",
-			"name": "clone",
-			"lineno": "Tone/type/TimeBase.js#L65",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Add to the current value.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The value to add",
-					"name": "val"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"optional": true,
-					"description": "Optional units to use with the value.",
-					"name": "units"
-				}
-			],
-			"examples": [
-				"Tone.TimeBase(\"2m\").add(\"1m\"); //\"3m\""
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "add",
-			"lineno": "Tone/type/TimeBase.js#L495",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Subtract the value from the current time.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The value to subtract",
-					"name": "val"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"optional": true,
-					"description": "Optional units to use with the value.",
-					"name": "units"
-				}
-			],
-			"examples": [
-				"Tone.TimeBase(\"2m\").sub(\"1m\"); //\"1m\""
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "sub",
-			"lineno": "Tone/type/TimeBase.js#L507",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Multiply the current value by the given time.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The value to multiply",
-					"name": "val"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"optional": true,
-					"description": "Optional units to use with the value.",
-					"name": "units"
-				}
-			],
-			"examples": [
-				"Tone.TimeBase(\"2m\").mult(\"2\"); //\"4m\""
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "mult",
-			"lineno": "Tone/type/TimeBase.js#L519",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Divide the current value by the given time.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The value to divide by",
-					"name": "val"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"optional": true,
-					"description": "Optional units to use with the value.",
-					"name": "units"
-				}
-			],
-			"examples": [
-				"Tone.TimeBase(\"2m\").div(2); //\"1m\""
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "div",
-			"lineno": "Tone/type/TimeBase.js#L531",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Clean up",
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/type/TimeBase.js#L548",
-			"inherits": "Tone.TimeBase"
-		}
-	],
 	"TimeBase": [
 		{
 			"description": "Repalce the current time value with the value\n given by the expression string.",
@@ -23012,6 +22653,18 @@
 			"lineno": "Tone/type/TimeBase.js#L244"
 		}
 	],
+	"quantize": [
+		{
+			"scope": "static",
+			"name": "method",
+			"lineno": "Tone/type/TransportTime.js#L37"
+		},
+		{
+			"scope": "static",
+			"name": "method",
+			"lineno": "Tone/type/Time.js#L50"
+		}
+	],
 	"TransportTime": [
 		{
 			"description": "Evaluate the time expression. Returns values in ticks",
@@ -23175,6 +22828,353 @@
 			"name": "toMilliseconds",
 			"lineno": "Tone/type/Time.js#L268",
 			"inherits": "Tone.Time"
+		},
+		{
+			"description": "Repalce the current time value with the value\n given by the expression string.",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"name": "exprString"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.TimeBase"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "set",
+			"lineno": "Tone/type/TimeBase.js#L56",
+			"inherits": "Tone.TimeBase"
+		},
+		{
+			"description": "Return a clone of the TimeBase object.",
+			"returns": {
+				"type": [
+					"Tone.TimeBase"
+				],
+				"description": "The new cloned Tone.TimeBase"
+			},
+			"scope": "instance",
+			"name": "clone",
+			"lineno": "Tone/type/TimeBase.js#L65",
+			"inherits": "Tone.TimeBase"
+		},
+		{
+			"description": "Add to the current value.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The value to add",
+					"name": "val"
+				},
+				{
+					"type": [
+						"String"
+					],
+					"optional": true,
+					"description": "Optional units to use with the value.",
+					"name": "units"
+				}
+			],
+			"examples": [
+				"Tone.TimeBase(\"2m\").add(\"1m\"); //\"3m\""
+			],
+			"returns": {
+				"type": [
+					"Tone.TimeBase"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "add",
+			"lineno": "Tone/type/TimeBase.js#L495",
+			"inherits": "Tone.TimeBase"
+		},
+		{
+			"description": "Subtract the value from the current time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The value to subtract",
+					"name": "val"
+				},
+				{
+					"type": [
+						"String"
+					],
+					"optional": true,
+					"description": "Optional units to use with the value.",
+					"name": "units"
+				}
+			],
+			"examples": [
+				"Tone.TimeBase(\"2m\").sub(\"1m\"); //\"1m\""
+			],
+			"returns": {
+				"type": [
+					"Tone.TimeBase"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "sub",
+			"lineno": "Tone/type/TimeBase.js#L507",
+			"inherits": "Tone.TimeBase"
+		},
+		{
+			"description": "Multiply the current value by the given time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The value to multiply",
+					"name": "val"
+				},
+				{
+					"type": [
+						"String"
+					],
+					"optional": true,
+					"description": "Optional units to use with the value.",
+					"name": "units"
+				}
+			],
+			"examples": [
+				"Tone.TimeBase(\"2m\").mult(\"2\"); //\"4m\""
+			],
+			"returns": {
+				"type": [
+					"Tone.TimeBase"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "mult",
+			"lineno": "Tone/type/TimeBase.js#L519",
+			"inherits": "Tone.TimeBase"
+		},
+		{
+			"description": "Divide the current value by the given time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The value to divide by",
+					"name": "val"
+				},
+				{
+					"type": [
+						"String"
+					],
+					"optional": true,
+					"description": "Optional units to use with the value.",
+					"name": "units"
+				}
+			],
+			"examples": [
+				"Tone.TimeBase(\"2m\").div(2); //\"1m\""
+			],
+			"returns": {
+				"type": [
+					"Tone.TimeBase"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "div",
+			"lineno": "Tone/type/TimeBase.js#L531",
+			"inherits": "Tone.TimeBase"
+		},
+		{
+			"description": "Clean up",
+			"returns": {
+				"type": [
+					"Tone.TimeBase"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/type/TimeBase.js#L548",
+			"inherits": "Tone.TimeBase"
+		}
+	],
+	"now": [
+		{
+			"scope": "static",
+			"name": "method",
+			"lineno": "Tone/type/Time.js#L63"
+		}
+	],
+	"Time": [
+		{
+			"description": "Quantize the time by the given subdivision. Optionally add a\n percentage which will move the time value towards the ideal\n quantized value by that percentage.",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"Time"
+					],
+					"description": "The subdivision to quantize to",
+					"name": "val"
+				},
+				{
+					"type": [
+						"NormalRange"
+					],
+					"optional": true,
+					"defaultvalue": 1,
+					"description": "Move the time value\n                                  towards the quantized value by\n                                  a percentage.",
+					"name": "percent"
+				}
+			],
+			"examples": [
+				"Tone.Time(21).quantize(2) //returns 22\nTone.Time(0.6).quantize(\"4n\", 0.5) //returns 0.55"
+			],
+			"returns": {
+				"type": [
+					"Tone.Time"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "quantize",
+			"lineno": "Tone/type/Time.js#L82"
+		},
+		{
+			"description": "Adds the clock time to the time expression at the \n moment of evaluation.",
+			"returns": {
+				"type": [
+					"Tone.Time"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "addNow",
+			"lineno": "Tone/type/Time.js#L100"
+		},
+		{
+			"description": "Copies the value of time to this Time",
+			"params": [
+				{
+					"type": [
+						"Tone.Time"
+					],
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Time"
+				]
+			},
+			"scope": "instance",
+			"name": "copy",
+			"lineno": "Tone/type/Time.js#L121"
+		},
+		{
+			"description": "Convert a Time to Notation. Values will be thresholded to the nearest 128th note.",
+			"examples": [
+				"//if the Transport is at 120bpm:\nTone.Time(2).toNotation();//returns \"1m\""
+			],
+			"returns": {
+				"type": [
+					"Notation"
+				]
+			},
+			"scope": "instance",
+			"name": "toNotation",
+			"lineno": "Tone/type/Time.js#L136"
+		},
+		{
+			"description": "Return the time encoded as Bars:Beats:Sixteenths.",
+			"returns": {
+				"type": [
+					"BarsBeatsSixteenths"
+				]
+			},
+			"scope": "instance",
+			"name": "toBarsBeatsSixteenths",
+			"lineno": "Tone/type/Time.js#L213"
+		},
+		{
+			"description": "Return the time in ticks.",
+			"returns": {
+				"type": [
+					"Ticks"
+				]
+			},
+			"scope": "instance",
+			"name": "toTicks",
+			"lineno": "Tone/type/Time.js#L232"
+		},
+		{
+			"description": "Return the time in samples",
+			"returns": {
+				"type": [
+					"Samples"
+				]
+			},
+			"scope": "instance",
+			"name": "toSamples",
+			"lineno": "Tone/type/Time.js#L242"
+		},
+		{
+			"description": "Return the time as a frequency value",
+			"examples": [
+				"Tone.Time(2).toFrequency(); //0.5"
+			],
+			"returns": {
+				"type": [
+					"Frequency"
+				]
+			},
+			"scope": "instance",
+			"name": "toFrequency",
+			"lineno": "Tone/type/Time.js#L252"
+		},
+		{
+			"description": "Return the time in seconds.",
+			"returns": {
+				"type": [
+					"Seconds"
+				]
+			},
+			"scope": "instance",
+			"name": "toSeconds",
+			"lineno": "Tone/type/Time.js#L260"
+		},
+		{
+			"description": "Return the time in milliseconds.",
+			"returns": {
+				"type": [
+					"Milliseconds"
+				]
+			},
+			"scope": "instance",
+			"name": "toMilliseconds",
+			"lineno": "Tone/type/Time.js#L268"
+		},
+		{
+			"description": "Return the time in seconds.",
+			"returns": {
+				"type": [
+					"Seconds"
+				]
+			},
+			"scope": "instance",
+			"name": "valueOf",
+			"lineno": "Tone/type/Time.js#L276"
 		},
 		{
 			"description": "Repalce the current time value with the value\n given by the expression string.",

@@ -52,13 +52,13 @@
 		"Listener",
 		"Master",
 		"OfflineContext",
-		"Param",
 		"Timeline",
 		"TimelineState",
-		"Tone",
 		"Transport",
 		"TransportEvent",
-		"TransportRepeatEvent"
+		"TransportRepeatEvent",
+		"Param",
+		"Tone"
 	],
 	"effect": [
 		"AutoFilter",
@@ -97,15 +97,15 @@
 		"DuoSynth",
 		"FMSynth",
 		"Instrument",
-		"MembraneSynth",
 		"MetalSynth",
 		"MonoSynth",
 		"Monophonic",
 		"NoiseSynth",
 		"PluckSynth",
 		"PolySynth",
-		"Sampler",
-		"Synth"
+		"Synth",
+		"MembraneSynth",
+		"Sampler"
 	],
 	"signal": [
 		"Abs",
@@ -134,10 +134,8 @@
 	],
 	"source": [
 		"AMOscillator",
-		"BufferSource",
 		"FMOscillator",
 		"FatOscillator",
-		"GrainPlayer",
 		"Noise",
 		"OmniOscillator",
 		"Oscillator",
@@ -146,12 +144,14 @@
 		"Players",
 		"PulseOscillator",
 		"Source",
-		"UserMedia"
+		"UserMedia",
+		"BufferSource",
+		"GrainPlayer"
 	],
 	"type": [
 		"Frequency",
-		"Time",
 		"TimeBase",
-		"TransportTime"
+		"TransportTime",
+		"Time"
 	]
 }
