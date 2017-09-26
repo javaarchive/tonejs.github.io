@@ -16,19 +16,19 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Envelope": [
-		"AudioNode",
-		"Tone"
-	],
 	"EQ3": [
 		"AudioNode",
 		"Tone"
 	],
-	"FeedbackCombFilter": [
+	"Envelope": [
 		"AudioNode",
 		"Tone"
 	],
 	"FFT": [
+		"AudioNode",
+		"Tone"
+	],
+	"FeedbackCombFilter": [
 		"AudioNode",
 		"Tone"
 	],
@@ -93,15 +93,15 @@
 		"AudioNode",
 		"Tone"
 	],
+	"PanVol": [
+		"AudioNode",
+		"Tone"
+	],
 	"Panner": [
 		"AudioNode",
 		"Tone"
 	],
 	"Panner3D": [
-		"AudioNode",
-		"Tone"
-	],
-	"PanVol": [
 		"AudioNode",
 		"Tone"
 	],
@@ -181,10 +181,6 @@
 		"Emitter",
 		"Tone"
 	],
-	"Param": [
-		"AudioNode",
-		"Tone"
-	],
 	"Timeline": [
 		"Tone"
 	],
@@ -201,6 +197,10 @@
 	],
 	"TransportRepeatEvent": [
 		"TransportEvent",
+		"Tone"
+	],
+	"Param": [
+		"AudioNode",
 		"Tone"
 	],
 	"AutoFilter": [
@@ -369,23 +369,18 @@
 		"AudioNode",
 		"Tone"
 	],
-	"MembraneSynth": [
-		"Instrument",
-		"AudioNode",
-		"Tone"
-	],
 	"MetalSynth": [
-		"Instrument",
-		"AudioNode",
-		"Tone"
-	],
-	"Monophonic": [
 		"Instrument",
 		"AudioNode",
 		"Tone"
 	],
 	"MonoSynth": [
 		"Monophonic",
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
+	"Monophonic": [
 		"Instrument",
 		"AudioNode",
 		"Tone"
@@ -405,13 +400,18 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Sampler": [
+	"Synth": [
+		"Monophonic",
 		"Instrument",
 		"AudioNode",
 		"Tone"
 	],
-	"Synth": [
-		"Monophonic",
+	"MembraneSynth": [
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
+	"Sampler": [
 		"Instrument",
 		"AudioNode",
 		"Tone"
@@ -530,26 +530,14 @@
 		"AudioNode",
 		"Tone"
 	],
-	"BufferSource": [
+	"FMOscillator": [
+		"Source",
 		"AudioNode",
 		"Tone"
 	],
 	"FatOscillator": [
 		"Source",
 		"AudioNode",
-		"Tone"
-	],
-	"FMOscillator": [
-		"Source",
-		"AudioNode",
-		"Tone"
-	],
-	"GrainPlayer": [
-		"Source",
-		"AudioNode",
-		"Tone"
-	],
-	"MultiPlayer": [
 		"Tone"
 	],
 	"Noise": [
@@ -563,6 +551,11 @@
 		"Tone"
 	],
 	"Oscillator": [
+		"Source",
+		"AudioNode",
+		"Tone"
+	],
+	"PWMOscillator": [
 		"Source",
 		"AudioNode",
 		"Tone"
@@ -581,11 +574,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"PWMOscillator": [
-		"Source",
-		"AudioNode",
-		"Tone"
-	],
 	"Source": [
 		"AudioNode",
 		"Tone"
@@ -594,11 +582,19 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Frequency": [
-		"TimeBase",
+	"BufferSource": [
+		"AudioNode",
 		"Tone"
 	],
-	"Time": [
+	"GrainPlayer": [
+		"Source",
+		"AudioNode",
+		"Tone"
+	],
+	"MultiPlayer": [
+		"Tone"
+	],
+	"Frequency": [
 		"TimeBase",
 		"Tone"
 	],
@@ -607,6 +603,10 @@
 	],
 	"TransportTime": [
 		"Time",
+		"TimeBase",
+		"Tone"
+	],
+	"Time": [
 		"TimeBase",
 		"Tone"
 	]

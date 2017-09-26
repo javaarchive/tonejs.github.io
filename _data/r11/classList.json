@@ -4,10 +4,10 @@
 		"Analyser",
 		"Compressor",
 		"CrossFade",
-		"Envelope",
 		"EQ3",
-		"FeedbackCombFilter",
+		"Envelope",
 		"FFT",
+		"FeedbackCombFilter",
 		"Filter",
 		"Follower",
 		"FrequencyEnvelope",
@@ -23,9 +23,9 @@
 		"Mono",
 		"MultibandCompressor",
 		"MultibandSplit",
+		"PanVol",
 		"Panner",
 		"Panner3D",
-		"PanVol",
 		"ScaledEnvelope",
 		"Solo",
 		"Split",
@@ -52,13 +52,13 @@
 		"Listener",
 		"Master",
 		"OfflineContext",
-		"Param",
 		"Timeline",
 		"TimelineState",
-		"Tone",
 		"Transport",
 		"TransportEvent",
-		"TransportRepeatEvent"
+		"TransportRepeatEvent",
+		"Param",
+		"Tone"
 	],
 	"effect": [
 		"AutoFilter",
@@ -97,15 +97,15 @@
 		"DuoSynth",
 		"FMSynth",
 		"Instrument",
-		"MembraneSynth",
 		"MetalSynth",
-		"Monophonic",
 		"MonoSynth",
+		"Monophonic",
 		"NoiseSynth",
 		"PluckSynth",
 		"PolySynth",
-		"Sampler",
-		"Synth"
+		"Synth",
+		"MembraneSynth",
+		"Sampler"
 	],
 	"signal": [
 		"Abs",
@@ -134,25 +134,25 @@
 	],
 	"source": [
 		"AMOscillator",
-		"BufferSource",
-		"FatOscillator",
 		"FMOscillator",
-		"GrainPlayer",
-		"MultiPlayer",
+		"FatOscillator",
 		"Noise",
 		"OmniOscillator",
 		"Oscillator",
+		"PWMOscillator",
 		"Player",
 		"Players",
 		"PulseOscillator",
-		"PWMOscillator",
 		"Source",
-		"UserMedia"
+		"UserMedia",
+		"BufferSource",
+		"GrainPlayer",
+		"MultiPlayer"
 	],
 	"type": [
 		"Frequency",
-		"Time",
 		"TimeBase",
-		"TransportTime"
+		"TransportTime",
+		"Time"
 	]
 }
