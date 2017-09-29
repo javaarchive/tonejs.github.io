@@ -141,12 +141,12 @@
 		"Oscillator",
 		"PWMOscillator",
 		"Player",
-		"Players",
 		"PulseOscillator",
 		"Source",
 		"UserMedia",
 		"BufferSource",
-		"GrainPlayer"
+		"GrainPlayer",
+		"Players"
 	],
 	"type": [
 		"Frequency",

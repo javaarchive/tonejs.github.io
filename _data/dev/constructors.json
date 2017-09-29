@@ -2410,27 +2410,6 @@
 		],
 		"extends": "Tone.Source"
 	},
-	"Players": {
-		"description": "Tone.Players combines multiple [Tone.Player](Player) objects.",
-		"params": [
-			{
-				"type": [
-					"Object"
-				],
-				"description": "An object mapping a name to a url.",
-				"name": "urls"
-			},
-			{
-				"type": [
-					"function"
-				],
-				"optional": true,
-				"description": "The function to invoke when the buffer is loaded.",
-				"name": "onload"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
 	"PulseOscillator": {
 		"description": "Tone.PulseOscillator is a pulse oscillator with control over pulse width,\n        also known as the duty cycle. At 50% duty cycle (width = 0.5) the wave is \n        a square and only odd-numbered harmonics are present. At all other widths \n        even-numbered harmonics are present. Read more \n        [here](https://wigglewave.wordpress.com/2014/08/16/pulse-waveforms-and-harmonics/).",
 		"params": [
@@ -2522,6 +2501,27 @@
 			}
 		],
 		"extends": "Tone.Source"
+	},
+	"Players": {
+		"description": "Tone.Players combines multiple [Tone.Player](Player) objects.",
+		"params": [
+			{
+				"type": [
+					"Object"
+				],
+				"description": "An object mapping a name to a url.",
+				"name": "urls"
+			},
+			{
+				"type": [
+					"function"
+				],
+				"optional": true,
+				"description": "The function to invoke when all buffers are loaded.",
+				"name": "onload"
+			}
+		],
+		"extends": "Tone.AudioNode"
 	},
 	"Frequency": {
 		"description": "Tone.Frequency is a primitive type for encoding Frequency values.\n        Eventually all time values are evaluated to hertz\n        using the `eval` method.",

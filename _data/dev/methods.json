@@ -20878,194 +20878,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"Players": [
-		{
-			"description": "True if the buffers object has a buffer by that name.",
-			"params": [
-				{
-					"type": [
-						"String",
-						"Number"
-					],
-					"description": "The key or index of the\n                                buffer.",
-					"name": "name"
-				}
-			],
-			"returns": {
-				"type": [
-					"Boolean"
-				]
-			},
-			"scope": "instance",
-			"name": "has",
-			"lineno": "Tone/source/Players.js#L181"
-		},
-		{
-			"description": "Get a player by name.",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"description": "The players name as defined in\n                         the constructor object or `add` method.",
-					"name": "name"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Player"
-				]
-			},
-			"scope": "instance",
-			"name": "get",
-			"lineno": "Tone/source/Players.js#L191"
-		},
-		{
-			"description": "Add a player by name and url to the Players",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"description": "A unique name to give the player",
-					"name": "name"
-				},
-				{
-					"type": [
-						"String",
-						"Tone.Buffer",
-						"Audiobuffer"
-					],
-					"description": "Either the url of the bufer,\n                                                or a buffer which will be added\n                                                with the given name.",
-					"name": "url"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"optional": true,
-					"description": "The callback to invoke\n                                when the url is loaded.",
-					"name": "callback"
-				}
-			],
-			"scope": "instance",
-			"name": "add",
-			"lineno": "Tone/source/Players.js#L238"
-		},
-		{
-			"description": "Stop all of the players at the given time",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The time to stop all of the players.",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Players"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "stopAll",
-			"lineno": "Tone/source/Players.js#L250"
-		},
-		{
-			"description": "Dispose and disconnect.",
-			"returns": {
-				"type": [
-					"Tone.Players"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/source/Players.js#L260"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L110",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"PulseOscillator": [
 		{
 			"description": "Clean up method.",
@@ -21882,6 +21694,194 @@
 			"name": "unsync",
 			"lineno": "Tone/source/Source.js#L246",
 			"inherits": "Tone.Source"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L110",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Players": [
+		{
+			"description": "True if the buffers object has a buffer by that name.",
+			"params": [
+				{
+					"type": [
+						"String",
+						"Number"
+					],
+					"description": "The key or index of the\n                                buffer.",
+					"name": "name"
+				}
+			],
+			"returns": {
+				"type": [
+					"Boolean"
+				]
+			},
+			"scope": "instance",
+			"name": "has",
+			"lineno": "Tone/source/Players.js#L181"
+		},
+		{
+			"description": "Get a player by name.",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"description": "The players name as defined in\n                         the constructor object or `add` method.",
+					"name": "name"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Player"
+				]
+			},
+			"scope": "instance",
+			"name": "get",
+			"lineno": "Tone/source/Players.js#L191"
+		},
+		{
+			"description": "Add a player by name and url to the Players",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"description": "A unique name to give the player",
+					"name": "name"
+				},
+				{
+					"type": [
+						"String",
+						"Tone.Buffer",
+						"Audiobuffer"
+					],
+					"description": "Either the url of the bufer,\n                                                or a buffer which will be added\n                                                with the given name.",
+					"name": "url"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"optional": true,
+					"description": "The callback to invoke\n                                when the url is loaded.",
+					"name": "callback"
+				}
+			],
+			"scope": "instance",
+			"name": "add",
+			"lineno": "Tone/source/Players.js#L238"
+		},
+		{
+			"description": "Stop all of the players at the given time",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to stop all of the players.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Players"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "stopAll",
+			"lineno": "Tone/source/Players.js#L250"
+		},
+		{
+			"description": "Dispose and disconnect.",
+			"returns": {
+				"type": [
+					"Tone.Players"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/source/Players.js#L260"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",

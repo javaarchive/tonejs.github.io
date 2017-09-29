@@ -601,13 +601,6 @@
 		"fadeIn": 0,
 		"fadeOut": 0
 	},
-	"Players": {
-		"volume": 0,
-		"mute": false,
-		"onload": "Tone.noOp",
-		"fadeIn": 0,
-		"fadeOut": 0
-	},
 	"PulseOscillator": {
 		"frequency": 440,
 		"detune": 0,
@@ -643,5 +636,12 @@
 		"loopStart": 0,
 		"loopEnd": 0,
 		"reverse": false
+	},
+	"Players": {
+		"volume": 0,
+		"mute": false,
+		"onload": "Tone.noOp",
+		"fadeIn": 0,
+		"fadeOut": 0
 	}
 }

@@ -565,10 +565,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Players": [
-		"AudioNode",
-		"Tone"
-	],
 	"PulseOscillator": [
 		"Source",
 		"AudioNode",
@@ -588,6 +584,10 @@
 	],
 	"GrainPlayer": [
 		"Source",
+		"AudioNode",
+		"Tone"
+	],
+	"Players": [
 		"AudioNode",
 		"Tone"
 	],
