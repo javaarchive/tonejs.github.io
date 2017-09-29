@@ -163,12 +163,6 @@
 		"callback": "Tone.noOp",
 		"frequency": 1
 	},
-	"Context": {
-		"clockSource": "worker",
-		"latencyHint": "interactive",
-		"lookAhead": 0.1,
-		"updateInterval": 0.03
-	},
 	"Delay": {
 		"maxDelay": 1,
 		"delayTime": 0
@@ -211,6 +205,12 @@
 	"TransportRepeatEvent": {
 		"duration": "Infinity",
 		"interval": 1
+	},
+	"Context": {
+		"clockSource": "worker",
+		"latencyHint": "interactive",
+		"lookAhead": 0.1,
+		"updateInterval": 0.03
 	},
 	"Param": {
 		"units": "Tone.Type.Default",
