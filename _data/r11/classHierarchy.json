@@ -565,10 +565,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Players": [
-		"AudioNode",
-		"Tone"
-	],
 	"PulseOscillator": [
 		"Source",
 		"AudioNode",
@@ -592,6 +588,10 @@
 		"Tone"
 	],
 	"MultiPlayer": [
+		"Tone"
+	],
+	"Players": [
+		"AudioNode",
 		"Tone"
 	],
 	"Frequency": [
