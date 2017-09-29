@@ -4813,187 +4813,6 @@
 			"inherits": "Tone.Emitter"
 		}
 	],
-	"Context": [
-		{
-			"description": "The current audio context time",
-			"returns": {
-				"type": [
-					"Number"
-				]
-			},
-			"scope": "instance",
-			"name": "now",
-			"lineno": "Tone/core/Context.js#L136"
-		},
-		{
-			"description": "Generate a looped buffer at some constant value.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"name": "val"
-				}
-			],
-			"returns": {
-				"type": [
-					"BufferSourceNode"
-				]
-			},
-			"scope": "instance",
-			"name": "getConstant",
-			"lineno": "Tone/core/Context.js#L145"
-		},
-		{
-			"description": "A setTimeout which is gaurenteed by the clock source. \n Also runs in the offline context.",
-			"params": [
-				{
-					"type": [
-						"function"
-					],
-					"description": "The callback to invoke",
-					"name": "fn"
-				},
-				{
-					"type": [
-						"Seconds"
-					],
-					"description": "The timeout in seconds",
-					"name": "timeout"
-				}
-			],
-			"returns": {
-				"type": [
-					"Number"
-				],
-				"description": "ID to use when invoking Tone.Context.clearTimeout"
-			},
-			"scope": "instance",
-			"name": "setTimeout",
-			"lineno": "Tone/core/Context.js#L184"
-		},
-		{
-			"description": "Clears a previously scheduled timeout with Tone.context.setTimeout",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The ID returned from setTimeout",
-					"name": "id"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Context"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "clearTimeout",
-			"lineno": "Tone/core/Context.js#L200"
-		},
-		{
-			"description": "Clean up",
-			"returns": {
-				"type": [
-					"Tone.Context"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/core/Context.js#L294"
-		},
-		{
-			"description": "Bind a callback to a specific event.",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"description": "The name of the event to listen for.",
-					"name": "event"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"description": "The callback to invoke when the\n                               event is emitted",
-					"name": "callback"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Emitter"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "on",
-			"lineno": "Tone/core/Emitter.js#L32",
-			"inherits": "Tone.Emitter"
-		},
-		{
-			"description": "Remove the event listener.",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"description": "The event to stop listening to.",
-					"name": "event"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"optional": true,
-					"description": "The callback which was bound to \n                               the event with Tone.Emitter.on.\n                               If no callback is given, all callbacks\n                               events are removed.",
-					"name": "callback"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Emitter"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "off",
-			"lineno": "Tone/core/Emitter.js#L54",
-			"inherits": "Tone.Emitter"
-		},
-		{
-			"description": "Invoke all of the callbacks bound to the event\n with any arguments passed in.",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"description": "The name of the event.",
-					"name": "event"
-				},
-				{
-					"type": [
-						"*"
-					],
-					"description": "The arguments to pass to the functions listening.",
-					"name": "args..."
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Emitter"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "emit",
-			"lineno": "Tone/core/Emitter.js#L81",
-			"inherits": "Tone.Emitter"
-		}
-	],
 	"Delay": [
 		{
 			"description": "Clean up.",
@@ -7120,6 +6939,187 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/core/TransportRepeatEvent.js#L120"
+		}
+	],
+	"Context": [
+		{
+			"description": "The current audio context time",
+			"returns": {
+				"type": [
+					"Number"
+				]
+			},
+			"scope": "instance",
+			"name": "now",
+			"lineno": "Tone/core/Context.js#L136"
+		},
+		{
+			"description": "Generate a looped buffer at some constant value.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"name": "val"
+				}
+			],
+			"returns": {
+				"type": [
+					"BufferSourceNode"
+				]
+			},
+			"scope": "instance",
+			"name": "getConstant",
+			"lineno": "Tone/core/Context.js#L145"
+		},
+		{
+			"description": "A setTimeout which is gaurenteed by the clock source. \n Also runs in the offline context.",
+			"params": [
+				{
+					"type": [
+						"function"
+					],
+					"description": "The callback to invoke",
+					"name": "fn"
+				},
+				{
+					"type": [
+						"Seconds"
+					],
+					"description": "The timeout in seconds",
+					"name": "timeout"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "ID to use when invoking Tone.Context.clearTimeout"
+			},
+			"scope": "instance",
+			"name": "setTimeout",
+			"lineno": "Tone/core/Context.js#L184"
+		},
+		{
+			"description": "Clears a previously scheduled timeout with Tone.context.setTimeout",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The ID returned from setTimeout",
+					"name": "id"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Context"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "clearTimeout",
+			"lineno": "Tone/core/Context.js#L200"
+		},
+		{
+			"description": "Clean up",
+			"returns": {
+				"type": [
+					"Tone.Context"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/core/Context.js#L294"
+		},
+		{
+			"description": "Bind a callback to a specific event.",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"description": "The name of the event to listen for.",
+					"name": "event"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"description": "The callback to invoke when the\n                               event is emitted",
+					"name": "callback"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Emitter"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "on",
+			"lineno": "Tone/core/Emitter.js#L32",
+			"inherits": "Tone.Emitter"
+		},
+		{
+			"description": "Remove the event listener.",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"description": "The event to stop listening to.",
+					"name": "event"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"optional": true,
+					"description": "The callback which was bound to \n                               the event with Tone.Emitter.on.\n                               If no callback is given, all callbacks\n                               events are removed.",
+					"name": "callback"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Emitter"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "off",
+			"lineno": "Tone/core/Emitter.js#L54",
+			"inherits": "Tone.Emitter"
+		},
+		{
+			"description": "Invoke all of the callbacks bound to the event\n with any arguments passed in.",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"description": "The name of the event.",
+					"name": "event"
+				},
+				{
+					"type": [
+						"*"
+					],
+					"description": "The arguments to pass to the functions listening.",
+					"name": "args..."
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Emitter"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "emit",
+			"lineno": "Tone/core/Emitter.js#L81",
+			"inherits": "Tone.Emitter"
 		}
 	],
 	"Param": [

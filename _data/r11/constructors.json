@@ -862,20 +862,6 @@
 		],
 		"extends": "Tone.Emitter"
 	},
-	"Context": {
-		"description": "Wrapper around the native AudioContext.",
-		"params": [
-			{
-				"type": [
-					"AudioContext"
-				],
-				"optional": true,
-				"description": "optionally pass in a context",
-				"name": "context"
-			}
-		],
-		"extends": "Tone.Emitter"
-	},
 	"Delay": {
 		"description": "Wrapper around Web Audio's native [DelayNode](http://webaudio.github.io/web-audio-api/#the-delaynode-interface).",
 		"params": [
@@ -1036,6 +1022,20 @@
 			}
 		],
 		"extends": "Tone.TransportEvent"
+	},
+	"Context": {
+		"description": "Wrapper around the native AudioContext.",
+		"params": [
+			{
+				"type": [
+					"AudioContext"
+				],
+				"optional": true,
+				"description": "optionally pass in a context",
+				"name": "context"
+			}
+		],
+		"extends": "Tone.Emitter"
 	},
 	"Param": {
 		"description": "Tone.Param wraps the native Web Audio's AudioParam to provide\n        additional unit conversion functionality. It also\n        serves as a base-class for classes which have a single,\n        automatable parameter.",

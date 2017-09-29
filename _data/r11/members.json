@@ -1789,39 +1789,6 @@
 			"lineno": "Tone/core/Clock.js#L96"
 		}
 	],
-	"Context": [
-		{
-			"description": "How often the Web Worker callback is invoked.\n This number corresponds to how responsive the scheduling\n can be. Context.updateInterval + Context.lookAhead gives you the\n total latency between scheduling an event and hearing it.",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "updateInterval",
-			"lineno": "Tone/core/Context.js#L209"
-		},
-		{
-			"description": "What the source of the clock is, either \"worker\" (Web Worker [default]), \n \"timeout\" (setTimeout), or \"offline\" (none).",
-			"type": [
-				"String"
-			],
-			"scope": "instance",
-			"name": "clockSource",
-			"lineno": "Tone/core/Context.js#L227"
-		},
-		{
-			"description": "The type of playback, which affects tradeoffs between audio \n output latency and responsiveness. \n \n In addition to setting the value in seconds, the latencyHint also\n accepts the strings \"interactive\" (prioritizes low latency), \n \"playback\" (prioritizes sustained playback), \"balanced\" (balances\n latency and performance), and \"fastest\" (lowest latency, might glitch more often).",
-			"type": [
-				"String",
-				"Seconds"
-			],
-			"examples": [
-				"//set the lookAhead to 0.3 seconds\nTone.context.latencyHint = 0.3;"
-			],
-			"scope": "instance",
-			"name": "latencyHint",
-			"lineno": "Tone/core/Context.js#L243"
-		}
-	],
 	"Delay": [
 		{
 			"description": "The amount of time the incoming signal is\n delayed.",
@@ -2170,6 +2137,39 @@
 			"scope": "instance",
 			"name": "callback",
 			"lineno": "Tone/core/TransportEvent.js#L37"
+		}
+	],
+	"Context": [
+		{
+			"description": "How often the Web Worker callback is invoked.\n This number corresponds to how responsive the scheduling\n can be. Context.updateInterval + Context.lookAhead gives you the\n total latency between scheduling an event and hearing it.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "updateInterval",
+			"lineno": "Tone/core/Context.js#L209"
+		},
+		{
+			"description": "What the source of the clock is, either \"worker\" (Web Worker [default]), \n \"timeout\" (setTimeout), or \"offline\" (none).",
+			"type": [
+				"String"
+			],
+			"scope": "instance",
+			"name": "clockSource",
+			"lineno": "Tone/core/Context.js#L227"
+		},
+		{
+			"description": "The type of playback, which affects tradeoffs between audio \n output latency and responsiveness. \n \n In addition to setting the value in seconds, the latencyHint also\n accepts the strings \"interactive\" (prioritizes low latency), \n \"playback\" (prioritizes sustained playback), \"balanced\" (balances\n latency and performance), and \"fastest\" (lowest latency, might glitch more often).",
+			"type": [
+				"String",
+				"Seconds"
+			],
+			"examples": [
+				"//set the lookAhead to 0.3 seconds\nTone.context.latencyHint = 0.3;"
+			],
+			"scope": "instance",
+			"name": "latencyHint",
+			"lineno": "Tone/core/Context.js#L243"
 		}
 	],
 	"Param": [
