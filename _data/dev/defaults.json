@@ -589,27 +589,11 @@
 		"phase": 0,
 		"modulationFrequency": 0.4
 	},
-	"Player": {
-		"onload": "Tone.noOp",
-		"playbackRate": 1,
-		"loop": false,
-		"autostart": false,
-		"loopStart": 0,
-		"loopEnd": 0,
-		"retrigger": false,
-		"reverse": false,
-		"fadeIn": 0,
-		"fadeOut": 0
-	},
 	"PulseOscillator": {
 		"frequency": 440,
 		"detune": 0,
 		"phase": 0,
 		"width": 0.2
-	},
-	"Source": {
-		"volume": 0,
-		"mute": false
 	},
 	"UserMedia": {
 		"volume": 0,
@@ -637,11 +621,27 @@
 		"loopEnd": 0,
 		"reverse": false
 	},
+	"Player": {
+		"onload": "Tone.noOp",
+		"playbackRate": 1,
+		"loop": false,
+		"autostart": false,
+		"loopStart": 0,
+		"loopEnd": 0,
+		"retrigger": false,
+		"reverse": false,
+		"fadeIn": 0,
+		"fadeOut": 0
+	},
 	"Players": {
 		"volume": 0,
 		"mute": false,
 		"onload": "Tone.noOp",
 		"fadeIn": 0,
 		"fadeOut": 0
+	},
+	"Source": {
+		"volume": 0,
+		"mute": false
 	}
 }
