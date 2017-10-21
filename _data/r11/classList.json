@@ -140,14 +140,14 @@
 		"OmniOscillator",
 		"Oscillator",
 		"PWMOscillator",
-		"Player",
 		"PulseOscillator",
-		"Source",
 		"UserMedia",
 		"BufferSource",
 		"GrainPlayer",
 		"MultiPlayer",
-		"Players"
+		"Player",
+		"Players",
+		"Source"
 	],
 	"type": [
 		"Frequency",

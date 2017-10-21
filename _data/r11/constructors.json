@@ -2369,31 +2369,6 @@
 		],
 		"extends": "Tone.Source"
 	},
-	"Player": {
-		"description": "Tone.Player is an audio file player with start, loop, and stop functions.",
-		"params": [
-			{
-				"type": [
-					"string",
-					"AudioBuffer"
-				],
-				"description": "Either the AudioBuffer or the url from\n                                 which to load the AudioBuffer",
-				"name": "url"
-			},
-			{
-				"type": [
-					"function"
-				],
-				"optional": true,
-				"description": "The function to invoke when the buffer is loaded. \n                           Recommended to use Tone.Buffer.on('load') instead.",
-				"name": "onload"
-			}
-		],
-		"examples": [
-			"var player = new Tone.Player(\"./path/to/sample.mp3\").toMaster();\n//play as soon as the buffer is loaded\nplayer.autostart = true;"
-		],
-		"extends": "Tone.Source"
-	},
 	"PulseOscillator": {
 		"description": "Tone.PulseOscillator is a pulse oscillator with control over pulse width,\n        also known as the duty cycle. At 50% duty cycle (width = 0.5) the wave is \n        a square and only odd-numbered harmonics are present. At all other widths \n        even-numbered harmonics are present. Read more \n        [here](https://wigglewave.wordpress.com/2014/08/16/pulse-waveforms-and-harmonics/).",
 		"params": [
@@ -2418,13 +2393,6 @@
 			"var pulse = new Tone.PulseOscillator(\"E5\", 0.4).toMaster().start();"
 		],
 		"extends": "Tone.Source"
-	},
-	"Source": {
-		"description": "Base class for sources. Sources have start/stop methods\n         and the ability to be synced to the\n         start/stop of Tone.Transport.",
-		"examples": [
-			"//Multiple state change events can be chained together,\n//but must be set in the correct order and with ascending times\n\n// OK\nstate.start().stop(\"+0.2\");\n// AND\nstate.start().stop(\"+0.2\").start(\"+0.4\").stop(\"+0.7\")\n\n// BAD\nstate.stop(\"+0.2\").start();\n// OR\nstate.start(\"+0.3\").stop(\"+0.2\");"
-		],
-		"extends": "Tone.AudioNode"
 	},
 	"UserMedia": {
 		"description": "Tone.UserMedia uses MediaDevices.getUserMedia to open up\n         and external microphone or audio input. Check\n         [MediaDevices API Support](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia)\n         to see which browsers are supported. Access to an external input\n         is limited to secure (HTTPS) connections.",
@@ -2513,6 +2481,31 @@
 		"extends": "Tone",
 		"deprecated": "Use [Tone.Players](Players) instead."
 	},
+	"Player": {
+		"description": "Tone.Player is an audio file player with start, loop, and stop functions.",
+		"params": [
+			{
+				"type": [
+					"string",
+					"AudioBuffer"
+				],
+				"description": "Either the AudioBuffer or the url from\n                                 which to load the AudioBuffer",
+				"name": "url"
+			},
+			{
+				"type": [
+					"function"
+				],
+				"optional": true,
+				"description": "The function to invoke when the buffer is loaded. \n                           Recommended to use Tone.Buffer.on('load') instead.",
+				"name": "onload"
+			}
+		],
+		"examples": [
+			"var player = new Tone.Player(\"./path/to/sample.mp3\").toMaster();\n//play as soon as the buffer is loaded\nplayer.autostart = true;"
+		],
+		"extends": "Tone.Source"
+	},
 	"Players": {
 		"description": "Tone.Players combines multiple [Tone.Player](Player) objects.",
 		"params": [
@@ -2531,6 +2524,13 @@
 				"description": "The function to invoke when the buffer is loaded.",
 				"name": "onload"
 			}
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"Source": {
+		"description": "Base class for sources. Sources have start/stop methods\n         and the ability to be synced to the\n         start/stop of Tone.Transport.",
+		"examples": [
+			"//Multiple state change events can be chained together,\n//but must be set in the correct order and with ascending times\n\n// OK\nstate.start().stop(\"+0.2\");\n// AND\nstate.start().stop(\"+0.2\").start(\"+0.4\").stop(\"+0.7\")\n\n// BAD\nstate.stop(\"+0.2\").start();\n// OR\nstate.start(\"+0.3\").stop(\"+0.2\");"
 		],
 		"extends": "Tone.AudioNode"
 	},

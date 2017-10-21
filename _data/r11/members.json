@@ -4957,6 +4957,39 @@
 			"lineno": "Tone/source/AMOscillator.js#L175"
 		},
 		{
+			"description": "Mute the output.",
+			"type": [
+				"boolean"
+			],
+			"examples": [
+				"//mute the output\nsource.mute = true;"
+			],
+			"scope": "instance",
+			"name": "mute",
+			"lineno": "Tone/source/Players.js#L104",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeIn time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeIn",
+			"lineno": "Tone/source/Players.js#L122",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeOut time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeOut",
+			"lineno": "Tone/source/Players.js#L140",
+			"inherits": "Tone.Source"
+		},
+		{
 			"description": "The volume of the output in decibels.",
 			"type": [
 				"Decibels"
@@ -4979,39 +5012,6 @@
 			"scope": "instance",
 			"name": "state",
 			"lineno": "Tone/source/Source.js#L93",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Mute the output.",
-			"type": [
-				"boolean"
-			],
-			"examples": [
-				"//mute the output\nsource.mute = true;"
-			],
-			"scope": "instance",
-			"name": "mute",
-			"lineno": "Tone/source/Source.js#L114",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeIn time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeIn",
-			"lineno": "Tone/source/Players.js#L122",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeOut time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeOut",
-			"lineno": "Tone/source/Players.js#L140",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -5110,6 +5110,39 @@
 			"lineno": "Tone/source/FMOscillator.js#L181"
 		},
 		{
+			"description": "Mute the output.",
+			"type": [
+				"boolean"
+			],
+			"examples": [
+				"//mute the output\nsource.mute = true;"
+			],
+			"scope": "instance",
+			"name": "mute",
+			"lineno": "Tone/source/Players.js#L104",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeIn time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeIn",
+			"lineno": "Tone/source/Players.js#L122",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeOut time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeOut",
+			"lineno": "Tone/source/Players.js#L140",
+			"inherits": "Tone.Source"
+		},
+		{
 			"description": "The volume of the output in decibels.",
 			"type": [
 				"Decibels"
@@ -5132,39 +5165,6 @@
 			"scope": "instance",
 			"name": "state",
 			"lineno": "Tone/source/Source.js#L93",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Mute the output.",
-			"type": [
-				"boolean"
-			],
-			"examples": [
-				"//mute the output\nsource.mute = true;"
-			],
-			"scope": "instance",
-			"name": "mute",
-			"lineno": "Tone/source/Source.js#L114",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeIn time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeIn",
-			"lineno": "Tone/source/Players.js#L122",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeOut time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeOut",
-			"lineno": "Tone/source/Players.js#L140",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -5249,6 +5249,39 @@
 			"lineno": "Tone/source/FatOscillator.js#L236"
 		},
 		{
+			"description": "Mute the output.",
+			"type": [
+				"boolean"
+			],
+			"examples": [
+				"//mute the output\nsource.mute = true;"
+			],
+			"scope": "instance",
+			"name": "mute",
+			"lineno": "Tone/source/Players.js#L104",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeIn time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeIn",
+			"lineno": "Tone/source/Players.js#L122",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeOut time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeOut",
+			"lineno": "Tone/source/Players.js#L140",
+			"inherits": "Tone.Source"
+		},
+		{
 			"description": "The volume of the output in decibels.",
 			"type": [
 				"Decibels"
@@ -5271,39 +5304,6 @@
 			"scope": "instance",
 			"name": "state",
 			"lineno": "Tone/source/Source.js#L93",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Mute the output.",
-			"type": [
-				"boolean"
-			],
-			"examples": [
-				"//mute the output\nsource.mute = true;"
-			],
-			"scope": "instance",
-			"name": "mute",
-			"lineno": "Tone/source/Source.js#L114",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeIn time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeIn",
-			"lineno": "Tone/source/Players.js#L122",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeOut time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeOut",
-			"lineno": "Tone/source/Players.js#L140",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -5342,6 +5342,39 @@
 			"lineno": "Tone/source/Noise.js#L71"
 		},
 		{
+			"description": "Mute the output.",
+			"type": [
+				"boolean"
+			],
+			"examples": [
+				"//mute the output\nsource.mute = true;"
+			],
+			"scope": "instance",
+			"name": "mute",
+			"lineno": "Tone/source/Players.js#L104",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeIn time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeIn",
+			"lineno": "Tone/source/Players.js#L122",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeOut time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeOut",
+			"lineno": "Tone/source/Players.js#L140",
+			"inherits": "Tone.Source"
+		},
+		{
 			"description": "The volume of the output in decibels.",
 			"type": [
 				"Decibels"
@@ -5364,39 +5397,6 @@
 			"scope": "instance",
 			"name": "state",
 			"lineno": "Tone/source/Source.js#L93",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Mute the output.",
-			"type": [
-				"boolean"
-			],
-			"examples": [
-				"//mute the output\nsource.mute = true;"
-			],
-			"scope": "instance",
-			"name": "mute",
-			"lineno": "Tone/source/Source.js#L114",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeIn time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeIn",
-			"lineno": "Tone/source/Players.js#L122",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeOut time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeOut",
-			"lineno": "Tone/source/Players.js#L140",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -5530,6 +5530,39 @@
 			"signal": true
 		},
 		{
+			"description": "Mute the output.",
+			"type": [
+				"boolean"
+			],
+			"examples": [
+				"//mute the output\nsource.mute = true;"
+			],
+			"scope": "instance",
+			"name": "mute",
+			"lineno": "Tone/source/Players.js#L104",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeIn time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeIn",
+			"lineno": "Tone/source/Players.js#L122",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeOut time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeOut",
+			"lineno": "Tone/source/Players.js#L140",
+			"inherits": "Tone.Source"
+		},
+		{
 			"description": "The volume of the output in decibels.",
 			"type": [
 				"Decibels"
@@ -5552,39 +5585,6 @@
 			"scope": "instance",
 			"name": "state",
 			"lineno": "Tone/source/Source.js#L93",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Mute the output.",
-			"type": [
-				"boolean"
-			],
-			"examples": [
-				"//mute the output\nsource.mute = true;"
-			],
-			"scope": "instance",
-			"name": "mute",
-			"lineno": "Tone/source/Source.js#L114",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeIn time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeIn",
-			"lineno": "Tone/source/Players.js#L122",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeOut time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeOut",
-			"lineno": "Tone/source/Players.js#L140",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -5658,6 +5658,39 @@
 			"lineno": "Tone/source/Oscillator.js#L344"
 		},
 		{
+			"description": "Mute the output.",
+			"type": [
+				"boolean"
+			],
+			"examples": [
+				"//mute the output\nsource.mute = true;"
+			],
+			"scope": "instance",
+			"name": "mute",
+			"lineno": "Tone/source/Players.js#L104",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeIn time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeIn",
+			"lineno": "Tone/source/Players.js#L122",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeOut time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeOut",
+			"lineno": "Tone/source/Players.js#L140",
+			"inherits": "Tone.Source"
+		},
+		{
 			"description": "The volume of the output in decibels.",
 			"type": [
 				"Decibels"
@@ -5680,39 +5713,6 @@
 			"scope": "instance",
 			"name": "state",
 			"lineno": "Tone/source/Source.js#L93",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Mute the output.",
-			"type": [
-				"boolean"
-			],
-			"examples": [
-				"//mute the output\nsource.mute = true;"
-			],
-			"scope": "instance",
-			"name": "mute",
-			"lineno": "Tone/source/Source.js#L114",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeIn time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeIn",
-			"lineno": "Tone/source/Players.js#L122",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeOut time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeOut",
-			"lineno": "Tone/source/Players.js#L140",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -5778,31 +5778,6 @@
 			"lineno": "Tone/source/PWMOscillator.js#L141"
 		},
 		{
-			"description": "The volume of the output in decibels.",
-			"type": [
-				"Decibels"
-			],
-			"examples": [
-				"source.volume.value = -6;"
-			],
-			"scope": "instance",
-			"name": "volume",
-			"lineno": "Tone/source/Source.js#L48",
-			"inherits": "Tone.Source",
-			"signal": true
-		},
-		{
-			"description": "Returns the playback state of the source, either \"started\" or \"stopped\".",
-			"type": [
-				"Tone.State"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "state",
-			"lineno": "Tone/source/Source.js#L93",
-			"inherits": "Tone.Source"
-		},
-		{
 			"description": "Mute the output.",
 			"type": [
 				"boolean"
@@ -5812,7 +5787,7 @@
 			],
 			"scope": "instance",
 			"name": "mute",
-			"lineno": "Tone/source/Source.js#L114",
+			"lineno": "Tone/source/Players.js#L104",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -5836,122 +5811,6 @@
 			"inherits": "Tone.Source"
 		},
 		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Player": [
-		{
-			"description": "If the file should play as soon\n as the buffer is loaded.",
-			"type": [
-				"boolean"
-			],
-			"examples": [
-				"//will play as soon as it's loaded\nvar player = new Tone.Player({\n\t\"url\" : \"./path/to/sample.mp3\",\n\t\"autostart\" : true,\n}).toMaster();"
-			],
-			"scope": "instance",
-			"name": "autostart",
-			"lineno": "Tone/source/Player.js#L47"
-		},
-		{
-			"description": "Enabling retrigger will allow a player to be restarted\n before the the previous 'start' is done playing. Otherwise, \n successive calls to Tone.Player.start will only start\n the sample if it had played all the way through.",
-			"type": [
-				"boolean"
-			],
-			"scope": "instance",
-			"name": "retrigger",
-			"lineno": "Tone/source/Player.js#L98"
-		},
-		{
-			"description": "The fadeIn time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeIn",
-			"lineno": "Tone/source/Player.js#L104"
-		},
-		{
-			"description": "The fadeOut time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeOut",
-			"lineno": "Tone/source/Player.js#L110"
-		},
-		{
-			"description": "If loop is true, the loop will start at this position.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "loopStart",
-			"lineno": "Tone/source/Player.js#L280"
-		},
-		{
-			"description": "If loop is true, the loop will end at this position.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "loopEnd",
-			"lineno": "Tone/source/Player.js#L298"
-		},
-		{
-			"description": "The audio buffer belonging to the player.",
-			"type": [
-				"Tone.Buffer"
-			],
-			"scope": "instance",
-			"name": "buffer",
-			"lineno": "Tone/source/Player.js#L316"
-		},
-		{
-			"description": "If the buffer should loop once it's over.",
-			"type": [
-				"boolean"
-			],
-			"scope": "instance",
-			"name": "loop",
-			"lineno": "Tone/source/Player.js#L331"
-		},
-		{
-			"description": "The playback speed. 1 is normal speed. This is not a signal because\nSafari and iOS currently don't support playbackRate as a signal.",
-			"type": [
-				"number"
-			],
-			"scope": "instance",
-			"name": "playbackRate",
-			"lineno": "Tone/source/Player.js#L349"
-		},
-		{
-			"description": "The direction the buffer should play in",
-			"type": [
-				"boolean"
-			],
-			"scope": "instance",
-			"name": "reverse",
-			"lineno": "Tone/source/Player.js#L368"
-		},
-		{
-			"description": "If all the buffer is loaded",
-			"type": [
-				"Boolean"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "loaded",
-			"lineno": "Tone/source/Player.js#L383"
-		},
-		{
 			"description": "The volume of the output in decibels.",
 			"type": [
 				"Decibels"
@@ -5974,19 +5833,6 @@
 			"scope": "instance",
 			"name": "state",
 			"lineno": "Tone/source/Source.js#L93",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Mute the output.",
-			"type": [
-				"boolean"
-			],
-			"examples": [
-				"//mute the output\nsource.mute = true;"
-			],
-			"scope": "instance",
-			"name": "mute",
-			"lineno": "Tone/source/Source.js#L114",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -6052,31 +5898,6 @@
 			"lineno": "Tone/source/PulseOscillator.js#L139"
 		},
 		{
-			"description": "The volume of the output in decibels.",
-			"type": [
-				"Decibels"
-			],
-			"examples": [
-				"source.volume.value = -6;"
-			],
-			"scope": "instance",
-			"name": "volume",
-			"lineno": "Tone/source/Source.js#L48",
-			"inherits": "Tone.Source",
-			"signal": true
-		},
-		{
-			"description": "Returns the playback state of the source, either \"started\" or \"stopped\".",
-			"type": [
-				"Tone.State"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "state",
-			"lineno": "Tone/source/Source.js#L93",
-			"inherits": "Tone.Source"
-		},
-		{
 			"description": "Mute the output.",
 			"type": [
 				"boolean"
@@ -6086,7 +5907,7 @@
 			],
 			"scope": "instance",
 			"name": "mute",
-			"lineno": "Tone/source/Source.js#L114",
+			"lineno": "Tone/source/Players.js#L104",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -6110,19 +5931,6 @@
 			"inherits": "Tone.Source"
 		},
 		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Source": [
-		{
 			"description": "The volume of the output in decibels.",
 			"type": [
 				"Decibels"
@@ -6133,6 +5941,7 @@
 			"scope": "instance",
 			"name": "volume",
 			"lineno": "Tone/source/Source.js#L48",
+			"inherits": "Tone.Source",
 			"signal": true
 		},
 		{
@@ -6143,49 +5952,8 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "state",
-			"lineno": "Tone/source/Source.js#L93"
-		},
-		{
-			"description": "Mute the output.",
-			"type": [
-				"boolean"
-			],
-			"examples": [
-				"//mute the output\nsource.mute = true;"
-			],
-			"scope": "instance",
-			"name": "mute",
-			"lineno": "Tone/source/Source.js#L114"
-		},
-		{
-			"description": "Mute the output.",
-			"type": [
-				"boolean"
-			],
-			"examples": [
-				"//mute the output\nsource.mute = true;"
-			],
-			"scope": "instance",
-			"name": "mute",
-			"lineno": "Tone/source/Players.js#L104"
-		},
-		{
-			"description": "The fadeIn time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeIn",
-			"lineno": "Tone/source/Players.js#L122"
-		},
-		{
-			"description": "The fadeOut time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeOut",
-			"lineno": "Tone/source/Players.js#L140"
+			"lineno": "Tone/source/Source.js#L93",
+			"inherits": "Tone.Source"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -6466,6 +6234,39 @@
 			"lineno": "Tone/source/GrainPlayer.js#L289"
 		},
 		{
+			"description": "Mute the output.",
+			"type": [
+				"boolean"
+			],
+			"examples": [
+				"//mute the output\nsource.mute = true;"
+			],
+			"scope": "instance",
+			"name": "mute",
+			"lineno": "Tone/source/Players.js#L104",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeIn time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeIn",
+			"lineno": "Tone/source/Players.js#L122",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeOut time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeOut",
+			"lineno": "Tone/source/Players.js#L140",
+			"inherits": "Tone.Source"
+		},
+		{
 			"description": "The volume of the output in decibels.",
 			"type": [
 				"Decibels"
@@ -6488,39 +6289,6 @@
 			"scope": "instance",
 			"name": "state",
 			"lineno": "Tone/source/Source.js#L93",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Mute the output.",
-			"type": [
-				"boolean"
-			],
-			"examples": [
-				"//mute the output\nsource.mute = true;"
-			],
-			"scope": "instance",
-			"name": "mute",
-			"lineno": "Tone/source/Source.js#L114",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeIn time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeIn",
-			"lineno": "Tone/source/Players.js#L122",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeOut time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeOut",
-			"lineno": "Tone/source/Players.js#L140",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -6586,6 +6354,160 @@
 			"lineno": "Tone/source/MultiPlayer.js#L214"
 		}
 	],
+	"Player": [
+		{
+			"description": "If the file should play as soon\n as the buffer is loaded.",
+			"type": [
+				"boolean"
+			],
+			"examples": [
+				"//will play as soon as it's loaded\nvar player = new Tone.Player({\n\t\"url\" : \"./path/to/sample.mp3\",\n\t\"autostart\" : true,\n}).toMaster();"
+			],
+			"scope": "instance",
+			"name": "autostart",
+			"lineno": "Tone/source/Player.js#L47"
+		},
+		{
+			"description": "Enabling retrigger will allow a player to be restarted\n before the the previous 'start' is done playing. Otherwise, \n successive calls to Tone.Player.start will only start\n the sample if it had played all the way through.",
+			"type": [
+				"boolean"
+			],
+			"scope": "instance",
+			"name": "retrigger",
+			"lineno": "Tone/source/Player.js#L98"
+		},
+		{
+			"description": "The fadeIn time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeIn",
+			"lineno": "Tone/source/Player.js#L104"
+		},
+		{
+			"description": "The fadeOut time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeOut",
+			"lineno": "Tone/source/Player.js#L110"
+		},
+		{
+			"description": "If loop is true, the loop will start at this position.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "loopStart",
+			"lineno": "Tone/source/Player.js#L280"
+		},
+		{
+			"description": "If loop is true, the loop will end at this position.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "loopEnd",
+			"lineno": "Tone/source/Player.js#L298"
+		},
+		{
+			"description": "The audio buffer belonging to the player.",
+			"type": [
+				"Tone.Buffer"
+			],
+			"scope": "instance",
+			"name": "buffer",
+			"lineno": "Tone/source/Player.js#L316"
+		},
+		{
+			"description": "If the buffer should loop once it's over.",
+			"type": [
+				"boolean"
+			],
+			"scope": "instance",
+			"name": "loop",
+			"lineno": "Tone/source/Player.js#L331"
+		},
+		{
+			"description": "The playback speed. 1 is normal speed. This is not a signal because\nSafari and iOS currently don't support playbackRate as a signal.",
+			"type": [
+				"number"
+			],
+			"scope": "instance",
+			"name": "playbackRate",
+			"lineno": "Tone/source/Player.js#L349"
+		},
+		{
+			"description": "The direction the buffer should play in",
+			"type": [
+				"boolean"
+			],
+			"scope": "instance",
+			"name": "reverse",
+			"lineno": "Tone/source/Player.js#L368"
+		},
+		{
+			"description": "If all the buffer is loaded",
+			"type": [
+				"Boolean"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "loaded",
+			"lineno": "Tone/source/Player.js#L383"
+		},
+		{
+			"description": "Mute the output.",
+			"type": [
+				"boolean"
+			],
+			"examples": [
+				"//mute the output\nsource.mute = true;"
+			],
+			"scope": "instance",
+			"name": "mute",
+			"lineno": "Tone/source/Players.js#L104",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The volume of the output in decibels.",
+			"type": [
+				"Decibels"
+			],
+			"examples": [
+				"source.volume.value = -6;"
+			],
+			"scope": "instance",
+			"name": "volume",
+			"lineno": "Tone/source/Source.js#L48",
+			"inherits": "Tone.Source",
+			"signal": true
+		},
+		{
+			"description": "Returns the playback state of the source, either \"started\" or \"stopped\".",
+			"type": [
+				"Tone.State"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "state",
+			"lineno": "Tone/source/Source.js#L93",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
 	"Players": [
 		{
 			"description": "The volume of the output in decibels.",
@@ -6619,6 +6541,84 @@
 			"scope": "instance",
 			"name": "loaded",
 			"lineno": "Tone/source/Players.js#L212"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Source": [
+		{
+			"description": "Mute the output.",
+			"type": [
+				"boolean"
+			],
+			"examples": [
+				"//mute the output\nsource.mute = true;"
+			],
+			"scope": "instance",
+			"name": "mute",
+			"lineno": "Tone/source/Players.js#L104"
+		},
+		{
+			"description": "The fadeIn time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeIn",
+			"lineno": "Tone/source/Players.js#L122"
+		},
+		{
+			"description": "The fadeOut time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeOut",
+			"lineno": "Tone/source/Players.js#L140"
+		},
+		{
+			"description": "The volume of the output in decibels.",
+			"type": [
+				"Decibels"
+			],
+			"examples": [
+				"source.volume.value = -6;"
+			],
+			"scope": "instance",
+			"name": "volume",
+			"lineno": "Tone/source/Source.js#L48",
+			"signal": true
+		},
+		{
+			"description": "Returns the playback state of the source, either \"started\" or \"stopped\".",
+			"type": [
+				"Tone.State"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "state",
+			"lineno": "Tone/source/Source.js#L93"
+		},
+		{
+			"description": "Mute the output.",
+			"type": [
+				"boolean"
+			],
+			"examples": [
+				"//mute the output\nsource.mute = true;"
+			],
+			"scope": "instance",
+			"name": "mute",
+			"lineno": "Tone/source/Source.js#L114"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
