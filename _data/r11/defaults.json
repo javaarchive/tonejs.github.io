@@ -155,14 +155,6 @@
 		"onload": "Tone.noOp",
 		"baseUrl": ""
 	},
-	"Delay": {
-		"maxDelay": 1,
-		"delayTime": 0
-	},
-	"Gain": {
-		"gain": 1,
-		"convert": true
-	},
 	"Master": {
 		"volume": 0,
 		"mute": false
@@ -187,6 +179,14 @@
 		"latencyHint": "interactive",
 		"lookAhead": 0.1,
 		"updateInterval": 0.03
+	},
+	"Delay": {
+		"maxDelay": 1,
+		"delayTime": 0
+	},
+	"Gain": {
+		"gain": 1,
+		"convert": true
 	},
 	"Listener": {
 		"positionX": 0,
