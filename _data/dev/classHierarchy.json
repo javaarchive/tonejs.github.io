@@ -141,16 +141,10 @@
 	"Buffers": [
 		"Tone"
 	],
-	"Delay": [
-		"Tone"
-	],
 	"Draw": [
 		"Tone"
 	],
 	"Emitter": [
-		"Tone"
-	],
-	"Gain": [
 		"Tone"
 	],
 	"Master": [
@@ -178,6 +172,12 @@
 	],
 	"Context": [
 		"Emitter",
+		"Tone"
+	],
+	"Delay": [
+		"Tone"
+	],
+	"Gain": [
 		"Tone"
 	],
 	"IntervalTimeline": [

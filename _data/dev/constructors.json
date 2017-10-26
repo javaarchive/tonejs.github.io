@@ -791,28 +791,6 @@
 		],
 		"extends": "Tone"
 	},
-	"Delay": {
-		"description": "Wrapper around Web Audio's native [DelayNode](http://webaudio.github.io/web-audio-api/#the-delaynode-interface).",
-		"params": [
-			{
-				"type": [
-					"Time"
-				],
-				"optional": true,
-				"description": "The delay applied to the incoming signal.",
-				"name": "delayTime"
-			},
-			{
-				"type": [
-					"Time"
-				],
-				"optional": true,
-				"description": "The maximum delay time.",
-				"name": "maxDelay"
-			}
-		],
-		"extends": "Tone"
-	},
 	"Draw": {
 		"description": "Tone.Draw is useful for synchronizing visuals and audio events.\n        Callbacks from Tone.Transport or any of the Tone.Event classes\n        always happen _before_ the scheduled time and are not synchronized\n        to the animation frame so they are not good for triggering tightly\n        synchronized visuals and sound. Tone.Draw makes it easy to schedule\n        callbacks using the AudioContext time and uses requestAnimationFrame.",
 		"examples": [
@@ -823,28 +801,6 @@
 	},
 	"Emitter": {
 		"description": "Tone.Emitter gives classes which extend it\n        the ability to listen for and emit events. \n        Inspiration and reference from Jerome Etienne's [MicroEvent](https://github.com/jeromeetienne/microevent.js).\n        MIT (c) 2011 Jerome Etienne.",
-		"extends": "Tone"
-	},
-	"Gain": {
-		"description": "A thin wrapper around the Native Web Audio GainNode.\n        The GainNode is a basic building block of the Web Audio\n        API and is useful for routing audio and adjusting gains.",
-		"params": [
-			{
-				"type": [
-					"Number"
-				],
-				"optional": true,
-				"description": "The initial gain of the GainNode",
-				"name": "gain"
-			},
-			{
-				"type": [
-					"Tone.Type"
-				],
-				"optional": true,
-				"description": "The units of the gain parameter.",
-				"name": "units"
-			}
-		],
 		"extends": "Tone"
 	},
 	"Master": {
@@ -979,6 +935,50 @@
 			}
 		],
 		"extends": "Tone.Emitter"
+	},
+	"Delay": {
+		"description": "Wrapper around Web Audio's native [DelayNode](http://webaudio.github.io/web-audio-api/#the-delaynode-interface).",
+		"params": [
+			{
+				"type": [
+					"Time"
+				],
+				"optional": true,
+				"description": "The delay applied to the incoming signal.",
+				"name": "delayTime"
+			},
+			{
+				"type": [
+					"Time"
+				],
+				"optional": true,
+				"description": "The maximum delay time.",
+				"name": "maxDelay"
+			}
+		],
+		"extends": "Tone"
+	},
+	"Gain": {
+		"description": "A thin wrapper around the Native Web Audio GainNode.\n        The GainNode is a basic building block of the Web Audio\n        API and is useful for routing audio and adjusting gains.",
+		"params": [
+			{
+				"type": [
+					"Number"
+				],
+				"optional": true,
+				"description": "The initial gain of the GainNode",
+				"name": "gain"
+			},
+			{
+				"type": [
+					"Tone.Type"
+				],
+				"optional": true,
+				"description": "The units of the gain parameter.",
+				"name": "units"
+			}
+		],
+		"extends": "Tone"
 	},
 	"IntervalTimeline": {
 		"description": "Similar to Tone.Timeline, but all events represent\n        intervals with both \"time\" and \"duration\" times. The \n        events are placed in a tree structure optimized\n        for querying an intersection point with the timeline\n        events. Internally uses an [Interval Tree](https://en.wikipedia.org/wiki/Interval_tree)\n        to represent the data.",

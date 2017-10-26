@@ -3609,20 +3609,6 @@
 			"lineno": "Tone/core/Buffers.js#L154"
 		}
 	],
-	"Delay": [
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.Delay"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/core/Delay.js#L62"
-		}
-	],
 	"Draw": [
 		{
 			"description": "Schedule a function at the given time to be invoked\n on the nearest animation frame.",
@@ -3793,20 +3779,6 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/core/Emitter.js#L114"
-		}
-	],
-	"Gain": [
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.Gain"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/core/Gain.js#L63"
 		}
 	],
 	"Master": [
@@ -6088,6 +6060,34 @@
 			"name": "emit",
 			"lineno": "Tone/core/Emitter.js#L81",
 			"inherits": "Tone.Emitter"
+		}
+	],
+	"Delay": [
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.Delay"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/core/Delay.js#L54"
+		}
+	],
+	"Gain": [
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.Gain"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/core/Gain.js#L55"
 		}
 	],
 	"IntervalTimeline": [

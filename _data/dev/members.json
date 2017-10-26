@@ -1711,18 +1711,6 @@
 			"lineno": "Tone/core/Buffers.js#L108"
 		}
 	],
-	"Delay": [
-		{
-			"description": "The amount of time the incoming signal is\n delayed.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "delayTime",
-			"lineno": "Tone/core/Delay.js#L37",
-			"signal": true
-		}
-	],
 	"Draw": [
 		{
 			"description": "The duration after which events are not invoked.",
@@ -1741,18 +1729,6 @@
 			"scope": "instance",
 			"name": "anticipation",
 			"lineno": "Tone/core/Draw.js#L48"
-		}
-	],
-	"Gain": [
-		{
-			"description": "The gain parameter of the gain node.",
-			"type": [
-				"Gain"
-			],
-			"scope": "instance",
-			"name": "gain",
-			"lineno": "Tone/core/Gain.js#L38",
-			"signal": true
 		}
 	],
 	"Master": [
@@ -1973,6 +1949,30 @@
 			"scope": "instance",
 			"name": "latencyHint",
 			"lineno": "Tone/core/Context.js#L266"
+		}
+	],
+	"Delay": [
+		{
+			"description": "The amount of time the incoming signal is\n delayed.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "delayTime",
+			"lineno": "Tone/core/Delay.js#L29",
+			"signal": true
+		}
+	],
+	"Gain": [
+		{
+			"description": "The gain parameter of the gain node.",
+			"type": [
+				"Gain"
+			],
+			"scope": "instance",
+			"name": "gain",
+			"lineno": "Tone/core/Gain.js#L30",
+			"signal": true
 		}
 	],
 	"IntervalTimeline": [
