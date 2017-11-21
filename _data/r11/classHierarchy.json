@@ -138,23 +138,10 @@
 	"CtrlRandom": [
 		"Tone"
 	],
-	"Buffers": [
-		"Tone"
-	],
-	"Draw": [
-		"Tone"
-	],
-	"Emitter": [
-		"Tone"
-	],
 	"Master": [
 		"Tone"
 	],
 	"Timeline": [
-		"Tone"
-	],
-	"TimelineState": [
-		"Timeline",
 		"Tone"
 	],
 	"TransportEvent": [
@@ -166,6 +153,9 @@
 	"Buffer": [
 		"Tone"
 	],
+	"Buffers": [
+		"Tone"
+	],
 	"Clock": [
 		"Emitter",
 		"Tone"
@@ -175,6 +165,12 @@
 		"Tone"
 	],
 	"Delay": [
+		"Tone"
+	],
+	"Draw": [
+		"Tone"
+	],
+	"Emitter": [
 		"Tone"
 	],
 	"Gain": [
@@ -195,6 +191,10 @@
 		"AudioNode",
 		"Tone"
 	],
+	"TimelineState": [
+		"Timeline",
+		"Tone"
+	],
 	"Transport": [
 		"Emitter",
 		"Tone"
@@ -208,33 +208,11 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Chebyshev": [
-		"Effect",
-		"AudioNode",
-		"Tone"
-	],
-	"Distortion": [
-		"Effect",
-		"AudioNode",
-		"Tone"
-	],
 	"Effect": [
 		"AudioNode",
 		"Tone"
 	],
-	"FeedbackDelay": [
-		"FeedbackEffect",
-		"Effect",
-		"AudioNode",
-		"Tone"
-	],
 	"FeedbackEffect": [
-		"Effect",
-		"AudioNode",
-		"Tone"
-	],
-	"Tremolo": [
-		"StereoEffect",
 		"Effect",
 		"AudioNode",
 		"Tone"
@@ -254,6 +232,11 @@
 		"AudioNode",
 		"Tone"
 	],
+	"Chebyshev": [
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
 	"Chorus": [
 		"StereoXFeedbackEffect",
 		"StereoEffect",
@@ -262,6 +245,17 @@
 		"Tone"
 	],
 	"Convolver": [
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"Distortion": [
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"FeedbackDelay": [
+		"FeedbackEffect",
 		"Effect",
 		"AudioNode",
 		"Tone"
@@ -323,6 +317,12 @@
 		"AudioNode",
 		"Tone"
 	],
+	"Tremolo": [
+		"StereoEffect",
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
 	"Vibrato": [
 		"Effect",
 		"AudioNode",
@@ -334,6 +334,10 @@
 	"Loop": [
 		"Tone"
 	],
+	"Part": [
+		"Event",
+		"Tone"
+	],
 	"Pattern": [
 		"Loop",
 		"Tone"
@@ -343,21 +347,7 @@
 		"Event",
 		"Tone"
 	],
-	"Part": [
-		"Event",
-		"Tone"
-	],
 	"Instrument": [
-		"AudioNode",
-		"Tone"
-	],
-	"Monophonic": [
-		"Instrument",
-		"AudioNode",
-		"Tone"
-	],
-	"PluckSynth": [
-		"Instrument",
 		"AudioNode",
 		"Tone"
 	],
@@ -395,7 +385,17 @@
 		"AudioNode",
 		"Tone"
 	],
+	"Monophonic": [
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
 	"NoiseSynth": [
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
+	"PluckSynth": [
 		"Instrument",
 		"AudioNode",
 		"Tone"
@@ -416,6 +416,37 @@
 		"AudioNode",
 		"Tone"
 	],
+	"Multiply": [
+		"Signal",
+		"Param",
+		"AudioNode",
+		"Tone"
+	],
+	"SignalBase": [
+		"Tone"
+	],
+	"TickSignal": [
+		"TimelineSignal",
+		"Signal",
+		"Param",
+		"AudioNode",
+		"Tone"
+	],
+	"TransportTimelineSignal": [
+		"TimelineSignal",
+		"Signal",
+		"Param",
+		"AudioNode",
+		"Tone"
+	],
+	"Zero": [
+		"SignalBase",
+		"Tone"
+	],
+	"Abs": [
+		"SignalBase",
+		"Tone"
+	],
 	"Add": [
 		"Signal",
 		"Param",
@@ -430,14 +461,26 @@
 		"SignalBase",
 		"Tone"
 	],
+	"Expr": [
+		"SignalBase",
+		"Tone"
+	],
 	"GainToAudio": [
 		"SignalBase",
 		"Tone"
 	],
-	"Multiply": [
+	"GreaterThan": [
 		"Signal",
 		"Param",
 		"AudioNode",
+		"Tone"
+	],
+	"GreaterThanZero": [
+		"SignalBase",
+		"Tone"
+	],
+	"Modulo": [
+		"SignalBase",
 		"Tone"
 	],
 	"Negate": [
@@ -456,17 +499,16 @@
 		"SignalBase",
 		"Tone"
 	],
-	"SignalBase": [
+	"ScaleExp": [
+		"SignalBase",
 		"Tone"
 	],
-	"Subtract": [
-		"Signal",
+	"Signal": [
 		"Param",
 		"AudioNode",
 		"Tone"
 	],
-	"TickSignal": [
-		"TimelineSignal",
+	"Subtract": [
 		"Signal",
 		"Param",
 		"AudioNode",
@@ -478,50 +520,8 @@
 		"AudioNode",
 		"Tone"
 	],
-	"TransportTimelineSignal": [
-		"TimelineSignal",
-		"Signal",
-		"Param",
-		"AudioNode",
-		"Tone"
-	],
 	"WaveShaper": [
 		"SignalBase",
-		"Tone"
-	],
-	"Zero": [
-		"SignalBase",
-		"Tone"
-	],
-	"Abs": [
-		"SignalBase",
-		"Tone"
-	],
-	"Expr": [
-		"SignalBase",
-		"Tone"
-	],
-	"GreaterThan": [
-		"Signal",
-		"Param",
-		"AudioNode",
-		"Tone"
-	],
-	"GreaterThanZero": [
-		"SignalBase",
-		"Tone"
-	],
-	"Modulo": [
-		"SignalBase",
-		"Tone"
-	],
-	"ScaleExp": [
-		"SignalBase",
-		"Tone"
-	],
-	"Signal": [
-		"Param",
-		"AudioNode",
 		"Tone"
 	],
 	"AMOscillator": [
@@ -594,11 +594,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"TransportTime": [
-		"Time",
-		"TimeBase",
-		"Tone"
-	],
 	"Frequency": [
 		"TimeBase",
 		"Tone"
@@ -608,6 +603,11 @@
 		"Tone"
 	],
 	"TimeBase": [
+		"Tone"
+	],
+	"TransportTime": [
+		"Time",
+		"TimeBase",
 		"Tone"
 	]
 }
