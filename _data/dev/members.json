@@ -1646,7 +1646,7 @@
 			],
 			"scope": "instance",
 			"name": "type",
-			"lineno": "Tone/control/CtrlPattern.js#L121"
+			"lineno": "Tone/control/CtrlPattern.js#L120"
 		}
 	],
 	"CtrlRandom": [
@@ -1688,47 +1688,6 @@
 			"scope": "instance",
 			"name": "value",
 			"lineno": "Tone/control/CtrlRandom.js#L56"
-		}
-	],
-	"Buffers": [
-		{
-			"description": "A path which is prefixed before every url.",
-			"type": [
-				"String"
-			],
-			"scope": "instance",
-			"name": "baseUrl",
-			"lineno": "Tone/core/Buffers.js#L50"
-		},
-		{
-			"description": "If the buffers are loaded or not",
-			"type": [
-				"Boolean"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "loaded",
-			"lineno": "Tone/core/Buffers.js#L108"
-		}
-	],
-	"Draw": [
-		{
-			"description": "The duration after which events are not invoked.",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "expiration",
-			"lineno": "Tone/core/Draw.js#L39"
-		},
-		{
-			"description": "The amount of time before the scheduled time \n that the callback can be invoked. Default is\n half the time of an animation frame (0.008 seconds).",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "anticipation",
-			"lineno": "Tone/core/Draw.js#L48"
 		}
 	],
 	"Master": [
@@ -1877,6 +1836,27 @@
 			"lineno": "Tone/core/Buffer.js#L329"
 		}
 	],
+	"Buffers": [
+		{
+			"description": "A path which is prefixed before every url.",
+			"type": [
+				"String"
+			],
+			"scope": "instance",
+			"name": "baseUrl",
+			"lineno": "Tone/core/Buffers.js#L50"
+		},
+		{
+			"description": "If the buffers are loaded or not",
+			"type": [
+				"Boolean"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "loaded",
+			"lineno": "Tone/core/Buffers.js#L108"
+		}
+	],
 	"Clock": [
 		{
 			"description": "The callback function to invoke at the scheduled tick.",
@@ -1961,6 +1941,26 @@
 			"name": "delayTime",
 			"lineno": "Tone/core/Delay.js#L29",
 			"signal": true
+		}
+	],
+	"Draw": [
+		{
+			"description": "The duration after which events are not invoked.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "expiration",
+			"lineno": "Tone/core/Draw.js#L39"
+		},
+		{
+			"description": "The amount of time before the scheduled time \n that the callback can be invoked. Default is\n half the time of an animation frame (0.008 seconds).",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "anticipation",
+			"lineno": "Tone/core/Draw.js#L48"
 		}
 	],
 	"Gain": [
@@ -2175,7 +2175,7 @@
 			],
 			"scope": "instance",
 			"name": "loopStart",
-			"lineno": "Tone/core/Transport.js#L454"
+			"lineno": "Tone/core/Transport.js#L453"
 		},
 		{
 			"description": "When the Tone.Transport.loop = true, this is the ending position of the loop.",
@@ -2184,7 +2184,7 @@
 			],
 			"scope": "instance",
 			"name": "loopEnd",
-			"lineno": "Tone/core/Transport.js#L469"
+			"lineno": "Tone/core/Transport.js#L468"
 		},
 		{
 			"description": "The swing value. Between 0-1 where 1 equal to\n the note + half the subdivision.",
@@ -2193,7 +2193,7 @@
 			],
 			"scope": "instance",
 			"name": "swing",
-			"lineno": "Tone/core/Transport.js#L500"
+			"lineno": "Tone/core/Transport.js#L499"
 		},
 		{
 			"description": "Set the subdivision which the swing will be applied to.\n The default value is an 8th note. Value must be less\n than a quarter note.",
@@ -2202,7 +2202,7 @@
 			],
 			"scope": "instance",
 			"name": "swingSubdivision",
-			"lineno": "Tone/core/Transport.js#L517"
+			"lineno": "Tone/core/Transport.js#L516"
 		},
 		{
 			"description": "The Transport's position in Bars:Beats:Sixteenths.\n Setting the value will jump to that position right away.",
@@ -2211,7 +2211,7 @@
 			],
 			"scope": "instance",
 			"name": "position",
-			"lineno": "Tone/core/Transport.js#L535"
+			"lineno": "Tone/core/Transport.js#L534"
 		},
 		{
 			"description": "The Transport's position in seconds\n Setting the value will jump to that position right away.",
@@ -2220,7 +2220,7 @@
 			],
 			"scope": "instance",
 			"name": "seconds",
-			"lineno": "Tone/core/Transport.js#L552"
+			"lineno": "Tone/core/Transport.js#L551"
 		},
 		{
 			"description": "The Transport's loop position as a normalized value. Always\n returns 0 if the transport if loop is not true.",
@@ -2229,7 +2229,7 @@
 			],
 			"scope": "instance",
 			"name": "progress",
-			"lineno": "Tone/core/Transport.js#L569"
+			"lineno": "Tone/core/Transport.js#L568"
 		},
 		{
 			"description": "The transports current tick position.",
@@ -2238,7 +2238,7 @@
 			],
 			"scope": "instance",
 			"name": "ticks",
-			"lineno": "Tone/core/Transport.js#L586"
+			"lineno": "Tone/core/Transport.js#L585"
 		},
 		{
 			"description": "Pulses Per Quarter note. This is the smallest resolution\n the Transport timing supports. This should be set once\n on initialization and not set again. Changing this value\n after other objects have been created can cause problems.",
@@ -2247,7 +2247,7 @@
 			],
 			"scope": "instance",
 			"name": "PPQ",
-			"lineno": "Tone/core/Transport.js#L613"
+			"lineno": "Tone/core/Transport.js#L612"
 		}
 	],
 	"AutoFilter": [
@@ -2339,90 +2339,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"Chebyshev": [
-		{
-			"description": "The order of the Chebyshev polynomial which creates\nthe equation which is applied to the incoming \nsignal through a Tone.WaveShaper. The equations\nare in the form:<br>\norder 2: 2x^2 + 1<br>\norder 3: 4x^3 + 3x <br>",
-			"type": [
-				"Positive"
-			],
-			"scope": "instance",
-			"name": "order",
-			"lineno": "Tone/effect/Chebyshev.js#L78"
-		},
-		{
-			"description": "The oversampling of the effect. Can either be \"none\", \"2x\" or \"4x\".",
-			"type": [
-				"string"
-			],
-			"scope": "instance",
-			"name": "oversample",
-			"lineno": "Tone/effect/Chebyshev.js#L110"
-		},
-		{
-			"description": "The wet control is how much of the effected\n will pass through to the output. 1 = 100% effected\n signal, 0 = 100% dry signal.",
-			"type": [
-				"NormalRange"
-			],
-			"scope": "instance",
-			"name": "wet",
-			"lineno": "Tone/effect/Effect.js#L34",
-			"inherits": "Tone.Effect",
-			"signal": true
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Distortion": [
-		{
-			"description": "The amount of distortion.",
-			"type": [
-				"NormalRange"
-			],
-			"scope": "instance",
-			"name": "distortion",
-			"lineno": "Tone/effect/Distortion.js#L53"
-		},
-		{
-			"description": "The oversampling of the effect. Can either be \"none\", \"2x\" or \"4x\".",
-			"type": [
-				"string"
-			],
-			"scope": "instance",
-			"name": "oversample",
-			"lineno": "Tone/effect/Distortion.js#L78"
-		},
-		{
-			"description": "The wet control is how much of the effected\n will pass through to the output. 1 = 100% effected\n signal, 0 = 100% dry signal.",
-			"type": [
-				"NormalRange"
-			],
-			"scope": "instance",
-			"name": "wet",
-			"lineno": "Tone/effect/Effect.js#L34",
-			"inherits": "Tone.Effect",
-			"signal": true
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"Effect": [
 		{
 			"description": "The wet control is how much of the effected\n will pass through to the output. 1 = 100% effected\n signal, 0 = 100% dry signal.",
@@ -2432,51 +2348,6 @@
 			"scope": "instance",
 			"name": "wet",
 			"lineno": "Tone/effect/Effect.js#L34",
-			"signal": true
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"FeedbackDelay": [
-		{
-			"description": "The delayTime of the DelayNode.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "delayTime",
-			"lineno": "Tone/effect/FeedbackDelay.js#L39",
-			"signal": true
-		},
-		{
-			"description": "The amount of signal which is fed back into the effect input.",
-			"type": [
-				"NormalRange"
-			],
-			"scope": "instance",
-			"name": "feedback",
-			"lineno": "Tone/effect/FeedbackEffect.js#L32",
-			"inherits": "Tone.FeedbackEffect",
-			"signal": true
-		},
-		{
-			"description": "The wet control is how much of the effected\n will pass through to the output. 1 = 100% effected\n signal, 0 = 100% dry signal.",
-			"type": [
-				"NormalRange"
-			],
-			"scope": "instance",
-			"name": "wet",
-			"lineno": "Tone/effect/Effect.js#L34",
-			"inherits": "Tone.Effect",
 			"signal": true
 		},
 		{
@@ -2511,68 +2382,6 @@
 			"name": "wet",
 			"lineno": "Tone/effect/Effect.js#L34",
 			"inherits": "Tone.Effect",
-			"signal": true
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Tremolo": [
-		{
-			"description": "The frequency of the tremolo.",
-			"type": [
-				"Frequency"
-			],
-			"scope": "instance",
-			"name": "frequency",
-			"lineno": "Tone/effect/Tremolo.js#L65",
-			"signal": true
-		},
-		{
-			"description": "The depth of the effect. A depth of 0, has no effect\n on the amplitude, and a depth of 1 makes the amplitude\n modulate fully between 0 and 1.",
-			"type": [
-				"NormalRange"
-			],
-			"scope": "instance",
-			"name": "depth",
-			"lineno": "Tone/effect/Tremolo.js#L74",
-			"signal": true
-		},
-		{
-			"description": "The Tremolo's oscillator type.",
-			"type": [
-				"string"
-			],
-			"scope": "instance",
-			"name": "type",
-			"lineno": "Tone/effect/Tremolo.js#L145"
-		},
-		{
-			"description": "Amount of stereo spread. When set to 0, both LFO's will be panned centrally.\nWhen set to 180, LFO's will be panned hard left and right respectively.",
-			"type": [
-				"Degrees"
-			],
-			"scope": "instance",
-			"name": "spread",
-			"lineno": "Tone/effect/Tremolo.js#L161"
-		},
-		{
-			"description": "The wet control, i.e. how much of the effected\n will pass through to the output.",
-			"type": [
-				"NormalRange"
-			],
-			"scope": "instance",
-			"name": "wet",
-			"lineno": "Tone/effect/StereoEffect.js#L32",
-			"inherits": "Tone.StereoEffect",
 			"signal": true
 		},
 		{
@@ -2735,6 +2544,48 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
+	"Chebyshev": [
+		{
+			"description": "The order of the Chebyshev polynomial which creates\nthe equation which is applied to the incoming \nsignal through a Tone.WaveShaper. The equations\nare in the form:<br>\norder 2: 2x^2 + 1<br>\norder 3: 4x^3 + 3x <br>",
+			"type": [
+				"Positive"
+			],
+			"scope": "instance",
+			"name": "order",
+			"lineno": "Tone/effect/Chebyshev.js#L78"
+		},
+		{
+			"description": "The oversampling of the effect. Can either be \"none\", \"2x\" or \"4x\".",
+			"type": [
+				"string"
+			],
+			"scope": "instance",
+			"name": "oversample",
+			"lineno": "Tone/effect/Chebyshev.js#L110"
+		},
+		{
+			"description": "The wet control is how much of the effected\n will pass through to the output. 1 = 100% effected\n signal, 0 = 100% dry signal.",
+			"type": [
+				"NormalRange"
+			],
+			"scope": "instance",
+			"name": "wet",
+			"lineno": "Tone/effect/Effect.js#L34",
+			"inherits": "Tone.Effect",
+			"signal": true
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
 	"Chorus": [
 		{
 			"description": "The frequency of the LFO which modulates the delayTime.",
@@ -2814,6 +2665,93 @@
 			"scope": "instance",
 			"name": "buffer",
 			"lineno": "Tone/effect/Convolver.js#L63"
+		},
+		{
+			"description": "The wet control is how much of the effected\n will pass through to the output. 1 = 100% effected\n signal, 0 = 100% dry signal.",
+			"type": [
+				"NormalRange"
+			],
+			"scope": "instance",
+			"name": "wet",
+			"lineno": "Tone/effect/Effect.js#L34",
+			"inherits": "Tone.Effect",
+			"signal": true
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Distortion": [
+		{
+			"description": "The amount of distortion.",
+			"type": [
+				"NormalRange"
+			],
+			"scope": "instance",
+			"name": "distortion",
+			"lineno": "Tone/effect/Distortion.js#L53"
+		},
+		{
+			"description": "The oversampling of the effect. Can either be \"none\", \"2x\" or \"4x\".",
+			"type": [
+				"string"
+			],
+			"scope": "instance",
+			"name": "oversample",
+			"lineno": "Tone/effect/Distortion.js#L78"
+		},
+		{
+			"description": "The wet control is how much of the effected\n will pass through to the output. 1 = 100% effected\n signal, 0 = 100% dry signal.",
+			"type": [
+				"NormalRange"
+			],
+			"scope": "instance",
+			"name": "wet",
+			"lineno": "Tone/effect/Effect.js#L34",
+			"inherits": "Tone.Effect",
+			"signal": true
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"FeedbackDelay": [
+		{
+			"description": "The delayTime of the DelayNode.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "delayTime",
+			"lineno": "Tone/effect/FeedbackDelay.js#L39",
+			"signal": true
+		},
+		{
+			"description": "The amount of signal which is fed back into the effect input.",
+			"type": [
+				"NormalRange"
+			],
+			"scope": "instance",
+			"name": "feedback",
+			"lineno": "Tone/effect/FeedbackEffect.js#L32",
+			"inherits": "Tone.FeedbackEffect",
+			"signal": true
 		},
 		{
 			"description": "The wet control is how much of the effected\n will pass through to the output. 1 = 100% effected\n signal, 0 = 100% dry signal.",
@@ -3030,7 +2968,7 @@
 			],
 			"scope": "instance",
 			"name": "delayTime",
-			"lineno": "Tone/effect/PitchShift.js#L101",
+			"lineno": "Tone/effect/PitchShift.js#L100",
 			"signal": true
 		},
 		{
@@ -3043,7 +2981,7 @@
 			],
 			"scope": "instance",
 			"name": "pitch",
-			"lineno": "Tone/effect/PitchShift.js#L150"
+			"lineno": "Tone/effect/PitchShift.js#L149"
 		},
 		{
 			"description": "The window size corresponds roughly to the sample length in a looping sampler.\nSmaller values are desirable for a less noticeable delay time of the pitch shifted\nsignal, but larger values will result in smoother pitch shifting for larger intervals.\nA nominal range of 0.03 to 0.1 is recommended.",
@@ -3055,7 +2993,7 @@
 			],
 			"scope": "instance",
 			"name": "windowSize",
-			"lineno": "Tone/effect/PitchShift.js#L184"
+			"lineno": "Tone/effect/PitchShift.js#L183"
 		},
 		{
 			"description": "The amount of signal which is fed back into the effect input.",
@@ -3201,6 +3139,68 @@
 			"name": "feedback",
 			"lineno": "Tone/effect/StereoXFeedbackEffect.js#L24",
 			"signal": true
+		},
+		{
+			"description": "The wet control, i.e. how much of the effected\n will pass through to the output.",
+			"type": [
+				"NormalRange"
+			],
+			"scope": "instance",
+			"name": "wet",
+			"lineno": "Tone/effect/StereoEffect.js#L32",
+			"inherits": "Tone.StereoEffect",
+			"signal": true
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Tremolo": [
+		{
+			"description": "The frequency of the tremolo.",
+			"type": [
+				"Frequency"
+			],
+			"scope": "instance",
+			"name": "frequency",
+			"lineno": "Tone/effect/Tremolo.js#L65",
+			"signal": true
+		},
+		{
+			"description": "The depth of the effect. A depth of 0, has no effect\n on the amplitude, and a depth of 1 makes the amplitude\n modulate fully between 0 and 1.",
+			"type": [
+				"NormalRange"
+			],
+			"scope": "instance",
+			"name": "depth",
+			"lineno": "Tone/effect/Tremolo.js#L74",
+			"signal": true
+		},
+		{
+			"description": "The Tremolo's oscillator type.",
+			"type": [
+				"string"
+			],
+			"scope": "instance",
+			"name": "type",
+			"lineno": "Tone/effect/Tremolo.js#L145"
+		},
+		{
+			"description": "Amount of stereo spread. When set to 0, both LFO's will be panned centrally.\nWhen set to 180, LFO's will be panned hard left and right respectively.",
+			"type": [
+				"Degrees"
+			],
+			"scope": "instance",
+			"name": "spread",
+			"lineno": "Tone/effect/Tremolo.js#L161"
 		},
 		{
 			"description": "The wet control, i.e. how much of the effected\n will pass through to the output.",
@@ -3454,6 +3454,109 @@
 			"scope": "instance",
 			"name": "iterations",
 			"lineno": "Tone/event/Loop.js#L206"
+		}
+	],
+	"Part": [
+		{
+			"description": "The probability of the notes being triggered.",
+			"type": [
+				"NormalRange"
+			],
+			"scope": "instance",
+			"name": "probability",
+			"lineno": "Tone/event/Part.js#L370"
+		},
+		{
+			"description": "If the part should loop or not\n between Tone.Part.loopStart and\n Tone.Part.loopEnd. An integer\n value corresponds to the number of\n loops the Part does after it starts.",
+			"type": [
+				"Boolean",
+				"Positive"
+			],
+			"examples": [
+				"//loop the part 8 times\npart.loop = 8;"
+			],
+			"scope": "instance",
+			"name": "loop",
+			"lineno": "Tone/event/Part.js#L405"
+		},
+		{
+			"description": "The loopEnd point determines when it will\n loop if Tone.Part.loop is true.",
+			"type": [
+				"TransportTime"
+			],
+			"scope": "instance",
+			"name": "loopEnd",
+			"lineno": "Tone/event/Part.js#L433"
+		},
+		{
+			"description": "The loopStart point determines when it will\n loop if Tone.Part.loop is true.",
+			"type": [
+				"TransportTime"
+			],
+			"scope": "instance",
+			"name": "loopStart",
+			"lineno": "Tone/event/Part.js#L455"
+		},
+		{
+			"description": "The playback rate of the part",
+			"type": [
+				"Positive"
+			],
+			"scope": "instance",
+			"name": "playbackRate",
+			"lineno": "Tone/event/Part.js#L477"
+		},
+		{
+			"description": "The number of scheduled notes in the part.",
+			"type": [
+				"Positive"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "length",
+			"lineno": "Tone/event/Part.js#L493"
+		},
+		{
+			"description": "The callback to invoke.",
+			"type": [
+				"function"
+			],
+			"scope": "instance",
+			"name": "callback",
+			"lineno": "Tone/event/Event.js#L40",
+			"inherits": "Tone.Event"
+		},
+		{
+			"description": "If mute is true, the callback won't be\n invoked.",
+			"type": [
+				"Boolean"
+			],
+			"scope": "instance",
+			"name": "mute",
+			"lineno": "Tone/event/Event.js#L106",
+			"inherits": "Tone.Event"
+		},
+		{
+			"description": "Returns the playback state of the note, either \"started\" or \"stopped\".",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "state",
+			"lineno": "Tone/event/Event.js#L172",
+			"inherits": "Tone.Event"
+		},
+		{
+			"description": "The current progress of the loop interval.\n Returns 0 if the event is not started yet or\n it is not set to loop.",
+			"type": [
+				"NormalRange"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "progress",
+			"lineno": "Tone/event/Event.js#L395",
+			"inherits": "Tone.Event"
 		}
 	],
 	"Pattern": [
@@ -3710,109 +3813,6 @@
 			"inherits": "Tone.Event"
 		}
 	],
-	"Part": [
-		{
-			"description": "The probability of the notes being triggered.",
-			"type": [
-				"NormalRange"
-			],
-			"scope": "instance",
-			"name": "probability",
-			"lineno": "Tone/event/Part.js#L370"
-		},
-		{
-			"description": "If the part should loop or not\n between Tone.Part.loopStart and\n Tone.Part.loopEnd. An integer\n value corresponds to the number of\n loops the Part does after it starts.",
-			"type": [
-				"Boolean",
-				"Positive"
-			],
-			"examples": [
-				"//loop the part 8 times\npart.loop = 8;"
-			],
-			"scope": "instance",
-			"name": "loop",
-			"lineno": "Tone/event/Part.js#L405"
-		},
-		{
-			"description": "The loopEnd point determines when it will\n loop if Tone.Part.loop is true.",
-			"type": [
-				"TransportTime"
-			],
-			"scope": "instance",
-			"name": "loopEnd",
-			"lineno": "Tone/event/Part.js#L433"
-		},
-		{
-			"description": "The loopStart point determines when it will\n loop if Tone.Part.loop is true.",
-			"type": [
-				"TransportTime"
-			],
-			"scope": "instance",
-			"name": "loopStart",
-			"lineno": "Tone/event/Part.js#L455"
-		},
-		{
-			"description": "The playback rate of the part",
-			"type": [
-				"Positive"
-			],
-			"scope": "instance",
-			"name": "playbackRate",
-			"lineno": "Tone/event/Part.js#L477"
-		},
-		{
-			"description": "The number of scheduled notes in the part.",
-			"type": [
-				"Positive"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "length",
-			"lineno": "Tone/event/Part.js#L493"
-		},
-		{
-			"description": "The callback to invoke.",
-			"type": [
-				"function"
-			],
-			"scope": "instance",
-			"name": "callback",
-			"lineno": "Tone/event/Event.js#L40",
-			"inherits": "Tone.Event"
-		},
-		{
-			"description": "If mute is true, the callback won't be\n invoked.",
-			"type": [
-				"Boolean"
-			],
-			"scope": "instance",
-			"name": "mute",
-			"lineno": "Tone/event/Event.js#L106",
-			"inherits": "Tone.Event"
-		},
-		{
-			"description": "Returns the playback state of the note, either \"started\" or \"stopped\".",
-			"type": [
-				"String"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "state",
-			"lineno": "Tone/event/Event.js#L172",
-			"inherits": "Tone.Event"
-		},
-		{
-			"description": "The current progress of the loop interval.\n Returns 0 if the event is not started yet or\n it is not set to loop.",
-			"type": [
-				"NormalRange"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "progress",
-			"lineno": "Tone/event/Event.js#L395",
-			"inherits": "Tone.Event"
-		}
-	],
 	"Instrument": [
 		{
 			"description": "The volume of the output in decibels.",
@@ -3825,98 +3825,6 @@
 			"scope": "instance",
 			"name": "volume",
 			"lineno": "Tone/instrument/Instrument.js#L31",
-			"signal": true
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Monophonic": [
-		{
-			"description": "The glide time between notes.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "portamento",
-			"lineno": "Tone/instrument/Monophonic.js#L24"
-		},
-		{
-			"description": "The volume of the output in decibels.",
-			"type": [
-				"Decibels"
-			],
-			"examples": [
-				"source.volume.value = -6;"
-			],
-			"scope": "instance",
-			"name": "volume",
-			"lineno": "Tone/instrument/Instrument.js#L31",
-			"inherits": "Tone.Instrument",
-			"signal": true
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"PluckSynth": [
-		{
-			"description": "The amount of noise at the attack. \n Nominal range of [0.1, 20]",
-			"type": [
-				"number"
-			],
-			"scope": "instance",
-			"name": "attackNoise",
-			"lineno": "Tone/instrument/PluckSynth.js#L33"
-		},
-		{
-			"description": "The resonance control.",
-			"type": [
-				"NormalRange"
-			],
-			"scope": "instance",
-			"name": "resonance",
-			"lineno": "Tone/instrument/PluckSynth.js#L50",
-			"signal": true
-		},
-		{
-			"description": "The dampening control. i.e. the lowpass filter frequency of the comb filter",
-			"type": [
-				"Frequency"
-			],
-			"scope": "instance",
-			"name": "dampening",
-			"lineno": "Tone/instrument/PluckSynth.js#L57",
-			"signal": true
-		},
-		{
-			"description": "The volume of the output in decibels.",
-			"type": [
-				"Decibels"
-			],
-			"examples": [
-				"source.volume.value = -6;"
-			],
-			"scope": "instance",
-			"name": "volume",
-			"lineno": "Tone/instrument/Instrument.js#L31",
-			"inherits": "Tone.Instrument",
 			"signal": true
 		},
 		{
@@ -4143,7 +4051,7 @@
 			],
 			"scope": "instance",
 			"name": "oscillator",
-			"lineno": "Tone/instrument/FMSynth.js#L39"
+			"lineno": "Tone/instrument/FMSynth.js#L38"
 		},
 		{
 			"description": "The carrier's envelope",
@@ -4152,7 +4060,7 @@
 			],
 			"scope": "instance",
 			"name": "envelope",
-			"lineno": "Tone/instrument/FMSynth.js#L45"
+			"lineno": "Tone/instrument/FMSynth.js#L44"
 		},
 		{
 			"description": "The modulator's oscillator which is applied\n to the amplitude of the oscillator",
@@ -4161,7 +4069,7 @@
 			],
 			"scope": "instance",
 			"name": "modulation",
-			"lineno": "Tone/instrument/FMSynth.js#L61"
+			"lineno": "Tone/instrument/FMSynth.js#L59"
 		},
 		{
 			"description": "The modulator's envelope",
@@ -4170,7 +4078,7 @@
 			],
 			"scope": "instance",
 			"name": "modulationEnvelope",
-			"lineno": "Tone/instrument/FMSynth.js#L67"
+			"lineno": "Tone/instrument/FMSynth.js#L65"
 		},
 		{
 			"description": "The frequency control.",
@@ -4179,7 +4087,7 @@
 			],
 			"scope": "instance",
 			"name": "frequency",
-			"lineno": "Tone/instrument/FMSynth.js#L74",
+			"lineno": "Tone/instrument/FMSynth.js#L72",
 			"signal": true
 		},
 		{
@@ -4189,7 +4097,7 @@
 			],
 			"scope": "instance",
 			"name": "detune",
-			"lineno": "Tone/instrument/FMSynth.js#L81",
+			"lineno": "Tone/instrument/FMSynth.js#L79",
 			"signal": true
 		},
 		{
@@ -4202,7 +4110,7 @@
 			],
 			"scope": "instance",
 			"name": "harmonicity",
-			"lineno": "Tone/instrument/FMSynth.js#L92",
+			"lineno": "Tone/instrument/FMSynth.js#L90",
 			"signal": true
 		},
 		{
@@ -4212,7 +4120,7 @@
 			],
 			"scope": "instance",
 			"name": "modulationIndex",
-			"lineno": "Tone/instrument/FMSynth.js#L102",
+			"lineno": "Tone/instrument/FMSynth.js#L100",
 			"signal": true
 		},
 		{
@@ -4489,6 +4397,42 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
+	"Monophonic": [
+		{
+			"description": "The glide time between notes.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "portamento",
+			"lineno": "Tone/instrument/Monophonic.js#L24"
+		},
+		{
+			"description": "The volume of the output in decibels.",
+			"type": [
+				"Decibels"
+			],
+			"examples": [
+				"source.volume.value = -6;"
+			],
+			"scope": "instance",
+			"name": "volume",
+			"lineno": "Tone/instrument/Instrument.js#L31",
+			"inherits": "Tone.Instrument",
+			"signal": true
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
 	"NoiseSynth": [
 		{
 			"description": "The noise source.",
@@ -4510,6 +4454,62 @@
 			"scope": "instance",
 			"name": "envelope",
 			"lineno": "Tone/instrument/NoiseSynth.js#L38"
+		},
+		{
+			"description": "The volume of the output in decibels.",
+			"type": [
+				"Decibels"
+			],
+			"examples": [
+				"source.volume.value = -6;"
+			],
+			"scope": "instance",
+			"name": "volume",
+			"lineno": "Tone/instrument/Instrument.js#L31",
+			"inherits": "Tone.Instrument",
+			"signal": true
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"PluckSynth": [
+		{
+			"description": "The amount of noise at the attack. \n Nominal range of [0.1, 20]",
+			"type": [
+				"number"
+			],
+			"scope": "instance",
+			"name": "attackNoise",
+			"lineno": "Tone/instrument/PluckSynth.js#L33"
+		},
+		{
+			"description": "The resonance control.",
+			"type": [
+				"NormalRange"
+			],
+			"scope": "instance",
+			"name": "resonance",
+			"lineno": "Tone/instrument/PluckSynth.js#L50",
+			"signal": true
+		},
+		{
+			"description": "The dampening control. i.e. the lowpass filter frequency of the comb filter",
+			"type": [
+				"Frequency"
+			],
+			"scope": "instance",
+			"name": "dampening",
+			"lineno": "Tone/instrument/PluckSynth.js#L57",
+			"signal": true
 		},
 		{
 			"description": "The volume of the output in decibels.",
@@ -4713,6 +4713,37 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
+	"Expr": [
+		{
+			"description": "The inputs. The length is determined by the expression.",
+			"type": [
+				"Array"
+			],
+			"scope": "instance",
+			"name": "input",
+			"lineno": "Tone/signal/Expr.js#L36"
+		},
+		{
+			"description": "The output node is the result of the expression",
+			"type": [
+				"Tone"
+			],
+			"scope": "instance",
+			"name": "output",
+			"lineno": "Tone/signal/Expr.js#L58"
+		}
+	],
+	"Modulo": [
+		{
+			"description": "The modulus value.",
+			"type": [
+				"NormalRange"
+			],
+			"scope": "instance",
+			"name": "value",
+			"lineno": "Tone/signal/Modulo.js#L72"
+		}
+	],
 	"Normalize": [
 		{
 			"description": "The minimum value the input signal will reach.",
@@ -4752,7 +4783,7 @@
 			],
 			"scope": "instance",
 			"name": "min",
-			"lineno": "Tone/signal/Scale.js#L56"
+			"lineno": "Tone/signal/Scale.js#L55"
 		},
 		{
 			"description": "The maximum output value. This number is output when \nthe value input value is 1.",
@@ -4761,7 +4792,36 @@
 			],
 			"scope": "instance",
 			"name": "max",
-			"lineno": "Tone/signal/Scale.js#L73"
+			"lineno": "Tone/signal/Scale.js#L72"
+		}
+	],
+	"ScaleExp": [
+		{
+			"description": "Instead of interpolating linearly between the <code>min</code> and\n<code>max</code> values, setting the exponent will interpolate between\nthe two values with an exponential curve.",
+			"type": [
+				"number"
+			],
+			"scope": "instance",
+			"name": "exponent",
+			"lineno": "Tone/signal/ScaleExp.js#L40"
+		},
+		{
+			"description": "The minimum output value. This number is output when\nthe value input value is 0.",
+			"type": [
+				"number"
+			],
+			"scope": "instance",
+			"name": "min",
+			"lineno": "Tone/signal/ScaleExp.js#L57"
+		},
+		{
+			"description": "The maximum output value. This number is output when\nthe value input value is 1.",
+			"type": [
+				"number"
+			],
+			"scope": "instance",
+			"name": "max",
+			"lineno": "Tone/signal/ScaleExp.js#L73"
 		}
 	],
 	"TimelineSignal": [
@@ -4824,66 +4884,6 @@
 			"scope": "instance",
 			"name": "oversample",
 			"lineno": "Tone/signal/WaveShaper.js#L100"
-		}
-	],
-	"Expr": [
-		{
-			"description": "The inputs. The length is determined by the expression.",
-			"type": [
-				"Array"
-			],
-			"scope": "instance",
-			"name": "input",
-			"lineno": "Tone/signal/Expr.js#L36"
-		},
-		{
-			"description": "The output node is the result of the expression",
-			"type": [
-				"Tone"
-			],
-			"scope": "instance",
-			"name": "output",
-			"lineno": "Tone/signal/Expr.js#L58"
-		}
-	],
-	"Modulo": [
-		{
-			"description": "The modulus value.",
-			"type": [
-				"NormalRange"
-			],
-			"scope": "instance",
-			"name": "value",
-			"lineno": "Tone/signal/Modulo.js#L72"
-		}
-	],
-	"ScaleExp": [
-		{
-			"description": "Instead of interpolating linearly between the <code>min</code> and\n<code>max</code> values, setting the exponent will interpolate between\nthe two values with an exponential curve.",
-			"type": [
-				"number"
-			],
-			"scope": "instance",
-			"name": "exponent",
-			"lineno": "Tone/signal/ScaleExp.js#L40"
-		},
-		{
-			"description": "The minimum output value. This number is output when\nthe value input value is 0.",
-			"type": [
-				"number"
-			],
-			"scope": "instance",
-			"name": "min",
-			"lineno": "Tone/signal/ScaleExp.js#L57"
-		},
-		{
-			"description": "The maximum output value. This number is output when\nthe value input value is 1.",
-			"type": [
-				"number"
-			],
-			"scope": "instance",
-			"name": "max",
-			"lineno": "Tone/signal/ScaleExp.js#L73"
 		}
 	],
 	"AMOscillator": [
@@ -6145,7 +6145,7 @@
 			],
 			"scope": "instance",
 			"name": "loopStart",
-			"lineno": "Tone/source/Player.js#L285"
+			"lineno": "Tone/source/Player.js#L284"
 		},
 		{
 			"description": "If loop is true, the loop will end at this position.",
@@ -6154,7 +6154,7 @@
 			],
 			"scope": "instance",
 			"name": "loopEnd",
-			"lineno": "Tone/source/Player.js#L305"
+			"lineno": "Tone/source/Player.js#L304"
 		},
 		{
 			"description": "The audio buffer belonging to the player.",
@@ -6163,7 +6163,7 @@
 			],
 			"scope": "instance",
 			"name": "buffer",
-			"lineno": "Tone/source/Player.js#L325"
+			"lineno": "Tone/source/Player.js#L324"
 		},
 		{
 			"description": "If the buffer should loop once it's over.",
@@ -6172,7 +6172,7 @@
 			],
 			"scope": "instance",
 			"name": "loop",
-			"lineno": "Tone/source/Player.js#L340"
+			"lineno": "Tone/source/Player.js#L339"
 		},
 		{
 			"description": "The playback speed. 1 is normal speed. This is not a signal because\nSafari and iOS currently don't support playbackRate as a signal.",
@@ -6181,7 +6181,7 @@
 			],
 			"scope": "instance",
 			"name": "playbackRate",
-			"lineno": "Tone/source/Player.js#L360"
+			"lineno": "Tone/source/Player.js#L359"
 		},
 		{
 			"description": "The direction the buffer should play in",
@@ -6190,7 +6190,7 @@
 			],
 			"scope": "instance",
 			"name": "reverse",
-			"lineno": "Tone/source/Player.js#L381"
+			"lineno": "Tone/source/Player.js#L380"
 		},
 		{
 			"description": "If all the buffer is loaded",
@@ -6200,7 +6200,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "loaded",
-			"lineno": "Tone/source/Player.js#L396"
+			"lineno": "Tone/source/Player.js#L395"
 		},
 		{
 			"description": "Mute the output.",
@@ -6711,29 +6711,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"TimelineState": [
-		{
-			"description": "The memory of the timeline, i.e.\n how many events in the past it will retain",
-			"type": [
-				"Positive"
-			],
-			"scope": "instance",
-			"name": "memory",
-			"lineno": "Tone/core/Timeline.js#L51",
-			"inherits": "Tone.Timeline"
-		},
-		{
-			"description": "The number of items in the timeline.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "length",
-			"lineno": "Tone/core/Timeline.js#L65",
-			"inherits": "Tone.Timeline"
-		}
-	],
 	"OfflineContext": [
 		{
 			"description": "How often the Web Worker callback is invoked.\n This number corresponds to how responsive the scheduling\n can be. Context.updateInterval + Context.lookAhead gives you the\n total latency between scheduling an event and hearing it.",
@@ -6768,6 +6745,29 @@
 			"name": "latencyHint",
 			"lineno": "Tone/core/Context.js#L266",
 			"inherits": "Tone.Context"
+		}
+	],
+	"TimelineState": [
+		{
+			"description": "The memory of the timeline, i.e.\n how many events in the past it will retain",
+			"type": [
+				"Positive"
+			],
+			"scope": "instance",
+			"name": "memory",
+			"lineno": "Tone/core/Timeline.js#L51",
+			"inherits": "Tone.Timeline"
+		},
+		{
+			"description": "The number of items in the timeline.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "length",
+			"lineno": "Tone/core/Timeline.js#L65",
+			"inherits": "Tone.Timeline"
 		}
 	],
 	"TransportRepeatEvent": [
@@ -6879,93 +6879,7 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"Add": [
-		{
-			"description": "The units of the parameter",
-			"type": [
-				"Tone.Type"
-			],
-			"scope": "instance",
-			"name": "units",
-			"lineno": "Tone/core/Param.js#L31",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "If the value should be converted or not",
-			"type": [
-				"Boolean"
-			],
-			"scope": "instance",
-			"name": "convert",
-			"lineno": "Tone/core/Param.js#L37",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "The current value of the parameter.",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "value",
-			"lineno": "Tone/core/Param.js#L66",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"Multiply": [
-		{
-			"description": "The units of the parameter",
-			"type": [
-				"Tone.Type"
-			],
-			"scope": "instance",
-			"name": "units",
-			"lineno": "Tone/core/Param.js#L31",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "If the value should be converted or not",
-			"type": [
-				"Boolean"
-			],
-			"scope": "instance",
-			"name": "convert",
-			"lineno": "Tone/core/Param.js#L37",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "The current value of the parameter.",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "value",
-			"lineno": "Tone/core/Param.js#L66",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Subtract": [
 		{
 			"description": "The units of the parameter",
 			"type": [
@@ -7094,7 +7008,93 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
+	"Add": [
+		{
+			"description": "The units of the parameter",
+			"type": [
+				"Tone.Type"
+			],
+			"scope": "instance",
+			"name": "units",
+			"lineno": "Tone/core/Param.js#L31",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "If the value should be converted or not",
+			"type": [
+				"Boolean"
+			],
+			"scope": "instance",
+			"name": "convert",
+			"lineno": "Tone/core/Param.js#L37",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "The current value of the parameter.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "value",
+			"lineno": "Tone/core/Param.js#L66",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
 	"GreaterThan": [
+		{
+			"description": "The units of the parameter",
+			"type": [
+				"Tone.Type"
+			],
+			"scope": "instance",
+			"name": "units",
+			"lineno": "Tone/core/Param.js#L31",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "If the value should be converted or not",
+			"type": [
+				"Boolean"
+			],
+			"scope": "instance",
+			"name": "convert",
+			"lineno": "Tone/core/Param.js#L37",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "The current value of the parameter.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "value",
+			"lineno": "Tone/core/Param.js#L66",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Subtract": [
 		{
 			"description": "The units of the parameter",
 			"type": [

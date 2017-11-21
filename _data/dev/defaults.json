@@ -151,10 +151,6 @@
 		"max": 1,
 		"integer": false
 	},
-	"Buffers": {
-		"onload": "Tone.noOp",
-		"baseUrl": ""
-	},
 	"Master": {
 		"volume": 0,
 		"mute": false
@@ -169,6 +165,10 @@
 	"Buffer": {
 		"url": "undefined",
 		"reverse": false
+	},
+	"Buffers": {
+		"onload": "Tone.noOp",
+		"baseUrl": ""
 	},
 	"Clock": {
 		"callback": "Tone.noOp",
@@ -229,28 +229,11 @@
 			"Q": 1
 		}
 	},
-	"Chebyshev": {
-		"order": 1,
-		"oversample": "none"
-	},
-	"Distortion": {
-		"distortion": 0.4,
-		"oversample": "none"
-	},
 	"Effect": {
 		"wet": 1
 	},
-	"FeedbackDelay": {
-		"delayTime": 0.25
-	},
 	"FeedbackEffect": {
 		"feedback": 0.125
-	},
-	"Tremolo": {
-		"frequency": 10,
-		"type": "sine",
-		"depth": 0.5,
-		"spread": 180
 	},
 	"AutoPanner": {
 		"frequency": 1,
@@ -271,6 +254,10 @@
 	"BitCrusher": {
 		"bits": 4
 	},
+	"Chebyshev": {
+		"order": 1,
+		"oversample": "none"
+	},
 	"Chorus": {
 		"frequency": 1.5,
 		"delayTime": 3.5,
@@ -280,6 +267,13 @@
 	},
 	"Convolver": {
 		"onload": "Tone.noOp"
+	},
+	"Distortion": {
+		"distortion": 0.4,
+		"oversample": "none"
+	},
+	"FeedbackDelay": {
+		"delayTime": 0.25
 	},
 	"Freeverb": {
 		"roomSize": 0.7,
@@ -308,6 +302,12 @@
 	"StereoWidener": {
 		"width": 0.5
 	},
+	"Tremolo": {
+		"frequency": 10,
+		"type": "sine",
+		"depth": 0.5,
+		"spread": 180
+	},
 	"Vibrato": {
 		"maxDelay": 0.005,
 		"frequency": 5,
@@ -333,14 +333,6 @@
 		"probability": true,
 		"mute": false
 	},
-	"Pattern": {
-		"pattern": "Tone.CtrlPattern.Type.Up",
-		"callback": "Tone.noOp",
-		"values": "[]"
-	},
-	"Sequence": {
-		"subdivision": "4n"
-	},
 	"Part": {
 		"callback": "Tone.noOp",
 		"loop": false,
@@ -352,16 +344,16 @@
 		"mute": false,
 		"events": "[]"
 	},
+	"Pattern": {
+		"pattern": "Tone.CtrlPattern.Type.Up",
+		"callback": "Tone.noOp",
+		"values": "[]"
+	},
+	"Sequence": {
+		"subdivision": "4n"
+	},
 	"Instrument": {
 		"volume": 0
-	},
-	"Monophonic": {
-		"portamento": 0
-	},
-	"PluckSynth": {
-		"attackNoise": 1,
-		"dampening": 4000,
-		"resonance": 0.9
 	},
 	"AMSynth": {
 		"harmonicity": 3,
@@ -504,6 +496,9 @@
 			"exponent": 2
 		}
 	},
+	"Monophonic": {
+		"portamento": 0
+	},
 	"NoiseSynth": {
 		"noise": {
 			"type": "white"
@@ -513,6 +508,11 @@
 			"decay": 0.1,
 			"sustain": 0
 		}
+	},
+	"PluckSynth": {
+		"attackNoise": 1,
+		"dampening": 4000,
+		"resonance": 0.9
 	},
 	"PolySynth": {
 		"polyphony": 4,
