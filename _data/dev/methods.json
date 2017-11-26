@@ -13099,7 +13099,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttack",
-			"lineno": "Tone/instrument/PolySynth.js#L98"
+			"lineno": "Tone/instrument/PolySynth.js#L101"
 		},
 		{
 			"description": "Trigger the attack and release after the specified duration",
@@ -13150,7 +13150,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/PolySynth.js#L135"
+			"lineno": "Tone/instrument/PolySynth.js#L138"
 		},
 		{
 			"description": "Trigger the release of the note. Unlike monophonic instruments,\n a note (or array of notes) needs to be passed in as the first argument.",
@@ -13184,7 +13184,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerRelease",
-			"lineno": "Tone/instrument/PolySynth.js#L159"
+			"lineno": "Tone/instrument/PolySynth.js#L162"
 		},
 		{
 			"description": "Set a member/attribute of the voices.",
@@ -13222,7 +13222,7 @@
 			},
 			"scope": "instance",
 			"name": "set",
-			"lineno": "Tone/instrument/PolySynth.js#L194"
+			"lineno": "Tone/instrument/PolySynth.js#L197"
 		},
 		{
 			"description": "Get the synth's attributes. Given no arguments get\n will return all available object properties and their corresponding\n values. Pass in a single attribute to retrieve or an array\n of attributes. The attribute strings can also include a \".\"\n to access deeper properties.",
@@ -13238,7 +13238,7 @@
 			],
 			"scope": "instance",
 			"name": "get",
-			"lineno": "Tone/instrument/PolySynth.js#L210"
+			"lineno": "Tone/instrument/PolySynth.js#L213"
 		},
 		{
 			"description": "Trigger the release portion of all the currently active voices.",
@@ -13261,7 +13261,7 @@
 			},
 			"scope": "instance",
 			"name": "releaseAll",
-			"lineno": "Tone/instrument/PolySynth.js#L219"
+			"lineno": "Tone/instrument/PolySynth.js#L222"
 		},
 		{
 			"description": "Clean up.",
@@ -13273,7 +13273,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/PolySynth.js#L235"
+			"lineno": "Tone/instrument/PolySynth.js#L238"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
