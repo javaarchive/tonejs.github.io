@@ -2119,7 +2119,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "context",
-			"lineno": "Tone/core/Tone.js#L577"
+			"lineno": "Tone/core/Tone.js#L581"
 		}
 	],
 	"Transport": [
@@ -4711,26 +4711,6 @@
 			"name": "context",
 			"lineno": "Tone/core/AudioNode.js#L27",
 			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Expr": [
-		{
-			"description": "The inputs. The length is determined by the expression.",
-			"type": [
-				"Array"
-			],
-			"scope": "instance",
-			"name": "input",
-			"lineno": "Tone/signal/Expr.js#L36"
-		},
-		{
-			"description": "The output node is the result of the expression",
-			"type": [
-				"Tone"
-			],
-			"scope": "instance",
-			"name": "output",
-			"lineno": "Tone/signal/Expr.js#L58"
 		}
 	],
 	"Modulo": [

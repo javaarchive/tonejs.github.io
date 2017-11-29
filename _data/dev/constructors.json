@@ -1940,22 +1940,6 @@
 		],
 		"extends": "Tone.SignalBase"
 	},
-	"Expr": {
-		"description": "Evaluate an expression at audio rate. <br><br>\n        Parsing code modified from https://code.google.com/p/tapdigit/\n        Copyright 2011 2012 Ariya Hidayat, New BSD License",
-		"params": [
-			{
-				"type": [
-					"string"
-				],
-				"description": "the expression to generate",
-				"name": "expr"
-			}
-		],
-		"examples": [
-			"//adds the signals from input[0] and input[1].\nvar expr = new Tone.Expr(\"$0 + $1\");"
-		],
-		"extends": "Tone.SignalBase"
-	},
 	"GainToAudio": {
 		"description": "Maps a NormalRange [0, 1] to an AudioRange [-1, 1]. \n        See also Tone.AudioToGain.",
 		"examples": [

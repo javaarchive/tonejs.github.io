@@ -4473,7 +4473,7 @@
 			},
 			"scope": "static",
 			"name": "defaults",
-			"lineno": "Tone/core/Tone.js#L222"
+			"lineno": "Tone/core/Tone.js#L226"
 		},
 		{
 			"description": "If the `given` parameter is undefined, use the `fallback`.\n If both `given` and `fallback` are object literals, it will\n return a deep copy which includes all of the parameters from both\n objects. If a parameter is undefined in given, it will return\n the fallback property.\n <br><br>\n WARNING: if object is self referential, it will go into an an\n infinite recursive loop.",
@@ -4498,7 +4498,7 @@
 			},
 			"scope": "static",
 			"name": "defaultArg",
-			"lineno": "Tone/core/Tone.js#L254"
+			"lineno": "Tone/core/Tone.js#L258"
 		},
 		{
 			"description": "connect together all of the arguments in series",
@@ -4519,7 +4519,7 @@
 			},
 			"scope": "static",
 			"name": "connectSeries",
-			"lineno": "Tone/core/Tone.js#L281"
+			"lineno": "Tone/core/Tone.js#L285"
 		},
 		{
 			"description": "test if the arg is undefined",
@@ -4540,7 +4540,7 @@
 			},
 			"scope": "static",
 			"name": "isUndef",
-			"lineno": "Tone/core/Tone.js#L302"
+			"lineno": "Tone/core/Tone.js#L306"
 		},
 		{
 			"description": "test if the arg is a function",
@@ -4561,7 +4561,7 @@
 			},
 			"scope": "static",
 			"name": "isFunction",
-			"lineno": "Tone/core/Tone.js#L313"
+			"lineno": "Tone/core/Tone.js#L317"
 		},
 		{
 			"description": "Test if the argument is a number.",
@@ -4582,7 +4582,7 @@
 			},
 			"scope": "static",
 			"name": "isNumber",
-			"lineno": "Tone/core/Tone.js#L324"
+			"lineno": "Tone/core/Tone.js#L328"
 		},
 		{
 			"description": "Test if the given argument is an object literal (i.e. `{}`);",
@@ -4603,7 +4603,7 @@
 			},
 			"scope": "static",
 			"name": "isObject",
-			"lineno": "Tone/core/Tone.js#L335"
+			"lineno": "Tone/core/Tone.js#L339"
 		},
 		{
 			"description": "Test if the argument is a boolean.",
@@ -4624,7 +4624,7 @@
 			},
 			"scope": "static",
 			"name": "isBoolean",
-			"lineno": "Tone/core/Tone.js#L346"
+			"lineno": "Tone/core/Tone.js#L350"
 		},
 		{
 			"description": "Test if the argument is an Array",
@@ -4645,7 +4645,7 @@
 			},
 			"scope": "static",
 			"name": "isArray",
-			"lineno": "Tone/core/Tone.js#L357"
+			"lineno": "Tone/core/Tone.js#L361"
 		},
 		{
 			"description": "Test if the argument is a string.",
@@ -4666,7 +4666,7 @@
 			},
 			"scope": "static",
 			"name": "isString",
-			"lineno": "Tone/core/Tone.js#L368"
+			"lineno": "Tone/core/Tone.js#L372"
 		},
 		{
 			"description": "Test if the argument is in the form of a note in scientific pitch notation.\n e.g. \"C4\"",
@@ -4687,7 +4687,7 @@
 			},
 			"scope": "static",
 			"name": "isNote",
-			"lineno": "Tone/core/Tone.js#L380"
+			"lineno": "Tone/core/Tone.js#L384"
 		},
 		{
 			"description": "Equal power gain scale. Good for cross-fading.",
@@ -4708,7 +4708,7 @@
 			},
 			"scope": "static",
 			"name": "equalPowerScale",
-			"lineno": "Tone/core/Tone.js#L446"
+			"lineno": "Tone/core/Tone.js#L450"
 		},
 		{
 			"description": "Convert decibels into gain.",
@@ -4727,7 +4727,7 @@
 			},
 			"scope": "static",
 			"name": "dbToGain",
-			"lineno": "Tone/core/Tone.js#L458"
+			"lineno": "Tone/core/Tone.js#L462"
 		},
 		{
 			"description": "Convert gain to decibels.",
@@ -4747,7 +4747,7 @@
 			},
 			"scope": "static",
 			"name": "gainToDb",
-			"lineno": "Tone/core/Tone.js#L469"
+			"lineno": "Tone/core/Tone.js#L473"
 		},
 		{
 			"description": "Convert an interval (in semitones) to a frequency ratio.",
@@ -4771,7 +4771,7 @@
 			},
 			"scope": "static",
 			"name": "intervalToFrequencyRatio",
-			"lineno": "Tone/core/Tone.js#L484"
+			"lineno": "Tone/core/Tone.js#L488"
 		},
 		{
 			"description": "Return the current time of the AudioContext clock.",
@@ -4783,7 +4783,7 @@
 			},
 			"scope": "static",
 			"name": "now",
-			"lineno": "Tone/core/Tone.js#L507"
+			"lineno": "Tone/core/Tone.js#L511"
 		},
 		{
 			"description": "have a child inherit all of Tone's (or a parent's) prototype\n to inherit the parent's properties, make sure to call\n Parent.call(this) in the child's constructor\n\n based on closure library's inherit function",
@@ -4805,7 +4805,7 @@
 			],
 			"scope": "static",
 			"name": "extend",
-			"lineno": "Tone/core/Tone.js#L540"
+			"lineno": "Tone/core/Tone.js#L544"
 		},
 		{
 			"description": "Convert Time into seconds.\n\n Unlike the method which it overrides, this takes into account\n transporttime and musical notation.\n\n Time : 1.40\n Notation: 4n or 1m or 2t\n Now Relative: +3n\n Math: 3n+16n or even complicated expressions ((3n*2)/6 + 1)",
@@ -4897,30 +4897,6 @@
 			"scope": "inner",
 			"name": "toneDisconnect",
 			"lineno": "Tone/core/Context.js#L532"
-		},
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "applyBinary",
-			"lineno": "Tone/signal/Expr.js#L64"
-		},
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "applyUnary",
-			"lineno": "Tone/signal/Expr.js#L70"
-		},
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "getNumber",
-			"lineno": "Tone/signal/Expr.js#L75"
-		},
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "literalNumber",
-			"lineno": "Tone/signal/Expr.js#L78"
 		},
 		{
 			"params": [],
@@ -7236,7 +7212,7 @@
 			},
 			"scope": "instance",
 			"name": "toString",
-			"lineno": "Tone/core/Tone.js#L25"
+			"lineno": "Tone/core/Tone.js#L29"
 		},
 		{
 			"description": "Set the parameters at once. Either pass in an\n object mapping parameters to values, or to set a\n single parameter, by passing in a string and value.\n The last argument is an optional ramp time which\n will ramp any signal values to their destination value\n over the duration of the rampTime.",
@@ -7276,7 +7252,7 @@
 			},
 			"scope": "instance",
 			"name": "set",
-			"lineno": "Tone/core/Tone.js#L75"
+			"lineno": "Tone/core/Tone.js#L79"
 		},
 		{
 			"description": "Get the object's attributes. Given no arguments get\n will return all available object properties and their corresponding\n values. Pass in a single attribute to retrieve or an array\n of attributes. The attribute strings can also include a \".\"\n to access deeper properties.",
@@ -7303,7 +7279,7 @@
 			},
 			"scope": "instance",
 			"name": "get",
-			"lineno": "Tone/core/Tone.js#L148"
+			"lineno": "Tone/core/Tone.js#L152"
 		},
 		{
 			"description": "Return the current time of the AudioContext clock.",
@@ -7315,7 +7291,7 @@
 			},
 			"scope": "instance",
 			"name": "now",
-			"lineno": "Tone/core/Tone.js#L497"
+			"lineno": "Tone/core/Tone.js#L501"
 		}
 	],
 	"Tone#\n disconnect and dispose": [
@@ -7328,7 +7304,7 @@
 			},
 			"scope": "static",
 			"name": "Tone#dispose",
-			"lineno": "Tone/core/Tone.js#L41"
+			"lineno": "Tone/core/Tone.js#L45"
 		}
 	],
 	"<anonymous>~Tone": [
@@ -7336,13 +7312,13 @@
 			"description": "An empty function.",
 			"scope": "static",
 			"name": "noOp",
-			"lineno": "Tone/core/Tone.js#L388"
+			"lineno": "Tone/core/Tone.js#L392"
 		},
 		{
 			"description": "Adds warning in the console if the scheduled time has passed.",
 			"scope": "static",
 			"name": "isPast",
-			"lineno": "Tone/core/Tone.js#L515"
+			"lineno": "Tone/core/Tone.js#L519"
 		},
 		{
 			"description": "Tone automatically creates a context on init, but if you are working\n with other libraries which also create an AudioContext, it can be\n useful to set your own. If you are going to set your own context,\n be sure to do it at the start of your code, before creating any objects.",
@@ -7357,7 +7333,7 @@
 			],
 			"scope": "static",
 			"name": "setContext",
-			"lineno": "Tone/core/Tone.js#L598"
+			"lineno": "Tone/core/Tone.js#L602"
 		},
 		{
 			"description": "Get the context when it becomes available",
@@ -7377,7 +7353,7 @@
 			},
 			"scope": "static",
 			"name": "getContext",
-			"lineno": "Tone/core/Tone.js#L669"
+			"lineno": "Tone/core/Tone.js#L673"
 		}
 	],
 	"extend": [
@@ -7385,7 +7361,7 @@
 			"params": [],
 			"scope": "inner",
 			"name": "TempConstructor",
-			"lineno": "Tone/core/Tone.js#L544"
+			"lineno": "Tone/core/Tone.js#L548"
 		}
 	],
 	"getContext": [
@@ -7393,7 +7369,7 @@
 			"params": [],
 			"scope": "inner",
 			"name": "resCallback",
-			"lineno": "Tone/core/Tone.js#L673"
+			"lineno": "Tone/core/Tone.js#L677"
 		}
 	],
 	"Transport": [
@@ -16493,155 +16469,6 @@
 			"inherits": "Tone.SignalBase"
 		}
 	],
-	"signal": [
-		{
-			"scope": "static",
-			"name": "method",
-			"lineno": "Tone/signal/Expr.js#L96"
-		}
-	],
-	"input": [
-		{
-			"scope": "static",
-			"name": "method",
-			"lineno": "Tone/signal/Expr.js#L103"
-		}
-	],
-	"mod": [
-		{
-			"scope": "static",
-			"name": "method",
-			"lineno": "Tone/signal/Expr.js#L128"
-		}
-	],
-	"pow": [
-		{
-			"scope": "static",
-			"name": "method",
-			"lineno": "Tone/signal/Expr.js#L137"
-		}
-	],
-	"a2g": [
-		{
-			"scope": "static",
-			"name": "method",
-			"lineno": "Tone/signal/Expr.js#L146"
-		}
-	],
-	"\"-\"": [
-		{
-			"scope": "static",
-			"name": "method",
-			"lineno": "Tone/signal/Expr.js#L163"
-		},
-		{
-			"scope": "static",
-			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L179"
-		}
-	],
-	"Expr#_tokenize": [
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "getNextToken",
-			"lineno": "Tone/signal/Expr.js#L238"
-		}
-	],
-	"Expr#_parseTree": [
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "matchSyntax",
-			"lineno": "Tone/signal/Expr.js#L278"
-		},
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "matchGroup",
-			"lineno": "Tone/signal/Expr.js#L284"
-		},
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "parseExpression",
-			"lineno": "Tone/signal/Expr.js#L304"
-		},
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "parseUnary",
-			"lineno": "Tone/signal/Expr.js#L330"
-		},
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "parsePrimary",
-			"lineno": "Tone/signal/Expr.js#L345"
-		},
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "parseFunctionCall",
-			"lineno": "Tone/signal/Expr.js#L374"
-		},
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "parseArgumentList",
-			"lineno": "Tone/signal/Expr.js#L395"
-		}
-	],
-	"Expr": [
-		{
-			"description": "clean up",
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/signal/Expr.js#L451"
-		},
-		{
-			"description": "When signals connect to other signals or AudioParams,\n they take over the output value of that signal or AudioParam.\n For all other nodes, the behavior is the same as a default <code>connect</code>.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"AudioNode",
-						"Tone.Signal",
-						"Tone"
-					],
-					"name": "node"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "The output number to connect from.",
-					"name": "outputNumber"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "The input number to connect to.",
-					"name": "inputNumber"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.SignalBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/signal/SignalBase.js#L28",
-			"inherits": "Tone.SignalBase"
-		}
-	],
 	"GainToAudio": [
 		{
 			"description": "clean up",
@@ -23214,6 +23041,13 @@
 			"scope": "static",
 			"name": "method",
 			"lineno": "Tone/type/TimeBase.js#L172"
+		}
+	],
+	"\"-\"": [
+		{
+			"scope": "static",
+			"name": "method",
+			"lineno": "Tone/type/TimeBase.js#L179"
 		}
 	],
 	"\"*\"": [

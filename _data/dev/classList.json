@@ -117,7 +117,6 @@
 		"Add",
 		"AudioToGain",
 		"EqualPowerGain",
-		"Expr",
 		"GainToAudio",
 		"GreaterThan",
 		"GreaterThanZero",

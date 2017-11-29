@@ -460,10 +460,6 @@
 		"SignalBase",
 		"Tone"
 	],
-	"Expr": [
-		"SignalBase",
-		"Tone"
-	],
 	"GainToAudio": [
 		"SignalBase",
 		"Tone"
