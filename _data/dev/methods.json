@@ -13398,6 +13398,28 @@
 			"lineno": "Tone/instrument/Sampler.js#L146"
 		},
 		{
+			"description": "Release all currently active notes.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"description": "When to release the notes.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Sampler"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "releaseAll",
+			"lineno": "Tone/instrument/Sampler.js#L162"
+		},
+		{
 			"description": "Invoke the attack phase, then after the duration, invoke the release.",
 			"params": [
 				{
@@ -13440,7 +13462,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Sampler.js#L164"
+			"lineno": "Tone/instrument/Sampler.js#L182"
 		},
 		{
 			"description": "Add a note to the sampler.",
@@ -13473,7 +13495,7 @@
 			],
 			"scope": "instance",
 			"name": "add",
-			"lineno": "Tone/instrument/Sampler.js#L181"
+			"lineno": "Tone/instrument/Sampler.js#L199"
 		},
 		{
 			"description": "Clean up",
@@ -13485,7 +13507,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/Sampler.js#L211"
+			"lineno": "Tone/instrument/Sampler.js#L229"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
