@@ -22087,7 +22087,7 @@
 			},
 			"scope": "instance",
 			"name": "close",
-			"lineno": "Tone/source/UserMedia.js#L135"
+			"lineno": "Tone/source/UserMedia.js#L137"
 		},
 		{
 			"description": "Returns a promise which resolves with the list of audio input devices available.",
@@ -22102,7 +22102,7 @@
 			},
 			"scope": "static",
 			"name": "enumerateDevices",
-			"lineno": "Tone/source/UserMedia.js#L158"
+			"lineno": "Tone/source/UserMedia.js#L160"
 		},
 		{
 			"description": "Clean up.",
@@ -22114,7 +22114,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/UserMedia.js#L256"
+			"lineno": "Tone/source/UserMedia.js#L258"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
