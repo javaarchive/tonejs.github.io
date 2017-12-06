@@ -5452,7 +5452,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/Delay.js#L54"
+			"lineno": "Tone/core/Delay.js#L55"
 		}
 	],
 	"Draw": [

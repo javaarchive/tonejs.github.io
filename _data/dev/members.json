@@ -1939,7 +1939,7 @@
 			],
 			"scope": "instance",
 			"name": "delayTime",
-			"lineno": "Tone/core/Delay.js#L29",
+			"lineno": "Tone/core/Delay.js#L30",
 			"signal": true
 		}
 	],
