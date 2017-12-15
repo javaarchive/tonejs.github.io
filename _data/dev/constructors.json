@@ -942,7 +942,7 @@
 		"extends": "Tone"
 	},
 	"Emitter": {
-		"description": "Tone.Emitter gives classes which extend it\n        the ability to listen for and emit events. \n        Inspiration and reference from Jerome Etienne's [MicroEvent](https://github.com/jeromeetienne/microevent.js).\n        MIT (c) 2011 Jerome Etienne.",
+		"description": "Tone.Emitter gives classes which extend it\n        the ability to listen for and emit events.\n        Inspiration and reference from Jerome Etienne's [MicroEvent](https://github.com/jeromeetienne/microevent.js).\n        MIT (c) 2011 Jerome Etienne.",
 		"extends": "Tone"
 	},
 	"Gain": {
