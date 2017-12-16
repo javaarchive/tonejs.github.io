@@ -2099,6 +2099,24 @@
 			"lineno": "Tone/core/Param.js#L66"
 		},
 		{
+			"description": "The minimum output value of the parameter",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "value",
+			"lineno": "Tone/core/Param.js#L83"
+		},
+		{
+			"description": "The maximum output value of the parameter",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "value",
+			"lineno": "Tone/core/Param.js#L105"
+		},
+		{
 			"description": "Get the audio context belonging to this instance.",
 			"type": [
 				"Tone.Context"
