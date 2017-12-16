@@ -1611,7 +1611,7 @@
 		"extends": "Tone.Loop"
 	},
 	"Sequence": {
-		"description": "A sequence is an alternate notation of a part. Instead\n        of passing in an array of [time, event] pairs, pass\n        in an array of events which will be spaced at the\n        given subdivision. Sub-arrays will subdivide that beat\n        by the number of items are in the array. \n        Sequence notation inspiration from [Tidal](http://yaxu.org/tidal/)",
+		"description": "A sequence is an alternate notation of a part. Instead\n        of passing in an array of [time, event] pairs, pass\n        in an array of events which will be spaced at the\n        given subdivision. Sub-arrays will subdivide that beat\n        by the number of items are in the array.\n        Sequence notation inspiration from [Tidal](http://yaxu.org/tidal/)",
 		"params": [
 			{
 				"type": [
@@ -2534,7 +2534,7 @@
 		"extends": "Tone.TimeBase"
 	},
 	"Time": {
-		"description": "Tone.Time is a primitive type for encoding Time values. \n        Eventually all time values are evaluated to seconds\n        using the `eval` method. Tone.Time can be constructed\n        with or without the `new` keyword. Tone.Time can be passed\n        into the parameter of any method which takes time as an argument.",
+		"description": "Tone.Time is a primitive type for encoding Time values.\n        Tone.Time can be constructed with or without the `new` keyword. Tone.Time can be passed\n        into the parameter of any method which takes time as an argument.",
 		"params": [
 			{
 				"type": [
@@ -2554,12 +2554,12 @@
 			}
 		],
 		"examples": [
-			"var t = Tone.Time(\"4n\");//encodes a quarter note\nt.mult(4); // multiply that value by 4\nt.toNotation(); //returns \"1m\""
+			"var t = Tone.Time(\"4n\");//a quarter note"
 		],
 		"extends": "Tone.TimeBase"
 	},
 	"TimeBase": {
-		"description": "Tone.TimeBase is a flexible encoding of time\n        which can be evaluated to and from a string.\n        Parsing code modified from https://code.google.com/p/tapdigit/\n        Copyright 2011 2012 Ariya Hidayat, New BSD License",
+		"description": "Tone.TimeBase is a flexible encoding of time\n        which can be evaluated to and from a string.",
 		"params": [
 			{
 				"type": [
@@ -2578,7 +2578,7 @@
 			}
 		],
 		"examples": [
-			"Tone.TimeBase(4, \"n\")\nTone.TimeBase(2, \"t\")\nTone.TimeBase(\"2t\").add(\"1m\")\nTone.TimeBase(\"2t + 1m\");"
+			"Tone.TimeBase(4, \"n\")\nTone.TimeBase(2, \"t\")\nTone.TimeBase(\"2t\")\nTone.TimeBase(\"2t\") + Tone.TimeBase(\"4n\");"
 		],
 		"extends": "Tone"
 	},

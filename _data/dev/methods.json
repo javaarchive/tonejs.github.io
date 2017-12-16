@@ -4473,7 +4473,7 @@
 			},
 			"scope": "static",
 			"name": "defaults",
-			"lineno": "Tone/core/Tone.js#L226"
+			"lineno": "Tone/core/Tone.js#L228"
 		},
 		{
 			"description": "If the `given` parameter is undefined, use the `fallback`.\n If both `given` and `fallback` are object literals, it will\n return a deep copy which includes all of the parameters from both\n objects. If a parameter is undefined in given, it will return\n the fallback property.\n <br><br>\n WARNING: if object is self referential, it will go into an an\n infinite recursive loop.",
@@ -4498,7 +4498,7 @@
 			},
 			"scope": "static",
 			"name": "defaultArg",
-			"lineno": "Tone/core/Tone.js#L258"
+			"lineno": "Tone/core/Tone.js#L260"
 		},
 		{
 			"description": "connect together all of the arguments in series",
@@ -4519,7 +4519,7 @@
 			},
 			"scope": "static",
 			"name": "connectSeries",
-			"lineno": "Tone/core/Tone.js#L285"
+			"lineno": "Tone/core/Tone.js#L287"
 		},
 		{
 			"description": "test if the arg is undefined",
@@ -4540,7 +4540,7 @@
 			},
 			"scope": "static",
 			"name": "isUndef",
-			"lineno": "Tone/core/Tone.js#L306"
+			"lineno": "Tone/core/Tone.js#L308"
 		},
 		{
 			"description": "test if the arg is a function",
@@ -4561,7 +4561,7 @@
 			},
 			"scope": "static",
 			"name": "isFunction",
-			"lineno": "Tone/core/Tone.js#L317"
+			"lineno": "Tone/core/Tone.js#L319"
 		},
 		{
 			"description": "Test if the argument is a number.",
@@ -4582,7 +4582,7 @@
 			},
 			"scope": "static",
 			"name": "isNumber",
-			"lineno": "Tone/core/Tone.js#L328"
+			"lineno": "Tone/core/Tone.js#L330"
 		},
 		{
 			"description": "Test if the given argument is an object literal (i.e. `{}`);",
@@ -4603,7 +4603,7 @@
 			},
 			"scope": "static",
 			"name": "isObject",
-			"lineno": "Tone/core/Tone.js#L339"
+			"lineno": "Tone/core/Tone.js#L341"
 		},
 		{
 			"description": "Test if the argument is a boolean.",
@@ -4624,7 +4624,7 @@
 			},
 			"scope": "static",
 			"name": "isBoolean",
-			"lineno": "Tone/core/Tone.js#L350"
+			"lineno": "Tone/core/Tone.js#L352"
 		},
 		{
 			"description": "Test if the argument is an Array",
@@ -4645,7 +4645,7 @@
 			},
 			"scope": "static",
 			"name": "isArray",
-			"lineno": "Tone/core/Tone.js#L361"
+			"lineno": "Tone/core/Tone.js#L363"
 		},
 		{
 			"description": "Test if the argument is a string.",
@@ -4666,7 +4666,7 @@
 			},
 			"scope": "static",
 			"name": "isString",
-			"lineno": "Tone/core/Tone.js#L372"
+			"lineno": "Tone/core/Tone.js#L374"
 		},
 		{
 			"description": "Test if the argument is in the form of a note in scientific pitch notation.\n e.g. \"C4\"",
@@ -4687,7 +4687,7 @@
 			},
 			"scope": "static",
 			"name": "isNote",
-			"lineno": "Tone/core/Tone.js#L384"
+			"lineno": "Tone/core/Tone.js#L386"
 		},
 		{
 			"description": "Equal power gain scale. Good for cross-fading.",
@@ -4708,7 +4708,7 @@
 			},
 			"scope": "static",
 			"name": "equalPowerScale",
-			"lineno": "Tone/core/Tone.js#L450"
+			"lineno": "Tone/core/Tone.js#L452"
 		},
 		{
 			"description": "Convert decibels into gain.",
@@ -4727,7 +4727,7 @@
 			},
 			"scope": "static",
 			"name": "dbToGain",
-			"lineno": "Tone/core/Tone.js#L462"
+			"lineno": "Tone/core/Tone.js#L464"
 		},
 		{
 			"description": "Convert gain to decibels.",
@@ -4747,7 +4747,7 @@
 			},
 			"scope": "static",
 			"name": "gainToDb",
-			"lineno": "Tone/core/Tone.js#L473"
+			"lineno": "Tone/core/Tone.js#L475"
 		},
 		{
 			"description": "Convert an interval (in semitones) to a frequency ratio.",
@@ -4771,7 +4771,7 @@
 			},
 			"scope": "static",
 			"name": "intervalToFrequencyRatio",
-			"lineno": "Tone/core/Tone.js#L488"
+			"lineno": "Tone/core/Tone.js#L490"
 		},
 		{
 			"description": "Return the current time of the AudioContext clock.",
@@ -4783,7 +4783,7 @@
 			},
 			"scope": "static",
 			"name": "now",
-			"lineno": "Tone/core/Tone.js#L511"
+			"lineno": "Tone/core/Tone.js#L513"
 		},
 		{
 			"description": "have a child inherit all of Tone's (or a parent's) prototype\n to inherit the parent's properties, make sure to call\n Parent.call(this) in the child's constructor\n\n based on closure library's inherit function",
@@ -4805,7 +4805,7 @@
 			],
 			"scope": "static",
 			"name": "extend",
-			"lineno": "Tone/core/Tone.js#L544"
+			"lineno": "Tone/core/Tone.js#L546"
 		},
 		{
 			"description": "Convert Time into seconds.\n\n Unlike the method which it overrides, this takes into account\n transporttime and musical notation.\n\n Time : 1.40\n Notation: 4n or 1m or 2t\n Now Relative: +3n\n Math: 3n+16n or even complicated expressions ((3n*2)/6 + 1)",
@@ -7394,7 +7394,7 @@
 			},
 			"scope": "instance",
 			"name": "get",
-			"lineno": "Tone/core/Tone.js#L152"
+			"lineno": "Tone/core/Tone.js#L154"
 		},
 		{
 			"description": "Return the current time of the AudioContext clock.",
@@ -7406,7 +7406,7 @@
 			},
 			"scope": "instance",
 			"name": "now",
-			"lineno": "Tone/core/Tone.js#L501"
+			"lineno": "Tone/core/Tone.js#L503"
 		}
 	],
 	"Tone#\n disconnect and dispose": [
@@ -7427,13 +7427,13 @@
 			"description": "An empty function.",
 			"scope": "static",
 			"name": "noOp",
-			"lineno": "Tone/core/Tone.js#L392"
+			"lineno": "Tone/core/Tone.js#L394"
 		},
 		{
 			"description": "Adds warning in the console if the scheduled time has passed.",
 			"scope": "static",
 			"name": "isPast",
-			"lineno": "Tone/core/Tone.js#L519"
+			"lineno": "Tone/core/Tone.js#L521"
 		},
 		{
 			"description": "Tone automatically creates a context on init, but if you are working\n with other libraries which also create an AudioContext, it can be\n useful to set your own. If you are going to set your own context,\n be sure to do it at the start of your code, before creating any objects.",
@@ -7448,7 +7448,7 @@
 			],
 			"scope": "static",
 			"name": "setContext",
-			"lineno": "Tone/core/Tone.js#L602"
+			"lineno": "Tone/core/Tone.js#L604"
 		},
 		{
 			"description": "Get the context when it becomes available",
@@ -7468,7 +7468,7 @@
 			},
 			"scope": "static",
 			"name": "getContext",
-			"lineno": "Tone/core/Tone.js#L673"
+			"lineno": "Tone/core/Tone.js#L675"
 		}
 	],
 	"extend": [
@@ -7476,7 +7476,7 @@
 			"params": [],
 			"scope": "inner",
 			"name": "TempConstructor",
-			"lineno": "Tone/core/Tone.js#L548"
+			"lineno": "Tone/core/Tone.js#L550"
 		}
 	],
 	"getContext": [
@@ -7484,7 +7484,7 @@
 			"params": [],
 			"scope": "inner",
 			"name": "resCallback",
-			"lineno": "Tone/core/Tone.js#L677"
+			"lineno": "Tone/core/Tone.js#L679"
 		}
 	],
 	"Transport": [
@@ -10857,7 +10857,7 @@
 	],
 	"Sequence": [
 		{
-			"description": "Get/Set an index of the sequence. If the index contains a subarray, \n a Tone.Sequence representing that sub-array will be returned.",
+			"description": "Get/Set an index of the sequence. If the index contains a subarray,\n a Tone.Sequence representing that sub-array will be returned.",
 			"params": [
 				{
 					"type": [
@@ -10882,7 +10882,7 @@
 			"lineno": "Tone/event/Sequence.js#L97"
 		},
 		{
-			"description": "Add an event at an index, if there's already something\n at that index, overwrite it. If `value` is an array, \n it will be parsed as a subsequence.",
+			"description": "Add an event at an index, if there's already something\n at that index, overwrite it. If `value` is an array,\n it will be parsed as a subsequence.",
 			"params": [
 				{
 					"type": [
@@ -22194,26 +22194,26 @@
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/Frequency.js#L43"
+			"lineno": "Tone/type/Frequency.js#L35"
 		}
 	],
 	"note": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/Frequency.js#L55"
+			"lineno": "Tone/type/Frequency.js#L41"
 		}
 	],
 	"tr": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/Frequency.js#L69"
+			"lineno": "Tone/type/Frequency.js#L49"
 		},
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L129"
+			"lineno": "Tone/type/TimeBase.js#L89"
 		}
 	],
 	"Frequency": [
@@ -22238,7 +22238,7 @@
 			},
 			"scope": "instance",
 			"name": "transpose",
-			"lineno": "Tone/type/Frequency.js#L95"
+			"lineno": "Tone/type/Frequency.js#L76"
 		},
 		{
 			"description": "Takes an array of semitone intervals and returns\n an array of frequencies transposed by those intervals.",
@@ -22261,7 +22261,7 @@
 			},
 			"scope": "instance",
 			"name": "harmonize",
-			"lineno": "Tone/type/Frequency.js#L111"
+			"lineno": "Tone/type/Frequency.js#L92"
 		},
 		{
 			"description": "Return the value of the frequency as a MIDI note",
@@ -22275,7 +22275,7 @@
 			},
 			"scope": "instance",
 			"name": "toMidi",
-			"lineno": "Tone/type/Frequency.js#L133"
+			"lineno": "Tone/type/Frequency.js#L114"
 		},
 		{
 			"description": "Return the value of the frequency in Scientific Pitch Notation",
@@ -22289,7 +22289,7 @@
 			},
 			"scope": "instance",
 			"name": "toNote",
-			"lineno": "Tone/type/Frequency.js#L143"
+			"lineno": "Tone/type/Frequency.js#L124"
 		},
 		{
 			"description": "Return the duration of one cycle in seconds.",
@@ -22300,7 +22300,7 @@
 			},
 			"scope": "instance",
 			"name": "toSeconds",
-			"lineno": "Tone/type/Frequency.js#L159"
+			"lineno": "Tone/type/Frequency.js#L140"
 		},
 		{
 			"description": "Return the value in Hertz",
@@ -22311,7 +22311,7 @@
 			},
 			"scope": "instance",
 			"name": "toFrequency",
-			"lineno": "Tone/type/Frequency.js#L167"
+			"lineno": "Tone/type/Frequency.js#L148"
 		},
 		{
 			"description": "Return the duration of one cycle in ticks",
@@ -22322,7 +22322,7 @@
 			},
 			"scope": "instance",
 			"name": "toTicks",
-			"lineno": "Tone/type/Frequency.js#L175"
+			"lineno": "Tone/type/Frequency.js#L156"
 		},
 		{
 			"description": "Convert a MIDI note to frequency value.",
@@ -22346,7 +22346,7 @@
 			},
 			"scope": "instance",
 			"name": "midiToFrequency",
-			"lineno": "Tone/type/Frequency.js#L270"
+			"lineno": "Tone/type/Frequency.js#L260"
 		},
 		{
 			"description": "Convert a frequency value to a MIDI note.",
@@ -22369,193 +22369,7 @@
 			},
 			"scope": "instance",
 			"name": "frequencyToMidi",
-			"lineno": "Tone/type/Frequency.js#L281"
-		},
-		{
-			"description": "Repalce the current time value with the value\n given by the expression string.",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"name": "exprString"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "set",
-			"lineno": "Tone/type/TimeBase.js#L56",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Return a clone of the TimeBase object.",
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "The new cloned Tone.TimeBase"
-			},
-			"scope": "instance",
-			"name": "clone",
-			"lineno": "Tone/type/TimeBase.js#L65",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Copies the value of time to this Time",
-			"params": [
-				{
-					"type": [
-						"Tone.TimeBase"
-					],
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"TimeBase"
-				]
-			},
-			"scope": "instance",
-			"name": "copy",
-			"lineno": "Tone/type/TimeBase.js#L76",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Add to the current value.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The value to add",
-					"name": "val"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"optional": true,
-					"description": "Optional units to use with the value.",
-					"name": "units"
-				}
-			],
-			"examples": [
-				"Tone.TimeBase(\"2m\").add(\"1m\"); //\"3m\""
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "add",
-			"lineno": "Tone/type/TimeBase.js#L495",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Subtract the value from the current time.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The value to subtract",
-					"name": "val"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"optional": true,
-					"description": "Optional units to use with the value.",
-					"name": "units"
-				}
-			],
-			"examples": [
-				"Tone.TimeBase(\"2m\").sub(\"1m\"); //\"1m\""
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "sub",
-			"lineno": "Tone/type/TimeBase.js#L507",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Multiply the current value by the given time.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The value to multiply",
-					"name": "val"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"optional": true,
-					"description": "Optional units to use with the value.",
-					"name": "units"
-				}
-			],
-			"examples": [
-				"Tone.TimeBase(\"2m\").mult(\"2\"); //\"4m\""
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "mult",
-			"lineno": "Tone/type/TimeBase.js#L519",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Divide the current value by the given time.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The value to divide by",
-					"name": "val"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"optional": true,
-					"description": "Optional units to use with the value.",
-					"name": "units"
-				}
-			],
-			"examples": [
-				"Tone.TimeBase(\"2m\").div(2); //\"1m\""
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "div",
-			"lineno": "Tone/type/TimeBase.js#L531",
-			"inherits": "Tone.TimeBase"
+			"lineno": "Tone/type/Frequency.js#L271"
 		},
 		{
 			"description": "Evaluate the time value. Returns the time\n in seconds.",
@@ -22566,7 +22380,7 @@
 			},
 			"scope": "instance",
 			"name": "valueOf",
-			"lineno": "Tone/type/TimeBase.js#L540",
+			"lineno": "Tone/type/TimeBase.js#L243",
 			"inherits": "Tone.TimeBase"
 		},
 		{
@@ -22579,7 +22393,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/type/TimeBase.js#L548",
+			"lineno": "Tone/type/TimeBase.js#L273",
 			"inherits": "Tone.TimeBase"
 		}
 	],
@@ -22587,19 +22401,14 @@
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/Time.js#L50"
-		},
-		{
-			"scope": "static",
-			"name": "method",
-			"lineno": "Tone/type/TransportTime.js#L37"
+			"lineno": "Tone/type/Time.js#L32"
 		}
 	],
 	"now": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/Time.js#L63"
+			"lineno": "Tone/type/Time.js#L43"
 		}
 	],
 	"Time": [
@@ -22629,44 +22438,13 @@
 			],
 			"returns": {
 				"type": [
-					"Tone.Time"
+					"Number"
 				],
 				"description": "this"
 			},
 			"scope": "instance",
 			"name": "quantize",
-			"lineno": "Tone/type/Time.js#L82"
-		},
-		{
-			"description": "Adds the clock time to the time expression at the \n moment of evaluation.",
-			"returns": {
-				"type": [
-					"Tone.Time"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "addNow",
-			"lineno": "Tone/type/Time.js#L100"
-		},
-		{
-			"description": "Copies the value of time to this Time",
-			"params": [
-				{
-					"type": [
-						"Tone.Time"
-					],
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Time"
-				]
-			},
-			"scope": "instance",
-			"name": "copy",
-			"lineno": "Tone/type/Time.js#L121"
+			"lineno": "Tone/type/Time.js#L62"
 		},
 		{
 			"description": "Convert a Time to Notation. Values will be thresholded to the nearest 128th note.",
@@ -22680,7 +22458,7 @@
 			},
 			"scope": "instance",
 			"name": "toNotation",
-			"lineno": "Tone/type/Time.js#L136"
+			"lineno": "Tone/type/Time.js#L83"
 		},
 		{
 			"description": "Return the time encoded as Bars:Beats:Sixteenths.",
@@ -22691,7 +22469,7 @@
 			},
 			"scope": "instance",
 			"name": "toBarsBeatsSixteenths",
-			"lineno": "Tone/type/Time.js#L213"
+			"lineno": "Tone/type/Time.js#L160"
 		},
 		{
 			"description": "Return the time in ticks.",
@@ -22702,7 +22480,7 @@
 			},
 			"scope": "instance",
 			"name": "toTicks",
-			"lineno": "Tone/type/Time.js#L232"
+			"lineno": "Tone/type/Time.js#L179"
 		},
 		{
 			"description": "Return the time in samples",
@@ -22713,7 +22491,7 @@
 			},
 			"scope": "instance",
 			"name": "toSamples",
-			"lineno": "Tone/type/Time.js#L242"
+			"lineno": "Tone/type/Time.js#L189"
 		},
 		{
 			"description": "Return the time as a frequency value",
@@ -22727,7 +22505,7 @@
 			},
 			"scope": "instance",
 			"name": "toFrequency",
-			"lineno": "Tone/type/Time.js#L252"
+			"lineno": "Tone/type/Time.js#L199"
 		},
 		{
 			"description": "Return the time in seconds.",
@@ -22738,7 +22516,7 @@
 			},
 			"scope": "instance",
 			"name": "toSeconds",
-			"lineno": "Tone/type/Time.js#L260"
+			"lineno": "Tone/type/Time.js#L207"
 		},
 		{
 			"description": "Return the time in milliseconds.",
@@ -22749,378 +22527,7 @@
 			},
 			"scope": "instance",
 			"name": "toMilliseconds",
-			"lineno": "Tone/type/Time.js#L268"
-		},
-		{
-			"description": "Return the time in seconds.",
-			"returns": {
-				"type": [
-					"Seconds"
-				]
-			},
-			"scope": "instance",
-			"name": "valueOf",
-			"lineno": "Tone/type/Time.js#L276"
-		},
-		{
-			"description": "Repalce the current time value with the value\n given by the expression string.",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"name": "exprString"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "set",
-			"lineno": "Tone/type/TimeBase.js#L56",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Return a clone of the TimeBase object.",
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "The new cloned Tone.TimeBase"
-			},
-			"scope": "instance",
-			"name": "clone",
-			"lineno": "Tone/type/TimeBase.js#L65",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Add to the current value.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The value to add",
-					"name": "val"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"optional": true,
-					"description": "Optional units to use with the value.",
-					"name": "units"
-				}
-			],
-			"examples": [
-				"Tone.TimeBase(\"2m\").add(\"1m\"); //\"3m\""
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "add",
-			"lineno": "Tone/type/TimeBase.js#L495",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Subtract the value from the current time.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The value to subtract",
-					"name": "val"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"optional": true,
-					"description": "Optional units to use with the value.",
-					"name": "units"
-				}
-			],
-			"examples": [
-				"Tone.TimeBase(\"2m\").sub(\"1m\"); //\"1m\""
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "sub",
-			"lineno": "Tone/type/TimeBase.js#L507",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Multiply the current value by the given time.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The value to multiply",
-					"name": "val"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"optional": true,
-					"description": "Optional units to use with the value.",
-					"name": "units"
-				}
-			],
-			"examples": [
-				"Tone.TimeBase(\"2m\").mult(\"2\"); //\"4m\""
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "mult",
-			"lineno": "Tone/type/TimeBase.js#L519",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Divide the current value by the given time.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The value to divide by",
-					"name": "val"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"optional": true,
-					"description": "Optional units to use with the value.",
-					"name": "units"
-				}
-			],
-			"examples": [
-				"Tone.TimeBase(\"2m\").div(2); //\"1m\""
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "div",
-			"lineno": "Tone/type/TimeBase.js#L531",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Clean up",
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/type/TimeBase.js#L548",
-			"inherits": "Tone.TimeBase"
-		}
-	],
-	"TimeBase": [
-		{
-			"description": "Repalce the current time value with the value\n given by the expression string.",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"name": "exprString"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "set",
-			"lineno": "Tone/type/TimeBase.js#L56"
-		},
-		{
-			"description": "Return a clone of the TimeBase object.",
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "The new cloned Tone.TimeBase"
-			},
-			"scope": "instance",
-			"name": "clone",
-			"lineno": "Tone/type/TimeBase.js#L65"
-		},
-		{
-			"description": "Copies the value of time to this Time",
-			"params": [
-				{
-					"type": [
-						"Tone.TimeBase"
-					],
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"TimeBase"
-				]
-			},
-			"scope": "instance",
-			"name": "copy",
-			"lineno": "Tone/type/TimeBase.js#L76"
-		},
-		{
-			"description": "Add to the current value.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The value to add",
-					"name": "val"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"optional": true,
-					"description": "Optional units to use with the value.",
-					"name": "units"
-				}
-			],
-			"examples": [
-				"Tone.TimeBase(\"2m\").add(\"1m\"); //\"3m\""
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "add",
-			"lineno": "Tone/type/TimeBase.js#L495"
-		},
-		{
-			"description": "Subtract the value from the current time.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The value to subtract",
-					"name": "val"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"optional": true,
-					"description": "Optional units to use with the value.",
-					"name": "units"
-				}
-			],
-			"examples": [
-				"Tone.TimeBase(\"2m\").sub(\"1m\"); //\"1m\""
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "sub",
-			"lineno": "Tone/type/TimeBase.js#L507"
-		},
-		{
-			"description": "Multiply the current value by the given time.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The value to multiply",
-					"name": "val"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"optional": true,
-					"description": "Optional units to use with the value.",
-					"name": "units"
-				}
-			],
-			"examples": [
-				"Tone.TimeBase(\"2m\").mult(\"2\"); //\"4m\""
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "mult",
-			"lineno": "Tone/type/TimeBase.js#L519"
-		},
-		{
-			"description": "Divide the current value by the given time.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The value to divide by",
-					"name": "val"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"optional": true,
-					"description": "Optional units to use with the value.",
-					"name": "units"
-				}
-			],
-			"examples": [
-				"Tone.TimeBase(\"2m\").div(2); //\"1m\""
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "div",
-			"lineno": "Tone/type/TimeBase.js#L531"
+			"lineno": "Tone/type/Time.js#L215"
 		},
 		{
 			"description": "Evaluate the time value. Returns the time\n in seconds.",
@@ -23131,7 +22538,8 @@
 			},
 			"scope": "instance",
 			"name": "valueOf",
-			"lineno": "Tone/type/TimeBase.js#L540"
+			"lineno": "Tone/type/TimeBase.js#L243",
+			"inherits": "Tone.TimeBase"
 		},
 		{
 			"description": "Clean up",
@@ -23143,106 +22551,89 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/type/TimeBase.js#L548"
+			"lineno": "Tone/type/TimeBase.js#L273",
+			"inherits": "Tone.TimeBase"
 		}
 	],
 	"n": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L93"
+			"lineno": "Tone/type/TimeBase.js#L53"
 		}
 	],
 	"t": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L104"
+			"lineno": "Tone/type/TimeBase.js#L64"
 		}
 	],
 	"m": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L111"
+			"lineno": "Tone/type/TimeBase.js#L71"
 		}
 	],
 	"i": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L117"
+			"lineno": "Tone/type/TimeBase.js#L77"
 		}
 	],
 	"hz": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L123"
+			"lineno": "Tone/type/TimeBase.js#L83"
 		}
 	],
 	"s": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L145"
+			"lineno": "Tone/type/TimeBase.js#L105"
 		}
 	],
 	"samples": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L151"
+			"lineno": "Tone/type/TimeBase.js#L111"
 		}
 	],
 	"default": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L157"
+			"lineno": "Tone/type/TimeBase.js#L117"
 		}
 	],
-	"\"+\"": [
+	"TimeBase": [
 		{
-			"scope": "static",
-			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L172"
-		}
-	],
-	"\"-\"": [
+			"description": "Evaluate the time value. Returns the time\n in seconds.",
+			"returns": {
+				"type": [
+					"Seconds"
+				]
+			},
+			"scope": "instance",
+			"name": "valueOf",
+			"lineno": "Tone/type/TimeBase.js#L243"
+		},
 		{
-			"scope": "static",
-			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L179"
-		}
-	],
-	"\"*\"": [
-		{
-			"scope": "static",
-			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L186"
-		}
-	],
-	"\"/\"": [
-		{
-			"scope": "static",
-			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L193"
-		}
-	],
-	"neg": [
-		{
-			"scope": "static",
-			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L207"
-		}
-	],
-	"TimeBase#_tokenize": [
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "getNextToken",
-			"lineno": "Tone/type/TimeBase.js#L244"
+			"description": "Clean up",
+			"returns": {
+				"type": [
+					"Tone.TimeBase"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/type/TimeBase.js#L273"
 		}
 	],
 	"TransportTime": [
@@ -23255,7 +22646,7 @@
 			},
 			"scope": "instance",
 			"name": "valueOf",
-			"lineno": "Tone/type/TransportTime.js#L60"
+			"lineno": "Tone/type/TransportTime.js#L50"
 		},
 		{
 			"description": "Return the time in ticks.",
@@ -23266,7 +22657,7 @@
 			},
 			"scope": "instance",
 			"name": "toTicks",
-			"lineno": "Tone/type/TransportTime.js#L69"
+			"lineno": "Tone/type/TransportTime.js#L58"
 		},
 		{
 			"description": "Return the time in seconds.",
@@ -23277,7 +22668,7 @@
 			},
 			"scope": "instance",
 			"name": "toSeconds",
-			"lineno": "Tone/type/TransportTime.js#L77"
+			"lineno": "Tone/type/TransportTime.js#L66"
 		},
 		{
 			"description": "Return the time as a frequency value",
@@ -23288,7 +22679,7 @@
 			},
 			"scope": "instance",
 			"name": "toFrequency",
-			"lineno": "Tone/type/TransportTime.js#L86"
+			"lineno": "Tone/type/TransportTime.js#L74"
 		},
 		{
 			"description": "Quantize the time by the given subdivision. Optionally add a\n percentage which will move the time value towards the ideal\n quantized value by that percentage.",
@@ -23316,46 +22707,13 @@
 			],
 			"returns": {
 				"type": [
-					"Tone.Time"
+					"Number"
 				],
 				"description": "this"
 			},
 			"scope": "instance",
 			"name": "quantize",
-			"lineno": "Tone/type/Time.js#L82",
-			"inherits": "Tone.Time"
-		},
-		{
-			"description": "Adds the clock time to the time expression at the \n moment of evaluation.",
-			"returns": {
-				"type": [
-					"Tone.Time"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "addNow",
-			"lineno": "Tone/type/Time.js#L100",
-			"inherits": "Tone.Time"
-		},
-		{
-			"description": "Copies the value of time to this Time",
-			"params": [
-				{
-					"type": [
-						"Tone.Time"
-					],
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Time"
-				]
-			},
-			"scope": "instance",
-			"name": "copy",
-			"lineno": "Tone/type/Time.js#L121",
+			"lineno": "Tone/type/Time.js#L62",
 			"inherits": "Tone.Time"
 		},
 		{
@@ -23370,7 +22728,7 @@
 			},
 			"scope": "instance",
 			"name": "toNotation",
-			"lineno": "Tone/type/Time.js#L136",
+			"lineno": "Tone/type/Time.js#L83",
 			"inherits": "Tone.Time"
 		},
 		{
@@ -23382,7 +22740,7 @@
 			},
 			"scope": "instance",
 			"name": "toBarsBeatsSixteenths",
-			"lineno": "Tone/type/Time.js#L213",
+			"lineno": "Tone/type/Time.js#L160",
 			"inherits": "Tone.Time"
 		},
 		{
@@ -23394,7 +22752,7 @@
 			},
 			"scope": "instance",
 			"name": "toSamples",
-			"lineno": "Tone/type/Time.js#L242",
+			"lineno": "Tone/type/Time.js#L189",
 			"inherits": "Tone.Time"
 		},
 		{
@@ -23406,174 +22764,8 @@
 			},
 			"scope": "instance",
 			"name": "toMilliseconds",
-			"lineno": "Tone/type/Time.js#L268",
+			"lineno": "Tone/type/Time.js#L215",
 			"inherits": "Tone.Time"
-		},
-		{
-			"description": "Repalce the current time value with the value\n given by the expression string.",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"name": "exprString"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "set",
-			"lineno": "Tone/type/TimeBase.js#L56",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Return a clone of the TimeBase object.",
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "The new cloned Tone.TimeBase"
-			},
-			"scope": "instance",
-			"name": "clone",
-			"lineno": "Tone/type/TimeBase.js#L65",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Add to the current value.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The value to add",
-					"name": "val"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"optional": true,
-					"description": "Optional units to use with the value.",
-					"name": "units"
-				}
-			],
-			"examples": [
-				"Tone.TimeBase(\"2m\").add(\"1m\"); //\"3m\""
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "add",
-			"lineno": "Tone/type/TimeBase.js#L495",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Subtract the value from the current time.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The value to subtract",
-					"name": "val"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"optional": true,
-					"description": "Optional units to use with the value.",
-					"name": "units"
-				}
-			],
-			"examples": [
-				"Tone.TimeBase(\"2m\").sub(\"1m\"); //\"1m\""
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "sub",
-			"lineno": "Tone/type/TimeBase.js#L507",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Multiply the current value by the given time.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The value to multiply",
-					"name": "val"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"optional": true,
-					"description": "Optional units to use with the value.",
-					"name": "units"
-				}
-			],
-			"examples": [
-				"Tone.TimeBase(\"2m\").mult(\"2\"); //\"4m\""
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "mult",
-			"lineno": "Tone/type/TimeBase.js#L519",
-			"inherits": "Tone.TimeBase"
-		},
-		{
-			"description": "Divide the current value by the given time.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The value to divide by",
-					"name": "val"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"optional": true,
-					"description": "Optional units to use with the value.",
-					"name": "units"
-				}
-			],
-			"examples": [
-				"Tone.TimeBase(\"2m\").div(2); //\"1m\""
-			],
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "div",
-			"lineno": "Tone/type/TimeBase.js#L531",
-			"inherits": "Tone.TimeBase"
 		},
 		{
 			"description": "Clean up",
@@ -23585,7 +22777,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/type/TimeBase.js#L548",
+			"lineno": "Tone/type/TimeBase.js#L273",
 			"inherits": "Tone.TimeBase"
 		}
 	],

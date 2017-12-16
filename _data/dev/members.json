@@ -2137,7 +2137,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "context",
-			"lineno": "Tone/core/Tone.js#L581"
+			"lineno": "Tone/core/Tone.js#L583"
 		}
 	],
 	"Transport": [
@@ -2189,7 +2189,7 @@
 		{
 			"description": "When the Tone.Transport.loop = true, this is the starting position of the loop.",
 			"type": [
-				"TransportTime"
+				"Time"
 			],
 			"scope": "instance",
 			"name": "loopStart",
@@ -2198,7 +2198,7 @@
 		{
 			"description": "When the Tone.Transport.loop = true, this is the ending position of the loop.",
 			"type": [
-				"TransportTime"
+				"Time"
 			],
 			"scope": "instance",
 			"name": "loopEnd",
@@ -3335,7 +3335,7 @@
 			"lineno": "Tone/event/Event.js#L201"
 		},
 		{
-			"description": "If the note should loop or not\n between Tone.Event.loopStart and \n Tone.Event.loopEnd. An integer\n value corresponds to the number of\n loops the Event does after it starts.",
+			"description": "If the note should loop or not\n between Tone.Event.loopStart and\n Tone.Event.loopEnd. An integer\n value corresponds to the number of\n loops the Event does after it starts.",
 			"type": [
 				"Boolean",
 				"Positive"
@@ -3359,7 +3359,7 @@
 		{
 			"description": "The loopEnd point is the time the event will loop\n if Tone.Event.loop is true.",
 			"type": [
-				"TransportTime"
+				"Time"
 			],
 			"scope": "instance",
 			"name": "loopEnd",
@@ -3368,7 +3368,7 @@
 		{
 			"description": "The time when the loop should start.",
 			"type": [
-				"TransportTime"
+				"Time"
 			],
 			"scope": "instance",
 			"name": "loopStart",
@@ -3500,7 +3500,7 @@
 		{
 			"description": "The loopEnd point determines when it will\n loop if Tone.Part.loop is true.",
 			"type": [
-				"TransportTime"
+				"Time"
 			],
 			"scope": "instance",
 			"name": "loopEnd",
@@ -3509,7 +3509,7 @@
 		{
 			"description": "The loopStart point determines when it will\n loop if Tone.Part.loop is true.",
 			"type": [
-				"TransportTime"
+				"Time"
 			],
 			"scope": "instance",
 			"name": "loopStart",
@@ -3714,7 +3714,7 @@
 	],
 	"Sequence": [
 		{
-			"description": "The subdivision of the sequence. This can only be \n set in the constructor. The subdivision is the \n interval between successive steps.",
+			"description": "The subdivision of the sequence. This can only be\n set in the constructor. The subdivision is the\n interval between successive steps.",
 			"type": [
 				"Time"
 			],
@@ -3750,7 +3750,7 @@
 		{
 			"description": "The loopEnd point determines when it will\n loop if Tone.Part.loop is true.",
 			"type": [
-				"TransportTime"
+				"Time"
 			],
 			"scope": "instance",
 			"name": "loopEnd",
@@ -3760,7 +3760,7 @@
 		{
 			"description": "The loopStart point determines when it will\n loop if Tone.Part.loop is true.",
 			"type": [
-				"TransportTime"
+				"Time"
 			],
 			"scope": "instance",
 			"name": "loopStart",
@@ -6582,6 +6582,17 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
+	"TimeBase": [
+		{
+			"description": "The units",
+			"type": [
+				"String"
+			],
+			"scope": "instance",
+			"name": "_units",
+			"lineno": "Tone/type/TimeBase.js#L31"
+		}
+	],
 	"<anonymous>~StereoPannerNode": [
 		{
 			"description": "The audio context",
@@ -7133,6 +7144,42 @@
 			"name": "context",
 			"lineno": "Tone/core/AudioNode.js#L27",
 			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Frequency": [
+		{
+			"description": "The units",
+			"type": [
+				"String"
+			],
+			"scope": "instance",
+			"name": "_units",
+			"lineno": "Tone/type/TimeBase.js#L31",
+			"inherits": "Tone.TimeBase"
+		}
+	],
+	"Time": [
+		{
+			"description": "The units",
+			"type": [
+				"String"
+			],
+			"scope": "instance",
+			"name": "_units",
+			"lineno": "Tone/type/TimeBase.js#L31",
+			"inherits": "Tone.TimeBase"
+		}
+	],
+	"TransportTime": [
+		{
+			"description": "The units",
+			"type": [
+				"String"
+			],
+			"scope": "instance",
+			"name": "_units",
+			"lineno": "Tone/type/TimeBase.js#L31",
+			"inherits": "Tone.TimeBase"
 		}
 	]
 }
