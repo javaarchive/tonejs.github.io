@@ -2664,7 +2664,7 @@
 			],
 			"scope": "instance",
 			"name": "buffer",
-			"lineno": "Tone/effect/Convolver.js#L63"
+			"lineno": "Tone/effect/Convolver.js#L56"
 		},
 		{
 			"description": "The wet control is how much of the effected\n will pass through to the output. 1 = 100% effected\n signal, 0 = 100% dry signal.",

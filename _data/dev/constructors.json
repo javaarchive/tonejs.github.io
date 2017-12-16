@@ -1269,6 +1269,7 @@
 				"type": [
 					"function"
 				],
+				"optional": true,
 				"description": "The callback to invoke when the url is loaded.",
 				"name": "onload"
 			}

@@ -8931,7 +8931,7 @@
 			},
 			"scope": "instance",
 			"name": "load",
-			"lineno": "Tone/effect/Convolver.js#L89"
+			"lineno": "Tone/effect/Convolver.js#L82"
 		},
 		{
 			"description": "Clean up.",
@@ -8943,7 +8943,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/effect/Convolver.js#L102"
+			"lineno": "Tone/effect/Convolver.js#L95"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
