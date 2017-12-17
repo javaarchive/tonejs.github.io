@@ -1714,65 +1714,6 @@
 			"lineno": "Tone/core/Master.js#L62"
 		}
 	],
-	"Timeline": [
-		{
-			"description": "The memory of the timeline, i.e.\n how many events in the past it will retain",
-			"type": [
-				"Positive"
-			],
-			"scope": "instance",
-			"name": "memory",
-			"lineno": "Tone/core/Timeline.js#L51"
-		},
-		{
-			"description": "The number of items in the timeline.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "length",
-			"lineno": "Tone/core/Timeline.js#L65"
-		}
-	],
-	"TransportEvent": [
-		{
-			"description": "Reference to the Transport that created it",
-			"type": [
-				"Tone.Transport"
-			],
-			"scope": "instance",
-			"name": "Transport",
-			"lineno": "Tone/core/TransportEvent.js#L19"
-		},
-		{
-			"description": "The unique id of the event",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "id",
-			"lineno": "Tone/core/TransportEvent.js#L25"
-		},
-		{
-			"description": "The time the event starts",
-			"type": [
-				"Ticks"
-			],
-			"scope": "instance",
-			"name": "time",
-			"lineno": "Tone/core/TransportEvent.js#L31"
-		},
-		{
-			"description": "The callback to invoke",
-			"type": [
-				"function"
-			],
-			"scope": "instance",
-			"name": "callback",
-			"lineno": "Tone/core/TransportEvent.js#L37"
-		}
-	],
 	"AudioNode": [
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -1984,7 +1925,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "length",
-			"lineno": "Tone/core/IntervalTimeline.js#L83"
+			"lineno": "Tone/core/IntervalTimeline.js#L84"
 		}
 	],
 	"Listener": [
@@ -2128,6 +2069,27 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
+	"Timeline": [
+		{
+			"description": "The memory of the timeline, i.e.\n how many events in the past it will retain",
+			"type": [
+				"Positive"
+			],
+			"scope": "instance",
+			"name": "memory",
+			"lineno": "Tone/core/Timeline.js#L30"
+		},
+		{
+			"description": "The number of items in the timeline.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "length",
+			"lineno": "Tone/core/Timeline.js#L44"
+		}
+	],
 	"Tone": [
 		{
 			"description": "The AudioContext",
@@ -2266,6 +2228,44 @@
 			"scope": "instance",
 			"name": "PPQ",
 			"lineno": "Tone/core/Transport.js#L612"
+		}
+	],
+	"TransportEvent": [
+		{
+			"description": "Reference to the Transport that created it",
+			"type": [
+				"Tone.Transport"
+			],
+			"scope": "instance",
+			"name": "Transport",
+			"lineno": "Tone/core/TransportEvent.js#L19"
+		},
+		{
+			"description": "The unique id of the event",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "id",
+			"lineno": "Tone/core/TransportEvent.js#L25"
+		},
+		{
+			"description": "The time the event starts",
+			"type": [
+				"Ticks"
+			],
+			"scope": "instance",
+			"name": "time",
+			"lineno": "Tone/core/TransportEvent.js#L31"
+		},
+		{
+			"description": "The callback to invoke",
+			"type": [
+				"function"
+			],
+			"scope": "instance",
+			"name": "callback",
+			"lineno": "Tone/core/TransportEvent.js#L37"
 		}
 	],
 	"AutoFilter": [
@@ -6764,7 +6764,7 @@
 			],
 			"scope": "instance",
 			"name": "memory",
-			"lineno": "Tone/core/Timeline.js#L51",
+			"lineno": "Tone/core/Timeline.js#L30",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -6775,7 +6775,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "length",
-			"lineno": "Tone/core/Timeline.js#L65",
+			"lineno": "Tone/core/Timeline.js#L44",
 			"inherits": "Tone.Timeline"
 		}
 	],
@@ -7171,6 +7171,18 @@
 		}
 	],
 	"TransportTime": [
+		{
+			"description": "The units",
+			"type": [
+				"String"
+			],
+			"scope": "instance",
+			"name": "_units",
+			"lineno": "Tone/type/TimeBase.js#L31",
+			"inherits": "Tone.TimeBase"
+		}
+	],
+	"Ticks": [
 		{
 			"description": "The units",
 			"type": [

@@ -3656,395 +3656,6 @@
 			"lineno": "Tone/core/AudioNode.js#L182"
 		}
 	],
-	"Timeline": [
-		{
-			"description": "Insert an event object onto the timeline. Events must have a \"time\" attribute.",
-			"params": [
-				{
-					"type": [
-						"Object"
-					],
-					"description": "The event object to insert into the\n                          timeline.",
-					"name": "event"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Timeline"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "add",
-			"lineno": "Tone/core/Timeline.js#L84"
-		},
-		{
-			"description": "Remove an event from the timeline.",
-			"params": [
-				{
-					"type": [
-						"Object"
-					],
-					"description": "The event object to remove from the list.",
-					"name": "event"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Timeline"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "remove",
-			"lineno": "Tone/core/Timeline.js#L108"
-		},
-		{
-			"description": "Get the nearest event whose time is less than or equal to the given time.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The time to query.",
-					"name": "time"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"description": "Which value in the object to compare",
-					"name": "comparator"
-				}
-			],
-			"returns": {
-				"type": [
-					"Object"
-				],
-				"description": "The event object set after that time."
-			},
-			"scope": "instance",
-			"name": "get",
-			"lineno": "Tone/core/Timeline.js#L126"
-		},
-		{
-			"description": "Return the first event in the timeline without removing it",
-			"returns": {
-				"type": [
-					"Object"
-				],
-				"description": "The first event object"
-			},
-			"scope": "instance",
-			"name": "peek",
-			"lineno": "Tone/core/Timeline.js#L140"
-		},
-		{
-			"description": "Return the first event in the timeline and remove it",
-			"returns": {
-				"type": [
-					"Object"
-				],
-				"description": "The first event object"
-			},
-			"scope": "instance",
-			"name": "shift",
-			"lineno": "Tone/core/Timeline.js#L148"
-		},
-		{
-			"description": "Get the event which is scheduled after the given time.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The time to query.",
-					"name": "time"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"description": "Which value in the object to compare",
-					"name": "comparator"
-				}
-			],
-			"returns": {
-				"type": [
-					"Object"
-				],
-				"description": "The event object after the given time"
-			},
-			"scope": "instance",
-			"name": "getAfter",
-			"lineno": "Tone/core/Timeline.js#L158"
-		},
-		{
-			"description": "Get the event before the event at the given time.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The time to query.",
-					"name": "time"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"description": "Which value in the object to compare",
-					"name": "comparator"
-				}
-			],
-			"returns": {
-				"type": [
-					"Object"
-				],
-				"description": "The event object before the given time"
-			},
-			"scope": "instance",
-			"name": "getBefore",
-			"lineno": "Tone/core/Timeline.js#L174"
-		},
-		{
-			"description": "Cancel events after the given time",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The time to query.",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Timeline"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "cancel",
-			"lineno": "Tone/core/Timeline.js#L194"
-		},
-		{
-			"description": "Cancel events before or equal to the given time.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The time to cancel before.",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Timeline"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "cancelBefore",
-			"lineno": "Tone/core/Timeline.js#L228"
-		},
-		{
-			"description": "Returns the previous event if there is one. null otherwise",
-			"params": [
-				{
-					"type": [
-						"Object"
-					],
-					"description": "The event to find the previous one of",
-					"name": "event"
-				}
-			],
-			"returns": {
-				"type": [
-					"Object"
-				],
-				"description": "The event right before the given event"
-			},
-			"scope": "instance",
-			"name": "previousEvent",
-			"lineno": "Tone/core/Timeline.js#L241"
-		},
-		{
-			"description": "Iterate over everything in the array",
-			"params": [
-				{
-					"type": [
-						"function"
-					],
-					"description": "The callback to invoke with every item",
-					"name": "callback"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Timeline"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "forEach",
-			"lineno": "Tone/core/Timeline.js#L329"
-		},
-		{
-			"description": "Iterate over everything in the array at or before the given time.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The time to check if items are before",
-					"name": "time"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"description": "The callback to invoke with every item",
-					"name": "callback"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Timeline"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "forEachBefore",
-			"lineno": "Tone/core/Timeline.js#L340"
-		},
-		{
-			"description": "Iterate over everything in the array after the given time.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The time to check if items are before",
-					"name": "time"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"description": "The callback to invoke with every item",
-					"name": "callback"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Timeline"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "forEachAfter",
-			"lineno": "Tone/core/Timeline.js#L355"
-		},
-		{
-			"description": "Iterate over everything in the array at or after the given time. Similar to\n forEachAfter, but includes the item(s) at the given time.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The time to check if items are before",
-					"name": "time"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"description": "The callback to invoke with every item",
-					"name": "callback"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Timeline"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "forEachFrom",
-			"lineno": "Tone/core/Timeline.js#L369"
-		},
-		{
-			"description": "Iterate over everything in the array at the given time",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The time to check if items are before",
-					"name": "time"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"description": "The callback to invoke with every item",
-					"name": "callback"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Timeline"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "forEachAtTime",
-			"lineno": "Tone/core/Timeline.js#L386"
-		},
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.Timeline"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/core/Timeline.js#L403"
-		}
-	],
-	"TransportEvent": [
-		{
-			"description": "Invoke the callback even callback.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The AudioContext time in seconds of the event",
-					"name": "time"
-				}
-			],
-			"scope": "instance",
-			"name": "invoke",
-			"lineno": "Tone/core/TransportEvent.js#L71"
-		},
-		{
-			"description": "Clean up",
-			"returns": {
-				"type": [
-					"Tone.TransportEvent"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/core/TransportEvent.js#L84"
-		}
-	],
 	"Buffer": [
 		{
 			"description": "Pass in an AudioBuffer or Tone.Buffer to set the value\n of this buffer.",
@@ -5729,7 +5340,7 @@
 	],
 	"IntervalTimeline": [
 		{
-			"description": "The event to add to the timeline. All events must \n have a time and duration value",
+			"description": "The event to add to the timeline. All events must\n have a time and duration value",
 			"params": [
 				{
 					"type": [
@@ -5768,7 +5379,7 @@
 			},
 			"scope": "instance",
 			"name": "remove",
-			"lineno": "Tone/core/IntervalTimeline.js#L67"
+			"lineno": "Tone/core/IntervalTimeline.js#L68"
 		},
 		{
 			"description": "Remove events whose time time is after the given time",
@@ -5789,7 +5400,7 @@
 			},
 			"scope": "instance",
 			"name": "cancel",
-			"lineno": "Tone/core/IntervalTimeline.js#L101"
+			"lineno": "Tone/core/IntervalTimeline.js#L102"
 		},
 		{
 			"description": "Get an event whose time and duration span the give time. Will\n return the match whose \"time\" value is closest to the given time.",
@@ -5810,7 +5421,7 @@
 			},
 			"scope": "instance",
 			"name": "get",
-			"lineno": "Tone/core/IntervalTimeline.js#L279"
+			"lineno": "Tone/core/IntervalTimeline.js#L280"
 		},
 		{
 			"description": "Iterate over everything in the timeline.",
@@ -5831,7 +5442,7 @@
 			},
 			"scope": "instance",
 			"name": "forEach",
-			"lineno": "Tone/core/IntervalTimeline.js#L301"
+			"lineno": "Tone/core/IntervalTimeline.js#L302"
 		},
 		{
 			"description": "Iterate over everything in the array in which the given time\n overlaps with the time and duration time of the event.",
@@ -5859,7 +5470,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachAtTime",
-			"lineno": "Tone/core/IntervalTimeline.js#L324"
+			"lineno": "Tone/core/IntervalTimeline.js#L325"
 		},
 		{
 			"description": "Iterate over everything in the array in which the time is greater\n than the given time.",
@@ -5887,7 +5498,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachAfter",
-			"lineno": "Tone/core/IntervalTimeline.js#L345"
+			"lineno": "Tone/core/IntervalTimeline.js#L346"
 		},
 		{
 			"description": "Clean up",
@@ -5899,7 +5510,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/IntervalTimeline.js#L361"
+			"lineno": "Tone/core/IntervalTimeline.js#L362"
 		}
 	],
 	"<anonymous>~IntervalNode": [
@@ -5915,10 +5526,10 @@
 			],
 			"scope": "instance",
 			"name": "insert",
-			"lineno": "Tone/core/IntervalTimeline.js#L414"
+			"lineno": "Tone/core/IntervalTimeline.js#L415"
 		},
 		{
-			"description": "Search the tree for nodes which overlap \n with the given point",
+			"description": "Search the tree for nodes which overlap\n with the given point",
 			"params": [
 				{
 					"type": [
@@ -5937,10 +5548,10 @@
 			],
 			"scope": "instance",
 			"name": "search",
-			"lineno": "Tone/core/IntervalTimeline.js#L434"
+			"lineno": "Tone/core/IntervalTimeline.js#L435"
 		},
 		{
-			"description": "Search the tree for nodes which are less \n than the given point",
+			"description": "Search the tree for nodes which are less\n than the given point",
 			"params": [
 				{
 					"type": [
@@ -5959,7 +5570,7 @@
 			],
 			"scope": "instance",
 			"name": "searchAfter",
-			"lineno": "Tone/core/IntervalTimeline.js#L465"
+			"lineno": "Tone/core/IntervalTimeline.js#L466"
 		},
 		{
 			"description": "Invoke the callback on this element and both it's branches",
@@ -5973,19 +5584,19 @@
 			],
 			"scope": "instance",
 			"name": "traverse",
-			"lineno": "Tone/core/IntervalTimeline.js#L483"
+			"lineno": "Tone/core/IntervalTimeline.js#L484"
 		},
 		{
 			"description": "Update the height of the node",
 			"scope": "instance",
 			"name": "updateHeight",
-			"lineno": "Tone/core/IntervalTimeline.js#L496"
+			"lineno": "Tone/core/IntervalTimeline.js#L497"
 		},
 		{
 			"description": "Update the height of the node",
 			"scope": "instance",
 			"name": "updateMax",
-			"lineno": "Tone/core/IntervalTimeline.js#L511"
+			"lineno": "Tone/core/IntervalTimeline.js#L512"
 		},
 		{
 			"description": "The balance is how the leafs are distributed on the node",
@@ -5997,7 +5608,7 @@
 			},
 			"scope": "instance",
 			"name": "getBalance",
-			"lineno": "Tone/core/IntervalTimeline.js#L525"
+			"lineno": "Tone/core/IntervalTimeline.js#L526"
 		},
 		{
 			"returns": {
@@ -6008,13 +5619,13 @@
 			},
 			"scope": "instance",
 			"name": "isLeftChild",
-			"lineno": "Tone/core/IntervalTimeline.js#L541"
+			"lineno": "Tone/core/IntervalTimeline.js#L542"
 		},
 		{
 			"description": "null out references.",
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/IntervalTimeline.js#L584"
+			"lineno": "Tone/core/IntervalTimeline.js#L585"
 		}
 	],
 	"Listener": [
@@ -6892,6 +6503,366 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
+	"Timeline": [
+		{
+			"description": "Insert an event object onto the timeline. Events must have a \"time\" attribute.",
+			"params": [
+				{
+					"type": [
+						"Object"
+					],
+					"description": "The event object to insert into the\n                          timeline.",
+					"name": "event"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Timeline"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "add",
+			"lineno": "Tone/core/Timeline.js#L63"
+		},
+		{
+			"description": "Remove an event from the timeline.",
+			"params": [
+				{
+					"type": [
+						"Object"
+					],
+					"description": "The event object to remove from the list.",
+					"name": "event"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Timeline"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "remove",
+			"lineno": "Tone/core/Timeline.js#L84"
+		},
+		{
+			"description": "Get the nearest event whose time is less than or equal to the given time.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The time to query.",
+					"name": "time"
+				},
+				{
+					"type": [
+						"String"
+					],
+					"description": "Which value in the object to compare",
+					"name": "comparator"
+				}
+			],
+			"returns": {
+				"type": [
+					"Object"
+				],
+				"description": "The event object set after that time."
+			},
+			"scope": "instance",
+			"name": "get",
+			"lineno": "Tone/core/Timeline.js#L98"
+		},
+		{
+			"description": "Return the first event in the timeline without removing it",
+			"returns": {
+				"type": [
+					"Object"
+				],
+				"description": "The first event object"
+			},
+			"scope": "instance",
+			"name": "peek",
+			"lineno": "Tone/core/Timeline.js#L112"
+		},
+		{
+			"description": "Return the first event in the timeline and remove it",
+			"returns": {
+				"type": [
+					"Object"
+				],
+				"description": "The first event object"
+			},
+			"scope": "instance",
+			"name": "shift",
+			"lineno": "Tone/core/Timeline.js#L120"
+		},
+		{
+			"description": "Get the event which is scheduled after the given time.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The time to query.",
+					"name": "time"
+				},
+				{
+					"type": [
+						"String"
+					],
+					"description": "Which value in the object to compare",
+					"name": "comparator"
+				}
+			],
+			"returns": {
+				"type": [
+					"Object"
+				],
+				"description": "The event object after the given time"
+			},
+			"scope": "instance",
+			"name": "getAfter",
+			"lineno": "Tone/core/Timeline.js#L130"
+		},
+		{
+			"description": "Get the event before the event at the given time.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The time to query.",
+					"name": "time"
+				},
+				{
+					"type": [
+						"String"
+					],
+					"description": "Which value in the object to compare",
+					"name": "comparator"
+				}
+			],
+			"returns": {
+				"type": [
+					"Object"
+				],
+				"description": "The event object before the given time"
+			},
+			"scope": "instance",
+			"name": "getBefore",
+			"lineno": "Tone/core/Timeline.js#L146"
+		},
+		{
+			"description": "Cancel events after the given time",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The time to query.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Timeline"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancel",
+			"lineno": "Tone/core/Timeline.js#L166"
+		},
+		{
+			"description": "Cancel events before or equal to the given time.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The time to cancel before.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Timeline"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelBefore",
+			"lineno": "Tone/core/Timeline.js#L200"
+		},
+		{
+			"description": "Returns the previous event if there is one. null otherwise",
+			"params": [
+				{
+					"type": [
+						"Object"
+					],
+					"description": "The event to find the previous one of",
+					"name": "event"
+				}
+			],
+			"returns": {
+				"type": [
+					"Object"
+				],
+				"description": "The event right before the given event"
+			},
+			"scope": "instance",
+			"name": "previousEvent",
+			"lineno": "Tone/core/Timeline.js#L213"
+		},
+		{
+			"description": "Iterate over everything in the array",
+			"params": [
+				{
+					"type": [
+						"function"
+					],
+					"description": "The callback to invoke with every item",
+					"name": "callback"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Timeline"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "forEach",
+			"lineno": "Tone/core/Timeline.js#L291"
+		},
+		{
+			"description": "Iterate over everything in the array at or before the given time.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The time to check if items are before",
+					"name": "time"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"description": "The callback to invoke with every item",
+					"name": "callback"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Timeline"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "forEachBefore",
+			"lineno": "Tone/core/Timeline.js#L302"
+		},
+		{
+			"description": "Iterate over everything in the array after the given time.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The time to check if items are before",
+					"name": "time"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"description": "The callback to invoke with every item",
+					"name": "callback"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Timeline"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "forEachAfter",
+			"lineno": "Tone/core/Timeline.js#L317"
+		},
+		{
+			"description": "Iterate over everything in the array at or after the given time. Similar to\n forEachAfter, but includes the item(s) at the given time.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The time to check if items are before",
+					"name": "time"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"description": "The callback to invoke with every item",
+					"name": "callback"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Timeline"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "forEachFrom",
+			"lineno": "Tone/core/Timeline.js#L331"
+		},
+		{
+			"description": "Iterate over everything in the array at the given time",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The time to check if items are before",
+					"name": "time"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"description": "The callback to invoke with every item",
+					"name": "callback"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Timeline"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "forEachAtTime",
+			"lineno": "Tone/core/Timeline.js#L348"
+		},
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.Timeline"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/core/Timeline.js#L365"
+		}
+	],
 	"TimelineState": [
 		{
 			"description": "Returns the scheduled state scheduled before or at\n the given time.",
@@ -6961,7 +6932,7 @@
 			},
 			"scope": "instance",
 			"name": "add",
-			"lineno": "Tone/core/Timeline.js#L84",
+			"lineno": "Tone/core/Timeline.js#L63",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -6983,7 +6954,7 @@
 			},
 			"scope": "instance",
 			"name": "remove",
-			"lineno": "Tone/core/Timeline.js#L108",
+			"lineno": "Tone/core/Timeline.js#L84",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -7012,7 +6983,7 @@
 			},
 			"scope": "instance",
 			"name": "get",
-			"lineno": "Tone/core/Timeline.js#L126",
+			"lineno": "Tone/core/Timeline.js#L98",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -7025,7 +6996,7 @@
 			},
 			"scope": "instance",
 			"name": "peek",
-			"lineno": "Tone/core/Timeline.js#L140",
+			"lineno": "Tone/core/Timeline.js#L112",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -7038,7 +7009,7 @@
 			},
 			"scope": "instance",
 			"name": "shift",
-			"lineno": "Tone/core/Timeline.js#L148",
+			"lineno": "Tone/core/Timeline.js#L120",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -7067,7 +7038,7 @@
 			},
 			"scope": "instance",
 			"name": "getAfter",
-			"lineno": "Tone/core/Timeline.js#L158",
+			"lineno": "Tone/core/Timeline.js#L130",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -7096,7 +7067,7 @@
 			},
 			"scope": "instance",
 			"name": "getBefore",
-			"lineno": "Tone/core/Timeline.js#L174",
+			"lineno": "Tone/core/Timeline.js#L146",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -7118,7 +7089,7 @@
 			},
 			"scope": "instance",
 			"name": "cancel",
-			"lineno": "Tone/core/Timeline.js#L194",
+			"lineno": "Tone/core/Timeline.js#L166",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -7140,7 +7111,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelBefore",
-			"lineno": "Tone/core/Timeline.js#L228",
+			"lineno": "Tone/core/Timeline.js#L200",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -7162,7 +7133,7 @@
 			},
 			"scope": "instance",
 			"name": "previousEvent",
-			"lineno": "Tone/core/Timeline.js#L241",
+			"lineno": "Tone/core/Timeline.js#L213",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -7184,7 +7155,7 @@
 			},
 			"scope": "instance",
 			"name": "forEach",
-			"lineno": "Tone/core/Timeline.js#L329",
+			"lineno": "Tone/core/Timeline.js#L291",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -7213,7 +7184,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachBefore",
-			"lineno": "Tone/core/Timeline.js#L340",
+			"lineno": "Tone/core/Timeline.js#L302",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -7242,7 +7213,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachAfter",
-			"lineno": "Tone/core/Timeline.js#L355",
+			"lineno": "Tone/core/Timeline.js#L317",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -7271,7 +7242,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachFrom",
-			"lineno": "Tone/core/Timeline.js#L369",
+			"lineno": "Tone/core/Timeline.js#L331",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -7300,7 +7271,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachAtTime",
-			"lineno": "Tone/core/Timeline.js#L386",
+			"lineno": "Tone/core/Timeline.js#L348",
 			"inherits": "Tone.Timeline"
 		},
 		{
@@ -7313,7 +7284,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/Timeline.js#L403",
+			"lineno": "Tone/core/Timeline.js#L365",
 			"inherits": "Tone.Timeline"
 		}
 	],
@@ -7538,7 +7509,7 @@
 				},
 				{
 					"type": [
-						"TimelinePosition"
+						"TransportTime"
 					],
 					"optional": true,
 					"description": "When along the timeline the events should\n                              start being invoked.",
@@ -7960,6 +7931,35 @@
 			"name": "emit",
 			"lineno": "Tone/core/Emitter.js#L98",
 			"inherits": "Tone.Emitter"
+		}
+	],
+	"TransportEvent": [
+		{
+			"description": "Invoke the callback even callback.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The AudioContext time in seconds of the event",
+					"name": "time"
+				}
+			],
+			"scope": "instance",
+			"name": "invoke",
+			"lineno": "Tone/core/TransportEvent.js#L71"
+		},
+		{
+			"description": "Clean up",
+			"returns": {
+				"type": [
+					"Tone.TransportEvent"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/core/TransportEvent.js#L84"
 		}
 	],
 	"TransportRepeatEvent": [
@@ -22213,7 +22213,7 @@
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L89"
+			"lineno": "Tone/type/TimeBase.js#L119"
 		}
 	],
 	"Frequency": [
@@ -22380,7 +22380,7 @@
 			},
 			"scope": "instance",
 			"name": "valueOf",
-			"lineno": "Tone/type/TimeBase.js#L243",
+			"lineno": "Tone/type/TimeBase.js#L274",
 			"inherits": "Tone.TimeBase"
 		},
 		{
@@ -22393,7 +22393,157 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/type/TimeBase.js#L273",
+			"lineno": "Tone/type/TimeBase.js#L310",
+			"inherits": "Tone.TimeBase"
+		}
+	],
+	"Ticks": [
+		{
+			"description": "Return the time in ticks",
+			"returns": {
+				"type": [
+					"Ticks"
+				]
+			},
+			"scope": "instance",
+			"name": "toTicks",
+			"lineno": "Tone/type/Ticks.js#L76"
+		},
+		{
+			"description": "Return the time in ticks",
+			"returns": {
+				"type": [
+					"Ticks"
+				]
+			},
+			"scope": "instance",
+			"name": "toSeconds",
+			"lineno": "Tone/type/Ticks.js#L84"
+		},
+		{
+			"description": "Quantize the time by the given subdivision. Optionally add a\n percentage which will move the time value towards the ideal\n quantized value by that percentage.",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"Time"
+					],
+					"description": "The subdivision to quantize to",
+					"name": "val"
+				},
+				{
+					"type": [
+						"NormalRange"
+					],
+					"optional": true,
+					"defaultvalue": 1,
+					"description": "Move the time value\n                                  towards the quantized value by\n                                  a percentage.",
+					"name": "percent"
+				}
+			],
+			"examples": [
+				"Tone.Time(21).quantize(2) //returns 22\nTone.Time(0.6).quantize(\"4n\", 0.5) //returns 0.55"
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "quantize",
+			"lineno": "Tone/type/Time.js#L62",
+			"inherits": "Tone.Time"
+		},
+		{
+			"description": "Convert a Time to Notation. The notation values are will be the\n closest representation between 1m to 128th note.",
+			"examples": [
+				"//if the Transport is at 120bpm:\nTone.Time(2).toNotation();//returns \"1m\""
+			],
+			"returns": {
+				"type": [
+					"Notation"
+				]
+			},
+			"scope": "instance",
+			"name": "toNotation",
+			"lineno": "Tone/type/Time.js#L84",
+			"inherits": "Tone.Time"
+		},
+		{
+			"description": "Return the time encoded as Bars:Beats:Sixteenths.",
+			"returns": {
+				"type": [
+					"BarsBeatsSixteenths"
+				]
+			},
+			"scope": "instance",
+			"name": "toBarsBeatsSixteenths",
+			"lineno": "Tone/type/Time.js#L111",
+			"inherits": "Tone.Time"
+		},
+		{
+			"description": "Return the time in samples",
+			"returns": {
+				"type": [
+					"Samples"
+				]
+			},
+			"scope": "instance",
+			"name": "toSamples",
+			"lineno": "Tone/type/Time.js#L140",
+			"inherits": "Tone.Time"
+		},
+		{
+			"description": "Return the time as a frequency value",
+			"examples": [
+				"Tone.Time(2).toFrequency(); //0.5"
+			],
+			"returns": {
+				"type": [
+					"Frequency"
+				]
+			},
+			"scope": "instance",
+			"name": "toFrequency",
+			"lineno": "Tone/type/Time.js#L150",
+			"inherits": "Tone.Time"
+		},
+		{
+			"description": "Return the time in milliseconds.",
+			"returns": {
+				"type": [
+					"Milliseconds"
+				]
+			},
+			"scope": "instance",
+			"name": "toMilliseconds",
+			"lineno": "Tone/type/Time.js#L166",
+			"inherits": "Tone.Time"
+		},
+		{
+			"description": "Evaluate the time value. Returns the time\n in seconds.",
+			"returns": {
+				"type": [
+					"Seconds"
+				]
+			},
+			"scope": "instance",
+			"name": "valueOf",
+			"lineno": "Tone/type/TimeBase.js#L274",
+			"inherits": "Tone.TimeBase"
+		},
+		{
+			"description": "Clean up",
+			"returns": {
+				"type": [
+					"Tone.TimeBase"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/type/TimeBase.js#L310",
 			"inherits": "Tone.TimeBase"
 		}
 	],
@@ -22447,7 +22597,7 @@
 			"lineno": "Tone/type/Time.js#L62"
 		},
 		{
-			"description": "Convert a Time to Notation. Values will be thresholded to the nearest 128th note.",
+			"description": "Convert a Time to Notation. The notation values are will be the\n closest representation between 1m to 128th note.",
 			"examples": [
 				"//if the Transport is at 120bpm:\nTone.Time(2).toNotation();//returns \"1m\""
 			],
@@ -22458,7 +22608,7 @@
 			},
 			"scope": "instance",
 			"name": "toNotation",
-			"lineno": "Tone/type/Time.js#L83"
+			"lineno": "Tone/type/Time.js#L84"
 		},
 		{
 			"description": "Return the time encoded as Bars:Beats:Sixteenths.",
@@ -22469,7 +22619,7 @@
 			},
 			"scope": "instance",
 			"name": "toBarsBeatsSixteenths",
-			"lineno": "Tone/type/Time.js#L160"
+			"lineno": "Tone/type/Time.js#L111"
 		},
 		{
 			"description": "Return the time in ticks.",
@@ -22480,7 +22630,7 @@
 			},
 			"scope": "instance",
 			"name": "toTicks",
-			"lineno": "Tone/type/Time.js#L179"
+			"lineno": "Tone/type/Time.js#L130"
 		},
 		{
 			"description": "Return the time in samples",
@@ -22491,7 +22641,7 @@
 			},
 			"scope": "instance",
 			"name": "toSamples",
-			"lineno": "Tone/type/Time.js#L189"
+			"lineno": "Tone/type/Time.js#L140"
 		},
 		{
 			"description": "Return the time as a frequency value",
@@ -22505,7 +22655,7 @@
 			},
 			"scope": "instance",
 			"name": "toFrequency",
-			"lineno": "Tone/type/Time.js#L199"
+			"lineno": "Tone/type/Time.js#L150"
 		},
 		{
 			"description": "Return the time in seconds.",
@@ -22516,7 +22666,7 @@
 			},
 			"scope": "instance",
 			"name": "toSeconds",
-			"lineno": "Tone/type/Time.js#L207"
+			"lineno": "Tone/type/Time.js#L158"
 		},
 		{
 			"description": "Return the time in milliseconds.",
@@ -22527,7 +22677,7 @@
 			},
 			"scope": "instance",
 			"name": "toMilliseconds",
-			"lineno": "Tone/type/Time.js#L215"
+			"lineno": "Tone/type/Time.js#L166"
 		},
 		{
 			"description": "Evaluate the time value. Returns the time\n in seconds.",
@@ -22538,7 +22688,7 @@
 			},
 			"scope": "instance",
 			"name": "valueOf",
-			"lineno": "Tone/type/TimeBase.js#L243",
+			"lineno": "Tone/type/TimeBase.js#L274",
 			"inherits": "Tone.TimeBase"
 		},
 		{
@@ -22551,7 +22701,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/type/TimeBase.js#L273",
+			"lineno": "Tone/type/TimeBase.js#L310",
 			"inherits": "Tone.TimeBase"
 		}
 	],
@@ -22559,56 +22709,56 @@
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L53"
+			"lineno": "Tone/type/TimeBase.js#L82"
 		}
 	],
 	"t": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L64"
+			"lineno": "Tone/type/TimeBase.js#L94"
 		}
 	],
 	"m": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L71"
+			"lineno": "Tone/type/TimeBase.js#L101"
 		}
 	],
 	"i": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L77"
+			"lineno": "Tone/type/TimeBase.js#L107"
 		}
 	],
 	"hz": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L83"
+			"lineno": "Tone/type/TimeBase.js#L113"
 		}
 	],
 	"s": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L105"
+			"lineno": "Tone/type/TimeBase.js#L135"
 		}
 	],
 	"samples": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L111"
+			"lineno": "Tone/type/TimeBase.js#L141"
 		}
 	],
 	"default": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L117"
+			"lineno": "Tone/type/TimeBase.js#L147"
 		}
 	],
 	"TimeBase": [
@@ -22621,46 +22771,10 @@
 			},
 			"scope": "instance",
 			"name": "valueOf",
-			"lineno": "Tone/type/TimeBase.js#L243"
+			"lineno": "Tone/type/TimeBase.js#L274"
 		},
 		{
-			"description": "Clean up",
-			"returns": {
-				"type": [
-					"Tone.TimeBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/type/TimeBase.js#L273"
-		}
-	],
-	"TransportTime": [
-		{
-			"description": "Evaluate the time expression. Returns values in ticks",
-			"returns": {
-				"type": [
-					"Ticks"
-				]
-			},
-			"scope": "instance",
-			"name": "valueOf",
-			"lineno": "Tone/type/TransportTime.js#L50"
-		},
-		{
-			"description": "Return the time in ticks.",
-			"returns": {
-				"type": [
-					"Ticks"
-				]
-			},
-			"scope": "instance",
-			"name": "toTicks",
-			"lineno": "Tone/type/TransportTime.js#L58"
-		},
-		{
-			"description": "Return the time in seconds.",
+			"description": "Return the value in seconds",
 			"returns": {
 				"type": [
 					"Seconds"
@@ -22668,104 +22782,7 @@
 			},
 			"scope": "instance",
 			"name": "toSeconds",
-			"lineno": "Tone/type/TransportTime.js#L66"
-		},
-		{
-			"description": "Return the time as a frequency value",
-			"returns": {
-				"type": [
-					"Frequency"
-				]
-			},
-			"scope": "instance",
-			"name": "toFrequency",
-			"lineno": "Tone/type/TransportTime.js#L74"
-		},
-		{
-			"description": "Quantize the time by the given subdivision. Optionally add a\n percentage which will move the time value towards the ideal\n quantized value by that percentage.",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"Time"
-					],
-					"description": "The subdivision to quantize to",
-					"name": "val"
-				},
-				{
-					"type": [
-						"NormalRange"
-					],
-					"optional": true,
-					"defaultvalue": 1,
-					"description": "Move the time value\n                                  towards the quantized value by\n                                  a percentage.",
-					"name": "percent"
-				}
-			],
-			"examples": [
-				"Tone.Time(21).quantize(2) //returns 22\nTone.Time(0.6).quantize(\"4n\", 0.5) //returns 0.55"
-			],
-			"returns": {
-				"type": [
-					"Number"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "quantize",
-			"lineno": "Tone/type/Time.js#L62",
-			"inherits": "Tone.Time"
-		},
-		{
-			"description": "Convert a Time to Notation. Values will be thresholded to the nearest 128th note.",
-			"examples": [
-				"//if the Transport is at 120bpm:\nTone.Time(2).toNotation();//returns \"1m\""
-			],
-			"returns": {
-				"type": [
-					"Notation"
-				]
-			},
-			"scope": "instance",
-			"name": "toNotation",
-			"lineno": "Tone/type/Time.js#L83",
-			"inherits": "Tone.Time"
-		},
-		{
-			"description": "Return the time encoded as Bars:Beats:Sixteenths.",
-			"returns": {
-				"type": [
-					"BarsBeatsSixteenths"
-				]
-			},
-			"scope": "instance",
-			"name": "toBarsBeatsSixteenths",
-			"lineno": "Tone/type/Time.js#L160",
-			"inherits": "Tone.Time"
-		},
-		{
-			"description": "Return the time in samples",
-			"returns": {
-				"type": [
-					"Samples"
-				]
-			},
-			"scope": "instance",
-			"name": "toSamples",
-			"lineno": "Tone/type/Time.js#L189",
-			"inherits": "Tone.Time"
-		},
-		{
-			"description": "Return the time in milliseconds.",
-			"returns": {
-				"type": [
-					"Milliseconds"
-				]
-			},
-			"scope": "instance",
-			"name": "toMilliseconds",
-			"lineno": "Tone/type/Time.js#L215",
-			"inherits": "Tone.Time"
+			"lineno": "Tone/type/TimeBase.js#L302"
 		},
 		{
 			"description": "Clean up",
@@ -22777,8 +22794,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/type/TimeBase.js#L273",
-			"inherits": "Tone.TimeBase"
+			"lineno": "Tone/type/TimeBase.js#L310"
 		}
 	],
 	"AnalyserNode": [
@@ -22905,6 +22921,158 @@
 			"scope": "instance",
 			"name": "connect",
 			"lineno": "Tone/shim/StereoPannerNode.js#L90"
+		}
+	],
+	"TransportTime": [
+		{
+			"description": "Quantize the time by the given subdivision. Optionally add a\n percentage which will move the time value towards the ideal\n quantized value by that percentage.",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"Time"
+					],
+					"description": "The subdivision to quantize to",
+					"name": "val"
+				},
+				{
+					"type": [
+						"NormalRange"
+					],
+					"optional": true,
+					"defaultvalue": 1,
+					"description": "Move the time value\n                                  towards the quantized value by\n                                  a percentage.",
+					"name": "percent"
+				}
+			],
+			"examples": [
+				"Tone.Time(21).quantize(2) //returns 22\nTone.Time(0.6).quantize(\"4n\", 0.5) //returns 0.55"
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "quantize",
+			"lineno": "Tone/type/Time.js#L62",
+			"inherits": "Tone.Time"
+		},
+		{
+			"description": "Convert a Time to Notation. The notation values are will be the\n closest representation between 1m to 128th note.",
+			"examples": [
+				"//if the Transport is at 120bpm:\nTone.Time(2).toNotation();//returns \"1m\""
+			],
+			"returns": {
+				"type": [
+					"Notation"
+				]
+			},
+			"scope": "instance",
+			"name": "toNotation",
+			"lineno": "Tone/type/Time.js#L84",
+			"inherits": "Tone.Time"
+		},
+		{
+			"description": "Return the time encoded as Bars:Beats:Sixteenths.",
+			"returns": {
+				"type": [
+					"BarsBeatsSixteenths"
+				]
+			},
+			"scope": "instance",
+			"name": "toBarsBeatsSixteenths",
+			"lineno": "Tone/type/Time.js#L111",
+			"inherits": "Tone.Time"
+		},
+		{
+			"description": "Return the time in ticks.",
+			"returns": {
+				"type": [
+					"Ticks"
+				]
+			},
+			"scope": "instance",
+			"name": "toTicks",
+			"lineno": "Tone/type/Time.js#L130",
+			"inherits": "Tone.Time"
+		},
+		{
+			"description": "Return the time in samples",
+			"returns": {
+				"type": [
+					"Samples"
+				]
+			},
+			"scope": "instance",
+			"name": "toSamples",
+			"lineno": "Tone/type/Time.js#L140",
+			"inherits": "Tone.Time"
+		},
+		{
+			"description": "Return the time as a frequency value",
+			"examples": [
+				"Tone.Time(2).toFrequency(); //0.5"
+			],
+			"returns": {
+				"type": [
+					"Frequency"
+				]
+			},
+			"scope": "instance",
+			"name": "toFrequency",
+			"lineno": "Tone/type/Time.js#L150",
+			"inherits": "Tone.Time"
+		},
+		{
+			"description": "Return the time in seconds.",
+			"returns": {
+				"type": [
+					"Seconds"
+				]
+			},
+			"scope": "instance",
+			"name": "toSeconds",
+			"lineno": "Tone/type/Time.js#L158",
+			"inherits": "Tone.Time"
+		},
+		{
+			"description": "Return the time in milliseconds.",
+			"returns": {
+				"type": [
+					"Milliseconds"
+				]
+			},
+			"scope": "instance",
+			"name": "toMilliseconds",
+			"lineno": "Tone/type/Time.js#L166",
+			"inherits": "Tone.Time"
+		},
+		{
+			"description": "Evaluate the time value. Returns the time\n in seconds.",
+			"returns": {
+				"type": [
+					"Seconds"
+				]
+			},
+			"scope": "instance",
+			"name": "valueOf",
+			"lineno": "Tone/type/TimeBase.js#L274",
+			"inherits": "Tone.TimeBase"
+		},
+		{
+			"description": "Clean up",
+			"returns": {
+				"type": [
+					"Tone.TimeBase"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/type/TimeBase.js#L310",
+			"inherits": "Tone.TimeBase"
 		}
 	]
 }

@@ -773,33 +773,6 @@
 		"singleton": true,
 		"extends": "Tone"
 	},
-	"Timeline": {
-		"description": "A Timeline class for scheduling and maintaining state\n        along a timeline. All events must have a \"time\" property.\n        Internally, events are stored in time order for fast\n        retrieval.",
-		"params": [
-			{
-				"type": [
-					"Positive"
-				],
-				"optional": true,
-				"defaultvalue": "Infinity",
-				"description": "The number of previous events that are retained.",
-				"name": "memory"
-			}
-		],
-		"extends": "Tone"
-	},
-	"TransportEvent": {
-		"description": "Tone.TransportEvent is an internal class used by (Tone.Transport)[Transport]\n        to schedule events. Do no invoke this class directly, it is\n        handled from within Tone.Transport.",
-		"params": [
-			{
-				"type": [
-					"Object"
-				],
-				"name": "options"
-			}
-		],
-		"extends": "Tone"
-	},
 	"AudioNode": {
 		"description": "Tone.AudioNode is the base class for classes which process audio.\n        AudioNodes have inputs and outputs.",
 		"params": [
@@ -968,7 +941,7 @@
 		"extends": "Tone"
 	},
 	"IntervalTimeline": {
-		"description": "Similar to Tone.Timeline, but all events represent\n        intervals with both \"time\" and \"duration\" times. The \n        events are placed in a tree structure optimized\n        for querying an intersection point with the timeline\n        events. Internally uses an [Interval Tree](https://en.wikipedia.org/wiki/Interval_tree)\n        to represent the data.",
+		"description": "Similar to Tone.Timeline, but all events represent\n        intervals with both \"time\" and \"duration\" times. The\n        events are placed in a tree structure optimized\n        for querying an intersection point with the timeline\n        events. Internally uses an [Interval Tree](https://en.wikipedia.org/wiki/Interval_tree)\n        to represent the data.",
 		"extends": "Tone"
 	},
 	"Listener": {
@@ -1030,6 +1003,21 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
+	"Timeline": {
+		"description": "A Timeline class for scheduling and maintaining state\n        along a timeline. All events must have a \"time\" property.\n        Internally, events are stored in time order for fast\n        retrieval.",
+		"params": [
+			{
+				"type": [
+					"Positive"
+				],
+				"optional": true,
+				"defaultvalue": "Infinity",
+				"description": "The number of previous events that are retained.",
+				"name": "memory"
+			}
+		],
+		"extends": "Tone"
+	},
 	"TimelineState": {
 		"description": "A Timeline State. Provides the methods: <code>setStateAtTime(\"state\", time)</code>\n         and <code>getValueAtTime(time)</code>.",
 		"params": [
@@ -1055,6 +1043,18 @@
 		],
 		"singleton": true,
 		"extends": "Tone.Emitter"
+	},
+	"TransportEvent": {
+		"description": "Tone.TransportEvent is an internal class used by (Tone.Transport)[Transport]\n        to schedule events. Do no invoke this class directly, it is\n        handled from within Tone.Transport.",
+		"params": [
+			{
+				"type": [
+					"Object"
+				],
+				"name": "options"
+			}
+		],
+		"extends": "Tone"
 	},
 	"TransportRepeatEvent": {
 		"description": "Tone.TransportRepeatEvent is an internal class used by Tone.Transport\n        to schedule repeat events. This class should not be instantiated directly.",
@@ -2532,6 +2532,31 @@
 			"Tone.Frequency(\"C3\") // 261\nTone.Frequency(38, \"midi\") //\nTone.Frequency(\"C3\").transpose(4);"
 		],
 		"extends": "Tone.TimeBase"
+	},
+	"Ticks": {
+		"description": "Tone.Ticks is a primitive type for encoding Time values.\n        Tone.Ticks can be constructed with or without the `new` keyword. Tone.Ticks can be passed\n        into the parameter of any method which takes time as an argument.",
+		"params": [
+			{
+				"type": [
+					"String",
+					"Number"
+				],
+				"description": "The time value.",
+				"name": "val"
+			},
+			{
+				"type": [
+					"String"
+				],
+				"optional": true,
+				"description": "The units of the value.",
+				"name": "units"
+			}
+		],
+		"examples": [
+			"var t = Tone.Ticks(\"4n\");//a quarter note"
+		],
+		"extends": "Tone.TransportTime"
 	},
 	"Time": {
 		"description": "Tone.Time is a primitive type for encoding Time values.\n        Tone.Time can be constructed with or without the `new` keyword. Tone.Time can be passed\n        into the parameter of any method which takes time as an argument.",
