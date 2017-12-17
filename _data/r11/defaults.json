@@ -155,13 +155,6 @@
 		"volume": 0,
 		"mute": false
 	},
-	"Timeline": {
-		"memory": "Infinity"
-	},
-	"TransportEvent": {
-		"once": false,
-		"callback": "Tone.noOp"
-	},
 	"Buffer": {
 		"url": "undefined",
 		"reverse": false
@@ -204,6 +197,9 @@
 		"convert": true,
 		"param": "undefined"
 	},
+	"Timeline": {
+		"memory": "Infinity"
+	},
 	"Transport": {
 		"bpm": 120,
 		"swing": 0,
@@ -212,6 +208,10 @@
 		"loopStart": 0,
 		"loopEnd": "4m",
 		"PPQ": 192
+	},
+	"TransportEvent": {
+		"once": false,
+		"callback": "Tone.noOp"
 	},
 	"TransportRepeatEvent": {
 		"duration": "Infinity",

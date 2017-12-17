@@ -141,12 +141,6 @@
 	"Master": [
 		"Tone"
 	],
-	"Timeline": [
-		"Tone"
-	],
-	"TransportEvent": [
-		"Tone"
-	],
 	"AudioNode": [
 		"Tone"
 	],
@@ -191,12 +185,18 @@
 		"AudioNode",
 		"Tone"
 	],
+	"Timeline": [
+		"Tone"
+	],
 	"TimelineState": [
 		"Timeline",
 		"Tone"
 	],
 	"Transport": [
 		"Emitter",
+		"Tone"
+	],
+	"TransportEvent": [
 		"Tone"
 	],
 	"TransportRepeatEvent": [

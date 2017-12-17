@@ -773,33 +773,6 @@
 		"singleton": true,
 		"extends": "Tone"
 	},
-	"Timeline": {
-		"description": "A Timeline class for scheduling and maintaining state\n        along a timeline. All events must have a \"time\" property.\n        Internally, events are stored in time order for fast\n        retrieval.",
-		"params": [
-			{
-				"type": [
-					"Positive"
-				],
-				"optional": true,
-				"defaultvalue": "Infinity",
-				"description": "The number of previous events that are retained.",
-				"name": "memory"
-			}
-		],
-		"extends": "Tone"
-	},
-	"TransportEvent": {
-		"description": "Tone.TransportEvent is an internal class used by (Tone.Transport)[Transport]\n        to schedule events. Do no invoke this class directly, it is\n        handled from within Tone.Transport.",
-		"params": [
-			{
-				"type": [
-					"Object"
-				],
-				"name": "options"
-			}
-		],
-		"extends": "Tone"
-	},
 	"AudioNode": {
 		"description": "Tone.AudioNode is the base class for classes which process audio.\n        AudioNodes have inputs and outputs.",
 		"params": [
@@ -1030,6 +1003,21 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
+	"Timeline": {
+		"description": "A Timeline class for scheduling and maintaining state\n        along a timeline. All events must have a \"time\" property.\n        Internally, events are stored in time order for fast\n        retrieval.",
+		"params": [
+			{
+				"type": [
+					"Positive"
+				],
+				"optional": true,
+				"defaultvalue": "Infinity",
+				"description": "The number of previous events that are retained.",
+				"name": "memory"
+			}
+		],
+		"extends": "Tone"
+	},
 	"TimelineState": {
 		"description": "A Timeline State. Provides the methods: <code>setStateAtTime(\"state\", time)</code>\n         and <code>getValueAtTime(time)</code>.",
 		"params": [
@@ -1055,6 +1043,18 @@
 		],
 		"singleton": true,
 		"extends": "Tone.Emitter"
+	},
+	"TransportEvent": {
+		"description": "Tone.TransportEvent is an internal class used by (Tone.Transport)[Transport]\n        to schedule events. Do no invoke this class directly, it is\n        handled from within Tone.Transport.",
+		"params": [
+			{
+				"type": [
+					"Object"
+				],
+				"name": "options"
+			}
+		],
+		"extends": "Tone"
 	},
 	"TransportRepeatEvent": {
 		"description": "Tone.TransportRepeatEvent is an internal class used by Tone.Transport\n        to schedule repeat events. This class should not be instantiated directly.",

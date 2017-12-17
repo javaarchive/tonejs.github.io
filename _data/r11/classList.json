@@ -40,8 +40,6 @@
 	],
 	"core": [
 		"Master",
-		"Timeline",
-		"TransportEvent",
 		"AudioNode",
 		"Buffer",
 		"Buffers",
@@ -55,9 +53,11 @@
 		"Listener",
 		"OfflineContext",
 		"Param",
+		"Timeline",
 		"TimelineState",
 		"Tone",
 		"Transport",
+		"TransportEvent",
 		"TransportRepeatEvent"
 	],
 	"effect": [

@@ -3663,395 +3663,6 @@
 			"lineno": "Tone/core/AudioNode.js#L182"
 		}
 	],
-	"Timeline": [
-		{
-			"description": "Insert an event object onto the timeline. Events must have a \"time\" attribute.",
-			"params": [
-				{
-					"type": [
-						"Object"
-					],
-					"description": "The event object to insert into the\n                          timeline.",
-					"name": "event"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Timeline"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "add",
-			"lineno": "Tone/core/Timeline.js#L84"
-		},
-		{
-			"description": "Remove an event from the timeline.",
-			"params": [
-				{
-					"type": [
-						"Object"
-					],
-					"description": "The event object to remove from the list.",
-					"name": "event"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Timeline"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "remove",
-			"lineno": "Tone/core/Timeline.js#L108"
-		},
-		{
-			"description": "Get the nearest event whose time is less than or equal to the given time.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The time to query.",
-					"name": "time"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"description": "Which value in the object to compare",
-					"name": "comparator"
-				}
-			],
-			"returns": {
-				"type": [
-					"Object"
-				],
-				"description": "The event object set after that time."
-			},
-			"scope": "instance",
-			"name": "get",
-			"lineno": "Tone/core/Timeline.js#L126"
-		},
-		{
-			"description": "Return the first event in the timeline without removing it",
-			"returns": {
-				"type": [
-					"Object"
-				],
-				"description": "The first event object"
-			},
-			"scope": "instance",
-			"name": "peek",
-			"lineno": "Tone/core/Timeline.js#L140"
-		},
-		{
-			"description": "Return the first event in the timeline and remove it",
-			"returns": {
-				"type": [
-					"Object"
-				],
-				"description": "The first event object"
-			},
-			"scope": "instance",
-			"name": "shift",
-			"lineno": "Tone/core/Timeline.js#L148"
-		},
-		{
-			"description": "Get the event which is scheduled after the given time.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The time to query.",
-					"name": "time"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"description": "Which value in the object to compare",
-					"name": "comparator"
-				}
-			],
-			"returns": {
-				"type": [
-					"Object"
-				],
-				"description": "The event object after the given time"
-			},
-			"scope": "instance",
-			"name": "getAfter",
-			"lineno": "Tone/core/Timeline.js#L158"
-		},
-		{
-			"description": "Get the event before the event at the given time.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The time to query.",
-					"name": "time"
-				},
-				{
-					"type": [
-						"String"
-					],
-					"description": "Which value in the object to compare",
-					"name": "comparator"
-				}
-			],
-			"returns": {
-				"type": [
-					"Object"
-				],
-				"description": "The event object before the given time"
-			},
-			"scope": "instance",
-			"name": "getBefore",
-			"lineno": "Tone/core/Timeline.js#L174"
-		},
-		{
-			"description": "Cancel events after the given time",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The time to query.",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Timeline"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "cancel",
-			"lineno": "Tone/core/Timeline.js#L194"
-		},
-		{
-			"description": "Cancel events before or equal to the given time.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The time to cancel before.",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Timeline"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "cancelBefore",
-			"lineno": "Tone/core/Timeline.js#L228"
-		},
-		{
-			"description": "Returns the previous event if there is one. null otherwise",
-			"params": [
-				{
-					"type": [
-						"Object"
-					],
-					"description": "The event to find the previous one of",
-					"name": "event"
-				}
-			],
-			"returns": {
-				"type": [
-					"Object"
-				],
-				"description": "The event right before the given event"
-			},
-			"scope": "instance",
-			"name": "previousEvent",
-			"lineno": "Tone/core/Timeline.js#L241"
-		},
-		{
-			"description": "Iterate over everything in the array",
-			"params": [
-				{
-					"type": [
-						"function"
-					],
-					"description": "The callback to invoke with every item",
-					"name": "callback"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Timeline"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "forEach",
-			"lineno": "Tone/core/Timeline.js#L329"
-		},
-		{
-			"description": "Iterate over everything in the array at or before the given time.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The time to check if items are before",
-					"name": "time"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"description": "The callback to invoke with every item",
-					"name": "callback"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Timeline"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "forEachBefore",
-			"lineno": "Tone/core/Timeline.js#L340"
-		},
-		{
-			"description": "Iterate over everything in the array after the given time.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The time to check if items are before",
-					"name": "time"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"description": "The callback to invoke with every item",
-					"name": "callback"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Timeline"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "forEachAfter",
-			"lineno": "Tone/core/Timeline.js#L355"
-		},
-		{
-			"description": "Iterate over everything in the array at or after the given time. Similar to\n forEachAfter, but includes the item(s) at the given time.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The time to check if items are before",
-					"name": "time"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"description": "The callback to invoke with every item",
-					"name": "callback"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Timeline"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "forEachFrom",
-			"lineno": "Tone/core/Timeline.js#L369"
-		},
-		{
-			"description": "Iterate over everything in the array at the given time",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The time to check if items are before",
-					"name": "time"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"description": "The callback to invoke with every item",
-					"name": "callback"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Timeline"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "forEachAtTime",
-			"lineno": "Tone/core/Timeline.js#L386"
-		},
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.Timeline"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/core/Timeline.js#L403"
-		}
-	],
-	"TransportEvent": [
-		{
-			"description": "Invoke the callback even callback.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The AudioContext time in seconds of the event",
-					"name": "time"
-				}
-			],
-			"scope": "instance",
-			"name": "invoke",
-			"lineno": "Tone/core/TransportEvent.js#L71"
-		},
-		{
-			"description": "Clean up",
-			"returns": {
-				"type": [
-					"Tone.TransportEvent"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/core/TransportEvent.js#L84"
-		}
-	],
 	"AudioBuffer": [
 		{
 			"scope": "instance",
@@ -6706,6 +6317,366 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
+	"Timeline": [
+		{
+			"description": "Insert an event object onto the timeline. Events must have a \"time\" attribute.",
+			"params": [
+				{
+					"type": [
+						"Object"
+					],
+					"description": "The event object to insert into the\n                          timeline.",
+					"name": "event"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Timeline"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "add",
+			"lineno": "Tone/core/Timeline.js#L84"
+		},
+		{
+			"description": "Remove an event from the timeline.",
+			"params": [
+				{
+					"type": [
+						"Object"
+					],
+					"description": "The event object to remove from the list.",
+					"name": "event"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Timeline"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "remove",
+			"lineno": "Tone/core/Timeline.js#L108"
+		},
+		{
+			"description": "Get the nearest event whose time is less than or equal to the given time.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The time to query.",
+					"name": "time"
+				},
+				{
+					"type": [
+						"String"
+					],
+					"description": "Which value in the object to compare",
+					"name": "comparator"
+				}
+			],
+			"returns": {
+				"type": [
+					"Object"
+				],
+				"description": "The event object set after that time."
+			},
+			"scope": "instance",
+			"name": "get",
+			"lineno": "Tone/core/Timeline.js#L126"
+		},
+		{
+			"description": "Return the first event in the timeline without removing it",
+			"returns": {
+				"type": [
+					"Object"
+				],
+				"description": "The first event object"
+			},
+			"scope": "instance",
+			"name": "peek",
+			"lineno": "Tone/core/Timeline.js#L140"
+		},
+		{
+			"description": "Return the first event in the timeline and remove it",
+			"returns": {
+				"type": [
+					"Object"
+				],
+				"description": "The first event object"
+			},
+			"scope": "instance",
+			"name": "shift",
+			"lineno": "Tone/core/Timeline.js#L148"
+		},
+		{
+			"description": "Get the event which is scheduled after the given time.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The time to query.",
+					"name": "time"
+				},
+				{
+					"type": [
+						"String"
+					],
+					"description": "Which value in the object to compare",
+					"name": "comparator"
+				}
+			],
+			"returns": {
+				"type": [
+					"Object"
+				],
+				"description": "The event object after the given time"
+			},
+			"scope": "instance",
+			"name": "getAfter",
+			"lineno": "Tone/core/Timeline.js#L158"
+		},
+		{
+			"description": "Get the event before the event at the given time.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The time to query.",
+					"name": "time"
+				},
+				{
+					"type": [
+						"String"
+					],
+					"description": "Which value in the object to compare",
+					"name": "comparator"
+				}
+			],
+			"returns": {
+				"type": [
+					"Object"
+				],
+				"description": "The event object before the given time"
+			},
+			"scope": "instance",
+			"name": "getBefore",
+			"lineno": "Tone/core/Timeline.js#L174"
+		},
+		{
+			"description": "Cancel events after the given time",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The time to query.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Timeline"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancel",
+			"lineno": "Tone/core/Timeline.js#L194"
+		},
+		{
+			"description": "Cancel events before or equal to the given time.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The time to cancel before.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Timeline"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancelBefore",
+			"lineno": "Tone/core/Timeline.js#L228"
+		},
+		{
+			"description": "Returns the previous event if there is one. null otherwise",
+			"params": [
+				{
+					"type": [
+						"Object"
+					],
+					"description": "The event to find the previous one of",
+					"name": "event"
+				}
+			],
+			"returns": {
+				"type": [
+					"Object"
+				],
+				"description": "The event right before the given event"
+			},
+			"scope": "instance",
+			"name": "previousEvent",
+			"lineno": "Tone/core/Timeline.js#L241"
+		},
+		{
+			"description": "Iterate over everything in the array",
+			"params": [
+				{
+					"type": [
+						"function"
+					],
+					"description": "The callback to invoke with every item",
+					"name": "callback"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Timeline"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "forEach",
+			"lineno": "Tone/core/Timeline.js#L329"
+		},
+		{
+			"description": "Iterate over everything in the array at or before the given time.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The time to check if items are before",
+					"name": "time"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"description": "The callback to invoke with every item",
+					"name": "callback"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Timeline"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "forEachBefore",
+			"lineno": "Tone/core/Timeline.js#L340"
+		},
+		{
+			"description": "Iterate over everything in the array after the given time.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The time to check if items are before",
+					"name": "time"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"description": "The callback to invoke with every item",
+					"name": "callback"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Timeline"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "forEachAfter",
+			"lineno": "Tone/core/Timeline.js#L355"
+		},
+		{
+			"description": "Iterate over everything in the array at or after the given time. Similar to\n forEachAfter, but includes the item(s) at the given time.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The time to check if items are before",
+					"name": "time"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"description": "The callback to invoke with every item",
+					"name": "callback"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Timeline"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "forEachFrom",
+			"lineno": "Tone/core/Timeline.js#L369"
+		},
+		{
+			"description": "Iterate over everything in the array at the given time",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The time to check if items are before",
+					"name": "time"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"description": "The callback to invoke with every item",
+					"name": "callback"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Timeline"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "forEachAtTime",
+			"lineno": "Tone/core/Timeline.js#L386"
+		},
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.Timeline"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/core/Timeline.js#L403"
+		}
+	],
 	"TimelineState": [
 		{
 			"description": "Returns the scheduled state scheduled before or at\n the given time.",
@@ -7745,6 +7716,35 @@
 			"name": "emit",
 			"lineno": "Tone/core/Emitter.js#L81",
 			"inherits": "Tone.Emitter"
+		}
+	],
+	"TransportEvent": [
+		{
+			"description": "Invoke the callback even callback.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The AudioContext time in seconds of the event",
+					"name": "time"
+				}
+			],
+			"scope": "instance",
+			"name": "invoke",
+			"lineno": "Tone/core/TransportEvent.js#L71"
+		},
+		{
+			"description": "Clean up",
+			"returns": {
+				"type": [
+					"Tone.TransportEvent"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/core/TransportEvent.js#L84"
 		}
 	],
 	"TransportRepeatEvent": [
