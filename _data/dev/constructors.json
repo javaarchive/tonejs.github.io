@@ -2533,6 +2533,31 @@
 		],
 		"extends": "Tone.TimeBase"
 	},
+	"Midi": {
+		"description": "Tone.Midi is a primitive type for encoding Time values.\n        Tone.Midi can be constructed with or without the `new` keyword. Tone.Midi can be passed\n        into the parameter of any method which takes time as an argument.",
+		"params": [
+			{
+				"type": [
+					"String",
+					"Number"
+				],
+				"description": "The time value.",
+				"name": "val"
+			},
+			{
+				"type": [
+					"String"
+				],
+				"optional": true,
+				"description": "The units of the value.",
+				"name": "units"
+			}
+		],
+		"examples": [
+			"var t = Tone.Midi(\"4n\");//a quarter note"
+		],
+		"extends": "Tone.Frequency"
+	},
 	"Ticks": {
 		"description": "Tone.Ticks is a primitive type for encoding Time values.\n        Tone.Ticks can be constructed with or without the `new` keyword. Tone.Ticks can be passed\n        into the parameter of any method which takes time as an argument.",
 		"params": [

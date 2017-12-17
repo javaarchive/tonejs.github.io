@@ -22201,14 +22201,14 @@
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/Frequency.js#L41"
+			"lineno": "Tone/type/Frequency.js#L45"
 		}
 	],
 	"tr": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/Frequency.js#L49"
+			"lineno": "Tone/type/Frequency.js#L57"
 		},
 		{
 			"scope": "static",
@@ -22238,7 +22238,7 @@
 			},
 			"scope": "instance",
 			"name": "transpose",
-			"lineno": "Tone/type/Frequency.js#L76"
+			"lineno": "Tone/type/Frequency.js#L84"
 		},
 		{
 			"description": "Takes an array of semitone intervals and returns\n an array of frequencies transposed by those intervals.",
@@ -22261,7 +22261,7 @@
 			},
 			"scope": "instance",
 			"name": "harmonize",
-			"lineno": "Tone/type/Frequency.js#L92"
+			"lineno": "Tone/type/Frequency.js#L100"
 		},
 		{
 			"description": "Return the value of the frequency as a MIDI note",
@@ -22275,7 +22275,7 @@
 			},
 			"scope": "instance",
 			"name": "toMidi",
-			"lineno": "Tone/type/Frequency.js#L114"
+			"lineno": "Tone/type/Frequency.js#L122"
 		},
 		{
 			"description": "Return the value of the frequency in Scientific Pitch Notation",
@@ -22289,7 +22289,7 @@
 			},
 			"scope": "instance",
 			"name": "toNote",
-			"lineno": "Tone/type/Frequency.js#L124"
+			"lineno": "Tone/type/Frequency.js#L132"
 		},
 		{
 			"description": "Return the duration of one cycle in seconds.",
@@ -22300,7 +22300,7 @@
 			},
 			"scope": "instance",
 			"name": "toSeconds",
-			"lineno": "Tone/type/Frequency.js#L140"
+			"lineno": "Tone/type/Frequency.js#L148"
 		},
 		{
 			"description": "Return the value in Hertz",
@@ -22311,7 +22311,7 @@
 			},
 			"scope": "instance",
 			"name": "toFrequency",
-			"lineno": "Tone/type/Frequency.js#L148"
+			"lineno": "Tone/type/Frequency.js#L156"
 		},
 		{
 			"description": "Return the duration of one cycle in ticks",
@@ -22322,7 +22322,7 @@
 			},
 			"scope": "instance",
 			"name": "toTicks",
-			"lineno": "Tone/type/Frequency.js#L156"
+			"lineno": "Tone/type/Frequency.js#L164"
 		},
 		{
 			"description": "Convert a MIDI note to frequency value.",
@@ -22336,7 +22336,7 @@
 				}
 			],
 			"examples": [
-				"tone.midiToFrequency(69); // returns 440"
+				"Tone.Frequency.mtof(69); // returns 440"
 			],
 			"returns": {
 				"type": [
@@ -22344,9 +22344,9 @@
 				],
 				"description": "the corresponding frequency value"
 			},
-			"scope": "instance",
-			"name": "midiToFrequency",
-			"lineno": "Tone/type/Frequency.js#L260"
+			"scope": "static",
+			"name": "mtof",
+			"lineno": "Tone/type/Frequency.js#L269"
 		},
 		{
 			"description": "Convert a frequency value to a MIDI note.",
@@ -22360,16 +22360,16 @@
 				}
 			],
 			"examples": [
-				"tone.midiToFrequency(440); // returns 69"
+				"Tone.Frequency.ftom(440); // returns 69"
 			],
 			"returns": {
 				"type": [
 					"MIDI"
 				]
 			},
-			"scope": "instance",
-			"name": "frequencyToMidi",
-			"lineno": "Tone/type/Frequency.js#L271"
+			"scope": "static",
+			"name": "ftom",
+			"lineno": "Tone/type/Frequency.js#L281"
 		},
 		{
 			"description": "Evaluate the time value. Returns the time\n in seconds.",
@@ -22384,6 +22384,30 @@
 			"inherits": "Tone.TimeBase"
 		},
 		{
+			"description": "Return the time in samples",
+			"returns": {
+				"type": [
+					"Samples"
+				]
+			},
+			"scope": "instance",
+			"name": "toSamples",
+			"lineno": "Tone/type/TimeBase.js#L318",
+			"inherits": "Tone.TimeBase"
+		},
+		{
+			"description": "Return the time in milliseconds.",
+			"returns": {
+				"type": [
+					"Milliseconds"
+				]
+			},
+			"scope": "instance",
+			"name": "toMilliseconds",
+			"lineno": "Tone/type/TimeBase.js#L326",
+			"inherits": "Tone.TimeBase"
+		},
+		{
 			"description": "Clean up",
 			"returns": {
 				"type": [
@@ -22393,7 +22417,173 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/type/TimeBase.js#L310",
+			"lineno": "Tone/type/TimeBase.js#L334",
+			"inherits": "Tone.TimeBase"
+		}
+	],
+	"Midi": [
+		{
+			"description": "Return the value of the frequency as a MIDI note",
+			"examples": [
+				"Tone.Midi(60).toMidi(); //60"
+			],
+			"returns": {
+				"type": [
+					"MIDI"
+				]
+			},
+			"scope": "instance",
+			"name": "toMidi",
+			"lineno": "Tone/type/Midi.js#L79"
+		},
+		{
+			"description": "Return the value of the frequency as a MIDI note",
+			"examples": [
+				"Tone.Midi(60).toMidi(); //60"
+			],
+			"returns": {
+				"type": [
+					"MIDI"
+				]
+			},
+			"scope": "instance",
+			"name": "toFrequency",
+			"lineno": "Tone/type/Midi.js#L89"
+		},
+		{
+			"description": "Transposes the frequency by the given number of semitones.",
+			"params": [
+				{
+					"type": [
+						"Interval"
+					],
+					"name": "interval"
+				}
+			],
+			"examples": [
+				"Tone.Frequency(\"A4\").transpose(3); //\"C5\""
+			],
+			"returns": {
+				"type": [
+					"Tone.Frequency"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "transpose",
+			"lineno": "Tone/type/Frequency.js#L84",
+			"inherits": "Tone.Frequency"
+		},
+		{
+			"description": "Takes an array of semitone intervals and returns\n an array of frequencies transposed by those intervals.",
+			"params": [
+				{
+					"type": [
+						"Array"
+					],
+					"name": "intervals"
+				}
+			],
+			"examples": [
+				"Tone.Frequency(\"A4\").harmonize([0, 3, 7]); //[\"A4\", \"C5\", \"E5\"]"
+			],
+			"returns": {
+				"type": [
+					"Tone.Frequency"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "harmonize",
+			"lineno": "Tone/type/Frequency.js#L100",
+			"inherits": "Tone.Frequency"
+		},
+		{
+			"description": "Return the value of the frequency in Scientific Pitch Notation",
+			"examples": [
+				"Tone.Frequency(69, \"midi\").toNote(); //\"A4\""
+			],
+			"returns": {
+				"type": [
+					"Note"
+				]
+			},
+			"scope": "instance",
+			"name": "toNote",
+			"lineno": "Tone/type/Frequency.js#L132",
+			"inherits": "Tone.Frequency"
+		},
+		{
+			"description": "Return the duration of one cycle in seconds.",
+			"returns": {
+				"type": [
+					"Seconds"
+				]
+			},
+			"scope": "instance",
+			"name": "toSeconds",
+			"lineno": "Tone/type/Frequency.js#L148",
+			"inherits": "Tone.Frequency"
+		},
+		{
+			"description": "Return the duration of one cycle in ticks",
+			"returns": {
+				"type": [
+					"Ticks"
+				]
+			},
+			"scope": "instance",
+			"name": "toTicks",
+			"lineno": "Tone/type/Frequency.js#L164",
+			"inherits": "Tone.Frequency"
+		},
+		{
+			"description": "Evaluate the time value. Returns the time\n in seconds.",
+			"returns": {
+				"type": [
+					"Seconds"
+				]
+			},
+			"scope": "instance",
+			"name": "valueOf",
+			"lineno": "Tone/type/TimeBase.js#L274",
+			"inherits": "Tone.TimeBase"
+		},
+		{
+			"description": "Return the time in samples",
+			"returns": {
+				"type": [
+					"Samples"
+				]
+			},
+			"scope": "instance",
+			"name": "toSamples",
+			"lineno": "Tone/type/TimeBase.js#L318",
+			"inherits": "Tone.TimeBase"
+		},
+		{
+			"description": "Return the time in milliseconds.",
+			"returns": {
+				"type": [
+					"Milliseconds"
+				]
+			},
+			"scope": "instance",
+			"name": "toMilliseconds",
+			"lineno": "Tone/type/TimeBase.js#L326",
+			"inherits": "Tone.TimeBase"
+		},
+		{
+			"description": "Clean up",
+			"returns": {
+				"type": [
+					"Tone.TimeBase"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/type/TimeBase.js#L334",
 			"inherits": "Tone.TimeBase"
 		}
 	],
@@ -22483,42 +22673,15 @@
 			"inherits": "Tone.Time"
 		},
 		{
-			"description": "Return the time in samples",
+			"description": "Return the value as a midi note.",
 			"returns": {
 				"type": [
-					"Samples"
+					"Midi"
 				]
 			},
 			"scope": "instance",
-			"name": "toSamples",
-			"lineno": "Tone/type/Time.js#L140",
-			"inherits": "Tone.Time"
-		},
-		{
-			"description": "Return the time as a frequency value",
-			"examples": [
-				"Tone.Time(2).toFrequency(); //0.5"
-			],
-			"returns": {
-				"type": [
-					"Frequency"
-				]
-			},
-			"scope": "instance",
-			"name": "toFrequency",
-			"lineno": "Tone/type/Time.js#L150",
-			"inherits": "Tone.Time"
-		},
-		{
-			"description": "Return the time in milliseconds.",
-			"returns": {
-				"type": [
-					"Milliseconds"
-				]
-			},
-			"scope": "instance",
-			"name": "toMilliseconds",
-			"lineno": "Tone/type/Time.js#L166",
+			"name": "toMidi",
+			"lineno": "Tone/type/Time.js#L148",
 			"inherits": "Tone.Time"
 		},
 		{
@@ -22534,6 +22697,42 @@
 			"inherits": "Tone.TimeBase"
 		},
 		{
+			"description": "Return the value in hertz",
+			"returns": {
+				"type": [
+					"Frequency"
+				]
+			},
+			"scope": "instance",
+			"name": "toFrequency",
+			"lineno": "Tone/type/TimeBase.js#L310",
+			"inherits": "Tone.TimeBase"
+		},
+		{
+			"description": "Return the time in samples",
+			"returns": {
+				"type": [
+					"Samples"
+				]
+			},
+			"scope": "instance",
+			"name": "toSamples",
+			"lineno": "Tone/type/TimeBase.js#L318",
+			"inherits": "Tone.TimeBase"
+		},
+		{
+			"description": "Return the time in milliseconds.",
+			"returns": {
+				"type": [
+					"Milliseconds"
+				]
+			},
+			"scope": "instance",
+			"name": "toMilliseconds",
+			"lineno": "Tone/type/TimeBase.js#L326",
+			"inherits": "Tone.TimeBase"
+		},
+		{
 			"description": "Clean up",
 			"returns": {
 				"type": [
@@ -22543,7 +22742,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/type/TimeBase.js#L310",
+			"lineno": "Tone/type/TimeBase.js#L334",
 			"inherits": "Tone.TimeBase"
 		}
 	],
@@ -22633,31 +22832,6 @@
 			"lineno": "Tone/type/Time.js#L130"
 		},
 		{
-			"description": "Return the time in samples",
-			"returns": {
-				"type": [
-					"Samples"
-				]
-			},
-			"scope": "instance",
-			"name": "toSamples",
-			"lineno": "Tone/type/Time.js#L140"
-		},
-		{
-			"description": "Return the time as a frequency value",
-			"examples": [
-				"Tone.Time(2).toFrequency(); //0.5"
-			],
-			"returns": {
-				"type": [
-					"Frequency"
-				]
-			},
-			"scope": "instance",
-			"name": "toFrequency",
-			"lineno": "Tone/type/Time.js#L150"
-		},
-		{
 			"description": "Return the time in seconds.",
 			"returns": {
 				"type": [
@@ -22666,18 +22840,18 @@
 			},
 			"scope": "instance",
 			"name": "toSeconds",
-			"lineno": "Tone/type/Time.js#L158"
+			"lineno": "Tone/type/Time.js#L140"
 		},
 		{
-			"description": "Return the time in milliseconds.",
+			"description": "Return the value as a midi note.",
 			"returns": {
 				"type": [
-					"Milliseconds"
+					"Midi"
 				]
 			},
 			"scope": "instance",
-			"name": "toMilliseconds",
-			"lineno": "Tone/type/Time.js#L166"
+			"name": "toMidi",
+			"lineno": "Tone/type/Time.js#L148"
 		},
 		{
 			"description": "Evaluate the time value. Returns the time\n in seconds.",
@@ -22692,6 +22866,42 @@
 			"inherits": "Tone.TimeBase"
 		},
 		{
+			"description": "Return the value in hertz",
+			"returns": {
+				"type": [
+					"Frequency"
+				]
+			},
+			"scope": "instance",
+			"name": "toFrequency",
+			"lineno": "Tone/type/TimeBase.js#L310",
+			"inherits": "Tone.TimeBase"
+		},
+		{
+			"description": "Return the time in samples",
+			"returns": {
+				"type": [
+					"Samples"
+				]
+			},
+			"scope": "instance",
+			"name": "toSamples",
+			"lineno": "Tone/type/TimeBase.js#L318",
+			"inherits": "Tone.TimeBase"
+		},
+		{
+			"description": "Return the time in milliseconds.",
+			"returns": {
+				"type": [
+					"Milliseconds"
+				]
+			},
+			"scope": "instance",
+			"name": "toMilliseconds",
+			"lineno": "Tone/type/TimeBase.js#L326",
+			"inherits": "Tone.TimeBase"
+		},
+		{
 			"description": "Clean up",
 			"returns": {
 				"type": [
@@ -22701,7 +22911,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/type/TimeBase.js#L310",
+			"lineno": "Tone/type/TimeBase.js#L334",
 			"inherits": "Tone.TimeBase"
 		}
 	],
@@ -22785,6 +22995,39 @@
 			"lineno": "Tone/type/TimeBase.js#L302"
 		},
 		{
+			"description": "Return the value in hertz",
+			"returns": {
+				"type": [
+					"Frequency"
+				]
+			},
+			"scope": "instance",
+			"name": "toFrequency",
+			"lineno": "Tone/type/TimeBase.js#L310"
+		},
+		{
+			"description": "Return the time in samples",
+			"returns": {
+				"type": [
+					"Samples"
+				]
+			},
+			"scope": "instance",
+			"name": "toSamples",
+			"lineno": "Tone/type/TimeBase.js#L318"
+		},
+		{
+			"description": "Return the time in milliseconds.",
+			"returns": {
+				"type": [
+					"Milliseconds"
+				]
+			},
+			"scope": "instance",
+			"name": "toMilliseconds",
+			"lineno": "Tone/type/TimeBase.js#L326"
+		},
+		{
 			"description": "Clean up",
 			"returns": {
 				"type": [
@@ -22794,7 +23037,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/type/TimeBase.js#L310"
+			"lineno": "Tone/type/TimeBase.js#L334"
 		}
 	],
 	"AnalyserNode": [
@@ -22999,33 +23242,6 @@
 			"inherits": "Tone.Time"
 		},
 		{
-			"description": "Return the time in samples",
-			"returns": {
-				"type": [
-					"Samples"
-				]
-			},
-			"scope": "instance",
-			"name": "toSamples",
-			"lineno": "Tone/type/Time.js#L140",
-			"inherits": "Tone.Time"
-		},
-		{
-			"description": "Return the time as a frequency value",
-			"examples": [
-				"Tone.Time(2).toFrequency(); //0.5"
-			],
-			"returns": {
-				"type": [
-					"Frequency"
-				]
-			},
-			"scope": "instance",
-			"name": "toFrequency",
-			"lineno": "Tone/type/Time.js#L150",
-			"inherits": "Tone.Time"
-		},
-		{
 			"description": "Return the time in seconds.",
 			"returns": {
 				"type": [
@@ -23034,19 +23250,19 @@
 			},
 			"scope": "instance",
 			"name": "toSeconds",
-			"lineno": "Tone/type/Time.js#L158",
+			"lineno": "Tone/type/Time.js#L140",
 			"inherits": "Tone.Time"
 		},
 		{
-			"description": "Return the time in milliseconds.",
+			"description": "Return the value as a midi note.",
 			"returns": {
 				"type": [
-					"Milliseconds"
+					"Midi"
 				]
 			},
 			"scope": "instance",
-			"name": "toMilliseconds",
-			"lineno": "Tone/type/Time.js#L166",
+			"name": "toMidi",
+			"lineno": "Tone/type/Time.js#L148",
 			"inherits": "Tone.Time"
 		},
 		{
@@ -23062,6 +23278,42 @@
 			"inherits": "Tone.TimeBase"
 		},
 		{
+			"description": "Return the value in hertz",
+			"returns": {
+				"type": [
+					"Frequency"
+				]
+			},
+			"scope": "instance",
+			"name": "toFrequency",
+			"lineno": "Tone/type/TimeBase.js#L310",
+			"inherits": "Tone.TimeBase"
+		},
+		{
+			"description": "Return the time in samples",
+			"returns": {
+				"type": [
+					"Samples"
+				]
+			},
+			"scope": "instance",
+			"name": "toSamples",
+			"lineno": "Tone/type/TimeBase.js#L318",
+			"inherits": "Tone.TimeBase"
+		},
+		{
+			"description": "Return the time in milliseconds.",
+			"returns": {
+				"type": [
+					"Milliseconds"
+				]
+			},
+			"scope": "instance",
+			"name": "toMilliseconds",
+			"lineno": "Tone/type/TimeBase.js#L326",
+			"inherits": "Tone.TimeBase"
+		},
+		{
 			"description": "Clean up",
 			"returns": {
 				"type": [
@@ -23071,7 +23323,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/type/TimeBase.js#L310",
+			"lineno": "Tone/type/TimeBase.js#L334",
 			"inherits": "Tone.TimeBase"
 		}
 	]

@@ -590,6 +590,11 @@
 		"TimeBase",
 		"Tone"
 	],
+	"Midi": [
+		"Frequency",
+		"TimeBase",
+		"Tone"
+	],
 	"Ticks": [
 		"TransportTime",
 		"Time",

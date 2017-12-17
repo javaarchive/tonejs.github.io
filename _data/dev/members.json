@@ -7158,6 +7158,18 @@
 			"inherits": "Tone.TimeBase"
 		}
 	],
+	"Midi": [
+		{
+			"description": "The units",
+			"type": [
+				"String"
+			],
+			"scope": "instance",
+			"name": "_units",
+			"lineno": "Tone/type/TimeBase.js#L31",
+			"inherits": "Tone.TimeBase"
+		}
+	],
 	"Time": [
 		{
 			"description": "The units",
