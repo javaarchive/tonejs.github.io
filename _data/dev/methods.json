@@ -22400,7 +22400,7 @@
 				"type": [
 					"Tone.Frequency"
 				],
-				"description": "this"
+				"description": "A new transposed frequency"
 			},
 			"scope": "instance",
 			"name": "transpose",
@@ -22421,13 +22421,13 @@
 			],
 			"returns": {
 				"type": [
-					"Tone.Frequency"
+					"Array.<Tone.Frequency>"
 				],
-				"description": "this"
+				"description": "Returns an array of Frequencies"
 			},
 			"scope": "instance",
 			"name": "harmonize",
-			"lineno": "Tone/type/Frequency.js#L100"
+			"lineno": "Tone/type/Frequency.js#L96"
 		},
 		{
 			"description": "Return the value of the frequency as a MIDI note",
@@ -22441,7 +22441,7 @@
 			},
 			"scope": "instance",
 			"name": "toMidi",
-			"lineno": "Tone/type/Frequency.js#L122"
+			"lineno": "Tone/type/Frequency.js#L112"
 		},
 		{
 			"description": "Return the value of the frequency in Scientific Pitch Notation",
@@ -22455,7 +22455,7 @@
 			},
 			"scope": "instance",
 			"name": "toNote",
-			"lineno": "Tone/type/Frequency.js#L132"
+			"lineno": "Tone/type/Frequency.js#L122"
 		},
 		{
 			"description": "Return the duration of one cycle in seconds.",
@@ -22466,7 +22466,7 @@
 			},
 			"scope": "instance",
 			"name": "toSeconds",
-			"lineno": "Tone/type/Frequency.js#L148"
+			"lineno": "Tone/type/Frequency.js#L138"
 		},
 		{
 			"description": "Return the value in Hertz",
@@ -22477,7 +22477,7 @@
 			},
 			"scope": "instance",
 			"name": "toFrequency",
-			"lineno": "Tone/type/Frequency.js#L156"
+			"lineno": "Tone/type/Frequency.js#L146"
 		},
 		{
 			"description": "Return the duration of one cycle in ticks",
@@ -22488,7 +22488,7 @@
 			},
 			"scope": "instance",
 			"name": "toTicks",
-			"lineno": "Tone/type/Frequency.js#L164"
+			"lineno": "Tone/type/Frequency.js#L154"
 		},
 		{
 			"description": "Convert a MIDI note to frequency value.",
@@ -22512,7 +22512,7 @@
 			},
 			"scope": "static",
 			"name": "mtof",
-			"lineno": "Tone/type/Frequency.js#L269"
+			"lineno": "Tone/type/Frequency.js#L259"
 		},
 		{
 			"description": "Convert a frequency value to a MIDI note.",
@@ -22535,7 +22535,7 @@
 			},
 			"scope": "static",
 			"name": "ftom",
-			"lineno": "Tone/type/Frequency.js#L281"
+			"lineno": "Tone/type/Frequency.js#L271"
 		},
 		{
 			"description": "Evaluate the time value. Returns the time\n in seconds.",
@@ -22633,12 +22633,11 @@
 				"type": [
 					"Tone.Frequency"
 				],
-				"description": "this"
+				"description": "A new transposed frequency"
 			},
 			"scope": "instance",
 			"name": "transpose",
-			"lineno": "Tone/type/Frequency.js#L84",
-			"inherits": "Tone.Frequency"
+			"lineno": "Tone/type/Midi.js#L100"
 		},
 		{
 			"description": "Takes an array of semitone intervals and returns\n an array of frequencies transposed by those intervals.",
@@ -22655,13 +22654,13 @@
 			],
 			"returns": {
 				"type": [
-					"Tone.Frequency"
+					"Array.<Tone.Frequency>"
 				],
-				"description": "this"
+				"description": "Returns an array of Frequencies"
 			},
 			"scope": "instance",
 			"name": "harmonize",
-			"lineno": "Tone/type/Frequency.js#L100",
+			"lineno": "Tone/type/Frequency.js#L96",
 			"inherits": "Tone.Frequency"
 		},
 		{
@@ -22676,7 +22675,7 @@
 			},
 			"scope": "instance",
 			"name": "toNote",
-			"lineno": "Tone/type/Frequency.js#L132",
+			"lineno": "Tone/type/Frequency.js#L122",
 			"inherits": "Tone.Frequency"
 		},
 		{
@@ -22688,7 +22687,7 @@
 			},
 			"scope": "instance",
 			"name": "toSeconds",
-			"lineno": "Tone/type/Frequency.js#L148",
+			"lineno": "Tone/type/Frequency.js#L138",
 			"inherits": "Tone.Frequency"
 		},
 		{
@@ -22700,7 +22699,7 @@
 			},
 			"scope": "instance",
 			"name": "toTicks",
-			"lineno": "Tone/type/Frequency.js#L164",
+			"lineno": "Tone/type/Frequency.js#L154",
 			"inherits": "Tone.Frequency"
 		},
 		{
