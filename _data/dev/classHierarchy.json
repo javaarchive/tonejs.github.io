@@ -424,13 +424,6 @@
 	"SignalBase": [
 		"Tone"
 	],
-	"TickSignal": [
-		"TimelineSignal",
-		"Signal",
-		"Param",
-		"AudioNode",
-		"Tone"
-	],
 	"TransportTimelineSignal": [
 		"TimelineSignal",
 		"Signal",
@@ -504,6 +497,13 @@
 		"Tone"
 	],
 	"Subtract": [
+		"Signal",
+		"Param",
+		"AudioNode",
+		"Tone"
+	],
+	"TickSignal": [
+		"TimelineSignal",
 		"Signal",
 		"Param",
 		"AudioNode",

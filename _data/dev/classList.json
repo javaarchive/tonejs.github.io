@@ -110,7 +110,6 @@
 	"signal": [
 		"Multiply",
 		"SignalBase",
-		"TickSignal",
 		"TransportTimelineSignal",
 		"Zero",
 		"Abs",
@@ -128,6 +127,7 @@
 		"ScaleExp",
 		"Signal",
 		"Subtract",
+		"TickSignal",
 		"TimelineSignal",
 		"WaveShaper"
 	],
