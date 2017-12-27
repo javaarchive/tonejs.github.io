@@ -1864,19 +1864,6 @@
 		"description": "Base class for all Signals. Used Internally.",
 		"extends": "Tone"
 	},
-	"TickSignal": {
-		"description": "Tone.TickSignal extends Tone.TimelineSignal, but adds the capability\n       to calculate the number of elapsed ticks. exponential and target curves\n       are approximated with multiple linear ramps.\n\n       Thank you Bruno Dias, H. Sofia Pinto, and David M. Matos, for your [WAC paper](https://smartech.gatech.edu/bitstream/handle/1853/54588/WAC2016-49.pdf)\n       describing integrating timing functions for tempo calculations.",
-		"params": [
-			{
-				"type": [
-					"Number"
-				],
-				"description": "The initial value of the signal",
-				"name": "value"
-			}
-		],
-		"extends": "Tone.TimelineSignal"
-	},
 	"TransportTimelineSignal": {
 		"description": "Tone.TransportTimelineSignal extends Tone.TimelineSignal, but adds the ability to synchronize the signal to the signal to the Tone.Transport",
 		"extends": "Tone.TimelineSignal"
@@ -2141,6 +2128,19 @@
 			"var sub = new Tone.Subtract();\nvar sigA = new Tone.Signal(10);\nvar sigB = new Tone.Signal(2.5);\nsigA.connect(sub, 0, 0);\nsigB.connect(sub, 0, 1);\n//output of sub is 7.5"
 		],
 		"extends": "Tone.Signal"
+	},
+	"TickSignal": {
+		"description": "Tone.TickSignal extends Tone.TimelineSignal, but adds the capability\n       to calculate the number of elapsed ticks. exponential and target curves\n       are approximated with multiple linear ramps.\n\n       Thank you Bruno Dias, H. Sofia Pinto, and David M. Matos, for your [WAC paper](https://smartech.gatech.edu/bitstream/handle/1853/54588/WAC2016-49.pdf)\n       describing integrating timing functions for tempo calculations.",
+		"params": [
+			{
+				"type": [
+					"Number"
+				],
+				"description": "The initial value of the signal",
+				"name": "value"
+			}
+		],
+		"extends": "Tone.TimelineSignal"
 	},
 	"TimelineSignal": {
 		"description": "A signal which adds the method getValueAtTime.\n        Code and inspiration from https://github.com/jsantell/web-audio-automation-timeline",
