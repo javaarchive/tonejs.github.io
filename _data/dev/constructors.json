@@ -2166,7 +2166,7 @@
 		"extends": "Tone.Signal"
 	},
 	"WaveShaper": {
-		"description": "Wraps the native Web Audio API \n        [WaveShaperNode](http://webaudio.github.io/web-audio-api/#the-waveshapernode-interface).",
+		"description": "Wraps the native Web Audio API\n        [WaveShaperNode](http://webaudio.github.io/web-audio-api/#the-waveshapernode-interface).",
 		"params": [
 			{
 				"type": [
@@ -2174,7 +2174,7 @@
 					"Array",
 					"Number"
 				],
-				"description": "The function used to define the values. \n                                   The mapping function should take two arguments: \n                                   the first is the value at the current position \n                                   and the second is the array position. \n                                   If the argument is an array, that array will be\n                                   set as the wave shaping function. The input\n                                   signal is an AudioRange [-1, 1] value and the output\n                                   signal can take on any numerical values.",
+				"description": "The function used to define the values.\n                                   The mapping function should take two arguments:\n                                   the first is the value at the current position\n                                   and the second is the array position.\n                                   If the argument is an array, that array will be\n                                   set as the wave shaping function. The input\n                                   signal is an AudioRange [-1, 1] value and the output\n                                   signal can take on any numerical values.",
 				"name": "mapping"
 			},
 			{

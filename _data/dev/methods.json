@@ -19579,7 +19579,7 @@
 					"type": [
 						"function"
 					],
-					"description": "The function used to define the values. \n                           The mapping function take two arguments: \n                           the first is the value at the current position \n                           which goes from -1 to 1 over the number of elements\n                           in the curve array. The second argument is the array position.",
+					"description": "The function used to define the values.\n                           The mapping function take two arguments:\n                           the first is the value at the current position\n                           which goes from -1 to 1 over the number of elements\n                           in the curve array. The second argument is the array position.",
 					"name": "mapping"
 				}
 			],
@@ -19606,7 +19606,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/signal/WaveShaper.js#L124"
+			"lineno": "Tone/signal/WaveShaper.js#L135"
 		},
 		{
 			"description": "When signals connect to other signals or AudioParams,\n they take over the output value of that signal or AudioParam.\n For all other nodes, the behavior is the same as a default <code>connect</code>.",

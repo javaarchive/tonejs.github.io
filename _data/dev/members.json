@@ -4871,16 +4871,16 @@
 			],
 			"scope": "instance",
 			"name": "curve",
-			"lineno": "Tone/signal/WaveShaper.js#L82"
+			"lineno": "Tone/signal/WaveShaper.js#L83"
 		},
 		{
-			"description": "Specifies what type of oversampling (if any) should be used when \napplying the shaping curve. Can either be \"none\", \"2x\" or \"4x\".",
+			"description": "Specifies what type of oversampling (if any) should be used when\napplying the shaping curve. Can either be \"none\", \"2x\" or \"4x\".",
 			"type": [
 				"string"
 			],
 			"scope": "instance",
 			"name": "oversample",
-			"lineno": "Tone/signal/WaveShaper.js#L100"
+			"lineno": "Tone/signal/WaveShaper.js#L111"
 		}
 	],
 	"AMOscillator": [
