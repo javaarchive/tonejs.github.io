@@ -19914,7 +19914,7 @@
 			},
 			"scope": "instance",
 			"name": "start",
-			"lineno": "Tone/source/BufferSource.js#L154"
+			"lineno": "Tone/source/BufferSource.js#L163"
 		},
 		{
 			"description": "Stop the buffer. Optionally add a ramp time to fade the\n buffer out.",
@@ -19944,7 +19944,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/BufferSource.js#L229"
+			"lineno": "Tone/source/BufferSource.js#L241"
 		},
 		{
 			"description": "Clean up.",
@@ -19956,7 +19956,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/BufferSource.js#L356"
+			"lineno": "Tone/source/BufferSource.js#L370"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",

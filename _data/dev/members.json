@@ -5043,7 +5043,7 @@
 			],
 			"scope": "instance",
 			"name": "playbackRate",
-			"lineno": "Tone/source/BufferSource.js#L64",
+			"lineno": "Tone/source/BufferSource.js#L73",
 			"signal": true
 		},
 		{
@@ -5053,7 +5053,7 @@
 			],
 			"scope": "instance",
 			"name": "fadeIn",
-			"lineno": "Tone/source/BufferSource.js#L70"
+			"lineno": "Tone/source/BufferSource.js#L79"
 		},
 		{
 			"description": "The fadeOut time of the amplitude envelope.",
@@ -5062,7 +5062,7 @@
 			],
 			"scope": "instance",
 			"name": "fadeOut",
-			"lineno": "Tone/source/BufferSource.js#L76"
+			"lineno": "Tone/source/BufferSource.js#L85"
 		},
 		{
 			"description": "The curve applied to the fades, either \"linear\" or \"exponential\"",
@@ -5071,7 +5071,7 @@
 			],
 			"scope": "instance",
 			"name": "curve",
-			"lineno": "Tone/source/BufferSource.js#L82"
+			"lineno": "Tone/source/BufferSource.js#L91"
 		},
 		{
 			"description": "Returns the playback state of the source, either \"started\" or \"stopped\".",
@@ -5081,7 +5081,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "state",
-			"lineno": "Tone/source/BufferSource.js#L124"
+			"lineno": "Tone/source/BufferSource.js#L133"
 		},
 		{
 			"description": "If loop is true, the loop will start at this position.",
@@ -5090,7 +5090,7 @@
 			],
 			"scope": "instance",
 			"name": "loopStart",
-			"lineno": "Tone/source/BufferSource.js#L292"
+			"lineno": "Tone/source/BufferSource.js#L306"
 		},
 		{
 			"description": "If loop is true, the loop will end at this position.",
@@ -5099,7 +5099,7 @@
 			],
 			"scope": "instance",
 			"name": "loopEnd",
-			"lineno": "Tone/source/BufferSource.js#L307"
+			"lineno": "Tone/source/BufferSource.js#L321"
 		},
 		{
 			"description": "The audio buffer belonging to the player.",
@@ -5108,7 +5108,7 @@
 			],
 			"scope": "instance",
 			"name": "buffer",
-			"lineno": "Tone/source/BufferSource.js#L322"
+			"lineno": "Tone/source/BufferSource.js#L336"
 		},
 		{
 			"description": "If the buffer should loop once it's over.",
@@ -5117,7 +5117,7 @@
 			],
 			"scope": "instance",
 			"name": "loop",
-			"lineno": "Tone/source/BufferSource.js#L337"
+			"lineno": "Tone/source/BufferSource.js#L351"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
