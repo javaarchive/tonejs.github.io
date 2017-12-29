@@ -3199,7 +3199,7 @@
 			],
 			"scope": "instance",
 			"name": "type",
-			"lineno": "Tone/effect/Tremolo.js#L145"
+			"lineno": "Tone/effect/Tremolo.js#L147"
 		},
 		{
 			"description": "Amount of stereo spread. When set to 0, both LFO's will be panned centrally.\nWhen set to 180, LFO's will be panned hard left and right respectively.",
@@ -3208,7 +3208,7 @@
 			],
 			"scope": "instance",
 			"name": "spread",
-			"lineno": "Tone/effect/Tremolo.js#L161"
+			"lineno": "Tone/effect/Tremolo.js#L163"
 		},
 		{
 			"description": "The wet control, i.e. how much of the effected\n will pass through to the output.",

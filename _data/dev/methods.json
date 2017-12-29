@@ -10346,7 +10346,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/effect/Tremolo.js#L139"
+			"lineno": "Tone/effect/Tremolo.js#L140"
 		},
 		{
 			"description": "clean up",
@@ -10358,7 +10358,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/effect/Tremolo.js#L182"
+			"lineno": "Tone/effect/Tremolo.js#L184"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
