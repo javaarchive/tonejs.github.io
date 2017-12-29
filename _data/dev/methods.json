@@ -4544,6 +4544,12 @@
 			"scope": "inner",
 			"name": "ConstantSourceNode",
 			"lineno": "Tone/shim/ConstantSourceNode.js#L5"
+		},
+		{
+			"params": [],
+			"scope": "inner",
+			"name": "WaveShaperNode",
+			"lineno": "Tone/shim/WaveShaperNode.js#L10"
 		}
 	],
 	"Buffers": [
@@ -19606,7 +19612,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/signal/WaveShaper.js#L135"
+			"lineno": "Tone/signal/WaveShaper.js#L125"
 		},
 		{
 			"description": "When signals connect to other signals or AudioParams,\n they take over the output value of that signal or AudioParam.\n For all other nodes, the behavior is the same as a default <code>connect</code>.",
@@ -23249,6 +23255,11 @@
 			"scope": "instance",
 			"name": "createStereoPanner",
 			"lineno": "Tone/shim/StereoPannerNode.js#L95"
+		},
+		{
+			"scope": "instance",
+			"name": "createWaveShaper",
+			"lineno": "Tone/shim/WaveShaperNode.js#L52"
 		}
 	],
 	"AudioParam": [
@@ -23329,6 +23340,13 @@
 			"scope": "instance",
 			"name": "connect",
 			"lineno": "Tone/shim/StereoPannerNode.js#L90"
+		}
+	],
+	"<anonymous>~WaveShaperNode": [
+		{
+			"scope": "instance",
+			"name": "_defineProperty",
+			"lineno": "Tone/shim/WaveShaperNode.js#L34"
 		}
 	],
 	"TransportTime": [

@@ -4880,7 +4880,7 @@
 			],
 			"scope": "instance",
 			"name": "oversample",
-			"lineno": "Tone/signal/WaveShaper.js#L111"
+			"lineno": "Tone/signal/WaveShaper.js#L101"
 		}
 	],
 	"AMOscillator": [
