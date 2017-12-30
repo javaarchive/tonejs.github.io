@@ -4518,30 +4518,6 @@
 		{
 			"params": [],
 			"scope": "inner",
-			"name": "initializeAudioParam",
-			"lineno": "Tone/shim/AudioParam.js#L4"
-		},
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "exponentialApproach",
-			"lineno": "Tone/shim/AudioParam.js#L16"
-		},
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "linearInterpolate",
-			"lineno": "Tone/shim/AudioParam.js#L21"
-		},
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "exponentialInterpolate",
-			"lineno": "Tone/shim/AudioParam.js#L26"
-		},
-		{
-			"params": [],
-			"scope": "inner",
 			"name": "ConstantSourceNode",
 			"lineno": "Tone/shim/ConstantSourceNode.js#L5"
 		},
@@ -22491,38 +22467,6 @@
 			"scope": "instance",
 			"name": "createWaveShaper",
 			"lineno": "Tone/shim/WaveShaperNode.js#L52"
-		}
-	],
-	"AudioParam": [
-		{
-			"scope": "instance",
-			"name": "[undefined]",
-			"lineno": "Tone/shim/AudioParam.js#L96"
-		},
-		{
-			"scope": "instance",
-			"name": "setTargetAtTime",
-			"lineno": "Tone/shim/AudioParam.js#L121"
-		},
-		{
-			"scope": "instance",
-			"name": "setValueCurveAtTime",
-			"lineno": "Tone/shim/AudioParam.js#L137"
-		},
-		{
-			"scope": "instance",
-			"name": "cancelScheduledValues",
-			"lineno": "Tone/shim/AudioParam.js#L163"
-		},
-		{
-			"scope": "instance",
-			"name": "cancelAndHoldAtTime",
-			"lineno": "Tone/shim/AudioParam.js#L173"
-		},
-		{
-			"scope": "instance",
-			"name": "getValueAtTime",
-			"lineno": "Tone/shim/AudioParam.js#L231"
 		}
 	],
 	"<anonymous>~ConstantSourceNode": [
