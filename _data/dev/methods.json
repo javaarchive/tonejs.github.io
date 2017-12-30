@@ -22467,12 +22467,12 @@
 		{
 			"scope": "instance",
 			"name": "resume",
-			"lineno": "Tone/shim/AudioContext.js#L21"
+			"lineno": "Tone/shim/AudioContext.js#L20"
 		},
 		{
 			"scope": "instance",
 			"name": "decodeAudioData",
-			"lineno": "Tone/shim/AudioContext.js#L53"
+			"lineno": "Tone/shim/AudioContext.js#L52"
 		},
 		{
 			"scope": "instance",
