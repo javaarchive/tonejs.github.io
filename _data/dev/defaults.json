@@ -157,7 +157,9 @@
 	},
 	"Buffer": {
 		"url": "undefined",
-		"reverse": false
+		"reverse": false,
+		"onload": "Tone.noOp",
+		"onerror": "Tone.noOp"
 	},
 	"Buffers": {
 		"onload": "Tone.noOp",
