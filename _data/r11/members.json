@@ -6917,114 +6917,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"Multiply": [
-		{
-			"description": "The units of the parameter",
-			"type": [
-				"Tone.Type"
-			],
-			"scope": "instance",
-			"name": "units",
-			"lineno": "Tone/core/Param.js#L31",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "If the value should be converted or not",
-			"type": [
-				"Boolean"
-			],
-			"scope": "instance",
-			"name": "convert",
-			"lineno": "Tone/core/Param.js#L37",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "The current value of the parameter.",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "value",
-			"lineno": "Tone/core/Param.js#L75",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "The LFO created by the signal instance. If none\n was created, this is null.",
-			"type": [
-				"Tone.LFO"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L407",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"TransportTimelineSignal": [
-		{
-			"description": "The current value of the signal.",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "value",
-			"lineno": "Tone/signal/TimelineSignal.js#L50",
-			"inherits": "Tone.TimelineSignal"
-		},
-		{
-			"description": "The units of the parameter",
-			"type": [
-				"Tone.Type"
-			],
-			"scope": "instance",
-			"name": "units",
-			"lineno": "Tone/core/Param.js#L31",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "If the value should be converted or not",
-			"type": [
-				"Boolean"
-			],
-			"scope": "instance",
-			"name": "convert",
-			"lineno": "Tone/core/Param.js#L37",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "The LFO created by the signal instance. If none\n was created, this is null.",
-			"type": [
-				"Tone.LFO"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "lfo",
-			"lineno": "Tone/core/Param.js#L407",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"Add": [
 		{
 			"description": "The units of the parameter",
@@ -7133,6 +7025,60 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
+	"Multiply": [
+		{
+			"description": "The units of the parameter",
+			"type": [
+				"Tone.Type"
+			],
+			"scope": "instance",
+			"name": "units",
+			"lineno": "Tone/core/Param.js#L31",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "If the value should be converted or not",
+			"type": [
+				"Boolean"
+			],
+			"scope": "instance",
+			"name": "convert",
+			"lineno": "Tone/core/Param.js#L37",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "The current value of the parameter.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "value",
+			"lineno": "Tone/core/Param.js#L75",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "The LFO created by the signal instance. If none\n was created, this is null.",
+			"type": [
+				"Tone.LFO"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "lfo",
+			"lineno": "Tone/core/Param.js#L407",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
 	"Subtract": [
 		{
 			"description": "The units of the parameter",
@@ -7188,6 +7134,60 @@
 		}
 	],
 	"TickSignal": [
+		{
+			"description": "The current value of the signal.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "value",
+			"lineno": "Tone/signal/TimelineSignal.js#L50",
+			"inherits": "Tone.TimelineSignal"
+		},
+		{
+			"description": "The units of the parameter",
+			"type": [
+				"Tone.Type"
+			],
+			"scope": "instance",
+			"name": "units",
+			"lineno": "Tone/core/Param.js#L31",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "If the value should be converted or not",
+			"type": [
+				"Boolean"
+			],
+			"scope": "instance",
+			"name": "convert",
+			"lineno": "Tone/core/Param.js#L37",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "The LFO created by the signal instance. If none\n was created, this is null.",
+			"type": [
+				"Tone.LFO"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "lfo",
+			"lineno": "Tone/core/Param.js#L407",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"TransportTimelineSignal": [
 		{
 			"description": "The current value of the signal.",
 			"type": [

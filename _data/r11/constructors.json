@@ -1842,32 +1842,6 @@
 		],
 		"extends": "Tone.Monophonic"
 	},
-	"Multiply": {
-		"description": "Multiply two incoming signals. Or, if a number is given in the constructor, \n         multiplies the incoming signal by that value.",
-		"params": [
-			{
-				"type": [
-					"number"
-				],
-				"optional": true,
-				"description": "Constant value to multiple. If no value is provided,\n                        it will return the product of the first and second inputs",
-				"name": "value"
-			}
-		],
-		"examples": [
-			"var mult = new Tone.Multiply();\nvar sigA = new Tone.Signal(3);\nvar sigB = new Tone.Signal(4);\nsigA.connect(mult, 0, 0);\nsigB.connect(mult, 0, 1);\n//output of mult is 12.\n ",
-			"var mult = new Tone.Multiply(10);\nvar sig = new Tone.Signal(2).connect(mult);\n//the output of mult is 20. "
-		],
-		"extends": "Tone.Signal"
-	},
-	"SignalBase": {
-		"description": "Base class for all Signals. Used Internally.",
-		"extends": "Tone"
-	},
-	"TransportTimelineSignal": {
-		"description": "Tone.TransportTimelineSignal extends Tone.TimelineSignal, but adds the ability to synchronize the signal to the signal to the Tone.Transport",
-		"extends": "Tone.TimelineSignal"
-	},
 	"Zero": {
 		"description": "Tone.Zero outputs 0's at audio-rate. The reason this has to be\n        it's own class is that many browsers optimize out Tone.Signal\n        with a value of 0 and will not process nodes further down the graph.",
 		"extends": "Tone.SignalBase"
@@ -1974,6 +1948,24 @@
 			"var mod = new Tone.Modulo(0.2)\nvar sig = new Tone.Signal(0.5).connect(mod);\n//mod outputs 0.1"
 		],
 		"extends": "Tone.SignalBase"
+	},
+	"Multiply": {
+		"description": "Multiply two incoming signals. Or, if a number is given in the constructor, \n         multiplies the incoming signal by that value.",
+		"params": [
+			{
+				"type": [
+					"number"
+				],
+				"optional": true,
+				"description": "Constant value to multiple. If no value is provided,\n                        it will return the product of the first and second inputs",
+				"name": "value"
+			}
+		],
+		"examples": [
+			"var mult = new Tone.Multiply();\nvar sigA = new Tone.Signal(3);\nvar sigB = new Tone.Signal(4);\nsigA.connect(mult, 0, 0);\nsigB.connect(mult, 0, 1);\n//output of mult is 12.\n ",
+			"var mult = new Tone.Multiply(10);\nvar sig = new Tone.Signal(2).connect(mult);\n//the output of mult is 20. "
+		],
+		"extends": "Tone.Signal"
 	},
 	"Negate": {
 		"description": "Negate the incoming signal. i.e. an input signal of 10 will output -10",
@@ -2111,6 +2103,10 @@
 		],
 		"extends": "Tone.Param"
 	},
+	"SignalBase": {
+		"description": "Base class for all Signals. Used Internally.",
+		"extends": "Tone"
+	},
 	"Subtract": {
 		"description": "Subtract the signal connected to <code>input[1]</code> from the signal connected \n        to <code>input[0]</code>. If an argument is provided in the constructor, the \n        signals <code>.value</code> will be subtracted from the incoming signal.",
 		"params": [
@@ -2163,6 +2159,10 @@
 			}
 		],
 		"extends": "Tone.Signal"
+	},
+	"TransportTimelineSignal": {
+		"description": "Tone.TransportTimelineSignal extends Tone.TimelineSignal, but adds the ability to synchronize the signal to the signal to the Tone.Transport",
+		"extends": "Tone.TimelineSignal"
 	},
 	"WaveShaper": {
 		"description": "Wraps the native Web Audio API \n        [WaveShaperNode](http://webaudio.github.io/web-audio-api/#the-waveshapernode-interface).",
