@@ -108,9 +108,6 @@
 		"Synth"
 	],
 	"signal": [
-		"Multiply",
-		"SignalBase",
-		"TransportTimelineSignal",
 		"Zero",
 		"Abs",
 		"Add",
@@ -120,15 +117,17 @@
 		"GreaterThan",
 		"GreaterThanZero",
 		"Modulo",
+		"Multiply",
 		"Negate",
 		"Normalize",
 		"Pow",
 		"Scale",
 		"ScaleExp",
 		"Signal",
+		"SignalBase",
 		"Subtract",
 		"TickSignal",
-		"TimelineSignal",
+		"TransportTimelineSignal",
 		"WaveShaper"
 	],
 	"source": [

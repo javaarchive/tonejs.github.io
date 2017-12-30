@@ -2027,7 +2027,7 @@
 			],
 			"scope": "instance",
 			"name": "value",
-			"lineno": "Tone/core/Param.js#L66"
+			"lineno": "Tone/core/Param.js#L73"
 		},
 		{
 			"description": "The minimum output value of the parameter",
@@ -2036,7 +2036,7 @@
 			],
 			"scope": "instance",
 			"name": "value",
-			"lineno": "Tone/core/Param.js#L83"
+			"lineno": "Tone/core/Param.js#L90"
 		},
 		{
 			"description": "The maximum output value of the parameter",
@@ -2045,7 +2045,7 @@
 			],
 			"scope": "instance",
 			"name": "value",
-			"lineno": "Tone/core/Param.js#L105"
+			"lineno": "Tone/core/Param.js#L112"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -4812,57 +4812,6 @@
 			"lineno": "Tone/signal/ScaleExp.js#L73"
 		}
 	],
-	"TimelineSignal": [
-		{
-			"description": "The current value of the signal.",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "value",
-			"lineno": "Tone/signal/TickSignal.js#L33"
-		},
-		{
-			"description": "The current value of the signal.",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "value",
-			"lineno": "Tone/signal/TimelineSignal.js#L50"
-		},
-		{
-			"description": "The units of the parameter",
-			"type": [
-				"Tone.Type"
-			],
-			"scope": "instance",
-			"name": "units",
-			"lineno": "Tone/core/Param.js#L31",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "If the value should be converted or not",
-			"type": [
-				"Boolean"
-			],
-			"scope": "instance",
-			"name": "convert",
-			"lineno": "Tone/core/Param.js#L37",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"WaveShaper": [
 		{
 			"description": "The array to set as the waveshaper curve. For linear curves\narray length does not make much difference, but for complex curves\nlonger arrays will provide smoother interpolation.",
@@ -6872,93 +6821,7 @@
 			],
 			"scope": "instance",
 			"name": "value",
-			"lineno": "Tone/core/Param.js#L66",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Multiply": [
-		{
-			"description": "The units of the parameter",
-			"type": [
-				"Tone.Type"
-			],
-			"scope": "instance",
-			"name": "units",
-			"lineno": "Tone/core/Param.js#L31",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "If the value should be converted or not",
-			"type": [
-				"Boolean"
-			],
-			"scope": "instance",
-			"name": "convert",
-			"lineno": "Tone/core/Param.js#L37",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "The current value of the parameter.",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "value",
-			"lineno": "Tone/core/Param.js#L66",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"TransportTimelineSignal": [
-		{
-			"description": "The current value of the signal.",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "value",
-			"lineno": "Tone/signal/TickSignal.js#L33",
-			"inherits": "Tone.TimelineSignal"
-		},
-		{
-			"description": "The units of the parameter",
-			"type": [
-				"Tone.Type"
-			],
-			"scope": "instance",
-			"name": "units",
-			"lineno": "Tone/core/Param.js#L31",
-			"inherits": "Tone.Param"
-		},
-		{
-			"description": "If the value should be converted or not",
-			"type": [
-				"Boolean"
-			],
-			"scope": "instance",
-			"name": "convert",
-			"lineno": "Tone/core/Param.js#L37",
+			"lineno": "Tone/core/Param.js#L73",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -7001,7 +6864,7 @@
 			],
 			"scope": "instance",
 			"name": "value",
-			"lineno": "Tone/core/Param.js#L66",
+			"lineno": "Tone/core/Param.js#L73",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -7044,7 +6907,50 @@
 			],
 			"scope": "instance",
 			"name": "value",
-			"lineno": "Tone/core/Param.js#L66",
+			"lineno": "Tone/core/Param.js#L73",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Multiply": [
+		{
+			"description": "The units of the parameter",
+			"type": [
+				"Tone.Type"
+			],
+			"scope": "instance",
+			"name": "units",
+			"lineno": "Tone/core/Param.js#L31",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "If the value should be converted or not",
+			"type": [
+				"Boolean"
+			],
+			"scope": "instance",
+			"name": "convert",
+			"lineno": "Tone/core/Param.js#L37",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "The current value of the parameter.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "value",
+			"lineno": "Tone/core/Param.js#L73",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -7087,7 +6993,7 @@
 			],
 			"scope": "instance",
 			"name": "value",
-			"lineno": "Tone/core/Param.js#L66",
+			"lineno": "Tone/core/Param.js#L73",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -7103,16 +7009,6 @@
 		}
 	],
 	"TickSignal": [
-		{
-			"description": "The current value of the signal.",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "value",
-			"lineno": "Tone/signal/TickSignal.js#L33",
-			"inherits": "Tone.TimelineSignal"
-		},
 		{
 			"description": "The units of the parameter",
 			"type": [
@@ -7131,6 +7027,59 @@
 			"scope": "instance",
 			"name": "convert",
 			"lineno": "Tone/core/Param.js#L37",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "The current value of the parameter.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "value",
+			"lineno": "Tone/core/Param.js#L73",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"TransportTimelineSignal": [
+		{
+			"description": "The units of the parameter",
+			"type": [
+				"Tone.Type"
+			],
+			"scope": "instance",
+			"name": "units",
+			"lineno": "Tone/core/Param.js#L31",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "If the value should be converted or not",
+			"type": [
+				"Boolean"
+			],
+			"scope": "instance",
+			"name": "convert",
+			"lineno": "Tone/core/Param.js#L37",
+			"inherits": "Tone.Param"
+		},
+		{
+			"description": "The current value of the parameter.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "value",
+			"lineno": "Tone/core/Param.js#L73",
 			"inherits": "Tone.Param"
 		},
 		{

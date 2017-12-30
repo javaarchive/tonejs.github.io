@@ -415,22 +415,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Multiply": [
-		"Signal",
-		"Param",
-		"AudioNode",
-		"Tone"
-	],
-	"SignalBase": [
-		"Tone"
-	],
-	"TransportTimelineSignal": [
-		"TimelineSignal",
-		"Signal",
-		"Param",
-		"AudioNode",
-		"Tone"
-	],
 	"Zero": [
 		"SignalBase",
 		"Tone"
@@ -471,6 +455,12 @@
 		"SignalBase",
 		"Tone"
 	],
+	"Multiply": [
+		"Signal",
+		"Param",
+		"AudioNode",
+		"Tone"
+	],
 	"Negate": [
 		"SignalBase",
 		"Tone"
@@ -496,6 +486,9 @@
 		"AudioNode",
 		"Tone"
 	],
+	"SignalBase": [
+		"Tone"
+	],
 	"Subtract": [
 		"Signal",
 		"Param",
@@ -503,13 +496,12 @@
 		"Tone"
 	],
 	"TickSignal": [
-		"TimelineSignal",
 		"Signal",
 		"Param",
 		"AudioNode",
 		"Tone"
 	],
-	"TimelineSignal": [
+	"TransportTimelineSignal": [
 		"Signal",
 		"Param",
 		"AudioNode",
