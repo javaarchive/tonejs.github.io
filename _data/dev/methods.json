@@ -7889,7 +7889,7 @@
 			},
 			"scope": "instance",
 			"name": "nextSubdivision",
-			"lineno": "Tone/core/Transport.js#L671"
+			"lineno": "Tone/core/Transport.js#L673"
 		},
 		{
 			"description": "Attaches the signal to the tempo control signal so that\n any changes in the tempo will change the signal in the same\n ratio.",
@@ -7917,7 +7917,7 @@
 			},
 			"scope": "instance",
 			"name": "syncSignal",
-			"lineno": "Tone/core/Transport.js#L699"
+			"lineno": "Tone/core/Transport.js#L701"
 		},
 		{
 			"description": "Unsyncs a previously synced signal from the transport's control.\n See Tone.Transport.syncSignal.",
@@ -7937,7 +7937,7 @@
 			},
 			"scope": "instance",
 			"name": "unsyncSignal",
-			"lineno": "Tone/core/Transport.js#L726"
+			"lineno": "Tone/core/Transport.js#L728"
 		},
 		{
 			"description": "Bind a callback to a specific event.",
@@ -11154,149 +11154,6 @@
 			"inherits": "Tone.Part"
 		}
 	],
-	"Instrument": [
-		{
-			"description": "Trigger the attack and then the release after the duration.",
-			"params": [
-				{
-					"type": [
-						"Frequency"
-					],
-					"description": "The note to trigger.",
-					"name": "note"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "How long the note should be held for before\n                         triggering the release. This value must be greater than 0.",
-					"name": "duration"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the note should be triggered.",
-					"name": "time"
-				},
-				{
-					"type": [
-						"NormalRange"
-					],
-					"optional": true,
-					"defaultvalue": 1,
-					"description": "The velocity the note should be triggered at.",
-					"name": "velocity"
-				}
-			],
-			"examples": [
-				"//trigger \"C4\" for the duration of an 8th note\nsynth.triggerAttackRelease(\"C4\", \"8n\");"
-			],
-			"returns": {
-				"type": [
-					"Tone.Instrument"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Instrument.js#L72"
-		},
-		{
-			"description": "clean up",
-			"returns": {
-				"type": [
-					"Tone.Instrument"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/instrument/Instrument.js#L84"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L110",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"AMSynth": [
 		{
 			"description": "clean up",
@@ -11417,6 +11274,35 @@
 			"inherits": "Tone.Monophonic"
 		},
 		{
+			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
+			"examples": [
+				"instrument.sync()\n//schedule 3 notes when the transport first starts\ninstrument.triggerAttackRelease('C4', '8n', 0)\ninstrument.triggerAttackRelease('E4', '8n', '8n')\ninstrument.triggerAttackRelease('G4', '8n', '4n')\n//start the transport to hear the notes\nTransport.start()"
+			],
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "sync",
+			"lineno": "Tone/instrument/Instrument.js#L82",
+			"inherits": "Tone.Instrument"
+		},
+		{
+			"description": "Unsync the instrument from the Transport",
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "unsync",
+			"lineno": "Tone/instrument/Instrument.js#L111",
+			"inherits": "Tone.Instrument"
+		},
+		{
 			"description": "Trigger the attack and then the release after the duration.",
 			"params": [
 				{
@@ -11463,7 +11349,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Instrument.js#L72",
+			"lineno": "Tone/instrument/Instrument.js#L135",
 			"inherits": "Tone.Instrument"
 		},
 		{
@@ -11667,6 +11553,35 @@
 			"inherits": "Tone.Monophonic"
 		},
 		{
+			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
+			"examples": [
+				"instrument.sync()\n//schedule 3 notes when the transport first starts\ninstrument.triggerAttackRelease('C4', '8n', 0)\ninstrument.triggerAttackRelease('E4', '8n', '8n')\ninstrument.triggerAttackRelease('G4', '8n', '4n')\n//start the transport to hear the notes\nTransport.start()"
+			],
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "sync",
+			"lineno": "Tone/instrument/Instrument.js#L82",
+			"inherits": "Tone.Instrument"
+		},
+		{
+			"description": "Unsync the instrument from the Transport",
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "unsync",
+			"lineno": "Tone/instrument/Instrument.js#L111",
+			"inherits": "Tone.Instrument"
+		},
+		{
 			"description": "Trigger the attack and then the release after the duration.",
 			"params": [
 				{
@@ -11713,7 +11628,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Instrument.js#L72",
+			"lineno": "Tone/instrument/Instrument.js#L135",
 			"inherits": "Tone.Instrument"
 		},
 		{
@@ -11917,6 +11832,35 @@
 			"inherits": "Tone.Monophonic"
 		},
 		{
+			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
+			"examples": [
+				"instrument.sync()\n//schedule 3 notes when the transport first starts\ninstrument.triggerAttackRelease('C4', '8n', 0)\ninstrument.triggerAttackRelease('E4', '8n', '8n')\ninstrument.triggerAttackRelease('G4', '8n', '4n')\n//start the transport to hear the notes\nTransport.start()"
+			],
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "sync",
+			"lineno": "Tone/instrument/Instrument.js#L82",
+			"inherits": "Tone.Instrument"
+		},
+		{
+			"description": "Unsync the instrument from the Transport",
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "unsync",
+			"lineno": "Tone/instrument/Instrument.js#L111",
+			"inherits": "Tone.Instrument"
+		},
+		{
 			"description": "Trigger the attack and then the release after the duration.",
 			"params": [
 				{
@@ -11963,8 +11907,178 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Instrument.js#L72",
+			"lineno": "Tone/instrument/Instrument.js#L135",
 			"inherits": "Tone.Instrument"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L110",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Instrument": [
+		{
+			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
+			"examples": [
+				"instrument.sync()\n//schedule 3 notes when the transport first starts\ninstrument.triggerAttackRelease('C4', '8n', 0)\ninstrument.triggerAttackRelease('E4', '8n', '8n')\ninstrument.triggerAttackRelease('G4', '8n', '4n')\n//start the transport to hear the notes\nTransport.start()"
+			],
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "sync",
+			"lineno": "Tone/instrument/Instrument.js#L82"
+		},
+		{
+			"description": "Unsync the instrument from the Transport",
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "unsync",
+			"lineno": "Tone/instrument/Instrument.js#L111"
+		},
+		{
+			"description": "Trigger the attack and then the release after the duration.",
+			"params": [
+				{
+					"type": [
+						"Frequency"
+					],
+					"description": "The note to trigger.",
+					"name": "note"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "How long the note should be held for before\n                         triggering the release. This value must be greater than 0.",
+					"name": "duration"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the note should be triggered.",
+					"name": "time"
+				},
+				{
+					"type": [
+						"NormalRange"
+					],
+					"optional": true,
+					"defaultvalue": 1,
+					"description": "The velocity the note should be triggered at.",
+					"name": "velocity"
+				}
+			],
+			"examples": [
+				"//trigger \"C4\" for the duration of an 8th note\nsynth.triggerAttackRelease(\"C4\", \"8n\");"
+			],
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerAttackRelease",
+			"lineno": "Tone/instrument/Instrument.js#L135"
+		},
+		{
+			"description": "clean up",
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/instrument/Instrument.js#L147"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
@@ -12126,6 +12240,35 @@
 			"lineno": "Tone/instrument/MembraneSynth.js#L112"
 		},
 		{
+			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
+			"examples": [
+				"instrument.sync()\n//schedule 3 notes when the transport first starts\ninstrument.triggerAttackRelease('C4', '8n', 0)\ninstrument.triggerAttackRelease('E4', '8n', '8n')\ninstrument.triggerAttackRelease('G4', '8n', '4n')\n//start the transport to hear the notes\nTransport.start()"
+			],
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "sync",
+			"lineno": "Tone/instrument/Instrument.js#L82",
+			"inherits": "Tone.Instrument"
+		},
+		{
+			"description": "Unsync the instrument from the Transport",
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "unsync",
+			"lineno": "Tone/instrument/Instrument.js#L111",
+			"inherits": "Tone.Instrument"
+		},
+		{
 			"description": "Trigger the attack and then the release after the duration.",
 			"params": [
 				{
@@ -12172,7 +12315,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Instrument.js#L72",
+			"lineno": "Tone/instrument/Instrument.js#L135",
 			"inherits": "Tone.Instrument"
 		},
 		{
@@ -12309,6 +12452,21 @@
 			"lineno": "Tone/instrument/MetalSynth.js#L157"
 		},
 		{
+			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
+			"examples": [
+				"synth.sync()\n//schedule 3 notes when the transport first starts\nsynth.triggerAttackRelease('8n', 0)\nsynth.triggerAttackRelease('8n', '8n')\nsynth.triggerAttackRelease('8n', '4n')\n//start the transport to hear the notes\nTransport.start()"
+			],
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "sync",
+			"lineno": "Tone/instrument/MetalSynth.js#L177"
+		},
+		{
 			"description": "Trigger the attack and release of the envelope after the given\n duration.",
 			"params": [
 				{
@@ -12343,7 +12501,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/MetalSynth.js#L171"
+			"lineno": "Tone/instrument/MetalSynth.js#L191"
 		},
 		{
 			"description": "Clean up",
@@ -12355,7 +12513,20 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/MetalSynth.js#L252"
+			"lineno": "Tone/instrument/MetalSynth.js#L272"
+		},
+		{
+			"description": "Unsync the instrument from the Transport",
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "unsync",
+			"lineno": "Tone/instrument/Instrument.js#L111",
+			"inherits": "Tone.Instrument"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
@@ -12558,6 +12729,35 @@
 			"inherits": "Tone.Monophonic"
 		},
 		{
+			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
+			"examples": [
+				"instrument.sync()\n//schedule 3 notes when the transport first starts\ninstrument.triggerAttackRelease('C4', '8n', 0)\ninstrument.triggerAttackRelease('E4', '8n', '8n')\ninstrument.triggerAttackRelease('G4', '8n', '4n')\n//start the transport to hear the notes\nTransport.start()"
+			],
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "sync",
+			"lineno": "Tone/instrument/Instrument.js#L82",
+			"inherits": "Tone.Instrument"
+		},
+		{
+			"description": "Unsync the instrument from the Transport",
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "unsync",
+			"lineno": "Tone/instrument/Instrument.js#L111",
+			"inherits": "Tone.Instrument"
+		},
+		{
 			"description": "Trigger the attack and then the release after the duration.",
 			"params": [
 				{
@@ -12604,7 +12804,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Instrument.js#L72",
+			"lineno": "Tone/instrument/Instrument.js#L135",
 			"inherits": "Tone.Instrument"
 		},
 		{
@@ -12793,6 +12993,35 @@
 			"lineno": "Tone/instrument/Monophonic.js#L101"
 		},
 		{
+			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
+			"examples": [
+				"instrument.sync()\n//schedule 3 notes when the transport first starts\ninstrument.triggerAttackRelease('C4', '8n', 0)\ninstrument.triggerAttackRelease('E4', '8n', '8n')\ninstrument.triggerAttackRelease('G4', '8n', '4n')\n//start the transport to hear the notes\nTransport.start()"
+			],
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "sync",
+			"lineno": "Tone/instrument/Instrument.js#L82",
+			"inherits": "Tone.Instrument"
+		},
+		{
+			"description": "Unsync the instrument from the Transport",
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "unsync",
+			"lineno": "Tone/instrument/Instrument.js#L111",
+			"inherits": "Tone.Instrument"
+		},
+		{
 			"description": "Trigger the attack and then the release after the duration.",
 			"params": [
 				{
@@ -12839,7 +13068,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Instrument.js#L72",
+			"lineno": "Tone/instrument/Instrument.js#L135",
 			"inherits": "Tone.Instrument"
 		},
 		{
@@ -12852,7 +13081,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/Instrument.js#L84",
+			"lineno": "Tone/instrument/Instrument.js#L147",
 			"inherits": "Tone.Instrument"
 		},
 		{
@@ -12996,6 +13225,21 @@
 			"lineno": "Tone/instrument/NoiseSynth.js#L85"
 		},
 		{
+			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
+			"examples": [
+				"synth.sync()\n//schedule 3 notes when the transport first starts\nsynth.triggerAttackRelease('8n', 0)\nsynth.triggerAttackRelease('8n', '8n')\nsynth.triggerAttackRelease('8n', '4n')\n//start the transport to hear the notes\nTransport.start()"
+			],
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "sync",
+			"lineno": "Tone/instrument/NoiseSynth.js#L104"
+		},
+		{
 			"description": "Trigger the attack and then the release.",
 			"params": [
 				{
@@ -13032,7 +13276,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/NoiseSynth.js#L97"
+			"lineno": "Tone/instrument/NoiseSynth.js#L117"
 		},
 		{
 			"description": "Clean up.",
@@ -13044,7 +13288,20 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/NoiseSynth.js#L109"
+			"lineno": "Tone/instrument/NoiseSynth.js#L129"
+		},
+		{
+			"description": "Unsync the instrument from the Transport",
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "unsync",
+			"lineno": "Tone/instrument/Instrument.js#L111",
+			"inherits": "Tone.Instrument"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
@@ -13171,6 +13428,35 @@
 			"lineno": "Tone/instrument/PluckSynth.js#L98"
 		},
 		{
+			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
+			"examples": [
+				"instrument.sync()\n//schedule 3 notes when the transport first starts\ninstrument.triggerAttackRelease('C4', '8n', 0)\ninstrument.triggerAttackRelease('E4', '8n', '8n')\ninstrument.triggerAttackRelease('G4', '8n', '4n')\n//start the transport to hear the notes\nTransport.start()"
+			],
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "sync",
+			"lineno": "Tone/instrument/Instrument.js#L82",
+			"inherits": "Tone.Instrument"
+		},
+		{
+			"description": "Unsync the instrument from the Transport",
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "unsync",
+			"lineno": "Tone/instrument/Instrument.js#L111",
+			"inherits": "Tone.Instrument"
+		},
+		{
 			"description": "Trigger the attack and then the release after the duration.",
 			"params": [
 				{
@@ -13217,7 +13503,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Instrument.js#L72",
+			"lineno": "Tone/instrument/Instrument.js#L135",
 			"inherits": "Tone.Instrument"
 		},
 		{
@@ -13431,6 +13717,21 @@
 			"lineno": "Tone/instrument/PolySynth.js#L162"
 		},
 		{
+			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
+			"examples": [
+				"synth.sync()\n//schedule 3 notes when the transport first starts\nsynth.triggerAttackRelease('8n', 0)\nsynth.triggerAttackRelease('8n', '8n')\nsynth.triggerAttackRelease('8n', '4n')\n//start the transport to hear the notes\nTransport.start()"
+			],
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "sync",
+			"lineno": "Tone/instrument/PolySynth.js#L195"
+		},
+		{
 			"description": "Set a member/attribute of the voices.",
 			"params": [
 				{
@@ -13466,7 +13767,7 @@
 			},
 			"scope": "instance",
 			"name": "set",
-			"lineno": "Tone/instrument/PolySynth.js#L197"
+			"lineno": "Tone/instrument/PolySynth.js#L217"
 		},
 		{
 			"description": "Get the synth's attributes. Given no arguments get\n will return all available object properties and their corresponding\n values. Pass in a single attribute to retrieve or an array\n of attributes. The attribute strings can also include a \".\"\n to access deeper properties.",
@@ -13482,7 +13783,7 @@
 			],
 			"scope": "instance",
 			"name": "get",
-			"lineno": "Tone/instrument/PolySynth.js#L213"
+			"lineno": "Tone/instrument/PolySynth.js#L233"
 		},
 		{
 			"description": "Trigger the release portion of all the currently active voices.",
@@ -13505,7 +13806,7 @@
 			},
 			"scope": "instance",
 			"name": "releaseAll",
-			"lineno": "Tone/instrument/PolySynth.js#L222"
+			"lineno": "Tone/instrument/PolySynth.js#L242"
 		},
 		{
 			"description": "Clean up.",
@@ -13517,7 +13818,20 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/PolySynth.js#L238"
+			"lineno": "Tone/instrument/PolySynth.js#L258"
+		},
+		{
+			"description": "Unsync the instrument from the Transport",
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "unsync",
+			"lineno": "Tone/instrument/Instrument.js#L111",
+			"inherits": "Tone.Instrument"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
@@ -13688,6 +14002,21 @@
 			"lineno": "Tone/instrument/Sampler.js#L162"
 		},
 		{
+			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
+			"examples": [
+				"synth.sync()\n//schedule 3 notes when the transport first starts\nsynth.triggerAttackRelease('8n', 0)\nsynth.triggerAttackRelease('8n', '8n')\nsynth.triggerAttackRelease('8n', '4n')\n//start the transport to hear the notes\nTransport.start()"
+			],
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "sync",
+			"lineno": "Tone/instrument/Sampler.js#L188"
+		},
+		{
 			"description": "Invoke the attack phase, then after the duration, invoke the release.",
 			"params": [
 				{
@@ -13730,7 +14059,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Sampler.js#L182"
+			"lineno": "Tone/instrument/Sampler.js#L202"
 		},
 		{
 			"description": "Add a note to the sampler.",
@@ -13763,7 +14092,7 @@
 			],
 			"scope": "instance",
 			"name": "add",
-			"lineno": "Tone/instrument/Sampler.js#L199"
+			"lineno": "Tone/instrument/Sampler.js#L219"
 		},
 		{
 			"description": "Clean up",
@@ -13775,7 +14104,20 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/Sampler.js#L229"
+			"lineno": "Tone/instrument/Sampler.js#L249"
+		},
+		{
+			"description": "Unsync the instrument from the Transport",
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "unsync",
+			"lineno": "Tone/instrument/Instrument.js#L111",
+			"inherits": "Tone.Instrument"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
@@ -13978,6 +14320,35 @@
 			"inherits": "Tone.Monophonic"
 		},
 		{
+			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
+			"examples": [
+				"instrument.sync()\n//schedule 3 notes when the transport first starts\ninstrument.triggerAttackRelease('C4', '8n', 0)\ninstrument.triggerAttackRelease('E4', '8n', '8n')\ninstrument.triggerAttackRelease('G4', '8n', '4n')\n//start the transport to hear the notes\nTransport.start()"
+			],
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "sync",
+			"lineno": "Tone/instrument/Instrument.js#L82",
+			"inherits": "Tone.Instrument"
+		},
+		{
+			"description": "Unsync the instrument from the Transport",
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "unsync",
+			"lineno": "Tone/instrument/Instrument.js#L111",
+			"inherits": "Tone.Instrument"
+		},
+		{
 			"description": "Trigger the attack and then the release after the duration.",
 			"params": [
 				{
@@ -14024,7 +14395,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Instrument.js#L72",
+			"lineno": "Tone/instrument/Instrument.js#L135",
 			"inherits": "Tone.Instrument"
 		},
 		{

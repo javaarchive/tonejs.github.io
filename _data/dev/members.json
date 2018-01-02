@@ -2190,7 +2190,7 @@
 			],
 			"scope": "instance",
 			"name": "seconds",
-			"lineno": "Tone/core/Transport.js#L551"
+			"lineno": "Tone/core/Transport.js#L553"
 		},
 		{
 			"description": "The Transport's loop position as a normalized value. Always\n returns 0 if the transport if loop is not true.",
@@ -2199,7 +2199,7 @@
 			],
 			"scope": "instance",
 			"name": "progress",
-			"lineno": "Tone/core/Transport.js#L569"
+			"lineno": "Tone/core/Transport.js#L571"
 		},
 		{
 			"description": "The transports current tick position.",
@@ -2208,7 +2208,7 @@
 			],
 			"scope": "instance",
 			"name": "ticks",
-			"lineno": "Tone/core/Transport.js#L588"
+			"lineno": "Tone/core/Transport.js#L590"
 		},
 		{
 			"description": "Pulses Per Quarter note. This is the smallest resolution\n the Transport timing supports. This should be set once\n on initialization and not set again. Changing this value\n after other objects have been created can cause problems.",
@@ -2217,7 +2217,7 @@
 			],
 			"scope": "instance",
 			"name": "PPQ",
-			"lineno": "Tone/core/Transport.js#L615"
+			"lineno": "Tone/core/Transport.js#L617"
 		}
 	],
 	"TransportEvent": [
@@ -3821,32 +3821,6 @@
 			"inherits": "Tone.Event"
 		}
 	],
-	"Instrument": [
-		{
-			"description": "The volume of the output in decibels.",
-			"type": [
-				"Decibels"
-			],
-			"examples": [
-				"source.volume.value = -6;"
-			],
-			"scope": "instance",
-			"name": "volume",
-			"lineno": "Tone/instrument/Instrument.js#L31",
-			"signal": true
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"AMSynth": [
 		{
 			"description": "The carrier's oscillator",
@@ -4167,6 +4141,32 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
+	"Instrument": [
+		{
+			"description": "The volume of the output in decibels.",
+			"type": [
+				"Decibels"
+			],
+			"examples": [
+				"source.volume.value = -6;"
+			],
+			"scope": "instance",
+			"name": "volume",
+			"lineno": "Tone/instrument/Instrument.js#L31",
+			"signal": true
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
 	"MembraneSynth": [
 		{
 			"description": "The oscillator.",
@@ -4257,7 +4257,7 @@
 			],
 			"scope": "instance",
 			"name": "modulationIndex",
-			"lineno": "Tone/instrument/MetalSynth.js#L179"
+			"lineno": "Tone/instrument/MetalSynth.js#L199"
 		},
 		{
 			"description": "The harmonicity of the oscillators which make up the source.\n see Tone.FMOscillator.harmonicity",
@@ -4266,7 +4266,7 @@
 			],
 			"scope": "instance",
 			"name": "harmonicity",
-			"lineno": "Tone/instrument/MetalSynth.js#L197"
+			"lineno": "Tone/instrument/MetalSynth.js#L217"
 		},
 		{
 			"description": "The frequency of the highpass filter attached to the envelope",
@@ -4275,7 +4275,7 @@
 			],
 			"scope": "instance",
 			"name": "resonance",
-			"lineno": "Tone/instrument/MetalSynth.js#L215"
+			"lineno": "Tone/instrument/MetalSynth.js#L235"
 		},
 		{
 			"description": "The number of octaves above the \"resonance\" frequency\n that the filter ramps during the attack/decay envelope",
@@ -4284,7 +4284,7 @@
 			],
 			"scope": "instance",
 			"name": "octaves",
-			"lineno": "Tone/instrument/MetalSynth.js#L231"
+			"lineno": "Tone/instrument/MetalSynth.js#L251"
 		},
 		{
 			"description": "The volume of the output in decibels.",
@@ -4491,7 +4491,7 @@
 	],
 	"PluckSynth": [
 		{
-			"description": "The amount of noise at the attack. \n Nominal range of [0.1, 20]",
+			"description": "The amount of noise at the attack.\n Nominal range of [0.1, 20]",
 			"type": [
 				"number"
 			],
@@ -4618,7 +4618,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "loaded",
-			"lineno": "Tone/instrument/Sampler.js#L212"
+			"lineno": "Tone/instrument/Sampler.js#L232"
 		},
 		{
 			"description": "The volume of the output in decibels.",

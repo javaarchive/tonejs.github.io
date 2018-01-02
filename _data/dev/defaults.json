@@ -354,9 +354,6 @@
 	"Sequence": {
 		"subdivision": "4n"
 	},
-	"Instrument": {
-		"volume": 0
-	},
 	"AMSynth": {
 		"harmonicity": 3,
 		"detune": 0,
@@ -445,6 +442,9 @@
 			"release": 0.5
 		}
 	},
+	"Instrument": {
+		"volume": 0
+	},
 	"MembraneSynth": {
 		"pitchDecay": 0.05,
 		"octaves": 10,
@@ -514,7 +514,7 @@
 	"PluckSynth": {
 		"attackNoise": 1,
 		"dampening": 4000,
-		"resonance": 0.9
+		"resonance": 0.7
 	},
 	"PolySynth": {
 		"polyphony": 4,
