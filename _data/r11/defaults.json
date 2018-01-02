@@ -353,9 +353,6 @@
 	"Sequence": {
 		"subdivision": "4n"
 	},
-	"Instrument": {
-		"volume": 0
-	},
 	"AMSynth": {
 		"harmonicity": 3,
 		"detune": 0,
@@ -443,6 +440,9 @@
 			"sustain": 1,
 			"release": 0.5
 		}
+	},
+	"Instrument": {
+		"volume": 0
 	},
 	"MembraneSynth": {
 		"pitchDecay": 0.05,

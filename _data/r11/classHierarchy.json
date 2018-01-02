@@ -347,10 +347,6 @@
 		"Event",
 		"Tone"
 	],
-	"Instrument": [
-		"AudioNode",
-		"Tone"
-	],
 	"AMSynth": [
 		"Monophonic",
 		"Instrument",
@@ -366,6 +362,10 @@
 	"FMSynth": [
 		"Monophonic",
 		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
+	"Instrument": [
 		"AudioNode",
 		"Tone"
 	],

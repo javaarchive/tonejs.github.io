@@ -3799,32 +3799,6 @@
 			"inherits": "Tone.Event"
 		}
 	],
-	"Instrument": [
-		{
-			"description": "The volume of the output in decibels.",
-			"type": [
-				"Decibels"
-			],
-			"examples": [
-				"source.volume.value = -6;"
-			],
-			"scope": "instance",
-			"name": "volume",
-			"lineno": "Tone/instrument/Instrument.js#L31",
-			"signal": true
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"AMSynth": [
 		{
 			"description": "The carrier's oscillator",
@@ -4131,6 +4105,32 @@
 			"name": "volume",
 			"lineno": "Tone/instrument/Instrument.js#L31",
 			"inherits": "Tone.Instrument",
+			"signal": true
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Instrument": [
+		{
+			"description": "The volume of the output in decibels.",
+			"type": [
+				"Decibels"
+			],
+			"examples": [
+				"source.volume.value = -6;"
+			],
+			"scope": "instance",
+			"name": "volume",
+			"lineno": "Tone/instrument/Instrument.js#L31",
 			"signal": true
 		},
 		{

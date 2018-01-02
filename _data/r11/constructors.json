@@ -1640,10 +1640,6 @@
 		],
 		"extends": "Tone.Part"
 	},
-	"Instrument": {
-		"description": "Base-class for all instruments",
-		"extends": "Tone.AudioNode"
-	},
 	"AMSynth": {
 		"description": "AMSynth uses the output of one Tone.Synth to modulate the\n         amplitude of another Tone.Synth. The harmonicity (the ratio between\n         the two signals) affects the timbre of the output signal greatly.\n         Read more about Amplitude Modulation Synthesis on\n         [SoundOnSound](https://web.archive.org/web/20160404103653/http://www.soundonsound.com:80/sos/mar00/articles/synthsecrets.htm).\n         <img src=\"https://docs.google.com/drawings/d/1TQu8Ed4iFr1YTLKpB3U1_hur-UwBrh5gdBXc8BxfGKw/pub?w=1009&h=457\">",
 		"params": [
@@ -1694,6 +1690,10 @@
 			"var fmSynth = new Tone.FMSynth().toMaster();\nfmSynth.triggerAttackRelease(\"C5\", \"4n\");"
 		],
 		"extends": "Tone.Monophonic"
+	},
+	"Instrument": {
+		"description": "Base-class for all instruments",
+		"extends": "Tone.AudioNode"
 	},
 	"MembraneSynth": {
 		"description": "Tone.MembraneSynth makes kick and tom sounds using a single oscillator\n         with an amplitude envelope and frequency ramp. A Tone.OmniOscillator\n         is routed through a Tone.AmplitudeEnvelope to the output. The drum\n         quality of the sound comes from the frequency envelope applied\n         during during Tone.MembraneSynth.triggerAttack(note). The frequency\n         envelope starts at <code>note * .octaves</code> and ramps to \n         <code>note</code> over the duration of <code>.pitchDecay</code>.",
