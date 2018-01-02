@@ -13,9 +13,6 @@
 		"lowFrequency": 400,
 		"highFrequency": 2500
 	},
-	"FFT": {
-		"size": 1024
-	},
 	"FeedbackCombFilter": {
 		"delayTime": 0.1,
 		"resonance": 0.5
@@ -80,9 +77,6 @@
 		"volume": 0,
 		"mute": false
 	},
-	"Waveform": {
-		"size": 1024
-	},
 	"Analyser": {
 		"size": 1024,
 		"type": "fft",
@@ -95,6 +89,9 @@
 		"release": 1,
 		"attackCurve": "linear",
 		"releaseCurve": "exponential"
+	},
+	"FFT": {
+		"size": 1024
 	},
 	"Follower": {
 		"attack": 0.05,
@@ -137,6 +134,9 @@
 	},
 	"Solo": {
 		"solo": false
+	},
+	"Waveform": {
+		"size": 1024
 	},
 	"CtrlInterpolate": {
 		"index": 0,

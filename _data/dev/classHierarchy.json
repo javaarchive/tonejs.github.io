@@ -12,10 +12,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"FFT": [
-		"AudioNode",
-		"Tone"
-	],
 	"FeedbackCombFilter": [
 		"AudioNode",
 		"Tone"
@@ -72,10 +68,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Waveform": [
-		"AudioNode",
-		"Tone"
-	],
 	"Analyser": [
 		"AudioNode",
 		"Tone"
@@ -85,6 +77,10 @@
 		"Tone"
 	],
 	"Envelope": [
+		"AudioNode",
+		"Tone"
+	],
+	"FFT": [
 		"AudioNode",
 		"Tone"
 	],
@@ -123,6 +119,10 @@
 		"Tone"
 	],
 	"Solo": [
+		"AudioNode",
+		"Tone"
+	],
+	"Waveform": [
 		"AudioNode",
 		"Tone"
 	],
@@ -415,10 +415,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Zero": [
-		"SignalBase",
-		"Tone"
-	],
 	"Abs": [
 		"SignalBase",
 		"Tone"
@@ -508,6 +504,10 @@
 		"Tone"
 	],
 	"WaveShaper": [
+		"SignalBase",
+		"Tone"
+	],
+	"Zero": [
 		"SignalBase",
 		"Tone"
 	],

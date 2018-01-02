@@ -3,7 +3,6 @@
 		"AmplitudeEnvelope",
 		"Compressor",
 		"EQ3",
-		"FFT",
 		"FeedbackCombFilter",
 		"Filter",
 		"Gate",
@@ -18,10 +17,10 @@
 		"PanVol",
 		"Split",
 		"Volume",
-		"Waveform",
 		"Analyser",
 		"CrossFade",
 		"Envelope",
+		"FFT",
 		"Follower",
 		"FrequencyEnvelope",
 		"LFO",
@@ -30,7 +29,8 @@
 		"Panner",
 		"Panner3D",
 		"ScaledEnvelope",
-		"Solo"
+		"Solo",
+		"Waveform"
 	],
 	"control": [
 		"CtrlInterpolate",
@@ -108,7 +108,6 @@
 		"Synth"
 	],
 	"signal": [
-		"Zero",
 		"Abs",
 		"Add",
 		"AudioToGain",
@@ -128,7 +127,8 @@
 		"Subtract",
 		"TickSignal",
 		"TransportTimelineSignal",
-		"WaveShaper"
+		"WaveShaper",
+		"Zero"
 	],
 	"source": [
 		"AMOscillator",

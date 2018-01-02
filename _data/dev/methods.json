@@ -389,111 +389,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"FFT": [
-		{
-			"description": "Gets the waveform of the audio source. Returns the waveform data\n of length [size](#size) as a Float32Array with values between -1 and 1.",
-			"returns": {
-				"type": [
-					"TypedArray"
-				]
-			},
-			"scope": "instance",
-			"name": "getValue",
-			"lineno": "Tone/component/FFT.js#L39"
-		},
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.FFT"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/FFT.js#L62"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L110",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"FeedbackCombFilter": [
 		{
 			"description": "clean up",
@@ -1832,111 +1727,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"Waveform": [
-		{
-			"description": "Gets the waveform of the audio source. Returns the waveform data\n of length [size](#size) as a Float32Array with values between -1 and 1.",
-			"returns": {
-				"type": [
-					"TypedArray"
-				]
-			},
-			"scope": "instance",
-			"name": "getValue",
-			"lineno": "Tone/component/Waveform.js#L39"
-		},
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.Waveform"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/Waveform.js#L61"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L110",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L127",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"Analyser": [
 		{
 			"description": "Run the analysis given the current settings and return the\n result as a TypedArray.",
@@ -2307,6 +2097,111 @@
 			"scope": "instance",
 			"name": "toMaster",
 			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"FFT": [
+		{
+			"description": "Gets the waveform of the audio source. Returns the waveform data\n of length [size](#size) as a Float32Array with values between -1 and 1.",
+			"returns": {
+				"type": [
+					"TypedArray"
+				]
+			},
+			"scope": "instance",
+			"name": "getValue",
+			"lineno": "Tone/component/FFT.js#L39"
+		},
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.FFT"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/FFT.js#L62"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L110",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -3374,6 +3269,111 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/component/Solo.js#L147"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L110",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Waveform": [
+		{
+			"description": "Gets the waveform of the audio source. Returns the waveform data\n of length [size](#size) as a Float32Array with values between -1 and 1.",
+			"returns": {
+				"type": [
+					"TypedArray"
+				]
+			},
+			"scope": "instance",
+			"name": "getValue",
+			"lineno": "Tone/component/Waveform.js#L39"
+		},
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.Waveform"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/Waveform.js#L61"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
@@ -14108,62 +14108,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"Zero": [
-		{
-			"description": "clean up",
-			"returns": {
-				"type": [
-					"Tone.Zero"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/signal/Zero.js#L29"
-		},
-		{
-			"description": "When signals connect to other signals or AudioParams,\n they take over the output value of that signal or AudioParam.\n For all other nodes, the behavior is the same as a default <code>connect</code>.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"AudioNode",
-						"Tone.Signal",
-						"Tone"
-					],
-					"name": "node"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "The output number to connect from.",
-					"name": "outputNumber"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "The input number to connect to.",
-					"name": "inputNumber"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.SignalBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/signal/SignalBase.js#L28",
-			"inherits": "Tone.SignalBase"
-		}
-	],
 	"Abs": [
 		{
 			"description": "dispose method",
@@ -18885,6 +18829,62 @@
 			"inherits": "Tone.SignalBase"
 		}
 	],
+	"Zero": [
+		{
+			"description": "clean up",
+			"returns": {
+				"type": [
+					"Tone.Zero"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/signal/Zero.js#L29"
+		},
+		{
+			"description": "When signals connect to other signals or AudioParams,\n they take over the output value of that signal or AudioParam.\n For all other nodes, the behavior is the same as a default <code>connect</code>.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"AudioNode",
+						"Tone.Signal",
+						"Tone"
+					],
+					"name": "node"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "The output number to connect from.",
+					"name": "outputNumber"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "The input number to connect to.",
+					"name": "inputNumber"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.SignalBase"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/signal/SignalBase.js#L28",
+			"inherits": "Tone.SignalBase"
+		}
+	],
 	"AMOscillator": [
 		{
 			"description": "Clean up.",
@@ -18978,7 +18978,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L177",
+			"lineno": "Tone/source/Source.js#L182",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -18995,7 +18995,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L213",
+			"lineno": "Tone/source/Source.js#L218",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -19008,7 +19008,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L245",
+			"lineno": "Tone/source/Source.js#L250",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -19337,7 +19337,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L177",
+			"lineno": "Tone/source/Source.js#L182",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -19354,7 +19354,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L213",
+			"lineno": "Tone/source/Source.js#L218",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -19367,7 +19367,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L245",
+			"lineno": "Tone/source/Source.js#L250",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -19515,7 +19515,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L177",
+			"lineno": "Tone/source/Source.js#L182",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -19532,7 +19532,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L213",
+			"lineno": "Tone/source/Source.js#L218",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -19545,7 +19545,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L245",
+			"lineno": "Tone/source/Source.js#L250",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -19735,7 +19735,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L177",
+			"lineno": "Tone/source/Source.js#L182",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -19752,7 +19752,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L213",
+			"lineno": "Tone/source/Source.js#L218",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -19765,7 +19765,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L245",
+			"lineno": "Tone/source/Source.js#L250",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -19913,7 +19913,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L177",
+			"lineno": "Tone/source/Source.js#L182",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -19930,7 +19930,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L213",
+			"lineno": "Tone/source/Source.js#L218",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -19943,7 +19943,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L245",
+			"lineno": "Tone/source/Source.js#L250",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20126,7 +20126,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L177",
+			"lineno": "Tone/source/Source.js#L182",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20143,7 +20143,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L213",
+			"lineno": "Tone/source/Source.js#L218",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20156,7 +20156,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L245",
+			"lineno": "Tone/source/Source.js#L250",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20331,7 +20331,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L177",
+			"lineno": "Tone/source/Source.js#L182",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20348,7 +20348,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L213",
+			"lineno": "Tone/source/Source.js#L218",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20361,7 +20361,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L245",
+			"lineno": "Tone/source/Source.js#L250",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20509,7 +20509,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L177",
+			"lineno": "Tone/source/Source.js#L182",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20526,7 +20526,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L213",
+			"lineno": "Tone/source/Source.js#L218",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20539,7 +20539,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L245",
+			"lineno": "Tone/source/Source.js#L250",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20791,7 +20791,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L177",
+			"lineno": "Tone/source/Source.js#L182",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20808,7 +20808,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L213",
+			"lineno": "Tone/source/Source.js#L218",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20821,7 +20821,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L245",
+			"lineno": "Tone/source/Source.js#L250",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -21157,7 +21157,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L177",
+			"lineno": "Tone/source/Source.js#L182",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -21174,7 +21174,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L213",
+			"lineno": "Tone/source/Source.js#L218",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -21187,7 +21187,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L245",
+			"lineno": "Tone/source/Source.js#L250",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -21322,7 +21322,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L177"
+			"lineno": "Tone/source/Source.js#L182"
 		},
 		{
 			"description": "Sync the source to the Transport so that all subsequent\n calls to `start` and `stop` are synced to the TransportTime\n instead of the AudioContext time.",
@@ -21338,7 +21338,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L213"
+			"lineno": "Tone/source/Source.js#L218"
 		},
 		{
 			"description": "Unsync the source to the Transport. See Tone.Source.sync",
@@ -21350,7 +21350,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L245"
+			"lineno": "Tone/source/Source.js#L250"
 		},
 		{
 			"description": "Clean up.",
@@ -21362,7 +21362,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/Source.js#L265"
+			"lineno": "Tone/source/Source.js#L270"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",

@@ -101,20 +101,6 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
-	"FFT": {
-		"description": "Get the current waveform data of the connected audio source.",
-		"params": [
-			{
-				"type": [
-					"Number"
-				],
-				"optional": true,
-				"description": "The size of the FFT. Value must be a power of\n                      two in the range 32 to 32768.",
-				"name": "size"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
 	"FeedbackCombFilter": {
 		"description": "Comb filters are basic building blocks for physical modeling. Read more\n        about comb filters on [CCRMA's website](https://ccrma.stanford.edu/~jos/pasp/Feedback_Comb_Filters.html).",
 		"params": [
@@ -380,20 +366,6 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
-	"Waveform": {
-		"description": "Get the current waveform data of the connected audio source.",
-		"params": [
-			{
-				"type": [
-					"Number"
-				],
-				"optional": true,
-				"description": "The size of the FFT. Value must be a power of\n                      two in the range 32 to 32768.",
-				"name": "size"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
 	"Analyser": {
 		"description": "Wrapper around the native Web Audio's\n         [AnalyserNode](http://webaudio.github.io/web-audio-api/#idl-def-AnalyserNode).\n         Extracts FFT or Waveform data from the incoming signal.",
 		"params": [
@@ -471,6 +443,20 @@
 		],
 		"examples": [
 			"//an amplitude envelope\nvar gainNode = Tone.context.createGain();\nvar env = new Tone.Envelope({\n\t\"attack\" : 0.1,\n\t\"decay\" : 0.2,\n\t\"sustain\" : 1,\n\t\"release\" : 0.8,\n});\nenv.connect(gainNode.gain);"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"FFT": {
+		"description": "Get the current waveform data of the connected audio source.",
+		"params": [
+			{
+				"type": [
+					"Number"
+				],
+				"optional": true,
+				"description": "The size of the FFT. Value must be a power of\n                      two in the range 32 to 32768.",
+				"name": "size"
+			}
 		],
 		"extends": "Tone.AudioNode"
 	},
@@ -675,6 +661,20 @@
 		"description": "Tone.Solo lets you isolate a specific audio stream. When\n        an instance is set to `solo=true`, it will mute all other instances.",
 		"examples": [
 			"var soloA = new Tone.Solo()\nvar soloB = new Tone.Solo()\nsoloA.solo = true\n//no audio will pass through soloB"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"Waveform": {
+		"description": "Get the current waveform data of the connected audio source.",
+		"params": [
+			{
+				"type": [
+					"Number"
+				],
+				"optional": true,
+				"description": "The size of the FFT. Value must be a power of\n                      two in the range 32 to 32768.",
+				"name": "size"
+			}
 		],
 		"extends": "Tone.AudioNode"
 	},
@@ -1859,10 +1859,6 @@
 		],
 		"extends": "Tone.Monophonic"
 	},
-	"Zero": {
-		"description": "Tone.Zero outputs 0's at audio-rate. The reason this has to be\n        it's own class is that many browsers optimize out Tone.Signal\n        with a value of 0 and will not process nodes further down the graph.",
-		"extends": "Tone.SignalBase"
-	},
 	"Abs": {
 		"description": "Return the absolute value of an incoming signal.",
 		"examples": [
@@ -2169,6 +2165,10 @@
 			"var timesTwo = new Tone.WaveShaper(function(val){\n\treturn val * 2;\n}, 2048);\n ",
 			"//a waveshaper can also be constructed with an array of values\nvar invert = new Tone.WaveShaper([1, -1]);"
 		],
+		"extends": "Tone.SignalBase"
+	},
+	"Zero": {
+		"description": "Tone.Zero outputs 0's at audio-rate. The reason this has to be\n        it's own class is that many browsers optimize out Tone.Signal\n        with a value of 0 and will not process nodes further down the graph.",
 		"extends": "Tone.SignalBase"
 	},
 	"AMOscillator": {
