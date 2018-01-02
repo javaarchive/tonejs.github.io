@@ -135,28 +135,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"FFT": [
-		{
-			"description": "The size of analysis. This must be a power of two in the range 32 to 32768.",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "size",
-			"lineno": "Tone/component/FFT.js#L43"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"FeedbackCombFilter": [
 		{
 			"description": "The amount of delay of the comb filter.",
@@ -699,28 +677,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"Waveform": [
-		{
-			"description": "The size of analysis. This must be a power of two in the range 32 to 32768.",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "size",
-			"lineno": "Tone/component/Waveform.js#L43"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"Analyser": [
 		{
 			"description": "The size of analysis. This must be a power of two in the range 32 to 32768.",
@@ -875,6 +831,28 @@
 			"scope": "instance",
 			"name": "releaseCurve",
 			"lineno": "Tone/component/Envelope.js#L181"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"FFT": [
+		{
+			"description": "The size of analysis. This must be a power of two in the range 32 to 32768.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "size",
+			"lineno": "Tone/component/FFT.js#L43"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -1518,6 +1496,28 @@
 			"scope": "instance",
 			"name": "muted",
 			"lineno": "Tone/component/Solo.js#L70"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Waveform": [
+		{
+			"description": "The size of analysis. This must be a power of two in the range 32 to 32768.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "size",
+			"lineno": "Tone/component/Waveform.js#L43"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
