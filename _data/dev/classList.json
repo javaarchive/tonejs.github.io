@@ -78,6 +78,7 @@
 		"Phaser",
 		"PingPongDelay",
 		"PitchShift",
+		"Reverb",
 		"StereoEffect",
 		"StereoFeedbackEffect",
 		"StereoWidener",

@@ -301,6 +301,10 @@
 		"delayTime": 0,
 		"feedback": 0
 	},
+	"Reverb": {
+		"decay": 1.5,
+		"preDelay": 0.01
+	},
 	"StereoWidener": {
 		"width": 0.5
 	},

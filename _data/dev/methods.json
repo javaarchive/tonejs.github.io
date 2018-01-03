@@ -9902,6 +9902,140 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
+	"Reverb": [
+		{
+			"description": "Generate the Impulse Response. Returns a promise while the IR is being\ngenerated.",
+			"returns": {
+				"type": [
+					"Promise.<Tone.Reverb>"
+				],
+				"description": "Promise which returns this object."
+			},
+			"scope": "instance",
+			"name": "generate",
+			"lineno": "Tone/effect/Reverb.js#L64"
+		},
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.Reverb"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/effect/Reverb.js#L91"
+		},
+		{
+			"description": "Load an impulse response url as an audio buffer.\n Decodes the audio asynchronously and invokes\n the callback once the audio buffer loads.",
+			"params": [
+				{
+					"type": [
+						"string"
+					],
+					"description": "The url of the buffer to load.\n                     filetype support depends on the\n                     browser.",
+					"name": "url"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"optional": true,
+					"name": "callback"
+				}
+			],
+			"returns": {
+				"type": [
+					"Promise"
+				]
+			},
+			"scope": "instance",
+			"name": "load",
+			"lineno": "Tone/effect/Convolver.js#L82",
+			"inherits": "Tone.Convolver"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L110",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L127",
+			"inherits": "Tone.AudioNode"
+		}
+	],
 	"StereoEffect": [
 		{
 			"description": "Clean up.",

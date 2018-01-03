@@ -1445,6 +1445,20 @@
 		],
 		"extends": "Tone.FeedbackEffect"
 	},
+	"Reverb": {
+		"description": "Simple convolution created with decaying noise.\n \t\tGenerates an Impulse Response Buffer\n\t\t\twith Tone.Offline then feeds the IR into ConvolverNode.\n\t\t\tNote: the Reverb will not make any sound until [generate](#generate)\n\t\t\thas been invoked and resolved.\n\n\t\t\tInspiration from [ReverbGen](https://github.com/adelespinasse/reverbGen).\n\t\t\tCopyright (c) 2014 Alan deLespinasse Apache 2.0 License.",
+		"params": [
+			{
+				"type": [
+					"Time"
+				],
+				"optional": true,
+				"description": "The amount of time it will reverberate for.",
+				"name": "decay"
+			}
+		],
+		"extends": "Tone.Convolver"
+	},
 	"StereoEffect": {
 		"description": "Base class for Stereo effects. Provides effectSendL/R and effectReturnL/R.",
 		"extends": "Tone.Effect"

@@ -3037,6 +3037,58 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
+	"Reverb": [
+		{
+			"description": "The duration of the reverb",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "decay",
+			"lineno": "Tone/effect/Reverb.js#L35"
+		},
+		{
+			"description": "The amount of time before the reverb is fully\nramped in.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "preDelay",
+			"lineno": "Tone/effect/Reverb.js#L42"
+		},
+		{
+			"description": "The convolver's buffer",
+			"type": [
+				"AudioBuffer"
+			],
+			"scope": "instance",
+			"name": "buffer",
+			"lineno": "Tone/effect/Convolver.js#L56",
+			"inherits": "Tone.Convolver"
+		},
+		{
+			"description": "The wet control is how much of the effected\n will pass through to the output. 1 = 100% effected\n signal, 0 = 100% dry signal.",
+			"type": [
+				"NormalRange"
+			],
+			"scope": "instance",
+			"name": "wet",
+			"lineno": "Tone/effect/Effect.js#L34",
+			"inherits": "Tone.Effect",
+			"signal": true
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
 	"StereoEffect": [
 		{
 			"description": "The wet control, i.e. how much of the effected\n will pass through to the output.",

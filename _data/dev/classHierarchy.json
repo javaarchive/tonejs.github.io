@@ -293,6 +293,12 @@
 		"AudioNode",
 		"Tone"
 	],
+	"Reverb": [
+		"Convolver",
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
 	"StereoEffect": [
 		"Effect",
 		"AudioNode",
