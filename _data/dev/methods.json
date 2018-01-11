@@ -4528,7 +4528,7 @@
 			"params": [],
 			"scope": "inner",
 			"name": "toneDisconnect",
-			"lineno": "Tone/core/Context.js#L532"
+			"lineno": "Tone/core/Context.js#L534"
 		},
 		{
 			"params": [],
