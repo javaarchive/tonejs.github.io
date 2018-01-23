@@ -4070,7 +4070,7 @@
 			},
 			"scope": "static",
 			"name": "Offline",
-			"lineno": "Tone/core/Offline.js#L33"
+			"lineno": "Tone/core/Offline.js#L61"
 		},
 		{
 			"params": [
@@ -4540,7 +4540,7 @@
 			"params": [],
 			"scope": "inner",
 			"name": "ConstantSourceNode",
-			"lineno": "Tone/shim/ConstantSourceNode.js#L5"
+			"lineno": "Tone/shim/ConstantSourceNode.js#L6"
 		},
 		{
 			"params": [],
@@ -5037,7 +5037,7 @@
 		{
 			"scope": "instance",
 			"name": "createConstantSource",
-			"lineno": "Tone/shim/ConstantSourceNode.js#L50"
+			"lineno": "Tone/shim/ConstantSourceNode.js#L51"
 		},
 		{
 			"scope": "instance",
@@ -5809,6 +5809,11 @@
 			"scope": "instance",
 			"name": "close",
 			"lineno": "Tone/core/OfflineContext.js#L71"
+		},
+		{
+			"scope": "instance",
+			"name": "createBufferSource",
+			"lineno": "Tone/shim/BufferSourceNode.js#L13"
 		},
 		{
 			"description": "Promise which is invoked when the context is running.\n Tries to resume the context if it's not started.",
@@ -22982,7 +22987,7 @@
 		{
 			"scope": "instance",
 			"name": "createConstantSource",
-			"lineno": "Tone/shim/ConstantSourceNode.js#L46"
+			"lineno": "Tone/shim/ConstantSourceNode.js#L47"
 		},
 		{
 			"scope": "instance",
@@ -22999,22 +23004,22 @@
 		{
 			"scope": "instance",
 			"name": "start",
-			"lineno": "Tone/shim/ConstantSourceNode.js#L26"
+			"lineno": "Tone/shim/ConstantSourceNode.js#L27"
 		},
 		{
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/shim/ConstantSourceNode.js#L31"
+			"lineno": "Tone/shim/ConstantSourceNode.js#L32"
 		},
 		{
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/shim/ConstantSourceNode.js#L36"
+			"lineno": "Tone/shim/ConstantSourceNode.js#L37"
 		},
 		{
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/shim/ConstantSourceNode.js#L41"
+			"lineno": "Tone/shim/ConstantSourceNode.js#L42"
 		}
 	],
 	"OfflineAudioContext": [
