@@ -8064,7 +8064,7 @@
 	],
 	"TransportEvent": [
 		{
-			"description": "Invoke the callback even callback.",
+			"description": "Invoke the event callback.",
 			"params": [
 				{
 					"type": [
@@ -22123,7 +22123,7 @@
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L119"
+			"lineno": "Tone/type/TimeBase.js#L120"
 		}
 	],
 	"Frequency": [
@@ -22290,7 +22290,7 @@
 			},
 			"scope": "instance",
 			"name": "valueOf",
-			"lineno": "Tone/type/TimeBase.js#L274",
+			"lineno": "Tone/type/TimeBase.js#L275",
 			"inherits": "Tone.TimeBase"
 		},
 		{
@@ -22302,7 +22302,7 @@
 			},
 			"scope": "instance",
 			"name": "toSamples",
-			"lineno": "Tone/type/TimeBase.js#L318",
+			"lineno": "Tone/type/TimeBase.js#L319",
 			"inherits": "Tone.TimeBase"
 		},
 		{
@@ -22314,7 +22314,7 @@
 			},
 			"scope": "instance",
 			"name": "toMilliseconds",
-			"lineno": "Tone/type/TimeBase.js#L326",
+			"lineno": "Tone/type/TimeBase.js#L327",
 			"inherits": "Tone.TimeBase"
 		},
 		{
@@ -22327,7 +22327,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/type/TimeBase.js#L334",
+			"lineno": "Tone/type/TimeBase.js#L335",
 			"inherits": "Tone.TimeBase"
 		}
 	],
@@ -22455,7 +22455,7 @@
 			},
 			"scope": "instance",
 			"name": "valueOf",
-			"lineno": "Tone/type/TimeBase.js#L274",
+			"lineno": "Tone/type/TimeBase.js#L275",
 			"inherits": "Tone.TimeBase"
 		},
 		{
@@ -22467,7 +22467,7 @@
 			},
 			"scope": "instance",
 			"name": "toSamples",
-			"lineno": "Tone/type/TimeBase.js#L318",
+			"lineno": "Tone/type/TimeBase.js#L319",
 			"inherits": "Tone.TimeBase"
 		},
 		{
@@ -22479,7 +22479,7 @@
 			},
 			"scope": "instance",
 			"name": "toMilliseconds",
-			"lineno": "Tone/type/TimeBase.js#L326",
+			"lineno": "Tone/type/TimeBase.js#L327",
 			"inherits": "Tone.TimeBase"
 		},
 		{
@@ -22492,7 +22492,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/type/TimeBase.js#L334",
+			"lineno": "Tone/type/TimeBase.js#L335",
 			"inherits": "Tone.TimeBase"
 		}
 	],
@@ -22602,7 +22602,7 @@
 			},
 			"scope": "instance",
 			"name": "valueOf",
-			"lineno": "Tone/type/TimeBase.js#L274",
+			"lineno": "Tone/type/TimeBase.js#L275",
 			"inherits": "Tone.TimeBase"
 		},
 		{
@@ -22614,7 +22614,7 @@
 			},
 			"scope": "instance",
 			"name": "toFrequency",
-			"lineno": "Tone/type/TimeBase.js#L310",
+			"lineno": "Tone/type/TimeBase.js#L311",
 			"inherits": "Tone.TimeBase"
 		},
 		{
@@ -22626,7 +22626,7 @@
 			},
 			"scope": "instance",
 			"name": "toSamples",
-			"lineno": "Tone/type/TimeBase.js#L318",
+			"lineno": "Tone/type/TimeBase.js#L319",
 			"inherits": "Tone.TimeBase"
 		},
 		{
@@ -22638,7 +22638,7 @@
 			},
 			"scope": "instance",
 			"name": "toMilliseconds",
-			"lineno": "Tone/type/TimeBase.js#L326",
+			"lineno": "Tone/type/TimeBase.js#L327",
 			"inherits": "Tone.TimeBase"
 		},
 		{
@@ -22651,7 +22651,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/type/TimeBase.js#L334",
+			"lineno": "Tone/type/TimeBase.js#L335",
 			"inherits": "Tone.TimeBase"
 		}
 	],
@@ -22771,7 +22771,7 @@
 			},
 			"scope": "instance",
 			"name": "valueOf",
-			"lineno": "Tone/type/TimeBase.js#L274",
+			"lineno": "Tone/type/TimeBase.js#L275",
 			"inherits": "Tone.TimeBase"
 		},
 		{
@@ -22783,7 +22783,7 @@
 			},
 			"scope": "instance",
 			"name": "toFrequency",
-			"lineno": "Tone/type/TimeBase.js#L310",
+			"lineno": "Tone/type/TimeBase.js#L311",
 			"inherits": "Tone.TimeBase"
 		},
 		{
@@ -22795,7 +22795,7 @@
 			},
 			"scope": "instance",
 			"name": "toSamples",
-			"lineno": "Tone/type/TimeBase.js#L318",
+			"lineno": "Tone/type/TimeBase.js#L319",
 			"inherits": "Tone.TimeBase"
 		},
 		{
@@ -22807,7 +22807,7 @@
 			},
 			"scope": "instance",
 			"name": "toMilliseconds",
-			"lineno": "Tone/type/TimeBase.js#L326",
+			"lineno": "Tone/type/TimeBase.js#L327",
 			"inherits": "Tone.TimeBase"
 		},
 		{
@@ -22820,7 +22820,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/type/TimeBase.js#L334",
+			"lineno": "Tone/type/TimeBase.js#L335",
 			"inherits": "Tone.TimeBase"
 		}
 	],
@@ -22828,56 +22828,56 @@
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L82"
+			"lineno": "Tone/type/TimeBase.js#L83"
 		}
 	],
 	"t": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L94"
+			"lineno": "Tone/type/TimeBase.js#L95"
 		}
 	],
 	"m": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L101"
+			"lineno": "Tone/type/TimeBase.js#L102"
 		}
 	],
 	"i": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L107"
+			"lineno": "Tone/type/TimeBase.js#L108"
 		}
 	],
 	"hz": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L113"
+			"lineno": "Tone/type/TimeBase.js#L114"
 		}
 	],
 	"s": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L135"
+			"lineno": "Tone/type/TimeBase.js#L136"
 		}
 	],
 	"samples": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L141"
+			"lineno": "Tone/type/TimeBase.js#L142"
 		}
 	],
 	"default": [
 		{
 			"scope": "static",
 			"name": "method",
-			"lineno": "Tone/type/TimeBase.js#L147"
+			"lineno": "Tone/type/TimeBase.js#L148"
 		}
 	],
 	"TimeBase": [
@@ -22890,7 +22890,7 @@
 			},
 			"scope": "instance",
 			"name": "valueOf",
-			"lineno": "Tone/type/TimeBase.js#L274"
+			"lineno": "Tone/type/TimeBase.js#L275"
 		},
 		{
 			"description": "Return the value in seconds",
@@ -22901,7 +22901,7 @@
 			},
 			"scope": "instance",
 			"name": "toSeconds",
-			"lineno": "Tone/type/TimeBase.js#L302"
+			"lineno": "Tone/type/TimeBase.js#L303"
 		},
 		{
 			"description": "Return the value in hertz",
@@ -22912,7 +22912,7 @@
 			},
 			"scope": "instance",
 			"name": "toFrequency",
-			"lineno": "Tone/type/TimeBase.js#L310"
+			"lineno": "Tone/type/TimeBase.js#L311"
 		},
 		{
 			"description": "Return the time in samples",
@@ -22923,7 +22923,7 @@
 			},
 			"scope": "instance",
 			"name": "toSamples",
-			"lineno": "Tone/type/TimeBase.js#L318"
+			"lineno": "Tone/type/TimeBase.js#L319"
 		},
 		{
 			"description": "Return the time in milliseconds.",
@@ -22934,7 +22934,7 @@
 			},
 			"scope": "instance",
 			"name": "toMilliseconds",
-			"lineno": "Tone/type/TimeBase.js#L326"
+			"lineno": "Tone/type/TimeBase.js#L327"
 		},
 		{
 			"description": "Clean up",
@@ -22946,7 +22946,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/type/TimeBase.js#L334"
+			"lineno": "Tone/type/TimeBase.js#L335"
 		}
 	],
 	"AnalyserNode": [
@@ -23163,7 +23163,7 @@
 			},
 			"scope": "instance",
 			"name": "valueOf",
-			"lineno": "Tone/type/TimeBase.js#L274",
+			"lineno": "Tone/type/TimeBase.js#L275",
 			"inherits": "Tone.TimeBase"
 		},
 		{
@@ -23175,7 +23175,7 @@
 			},
 			"scope": "instance",
 			"name": "toFrequency",
-			"lineno": "Tone/type/TimeBase.js#L310",
+			"lineno": "Tone/type/TimeBase.js#L311",
 			"inherits": "Tone.TimeBase"
 		},
 		{
@@ -23187,7 +23187,7 @@
 			},
 			"scope": "instance",
 			"name": "toSamples",
-			"lineno": "Tone/type/TimeBase.js#L318",
+			"lineno": "Tone/type/TimeBase.js#L319",
 			"inherits": "Tone.TimeBase"
 		},
 		{
@@ -23199,7 +23199,7 @@
 			},
 			"scope": "instance",
 			"name": "toMilliseconds",
-			"lineno": "Tone/type/TimeBase.js#L326",
+			"lineno": "Tone/type/TimeBase.js#L327",
 			"inherits": "Tone.TimeBase"
 		},
 		{
@@ -23212,7 +23212,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/type/TimeBase.js#L334",
+			"lineno": "Tone/type/TimeBase.js#L335",
 			"inherits": "Tone.TimeBase"
 		}
 	]

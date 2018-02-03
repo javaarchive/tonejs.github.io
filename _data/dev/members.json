@@ -6582,17 +6582,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"TimeBase": [
-		{
-			"description": "The units",
-			"type": [
-				"String"
-			],
-			"scope": "instance",
-			"name": "_units",
-			"lineno": "Tone/type/TimeBase.js#L31"
-		}
-	],
 	"<anonymous>~StereoPannerNode": [
 		{
 			"description": "The audio context",
@@ -7144,66 +7133,6 @@
 			"name": "context",
 			"lineno": "Tone/core/AudioNode.js#L27",
 			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Frequency": [
-		{
-			"description": "The units",
-			"type": [
-				"String"
-			],
-			"scope": "instance",
-			"name": "_units",
-			"lineno": "Tone/type/TimeBase.js#L31",
-			"inherits": "Tone.TimeBase"
-		}
-	],
-	"Midi": [
-		{
-			"description": "The units",
-			"type": [
-				"String"
-			],
-			"scope": "instance",
-			"name": "_units",
-			"lineno": "Tone/type/TimeBase.js#L31",
-			"inherits": "Tone.TimeBase"
-		}
-	],
-	"Time": [
-		{
-			"description": "The units",
-			"type": [
-				"String"
-			],
-			"scope": "instance",
-			"name": "_units",
-			"lineno": "Tone/type/TimeBase.js#L31",
-			"inherits": "Tone.TimeBase"
-		}
-	],
-	"TransportTime": [
-		{
-			"description": "The units",
-			"type": [
-				"String"
-			],
-			"scope": "instance",
-			"name": "_units",
-			"lineno": "Tone/type/TimeBase.js#L31",
-			"inherits": "Tone.TimeBase"
-		}
-	],
-	"Ticks": [
-		{
-			"description": "The units",
-			"type": [
-				"String"
-			],
-			"scope": "instance",
-			"name": "_units",
-			"lineno": "Tone/type/TimeBase.js#L31",
-			"inherits": "Tone.TimeBase"
 		}
 	]
 }
