@@ -5880,7 +5880,7 @@
 			],
 			"scope": "instance",
 			"name": "type",
-			"lineno": "Tone/source/Oscillator.js#L167"
+			"lineno": "Tone/source/Oscillator.js#L171"
 		},
 		{
 			"description": "The partials of the waveform. A partial represents\nthe amplitude at a harmonic. The first harmonic is the\nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series.\nSetting this value will automatically set the type to \"custom\".\nThe value is an empty array when the type is not \"custom\".",
@@ -5892,7 +5892,7 @@
 			],
 			"scope": "instance",
 			"name": "partials",
-			"lineno": "Tone/source/Oscillator.js#L301"
+			"lineno": "Tone/source/Oscillator.js#L314"
 		},
 		{
 			"description": "The phase of the oscillator in degrees.",
@@ -5904,7 +5904,7 @@
 			],
 			"scope": "instance",
 			"name": "phase",
-			"lineno": "Tone/source/Oscillator.js#L328"
+			"lineno": "Tone/source/Oscillator.js#L341"
 		},
 		{
 			"description": "Mute the output.",
