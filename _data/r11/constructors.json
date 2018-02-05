@@ -275,10 +275,6 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
-	"Mono": {
-		"description": "Tone.Mono coerces the incoming mono or stereo signal into a mono signal\n        where both left and right channels have the same value. This can be useful\n        for [stereo imaging](https://en.wikipedia.org/wiki/Stereo_imaging).",
-		"extends": "Tone.AudioNode"
-	},
 	"MultibandCompressor": {
 		"description": "A compressor with seperate controls over low/mid/high dynamics",
 		"params": [
@@ -568,6 +564,10 @@
 	},
 	"MidSideSplit": {
 		"description": "Mid/Side processing separates the the 'mid' signal\n        (which comes out of both the left and the right channel)\n        and the 'side' (which only comes out of the the side channels). <br><br>\n        <code>\n        Mid = (Left+Right)/sqrt(2);   // obtain mid-signal from left and right<br>\n        Side = (Left-Right)/sqrt(2);   // obtain side-signal from left and righ<br>\n        </code>",
+		"extends": "Tone.AudioNode"
+	},
+	"Mono": {
+		"description": "Tone.Mono coerces the incoming mono or stereo signal into a mono signal\n        where both left and right channels have the same value. This can be useful\n        for [stereo imaging](https://en.wikipedia.org/wiki/Stereo_imaging).",
 		"extends": "Tone.AudioNode"
 	},
 	"Panner": {
