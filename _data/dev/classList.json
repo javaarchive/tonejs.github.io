@@ -140,6 +140,7 @@
 		"Noise",
 		"OmniOscillator",
 		"Oscillator",
+		"OscillatorNode",
 		"PWMOscillator",
 		"Player",
 		"Players",

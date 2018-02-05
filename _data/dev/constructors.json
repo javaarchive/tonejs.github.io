@@ -2382,6 +2382,27 @@
 		],
 		"extends": "Tone.Source"
 	},
+	"OscillatorNode": {
+		"description": "Wrapper around the native fire-and-forget OscillatorNode. Adds the\n    ability to reschedule the stop method.",
+		"params": [
+			{
+				"type": [
+					"AudioBuffer",
+					"Tone.Buffer"
+				],
+				"description": "The buffer to play",
+				"name": "buffer"
+			},
+			{
+				"type": [
+					"function"
+				],
+				"description": "The callback to invoke when the\n                              buffer is done playing.",
+				"name": "onload"
+			}
+		],
+		"extends": "Tone.AudioNode"
+	},
 	"PWMOscillator": {
 		"description": "Tone.PWMOscillator modulates the width of a Tone.PulseOscillator\n        at the modulationFrequency. This has the effect of continuously\n        changing the timbre of the oscillator by altering the harmonics\n        generated.",
 		"params": [

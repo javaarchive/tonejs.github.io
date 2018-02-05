@@ -5976,6 +5976,85 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
+	"OscillatorNode": [
+		{
+			"description": "The callback to invoke after the\n buffer source is done playing.",
+			"type": [
+				"function"
+			],
+			"scope": "instance",
+			"name": "onended",
+			"lineno": "Tone/source/OscillatorNode.js#L22"
+		},
+		{
+			"description": "The frequency of the oscillator",
+			"type": [
+				"Frequency"
+			],
+			"scope": "instance",
+			"name": "frequency",
+			"lineno": "Tone/source/OscillatorNode.js#L59",
+			"signal": true
+		},
+		{
+			"description": "The detune of the oscillator",
+			"type": [
+				"Frequency"
+			],
+			"scope": "instance",
+			"name": "detune",
+			"lineno": "Tone/source/OscillatorNode.js#L67",
+			"signal": true
+		},
+		{
+			"description": "The fadeIn time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeIn",
+			"lineno": "Tone/source/OscillatorNode.js#L74"
+		},
+		{
+			"description": "The fadeOut time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeOut",
+			"lineno": "Tone/source/OscillatorNode.js#L80"
+		},
+		{
+			"description": "Returns the playback state of the oscillator, either \"started\" or \"stopped\".",
+			"type": [
+				"Tone.State"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "state",
+			"lineno": "Tone/source/OscillatorNode.js#L107"
+		},
+		{
+			"description": "The oscillator type. Either 'sine', 'sawtooth', 'square', or 'triangle'",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "type",
+			"lineno": "Tone/source/OscillatorNode.js#L168"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		}
+	],
 	"PWMOscillator": [
 		{
 			"description": "The frequency control.",

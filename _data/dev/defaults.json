@@ -610,6 +610,15 @@
 		"phase": 0,
 		"partials": "[]"
 	},
+	"OscillatorNode": {
+		"frequency": 440,
+		"detune": 0,
+		"type": "sine",
+		"fadeIn": 0,
+		"fadeOut": 0,
+		"curve": "linear",
+		"onended": "Tone.noOp"
+	},
 	"PWMOscillator": {
 		"frequency": 440,
 		"detune": 0,
