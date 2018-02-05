@@ -14747,7 +14747,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/signal/Signal.js#L171",
+			"lineno": "Tone/signal/Signal.js#L170",
 			"inherits": "Tone.Signal"
 		},
 		{
@@ -14768,7 +14768,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/signal/Signal.js#L187",
+			"lineno": "Tone/signal/Signal.js#L186",
 			"inherits": "Tone.Signal"
 		},
 		{
@@ -15458,7 +15458,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/signal/Signal.js#L171",
+			"lineno": "Tone/signal/Signal.js#L170",
 			"inherits": "Tone.Signal"
 		},
 		{
@@ -15479,7 +15479,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/signal/Signal.js#L187",
+			"lineno": "Tone/signal/Signal.js#L186",
 			"inherits": "Tone.Signal"
 		},
 		{
@@ -16113,7 +16113,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/signal/Signal.js#L171",
+			"lineno": "Tone/signal/Signal.js#L170",
 			"inherits": "Tone.Signal"
 		},
 		{
@@ -16134,7 +16134,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/signal/Signal.js#L187",
+			"lineno": "Tone/signal/Signal.js#L186",
 			"inherits": "Tone.Signal"
 		},
 		{
@@ -16924,7 +16924,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/signal/Signal.js#L171"
+			"lineno": "Tone/signal/Signal.js#L170"
 		},
 		{
 			"description": "Return the current signal value at the given time.",
@@ -16944,17 +16944,17 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/signal/Signal.js#L187"
+			"lineno": "Tone/signal/Signal.js#L186"
 		},
 		{
 			"scope": "instance",
 			"name": "[undefined]",
-			"lineno": "Tone/signal/Signal.js#L199"
+			"lineno": "Tone/signal/Signal.js#L198"
 		},
 		{
 			"scope": "instance",
 			"name": "[undefined]",
-			"lineno": "Tone/signal/Signal.js#L213"
+			"lineno": "Tone/signal/Signal.js#L212"
 		},
 		{
 			"description": "dispose and disconnect",
@@ -16966,7 +16966,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/signal/Signal.js#L228"
+			"lineno": "Tone/signal/Signal.js#L227"
 		},
 		{
 			"description": "Schedules a parameter value change at the given time.",
@@ -17571,7 +17571,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/signal/Signal.js#L171",
+			"lineno": "Tone/signal/Signal.js#L170",
 			"inherits": "Tone.Signal"
 		},
 		{
@@ -17592,7 +17592,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/signal/Signal.js#L187",
+			"lineno": "Tone/signal/Signal.js#L186",
 			"inherits": "Tone.Signal"
 		},
 		{
@@ -18289,7 +18289,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/signal/Signal.js#L171",
+			"lineno": "Tone/signal/Signal.js#L170",
 			"inherits": "Tone.Signal"
 		},
 		{
@@ -18310,7 +18310,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/signal/Signal.js#L187",
+			"lineno": "Tone/signal/Signal.js#L186",
 			"inherits": "Tone.Signal"
 		},
 		{
@@ -18323,7 +18323,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/signal/Signal.js#L228",
+			"lineno": "Tone/signal/Signal.js#L227",
 			"inherits": "Tone.Signal"
 		},
 		{
@@ -19003,7 +19003,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/signal/Signal.js#L171",
+			"lineno": "Tone/signal/Signal.js#L170",
 			"inherits": "Tone.Signal"
 		},
 		{
