@@ -11583,7 +11583,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/DuoSynth.js#L181"
+			"lineno": "Tone/instrument/DuoSynth.js#L179"
 		},
 		{
 			"description": "Trigger the attack of the note optionally with a given velocity.",
@@ -12364,7 +12364,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerRelease",
-			"lineno": "Tone/instrument/MembraneSynth.js#L103"
+			"lineno": "Tone/instrument/MembraneSynth.js#L106"
 		},
 		{
 			"description": "Clean up.",
@@ -12376,7 +12376,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/MembraneSynth.js#L112"
+			"lineno": "Tone/instrument/MembraneSynth.js#L117"
 		},
 		{
 			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
@@ -12588,7 +12588,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerRelease",
-			"lineno": "Tone/instrument/MetalSynth.js#L157"
+			"lineno": "Tone/instrument/MetalSynth.js#L169"
 		},
 		{
 			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
@@ -12603,7 +12603,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/instrument/MetalSynth.js#L177"
+			"lineno": "Tone/instrument/MetalSynth.js#L192"
 		},
 		{
 			"description": "Trigger the attack and release of the envelope after the given\n duration.",
@@ -12640,7 +12640,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/MetalSynth.js#L191"
+			"lineno": "Tone/instrument/MetalSynth.js#L206"
 		},
 		{
 			"description": "Clean up",
@@ -12652,7 +12652,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/MetalSynth.js#L272"
+			"lineno": "Tone/instrument/MetalSynth.js#L287"
 		},
 		{
 			"description": "Unsync the instrument from the Transport",
@@ -12759,7 +12759,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/MonoSynth.js#L145"
+			"lineno": "Tone/instrument/MonoSynth.js#L151"
 		},
 		{
 			"description": "Trigger the attack of the note optionally with a given velocity.",
@@ -14350,7 +14350,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/Synth.js#L105"
+			"lineno": "Tone/instrument/Synth.js#L112"
 		},
 		{
 			"description": "Trigger the attack of the note optionally with a given velocity.",
@@ -19411,7 +19411,7 @@
 			},
 			"scope": "instance",
 			"name": "syncFrequency",
-			"lineno": "Tone/source/Oscillator.js#L156",
+			"lineno": "Tone/source/Oscillator.js#L157",
 			"inherits": "Tone.Oscillator"
 		},
 		{
@@ -19424,8 +19424,29 @@
 			},
 			"scope": "instance",
 			"name": "unsyncFrequency",
-			"lineno": "Tone/source/Oscillator.js#L166",
+			"lineno": "Tone/source/Oscillator.js#L167",
 			"inherits": "Tone.Oscillator"
+		},
+		{
+			"description": "Get the state of the source at the given time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "When to get the state.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.State"
+				]
+			},
+			"scope": "instance",
+			"name": "getStateAtTime",
+			"lineno": "Tone/source/Source.js#L118",
+			"inherits": "Tone.Source"
 		},
 		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
@@ -19451,7 +19472,7 @@
 			},
 			"scope": "instance",
 			"name": "start",
-			"lineno": "Tone/source/Source.js#L143",
+			"lineno": "Tone/source/Source.js#L152",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -19478,7 +19499,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L182",
+			"lineno": "Tone/source/Source.js#L191",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -19495,7 +19516,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L218",
+			"lineno": "Tone/source/Source.js#L227",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -19508,7 +19529,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L250",
+			"lineno": "Tone/source/Source.js#L259",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -19787,6 +19808,27 @@
 			"lineno": "Tone/source/FMOscillator.js#L207"
 		},
 		{
+			"description": "Get the state of the source at the given time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "When to get the state.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.State"
+				]
+			},
+			"scope": "instance",
+			"name": "getStateAtTime",
+			"lineno": "Tone/source/Source.js#L118",
+			"inherits": "Tone.Source"
+		},
+		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
 			"params": [
 				{
@@ -19810,7 +19852,7 @@
 			},
 			"scope": "instance",
 			"name": "start",
-			"lineno": "Tone/source/Source.js#L143",
+			"lineno": "Tone/source/Source.js#L152",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -19837,7 +19879,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L182",
+			"lineno": "Tone/source/Source.js#L191",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -19854,7 +19896,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L218",
+			"lineno": "Tone/source/Source.js#L227",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -19867,7 +19909,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L250",
+			"lineno": "Tone/source/Source.js#L259",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -19965,6 +20007,27 @@
 			"lineno": "Tone/source/FatOscillator.js#L266"
 		},
 		{
+			"description": "Get the state of the source at the given time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "When to get the state.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.State"
+				]
+			},
+			"scope": "instance",
+			"name": "getStateAtTime",
+			"lineno": "Tone/source/Source.js#L118",
+			"inherits": "Tone.Source"
+		},
+		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
 			"params": [
 				{
@@ -19988,7 +20051,7 @@
 			},
 			"scope": "instance",
 			"name": "start",
-			"lineno": "Tone/source/Source.js#L143",
+			"lineno": "Tone/source/Source.js#L152",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20015,7 +20078,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L182",
+			"lineno": "Tone/source/Source.js#L191",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20032,7 +20095,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L218",
+			"lineno": "Tone/source/Source.js#L227",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20045,7 +20108,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L250",
+			"lineno": "Tone/source/Source.js#L259",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20212,6 +20275,27 @@
 			"lineno": "Tone/source/GrainPlayer.js#L308"
 		},
 		{
+			"description": "Get the state of the source at the given time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "When to get the state.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.State"
+				]
+			},
+			"scope": "instance",
+			"name": "getStateAtTime",
+			"lineno": "Tone/source/Source.js#L118",
+			"inherits": "Tone.Source"
+		},
+		{
 			"description": "Stop the source at the specified time. If no time is given,\n stop the source now.",
 			"params": [
 				{
@@ -20235,7 +20319,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L182",
+			"lineno": "Tone/source/Source.js#L191",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20252,7 +20336,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L218",
+			"lineno": "Tone/source/Source.js#L227",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20265,7 +20349,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L250",
+			"lineno": "Tone/source/Source.js#L259",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20363,6 +20447,27 @@
 			"lineno": "Tone/source/Noise.js#L149"
 		},
 		{
+			"description": "Get the state of the source at the given time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "When to get the state.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.State"
+				]
+			},
+			"scope": "instance",
+			"name": "getStateAtTime",
+			"lineno": "Tone/source/Source.js#L118",
+			"inherits": "Tone.Source"
+		},
+		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
 			"params": [
 				{
@@ -20386,7 +20491,7 @@
 			},
 			"scope": "instance",
 			"name": "start",
-			"lineno": "Tone/source/Source.js#L143",
+			"lineno": "Tone/source/Source.js#L152",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20413,7 +20518,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L182",
+			"lineno": "Tone/source/Source.js#L191",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20430,7 +20535,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L218",
+			"lineno": "Tone/source/Source.js#L227",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20443,7 +20548,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L250",
+			"lineno": "Tone/source/Source.js#L259",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20576,6 +20681,27 @@
 			"lineno": "Tone/source/OmniOscillator.js#L390"
 		},
 		{
+			"description": "Get the state of the source at the given time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "When to get the state.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.State"
+				]
+			},
+			"scope": "instance",
+			"name": "getStateAtTime",
+			"lineno": "Tone/source/Source.js#L118",
+			"inherits": "Tone.Source"
+		},
+		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
 			"params": [
 				{
@@ -20599,7 +20725,7 @@
 			},
 			"scope": "instance",
 			"name": "start",
-			"lineno": "Tone/source/Source.js#L143",
+			"lineno": "Tone/source/Source.js#L152",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20626,7 +20752,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L182",
+			"lineno": "Tone/source/Source.js#L191",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20643,7 +20769,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L218",
+			"lineno": "Tone/source/Source.js#L227",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20656,7 +20782,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L250",
+			"lineno": "Tone/source/Source.js#L259",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20754,7 +20880,7 @@
 			},
 			"scope": "instance",
 			"name": "syncFrequency",
-			"lineno": "Tone/source/Oscillator.js#L156"
+			"lineno": "Tone/source/Oscillator.js#L157"
 		},
 		{
 			"description": "Unsync the oscillator's frequency from the Transport.\n See Tone.Oscillator.syncFrequency",
@@ -20766,7 +20892,7 @@
 			},
 			"scope": "instance",
 			"name": "unsyncFrequency",
-			"lineno": "Tone/source/Oscillator.js#L166"
+			"lineno": "Tone/source/Oscillator.js#L167"
 		},
 		{
 			"description": "Dispose and disconnect.",
@@ -20778,7 +20904,28 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/Oscillator.js#L364"
+			"lineno": "Tone/source/Oscillator.js#L365"
+		},
+		{
+			"description": "Get the state of the source at the given time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "When to get the state.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.State"
+				]
+			},
+			"scope": "instance",
+			"name": "getStateAtTime",
+			"lineno": "Tone/source/Source.js#L118",
+			"inherits": "Tone.Source"
 		},
 		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
@@ -20804,7 +20951,7 @@
 			},
 			"scope": "instance",
 			"name": "start",
-			"lineno": "Tone/source/Source.js#L143",
+			"lineno": "Tone/source/Source.js#L152",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20831,7 +20978,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L182",
+			"lineno": "Tone/source/Source.js#L191",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20848,7 +20995,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L218",
+			"lineno": "Tone/source/Source.js#L227",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20861,7 +21008,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L250",
+			"lineno": "Tone/source/Source.js#L259",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -20966,7 +21113,7 @@
 			},
 			"scope": "instance",
 			"name": "start",
-			"lineno": "Tone/source/OscillatorNode.js#L130"
+			"lineno": "Tone/source/OscillatorNode.js#L115"
 		},
 		{
 			"description": "Sets an arbitrary custom periodic waveform given a PeriodicWave.",
@@ -20987,7 +21134,7 @@
 			},
 			"scope": "instance",
 			"name": "setPeriodicWave",
-			"lineno": "Tone/source/OscillatorNode.js#L146"
+			"lineno": "Tone/source/OscillatorNode.js#L131"
 		},
 		{
 			"description": "Stop the oscillator node at the given time",
@@ -21009,7 +21156,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/OscillatorNode.js#L156"
+			"lineno": "Tone/source/OscillatorNode.js#L141"
 		},
 		{
 			"description": "Clean up.",
@@ -21021,7 +21168,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/OscillatorNode.js#L187"
+			"lineno": "Tone/source/OscillatorNode.js#L172"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
@@ -21118,6 +21265,27 @@
 			"lineno": "Tone/source/PWMOscillator.js#L160"
 		},
 		{
+			"description": "Get the state of the source at the given time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "When to get the state.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.State"
+				]
+			},
+			"scope": "instance",
+			"name": "getStateAtTime",
+			"lineno": "Tone/source/Source.js#L118",
+			"inherits": "Tone.Source"
+		},
+		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
 			"params": [
 				{
@@ -21141,7 +21309,7 @@
 			},
 			"scope": "instance",
 			"name": "start",
-			"lineno": "Tone/source/Source.js#L143",
+			"lineno": "Tone/source/Source.js#L152",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -21168,7 +21336,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L182",
+			"lineno": "Tone/source/Source.js#L191",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -21185,7 +21353,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L218",
+			"lineno": "Tone/source/Source.js#L227",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -21198,7 +21366,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L250",
+			"lineno": "Tone/source/Source.js#L259",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -21424,7 +21592,28 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/Player.js#L412"
+			"lineno": "Tone/source/Player.js#L413"
+		},
+		{
+			"description": "Get the state of the source at the given time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "When to get the state.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.State"
+				]
+			},
+			"scope": "instance",
+			"name": "getStateAtTime",
+			"lineno": "Tone/source/Source.js#L118",
+			"inherits": "Tone.Source"
 		},
 		{
 			"description": "Stop the source at the specified time. If no time is given,\n stop the source now.",
@@ -21450,7 +21639,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L182",
+			"lineno": "Tone/source/Source.js#L191",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -21467,7 +21656,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L218",
+			"lineno": "Tone/source/Source.js#L227",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -21480,7 +21669,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L250",
+			"lineno": "Tone/source/Source.js#L259",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -21766,6 +21955,27 @@
 			"lineno": "Tone/source/PulseOscillator.js#L168"
 		},
 		{
+			"description": "Get the state of the source at the given time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "When to get the state.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.State"
+				]
+			},
+			"scope": "instance",
+			"name": "getStateAtTime",
+			"lineno": "Tone/source/Source.js#L118",
+			"inherits": "Tone.Source"
+		},
+		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
 			"params": [
 				{
@@ -21789,7 +21999,7 @@
 			},
 			"scope": "instance",
 			"name": "start",
-			"lineno": "Tone/source/Source.js#L143",
+			"lineno": "Tone/source/Source.js#L152",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -21816,7 +22026,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L182",
+			"lineno": "Tone/source/Source.js#L191",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -21833,7 +22043,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L218",
+			"lineno": "Tone/source/Source.js#L227",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -21846,7 +22056,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L250",
+			"lineno": "Tone/source/Source.js#L259",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -21932,6 +22142,26 @@
 	],
 	"Source": [
 		{
+			"description": "Get the state of the source at the given time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "When to get the state.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.State"
+				]
+			},
+			"scope": "instance",
+			"name": "getStateAtTime",
+			"lineno": "Tone/source/Source.js#L118"
+		},
+		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
 			"params": [
 				{
@@ -21955,7 +22185,7 @@
 			},
 			"scope": "instance",
 			"name": "start",
-			"lineno": "Tone/source/Source.js#L143"
+			"lineno": "Tone/source/Source.js#L152"
 		},
 		{
 			"description": "Stop the source at the specified time. If no time is given,\n stop the source now.",
@@ -21981,7 +22211,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L182"
+			"lineno": "Tone/source/Source.js#L191"
 		},
 		{
 			"description": "Sync the source to the Transport so that all subsequent\n calls to `start` and `stop` are synced to the TransportTime\n instead of the AudioContext time.",
@@ -21997,7 +22227,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L218"
+			"lineno": "Tone/source/Source.js#L227"
 		},
 		{
 			"description": "Unsync the source to the Transport. See Tone.Source.sync",
@@ -22009,7 +22239,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L250"
+			"lineno": "Tone/source/Source.js#L259"
 		},
 		{
 			"description": "Clean up.",
@@ -22021,7 +22251,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/Source.js#L270"
+			"lineno": "Tone/source/Source.js#L279"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
@@ -22102,6 +22332,172 @@
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L136",
 			"inherits": "Tone.AudioNode"
+		}
+	],
+	"TickSource": [
+		{
+			"description": "Start the clock at the given time. Optionally pass in an offset\n of where to start the tick counter from.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"description": "The time the clock should start",
+					"name": "time"
+				},
+				{
+					"type": [
+						"Ticks"
+					],
+					"optional": true,
+					"description": "Where the tick counter starts counting from.",
+					"name": "offset"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.TickSource"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "start",
+			"lineno": "Tone/source/TickSource.js#L77"
+		},
+		{
+			"description": "Stop the clock. Stopping the clock resets the tick counter to 0.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "The time when the clock should stop.",
+					"name": "time"
+				}
+			],
+			"examples": [
+				"clock.stop();"
+			],
+			"returns": {
+				"type": [
+					"Tone.TickSource"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "stop",
+			"lineno": "Tone/source/TickSource.js#L99"
+		},
+		{
+			"description": "Pause the clock. Pausing does not reset the tick counter.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "The time when the clock should stop.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.TickSource"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "pause",
+			"lineno": "Tone/source/TickSource.js#L112"
+		},
+		{
+			"description": "Get the elapsed ticks at the given time",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "When to get the ticks",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Ticks"
+				],
+				"description": "The elapsed ticks at the given time."
+			},
+			"scope": "instance",
+			"name": "getTicksAtTime",
+			"lineno": "Tone/source/TickSource.js#L169"
+		},
+		{
+			"description": "Set the clock's ticks at the given time.",
+			"params": [
+				{
+					"type": [
+						"Ticks"
+					],
+					"description": "The tick value to set",
+					"name": "ticks"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "When to set the tick value",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.TickSource"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "setTicksAtTime",
+			"lineno": "Tone/source/TickSource.js#L187"
+		},
+		{
+			"description": "Returns the scheduled state at the given time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to query.",
+					"name": "time"
+				}
+			],
+			"examples": [
+				"source.start(\"+0.1\");\nsource.getStateAtTime(\"+0.1\"); //returns \"started\""
+			],
+			"returns": {
+				"type": [
+					"String"
+				],
+				"description": "The name of the state input in setStateAtTime."
+			},
+			"scope": "instance",
+			"name": "getStateAtTime",
+			"lineno": "Tone/source/TickSource.js#L206"
+		},
+		{
+			"description": "Clean up",
+			"returns": {
+				"type": [
+					"Tone.TickSource"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/source/TickSource.js#L215"
 		}
 	],
 	"UserMedia": [

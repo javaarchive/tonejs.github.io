@@ -146,6 +146,7 @@
 		"Players",
 		"PulseOscillator",
 		"Source",
+		"TickSource",
 		"UserMedia"
 	],
 	"type": [

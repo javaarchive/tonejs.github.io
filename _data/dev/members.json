@@ -4309,7 +4309,7 @@
 			],
 			"scope": "instance",
 			"name": "modulationIndex",
-			"lineno": "Tone/instrument/MetalSynth.js#L199"
+			"lineno": "Tone/instrument/MetalSynth.js#L214"
 		},
 		{
 			"description": "The harmonicity of the oscillators which make up the source.\n see Tone.FMOscillator.harmonicity",
@@ -4318,7 +4318,7 @@
 			],
 			"scope": "instance",
 			"name": "harmonicity",
-			"lineno": "Tone/instrument/MetalSynth.js#L217"
+			"lineno": "Tone/instrument/MetalSynth.js#L232"
 		},
 		{
 			"description": "The frequency of the highpass filter attached to the envelope",
@@ -4327,7 +4327,7 @@
 			],
 			"scope": "instance",
 			"name": "resonance",
-			"lineno": "Tone/instrument/MetalSynth.js#L235"
+			"lineno": "Tone/instrument/MetalSynth.js#L250"
 		},
 		{
 			"description": "The number of octaves above the \"resonance\" frequency\n that the filter ramps during the attack/decay envelope",
@@ -4336,7 +4336,7 @@
 			],
 			"scope": "instance",
 			"name": "octaves",
-			"lineno": "Tone/instrument/MetalSynth.js#L251"
+			"lineno": "Tone/instrument/MetalSynth.js#L266"
 		},
 		{
 			"description": "The volume of the output in decibels.",
@@ -5856,7 +5856,7 @@
 			],
 			"scope": "instance",
 			"name": "frequency",
-			"lineno": "Tone/source/Oscillator.js#L35",
+			"lineno": "Tone/source/Oscillator.js#L37",
 			"signal": true
 		},
 		{
@@ -5866,7 +5866,7 @@
 			],
 			"scope": "instance",
 			"name": "detune",
-			"lineno": "Tone/source/Oscillator.js#L42",
+			"lineno": "Tone/source/Oscillator.js#L44",
 			"signal": true
 		},
 		{
@@ -5880,7 +5880,7 @@
 			],
 			"scope": "instance",
 			"name": "type",
-			"lineno": "Tone/source/Oscillator.js#L171"
+			"lineno": "Tone/source/Oscillator.js#L172"
 		},
 		{
 			"description": "The partials of the waveform. A partial represents\nthe amplitude at a harmonic. The first harmonic is the\nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series.\nSetting this value will automatically set the type to \"custom\".\nThe value is an empty array when the type is not \"custom\".",
@@ -5892,7 +5892,7 @@
 			],
 			"scope": "instance",
 			"name": "partials",
-			"lineno": "Tone/source/Oscillator.js#L314"
+			"lineno": "Tone/source/Oscillator.js#L315"
 		},
 		{
 			"description": "The phase of the oscillator in degrees.",
@@ -5904,7 +5904,7 @@
 			],
 			"scope": "instance",
 			"name": "phase",
-			"lineno": "Tone/source/Oscillator.js#L341"
+			"lineno": "Tone/source/Oscillator.js#L342"
 		},
 		{
 			"description": "Mute the output.",
@@ -6007,24 +6007,6 @@
 			"signal": true
 		},
 		{
-			"description": "The fadeIn time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeIn",
-			"lineno": "Tone/source/OscillatorNode.js#L74"
-		},
-		{
-			"description": "The fadeOut time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeOut",
-			"lineno": "Tone/source/OscillatorNode.js#L80"
-		},
-		{
 			"description": "Returns the playback state of the oscillator, either \"started\" or \"stopped\".",
 			"type": [
 				"Tone.State"
@@ -6032,7 +6014,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "state",
-			"lineno": "Tone/source/OscillatorNode.js#L107"
+			"lineno": "Tone/source/OscillatorNode.js#L92"
 		},
 		{
 			"description": "The oscillator type. Either 'sine', 'sawtooth', 'square', or 'triangle'",
@@ -6041,7 +6023,7 @@
 			],
 			"scope": "instance",
 			"name": "type",
-			"lineno": "Tone/source/OscillatorNode.js#L168"
+			"lineno": "Tone/source/OscillatorNode.js#L153"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -6267,7 +6249,7 @@
 			],
 			"scope": "instance",
 			"name": "reverse",
-			"lineno": "Tone/source/Player.js#L380"
+			"lineno": "Tone/source/Player.js#L381"
 		},
 		{
 			"description": "If all the buffer is loaded",
@@ -6277,7 +6259,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "loaded",
-			"lineno": "Tone/source/Player.js#L395"
+			"lineno": "Tone/source/Player.js#L396"
 		},
 		{
 			"description": "Mute the output.",
@@ -6439,7 +6421,7 @@
 			],
 			"scope": "instance",
 			"name": "mute",
-			"lineno": "Tone/source/Source.js#L113"
+			"lineno": "Tone/source/Source.js#L122"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -6571,6 +6553,46 @@
 			"name": "context",
 			"lineno": "Tone/core/AudioNode.js#L27",
 			"inherits": "Tone.AudioNode"
+		}
+	],
+	"TickSource": [
+		{
+			"description": "The frequency the callback function should be invoked.",
+			"type": [
+				"Frequency"
+			],
+			"scope": "instance",
+			"name": "frequency",
+			"lineno": "Tone/source/TickSource.js#L23",
+			"signal": true
+		},
+		{
+			"description": "Returns the playback state of the source, either \"started\", \"stopped\" or \"paused\".",
+			"type": [
+				"Tone.State"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "state",
+			"lineno": "Tone/source/TickSource.js#L57"
+		},
+		{
+			"description": "The number of times the callback was invoked. Starts counting at 0\n and increments after the callback was invoked. Returns -1 when stopped.",
+			"type": [
+				"Ticks"
+			],
+			"scope": "instance",
+			"name": "ticks",
+			"lineno": "Tone/source/TickSource.js#L122"
+		},
+		{
+			"description": "The time since ticks=0 that the TickSource has been running. Accounts\n for tempo curves",
+			"type": [
+				"Seconds"
+			],
+			"scope": "instance",
+			"name": "seconds",
+			"lineno": "Tone/source/TickSource.js#L138"
 		}
 	],
 	"UserMedia": [

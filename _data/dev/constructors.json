@@ -2504,6 +2504,19 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
+	"TickSource": {
+		"description": "Uses [Tone.TickSignal](TickSignal) to track elapsed ticks with\n \t\tcomplex automation curves.",
+		"params": [
+			{
+				"type": [
+					"Frequency"
+				],
+				"description": "The initial frequency that the signal ticks at",
+				"name": "frequency"
+			}
+		],
+		"extends": "Tone"
+	},
 	"UserMedia": {
 		"description": "Tone.UserMedia uses MediaDevices.getUserMedia to open up\n         and external microphone or audio input. Check\n         [MediaDevices API Support](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia)\n         to see which browsers are supported. Access to an external input\n         is limited to secure (HTTPS) connections.",
 		"params": [

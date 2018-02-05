@@ -614,9 +614,6 @@
 		"frequency": 440,
 		"detune": 0,
 		"type": "sine",
-		"fadeIn": 0,
-		"fadeOut": 0,
-		"curve": "linear",
 		"onended": "Tone.noOp"
 	},
 	"PWMOscillator": {
@@ -653,6 +650,9 @@
 	"Source": {
 		"volume": 0,
 		"mute": false
+	},
+	"TickSource": {
+		"frequency": 1
 	},
 	"UserMedia": {
 		"volume": 0,

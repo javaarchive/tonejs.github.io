@@ -584,6 +584,9 @@
 		"AudioNode",
 		"Tone"
 	],
+	"TickSource": [
+		"Tone"
+	],
 	"UserMedia": [
 		"AudioNode",
 		"Tone"
