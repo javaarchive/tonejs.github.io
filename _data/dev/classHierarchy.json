@@ -44,10 +44,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Mono": [
-		"AudioNode",
-		"Tone"
-	],
 	"MultibandCompressor": [
 		"AudioNode",
 		"Tone"
@@ -102,6 +98,10 @@
 		"Tone"
 	],
 	"MidSideSplit": [
+		"AudioNode",
+		"Tone"
+	],
+	"Mono": [
 		"AudioNode",
 		"Tone"
 	],
