@@ -7549,7 +7549,7 @@
 			],
 			"scope": "instance",
 			"name": "modulationIndex",
-			"lineno": "Tone/instrument/MetalSynth.js#L214"
+			"lineno": "Tone/instrument/MetalSynth.js#L211"
 		},
 		{
 			"description": "The harmonicity of the oscillators which make up the source.\n see Tone.FMOscillator.harmonicity",
@@ -7558,7 +7558,7 @@
 			],
 			"scope": "instance",
 			"name": "harmonicity",
-			"lineno": "Tone/instrument/MetalSynth.js#L232"
+			"lineno": "Tone/instrument/MetalSynth.js#L229"
 		},
 		{
 			"description": "The frequency of the highpass filter attached to the envelope",
@@ -7567,7 +7567,7 @@
 			],
 			"scope": "instance",
 			"name": "resonance",
-			"lineno": "Tone/instrument/MetalSynth.js#L250"
+			"lineno": "Tone/instrument/MetalSynth.js#L247"
 		},
 		{
 			"description": "The number of octaves above the \"resonance\" frequency\n that the filter ramps during the attack/decay envelope",
@@ -7576,7 +7576,7 @@
 			],
 			"scope": "instance",
 			"name": "octaves",
-			"lineno": "Tone/instrument/MetalSynth.js#L266"
+			"lineno": "Tone/instrument/MetalSynth.js#L263"
 		},
 		{
 			"description": "The volume of the output in decibels.",
@@ -9702,7 +9702,7 @@
 			],
 			"scope": "instance",
 			"name": "type",
-			"lineno": "Tone/source/OmniOscillator.js#L109"
+			"lineno": "Tone/source/OmniOscillator.js#L113"
 		},
 		{
 			"description": "The partials of the waveform. A partial represents\nthe amplitude at a harmonic. The first harmonic is the\nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series.\nSetting this value will automatically set the type to \"custom\".\nThe value is an empty array when the type is not \"custom\".\nThis is not available on \"pwm\" and \"pulse\" oscillator types.",
@@ -9714,7 +9714,7 @@
 			],
 			"scope": "instance",
 			"name": "partials",
-			"lineno": "Tone/source/OmniOscillator.js#L162"
+			"lineno": "Tone/source/OmniOscillator.js#L166"
 		},
 		{
 			"description": "The phase of the oscillator in degrees.",
@@ -9723,7 +9723,7 @@
 			],
 			"scope": "instance",
 			"name": "phase",
-			"lineno": "Tone/source/OmniOscillator.js#L233"
+			"lineno": "Tone/source/OmniOscillator.js#L237"
 		},
 		{
 			"description": "The width of the oscillator (only if the oscillator is set to \"pulse\")",
@@ -9735,7 +9735,7 @@
 			],
 			"scope": "instance",
 			"name": "width",
-			"lineno": "Tone/source/OmniOscillator.js#L248",
+			"lineno": "Tone/source/OmniOscillator.js#L252",
 			"signal": true
 		},
 		{
@@ -9745,7 +9745,7 @@
 			],
 			"scope": "instance",
 			"name": "count",
-			"lineno": "Tone/source/OmniOscillator.js#L267"
+			"lineno": "Tone/source/OmniOscillator.js#L271"
 		},
 		{
 			"description": "The detune spread between the oscillators. If \"count\" is\nset to 3 oscillators and the \"spread\" is set to 40,\nthe three oscillators would be detuned like this: [-20, 0, 20]\nfor a total detune spread of 40 cents. See Tone.FatOscillator\nfor more info.",
@@ -9754,7 +9754,7 @@
 			],
 			"scope": "instance",
 			"name": "spread",
-			"lineno": "Tone/source/OmniOscillator.js#L286"
+			"lineno": "Tone/source/OmniOscillator.js#L290"
 		},
 		{
 			"description": "The type of the modulator oscillator. Only if the oscillator\nis set to \"am\" or \"fm\" types. see. Tone.AMOscillator or Tone.FMOscillator\nfor more info.",
@@ -9763,7 +9763,7 @@
 			],
 			"scope": "instance",
 			"name": "modulationType",
-			"lineno": "Tone/source/OmniOscillator.js#L309"
+			"lineno": "Tone/source/OmniOscillator.js#L313"
 		},
 		{
 			"description": "Harmonicity is the frequency ratio between the carrier and the modulator oscillators.\n A harmonicity of 1 gives both oscillators the same frequency.\n Harmonicity = 2 means a change of an octave. See Tone.AMOscillator or Tone.FMOscillator\n for more info.",
@@ -9772,7 +9772,7 @@
 			],
 			"scope": "instance",
 			"name": "harmonicity",
-			"lineno": "Tone/source/OmniOscillator.js#L347",
+			"lineno": "Tone/source/OmniOscillator.js#L351",
 			"signal": true
 		},
 		{
@@ -9785,7 +9785,7 @@
 			],
 			"scope": "instance",
 			"name": "modulationFrequency",
-			"lineno": "Tone/source/OmniOscillator.js#L365",
+			"lineno": "Tone/source/OmniOscillator.js#L369",
 			"signal": true
 		},
 		{
@@ -9945,7 +9945,7 @@
 			],
 			"scope": "instance",
 			"name": "type",
-			"lineno": "Tone/source/Oscillator.js#L172"
+			"lineno": "Tone/source/Oscillator.js#L184"
 		},
 		{
 			"description": "The partials of the waveform. A partial represents\nthe amplitude at a harmonic. The first harmonic is the\nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series.\nSetting this value will automatically set the type to \"custom\".\nThe value is an empty array when the type is not \"custom\".",
@@ -9957,7 +9957,7 @@
 			],
 			"scope": "instance",
 			"name": "partials",
-			"lineno": "Tone/source/Oscillator.js#L315"
+			"lineno": "Tone/source/Oscillator.js#L327"
 		},
 		{
 			"description": "The phase of the oscillator in degrees.",
@@ -9969,7 +9969,7 @@
 			],
 			"scope": "instance",
 			"name": "phase",
-			"lineno": "Tone/source/Oscillator.js#L342"
+			"lineno": "Tone/source/Oscillator.js#L354"
 		},
 		{
 			"description": "Mute the output.",
@@ -10113,7 +10113,7 @@
 			],
 			"scope": "instance",
 			"name": "frequency",
-			"lineno": "Tone/source/OscillatorNode.js#L59",
+			"lineno": "Tone/source/OscillatorNode.js#L60",
 			"signal": true
 		},
 		{
@@ -10123,7 +10123,7 @@
 			],
 			"scope": "instance",
 			"name": "detune",
-			"lineno": "Tone/source/OscillatorNode.js#L67",
+			"lineno": "Tone/source/OscillatorNode.js#L68",
 			"signal": true
 		},
 		{
@@ -10134,7 +10134,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "state",
-			"lineno": "Tone/source/OscillatorNode.js#L92"
+			"lineno": "Tone/source/OscillatorNode.js#L93"
 		},
 		{
 			"description": "The oscillator type. Either 'sine', 'sawtooth', 'square', or 'triangle'",
@@ -10143,7 +10143,7 @@
 			],
 			"scope": "instance",
 			"name": "type",
-			"lineno": "Tone/source/OscillatorNode.js#L153"
+			"lineno": "Tone/source/OscillatorNode.js#L172"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -10434,7 +10434,7 @@
 			],
 			"scope": "instance",
 			"name": "loopStart",
-			"lineno": "Tone/source/Player.js#L284"
+			"lineno": "Tone/source/Player.js#L297"
 		},
 		{
 			"description": "If loop is true, the loop will end at this position.",
@@ -10443,7 +10443,7 @@
 			],
 			"scope": "instance",
 			"name": "loopEnd",
-			"lineno": "Tone/source/Player.js#L304"
+			"lineno": "Tone/source/Player.js#L317"
 		},
 		{
 			"description": "The audio buffer belonging to the player.",
@@ -10452,7 +10452,7 @@
 			],
 			"scope": "instance",
 			"name": "buffer",
-			"lineno": "Tone/source/Player.js#L324"
+			"lineno": "Tone/source/Player.js#L337"
 		},
 		{
 			"description": "If the buffer should loop once it's over.",
@@ -10461,7 +10461,7 @@
 			],
 			"scope": "instance",
 			"name": "loop",
-			"lineno": "Tone/source/Player.js#L339"
+			"lineno": "Tone/source/Player.js#L352"
 		},
 		{
 			"description": "The playback speed. 1 is normal speed. This is not a signal because\nSafari and iOS currently don't support playbackRate as a signal.",
@@ -10470,7 +10470,7 @@
 			],
 			"scope": "instance",
 			"name": "playbackRate",
-			"lineno": "Tone/source/Player.js#L359"
+			"lineno": "Tone/source/Player.js#L372"
 		},
 		{
 			"description": "The direction the buffer should play in",
@@ -10479,7 +10479,7 @@
 			],
 			"scope": "instance",
 			"name": "reverse",
-			"lineno": "Tone/source/Player.js#L381"
+			"lineno": "Tone/source/Player.js#L394"
 		},
 		{
 			"description": "If all the buffer is loaded",
@@ -10489,7 +10489,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "loaded",
-			"lineno": "Tone/source/Player.js#L396"
+			"lineno": "Tone/source/Player.js#L409"
 		},
 		{
 			"description": "Mute the output.",
@@ -10761,7 +10761,7 @@
 			],
 			"scope": "instance",
 			"name": "mute",
-			"lineno": "Tone/source/Source.js#L122"
+			"lineno": "Tone/source/Source.js#L113"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
