@@ -1314,7 +1314,7 @@
 					"NormalRange"
 				],
 				"optional": true,
-				"description": "The amount of the effected signal which \n                           is fed back through the delay.",
+				"description": "The amount of the effected signal which\n                           is fed back through the delay.",
 				"name": "feedback"
 			}
 		],

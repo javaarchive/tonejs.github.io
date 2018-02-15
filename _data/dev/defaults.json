@@ -275,7 +275,8 @@
 		"oversample": "none"
 	},
 	"FeedbackDelay": {
-		"delayTime": 0.25
+		"delayTime": 0.25,
+		"maxDelay": 1
 	},
 	"Freeverb": {
 		"roomSize": 0.7,

@@ -5173,7 +5173,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/Delay.js#L55"
+			"lineno": "Tone/core/Delay.js#L74"
 		}
 	],
 	"Draw": [
@@ -9260,7 +9260,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/effect/FeedbackDelay.js#L62"
+			"lineno": "Tone/effect/FeedbackDelay.js#L63"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",

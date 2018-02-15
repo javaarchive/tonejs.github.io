@@ -3515,8 +3515,18 @@
 			],
 			"scope": "instance",
 			"name": "delayTime",
-			"lineno": "Tone/core/Delay.js#L30",
+			"lineno": "Tone/core/Delay.js#L36",
 			"signal": true
+		},
+		{
+			"description": "The maximum delay time. This cannot be changed. The value is passed into the constructor.",
+			"type": [
+				"Time"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "maxDelay",
+			"lineno": "Tone/core/Delay.js#L57"
 		}
 	],
 	"Draw": [
