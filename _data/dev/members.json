@@ -3460,7 +3460,7 @@
 			],
 			"scope": "instance",
 			"name": "frequency",
-			"lineno": "Tone/core/Clock.js#L54",
+			"lineno": "Tone/core/Clock.js#L61",
 			"signal": true
 		},
 		{
@@ -3471,10 +3471,19 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "state",
-			"lineno": "Tone/core/Clock.js#L108"
+			"lineno": "Tone/core/Clock.js#L97"
 		}
 	],
 	"Context": [
+		{
+			"description": "The amount of time events are scheduled\n into the future",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "lookAhead",
+			"lineno": "Tone/core/Context.js#L49"
+		},
 		{
 			"description": "How often the Web Worker callback is invoked.\n This number corresponds to how responsive the scheduling\n can be. Context.updateInterval + Context.lookAhead gives you the\n total latency between scheduling an event and hearing it.",
 			"type": [
@@ -3482,7 +3491,7 @@
 			],
 			"scope": "instance",
 			"name": "updateInterval",
-			"lineno": "Tone/core/Context.js#L232"
+			"lineno": "Tone/core/Context.js#L231"
 		},
 		{
 			"description": "What the source of the clock is, either \"worker\" (Web Worker [default]),\n \"timeout\" (setTimeout), or \"offline\" (none).",
@@ -3491,7 +3500,7 @@
 			],
 			"scope": "instance",
 			"name": "clockSource",
-			"lineno": "Tone/core/Context.js#L250"
+			"lineno": "Tone/core/Context.js#L249"
 		},
 		{
 			"description": "The type of playback, which affects tradeoffs between audio\n output latency and responsiveness.\n\n In addition to setting the value in seconds, the latencyHint also\n accepts the strings \"interactive\" (prioritizes low latency),\n \"playback\" (prioritizes sustained playback), \"balanced\" (balances\n latency and performance), and \"fastest\" (lowest latency, might glitch more often).",
@@ -3504,7 +3513,7 @@
 			],
 			"scope": "instance",
 			"name": "latencyHint",
-			"lineno": "Tone/core/Context.js#L266"
+			"lineno": "Tone/core/Context.js#L265"
 		}
 	],
 	"Delay": [
@@ -3691,7 +3700,7 @@
 			],
 			"scope": "instance",
 			"name": "value",
-			"lineno": "Tone/core/Param.js#L90"
+			"lineno": "Tone/core/Param.js#L91"
 		},
 		{
 			"description": "The maximum output value of the parameter",
@@ -3700,7 +3709,7 @@
 			],
 			"scope": "instance",
 			"name": "value",
-			"lineno": "Tone/core/Param.js#L112"
+			"lineno": "Tone/core/Param.js#L113"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -3833,7 +3842,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "state",
-			"lineno": "Tone/core/Transport.js#L354"
+			"lineno": "Tone/core/Transport.js#L353"
 		},
 		{
 			"description": "The time signature as just the numerator over 4.\n For example 4/4 would be just 4 and 6/8 would be 3.",
@@ -3846,7 +3855,7 @@
 			],
 			"scope": "instance",
 			"name": "timeSignature",
-			"lineno": "Tone/core/Transport.js#L427"
+			"lineno": "Tone/core/Transport.js#L426"
 		},
 		{
 			"description": "When the Tone.Transport.loop = true, this is the starting position of the loop.",
@@ -3855,7 +3864,7 @@
 			],
 			"scope": "instance",
 			"name": "loopStart",
-			"lineno": "Tone/core/Transport.js#L453"
+			"lineno": "Tone/core/Transport.js#L452"
 		},
 		{
 			"description": "When the Tone.Transport.loop = true, this is the ending position of the loop.",
@@ -3864,7 +3873,7 @@
 			],
 			"scope": "instance",
 			"name": "loopEnd",
-			"lineno": "Tone/core/Transport.js#L468"
+			"lineno": "Tone/core/Transport.js#L467"
 		},
 		{
 			"description": "The swing value. Between 0-1 where 1 equal to\n the note + half the subdivision.",
@@ -3873,7 +3882,7 @@
 			],
 			"scope": "instance",
 			"name": "swing",
-			"lineno": "Tone/core/Transport.js#L499"
+			"lineno": "Tone/core/Transport.js#L498"
 		},
 		{
 			"description": "Set the subdivision which the swing will be applied to.\n The default value is an 8th note. Value must be less\n than a quarter note.",
@@ -3882,7 +3891,7 @@
 			],
 			"scope": "instance",
 			"name": "swingSubdivision",
-			"lineno": "Tone/core/Transport.js#L516"
+			"lineno": "Tone/core/Transport.js#L515"
 		},
 		{
 			"description": "The Transport's position in Bars:Beats:Sixteenths.\n Setting the value will jump to that position right away.",
@@ -3891,7 +3900,7 @@
 			],
 			"scope": "instance",
 			"name": "position",
-			"lineno": "Tone/core/Transport.js#L534"
+			"lineno": "Tone/core/Transport.js#L533"
 		},
 		{
 			"description": "The Transport's position in seconds\n Setting the value will jump to that position right away.",
@@ -3900,7 +3909,7 @@
 			],
 			"scope": "instance",
 			"name": "seconds",
-			"lineno": "Tone/core/Transport.js#L553"
+			"lineno": "Tone/core/Transport.js#L552"
 		},
 		{
 			"description": "The Transport's loop position as a normalized value. Always\n returns 0 if the transport if loop is not true.",
@@ -3909,7 +3918,7 @@
 			],
 			"scope": "instance",
 			"name": "progress",
-			"lineno": "Tone/core/Transport.js#L571"
+			"lineno": "Tone/core/Transport.js#L570"
 		},
 		{
 			"description": "The transports current tick position.",
@@ -3918,7 +3927,7 @@
 			],
 			"scope": "instance",
 			"name": "ticks",
-			"lineno": "Tone/core/Transport.js#L590"
+			"lineno": "Tone/core/Transport.js#L589"
 		},
 		{
 			"description": "Pulses Per Quarter note. This is the smallest resolution\n the Transport timing supports. This should be set once\n on initialization and not set again. Changing this value\n after other objects have been created can cause problems.",
@@ -3927,7 +3936,7 @@
 			],
 			"scope": "instance",
 			"name": "PPQ",
-			"lineno": "Tone/core/Transport.js#L617"
+			"lineno": "Tone/core/Transport.js#L625"
 		}
 	],
 	"TransportEvent": [
@@ -6359,7 +6368,7 @@
 			],
 			"scope": "instance",
 			"name": "loop",
-			"lineno": "Tone/event/Event.js#L318"
+			"lineno": "Tone/event/Event.js#L319"
 		},
 		{
 			"description": "The playback rate of the note. Defaults to 1.",
@@ -6371,7 +6380,7 @@
 			],
 			"scope": "instance",
 			"name": "playbackRate",
-			"lineno": "Tone/event/Event.js#L338"
+			"lineno": "Tone/event/Event.js#L339"
 		},
 		{
 			"description": "The loopEnd point is the time the event will loop\n if Tone.Event.loop is true.",
@@ -6380,7 +6389,7 @@
 			],
 			"scope": "instance",
 			"name": "loopEnd",
-			"lineno": "Tone/event/Event.js#L358"
+			"lineno": "Tone/event/Event.js#L359"
 		},
 		{
 			"description": "The time when the loop should start.",
@@ -6389,7 +6398,7 @@
 			],
 			"scope": "instance",
 			"name": "loopStart",
-			"lineno": "Tone/event/Event.js#L377"
+			"lineno": "Tone/event/Event.js#L378"
 		},
 		{
 			"description": "The current progress of the loop interval.\n Returns 0 if the event is not started yet or\n it is not set to loop.",
@@ -6399,7 +6408,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "progress",
-			"lineno": "Tone/event/Event.js#L395"
+			"lineno": "Tone/event/Event.js#L396"
 		}
 	],
 	"Loop": [
@@ -6590,7 +6599,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "progress",
-			"lineno": "Tone/event/Event.js#L395",
+			"lineno": "Tone/event/Event.js#L396",
 			"inherits": "Tone.Event"
 		}
 	],
@@ -6844,7 +6853,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "progress",
-			"lineno": "Tone/event/Event.js#L395",
+			"lineno": "Tone/event/Event.js#L396",
 			"inherits": "Tone.Event"
 		}
 	],
@@ -11034,7 +11043,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "state",
-			"lineno": "Tone/source/TickSource.js#L57"
+			"lineno": "Tone/source/TickSource.js#L55"
 		},
 		{
 			"description": "The number of times the callback was invoked. Starts counting at 0\n and increments after the callback was invoked. Returns -1 when stopped.",
@@ -11043,7 +11052,7 @@
 			],
 			"scope": "instance",
 			"name": "ticks",
-			"lineno": "Tone/source/TickSource.js#L122"
+			"lineno": "Tone/source/TickSource.js#L152"
 		},
 		{
 			"description": "The time since ticks=0 that the TickSource has been running. Accounts\n for tempo curves",
@@ -11052,7 +11061,7 @@
 			],
 			"scope": "instance",
 			"name": "seconds",
-			"lineno": "Tone/source/TickSource.js#L138"
+			"lineno": "Tone/source/TickSource.js#L168"
 		}
 	],
 	"UserMedia": [
@@ -11437,13 +11446,23 @@
 	],
 	"OfflineContext": [
 		{
+			"description": "The amount of time events are scheduled\n into the future",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "lookAhead",
+			"lineno": "Tone/core/Context.js#L49",
+			"inherits": "Tone.Context"
+		},
+		{
 			"description": "How often the Web Worker callback is invoked.\n This number corresponds to how responsive the scheduling\n can be. Context.updateInterval + Context.lookAhead gives you the\n total latency between scheduling an event and hearing it.",
 			"type": [
 				"Number"
 			],
 			"scope": "instance",
 			"name": "updateInterval",
-			"lineno": "Tone/core/Context.js#L232",
+			"lineno": "Tone/core/Context.js#L231",
 			"inherits": "Tone.Context"
 		},
 		{
@@ -11453,7 +11472,7 @@
 			],
 			"scope": "instance",
 			"name": "clockSource",
-			"lineno": "Tone/core/Context.js#L250",
+			"lineno": "Tone/core/Context.js#L249",
 			"inherits": "Tone.Context"
 		},
 		{
@@ -11467,7 +11486,7 @@
 			],
 			"scope": "instance",
 			"name": "latencyHint",
-			"lineno": "Tone/core/Context.js#L266",
+			"lineno": "Tone/core/Context.js#L265",
 			"inherits": "Tone.Context"
 		}
 	],
