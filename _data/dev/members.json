@@ -3808,7 +3808,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "context",
-			"lineno": "Tone/core/Tone.js#L583"
+			"lineno": "Tone/core/Tone.js#L572"
 		}
 	],
 	"Transport": [
@@ -8845,7 +8845,7 @@
 			],
 			"scope": "instance",
 			"name": "loopStart",
-			"lineno": "Tone/source/BufferSource.js#L317"
+			"lineno": "Tone/source/BufferSource.js#L335"
 		},
 		{
 			"description": "If loop is true, the loop will end at this position.",
@@ -8854,7 +8854,7 @@
 			],
 			"scope": "instance",
 			"name": "loopEnd",
-			"lineno": "Tone/source/BufferSource.js#L332"
+			"lineno": "Tone/source/BufferSource.js#L350"
 		},
 		{
 			"description": "The audio buffer belonging to the player.",
@@ -8863,7 +8863,7 @@
 			],
 			"scope": "instance",
 			"name": "buffer",
-			"lineno": "Tone/source/BufferSource.js#L347"
+			"lineno": "Tone/source/BufferSource.js#L365"
 		},
 		{
 			"description": "If the buffer should loop once it's over.",
@@ -8872,7 +8872,7 @@
 			],
 			"scope": "instance",
 			"name": "loop",
-			"lineno": "Tone/source/BufferSource.js#L362"
+			"lineno": "Tone/source/BufferSource.js#L380"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -9964,7 +9964,7 @@
 			],
 			"scope": "instance",
 			"name": "type",
-			"lineno": "Tone/source/Oscillator.js#L184"
+			"lineno": "Tone/source/Oscillator.js#L182"
 		},
 		{
 			"description": "The partials of the waveform. A partial represents\nthe amplitude at a harmonic. The first harmonic is the\nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series.\nSetting this value will automatically set the type to \"custom\".\nThe value is an empty array when the type is not \"custom\".",
@@ -9976,7 +9976,7 @@
 			],
 			"scope": "instance",
 			"name": "partials",
-			"lineno": "Tone/source/Oscillator.js#L327"
+			"lineno": "Tone/source/Oscillator.js#L325"
 		},
 		{
 			"description": "The phase of the oscillator in degrees.",
@@ -9988,7 +9988,7 @@
 			],
 			"scope": "instance",
 			"name": "phase",
-			"lineno": "Tone/source/Oscillator.js#L354"
+			"lineno": "Tone/source/Oscillator.js#L352"
 		},
 		{
 			"description": "Mute the output.",
@@ -10162,7 +10162,7 @@
 			],
 			"scope": "instance",
 			"name": "type",
-			"lineno": "Tone/source/OscillatorNode.js#L172"
+			"lineno": "Tone/source/OscillatorNode.js#L177"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -10410,23 +10410,23 @@
 		{
 			"description": "If the file should play as soon\n as the buffer is loaded.",
 			"type": [
-				"boolean"
+				"Boolean"
 			],
 			"examples": [
 				"//will play as soon as it's loaded\nvar player = new Tone.Player({\n\t\"url\" : \"./path/to/sample.mp3\",\n\t\"autostart\" : true,\n}).toMaster();"
 			],
 			"scope": "instance",
 			"name": "autostart",
-			"lineno": "Tone/source/Player.js#L41"
+			"lineno": "Tone/source/Player.js#L42"
 		},
 		{
 			"description": "Enabling retrigger will allow a player to be restarted\n before the the previous 'start' is done playing. Otherwise,\n successive calls to Tone.Player.start will only start\n the sample if it had played all the way through.",
 			"type": [
-				"boolean"
+				"Boolean"
 			],
 			"scope": "instance",
 			"name": "retrigger",
-			"lineno": "Tone/source/Player.js#L92"
+			"lineno": "Tone/source/Player.js#L100"
 		},
 		{
 			"description": "The fadeIn time of the amplitude envelope.",
@@ -10435,7 +10435,7 @@
 			],
 			"scope": "instance",
 			"name": "fadeIn",
-			"lineno": "Tone/source/Player.js#L98"
+			"lineno": "Tone/source/Player.js#L106"
 		},
 		{
 			"description": "The fadeOut time of the amplitude envelope.",
@@ -10444,7 +10444,7 @@
 			],
 			"scope": "instance",
 			"name": "fadeOut",
-			"lineno": "Tone/source/Player.js#L104"
+			"lineno": "Tone/source/Player.js#L112"
 		},
 		{
 			"description": "If loop is true, the loop will start at this position.",
@@ -10453,7 +10453,7 @@
 			],
 			"scope": "instance",
 			"name": "loopStart",
-			"lineno": "Tone/source/Player.js#L297"
+			"lineno": "Tone/source/Player.js#L309"
 		},
 		{
 			"description": "If loop is true, the loop will end at this position.",
@@ -10462,7 +10462,7 @@
 			],
 			"scope": "instance",
 			"name": "loopEnd",
-			"lineno": "Tone/source/Player.js#L317"
+			"lineno": "Tone/source/Player.js#L329"
 		},
 		{
 			"description": "The audio buffer belonging to the player.",
@@ -10471,34 +10471,43 @@
 			],
 			"scope": "instance",
 			"name": "buffer",
-			"lineno": "Tone/source/Player.js#L337"
+			"lineno": "Tone/source/Player.js#L349"
 		},
 		{
 			"description": "If the buffer should loop once it's over.",
 			"type": [
-				"boolean"
+				"Boolean"
 			],
 			"scope": "instance",
 			"name": "loop",
-			"lineno": "Tone/source/Player.js#L352"
+			"lineno": "Tone/source/Player.js#L364"
 		},
 		{
 			"description": "The playback speed. 1 is normal speed. This is not a signal because\nSafari and iOS currently don't support playbackRate as a signal.",
 			"type": [
-				"number"
+				"Number"
 			],
 			"scope": "instance",
 			"name": "playbackRate",
-			"lineno": "Tone/source/Player.js#L372"
+			"lineno": "Tone/source/Player.js#L417"
+		},
+		{
+			"description": "The current playback position of the buffer.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "position",
+			"lineno": "Tone/source/Player.js#L447"
 		},
 		{
 			"description": "The direction the buffer should play in",
 			"type": [
-				"boolean"
+				"Boolean"
 			],
 			"scope": "instance",
 			"name": "reverse",
-			"lineno": "Tone/source/Player.js#L394"
+			"lineno": "Tone/source/Player.js#L466"
 		},
 		{
 			"description": "If all the buffer is loaded",
@@ -10508,7 +10517,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "loaded",
-			"lineno": "Tone/source/Player.js#L409"
+			"lineno": "Tone/source/Player.js#L481"
 		},
 		{
 			"description": "Mute the output.",
@@ -11052,7 +11061,7 @@
 			],
 			"scope": "instance",
 			"name": "ticks",
-			"lineno": "Tone/source/TickSource.js#L152"
+			"lineno": "Tone/source/TickSource.js#L172"
 		},
 		{
 			"description": "The time since ticks=0 that the TickSource has been running. Accounts\n for tempo curves",
@@ -11061,7 +11070,7 @@
 			],
 			"scope": "instance",
 			"name": "seconds",
-			"lineno": "Tone/source/TickSource.js#L168"
+			"lineno": "Tone/source/TickSource.js#L188"
 		}
 	],
 	"UserMedia": [
