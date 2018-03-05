@@ -3808,7 +3808,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "context",
-			"lineno": "Tone/core/Tone.js#L572"
+			"lineno": "Tone/core/Tone.js#L590"
 		}
 	],
 	"Transport": [

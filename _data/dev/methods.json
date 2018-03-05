@@ -4070,7 +4070,7 @@
 			},
 			"scope": "static",
 			"name": "Offline",
-			"lineno": "Tone/core/Offline.js#L61"
+			"lineno": "Tone/core/Offline.js#L57"
 		},
 		{
 			"params": [
@@ -4154,7 +4154,7 @@
 			"lineno": "Tone/core/Tone.js#L287"
 		},
 		{
-			"description": "test if the arg is undefined",
+			"description": "Test if the arg is undefined",
 			"params": [
 				{
 					"type": [
@@ -4166,7 +4166,7 @@
 			],
 			"returns": {
 				"type": [
-					"boolean"
+					"Boolean"
 				],
 				"description": "true if the arg is undefined"
 			},
@@ -4175,7 +4175,7 @@
 			"lineno": "Tone/core/Tone.js#L308"
 		},
 		{
-			"description": "test if the arg is a function",
+			"description": "Test if the arg is not undefined",
 			"params": [
 				{
 					"type": [
@@ -4187,13 +4187,34 @@
 			],
 			"returns": {
 				"type": [
-					"boolean"
+					"Boolean"
+				],
+				"description": "true if the arg is undefined"
+			},
+			"scope": "static",
+			"name": "isDefined",
+			"lineno": "Tone/core/Tone.js#L319"
+		},
+		{
+			"description": "Test if the arg is a function",
+			"params": [
+				{
+					"type": [
+						"*"
+					],
+					"description": "the argument to test",
+					"name": "arg"
+				}
+			],
+			"returns": {
+				"type": [
+					"Boolean"
 				],
 				"description": "true if the arg is a function"
 			},
 			"scope": "static",
 			"name": "isFunction",
-			"lineno": "Tone/core/Tone.js#L319"
+			"lineno": "Tone/core/Tone.js#L330"
 		},
 		{
 			"description": "Test if the argument is a number.",
@@ -4208,13 +4229,13 @@
 			],
 			"returns": {
 				"type": [
-					"boolean"
+					"Boolean"
 				],
 				"description": "true if the arg is a number"
 			},
 			"scope": "static",
 			"name": "isNumber",
-			"lineno": "Tone/core/Tone.js#L330"
+			"lineno": "Tone/core/Tone.js#L341"
 		},
 		{
 			"description": "Test if the given argument is an object literal (i.e. `{}`);",
@@ -4229,13 +4250,13 @@
 			],
 			"returns": {
 				"type": [
-					"boolean"
+					"Boolean"
 				],
 				"description": "true if the arg is an object literal."
 			},
 			"scope": "static",
 			"name": "isObject",
-			"lineno": "Tone/core/Tone.js#L341"
+			"lineno": "Tone/core/Tone.js#L352"
 		},
 		{
 			"description": "Test if the argument is a boolean.",
@@ -4250,13 +4271,13 @@
 			],
 			"returns": {
 				"type": [
-					"boolean"
+					"Boolean"
 				],
 				"description": "true if the arg is a boolean"
 			},
 			"scope": "static",
 			"name": "isBoolean",
-			"lineno": "Tone/core/Tone.js#L352"
+			"lineno": "Tone/core/Tone.js#L363"
 		},
 		{
 			"description": "Test if the argument is an Array",
@@ -4271,13 +4292,13 @@
 			],
 			"returns": {
 				"type": [
-					"boolean"
+					"Boolean"
 				],
 				"description": "true if the arg is an array"
 			},
 			"scope": "static",
 			"name": "isArray",
-			"lineno": "Tone/core/Tone.js#L363"
+			"lineno": "Tone/core/Tone.js#L374"
 		},
 		{
 			"description": "Test if the argument is a string.",
@@ -4292,13 +4313,13 @@
 			],
 			"returns": {
 				"type": [
-					"boolean"
+					"Boolean"
 				],
 				"description": "true if the arg is a string"
 			},
 			"scope": "static",
 			"name": "isString",
-			"lineno": "Tone/core/Tone.js#L374"
+			"lineno": "Tone/core/Tone.js#L385"
 		},
 		{
 			"description": "Test if the argument is in the form of a note in scientific pitch notation.\n e.g. \"C4\"",
@@ -4313,13 +4334,13 @@
 			],
 			"returns": {
 				"type": [
-					"boolean"
+					"Boolean"
 				],
 				"description": "true if the arg is a string"
 			},
 			"scope": "static",
 			"name": "isNote",
-			"lineno": "Tone/core/Tone.js#L386"
+			"lineno": "Tone/core/Tone.js#L397"
 		},
 		{
 			"description": "Equal power gain scale. Good for cross-fading.",
@@ -4340,7 +4361,7 @@
 			},
 			"scope": "static",
 			"name": "equalPowerScale",
-			"lineno": "Tone/core/Tone.js#L452"
+			"lineno": "Tone/core/Tone.js#L463"
 		},
 		{
 			"description": "Convert decibels into gain.",
@@ -4359,7 +4380,7 @@
 			},
 			"scope": "static",
 			"name": "dbToGain",
-			"lineno": "Tone/core/Tone.js#L464"
+			"lineno": "Tone/core/Tone.js#L475"
 		},
 		{
 			"description": "Convert gain to decibels.",
@@ -4379,7 +4400,7 @@
 			},
 			"scope": "static",
 			"name": "gainToDb",
-			"lineno": "Tone/core/Tone.js#L475"
+			"lineno": "Tone/core/Tone.js#L486"
 		},
 		{
 			"description": "Convert an interval (in semitones) to a frequency ratio.",
@@ -4397,13 +4418,13 @@
 			],
 			"returns": {
 				"type": [
-					"number"
+					"Number"
 				],
 				"description": "the frequency ratio"
 			},
 			"scope": "static",
 			"name": "intervalToFrequencyRatio",
-			"lineno": "Tone/core/Tone.js#L490"
+			"lineno": "Tone/core/Tone.js#L501"
 		},
 		{
 			"description": "Return the current time of the AudioContext clock.",
@@ -4415,7 +4436,7 @@
 			},
 			"scope": "static",
 			"name": "now",
-			"lineno": "Tone/core/Tone.js#L513"
+			"lineno": "Tone/core/Tone.js#L524"
 		},
 		{
 			"description": "have a child inherit all of Tone's (or a parent's) prototype\n to inherit the parent's properties, make sure to call\n Parent.call(this) in the child's constructor\n\n based on closure library's inherit function",
@@ -4437,7 +4458,7 @@
 			],
 			"scope": "static",
 			"name": "extend",
-			"lineno": "Tone/core/Tone.js#L535"
+			"lineno": "Tone/core/Tone.js#L546"
 		},
 		{
 			"description": "Convert Time into seconds.\n\n Unlike the method which it overrides, this takes into account\n transporttime and musical notation.\n\n Time : 1.40\n Notation: 4n or 1m or 2t\n Now Relative: +3n\n Math: 3n+16n or even complicated expressions ((3n*2)/6 + 1)",
@@ -7518,7 +7539,7 @@
 		{
 			"returns": {
 				"type": [
-					"string"
+					"String"
 				],
 				"description": "returns the name of the class as a string"
 			},
@@ -7532,13 +7553,13 @@
 				{
 					"type": [
 						"Object",
-						"string"
+						"String"
 					],
 					"name": "params"
 				},
 				{
 					"type": [
-						"number"
+						"Number"
 					],
 					"optional": true,
 					"name": "value"
@@ -7603,7 +7624,7 @@
 			},
 			"scope": "instance",
 			"name": "now",
-			"lineno": "Tone/core/Tone.js#L503"
+			"lineno": "Tone/core/Tone.js#L514"
 		}
 	],
 	"Tone#\n disconnect and dispose": [
@@ -7624,7 +7645,7 @@
 			"description": "An empty function.",
 			"scope": "static",
 			"name": "noOp",
-			"lineno": "Tone/core/Tone.js#L394"
+			"lineno": "Tone/core/Tone.js#L405"
 		},
 		{
 			"description": "Tone automatically creates a context on init, but if you are working\n with other libraries which also create an AudioContext, it can be\n useful to set your own. If you are going to set your own context,\n be sure to do it at the start of your code, before creating any objects.",
@@ -7639,7 +7660,7 @@
 			],
 			"scope": "static",
 			"name": "setContext",
-			"lineno": "Tone/core/Tone.js#L593"
+			"lineno": "Tone/core/Tone.js#L611"
 		},
 		{
 			"description": "Get the context when it becomes available",
@@ -7659,7 +7680,7 @@
 			},
 			"scope": "static",
 			"name": "getContext",
-			"lineno": "Tone/core/Tone.js#L664"
+			"lineno": "Tone/core/Tone.js#L682"
 		}
 	],
 	"extend": [
@@ -7667,7 +7688,7 @@
 			"params": [],
 			"scope": "inner",
 			"name": "TempConstructor",
-			"lineno": "Tone/core/Tone.js#L539"
+			"lineno": "Tone/core/Tone.js#L550"
 		}
 	],
 	"getContext": [
@@ -7675,7 +7696,7 @@
 			"params": [],
 			"scope": "inner",
 			"name": "resCallback",
-			"lineno": "Tone/core/Tone.js#L668"
+			"lineno": "Tone/core/Tone.js#L686"
 		}
 	],
 	"Transport": [
