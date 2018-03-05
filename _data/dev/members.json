@@ -333,132 +333,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"Filter": [
-		{
-			"description": "The cutoff frequency of the filter.",
-			"type": [
-				"Frequency"
-			],
-			"scope": "instance",
-			"name": "frequency",
-			"lineno": "Tone/component/Filter.js#L38",
-			"signal": true
-		},
-		{
-			"description": "The detune parameter",
-			"type": [
-				"Cents"
-			],
-			"scope": "instance",
-			"name": "detune",
-			"lineno": "Tone/component/Filter.js#L45",
-			"signal": true
-		},
-		{
-			"description": "The gain of the filter, only used in certain filter types",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "gain",
-			"lineno": "Tone/component/Filter.js#L52",
-			"signal": true
-		},
-		{
-			"description": "The Q or Quality of the filter",
-			"type": [
-				"Positive"
-			],
-			"scope": "instance",
-			"name": "Q",
-			"lineno": "Tone/component/Filter.js#L62",
-			"signal": true
-		},
-		{
-			"description": "The type of the filter. Types: \"lowpass\", \"highpass\",\n\"bandpass\", \"lowshelf\", \"highshelf\", \"notch\", \"allpass\", or \"peaking\".",
-			"type": [
-				"string"
-			],
-			"scope": "instance",
-			"name": "type",
-			"lineno": "Tone/component/Filter.js#L99"
-		},
-		{
-			"description": "The rolloff of the filter which is the drop in db\nper octave. Implemented internally by cascading filters.\nOnly accepts the values -12, -24, -48 and -96.",
-			"type": [
-				"number"
-			],
-			"scope": "instance",
-			"name": "rolloff",
-			"lineno": "Tone/component/Filter.js#L122"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelCount is the number of channels used when up-mixing and down-mixing\n connections to any inputs to the node. The default value is 2 except for\n specific nodes where its value is specially determined.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelCount",
-			"lineno": "Tone/core/AudioNode.js#L62",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelCountMode determines how channels will be counted when up-mixing and\n down-mixing connections to any inputs to the node.\n The default value is \"max\". This attribute has no effect for nodes with no inputs.",
-			"type": [
-				"String"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelCountMode",
-			"lineno": "Tone/core/AudioNode.js#L81",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelInterpretation determines how individual channels will be treated\n when up-mixing and down-mixing connections to any inputs to the node.\n The default value is \"speakers\".",
-			"type": [
-				"String"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelInterpretation",
-			"lineno": "Tone/core/AudioNode.js#L99",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "The number of inputs feeding into the AudioNode.\n For source nodes, this will be 0.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "numberOfInputs",
-			"lineno": "Tone/core/AudioNode.js#L117",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "The number of outputs coming out of the AudioNode.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "numberOfOutputs",
-			"lineno": "Tone/core/AudioNode.js#L139",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"Gate": [
 		{
 			"description": "The threshold of the gate in decibels",
@@ -1843,6 +1717,132 @@
 			"scope": "instance",
 			"name": "size",
 			"lineno": "Tone/component/FFT.js#L43"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelCount is the number of channels used when up-mixing and down-mixing\n connections to any inputs to the node. The default value is 2 except for\n specific nodes where its value is specially determined.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelCount",
+			"lineno": "Tone/core/AudioNode.js#L62",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelCountMode determines how channels will be counted when up-mixing and\n down-mixing connections to any inputs to the node.\n The default value is \"max\". This attribute has no effect for nodes with no inputs.",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelCountMode",
+			"lineno": "Tone/core/AudioNode.js#L81",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelInterpretation determines how individual channels will be treated\n when up-mixing and down-mixing connections to any inputs to the node.\n The default value is \"speakers\".",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelInterpretation",
+			"lineno": "Tone/core/AudioNode.js#L99",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "The number of inputs feeding into the AudioNode.\n For source nodes, this will be 0.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "numberOfInputs",
+			"lineno": "Tone/core/AudioNode.js#L117",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "The number of outputs coming out of the AudioNode.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "numberOfOutputs",
+			"lineno": "Tone/core/AudioNode.js#L139",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Filter": [
+		{
+			"description": "The cutoff frequency of the filter.",
+			"type": [
+				"Frequency"
+			],
+			"scope": "instance",
+			"name": "frequency",
+			"lineno": "Tone/component/Filter.js#L38",
+			"signal": true
+		},
+		{
+			"description": "The detune parameter",
+			"type": [
+				"Cents"
+			],
+			"scope": "instance",
+			"name": "detune",
+			"lineno": "Tone/component/Filter.js#L45",
+			"signal": true
+		},
+		{
+			"description": "The gain of the filter, only used in certain filter types",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "gain",
+			"lineno": "Tone/component/Filter.js#L52",
+			"signal": true
+		},
+		{
+			"description": "The Q or Quality of the filter",
+			"type": [
+				"Positive"
+			],
+			"scope": "instance",
+			"name": "Q",
+			"lineno": "Tone/component/Filter.js#L62",
+			"signal": true
+		},
+		{
+			"description": "The type of the filter. Types: \"lowpass\", \"highpass\",\n\"bandpass\", \"lowshelf\", \"highshelf\", \"notch\", \"allpass\", or \"peaking\".",
+			"type": [
+				"string"
+			],
+			"scope": "instance",
+			"name": "type",
+			"lineno": "Tone/component/Filter.js#L99"
+		},
+		{
+			"description": "The rolloff of the filter which is the drop in db\nper octave. Implemented internally by cascading filters.\nOnly accepts the values -12, -24, -48 and -96.",
+			"type": [
+				"number"
+			],
+			"scope": "instance",
+			"name": "rolloff",
+			"lineno": "Tone/component/Filter.js#L122"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",

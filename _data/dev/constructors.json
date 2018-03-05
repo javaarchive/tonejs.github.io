@@ -124,40 +124,6 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
-	"Filter": {
-		"description": "Tone.Filter is a filter which allows for all of the same native methods\n         as the [BiquadFilterNode](http://webaudio.github.io/web-audio-api/#the-biquadfilternode-interface).\n         Tone.Filter has the added ability to set the filter rolloff at -12\n         (default), -24 and -48.",
-		"params": [
-			{
-				"type": [
-					"Frequency",
-					"Object"
-				],
-				"optional": true,
-				"description": "The cutoff frequency of the filter.",
-				"name": "frequency"
-			},
-			{
-				"type": [
-					"string"
-				],
-				"optional": true,
-				"description": "The type of filter.",
-				"name": "type"
-			},
-			{
-				"type": [
-					"number"
-				],
-				"optional": true,
-				"description": "The drop in decibels per octave after the cutoff frequency.\n                           3 choices: -12, -24, and -48",
-				"name": "rolloff"
-			}
-		],
-		"examples": [
-			"var filter = new Tone.Filter(200, \"highpass\");"
-		],
-		"extends": "Tone.AudioNode"
-	},
 	"Gate": {
 		"description": "Tone.Gate only passes a signal through when the incoming\n         signal exceeds a specified threshold. To do this, Gate uses\n         a Tone.Follower to follow the amplitude of the incoming signal.\n         A common implementation of this class is a [Noise Gate](https://en.wikipedia.org/wiki/Noise_gate).",
 		"params": [
@@ -453,6 +419,40 @@
 				"description": "The size of the FFT. Value must be a power of\n                      two in the range 32 to 32768.",
 				"name": "size"
 			}
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"Filter": {
+		"description": "Tone.Filter is a filter which allows for all of the same native methods\n         as the [BiquadFilterNode](http://webaudio.github.io/web-audio-api/#the-biquadfilternode-interface).\n         Tone.Filter has the added ability to set the filter rolloff at -12\n         (default), -24 and -48.",
+		"params": [
+			{
+				"type": [
+					"Frequency",
+					"Object"
+				],
+				"optional": true,
+				"description": "The cutoff frequency of the filter.",
+				"name": "frequency"
+			},
+			{
+				"type": [
+					"string"
+				],
+				"optional": true,
+				"description": "The type of filter.",
+				"name": "type"
+			},
+			{
+				"type": [
+					"number"
+				],
+				"optional": true,
+				"description": "The drop in decibels per octave after the cutoff frequency.\n                           3 choices: -12, -24, and -48",
+				"name": "rolloff"
+			}
+		],
+		"examples": [
+			"var filter = new Tone.Filter(200, \"highpass\");"
 		],
 		"extends": "Tone.AudioNode"
 	},

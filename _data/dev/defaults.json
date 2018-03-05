@@ -17,13 +17,6 @@
 		"delayTime": 0.1,
 		"resonance": 0.5
 	},
-	"Filter": {
-		"type": "lowpass",
-		"frequency": 350,
-		"rolloff": -12,
-		"Q": 1,
-		"gain": 0
-	},
 	"Gate": {
 		"attack": 0.1,
 		"release": 0.1,
@@ -92,6 +85,13 @@
 	},
 	"FFT": {
 		"size": 1024
+	},
+	"Filter": {
+		"type": "lowpass",
+		"frequency": 350,
+		"rolloff": -12,
+		"Q": 1,
+		"gain": 0
 	},
 	"Follower": {
 		"attack": 0.05,
