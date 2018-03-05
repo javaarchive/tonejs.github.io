@@ -8259,7 +8259,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "loaded",
-			"lineno": "Tone/instrument/Sampler.js#L232"
+			"lineno": "Tone/instrument/Sampler.js#L233"
 		},
 		{
 			"description": "The volume of the output in decibels.",
@@ -11084,7 +11084,7 @@
 			],
 			"scope": "instance",
 			"name": "volume",
-			"lineno": "Tone/source/UserMedia.js#L67",
+			"lineno": "Tone/source/UserMedia.js#L65",
 			"signal": true
 		},
 		{
@@ -11095,7 +11095,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "state",
-			"lineno": "Tone/source/UserMedia.js#L168"
+			"lineno": "Tone/source/UserMedia.js#L166"
 		},
 		{
 			"description": "Returns an identifier for the represented device that is\n\tpersisted across sessions. It is un-guessable by other applications and\n\tunique to the origin of the calling application. It is reset when the\n\tuser clears cookies (for Private Browsing, a different identifier is\n\tused that is not persisted across sessions). Returns undefined when the\n\tdevice is not open.",
@@ -11105,7 +11105,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "deviceId",
-			"lineno": "Tone/source/UserMedia.js#L182"
+			"lineno": "Tone/source/UserMedia.js#L180"
 		},
 		{
 			"description": "Returns a group identifier. Two devices have the\n\tsame group identifier if they belong to the same physical device.\n\tReturns undefined when the device is not open.",
@@ -11115,7 +11115,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "groupId",
-			"lineno": "Tone/source/UserMedia.js#L202"
+			"lineno": "Tone/source/UserMedia.js#L200"
 		},
 		{
 			"description": "Returns a label describing this device (for example \"Built-in Microphone\").\n\tReturns undefined when the device is not open or label is not available\n\tbecause of permissions.",
@@ -11125,7 +11125,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "groupId",
-			"lineno": "Tone/source/UserMedia.js#L219"
+			"lineno": "Tone/source/UserMedia.js#L217"
 		},
 		{
 			"description": "Mute the output.",
@@ -11137,7 +11137,7 @@
 			],
 			"scope": "instance",
 			"name": "mute",
-			"lineno": "Tone/source/UserMedia.js#L236"
+			"lineno": "Tone/source/UserMedia.js#L234"
 		},
 		{
 			"description": "If getUserMedia is supported by the browser.",
@@ -11147,7 +11147,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "supported",
-			"lineno": "Tone/source/UserMedia.js#L268"
+			"lineno": "Tone/source/UserMedia.js#L266"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",

@@ -2530,7 +2530,7 @@
 			}
 		],
 		"examples": [
-			"//list the inputs and open the third one\nvar motu = new Tone.UserMedia();\n\n//opening the input asks the user to activate their mic\nmotu.open().then(function(){\n\t//opening is activates the microphone\n\t//starting lets audio through\n\tmotu.start(10);\n});"
+			"//list the inputs and open the third one\nvar motu = new Tone.UserMedia();\n\n//opening the input asks the user to activate their mic\nmotu.open().then(function(){\n\t//promise resolves when input is available\n});"
 		],
 		"extends": "Tone.AudioNode"
 	},

@@ -14200,7 +14200,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttack",
-			"lineno": "Tone/instrument/Sampler.js#L113"
+			"lineno": "Tone/instrument/Sampler.js#L114"
 		},
 		{
 			"params": [
@@ -14228,7 +14228,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerRelease",
-			"lineno": "Tone/instrument/Sampler.js#L146"
+			"lineno": "Tone/instrument/Sampler.js#L147"
 		},
 		{
 			"description": "Release all currently active notes.",
@@ -14250,7 +14250,7 @@
 			},
 			"scope": "instance",
 			"name": "releaseAll",
-			"lineno": "Tone/instrument/Sampler.js#L162"
+			"lineno": "Tone/instrument/Sampler.js#L163"
 		},
 		{
 			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
@@ -14265,7 +14265,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/instrument/Sampler.js#L188"
+			"lineno": "Tone/instrument/Sampler.js#L189"
 		},
 		{
 			"description": "Invoke the attack phase, then after the duration, invoke the release.",
@@ -14310,7 +14310,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Sampler.js#L202"
+			"lineno": "Tone/instrument/Sampler.js#L203"
 		},
 		{
 			"description": "Add a note to the sampler.",
@@ -14343,7 +14343,7 @@
 			],
 			"scope": "instance",
 			"name": "add",
-			"lineno": "Tone/instrument/Sampler.js#L219"
+			"lineno": "Tone/instrument/Sampler.js#L220"
 		},
 		{
 			"description": "Clean up",
@@ -14355,7 +14355,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/Sampler.js#L249"
+			"lineno": "Tone/instrument/Sampler.js#L250"
 		},
 		{
 			"description": "Unsync the instrument from the Transport",
@@ -22617,7 +22617,7 @@
 			},
 			"scope": "instance",
 			"name": "open",
-			"lineno": "Tone/source/UserMedia.js#L92"
+			"lineno": "Tone/source/UserMedia.js#L90"
 		},
 		{
 			"description": "Close the media stream",
@@ -22629,7 +22629,7 @@
 			},
 			"scope": "instance",
 			"name": "close",
-			"lineno": "Tone/source/UserMedia.js#L137"
+			"lineno": "Tone/source/UserMedia.js#L135"
 		},
 		{
 			"description": "Returns a promise which resolves with the list of audio input devices available.",
@@ -22644,7 +22644,7 @@
 			},
 			"scope": "static",
 			"name": "enumerateDevices",
-			"lineno": "Tone/source/UserMedia.js#L160"
+			"lineno": "Tone/source/UserMedia.js#L158"
 		},
 		{
 			"description": "Clean up.",
@@ -22656,7 +22656,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/UserMedia.js#L258"
+			"lineno": "Tone/source/UserMedia.js#L256"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
