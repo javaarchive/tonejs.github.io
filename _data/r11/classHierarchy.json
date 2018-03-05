@@ -16,10 +16,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Filter": [
-		"AudioNode",
-		"Tone"
-	],
 	"Gate": [
 		"AudioNode",
 		"Tone"
@@ -77,6 +73,10 @@
 		"Tone"
 	],
 	"FFT": [
+		"AudioNode",
+		"Tone"
+	],
+	"Filter": [
 		"AudioNode",
 		"Tone"
 	],
