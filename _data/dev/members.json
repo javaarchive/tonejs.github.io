@@ -3936,7 +3936,7 @@
 			],
 			"scope": "instance",
 			"name": "PPQ",
-			"lineno": "Tone/core/Transport.js#L625"
+			"lineno": "Tone/core/Transport.js#L634"
 		}
 	],
 	"TransportEvent": [
@@ -8845,7 +8845,7 @@
 			],
 			"scope": "instance",
 			"name": "loopStart",
-			"lineno": "Tone/source/BufferSource.js#L335"
+			"lineno": "Tone/source/BufferSource.js#L344"
 		},
 		{
 			"description": "If loop is true, the loop will end at this position.",
@@ -8854,7 +8854,7 @@
 			],
 			"scope": "instance",
 			"name": "loopEnd",
-			"lineno": "Tone/source/BufferSource.js#L350"
+			"lineno": "Tone/source/BufferSource.js#L359"
 		},
 		{
 			"description": "The audio buffer belonging to the player.",
@@ -8863,7 +8863,7 @@
 			],
 			"scope": "instance",
 			"name": "buffer",
-			"lineno": "Tone/source/BufferSource.js#L365"
+			"lineno": "Tone/source/BufferSource.js#L374"
 		},
 		{
 			"description": "If the buffer should loop once it's over.",
@@ -8872,7 +8872,7 @@
 			],
 			"scope": "instance",
 			"name": "loop",
-			"lineno": "Tone/source/BufferSource.js#L380"
+			"lineno": "Tone/source/BufferSource.js#L389"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -10162,7 +10162,7 @@
 			],
 			"scope": "instance",
 			"name": "type",
-			"lineno": "Tone/source/OscillatorNode.js#L177"
+			"lineno": "Tone/source/OscillatorNode.js#L183"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -10420,22 +10420,13 @@
 			"lineno": "Tone/source/Player.js#L42"
 		},
 		{
-			"description": "Enabling retrigger will allow a player to be restarted\n before the the previous 'start' is done playing. Otherwise,\n successive calls to Tone.Player.start will only start\n the sample if it had played all the way through.",
-			"type": [
-				"Boolean"
-			],
-			"scope": "instance",
-			"name": "retrigger",
-			"lineno": "Tone/source/Player.js#L100"
-		},
-		{
 			"description": "The fadeIn time of the amplitude envelope.",
 			"type": [
 				"Time"
 			],
 			"scope": "instance",
 			"name": "fadeIn",
-			"lineno": "Tone/source/Player.js#L106"
+			"lineno": "Tone/source/Player.js#L104"
 		},
 		{
 			"description": "The fadeOut time of the amplitude envelope.",
@@ -10444,7 +10435,7 @@
 			],
 			"scope": "instance",
 			"name": "fadeOut",
-			"lineno": "Tone/source/Player.js#L112"
+			"lineno": "Tone/source/Player.js#L110"
 		},
 		{
 			"description": "If loop is true, the loop will start at this position.",
@@ -10453,7 +10444,7 @@
 			],
 			"scope": "instance",
 			"name": "loopStart",
-			"lineno": "Tone/source/Player.js#L309"
+			"lineno": "Tone/source/Player.js#L313"
 		},
 		{
 			"description": "If loop is true, the loop will end at this position.",
@@ -10462,7 +10453,7 @@
 			],
 			"scope": "instance",
 			"name": "loopEnd",
-			"lineno": "Tone/source/Player.js#L329"
+			"lineno": "Tone/source/Player.js#L332"
 		},
 		{
 			"description": "The audio buffer belonging to the player.",
@@ -10471,7 +10462,7 @@
 			],
 			"scope": "instance",
 			"name": "buffer",
-			"lineno": "Tone/source/Player.js#L349"
+			"lineno": "Tone/source/Player.js#L351"
 		},
 		{
 			"description": "If the buffer should loop once it's over.",
@@ -10480,7 +10471,7 @@
 			],
 			"scope": "instance",
 			"name": "loop",
-			"lineno": "Tone/source/Player.js#L364"
+			"lineno": "Tone/source/Player.js#L366"
 		},
 		{
 			"description": "The playback speed. 1 is normal speed. This is not a signal because\nSafari and iOS currently don't support playbackRate as a signal.",
@@ -10489,7 +10480,7 @@
 			],
 			"scope": "instance",
 			"name": "playbackRate",
-			"lineno": "Tone/source/Player.js#L417"
+			"lineno": "Tone/source/Player.js#L416"
 		},
 		{
 			"description": "The current playback position of the buffer.",
@@ -10498,7 +10489,7 @@
 			],
 			"scope": "instance",
 			"name": "position",
-			"lineno": "Tone/source/Player.js#L447"
+			"lineno": "Tone/source/Player.js#L442"
 		},
 		{
 			"description": "The direction the buffer should play in",
@@ -10507,7 +10498,7 @@
 			],
 			"scope": "instance",
 			"name": "reverse",
-			"lineno": "Tone/source/Player.js#L466"
+			"lineno": "Tone/source/Player.js#L461"
 		},
 		{
 			"description": "If all the buffer is loaded",
@@ -10517,7 +10508,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "loaded",
-			"lineno": "Tone/source/Player.js#L481"
+			"lineno": "Tone/source/Player.js#L476"
 		},
 		{
 			"description": "Mute the output.",
