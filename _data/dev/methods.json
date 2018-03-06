@@ -19571,29 +19571,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/AMOscillator.js#L200"
-		},
-		{
-			"description": "Restart the oscillator. Does not stop the oscillator, but instead\njust cancels any scheduled 'stop' from being invoked.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Oscillator"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "restart",
-			"lineno": "Tone/source/Oscillator.js#L149",
-			"inherits": "Tone.Oscillator"
+			"lineno": "Tone/source/AMOscillator.js#L208"
 		},
 		{
 			"description": "Sync the signal to the Transport's bpm. Any changes to the transports bpm,\n will also affect the oscillators frequency.",
@@ -20014,7 +19992,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/FMOscillator.js#L207"
+			"lineno": "Tone/source/FMOscillator.js#L215"
 		},
 		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
@@ -20192,7 +20170,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/FatOscillator.js#L266"
+			"lineno": "Tone/source/FatOscillator.js#L278"
 		},
 		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
@@ -21416,7 +21394,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/PWMOscillator.js#L160"
+			"lineno": "Tone/source/PWMOscillator.js#L170"
 		},
 		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
@@ -22104,7 +22082,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/PulseOscillator.js#L168"
+			"lineno": "Tone/source/PulseOscillator.js#L177"
 		},
 		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
