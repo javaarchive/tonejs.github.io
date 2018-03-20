@@ -3924,7 +3924,7 @@
 			},
 			"scope": "static",
 			"name": "cancelDownloads",
-			"lineno": "Tone/core/Buffer.js#L518"
+			"lineno": "Tone/core/Buffer.js#L529"
 		},
 		{
 			"description": "Checks a url's extension to see if the current browser can play that file type.",
@@ -3948,7 +3948,7 @@
 			},
 			"scope": "static",
 			"name": "supportsType",
-			"lineno": "Tone/core/Buffer.js#L535"
+			"lineno": "Tone/core/Buffer.js#L546"
 		}
 	],
 	"load": [
@@ -3975,7 +3975,7 @@
 			},
 			"scope": "static",
 			"name": "loaded",
-			"lineno": "Tone/core/Buffer.js#L546"
+			"lineno": "Tone/core/Buffer.js#L557"
 		},
 		{
 			"description": "Send this signal to the channel name.",
@@ -4525,19 +4525,19 @@
 			"params": [],
 			"scope": "inner",
 			"name": "removeEvents",
-			"lineno": "Tone/core/Buffer.js#L548"
+			"lineno": "Tone/core/Buffer.js#L559"
 		}
 	],
 	"<anonymous>": [
 		{
 			"scope": "inner",
 			"name": "onload",
-			"lineno": "Tone/core/Buffer.js#L554"
+			"lineno": "Tone/core/Buffer.js#L565"
 		},
 		{
 			"scope": "inner",
 			"name": "onerror",
-			"lineno": "Tone/core/Buffer.js#L557"
+			"lineno": "Tone/core/Buffer.js#L568"
 		},
 		{
 			"params": [],
