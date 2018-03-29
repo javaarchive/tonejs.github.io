@@ -5,6 +5,8 @@ title: demos
 
 # Demos
 
+<a id="submit" href="https://goo.gl/forms/lS7HCvRCULlRdCXm1">SUBMIT PROJECT</a>
+
 <link rel="stylesheet" type="text/css" href="/assets/css/demo.css">
 <div id="demos">
 	{% for demo in site.data.demos %}
@@ -18,9 +20,3 @@ title: demos
 		</div>
 	{% endfor %}
 </div>
-
-# Submit your project
-
-Using Tone.js? I'd love to hear it. 
-
-<a id="submit" href="https://goo.gl/forms/lS7HCvRCULlRdCXm1">SUBMIT PROJECT</a>
