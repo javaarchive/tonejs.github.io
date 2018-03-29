@@ -10,7 +10,7 @@ title: demos
 	{% for demo in site.data.demos %}
 		<div class="demo">
 			<a href="{{demo.url}}" target="_blank">
-				<img src="/assets/images/{{demo.image}}">
+				<img src="{{demo.image}}">
 			</a>
 			<div id="title">
 				<div id="text">{{demo.title}}</div>
@@ -21,4 +21,6 @@ title: demos
 
 # Submit your project
 
-Using Tone.js? I'd love to hear it. Please submit your project [here](https://goo.gl/forms/lS7HCvRCULlRdCXm1).
+Using Tone.js? I'd love to hear it. 
+
+<a id="submit" href="https://goo.gl/forms/lS7HCvRCULlRdCXm1">SUBMIT PROJECT</a>
