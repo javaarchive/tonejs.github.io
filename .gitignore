@@ -5,3 +5,5 @@ _site
 Gemfile.lock
 
 travis/tmp
+
+.jekyll-metadata
