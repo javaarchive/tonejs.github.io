@@ -1,213 +1,195 @@
-- image: musiclab.jpg
-  url: https://musiclab.chromeexperiments.com
-  title : Chrome Music Lab
-  
-- image : learningmusic_ableton.png
+- title : Chrome Music Lab
+  url : https://musiclab.chromeexperiments.com
+  image : https://drive.google.com/thumbnail?id=1Kra7uZONevr3UlPlBMaoXq8z9VYZNleI&sz=w400-h400
+
+- title : Learning Music
   url : https://learningmusic.ableton.com/
-  title : Learning Music
+  image : https://drive.google.com/thumbnail?id=1YoPTjmfhFZ5ZVvG8j46cD3VtnMhOGsKA&sz=w400-h400
 
-- image: groovepizza.png
-  url: https://apps.musedlab.org/groovepizza/
-  title : Groove Pizza
-  
-- image : chromatic_vr.jpg
+- title : Groove Pizza
+  url : https://apps.musedlab.org/groovepizza/
+  image : https://drive.google.com/thumbnail?id=1K1woFLltDUWHqmu9Snd9Q5st1TMpp6Z1&sz=w400-h400
+
+- title : Chromatic
   url : https://chromatic.funktroniclabs.com/
-  title : Chromatic
+  image : https://drive.google.com/thumbnail?id=1HYcs1oitlkfAVFzOhR4QY7hq8eo50zF1&sz=w400-h400
 
-- image: jazzcomputer.jpg
-  url: http://jazz.computer/
-  title: Jazz.Computer
-  
-- image: yume.jpg
-  url: http://www.unseen-music.com/yume/
-  title: Yume - Helios
-  
-- image: ramsophone.png
-  url: http://robertvinluan.com/Ramsophone/
-  title: Ramsophone
-  
-- image : solace.png
+- title : Jazz.Computer
+  url : http://jazz.computer/
+  image : https://drive.google.com/thumbnail?id=1tBbftWcCa4e9OFZ-cyiHutTK6V_0X0WI&sz=w400-h400
+
+- title : Yume - Helios
+  url : http://www.unseen-music.com/yume/
+  image : https://drive.google.com/thumbnail?id=1jgyWo4FhmlIT7ca3q_MT-9I94m8IK2qx&sz=w400-h400
+
+- title : Ramsophone
+  url : http://robertvinluan.com/Ramsophone/
+  image : https://drive.google.com/thumbnail?id=1z0h1ADqHs7E5LePNR8RUfSgaJFImm0Kl&sz=w400-h400
+
+- title : Solace
   url : http://www.rememberspook.com/
-  title : Solace
+  image : https://drive.google.com/thumbnail?id=1I2A4Hfi2X3bHxeJ9IFZOpHO1EzeiHVBF&sz=w400-h400
 
-- image: motionemotion.jpg
-  url: https://motionemotion.herokuapp.com/
-  title: motionEmotion
+- title : motionEmotion
+  url : https://motionemotion.herokuapp.com/
+  image : https://drive.google.com/thumbnail?id=1TbuKGrDpmXPqMHwMi2VJ1ueca-Ua-tTe&sz=w400-h400
 
-- image: hypercube.png
-  url: http://eddietree.github.io/hypercube/
-  title: Hypercube
+- title : Hypercube
+  url : http://eddietree.github.io/hypercube/
+  image : https://drive.google.com/thumbnail?id=1CE_OVAfsEQ953bn1hG7I_taOI3HQKtq_&sz=w400-h400
 
-- image : aiduet.png
+- title : AI Duet
   url : https://experiments.withgoogle.com/ai/ai-duet/view/
-  title : AI Duet
-  
-- image: arpeggiator.png
-  url: http://codepen.io/jakealbaugh/full/qNrZyw/
-  title: Musical Chord Progression Arpeggiator
+  image : https://drive.google.com/thumbnail?id=1I934UxRFPpF2aWYBTejRAOnntOrsIwLX&sz=w400-h400
 
-- image: solarbeats.png
-  url: http://www.whitevinyldesign.com/solarbeat/
-  title: Solarbeat
-  
-- image : infinitedrums.png
+- title : Musical Chord Progression Arpeggiator
+  url : http://codepen.io/jakealbaugh/full/qNrZyw/
+  image : https://drive.google.com/thumbnail?id=11_x2ykZiCPBFBUeDoD4VL1y3P9SpI_gv&sz=w400-h400
+
+- title : Solarbeat
+  url : http://www.whitevinyldesign.com/solarbeat/
+  image : https://drive.google.com/thumbnail?id=1yotHCA_7f2bnN2iA0aR8ohZpLet5uIB4&sz=w400-h400
+
+- title : Infinite Drum Machine
   url : https://experiments.withgoogle.com/ai/drum-machine
-  title : Infinite Drum Machine
-  
-- image : flume.png
+  image : https://drive.google.com/thumbnail?id=1esFZh6zQxlsfLZvFa99nhLMoA6KeHiEP&sz=w400-h400
+
+- title : Flume - Skin
   url : http://skin.flu.me
-  title : Flume - Skin
+  image : https://drive.google.com/thumbnail?id=1JVJgpXqdw3KEDckEGlch5F1qt1gU602a&sz=w400-h400
 
-- image: blockchords.png
-  url: http://dev.abe.sh/block-chords/
-  title: Block Chords
+- title : Block Chords
+  url : http://dev.abe.sh/block-chords/
+  image : https://drive.google.com/thumbnail?id=15s_cvqr9U4a0POO5TJmvcfeCZS2aJbs-&sz=w400-h400
 
-- image: notmachinelearning.png
-  url: http://posttool.github.io/
-  title: This is Not a Machine Learning
+- title : This is Not a Machine Learning
+  url : http://posttool.github.io/
+  image : https://drive.google.com/thumbnail?id=1sxr7kUFazRTGNGRDHCD5TMrQMayI_p9h&sz=w400-h400
 
-- image: scratch.png
-  url: http://ericrosenbaum.github.io/tone-synth-extension/
-  title: Scratch + Tone.js
+- title : Scratch + Tone.js
+  url : http://ericrosenbaum.github.io/tone-synth-extension/
+  image : https://drive.google.com/thumbnail?id=1GV5WnVS1p1XGggbzVX60SqTbV_47QQQs&sz=w400-h400
 
-- image: gameofreich.png
-  url: http://nexusosc.com/gameofreich/
-  title: Game of Reich
+- title : Game of Reich
+  url : http://nexusosc.com/gameofreich/
+  image : https://drive.google.com/thumbnail?id=18c0EB4mB6vez9wpxPjvXQTYTsjb5IO6c&sz=w400-h400
 
-- image: tweet-fm.png
-  url: https://tweet-fm.herokuapp.com/
-  title: Tweet FM
+- title : Tweet FM
+  url : https://tweet-fm.herokuapp.com/
+  image : https://drive.google.com/thumbnail?id=1LhfV7EZ8tXIz6oAnWq7zoDB3qoSN41Vs&sz=w400-h400
 
-- image: XoX.png
-  url: http://rustleworks.com/textxox/
-  title: TextXoX
+- title : TextXoX
+  url : http://rustleworks.com/textxox/
+  image : https://drive.google.com/thumbnail?id=1p25dkgXTaiG-auG3J9ZTG-wIBkbD3Ju9&sz=w400-h400
 
-- image: bodybeat.png
-  url: http://www.adultswim.com/etcetera/limp-body-beat/
-  title: Limp Body Beat
+- title : Limp Body Beat
+  url : http://www.adultswim.com/etcetera/limp-body-beat/
+  image : https://drive.google.com/thumbnail?id=1bTpgOwRtdnDEm17fncNIQDbapk7GGne0&sz=w400-h400
 
-- image: mscompose.png
-  url: http://autotel.co/mscompose95/
-  title: MsCompose 95
+- title : MsCompose 95
+  url : http://autotel.co/mscompose95/
+  image : https://drive.google.com/thumbnail?id=1vxnYp-KHWw80pBE-hbiMv0GuAFNGsb7t&sz=w400-h400
 
-- image: pedalboard.png
-  url: https://deermichel.github.io/pedalboard/
-  title: Pedalboard
+- title : Pedalboard
+  url : https://deermichel.github.io/pedalboard/
+  image : https://drive.google.com/thumbnail?id=1WwXMFzkclVF7wm7fkKi0BeyPlbbIMobe&sz=w400-h400
 
-- image: keyboardboogie.png
-  url: http://douglastarr.com/keyboard-boogie
-  title: Keyboard Boogie
+- title : Keyboard Boogie
+  url : http://douglastarr.com/keyboard-boogie
+  image : https://drive.google.com/thumbnail?id=1aozg3MQsk9jFAzY2dcRtvAlTnDCdqSQo&sz=w400-h400
 
-- image: reflect.png
-  url: http://reflect.sydneyzh.com/
-  title: Reflect
+- title : Reflect
+  url : http://reflect.sydneyzh.com/
+  image : https://drive.google.com/thumbnail?id=1eot5y-6mlXh4q-Cn0I8p1qsMhp8bCF_R&sz=w400-h400
 
-- image: anxietybrain.jpg
-  url: http://anxietybrain.net/
-  title: Anxiety
+- title : Anxiety
+  url : http://anxietybrain.net/
+  image : https://drive.google.com/thumbnail?id=1Z0tCdtCh6FQpSsnQb3jumDX54YsXy0FL&sz=w400-h400
 
-- image: pgb-vsu.png
-  url: http://www.pgb-vsu.club/
-  title: PGB-VSU
-
-- image : beat-machine.png
-  url : http://emicida.com/beat-machine/
-  title: Yasuke
-
-- image : office-traffic.png
-  url : http://gastonfig.com/office-traffic/
-  title: Office Traffic
-
-- image : music-blocks.png
+- title : Music Blocks
   url : http://walterbender.github.io/musicblocks/
-  title: Music Blocks
+  image : https://drive.google.com/thumbnail?id=16sfehsMDyq10nj3xpG5rOc3OYheSTmjh&sz=w400-h400
 
-- image : uduk.png
+- title : zhredBoard
   url : https://uduk.org/
-  title: zhredBoard
+  image : https://drive.google.com/thumbnail?id=1jxjFSuW0yqE6nkZKCgngH2SL8KAyzyZg&sz=w400-h400
 
-- image : 2016management.png
+- title : 2016.Management
   url : http://2016.management/
-  title : 2016.Management
+  image : https://drive.google.com/thumbnail?id=1Dk1_58Bgn_JrSVSvxqemw1C4lX-0xAAy&sz=w400-h400
 
-- image : halldor.jpg
+- title : Poco Apollo
   url : http://pocoapollo.hdor.is/
-  title : Poco Apollo
+  image : https://drive.google.com/thumbnail?id=1ly4aztfxXQNUAFvoZeDHlx8FvoQAoHbl&sz=w400-h400
 
-- image : ether_dream_thumb.png
-  url : http://www.etherdream.io/
-  title : Ether Dream
-
-- image : microscale.png
+- title : microscale
   url : http://alestsurko.by/microscale/
-  title : microscale
+  image : https://drive.google.com/thumbnail?id=1aYFF9KVylI2S2K5wF4Sdf6wniZkzgYzR&sz=w400-h400
 
-- image : holdspace_thumbnail.jpg
+- title : holdspace
   url : http://holdspace.surge.sh/
-  title : holdspace
-  
-- image : sequ_thumb.png
+  image : https://drive.google.com/thumbnail?id=1pIYsBspwBuRO_sFerE75Xl-PhOKzL_7f&sz=w400-h400
+
+- title : Sequ
   url : http://sequ.timpulver.de/
-  title : Sequ
-  
-- image : dulynoted_square.png
+  image : https://drive.google.com/thumbnail?id=1PUen7SJrLIi2yYWdNVBlO-luSs9Ia0au&sz=w400-h400
+
+- title : duly noted
   url : https://p5js.org/assets/p5_featured/maya-dulynoted/
-  title : duly noted
+  image : https://drive.google.com/thumbnail?id=1-1v2XK-_ab79oT-25eo2GBdgYl_0mfU9&sz=w400-h400
 
-- image : ocaniemanights.png
+- title : Ocaniemanights
   url : http://autotel.co/loopita-ocaniemanights/
-  title : Ocaniemanights
+  image : https://drive.google.com/thumbnail?id=1jmot1Sl-YHt73stEfrn71CEAkbB7eKOB&sz=w400-h400
 
-- image : groove-salad.png
+- title : Groove Salad
   url : https://ccorcos.github.io/groove-salad/
-  title : Groove Salad
-  
-- image : XYSynth.jpg
+  image : https://drive.google.com/thumbnail?id=18byN5pYzn85VwB0EReDj6boeLwLhp1WK&sz=w400-h400
+
+- title : XY Synth
   url : https://tothepoweroftom.github.io/xysynth/
-  title : XY Synth
+  image : https://drive.google.com/thumbnail?id=1qz5T0ZgPHzvzk4-Olq1Hq2ztzTXnT80R&sz=w400-h400
 
-- image : songexploder.jpg
+- title : Inside Music
   url : https://experiments.withgoogle.com/webvr/inside-music
-  title : Inside Music
-  
-- image : geosound.png
+  image : https://drive.google.com/thumbnail?id=1UBKn2BsioNdjrBdlXbX6aDJyU75s_TmF&sz=w400-h400
+
+- title : GeoSound
   url : https://experiments.withgoogle.com/chrome/geosound
-  title : GeoSound
+  image : https://drive.google.com/thumbnail?id=1p-rfieNW1ZQobSNDSts-4WXUeNrlKOsX&sz=w400-h400
 
-- image : melodyjs.png
+- title : MelodyJS
   url : http://melodyjs.surge.sh/
-  title : MelodyJS
-  
-- image :  Halloweensoundboard.png
+  image : https://drive.google.com/thumbnail?id=1oTtBw7hPNOxj6CpncDMl57mzWgsmRF9B&sz=w400-h400
+
+- title : Halloween Soundboard
   url : https://www.halloweensoundboard.com/
-  title : Halloween Soundboard
-  
-- image :  vGamelan_thumb.png
+  image : https://drive.google.com/thumbnail?id=1tdrI83IUPEws-ZebKxzOynpgs6c90-z2&sz=w400-h400
+
+- title : vGamelan
   url : https://celanajaya.github.io/vGamelan/
-  title : vGamelan
+  image : https://drive.google.com/thumbnail?id=1_-jr5NmGl8R2zR8f82yMOGJ8RoSLDnGn&sz=w400-h400
 
-- image :  discreetmusic.png
+- title : discreetmusic
   url : https://mezoistvan.github.io/discreetmusic
-  title : discreetmusic
-  
-- image :  nude.png
+  image : https://drive.google.com/thumbnail?id=15-kjkN-XdViUCo8JJdJVgk0TrRib8gH5&sz=w400-h400
+
+- title : nude
   url : https://mezoistvan.github.io/nude
-  title : nude
-  
-- image :  beatbucket.png
+  image : https://drive.google.com/thumbnail?id=1I-K7cLGHcOYHcGEpa8g1MlvgJDDaJRA8&sz=w400-h400
+
+- title : Beat Bucket
   url : https://joebeachjoebeach.github.io/beat-bucket/
-  title : Beat Bucket
+  image : https://drive.google.com/thumbnail?id=11hl3_jOajx9Jvchh4ys5MTWCfb3Zmmxo&sz=w400-h400
 
-- image :  notekitchen.jpg
+- title : Note Kitchen
   url : http://note.kitchen/
-  title : Note Kitchen
-  
-- image :  moolody-cover.jpg
+  image : https://drive.google.com/thumbnail?id=1WCYeZo88uvD8i7q-zwcV3ABIMCvZAj0j&sz=w400-h400
+
+- title : Moolody
   url : http://keyuguo.net/MoolodyWebVersion/
-  title : Moolody
-  
-- image : Mudoku.png
+  image : https://drive.google.com/thumbnail?id=1UsxCIlHX_-Wl1k7MxRrUXF_iPBQl94D_&sz=w400-h400
+
+- title : Mudoku
   url : https://mudoku.cc
-  title : Mudoku
-
-
+  image : https://drive.google.com/thumbnail?id=1wiMe9DpSVI5qvio6AmbxkCyQr6m7J23h&sz=w400-h400
