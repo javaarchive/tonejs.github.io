@@ -11553,6 +11553,28 @@
 			"inherits": "Tone.Monophonic"
 		},
 		{
+			"description": "Get the level of the output at the given time. Measures\n the envelope(s) value at the time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to query the envelope value",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"NormalRange"
+				],
+				"description": "The output level between 0-1"
+			},
+			"scope": "instance",
+			"name": "getLevelAtTime",
+			"lineno": "Tone/instrument/Monophonic.js#L94",
+			"inherits": "Tone.Monophonic"
+		},
+		{
 			"description": "Set the note at the given time. If no time is given, the note\n will set immediately.",
 			"params": [
 				{
@@ -11584,7 +11606,7 @@
 			},
 			"scope": "instance",
 			"name": "setNote",
-			"lineno": "Tone/instrument/Monophonic.js#L101",
+			"lineno": "Tone/instrument/Monophonic.js#L112",
 			"inherits": "Tone.Monophonic"
 		},
 		{
@@ -11749,6 +11771,27 @@
 	],
 	"DuoSynth": [
 		{
+			"description": "Get the level of the output at the given time. Measures\n the envelope(s) value at the time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to query the envelope value",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"NormalRange"
+				],
+				"description": "The output level between 0-1"
+			},
+			"scope": "instance",
+			"name": "getLevelAtTime",
+			"lineno": "Tone/instrument/DuoSynth.js#L181"
+		},
+		{
 			"description": "clean up",
 			"returns": {
 				"type": [
@@ -11758,7 +11801,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/DuoSynth.js#L179"
+			"lineno": "Tone/instrument/DuoSynth.js#L189"
 		},
 		{
 			"description": "Trigger the attack of the note optionally with a given velocity.",
@@ -11863,7 +11906,7 @@
 			},
 			"scope": "instance",
 			"name": "setNote",
-			"lineno": "Tone/instrument/Monophonic.js#L101",
+			"lineno": "Tone/instrument/Monophonic.js#L112",
 			"inherits": "Tone.Monophonic"
 		},
 		{
@@ -12111,6 +12154,28 @@
 			"inherits": "Tone.Monophonic"
 		},
 		{
+			"description": "Get the level of the output at the given time. Measures\n the envelope(s) value at the time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to query the envelope value",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"NormalRange"
+				],
+				"description": "The output level between 0-1"
+			},
+			"scope": "instance",
+			"name": "getLevelAtTime",
+			"lineno": "Tone/instrument/Monophonic.js#L94",
+			"inherits": "Tone.Monophonic"
+		},
+		{
 			"description": "Set the note at the given time. If no time is given, the note\n will set immediately.",
 			"params": [
 				{
@@ -12142,7 +12207,7 @@
 			},
 			"scope": "instance",
 			"name": "setNote",
-			"lineno": "Tone/instrument/Monophonic.js#L101",
+			"lineno": "Tone/instrument/Monophonic.js#L112",
 			"inherits": "Tone.Monophonic"
 		},
 		{
@@ -13008,6 +13073,28 @@
 			"inherits": "Tone.Monophonic"
 		},
 		{
+			"description": "Get the level of the output at the given time. Measures\n the envelope(s) value at the time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to query the envelope value",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"NormalRange"
+				],
+				"description": "The output level between 0-1"
+			},
+			"scope": "instance",
+			"name": "getLevelAtTime",
+			"lineno": "Tone/instrument/Monophonic.js#L94",
+			"inherits": "Tone.Monophonic"
+		},
+		{
 			"description": "Set the note at the given time. If no time is given, the note\n will set immediately.",
 			"params": [
 				{
@@ -13039,7 +13126,7 @@
 			},
 			"scope": "instance",
 			"name": "setNote",
-			"lineno": "Tone/instrument/Monophonic.js#L101",
+			"lineno": "Tone/instrument/Monophonic.js#L112",
 			"inherits": "Tone.Monophonic"
 		},
 		{
@@ -13273,6 +13360,27 @@
 			"lineno": "Tone/instrument/Monophonic.js#L68"
 		},
 		{
+			"description": "Get the level of the output at the given time. Measures\n the envelope(s) value at the time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to query the envelope value",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"NormalRange"
+				],
+				"description": "The output level between 0-1"
+			},
+			"scope": "instance",
+			"name": "getLevelAtTime",
+			"lineno": "Tone/instrument/Monophonic.js#L94"
+		},
+		{
 			"description": "Set the note at the given time. If no time is given, the note\n will set immediately.",
 			"params": [
 				{
@@ -13304,7 +13412,7 @@
 			},
 			"scope": "instance",
 			"name": "setNote",
-			"lineno": "Tone/instrument/Monophonic.js#L101"
+			"lineno": "Tone/instrument/Monophonic.js#L112"
 		},
 		{
 			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
@@ -14599,6 +14707,28 @@
 			"inherits": "Tone.Monophonic"
 		},
 		{
+			"description": "Get the level of the output at the given time. Measures\n the envelope(s) value at the time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to query the envelope value",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"NormalRange"
+				],
+				"description": "The output level between 0-1"
+			},
+			"scope": "instance",
+			"name": "getLevelAtTime",
+			"lineno": "Tone/instrument/Monophonic.js#L94",
+			"inherits": "Tone.Monophonic"
+		},
+		{
 			"description": "Set the note at the given time. If no time is given, the note\n will set immediately.",
 			"params": [
 				{
@@ -14630,7 +14760,7 @@
 			},
 			"scope": "instance",
 			"name": "setNote",
-			"lineno": "Tone/instrument/Monophonic.js#L101",
+			"lineno": "Tone/instrument/Monophonic.js#L112",
 			"inherits": "Tone.Monophonic"
 		},
 		{
