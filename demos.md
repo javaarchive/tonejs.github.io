@@ -21,4 +21,4 @@ title: demos
 
 # Submit your project
 
-Using Tone.js? I'd love to hear it. <a href="mailto:yotam@tonejs.org">Send me</a> your project to have it included here. Please include a **link**, a **thumbnail image** (300px x 300px) and the **title** of the project.
+Using Tone.js? I'd love to hear it. Please submit your project [here](https://goo.gl/forms/lS7HCvRCULlRdCXm1).
