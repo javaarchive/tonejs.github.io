@@ -1,6 +1,6 @@
 ---
 ---
-@import "./common.scss";
+@import "common.scss";
 
 $padding : 10px;
 
@@ -38,5 +38,11 @@ body {
 	pre {
 		tab-size: 4;
 		font-size: 0.85em;
+	}
+
+	#content {
+		position: relative;
+		max-width: 1000px;
+		margin: 0 auto 0 auto;
 	}
 }
