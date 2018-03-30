@@ -3842,7 +3842,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "state",
-			"lineno": "Tone/core/Transport.js#L353"
+			"lineno": "Tone/core/Transport.js#L357"
 		},
 		{
 			"description": "The time signature as just the numerator over 4.\n For example 4/4 would be just 4 and 6/8 would be 3.",
@@ -3855,7 +3855,7 @@
 			],
 			"scope": "instance",
 			"name": "timeSignature",
-			"lineno": "Tone/core/Transport.js#L426"
+			"lineno": "Tone/core/Transport.js#L430"
 		},
 		{
 			"description": "When the Tone.Transport.loop = true, this is the starting position of the loop.",
@@ -3864,7 +3864,7 @@
 			],
 			"scope": "instance",
 			"name": "loopStart",
-			"lineno": "Tone/core/Transport.js#L452"
+			"lineno": "Tone/core/Transport.js#L456"
 		},
 		{
 			"description": "When the Tone.Transport.loop = true, this is the ending position of the loop.",
@@ -3873,7 +3873,7 @@
 			],
 			"scope": "instance",
 			"name": "loopEnd",
-			"lineno": "Tone/core/Transport.js#L467"
+			"lineno": "Tone/core/Transport.js#L471"
 		},
 		{
 			"description": "The swing value. Between 0-1 where 1 equal to\n the note + half the subdivision.",
@@ -3882,7 +3882,7 @@
 			],
 			"scope": "instance",
 			"name": "swing",
-			"lineno": "Tone/core/Transport.js#L498"
+			"lineno": "Tone/core/Transport.js#L502"
 		},
 		{
 			"description": "Set the subdivision which the swing will be applied to.\n The default value is an 8th note. Value must be less\n than a quarter note.",
@@ -3891,7 +3891,7 @@
 			],
 			"scope": "instance",
 			"name": "swingSubdivision",
-			"lineno": "Tone/core/Transport.js#L515"
+			"lineno": "Tone/core/Transport.js#L519"
 		},
 		{
 			"description": "The Transport's position in Bars:Beats:Sixteenths.\n Setting the value will jump to that position right away.",
@@ -3900,7 +3900,7 @@
 			],
 			"scope": "instance",
 			"name": "position",
-			"lineno": "Tone/core/Transport.js#L533"
+			"lineno": "Tone/core/Transport.js#L537"
 		},
 		{
 			"description": "The Transport's position in seconds\n Setting the value will jump to that position right away.",
@@ -3909,7 +3909,7 @@
 			],
 			"scope": "instance",
 			"name": "seconds",
-			"lineno": "Tone/core/Transport.js#L552"
+			"lineno": "Tone/core/Transport.js#L556"
 		},
 		{
 			"description": "The Transport's loop position as a normalized value. Always\n returns 0 if the transport if loop is not true.",
@@ -3918,7 +3918,7 @@
 			],
 			"scope": "instance",
 			"name": "progress",
-			"lineno": "Tone/core/Transport.js#L570"
+			"lineno": "Tone/core/Transport.js#L574"
 		},
 		{
 			"description": "The transports current tick position.",
@@ -3927,7 +3927,7 @@
 			],
 			"scope": "instance",
 			"name": "ticks",
-			"lineno": "Tone/core/Transport.js#L589"
+			"lineno": "Tone/core/Transport.js#L593"
 		},
 		{
 			"description": "Pulses Per Quarter note. This is the smallest resolution\n the Transport timing supports. This should be set once\n on initialization and not set again. Changing this value\n after other objects have been created can cause problems.",
@@ -3936,7 +3936,7 @@
 			],
 			"scope": "instance",
 			"name": "PPQ",
-			"lineno": "Tone/core/Transport.js#L634"
+			"lineno": "Tone/core/Transport.js#L638"
 		}
 	],
 	"TransportEvent": [

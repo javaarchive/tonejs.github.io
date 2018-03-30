@@ -5594,7 +5594,7 @@
 			"lineno": "Tone/core/IntervalTimeline.js#L325"
 		},
 		{
-			"description": "Iterate over everything in the array in which the time is greater\n than the given time.",
+			"description": "Iterate over everything in the array in which the time is greater\n than or equal to the given time.",
 			"params": [
 				{
 					"type": [
@@ -5618,7 +5618,7 @@
 				"description": "this"
 			},
 			"scope": "instance",
-			"name": "forEachAfter",
+			"name": "forEachFrom",
 			"lineno": "Tone/core/IntervalTimeline.js#L346"
 		},
 		{
@@ -7904,7 +7904,7 @@
 			},
 			"scope": "instance",
 			"name": "start",
-			"lineno": "Tone/core/Transport.js#L375"
+			"lineno": "Tone/core/Transport.js#L379"
 		},
 		{
 			"description": "Stop the transport and all sources synced to the transport.",
@@ -7930,7 +7930,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/core/Transport.js#L391"
+			"lineno": "Tone/core/Transport.js#L395"
 		},
 		{
 			"description": "Pause the transport and all sources synced to the transport.",
@@ -7952,7 +7952,7 @@
 			},
 			"scope": "instance",
 			"name": "pause",
-			"lineno": "Tone/core/Transport.js#L401"
+			"lineno": "Tone/core/Transport.js#L405"
 		},
 		{
 			"description": "Toggle the current state of the transport. If it is\nstarted, it will stop it, otherwise it will start the Transport.",
@@ -7974,7 +7974,7 @@
 			},
 			"scope": "instance",
 			"name": "toggle",
-			"lineno": "Tone/core/Transport.js#L412"
+			"lineno": "Tone/core/Transport.js#L416"
 		},
 		{
 			"description": "Set the loop start and stop at the same time.",
@@ -8003,7 +8003,7 @@
 			},
 			"scope": "instance",
 			"name": "setLoopPoints",
-			"lineno": "Tone/core/Transport.js#L492"
+			"lineno": "Tone/core/Transport.js#L496"
 		},
 		{
 			"description": "Get the clock's ticks at the given time.",
@@ -8024,7 +8024,7 @@
 			},
 			"scope": "instance",
 			"name": "getTicksAtTime",
-			"lineno": "Tone/core/Transport.js#L621"
+			"lineno": "Tone/core/Transport.js#L625"
 		},
 		{
 			"description": "Return the elapsed seconds at the given time.",
@@ -8045,7 +8045,7 @@
 			},
 			"scope": "instance",
 			"name": "getSecondsAtTime",
-			"lineno": "Tone/core/Transport.js#L630"
+			"lineno": "Tone/core/Transport.js#L634"
 		},
 		{
 			"description": "Returns the time aligned to the next subdivision\n of the Transport. If the Transport is not started,\n it will return 0.\n Note: this will not work precisely during tempo ramps.",
@@ -8069,7 +8069,7 @@
 			},
 			"scope": "instance",
 			"name": "nextSubdivision",
-			"lineno": "Tone/core/Transport.js#L690"
+			"lineno": "Tone/core/Transport.js#L694"
 		},
 		{
 			"description": "Attaches the signal to the tempo control signal so that\n any changes in the tempo will change the signal in the same\n ratio.",
@@ -8097,7 +8097,7 @@
 			},
 			"scope": "instance",
 			"name": "syncSignal",
-			"lineno": "Tone/core/Transport.js#L715"
+			"lineno": "Tone/core/Transport.js#L719"
 		},
 		{
 			"description": "Unsyncs a previously synced signal from the transport's control.\n See Tone.Transport.syncSignal.",
@@ -8117,7 +8117,7 @@
 			},
 			"scope": "instance",
 			"name": "unsyncSignal",
-			"lineno": "Tone/core/Transport.js#L742"
+			"lineno": "Tone/core/Transport.js#L746"
 		},
 		{
 			"description": "Bind a callback to a specific event.",
