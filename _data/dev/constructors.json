@@ -520,7 +520,7 @@
 			}
 		],
 		"examples": [
-			"var env = new Tone.FrequencyEnvelope({\n \t\"attack\" : 0.2,\n \t\"baseFrequency\" : \"C2\",\n \t\"octaves\" : 4\n });\n scaledEnv.connect(oscillator.frequency);"
+			"var freqEnv = new Tone.FrequencyEnvelope({\n \t\"attack\" : 0.2,\n \t\"baseFrequency\" : \"C2\",\n \t\"octaves\" : 4\n });\n freqEnv.connect(oscillator.frequency);"
 		],
 		"extends": "Tone.Envelope"
 	},
