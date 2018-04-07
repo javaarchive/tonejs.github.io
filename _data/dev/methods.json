@@ -4041,7 +4041,7 @@
 			"lineno": "Tone/core/Bus.js#L49"
 		},
 		{
-			"description": "Generate a buffer by rendering all of the Tone.js code within the callback using the OfflineAudioContext.\n The OfflineAudioContext is capable of rendering much faster than real time in many cases.\n The callback function also passes in an offline instance of Tone.Transport which can be used\n to schedule events along the Transport.",
+			"description": "Generate a buffer by rendering all of the Tone.js code within the callback using the OfflineAudioContext.\n The OfflineAudioContext is capable of rendering much faster than real time in many cases.\n The callback function also passes in an offline instance of Tone.Transport which can be used\n to schedule events along the Transport. **NOTE** OfflineAudioContext has the same restrictions\n as the AudioContext in that on certain platforms (like iOS) it must be invoked by an explicit\n user action like a click or tap.",
 			"params": [
 				{
 					"type": [
@@ -4070,7 +4070,7 @@
 			},
 			"scope": "static",
 			"name": "Offline",
-			"lineno": "Tone/core/Offline.js#L57"
+			"lineno": "Tone/core/Offline.js#L59"
 		},
 		{
 			"params": [
