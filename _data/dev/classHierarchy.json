@@ -4,7 +4,15 @@
 		"AudioNode",
 		"Tone"
 	],
+	"Analyser": [
+		"AudioNode",
+		"Tone"
+	],
 	"Compressor": [
+		"AudioNode",
+		"Tone"
+	],
+	"CrossFade": [
 		"AudioNode",
 		"Tone"
 	],
@@ -12,11 +20,36 @@
 		"AudioNode",
 		"Tone"
 	],
+	"Envelope": [
+		"AudioNode",
+		"Tone"
+	],
+	"FFT": [
+		"AudioNode",
+		"Tone"
+	],
 	"FeedbackCombFilter": [
 		"AudioNode",
 		"Tone"
 	],
+	"Filter": [
+		"AudioNode",
+		"Tone"
+	],
+	"Follower": [
+		"AudioNode",
+		"Tone"
+	],
+	"FrequencyEnvelope": [
+		"Envelope",
+		"AudioNode",
+		"Tone"
+	],
 	"Gate": [
+		"AudioNode",
+		"Tone"
+	],
+	"LFO": [
 		"AudioNode",
 		"Tone"
 	],
@@ -40,59 +73,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"MultibandCompressor": [
-		"AudioNode",
-		"Tone"
-	],
-	"MultibandSplit": [
-		"AudioNode",
-		"Tone"
-	],
-	"PanVol": [
-		"AudioNode",
-		"Tone"
-	],
-	"Split": [
-		"AudioNode",
-		"Tone"
-	],
-	"Volume": [
-		"AudioNode",
-		"Tone"
-	],
-	"Analyser": [
-		"AudioNode",
-		"Tone"
-	],
-	"CrossFade": [
-		"AudioNode",
-		"Tone"
-	],
-	"Envelope": [
-		"AudioNode",
-		"Tone"
-	],
-	"FFT": [
-		"AudioNode",
-		"Tone"
-	],
-	"Filter": [
-		"AudioNode",
-		"Tone"
-	],
-	"Follower": [
-		"AudioNode",
-		"Tone"
-	],
-	"FrequencyEnvelope": [
-		"Envelope",
-		"AudioNode",
-		"Tone"
-	],
-	"LFO": [
-		"AudioNode",
-		"Tone"
-	],
 	"MidSideMerge": [
 		"AudioNode",
 		"Tone"
@@ -102,6 +82,18 @@
 		"Tone"
 	],
 	"Mono": [
+		"AudioNode",
+		"Tone"
+	],
+	"MultibandCompressor": [
+		"AudioNode",
+		"Tone"
+	],
+	"MultibandSplit": [
+		"AudioNode",
+		"Tone"
+	],
+	"PanVol": [
 		"AudioNode",
 		"Tone"
 	],
@@ -122,6 +114,14 @@
 		"AudioNode",
 		"Tone"
 	],
+	"Split": [
+		"AudioNode",
+		"Tone"
+	],
+	"Volume": [
+		"AudioNode",
+		"Tone"
+	],
 	"Waveform": [
 		"AudioNode",
 		"Tone"
@@ -136,9 +136,6 @@
 		"Tone"
 	],
 	"CtrlRandom": [
-		"Tone"
-	],
-	"Master": [
 		"Tone"
 	],
 	"AudioNode": [
@@ -176,6 +173,9 @@
 	"Listener": [
 		"Tone"
 	],
+	"Master": [
+		"Tone"
+	],
 	"OfflineContext": [
 		"Context",
 		"Emitter",
@@ -204,15 +204,6 @@
 		"Tone"
 	],
 	"AutoFilter": [
-		"Effect",
-		"AudioNode",
-		"Tone"
-	],
-	"Effect": [
-		"AudioNode",
-		"Tone"
-	],
-	"FeedbackEffect": [
 		"Effect",
 		"AudioNode",
 		"Tone"
@@ -253,8 +244,17 @@
 		"AudioNode",
 		"Tone"
 	],
+	"Effect": [
+		"AudioNode",
+		"Tone"
+	],
 	"FeedbackDelay": [
 		"FeedbackEffect",
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"FeedbackEffect": [
 		"Effect",
 		"AudioNode",
 		"Tone"

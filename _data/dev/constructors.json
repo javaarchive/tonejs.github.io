@@ -41,6 +41,28 @@
 		],
 		"extends": "Tone.Envelope"
 	},
+	"Analyser": {
+		"description": "Wrapper around the native Web Audio's\n         [AnalyserNode](http://webaudio.github.io/web-audio-api/#idl-def-AnalyserNode).\n         Extracts FFT or Waveform data from the incoming signal.",
+		"params": [
+			{
+				"type": [
+					"String"
+				],
+				"optional": true,
+				"description": "The return type of the analysis, either \"fft\", or \"waveform\".",
+				"name": "type"
+			},
+			{
+				"type": [
+					"Number"
+				],
+				"optional": true,
+				"description": "The size of the FFT. Value must be a power of\n                      two in the range 32 to 32768.",
+				"name": "size"
+			}
+		],
+		"extends": "Tone.AudioNode"
+	},
 	"Compressor": {
 		"description": "Tone.Compressor is a thin wrapper around the Web Audio\n        [DynamicsCompressorNode](http://webaudio.github.io/web-audio-api/#the-dynamicscompressornode-interface).\n        Compression reduces the volume of loud sounds or amplifies quiet sounds\n        by narrowing or \"compressing\" an audio signal's dynamic range.\n        Read more on [Wikipedia](https://en.wikipedia.org/wiki/Dynamic_range_compression).",
 		"params": [
@@ -64,6 +86,23 @@
 		],
 		"examples": [
 			"var comp = new Tone.Compressor(-30, 3);"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"CrossFade": {
+		"description": "Tone.Crossfade provides equal power fading between two inputs.\n        More on crossfading technique [here](https://en.wikipedia.org/wiki/Fade_(audio_engineering)#Crossfading).",
+		"params": [
+			{
+				"type": [
+					"NormalRange"
+				],
+				"optional": true,
+				"defaultvalue": 0.5,
+				"name": "initialFade"
+			}
+		],
+		"examples": [
+			"var crossFade = new Tone.CrossFade(0.5);\n//connect effect A to crossfade from\n//effect output 0 to crossfade input 0\neffectA.connect(crossFade, 0, 0);\n//connect effect B to crossfade from\n//effect output 0 to crossfade input 1\neffectB.connect(crossFade, 0, 1);\ncrossFade.fade.value = 0;\n// ^ only effectA is output\ncrossFade.fade.value = 1;\n// ^ only effectB is output\ncrossFade.fade.value = 0.5;\n// ^ the two signals are mixed equally."
 		],
 		"extends": "Tone.AudioNode"
 	},
@@ -98,272 +137,6 @@
 		],
 		"examples": [
 			"var eq = new Tone.EQ3(-10, 3, -20);"
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"FeedbackCombFilter": {
-		"description": "Comb filters are basic building blocks for physical modeling. Read more\n        about comb filters on [CCRMA's website](https://ccrma.stanford.edu/~jos/pasp/Feedback_Comb_Filters.html).",
-		"params": [
-			{
-				"type": [
-					"Time",
-					"Object"
-				],
-				"optional": true,
-				"description": "The delay time of the filter.",
-				"name": "delayTime"
-			},
-			{
-				"type": [
-					"NormalRange"
-				],
-				"optional": true,
-				"description": "The amount of feedback the filter has.",
-				"name": "resonance"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"Gate": {
-		"description": "Tone.Gate only passes a signal through when the incoming\n         signal exceeds a specified threshold. To do this, Gate uses\n         a Tone.Follower to follow the amplitude of the incoming signal.\n         A common implementation of this class is a [Noise Gate](https://en.wikipedia.org/wiki/Noise_gate).",
-		"params": [
-			{
-				"type": [
-					"Decibels",
-					"Object"
-				],
-				"optional": true,
-				"description": "The threshold above which the gate will open.",
-				"name": "threshold"
-			},
-			{
-				"type": [
-					"Time"
-				],
-				"optional": true,
-				"description": "The follower's attack time",
-				"name": "attack"
-			},
-			{
-				"type": [
-					"Time"
-				],
-				"optional": true,
-				"description": "The follower's release time",
-				"name": "release"
-			}
-		],
-		"examples": [
-			"var gate = new Tone.Gate(-30, 0.2, 0.3).toMaster();\nvar mic = new Tone.UserMedia().connect(gate);\n//the gate will only pass through the incoming\n//signal when it's louder than -30db"
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"Limiter": {
-		"description": "Tone.Limiter will limit the loudness of an incoming signal.\n        It is composed of a Tone.Compressor with a fast attack\n        and release. Limiters are commonly used to safeguard against\n        signal clipping. Unlike a compressor, limiters do not provide\n        smooth gain reduction and almost completely prevent\n        additional gain above the threshold.",
-		"params": [
-			{
-				"type": [
-					"number"
-				],
-				"description": "The theshold above which the limiting is applied.",
-				"name": "threshold"
-			}
-		],
-		"examples": [
-			"var limiter = new Tone.Limiter(-6);"
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"LowpassCombFilter": {
-		"description": "Tone.Lowpass is a lowpass feedback comb filter. It is similar to\n        Tone.FeedbackCombFilter, but includes a lowpass filter.",
-		"params": [
-			{
-				"type": [
-					"Time",
-					"Object"
-				],
-				"optional": true,
-				"description": "The delay time of the comb filter",
-				"name": "delayTime"
-			},
-			{
-				"type": [
-					"NormalRange"
-				],
-				"optional": true,
-				"description": "The resonance (feedback) of the comb filter",
-				"name": "resonance"
-			},
-			{
-				"type": [
-					"Frequency"
-				],
-				"optional": true,
-				"description": "The cutoff of the lowpass filter dampens the\n                               signal as it is fedback.",
-				"name": "dampening"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"Merge": {
-		"description": "Tone.Merge brings two signals into the left and right\n         channels of a single stereo channel.",
-		"examples": [
-			"var merge = new Tone.Merge().toMaster();\n//routing a sine tone in the left channel\n//and noise in the right channel\nvar osc = new Tone.Oscillator().connect(merge.left);\nvar noise = new Tone.Noise().connect(merge.right);\n//starting our oscillators\nnoise.start();\nosc.start();"
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"Meter": {
-		"description": "Tone.Meter gets the [RMS](https://en.wikipedia.org/wiki/Root_mean_square)\n         of an input signal with some averaging applied. It can also get the raw\n         value of the input signal.",
-		"params": [
-			{
-				"type": [
-					"Number"
-				],
-				"description": "The amount of smoothing applied between frames.",
-				"name": "smoothing"
-			}
-		],
-		"examples": [
-			"var meter = new Tone.Meter();\nvar mic = new Tone.UserMedia().open();\n//connect mic to the meter\nmic.connect(meter);\n//the current level of the mic input in decibels\nvar level = meter.getValue();"
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"MidSideCompressor": {
-		"description": "Tone.MidSideCompressor applies two different compressors to the mid\n        and side signal components. See Tone.MidSideSplit.",
-		"params": [
-			{
-				"type": [
-					"Object"
-				],
-				"description": "The options that are passed to the mid and side\n                         compressors.",
-				"name": "options"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"MultibandCompressor": {
-		"description": "A compressor with seperate controls over low/mid/high dynamics",
-		"params": [
-			{
-				"type": [
-					"Object"
-				],
-				"description": "The low/mid/high compressor settings.",
-				"name": "options"
-			}
-		],
-		"examples": [
-			"var multiband = new Tone.MultibandCompressor({\n \t\"lowFrequency\" : 200,\n \t\"highFrequency\" : 1300\n \t\"low\" : {\n \t\t\"threshold\" : -12\n \t}\n })"
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"MultibandSplit": {
-		"description": "Split the incoming signal into three bands (low, mid, high)\n        with two crossover frequency controls.",
-		"params": [
-			{
-				"type": [
-					"Frequency",
-					"Object"
-				],
-				"optional": true,
-				"description": "the low/mid crossover frequency",
-				"name": "lowFrequency"
-			},
-			{
-				"type": [
-					"Frequency"
-				],
-				"optional": true,
-				"description": "the mid/high crossover frequency",
-				"name": "highFrequency"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"PanVol": {
-		"description": "Tone.PanVol is a Tone.Panner and Tone.Volume in one.",
-		"params": [
-			{
-				"type": [
-					"AudioRange"
-				],
-				"description": "the initial pan",
-				"name": "pan"
-			},
-			{
-				"type": [
-					"number"
-				],
-				"description": "The output volume.",
-				"name": "volume"
-			}
-		],
-		"examples": [
-			"//pan the incoming signal left and drop the volume\nvar panVol = new Tone.PanVol(-0.25, -12);"
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"Split": {
-		"description": "Tone.Split splits an incoming signal into left and right channels.",
-		"examples": [
-			"var split = new Tone.Split();\nstereoSignal.connect(split);"
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"Volume": {
-		"description": "Tone.Volume is a simple volume node, useful for creating a volume fader.",
-		"params": [
-			{
-				"type": [
-					"Decibels"
-				],
-				"optional": true,
-				"defaultvalue": 0,
-				"description": "the initial volume",
-				"name": "volume"
-			}
-		],
-		"examples": [
-			"var vol = new Tone.Volume(-12);\ninstrument.chain(vol, Tone.Master);"
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"Analyser": {
-		"description": "Wrapper around the native Web Audio's\n         [AnalyserNode](http://webaudio.github.io/web-audio-api/#idl-def-AnalyserNode).\n         Extracts FFT or Waveform data from the incoming signal.",
-		"params": [
-			{
-				"type": [
-					"String"
-				],
-				"optional": true,
-				"description": "The return type of the analysis, either \"fft\", or \"waveform\".",
-				"name": "type"
-			},
-			{
-				"type": [
-					"Number"
-				],
-				"optional": true,
-				"description": "The size of the FFT. Value must be a power of\n                      two in the range 32 to 32768.",
-				"name": "size"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"CrossFade": {
-		"description": "Tone.Crossfade provides equal power fading between two inputs.\n        More on crossfading technique [here](https://en.wikipedia.org/wiki/Fade_(audio_engineering)#Crossfading).",
-		"params": [
-			{
-				"type": [
-					"NormalRange"
-				],
-				"optional": true,
-				"defaultvalue": 0.5,
-				"name": "initialFade"
-			}
-		],
-		"examples": [
-			"var crossFade = new Tone.CrossFade(0.5);\n//connect effect A to crossfade from\n//effect output 0 to crossfade input 0\neffectA.connect(crossFade, 0, 0);\n//connect effect B to crossfade from\n//effect output 0 to crossfade input 1\neffectB.connect(crossFade, 0, 1);\ncrossFade.fade.value = 0;\n// ^ only effectA is output\ncrossFade.fade.value = 1;\n// ^ only effectB is output\ncrossFade.fade.value = 0.5;\n// ^ the two signals are mixed equally."
 		],
 		"extends": "Tone.AudioNode"
 	},
@@ -418,6 +191,29 @@
 				"optional": true,
 				"description": "The size of the FFT. Value must be a power of\n                      two in the range 32 to 32768.",
 				"name": "size"
+			}
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"FeedbackCombFilter": {
+		"description": "Comb filters are basic building blocks for physical modeling. Read more\n        about comb filters on [CCRMA's website](https://ccrma.stanford.edu/~jos/pasp/Feedback_Comb_Filters.html).",
+		"params": [
+			{
+				"type": [
+					"Time",
+					"Object"
+				],
+				"optional": true,
+				"description": "The delay time of the filter.",
+				"name": "delayTime"
+			},
+			{
+				"type": [
+					"NormalRange"
+				],
+				"optional": true,
+				"description": "The amount of feedback the filter has.",
+				"name": "resonance"
 			}
 		],
 		"extends": "Tone.AudioNode"
@@ -524,6 +320,40 @@
 		],
 		"extends": "Tone.Envelope"
 	},
+	"Gate": {
+		"description": "Tone.Gate only passes a signal through when the incoming\n         signal exceeds a specified threshold. To do this, Gate uses\n         a Tone.Follower to follow the amplitude of the incoming signal.\n         A common implementation of this class is a [Noise Gate](https://en.wikipedia.org/wiki/Noise_gate).",
+		"params": [
+			{
+				"type": [
+					"Decibels",
+					"Object"
+				],
+				"optional": true,
+				"description": "The threshold above which the gate will open.",
+				"name": "threshold"
+			},
+			{
+				"type": [
+					"Time"
+				],
+				"optional": true,
+				"description": "The follower's attack time",
+				"name": "attack"
+			},
+			{
+				"type": [
+					"Time"
+				],
+				"optional": true,
+				"description": "The follower's release time",
+				"name": "release"
+			}
+		],
+		"examples": [
+			"var gate = new Tone.Gate(-30, 0.2, 0.3).toMaster();\nvar mic = new Tone.UserMedia().connect(gate);\n//the gate will only pass through the incoming\n//signal when it's louder than -30db"
+		],
+		"extends": "Tone.AudioNode"
+	},
 	"LFO": {
 		"description": "LFO stands for low frequency oscillator. Tone.LFO produces an output signal\n         which can be attached to an AudioParam or Tone.Signal\n         in order to modulate that parameter with an oscillator. The LFO can\n         also be synced to the transport to start/stop and change when the tempo changes.",
 		"params": [
@@ -558,6 +388,89 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
+	"Limiter": {
+		"description": "Tone.Limiter will limit the loudness of an incoming signal.\n        It is composed of a Tone.Compressor with a fast attack\n        and release. Limiters are commonly used to safeguard against\n        signal clipping. Unlike a compressor, limiters do not provide\n        smooth gain reduction and almost completely prevent\n        additional gain above the threshold.",
+		"params": [
+			{
+				"type": [
+					"number"
+				],
+				"description": "The theshold above which the limiting is applied.",
+				"name": "threshold"
+			}
+		],
+		"examples": [
+			"var limiter = new Tone.Limiter(-6);"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"LowpassCombFilter": {
+		"description": "Tone.Lowpass is a lowpass feedback comb filter. It is similar to\n        Tone.FeedbackCombFilter, but includes a lowpass filter.",
+		"params": [
+			{
+				"type": [
+					"Time",
+					"Object"
+				],
+				"optional": true,
+				"description": "The delay time of the comb filter",
+				"name": "delayTime"
+			},
+			{
+				"type": [
+					"NormalRange"
+				],
+				"optional": true,
+				"description": "The resonance (feedback) of the comb filter",
+				"name": "resonance"
+			},
+			{
+				"type": [
+					"Frequency"
+				],
+				"optional": true,
+				"description": "The cutoff of the lowpass filter dampens the\n                               signal as it is fedback.",
+				"name": "dampening"
+			}
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"Merge": {
+		"description": "Tone.Merge brings two signals into the left and right\n         channels of a single stereo channel.",
+		"examples": [
+			"var merge = new Tone.Merge().toMaster();\n//routing a sine tone in the left channel\n//and noise in the right channel\nvar osc = new Tone.Oscillator().connect(merge.left);\nvar noise = new Tone.Noise().connect(merge.right);\n//starting our oscillators\nnoise.start();\nosc.start();"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"Meter": {
+		"description": "Tone.Meter gets the [RMS](https://en.wikipedia.org/wiki/Root_mean_square)\n         of an input signal with some averaging applied. It can also get the raw\n         value of the input signal.",
+		"params": [
+			{
+				"type": [
+					"Number"
+				],
+				"description": "The amount of smoothing applied between frames.",
+				"name": "smoothing"
+			}
+		],
+		"examples": [
+			"var meter = new Tone.Meter();\nvar mic = new Tone.UserMedia().open();\n//connect mic to the meter\nmic.connect(meter);\n//the current level of the mic input in decibels\nvar level = meter.getValue();"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"MidSideCompressor": {
+		"description": "Tone.MidSideCompressor applies two different compressors to the mid\n        and side signal components. See Tone.MidSideSplit.",
+		"params": [
+			{
+				"type": [
+					"Object"
+				],
+				"description": "The options that are passed to the mid and side\n                         compressors.",
+				"name": "options"
+			}
+		],
+		"extends": "Tone.AudioNode"
+	},
 	"MidSideMerge": {
 		"description": "Mid/Side processing separates the the 'mid' signal\n        (which comes out of both the left and the right channel)\n        and the 'side' (which only comes out of the the side channels).\n        MidSideMerge merges the mid and side signal after they've been seperated\n        by Tone.MidSideSplit.<br><br>\n        <code>\n        Left = (Mid+Side)/sqrt(2);   // obtain left signal from mid and side<br>\n        Right = (Mid-Side)/sqrt(2);   // obtain right signal from mid and side<br>\n        </code>",
 		"extends": "Tone.AudioNode"
@@ -568,6 +481,68 @@
 	},
 	"Mono": {
 		"description": "Tone.Mono coerces the incoming mono or stereo signal into a mono signal\n        where both left and right channels have the same value. This can be useful\n        for [stereo imaging](https://en.wikipedia.org/wiki/Stereo_imaging).",
+		"extends": "Tone.AudioNode"
+	},
+	"MultibandCompressor": {
+		"description": "A compressor with seperate controls over low/mid/high dynamics",
+		"params": [
+			{
+				"type": [
+					"Object"
+				],
+				"description": "The low/mid/high compressor settings.",
+				"name": "options"
+			}
+		],
+		"examples": [
+			"var multiband = new Tone.MultibandCompressor({\n \t\"lowFrequency\" : 200,\n \t\"highFrequency\" : 1300\n \t\"low\" : {\n \t\t\"threshold\" : -12\n \t}\n })"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"MultibandSplit": {
+		"description": "Split the incoming signal into three bands (low, mid, high)\n        with two crossover frequency controls.",
+		"params": [
+			{
+				"type": [
+					"Frequency",
+					"Object"
+				],
+				"optional": true,
+				"description": "the low/mid crossover frequency",
+				"name": "lowFrequency"
+			},
+			{
+				"type": [
+					"Frequency"
+				],
+				"optional": true,
+				"description": "the mid/high crossover frequency",
+				"name": "highFrequency"
+			}
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"PanVol": {
+		"description": "Tone.PanVol is a Tone.Panner and Tone.Volume in one.",
+		"params": [
+			{
+				"type": [
+					"AudioRange"
+				],
+				"description": "the initial pan",
+				"name": "pan"
+			},
+			{
+				"type": [
+					"number"
+				],
+				"description": "The output volume.",
+				"name": "volume"
+			}
+		],
+		"examples": [
+			"//pan the incoming signal left and drop the volume\nvar panVol = new Tone.PanVol(-0.25, -12);"
+		],
 		"extends": "Tone.AudioNode"
 	},
 	"Panner": {
@@ -661,6 +636,31 @@
 		"description": "Tone.Solo lets you isolate a specific audio stream. When\n        an instance is set to `solo=true`, it will mute all other instances.",
 		"examples": [
 			"var soloA = new Tone.Solo()\nvar soloB = new Tone.Solo()\nsoloA.solo = true\n//no audio will pass through soloB"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"Split": {
+		"description": "Tone.Split splits an incoming signal into left and right channels.",
+		"examples": [
+			"var split = new Tone.Split();\nstereoSignal.connect(split);"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"Volume": {
+		"description": "Tone.Volume is a simple volume node, useful for creating a volume fader.",
+		"params": [
+			{
+				"type": [
+					"Decibels"
+				],
+				"optional": true,
+				"defaultvalue": 0,
+				"description": "the initial volume",
+				"name": "volume"
+			}
+		],
+		"examples": [
+			"var vol = new Tone.Volume(-12);\ninstrument.chain(vol, Tone.Master);"
 		],
 		"extends": "Tone.AudioNode"
 	},
@@ -763,14 +763,6 @@
 		"examples": [
 			"var randomWalk = new Tone.CtrlRandom({\n\t\"min\" : 0,\n\t\"max\" : 10,\n\t\"integer\" : true\n});\nrandomWalk.eval();\n\n "
 		],
-		"extends": "Tone"
-	},
-	"Master": {
-		"description": "A single master output which is connected to the\n         AudioDestinationNode (aka your speakers).\n         It provides useful conveniences such as the ability\n         to set the volume and mute the entire application.\n         It also gives you the ability to apply master effects to your application.\n         <br><br>\n         Like Tone.Transport, A single Tone.Master is created\n         on initialization and you do not need to explicitly construct one.",
-		"examples": [
-			"//the audio will go from the oscillator to the speakers\noscillator.connect(Tone.Master);\n//a convenience for connecting to the master output is also provided:\noscillator.toMaster();\n//the above two examples are equivalent."
-		],
-		"singleton": true,
 		"extends": "Tone"
 	},
 	"AudioNode": {
@@ -949,6 +941,14 @@
 		"singleton": true,
 		"extends": "Tone"
 	},
+	"Master": {
+		"description": "A single master output which is connected to the\n         AudioDestinationNode (aka your speakers).\n         It provides useful conveniences such as the ability\n         to set the volume and mute the entire application.\n         It also gives you the ability to apply master effects to your application.\n         <br><br>\n         Like Tone.Transport, A single Tone.Master is created\n         on initialization and you do not need to explicitly construct one.",
+		"examples": [
+			"//the audio will go from the oscillator to the speakers\noscillator.connect(Tone.Master);\n//a convenience for connecting to the master output is also provided:\noscillator.toMaster();\n//the above two examples are equivalent."
+		],
+		"singleton": true,
+		"extends": "Tone"
+	},
 	"OfflineContext": {
 		"description": "Wrapper around the OfflineAudioContext",
 		"params": [
@@ -1031,10 +1031,6 @@
 		],
 		"extends": "Tone.Timeline"
 	},
-	"Tone": {
-		"description": "Tone is the base class of all other classes.",
-		"params": []
-	},
 	"Transport": {
 		"description": "Transport for timing musical events.\n         Supports tempo curves and time changes. Unlike browser-based timing (setInterval, requestAnimationFrame)\n         Tone.Transport timing events pass in the exact time of the scheduled event\n         in the argument of the callback function. Pass that time value to the object\n         you're scheduling. <br><br>\n         A single transport is created for you when the library is initialized.\n         <br><br>\n         The transport emits the events: \"start\", \"stop\", \"pause\", and \"loop\" which are\n         called with the time of that event as the argument.",
 		"examples": [
@@ -1068,6 +1064,10 @@
 		],
 		"extends": "Tone.TransportEvent"
 	},
+	"Tone": {
+		"description": "Tone is the base class of all other classes.",
+		"params": []
+	},
 	"AutoFilter": {
 		"description": "Tone.AutoFilter is a Tone.Filter with a Tone.LFO connected to the filter cutoff frequency.\n        Setting the LFO rate and depth allows for control over the filter modulation rate \n        and depth.",
 		"params": [
@@ -1099,36 +1099,6 @@
 		],
 		"examples": [
 			"//create an autofilter and start it's LFO\nvar autoFilter = new Tone.AutoFilter(\"4n\").toMaster().start();\n//route an oscillator through the filter and start it\nvar oscillator = new Tone.Oscillator().connect(autoFilter).start();"
-		],
-		"extends": "Tone.Effect"
-	},
-	"Effect": {
-		"description": "Tone.Effect is the base class for effects. Connect the effect between\n\t        the effectSend and effectReturn GainNodes, then control the amount of\n\t        effect which goes to the output using the wet control.",
-		"params": [
-			{
-				"type": [
-					"NormalRange",
-					"Object"
-				],
-				"optional": true,
-				"description": "The starting wet value.",
-				"name": "wet"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"FeedbackEffect": {
-		"description": "Tone.FeedbackEffect provides a loop between an \n\t        audio source and its own output. This is a base-class\n\t        for feedback effects.",
-		"params": [
-			{
-				"type": [
-					"NormalRange",
-					"Object"
-				],
-				"optional": true,
-				"description": "The initial feedback value.",
-				"name": "feedback"
-			}
 		],
 		"extends": "Tone.Effect"
 	},
@@ -1297,6 +1267,21 @@
 		],
 		"extends": "Tone.Effect"
 	},
+	"Effect": {
+		"description": "Tone.Effect is the base class for effects. Connect the effect between\n\t        the effectSend and effectReturn GainNodes, then control the amount of\n\t        effect which goes to the output using the wet control.",
+		"params": [
+			{
+				"type": [
+					"NormalRange",
+					"Object"
+				],
+				"optional": true,
+				"description": "The starting wet value.",
+				"name": "wet"
+			}
+		],
+		"extends": "Tone.AudioNode"
+	},
 	"FeedbackDelay": {
 		"description": "Tone.FeedbackDelay is a DelayNode in which part of output\n         signal is fed back into the delay.",
 		"params": [
@@ -1322,6 +1307,21 @@
 			"var feedbackDelay = new Tone.FeedbackDelay(\"8n\", 0.5).toMaster();\nvar tom = new Tone.DrumSynth({\n\t\"octaves\" : 4,\n\t\"pitchDecay\" : 0.1\n}).connect(feedbackDelay);\ntom.triggerAttackRelease(\"A2\",\"32n\");"
 		],
 		"extends": "Tone.FeedbackEffect"
+	},
+	"FeedbackEffect": {
+		"description": "Tone.FeedbackEffect provides a loop between an \n\t        audio source and its own output. This is a base-class\n\t        for feedback effects.",
+		"params": [
+			{
+				"type": [
+					"NormalRange",
+					"Object"
+				],
+				"optional": true,
+				"description": "The initial feedback value.",
+				"name": "feedback"
+			}
+		],
+		"extends": "Tone.Effect"
 	},
 	"Freeverb": {
 		"description": "Tone.Freeverb is a reverb based on [Freeverb](https://ccrma.stanford.edu/~jos/pasp/Freeverb.html).\n        Read more on reverb on [Sound On Sound](https://web.archive.org/web/20160404083902/http://www.soundonsound.com:80/sos/feb01/articles/synthsecrets.asp).",

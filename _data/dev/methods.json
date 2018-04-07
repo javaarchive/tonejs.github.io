@@ -162,22 +162,6 @@
 			"inherits": "Tone.Envelope"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "disconnect the output",
 			"params": [
 				{
@@ -199,20 +183,6 @@
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
 			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Compressor": [
-		{
-			"description": "clean up",
-			"returns": {
-				"type": [
-					"Tone.Compressor"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/Compressor.js#L101"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
@@ -228,1314 +198,6 @@
 			"scope": "instance",
 			"name": "toMaster",
 			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"EQ3": [
-		{
-			"description": "clean up",
-			"returns": {
-				"type": [
-					"Tone.EQ3"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/EQ3.js#L127"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"FeedbackCombFilter": [
-		{
-			"description": "clean up",
-			"returns": {
-				"type": [
-					"Tone.FeedbackCombFilter"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/FeedbackCombFilter.js#L69"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Gate": [
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.Gate"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/Gate.js#L108"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Limiter": [
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.Limiter"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/Limiter.js#L61"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"LowpassCombFilter": [
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.LowpassCombFilter"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/LowpassCombFilter.js#L94"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Merge": [
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.Merge"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/Merge.js#L63"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Meter": [
-		{
-			"description": "Get the current decibel value of the incoming signal",
-			"returns": {
-				"type": [
-					"Decibels"
-				]
-			},
-			"scope": "instance",
-			"name": "getLevel",
-			"lineno": "Tone/component/Meter.js#L57"
-		},
-		{
-			"description": "Get the signal value of the incoming signal",
-			"returns": {
-				"type": [
-					"Number"
-				]
-			},
-			"scope": "instance",
-			"name": "getValue",
-			"lineno": "Tone/component/Meter.js#L69"
-		},
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.Meter"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/Meter.js#L95"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"MidSideCompressor": [
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.MidSideCompressor"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/MidSideCompressor.js#L79"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"MultibandCompressor": [
-		{
-			"description": "clean up",
-			"returns": {
-				"type": [
-					"Tone.MultibandCompressor"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/MultibandCompressor.js#L101"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"MultibandSplit": [
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.MultibandSplit"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/MultibandSplit.js#L112"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"PanVol": [
-		{
-			"description": "clean up",
-			"returns": {
-				"type": [
-					"Tone.PanVol"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/PanVol.js#L89"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Split": [
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.Split"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/Split.js#L52"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Volume": [
-		{
-			"description": "clean up",
-			"returns": {
-				"type": [
-					"Tone.Volume"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/Volume.js#L88"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -1564,6 +226,70 @@
 			"lineno": "Tone/component/Analyser.js#L134"
 		},
 		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -1578,6 +304,20 @@
 			"name": "toMaster",
 			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Compressor": [
+		{
+			"description": "clean up",
+			"returns": {
+				"type": [
+					"Tone.Compressor"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/Compressor.js#L101"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -1641,6 +381,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -1658,6 +414,70 @@
 			"lineno": "Tone/component/CrossFade.js#L98"
 		},
 		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -1672,6 +492,20 @@
 			"name": "toMaster",
 			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
+		}
+	],
+	"EQ3": [
+		{
+			"description": "clean up",
+			"returns": {
+				"type": [
+					"Tone.EQ3"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/EQ3.js#L127"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -1735,6 +569,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -1896,22 +746,6 @@
 			"lineno": "Tone/component/Envelope.js#L447"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "disconnect the output",
 			"params": [
 				{
@@ -1932,6 +766,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -1960,6 +810,70 @@
 			"lineno": "Tone/component/FFT.js#L62"
 		},
 		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -1974,6 +888,20 @@
 			"name": "toMaster",
 			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
+		}
+	],
+	"FeedbackCombFilter": [
+		{
+			"description": "clean up",
+			"returns": {
+				"type": [
+					"Tone.FeedbackCombFilter"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/FeedbackCombFilter.js#L69"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -2037,6 +965,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -2054,22 +998,6 @@
 			"lineno": "Tone/component/Filter.js#L170"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -2131,6 +1059,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -2154,22 +1098,6 @@
 			"lineno": "Tone/component/Follower.js#L166"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "disconnect the output",
 			"params": [
 				{
@@ -2190,6 +1118,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -2356,6 +1300,29 @@
 			"inherits": "Tone.Envelope"
 		},
 		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -2369,6 +1336,61 @@
 			"scope": "instance",
 			"name": "toMaster",
 			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Gate": [
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.Gate"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/Gate.js#L108"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2392,6 +1414,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -2482,6 +1520,29 @@
 			"lineno": "Tone/component/LFO.js#L327"
 		},
 		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -2495,6 +1556,61 @@
 			"scope": "instance",
 			"name": "toMaster",
 			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Limiter": [
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.Limiter"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/Limiter.js#L61"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2518,6 +1634,420 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"LowpassCombFilter": [
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.LowpassCombFilter"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/LowpassCombFilter.js#L94"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Merge": [
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.Merge"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/Merge.js#L63"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Meter": [
+		{
+			"description": "Get the current decibel value of the incoming signal",
+			"returns": {
+				"type": [
+					"Decibels"
+				]
+			},
+			"scope": "instance",
+			"name": "getLevel",
+			"lineno": "Tone/component/Meter.js#L57"
+		},
+		{
+			"description": "Get the signal value of the incoming signal",
+			"returns": {
+				"type": [
+					"Number"
+				]
+			},
+			"scope": "instance",
+			"name": "getValue",
+			"lineno": "Tone/component/Meter.js#L69"
+		},
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.Meter"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/Meter.js#L95"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"MidSideCompressor": [
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.MidSideCompressor"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/MidSideCompressor.js#L79"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -2535,22 +2065,6 @@
 			"lineno": "Tone/component/MidSideMerge.js#L88"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -2612,6 +2126,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -2629,22 +2159,6 @@
 			"lineno": "Tone/component/MidSideSplit.js#L69"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -2706,6 +2220,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -2723,6 +2253,70 @@
 			"lineno": "Tone/component/Mono.js#L35"
 		},
 		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -2737,6 +2331,20 @@
 			"name": "toMaster",
 			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
+		}
+	],
+	"MultibandCompressor": [
+		{
+			"description": "clean up",
+			"returns": {
+				"type": [
+					"Tone.MultibandCompressor"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/MultibandCompressor.js#L101"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -2800,6 +2408,210 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"MultibandSplit": [
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.MultibandSplit"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/MultibandSplit.js#L112"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"PanVol": [
+		{
+			"description": "clean up",
+			"returns": {
+				"type": [
+					"Tone.PanVol"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/PanVol.js#L89"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -2817,22 +2629,6 @@
 			"lineno": "Tone/component/Panner.js#L45"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -2894,6 +2690,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -2975,22 +2787,6 @@
 			"lineno": "Tone/component/Panner3D.js#L314"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -3052,6 +2848,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -3218,22 +3030,6 @@
 			"inherits": "Tone.Envelope"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "disconnect the output",
 			"params": [
 				{
@@ -3255,20 +3051,6 @@
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
 			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Solo": [
-		{
-			"description": "Clean up",
-			"returns": {
-				"type": [
-					"Tone.Solo"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/Solo.js#L147"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
@@ -3285,6 +3067,20 @@
 			"name": "toMaster",
 			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Solo": [
+		{
+			"description": "Clean up",
+			"returns": {
+				"type": [
+					"Tone.Solo"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/Solo.js#L147"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -3348,6 +3144,210 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Split": [
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.Split"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/Split.js#L52"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Volume": [
+		{
+			"description": "clean up",
+			"returns": {
+				"type": [
+					"Tone.Volume"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/Volume.js#L88"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -3376,22 +3376,6 @@
 			"lineno": "Tone/component/Waveform.js#L61"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -3453,6 +3437,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -3521,66 +3521,7 @@
 			"lineno": "Tone/control/CtrlPattern.js#L264"
 		}
 	],
-	"Master": [
-		{
-			"description": "Add a master effects chain. NOTE: this will disconnect any nodes which were previously\n chained in the master effects chain.",
-			"params": [
-				{
-					"type": [
-						"AudioNode",
-						"Tone"
-					],
-					"description": "All arguments will be connected in a row\n                                 and the Master will be routed through it.",
-					"name": "args..."
-				}
-			],
-			"examples": [
-				"//some overall compression to keep the levels in check\nvar masterCompressor = new Tone.Compressor({\n\t\"threshold\" : -6,\n\t\"ratio\" : 3,\n\t\"attack\" : 0.5,\n\t\"release\" : 0.1\n});\n//give a little boost to the lows\nvar lowBump = new Tone.Filter(200, \"lowshelf\");\n//route everything through the filter\n//and compressor before going to the speakers\nTone.Master.chain(lowBump, masterCompressor);"
-			],
-			"returns": {
-				"type": [
-					"Tone.Master"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/Master.js#L100"
-		},
-		{
-			"description": "Clean up",
-			"returns": {
-				"type": [
-					"Tone.Master"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/core/Master.js#L110"
-		}
-	],
 	"AudioNode": [
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129"
-		},
-		{
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L136"
-		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
@@ -3654,6 +3595,26 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/core/AudioNode.js#L248"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129"
+		},
+		{
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L136"
 		}
 	],
 	"Buffer": [
@@ -4554,12 +4515,6 @@
 		{
 			"params": [],
 			"scope": "inner",
-			"name": "createBuffers",
-			"lineno": "Tone/source/Noise.js#L247"
-		},
-		{
-			"params": [],
-			"scope": "inner",
 			"name": "ConstantSourceNode",
 			"lineno": "Tone/shim/ConstantSourceNode.js#L6"
 		},
@@ -4568,6 +4523,12 @@
 			"scope": "inner",
 			"name": "WaveShaperNode",
 			"lineno": "Tone/shim/WaveShaperNode.js#L10"
+		},
+		{
+			"params": [],
+			"scope": "inner",
+			"name": "createBuffers",
+			"lineno": "Tone/source/Noise.js#L247"
 		}
 	],
 	"Buffers": [
@@ -5845,6 +5806,45 @@
 			"lineno": "Tone/core/Listener.js#L284"
 		}
 	],
+	"Master": [
+		{
+			"description": "Add a master effects chain. NOTE: this will disconnect any nodes which were previously\n chained in the master effects chain.",
+			"params": [
+				{
+					"type": [
+						"AudioNode",
+						"Tone"
+					],
+					"description": "All arguments will be connected in a row\n                                 and the Master will be routed through it.",
+					"name": "args..."
+				}
+			],
+			"examples": [
+				"//some overall compression to keep the levels in check\nvar masterCompressor = new Tone.Compressor({\n\t\"threshold\" : -6,\n\t\"ratio\" : 3,\n\t\"attack\" : 0.5,\n\t\"release\" : 0.1\n});\n//give a little boost to the lows\nvar lowBump = new Tone.Filter(200, \"lowshelf\");\n//route everything through the filter\n//and compressor before going to the speakers\nTone.Master.chain(lowBump, masterCompressor);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Master"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/Master.js#L100"
+		},
+		{
+			"description": "Clean up",
+			"returns": {
+				"type": [
+					"Tone.Master"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/core/Master.js#L110"
+		}
+	],
 	"OfflineContext": [
 		{
 			"description": "Override the now method to point to the internal clock time",
@@ -6564,22 +6564,6 @@
 			"lineno": "Tone/core/Param.js#L573"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -6641,6 +6625,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -7556,170 +7556,6 @@
 			"inherits": "Tone.Timeline"
 		}
 	],
-	"Tone#Tone": [
-		{
-			"returns": {
-				"type": [
-					"String"
-				],
-				"description": "returns the name of the class as a string"
-			},
-			"scope": "instance",
-			"name": "toString",
-			"lineno": "Tone/core/Tone.js#L29"
-		},
-		{
-			"description": "Set the parameters at once. Either pass in an\n object mapping parameters to values, or to set a\n single parameter, by passing in a string and value.\n The last argument is an optional ramp time which\n will ramp any signal values to their destination value\n over the duration of the rampTime.",
-			"params": [
-				{
-					"type": [
-						"Object",
-						"String"
-					],
-					"name": "params"
-				},
-				{
-					"type": [
-						"Number"
-					],
-					"optional": true,
-					"name": "value"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"name": "rampTime"
-				}
-			],
-			"examples": [
-				"//set values using an object\nfilter.set({\n\t\"frequency\" : 300,\n\t\"type\" : highpass\n});\n ",
-				"filter.set(\"type\", \"highpass\");\n ",
-				"//ramp to the value 220 over 3 seconds.\noscillator.set({\n\t\"frequency\" : 220\n}, 3);"
-			],
-			"returns": {
-				"type": [
-					"Tone"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "set",
-			"lineno": "Tone/core/Tone.js#L79"
-		},
-		{
-			"description": "Get the object's attributes. Given no arguments get\n will return all available object properties and their corresponding\n values. Pass in a single attribute to retrieve or an array\n of attributes. The attribute strings can also include a \".\"\n to access deeper properties.",
-			"params": [
-				{
-					"type": [
-						"Array",
-						"string",
-						"undefined"
-					],
-					"description": "the parameters to get, otherwise will return\n \t\t\t\t\t                  all available.",
-					"name": "params"
-				}
-			],
-			"examples": [
-				"osc.get();\n//returns {\"type\" : \"sine\", \"frequency\" : 440, ...etc}\n ",
-				"osc.get(\"type\");\n//returns { \"type\" : \"sine\"}",
-				"//use dot notation to access deep properties\nsynth.get([\"envelope.attack\", \"envelope.release\"]);\n//returns {\"envelope\" : {\"attack\" : 0.2, \"release\" : 0.4}}\n "
-			],
-			"returns": {
-				"type": [
-					"Object"
-				]
-			},
-			"scope": "instance",
-			"name": "get",
-			"lineno": "Tone/core/Tone.js#L154"
-		},
-		{
-			"description": "Return the current time of the AudioContext clock.",
-			"returns": {
-				"type": [
-					"Number"
-				],
-				"description": "the currentTime from the AudioContext"
-			},
-			"scope": "instance",
-			"name": "now",
-			"lineno": "Tone/core/Tone.js#L514"
-		}
-	],
-	"Tone#\n disconnect and dispose": [
-		{
-			"returns": {
-				"type": [
-					"Tone"
-				],
-				"description": "this"
-			},
-			"scope": "static",
-			"name": "Tone#dispose",
-			"lineno": "Tone/core/Tone.js#L45"
-		}
-	],
-	"<anonymous>~Tone": [
-		{
-			"description": "An empty function.",
-			"scope": "static",
-			"name": "noOp",
-			"lineno": "Tone/core/Tone.js#L405"
-		},
-		{
-			"description": "Tone automatically creates a context on init, but if you are working\n with other libraries which also create an AudioContext, it can be\n useful to set your own. If you are going to set your own context,\n be sure to do it at the start of your code, before creating any objects.",
-			"params": [
-				{
-					"type": [
-						"AudioContext"
-					],
-					"description": "The new audio context to set",
-					"name": "ctx"
-				}
-			],
-			"scope": "static",
-			"name": "setContext",
-			"lineno": "Tone/core/Tone.js#L611"
-		},
-		{
-			"description": "Get the context when it becomes available",
-			"params": [
-				{
-					"type": [
-						"function"
-					],
-					"description": "Callback when the context is initialized",
-					"name": "resolve"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone"
-				]
-			},
-			"scope": "static",
-			"name": "getContext",
-			"lineno": "Tone/core/Tone.js#L682"
-		}
-	],
-	"extend": [
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "TempConstructor",
-			"lineno": "Tone/core/Tone.js#L550"
-		}
-	],
-	"getContext": [
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "resCallback",
-			"lineno": "Tone/core/Tone.js#L686"
-		}
-	],
 	"Transport": [
 		{
 			"description": "Schedule an event along the timeline.",
@@ -8295,6 +8131,170 @@
 			"lineno": "Tone/core/TransportRepeatEvent.js#L119"
 		}
 	],
+	"Tone#Tone": [
+		{
+			"returns": {
+				"type": [
+					"String"
+				],
+				"description": "returns the name of the class as a string"
+			},
+			"scope": "instance",
+			"name": "toString",
+			"lineno": "Tone/core/Tone.js#L29"
+		},
+		{
+			"description": "Set the parameters at once. Either pass in an\n object mapping parameters to values, or to set a\n single parameter, by passing in a string and value.\n The last argument is an optional ramp time which\n will ramp any signal values to their destination value\n over the duration of the rampTime.",
+			"params": [
+				{
+					"type": [
+						"Object",
+						"String"
+					],
+					"name": "params"
+				},
+				{
+					"type": [
+						"Number"
+					],
+					"optional": true,
+					"name": "value"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"name": "rampTime"
+				}
+			],
+			"examples": [
+				"//set values using an object\nfilter.set({\n\t\"frequency\" : 300,\n\t\"type\" : highpass\n});\n ",
+				"filter.set(\"type\", \"highpass\");\n ",
+				"//ramp to the value 220 over 3 seconds.\noscillator.set({\n\t\"frequency\" : 220\n}, 3);"
+			],
+			"returns": {
+				"type": [
+					"Tone"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "set",
+			"lineno": "Tone/core/Tone.js#L79"
+		},
+		{
+			"description": "Get the object's attributes. Given no arguments get\n will return all available object properties and their corresponding\n values. Pass in a single attribute to retrieve or an array\n of attributes. The attribute strings can also include a \".\"\n to access deeper properties.",
+			"params": [
+				{
+					"type": [
+						"Array",
+						"string",
+						"undefined"
+					],
+					"description": "the parameters to get, otherwise will return\n \t\t\t\t\t                  all available.",
+					"name": "params"
+				}
+			],
+			"examples": [
+				"osc.get();\n//returns {\"type\" : \"sine\", \"frequency\" : 440, ...etc}\n ",
+				"osc.get(\"type\");\n//returns { \"type\" : \"sine\"}",
+				"//use dot notation to access deep properties\nsynth.get([\"envelope.attack\", \"envelope.release\"]);\n//returns {\"envelope\" : {\"attack\" : 0.2, \"release\" : 0.4}}\n "
+			],
+			"returns": {
+				"type": [
+					"Object"
+				]
+			},
+			"scope": "instance",
+			"name": "get",
+			"lineno": "Tone/core/Tone.js#L154"
+		},
+		{
+			"description": "Return the current time of the AudioContext clock.",
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "the currentTime from the AudioContext"
+			},
+			"scope": "instance",
+			"name": "now",
+			"lineno": "Tone/core/Tone.js#L514"
+		}
+	],
+	"Tone#\n disconnect and dispose": [
+		{
+			"returns": {
+				"type": [
+					"Tone"
+				],
+				"description": "this"
+			},
+			"scope": "static",
+			"name": "Tone#dispose",
+			"lineno": "Tone/core/Tone.js#L45"
+		}
+	],
+	"<anonymous>~Tone": [
+		{
+			"description": "An empty function.",
+			"scope": "static",
+			"name": "noOp",
+			"lineno": "Tone/core/Tone.js#L405"
+		},
+		{
+			"description": "Tone automatically creates a context on init, but if you are working\n with other libraries which also create an AudioContext, it can be\n useful to set your own. If you are going to set your own context,\n be sure to do it at the start of your code, before creating any objects.",
+			"params": [
+				{
+					"type": [
+						"AudioContext"
+					],
+					"description": "The new audio context to set",
+					"name": "ctx"
+				}
+			],
+			"scope": "static",
+			"name": "setContext",
+			"lineno": "Tone/core/Tone.js#L611"
+		},
+		{
+			"description": "Get the context when it becomes available",
+			"params": [
+				{
+					"type": [
+						"function"
+					],
+					"description": "Callback when the context is initialized",
+					"name": "resolve"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone"
+				]
+			},
+			"scope": "static",
+			"name": "getContext",
+			"lineno": "Tone/core/Tone.js#L682"
+		}
+	],
+	"extend": [
+		{
+			"params": [],
+			"scope": "inner",
+			"name": "TempConstructor",
+			"lineno": "Tone/core/Tone.js#L550"
+		}
+	],
+	"getContext": [
+		{
+			"params": [],
+			"scope": "inner",
+			"name": "resCallback",
+			"lineno": "Tone/core/Tone.js#L686"
+		}
+	],
 	"AutoFilter": [
 		{
 			"description": "Start the effect.",
@@ -8390,22 +8390,6 @@
 			"lineno": "Tone/effect/AutoFilter.js#L187"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -8468,20 +8452,6 @@
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
 			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Effect": [
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.Effect"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/effect/Effect.js#L83"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
@@ -8497,164 +8467,6 @@
 			"scope": "instance",
 			"name": "toMaster",
 			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"FeedbackEffect": [
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.FeedbackEffect"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/effect/FeedbackEffect.js#L53"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -8753,22 +8565,6 @@
 			"lineno": "Tone/effect/AutoPanner.js#L138"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -8830,6 +8626,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -8847,22 +8659,6 @@
 			"lineno": "Tone/effect/AutoWah.js#L190"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -8924,6 +8720,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -8941,22 +8753,6 @@
 			"lineno": "Tone/effect/BitCrusher.js#L85"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -9018,6 +8814,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -9035,22 +8847,6 @@
 			"lineno": "Tone/effect/Chebyshev.js#L129"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -9112,6 +8908,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -9129,22 +8941,6 @@
 			"lineno": "Tone/effect/Chorus.js#L196"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -9206,6 +9002,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -9250,22 +9062,6 @@
 			"lineno": "Tone/effect/Convolver.js#L95"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -9327,6 +9123,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -9344,6 +9156,70 @@
 			"lineno": "Tone/effect/Distortion.js#L97"
 		},
 		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -9358,6 +9234,20 @@
 			"name": "toMaster",
 			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Effect": [
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.Effect"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/effect/Effect.js#L83"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -9421,6 +9311,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -9438,6 +9344,70 @@
 			"lineno": "Tone/effect/FeedbackDelay.js#L63"
 		},
 		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
 			"examples": [
 				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
@@ -9452,6 +9422,20 @@
 			"name": "toMaster",
 			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
+		}
+	],
+	"FeedbackEffect": [
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.FeedbackEffect"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/effect/FeedbackEffect.js#L53"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -9515,6 +9499,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -9532,22 +9532,6 @@
 			"lineno": "Tone/effect/Freeverb.js#L130"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -9609,6 +9593,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -9626,22 +9626,6 @@
 			"lineno": "Tone/effect/JCReverb.js#L124"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -9703,6 +9687,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -9720,22 +9720,6 @@
 			"lineno": "Tone/effect/MidSideEffect.js#L75"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -9797,6 +9781,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -9814,22 +9814,6 @@
 			"lineno": "Tone/effect/Phaser.js#L179"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -9891,6 +9875,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -9908,22 +9908,6 @@
 			"lineno": "Tone/effect/PingPongDelay.js#L82"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -9985,6 +9969,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -10002,22 +10002,6 @@
 			"lineno": "Tone/effect/PitchShift.js#L208"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -10079,6 +10063,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -10136,22 +10136,6 @@
 			"inherits": "Tone.Convolver"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -10213,6 +10197,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -10230,22 +10230,6 @@
 			"lineno": "Tone/effect/StereoEffect.js#L91"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -10307,6 +10291,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -10324,22 +10324,6 @@
 			"lineno": "Tone/effect/StereoFeedbackEffect.js#L51"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -10401,6 +10385,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -10418,22 +10418,6 @@
 			"lineno": "Tone/effect/StereoWidener.js#L91"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -10495,6 +10479,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -10512,22 +10512,6 @@
 			"lineno": "Tone/effect/StereoXFeedbackEffect.js#L53"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -10589,6 +10573,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -10687,22 +10687,6 @@
 			"lineno": "Tone/effect/Tremolo.js#L184"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -10764,6 +10748,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -10781,22 +10781,6 @@
 			"lineno": "Tone/effect/Vibrato.js#L90"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -10858,6 +10842,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -11689,22 +11689,6 @@
 			"inherits": "Tone.Instrument"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -11766,6 +11750,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -11989,22 +11989,6 @@
 			"inherits": "Tone.Instrument"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -12066,6 +12050,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -12290,22 +12290,6 @@
 			"inherits": "Tone.Instrument"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -12367,6 +12351,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -12460,22 +12460,6 @@
 			"lineno": "Tone/instrument/Instrument.js#L147"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -12537,6 +12521,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -12698,22 +12698,6 @@
 			"inherits": "Tone.Instrument"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -12775,6 +12759,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -12908,22 +12908,6 @@
 			"inherits": "Tone.Instrument"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -12985,6 +12969,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -13209,22 +13209,6 @@
 			"inherits": "Tone.Instrument"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -13286,6 +13270,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -13507,22 +13507,6 @@
 			"inherits": "Tone.Instrument"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -13584,6 +13568,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -13726,22 +13726,6 @@
 			"inherits": "Tone.Instrument"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -13803,6 +13787,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -13929,22 +13929,6 @@
 			"inherits": "Tone.Instrument"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -14006,6 +13990,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -14256,22 +14256,6 @@
 			"inherits": "Tone.Instrument"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -14333,6 +14317,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -14542,22 +14542,6 @@
 			"inherits": "Tone.Instrument"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -14619,6 +14603,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -14843,22 +14843,6 @@
 			"inherits": "Tone.Instrument"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -14921,6 +14905,128 @@
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
 			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"AnalyserNode": [
+		{
+			"scope": "instance",
+			"name": "getFloatTimeDomainData",
+			"lineno": "Tone/shim/AnalyserNode.js#L10"
+		}
+	],
+	"AudioBuffer": [
+		{
+			"scope": "instance",
+			"name": "copyToChannel",
+			"lineno": "Tone/shim/AudioBuffer.js#L9"
+		},
+		{
+			"scope": "instance",
+			"name": "copyFromChannel",
+			"lineno": "Tone/shim/AudioBuffer.js#L16"
+		}
+	],
+	"AudioContext": [
+		{
+			"scope": "instance",
+			"name": "close",
+			"lineno": "Tone/shim/AudioContext.js#L10"
+		},
+		{
+			"scope": "instance",
+			"name": "resume",
+			"lineno": "Tone/shim/AudioContext.js#L20"
+		},
+		{
+			"scope": "instance",
+			"name": "decodeAudioData",
+			"lineno": "Tone/shim/AudioContext.js#L52"
+		},
+		{
+			"scope": "instance",
+			"name": "createConstantSource",
+			"lineno": "Tone/shim/ConstantSourceNode.js#L47"
+		},
+		{
+			"scope": "instance",
+			"name": "createStereoPanner",
+			"lineno": "Tone/shim/StereoPannerNode.js#L95"
+		},
+		{
+			"scope": "instance",
+			"name": "createWaveShaper",
+			"lineno": "Tone/shim/WaveShaperNode.js#L52"
+		}
+	],
+	"<anonymous>~ConstantSourceNode": [
+		{
+			"scope": "instance",
+			"name": "start",
+			"lineno": "Tone/shim/ConstantSourceNode.js#L27"
+		},
+		{
+			"scope": "instance",
+			"name": "stop",
+			"lineno": "Tone/shim/ConstantSourceNode.js#L32"
+		},
+		{
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/shim/ConstantSourceNode.js#L37"
+		},
+		{
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/shim/ConstantSourceNode.js#L42"
+		}
+	],
+	"OfflineAudioContext": [
+		{
+			"scope": "instance",
+			"name": "startRendering",
+			"lineno": "Tone/shim/OfflineAudioContext.js#L13"
+		}
+	],
+	"OfflineAudioContext#startRendering": [
+		{
+			"scope": "instance",
+			"name": "oncomplete",
+			"lineno": "Tone/shim/OfflineAudioContext.js#L15"
+		}
+	],
+	"<anonymous>~StereoPannerNode": [
+		{
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/shim/StereoPannerNode.js#L86"
+		},
+		{
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/shim/StereoPannerNode.js#L90"
+		}
+	],
+	"<anonymous>~WaveShaperNode": [
+		{
+			"scope": "instance",
+			"name": "_defineProperty",
+			"lineno": "Tone/shim/WaveShaperNode.js#L34"
 		}
 	],
 	"Abs": [
@@ -17703,22 +17809,6 @@
 			"inherits": "Tone.Param"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -17757,6 +17847,22 @@
 			"scope": "instance",
 			"name": "connect",
 			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -19817,22 +19923,6 @@
 			"inherits": "Tone.Source"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -19894,6 +19984,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -20031,22 +20137,6 @@
 			"lineno": "Tone/source/BufferSource.js#L409"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -20108,6 +20198,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -20209,22 +20315,6 @@
 			"inherits": "Tone.Source"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -20286,6 +20376,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -20387,22 +20493,6 @@
 			"inherits": "Tone.Source"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -20464,6 +20554,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -20607,22 +20713,6 @@
 			"inherits": "Tone.Source"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -20684,6 +20774,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -20797,22 +20903,6 @@
 			"inherits": "Tone.Source"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -20874,6 +20964,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -21015,22 +21121,6 @@
 			"inherits": "Tone.Source"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -21092,6 +21182,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -21241,22 +21347,6 @@
 			"inherits": "Tone.Source"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -21318,6 +21408,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -21433,22 +21539,6 @@
 			"lineno": "Tone/source/OscillatorNode.js#L202"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -21510,6 +21600,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -21611,22 +21717,6 @@
 			"inherits": "Tone.Source"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -21688,6 +21778,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -21933,22 +22039,6 @@
 			"inherits": "Tone.Source"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -22010,6 +22100,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -22121,22 +22227,6 @@
 			"lineno": "Tone/source/Players.js#L260"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -22198,6 +22288,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -22299,22 +22405,6 @@
 			"inherits": "Tone.Source"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -22376,6 +22466,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -22473,22 +22579,6 @@
 			"lineno": "Tone/source/Source.js#L275"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -22550,6 +22640,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -22883,22 +22989,6 @@
 			"lineno": "Tone/source/UserMedia.js#L256"
 		},
 		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
 			"params": [
 				{
@@ -22960,6 +23050,22 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -23810,112 +23916,6 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/type/TimeBase.js#L335"
-		}
-	],
-	"AnalyserNode": [
-		{
-			"scope": "instance",
-			"name": "getFloatTimeDomainData",
-			"lineno": "Tone/shim/AnalyserNode.js#L10"
-		}
-	],
-	"AudioBuffer": [
-		{
-			"scope": "instance",
-			"name": "copyToChannel",
-			"lineno": "Tone/shim/AudioBuffer.js#L9"
-		},
-		{
-			"scope": "instance",
-			"name": "copyFromChannel",
-			"lineno": "Tone/shim/AudioBuffer.js#L16"
-		}
-	],
-	"AudioContext": [
-		{
-			"scope": "instance",
-			"name": "close",
-			"lineno": "Tone/shim/AudioContext.js#L10"
-		},
-		{
-			"scope": "instance",
-			"name": "resume",
-			"lineno": "Tone/shim/AudioContext.js#L20"
-		},
-		{
-			"scope": "instance",
-			"name": "decodeAudioData",
-			"lineno": "Tone/shim/AudioContext.js#L52"
-		},
-		{
-			"scope": "instance",
-			"name": "createConstantSource",
-			"lineno": "Tone/shim/ConstantSourceNode.js#L47"
-		},
-		{
-			"scope": "instance",
-			"name": "createStereoPanner",
-			"lineno": "Tone/shim/StereoPannerNode.js#L95"
-		},
-		{
-			"scope": "instance",
-			"name": "createWaveShaper",
-			"lineno": "Tone/shim/WaveShaperNode.js#L52"
-		}
-	],
-	"<anonymous>~ConstantSourceNode": [
-		{
-			"scope": "instance",
-			"name": "start",
-			"lineno": "Tone/shim/ConstantSourceNode.js#L27"
-		},
-		{
-			"scope": "instance",
-			"name": "stop",
-			"lineno": "Tone/shim/ConstantSourceNode.js#L32"
-		},
-		{
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/shim/ConstantSourceNode.js#L37"
-		},
-		{
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/shim/ConstantSourceNode.js#L42"
-		}
-	],
-	"OfflineAudioContext": [
-		{
-			"scope": "instance",
-			"name": "startRendering",
-			"lineno": "Tone/shim/OfflineAudioContext.js#L13"
-		}
-	],
-	"OfflineAudioContext#startRendering": [
-		{
-			"scope": "instance",
-			"name": "oncomplete",
-			"lineno": "Tone/shim/OfflineAudioContext.js#L15"
-		}
-	],
-	"<anonymous>~StereoPannerNode": [
-		{
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/shim/StereoPannerNode.js#L86"
-		},
-		{
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/shim/StereoPannerNode.js#L90"
-		}
-	],
-	"<anonymous>~WaveShaperNode": [
-		{
-			"scope": "instance",
-			"name": "_defineProperty",
-			"lineno": "Tone/shim/WaveShaperNode.js#L34"
 		}
 	],
 	"TransportTime": [

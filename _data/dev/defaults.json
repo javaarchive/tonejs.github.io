@@ -1,4 +1,9 @@
 {
+	"Analyser": {
+		"size": 1024,
+		"type": "fft",
+		"smoothing": 0.8
+	},
 	"Compressor": {
 		"ratio": 12,
 		"threshold": -24,
@@ -13,14 +18,50 @@
 		"lowFrequency": 400,
 		"highFrequency": 2500
 	},
+	"Envelope": {
+		"attack": 0.01,
+		"decay": 0.1,
+		"sustain": 0.5,
+		"release": 1,
+		"attackCurve": "linear",
+		"releaseCurve": "exponential"
+	},
+	"FFT": {
+		"size": 1024
+	},
 	"FeedbackCombFilter": {
 		"delayTime": 0.1,
 		"resonance": 0.5
+	},
+	"Filter": {
+		"type": "lowpass",
+		"frequency": 350,
+		"rolloff": -12,
+		"Q": 1,
+		"gain": 0
+	},
+	"Follower": {
+		"attack": 0.05,
+		"release": 0.5
+	},
+	"FrequencyEnvelope": {
+		"baseFrequency": 200,
+		"octaves": 4,
+		"exponent": 2
 	},
 	"Gate": {
 		"attack": 0.1,
 		"release": 0.1,
 		"threshold": -40
+	},
+	"LFO": {
+		"type": "sine",
+		"min": 0,
+		"max": 1,
+		"phase": 0,
+		"frequency": "4n",
+		"amplitude": 1,
+		"units": "Tone.Type.Default"
 	},
 	"Limiter": {
 		"threshold": -12
@@ -66,51 +107,6 @@
 		"volume": 0,
 		"mute": false
 	},
-	"Volume": {
-		"volume": 0,
-		"mute": false
-	},
-	"Analyser": {
-		"size": 1024,
-		"type": "fft",
-		"smoothing": 0.8
-	},
-	"Envelope": {
-		"attack": 0.01,
-		"decay": 0.1,
-		"sustain": 0.5,
-		"release": 1,
-		"attackCurve": "linear",
-		"releaseCurve": "exponential"
-	},
-	"FFT": {
-		"size": 1024
-	},
-	"Filter": {
-		"type": "lowpass",
-		"frequency": 350,
-		"rolloff": -12,
-		"Q": 1,
-		"gain": 0
-	},
-	"Follower": {
-		"attack": 0.05,
-		"release": 0.5
-	},
-	"FrequencyEnvelope": {
-		"baseFrequency": 200,
-		"octaves": 4,
-		"exponent": 2
-	},
-	"LFO": {
-		"type": "sine",
-		"min": 0,
-		"max": 1,
-		"phase": 0,
-		"frequency": "4n",
-		"amplitude": 1,
-		"units": "Tone.Type.Default"
-	},
 	"Panner3D": {
 		"positionX": 0,
 		"positionY": 0,
@@ -135,6 +131,10 @@
 	"Solo": {
 		"solo": false
 	},
+	"Volume": {
+		"volume": 0,
+		"mute": false
+	},
 	"Waveform": {
 		"size": 1024
 	},
@@ -150,10 +150,6 @@
 		"min": 0,
 		"max": 1,
 		"integer": false
-	},
-	"Master": {
-		"volume": 0,
-		"mute": false
 	},
 	"Buffer": {
 		"url": "undefined",
@@ -194,6 +190,10 @@
 		"upY": 1,
 		"upZ": 0
 	},
+	"Master": {
+		"volume": 0,
+		"mute": false
+	},
 	"Param": {
 		"units": "Tone.Type.Default",
 		"convert": true,
@@ -230,12 +230,6 @@
 			"rolloff": -12,
 			"Q": 1
 		}
-	},
-	"Effect": {
-		"wet": 1
-	},
-	"FeedbackEffect": {
-		"feedback": 0.125
 	},
 	"AutoPanner": {
 		"frequency": 1,
@@ -274,9 +268,15 @@
 		"distortion": 0.4,
 		"oversample": "none"
 	},
+	"Effect": {
+		"wet": 1
+	},
 	"FeedbackDelay": {
 		"delayTime": 0.25,
 		"maxDelay": 1
+	},
+	"FeedbackEffect": {
+		"feedback": 0.125
 	},
 	"Freeverb": {
 		"roomSize": 0.7,
