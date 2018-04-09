@@ -1554,29 +1554,6 @@
 		],
 		"extends": "Tone"
 	},
-	"Loop": {
-		"description": "Tone.Loop creates a looped callback at the \n        specified interval. The callback can be \n        started, stopped and scheduled along\n        the Transport's timeline.",
-		"params": [
-			{
-				"type": [
-					"function"
-				],
-				"description": "The callback to invoke with the event.",
-				"name": "callback"
-			},
-			{
-				"type": [
-					"Time"
-				],
-				"description": "The time between successive callback calls.",
-				"name": "interval"
-			}
-		],
-		"examples": [
-			"var loop = new Tone.Loop(function(time){\n\t//triggered every eighth note. \n\tconsole.log(time);\n}, \"8n\").start(0);\nTone.Transport.start();\n "
-		],
-		"extends": "Tone"
-	},
 	"Part": {
 		"description": "Tone.Part is a collection Tone.Events which can be\n        started/stopped and looped as a single unit.",
 		"params": [
@@ -1654,6 +1631,29 @@
 			"var seq = new Tone.Sequence(function(time, note){\n\tconsole.log(note);\n//subdivisions are given as subarrays\n}, [\"C4\", [\"E4\", \"D4\", \"E4\"], \"G4\", [\"A4\", \"G4\"]]);"
 		],
 		"extends": "Tone.Part"
+	},
+	"Loop": {
+		"description": "Tone.Loop creates a looped callback at the \n        specified interval. The callback can be \n        started, stopped and scheduled along\n        the Transport's timeline.",
+		"params": [
+			{
+				"type": [
+					"function"
+				],
+				"description": "The callback to invoke with the event.",
+				"name": "callback"
+			},
+			{
+				"type": [
+					"Time"
+				],
+				"description": "The time between successive callback calls.",
+				"name": "interval"
+			}
+		],
+		"examples": [
+			"var loop = new Tone.Loop(function(time){\n\t//triggered every eighth note. \n\tconsole.log(time);\n}, \"8n\").start(0);\nTone.Transport.start();\n "
+		],
+		"extends": "Tone"
 	},
 	"AMSynth": {
 		"description": "AMSynth uses the output of one Tone.Synth to modulate the\n         amplitude of another Tone.Synth. The harmonicity (the ratio between\n         the two signals) affects the timbre of the output signal greatly.\n         Read more about Amplitude Modulation Synthesis on\n         [SoundOnSound](https://web.archive.org/web/20160404103653/http://www.soundonsound.com:80/sos/mar00/articles/synthsecrets.htm).\n         <img src=\"https://docs.google.com/drawings/d/1TQu8Ed4iFr1YTLKpB3U1_hur-UwBrh5gdBXc8BxfGKw/pub?w=1009&h=457\">",

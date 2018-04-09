@@ -88,10 +88,10 @@
 	],
 	"event": [
 		"Event",
-		"Loop",
 		"Part",
 		"Pattern",
-		"Sequence"
+		"Sequence",
+		"Loop"
 	],
 	"instrument": [
 		"AMSynth",

@@ -10940,87 +10940,6 @@
 			"lineno": "Tone/event/Event.js#L427"
 		}
 	],
-	"Loop": [
-		{
-			"description": "Start the loop at the specified time along the Transport's\n timeline.",
-			"params": [
-				{
-					"type": [
-						"TimelinePosition"
-					],
-					"optional": true,
-					"description": "When to start the Loop.",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Loop"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "start",
-			"lineno": "Tone/event/Loop.js#L66"
-		},
-		{
-			"description": "Stop the loop at the given time.",
-			"params": [
-				{
-					"type": [
-						"TimelinePosition"
-					],
-					"optional": true,
-					"description": "When to stop the Arpeggio",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Loop"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "stop",
-			"lineno": "Tone/event/Loop.js#L76"
-		},
-		{
-			"description": "Cancel all scheduled events greater than or equal to the given time",
-			"params": [
-				{
-					"type": [
-						"TimelinePosition"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "The time after which events will be cancel.",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Loop"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "cancel",
-			"lineno": "Tone/event/Loop.js#L86"
-		},
-		{
-			"description": "Clean up",
-			"returns": {
-				"type": [
-					"Tone.Loop"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/event/Loop.js#L234"
-		}
-	],
 	"Part": [
 		{
 			"description": "Start the part at the given time.",
@@ -11466,6 +11385,87 @@
 			"name": "cancel",
 			"lineno": "Tone/event/Part.js#L303",
 			"inherits": "Tone.Part"
+		}
+	],
+	"Loop": [
+		{
+			"description": "Start the loop at the specified time along the Transport's\n timeline.",
+			"params": [
+				{
+					"type": [
+						"TimelinePosition"
+					],
+					"optional": true,
+					"description": "When to start the Loop.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Loop"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "start",
+			"lineno": "Tone/event/Loop.js#L66"
+		},
+		{
+			"description": "Stop the loop at the given time.",
+			"params": [
+				{
+					"type": [
+						"TimelinePosition"
+					],
+					"optional": true,
+					"description": "When to stop the Arpeggio",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Loop"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "stop",
+			"lineno": "Tone/event/Loop.js#L76"
+		},
+		{
+			"description": "Cancel all scheduled events greater than or equal to the given time",
+			"params": [
+				{
+					"type": [
+						"TimelinePosition"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "The time after which events will be cancel.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Loop"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancel",
+			"lineno": "Tone/event/Loop.js#L86"
+		},
+		{
+			"description": "Clean up",
+			"returns": {
+				"type": [
+					"Tone.Loop"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/event/Loop.js#L234"
 		}
 	],
 	"AMSynth": [
