@@ -65,10 +65,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Meter": [
-		"AudioNode",
-		"Tone"
-	],
 	"MidSideCompressor": [
 		"AudioNode",
 		"Tone"
@@ -123,6 +119,10 @@
 		"Tone"
 	],
 	"Waveform": [
+		"AudioNode",
+		"Tone"
+	],
+	"Meter": [
 		"AudioNode",
 		"Tone"
 	],

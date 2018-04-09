@@ -71,9 +71,6 @@
 		"resonance": 0.5,
 		"dampening": 3000
 	},
-	"Meter": {
-		"smoothing": 0.8
-	},
 	"MidSideCompressor": {
 		"mid": {
 			"ratio": 3,
@@ -137,6 +134,9 @@
 	},
 	"Waveform": {
 		"size": 1024
+	},
+	"Meter": {
+		"smoothing": 0.8
 	},
 	"CtrlInterpolate": {
 		"index": 0,
