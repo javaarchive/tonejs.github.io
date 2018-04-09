@@ -16,7 +16,6 @@
 		"Limiter",
 		"LowpassCombFilter",
 		"Merge",
-		"Meter",
 		"MidSideCompressor",
 		"MidSideMerge",
 		"MidSideSplit",
@@ -30,7 +29,8 @@
 		"Solo",
 		"Split",
 		"Volume",
-		"Waveform"
+		"Waveform",
+		"Meter"
 	],
 	"control": [
 		"CtrlInterpolate",
