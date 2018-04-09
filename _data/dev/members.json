@@ -6402,95 +6402,6 @@
 			"lineno": "Tone/event/Event.js#L396"
 		}
 	],
-	"Loop": [
-		{
-			"description": "The callback to invoke with the next event in the pattern",
-			"type": [
-				"function"
-			],
-			"scope": "instance",
-			"name": "callback",
-			"lineno": "Tone/event/Loop.js#L38"
-		},
-		{
-			"description": "The state of the Loop, either started or stopped.",
-			"type": [
-				"String"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "state",
-			"lineno": "Tone/event/Loop.js#L100"
-		},
-		{
-			"description": "The progress of the loop as a value between 0-1. 0, when\n the loop is stopped or done iterating.",
-			"type": [
-				"NormalRange"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "progress",
-			"lineno": "Tone/event/Loop.js#L113"
-		},
-		{
-			"description": "The time between successive callbacks.",
-			"type": [
-				"Time"
-			],
-			"examples": [
-				"loop.interval = \"8n\"; //loop every 8n\n "
-			],
-			"scope": "instance",
-			"name": "interval",
-			"lineno": "Tone/event/Loop.js#L127"
-		},
-		{
-			"description": "The playback rate of the loop. The normal playback rate is 1 (no change). \n A `playbackRate` of 2 would be twice as fast.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "playbackRate",
-			"lineno": "Tone/event/Loop.js#L144"
-		},
-		{
-			"description": "Random variation +/-0.01s to the scheduled time. \n Or give it a time value which it will randomize by.",
-			"type": [
-				"Boolean",
-				"Time"
-			],
-			"scope": "instance",
-			"name": "humanize",
-			"lineno": "Tone/event/Loop.js#L160"
-		},
-		{
-			"description": "The probably of the callback being invoked.",
-			"type": [
-				"NormalRange"
-			],
-			"scope": "instance",
-			"name": "probability",
-			"lineno": "Tone/event/Loop.js#L176"
-		},
-		{
-			"description": "Muting the Loop means that no callbacks are invoked.",
-			"type": [
-				"Boolean"
-			],
-			"scope": "instance",
-			"name": "mute",
-			"lineno": "Tone/event/Loop.js#L191"
-		},
-		{
-			"description": "The number of iterations of the loop. The default\n value is Infinity (loop forever).",
-			"type": [
-				"Positive"
-			],
-			"scope": "instance",
-			"name": "iterations",
-			"lineno": "Tone/event/Loop.js#L206"
-		}
-	],
 	"Part": [
 		{
 			"description": "The probability of the notes being triggered.",
@@ -6846,6 +6757,95 @@
 			"name": "progress",
 			"lineno": "Tone/event/Event.js#L396",
 			"inherits": "Tone.Event"
+		}
+	],
+	"Loop": [
+		{
+			"description": "The callback to invoke with the next event in the pattern",
+			"type": [
+				"function"
+			],
+			"scope": "instance",
+			"name": "callback",
+			"lineno": "Tone/event/Loop.js#L38"
+		},
+		{
+			"description": "The state of the Loop, either started or stopped.",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "state",
+			"lineno": "Tone/event/Loop.js#L100"
+		},
+		{
+			"description": "The progress of the loop as a value between 0-1. 0, when\n the loop is stopped or done iterating.",
+			"type": [
+				"NormalRange"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "progress",
+			"lineno": "Tone/event/Loop.js#L113"
+		},
+		{
+			"description": "The time between successive callbacks.",
+			"type": [
+				"Time"
+			],
+			"examples": [
+				"loop.interval = \"8n\"; //loop every 8n\n "
+			],
+			"scope": "instance",
+			"name": "interval",
+			"lineno": "Tone/event/Loop.js#L127"
+		},
+		{
+			"description": "The playback rate of the loop. The normal playback rate is 1 (no change). \n A `playbackRate` of 2 would be twice as fast.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "playbackRate",
+			"lineno": "Tone/event/Loop.js#L144"
+		},
+		{
+			"description": "Random variation +/-0.01s to the scheduled time. \n Or give it a time value which it will randomize by.",
+			"type": [
+				"Boolean",
+				"Time"
+			],
+			"scope": "instance",
+			"name": "humanize",
+			"lineno": "Tone/event/Loop.js#L160"
+		},
+		{
+			"description": "The probably of the callback being invoked.",
+			"type": [
+				"NormalRange"
+			],
+			"scope": "instance",
+			"name": "probability",
+			"lineno": "Tone/event/Loop.js#L176"
+		},
+		{
+			"description": "Muting the Loop means that no callbacks are invoked.",
+			"type": [
+				"Boolean"
+			],
+			"scope": "instance",
+			"name": "mute",
+			"lineno": "Tone/event/Loop.js#L191"
+		},
+		{
+			"description": "The number of iterations of the loop. The default\n value is Infinity (loop forever).",
+			"type": [
+				"Positive"
+			],
+			"scope": "instance",
+			"name": "iterations",
+			"lineno": "Tone/event/Loop.js#L206"
 		}
 	],
 	"AMSynth": [

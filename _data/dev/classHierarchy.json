@@ -336,9 +336,6 @@
 	"Event": [
 		"Tone"
 	],
-	"Loop": [
-		"Tone"
-	],
 	"Part": [
 		"Event",
 		"Tone"
@@ -350,6 +347,9 @@
 	"Sequence": [
 		"Part",
 		"Event",
+		"Tone"
+	],
+	"Loop": [
 		"Tone"
 	],
 	"AMSynth": [

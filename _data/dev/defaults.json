@@ -332,14 +332,6 @@
 		"mute": false,
 		"humanize": false
 	},
-	"Loop": {
-		"interval": "4n",
-		"callback": "Tone.noOp",
-		"playbackRate": 1,
-		"iterations": "Infinity",
-		"probability": true,
-		"mute": false
-	},
 	"Part": {
 		"callback": "Tone.noOp",
 		"loop": false,
@@ -358,6 +350,14 @@
 	},
 	"Sequence": {
 		"subdivision": "4n"
+	},
+	"Loop": {
+		"interval": "4n",
+		"callback": "Tone.noOp",
+		"playbackRate": 1,
+		"iterations": "Infinity",
+		"probability": true,
+		"mute": false
 	},
 	"AMSynth": {
 		"harmonicity": 3,
