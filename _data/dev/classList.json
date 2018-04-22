@@ -43,7 +43,6 @@
 		"Buffer",
 		"Buffers",
 		"Clock",
-		"Context",
 		"Delay",
 		"Draw",
 		"Emitter",
@@ -58,6 +57,7 @@
 		"Transport",
 		"TransportEvent",
 		"TransportRepeatEvent",
+		"Context",
 		"Tone"
 	],
 	"effect": [
