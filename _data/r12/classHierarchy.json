@@ -151,10 +151,6 @@
 		"Emitter",
 		"Tone"
 	],
-	"Context": [
-		"Emitter",
-		"Tone"
-	],
 	"Delay": [
 		"Tone"
 	],
@@ -201,6 +197,10 @@
 	],
 	"TransportRepeatEvent": [
 		"TransportEvent",
+		"Tone"
+	],
+	"Context": [
+		"Emitter",
 		"Tone"
 	],
 	"AutoFilter": [
