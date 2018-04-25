@@ -1807,38 +1807,6 @@
 		],
 		"extends": "Tone.Instrument"
 	},
-	"Sampler": {
-		"description": "Automatically interpolates between a set of pitched samples. Pass in an object which maps the note's pitch or midi value to the url, then you can trigger the attack and release of that note like other instruments. By automatically repitching the samples, it is possible to play pitches which were not explicitly included which can save loading time.\n       For sample or buffer playback where repitching is not necessary, use [Tone.Player](https://tonejs.github.io/docs/Player).",
-		"params": [
-			{
-				"type": [
-					"Object"
-				],
-				"description": "An object of samples mapping either Midi\n                        Note Numbers or Scientific Pitch Notation\n                        to the url of that sample.",
-				"name": "samples"
-			},
-			{
-				"type": [
-					"function"
-				],
-				"optional": true,
-				"description": "The callback to invoke when all of the samples are loaded.",
-				"name": "onload"
-			},
-			{
-				"type": [
-					"String"
-				],
-				"optional": true,
-				"description": "The root URL of all of the samples, which is prepended to all the URLs.",
-				"name": "baseUrl"
-			}
-		],
-		"examples": [
-			"var sampler = new Tone.Sampler({\n\t\"C3\" : \"path/to/C3.mp3\",\n\t\"D#3\" : \"path/to/Dsharp3.mp3\",\n\t\"F#3\" : \"path/to/Fsharp3.mp3\",\n\t\"A3\" : \"path/to/A3.mp3\",\n}, function(){\n\t//sampler will repitch the closest sample\n\tsampler.triggerAttack(\"D3\")\n})"
-		],
-		"extends": "Tone.Instrument"
-	},
 	"Synth": {
 		"description": "Tone.Synth is composed simply of a Tone.OmniOscillator\n         routed through a Tone.AmplitudeEnvelope.\n         <img src=\"https://docs.google.com/drawings/d/1-1_0YW2Z1J2EPI36P8fNCMcZG7N1w1GZluPs4og4evo/pub?w=1163&h=231\">",
 		"params": [
@@ -1870,6 +1838,38 @@
 		],
 		"examples": [
 			"var noiseSynth = new Tone.NoiseSynth().toMaster();\nnoiseSynth.triggerAttackRelease(\"8n\");"
+		],
+		"extends": "Tone.Instrument"
+	},
+	"Sampler": {
+		"description": "Automatically interpolates between a set of pitched samples. Pass in an object which maps the note's pitch or midi value to the url, then you can trigger the attack and release of that note like other instruments. By automatically repitching the samples, it is possible to play pitches which were not explicitly included which can save loading time.\n       For sample or buffer playback where repitching is not necessary, use [Tone.Player](https://tonejs.github.io/docs/Player).",
+		"params": [
+			{
+				"type": [
+					"Object"
+				],
+				"description": "An object of samples mapping either Midi\n                        Note Numbers or Scientific Pitch Notation\n                        to the url of that sample.",
+				"name": "samples"
+			},
+			{
+				"type": [
+					"function"
+				],
+				"optional": true,
+				"description": "The callback to invoke when all of the samples are loaded.",
+				"name": "onload"
+			},
+			{
+				"type": [
+					"String"
+				],
+				"optional": true,
+				"description": "The root URL of all of the samples, which is prepended to all the URLs.",
+				"name": "baseUrl"
+			}
+		],
+		"examples": [
+			"var sampler = new Tone.Sampler({\n\t\"C3\" : \"path/to/C3.mp3\",\n\t\"D#3\" : \"path/to/Dsharp3.mp3\",\n\t\"F#3\" : \"path/to/Fsharp3.mp3\",\n\t\"A3\" : \"path/to/A3.mp3\",\n}, function(){\n\t//sampler will repitch the closest sample\n\tsampler.triggerAttack(\"D3\")\n})"
 		],
 		"extends": "Tone.Instrument"
 	},
@@ -2215,27 +2215,6 @@
 		],
 		"extends": "Tone.Oscillator"
 	},
-	"BufferSource": {
-		"description": "Wrapper around the native BufferSourceNode.",
-		"params": [
-			{
-				"type": [
-					"AudioBuffer",
-					"Tone.Buffer"
-				],
-				"description": "The buffer to play",
-				"name": "buffer"
-			},
-			{
-				"type": [
-					"function"
-				],
-				"description": "The callback to invoke when the\n                              buffer is done playing.",
-				"name": "onload"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
 	"FMOscillator": {
 		"description": "Tone.FMOscillator",
 		"params": [
@@ -2531,6 +2510,27 @@
 		],
 		"examples": [
 			"//list the inputs and open the third one\nvar motu = new Tone.UserMedia();\n\n//opening the input asks the user to activate their mic\nmotu.open().then(function(){\n\t//promise resolves when input is available\n});"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"BufferSource": {
+		"description": "Wrapper around the native BufferSourceNode.",
+		"params": [
+			{
+				"type": [
+					"AudioBuffer",
+					"Tone.Buffer"
+				],
+				"description": "The buffer to play",
+				"name": "buffer"
+			},
+			{
+				"type": [
+					"function"
+				],
+				"description": "The callback to invoke when the\n                              buffer is done playing.",
+				"name": "onload"
+			}
 		],
 		"extends": "Tone.AudioNode"
 	},

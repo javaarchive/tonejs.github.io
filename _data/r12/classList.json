@@ -104,9 +104,9 @@
 		"Monophonic",
 		"PluckSynth",
 		"PolySynth",
-		"Sampler",
 		"Synth",
-		"NoiseSynth"
+		"NoiseSynth",
+		"Sampler"
 	],
 	"signal": [
 		"Abs",
@@ -133,7 +133,6 @@
 	],
 	"source": [
 		"AMOscillator",
-		"BufferSource",
 		"FMOscillator",
 		"FatOscillator",
 		"GrainPlayer",
@@ -147,7 +146,8 @@
 		"PulseOscillator",
 		"Source",
 		"TickSource",
-		"UserMedia"
+		"UserMedia",
+		"BufferSource"
 	],
 	"type": [
 		"Frequency",

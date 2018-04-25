@@ -405,11 +405,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Sampler": [
-		"Instrument",
-		"AudioNode",
-		"Tone"
-	],
 	"Synth": [
 		"Monophonic",
 		"Instrument",
@@ -417,6 +412,11 @@
 		"Tone"
 	],
 	"NoiseSynth": [
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
+	"Sampler": [
 		"Instrument",
 		"AudioNode",
 		"Tone"
@@ -523,10 +523,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"BufferSource": [
-		"AudioNode",
-		"Tone"
-	],
 	"FMOscillator": [
 		"Source",
 		"AudioNode",
@@ -588,6 +584,10 @@
 		"Tone"
 	],
 	"UserMedia": [
+		"AudioNode",
+		"Tone"
+	],
+	"BufferSource": [
 		"AudioNode",
 		"Tone"
 	],
