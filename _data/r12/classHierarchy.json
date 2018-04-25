@@ -151,9 +151,6 @@
 	"Delay": [
 		"Tone"
 	],
-	"Draw": [
-		"Tone"
-	],
 	"Emitter": [
 		"Tone"
 	],
@@ -197,6 +194,9 @@
 	],
 	"Context": [
 		"Emitter",
+		"Tone"
+	],
+	"Draw": [
 		"Tone"
 	],
 	"Param": [

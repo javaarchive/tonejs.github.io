@@ -4868,58 +4868,6 @@
 			"lineno": "Tone/core/Delay.js#L74"
 		}
 	],
-	"Draw": [
-		{
-			"description": "Schedule a function at the given time to be invoked\n on the nearest animation frame.",
-			"params": [
-				{
-					"type": [
-						"function"
-					],
-					"description": "Callback is invoked at the given time.",
-					"name": "callback"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The time relative to the AudioContext time\n                             to invoke the callback.",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Draw"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "schedule",
-			"lineno": "Tone/core/Draw.js#L68"
-		},
-		{
-			"description": "Cancel events scheduled after the given time",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"description": "Time after which scheduled events will \n                         be removed from the scheduling timeline.",
-					"name": "after"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Draw"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "cancel",
-			"lineno": "Tone/core/Draw.js#L86"
-		}
-	],
 	"Emitter": [
 		{
 			"description": "Bind a callback to a specific event.",
@@ -7583,6 +7531,58 @@
 			"name": "emit",
 			"lineno": "Tone/core/Emitter.js#L98",
 			"inherits": "Tone.Emitter"
+		}
+	],
+	"Draw": [
+		{
+			"description": "Schedule a function at the given time to be invoked\n on the nearest animation frame.",
+			"params": [
+				{
+					"type": [
+						"function"
+					],
+					"description": "Callback is invoked at the given time.",
+					"name": "callback"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time relative to the AudioContext time\n                             to invoke the callback.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Draw"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "schedule",
+			"lineno": "Tone/core/Draw.js#L68"
+		},
+		{
+			"description": "Cancel events scheduled after the given time",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"description": "Time after which scheduled events will \n                         be removed from the scheduling timeline.",
+					"name": "after"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Draw"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancel",
+			"lineno": "Tone/core/Draw.js#L86"
 		}
 	],
 	"Param": [

@@ -3410,26 +3410,6 @@
 			"lineno": "Tone/core/Delay.js#L57"
 		}
 	],
-	"Draw": [
-		{
-			"description": "The duration after which events are not invoked.",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "expiration",
-			"lineno": "Tone/core/Draw.js#L39"
-		},
-		{
-			"description": "The amount of time before the scheduled time \n that the callback can be invoked. Default is\n half the time of an animation frame (0.008 seconds).",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "anticipation",
-			"lineno": "Tone/core/Draw.js#L48"
-		}
-	],
 	"Gain": [
 		{
 			"description": "The gain parameter of the gain node.",
@@ -3850,6 +3830,26 @@
 			"scope": "instance",
 			"name": "latencyHint",
 			"lineno": "Tone/core/Context.js#L265"
+		}
+	],
+	"Draw": [
+		{
+			"description": "The duration after which events are not invoked.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "expiration",
+			"lineno": "Tone/core/Draw.js#L39"
+		},
+		{
+			"description": "The amount of time before the scheduled time \n that the callback can be invoked. Default is\n half the time of an animation frame (0.008 seconds).",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "anticipation",
+			"lineno": "Tone/core/Draw.js#L48"
 		}
 	],
 	"Param": [
