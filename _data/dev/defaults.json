@@ -517,12 +517,6 @@
 		"detune": 0,
 		"voice": "Tone.Synth"
 	},
-	"Sampler": {
-		"attack": 0,
-		"release": 0.1,
-		"onload": "Tone.noOp",
-		"baseUrl": ""
-	},
 	"Synth": {
 		"oscillator": {
 			"type": "triangle"
@@ -544,6 +538,12 @@
 			"sustain": 0
 		}
 	},
+	"Sampler": {
+		"attack": 0,
+		"release": 0.1,
+		"onload": "Tone.noOp",
+		"baseUrl": ""
+	},
 	"Signal": {
 		"value": 0,
 		"units": "Tone.Type.Default",
@@ -555,17 +555,6 @@
 		"phase": 0,
 		"modulationType": "square",
 		"harmonicity": 1
-	},
-	"BufferSource": {
-		"onended": "Tone.noOp",
-		"onload": "Tone.noOp",
-		"loop": false,
-		"loopStart": 0,
-		"loopEnd": 0,
-		"fadeIn": 0,
-		"fadeOut": 0,
-		"curve": "linear",
-		"playbackRate": 1
 	},
 	"FMOscillator": {
 		"frequency": 440,
@@ -658,5 +647,16 @@
 	"UserMedia": {
 		"volume": 0,
 		"mute": false
+	},
+	"BufferSource": {
+		"onended": "Tone.noOp",
+		"onload": "Tone.noOp",
+		"loop": false,
+		"loopStart": 0,
+		"loopEnd": 0,
+		"fadeIn": 0,
+		"fadeOut": 0,
+		"curve": "linear",
+		"playbackRate": 1
 	}
 }
