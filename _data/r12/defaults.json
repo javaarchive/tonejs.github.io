@@ -188,11 +188,6 @@
 		"volume": 0,
 		"mute": false
 	},
-	"Param": {
-		"units": "Tone.Type.Default",
-		"convert": true,
-		"param": "undefined"
-	},
 	"Timeline": {
 		"memory": "Infinity"
 	},
@@ -218,6 +213,11 @@
 		"latencyHint": "interactive",
 		"lookAhead": 0.1,
 		"updateInterval": 0.03
+	},
+	"Param": {
+		"units": "Tone.Type.Default",
+		"convert": true,
+		"param": "undefined"
 	},
 	"AutoFilter": {
 		"frequency": 1,

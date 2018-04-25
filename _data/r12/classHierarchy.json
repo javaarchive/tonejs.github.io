@@ -138,9 +138,6 @@
 	"CtrlRandom": [
 		"Tone"
 	],
-	"AudioNode": [
-		"Tone"
-	],
 	"Buffer": [
 		"Tone"
 	],
@@ -177,10 +174,6 @@
 		"Emitter",
 		"Tone"
 	],
-	"Param": [
-		"AudioNode",
-		"Tone"
-	],
 	"Timeline": [
 		"Tone"
 	],
@@ -199,8 +192,15 @@
 		"TransportEvent",
 		"Tone"
 	],
+	"AudioNode": [
+		"Tone"
+	],
 	"Context": [
 		"Emitter",
+		"Tone"
+	],
+	"Param": [
+		"AudioNode",
 		"Tone"
 	],
 	"AutoFilter": [
@@ -600,6 +600,11 @@
 		"TimeBase",
 		"Tone"
 	],
+	"TransportTime": [
+		"Time",
+		"TimeBase",
+		"Tone"
+	],
 	"Ticks": [
 		"TransportTime",
 		"Time",
@@ -611,11 +616,6 @@
 		"Tone"
 	],
 	"TimeBase": [
-		"Tone"
-	],
-	"TransportTime": [
-		"Time",
-		"TimeBase",
 		"Tone"
 	]
 }
