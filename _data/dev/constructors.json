@@ -1762,23 +1762,6 @@
 		"description": "This is an abstract base class for other monophonic instruments to \n         extend. IMPORTANT: It does not make any sound on its own and\n         shouldn't be directly instantiated.",
 		"extends": "Tone.Instrument"
 	},
-	"NoiseSynth": {
-		"description": "Tone.NoiseSynth is composed of a noise generator (Tone.Noise), one filter (Tone.Filter),\n         and two envelopes (Tone.Envelop). One envelope controls the amplitude\n         of the noise and the other is controls the cutoff frequency of the filter.\n         <img src=\"https://docs.google.com/drawings/d/1rqzuX9rBlhT50MRvD2TKml9bnZhcZmzXF1rf_o7vdnE/pub?w=918&h=242\">",
-		"params": [
-			{
-				"type": [
-					"Object"
-				],
-				"optional": true,
-				"description": "the options available for the synth\n                         see defaults below",
-				"name": "options"
-			}
-		],
-		"examples": [
-			"var noiseSynth = new Tone.NoiseSynth().toMaster();\nnoiseSynth.triggerAttackRelease(\"8n\");"
-		],
-		"extends": "Tone.Instrument"
-	},
 	"PluckSynth": {
 		"description": "Karplus-String string synthesis. Often out of tune.\n        Will change when the AudioWorkerNode is available across\n        browsers.",
 		"params": [
@@ -1872,6 +1855,23 @@
 			"var synth = new Tone.Synth().toMaster();\nsynth.triggerAttackRelease(\"C4\", \"8n\");"
 		],
 		"extends": "Tone.Monophonic"
+	},
+	"NoiseSynth": {
+		"description": "Tone.NoiseSynth is composed of a noise generator (Tone.Noise), one filter (Tone.Filter),\n         and two envelopes (Tone.Envelop). One envelope controls the amplitude\n         of the noise and the other is controls the cutoff frequency of the filter.\n         <img src=\"https://docs.google.com/drawings/d/1rqzuX9rBlhT50MRvD2TKml9bnZhcZmzXF1rf_o7vdnE/pub?w=918&h=242\">",
+		"params": [
+			{
+				"type": [
+					"Object"
+				],
+				"optional": true,
+				"description": "the options available for the synth\n                         see defaults below",
+				"name": "options"
+			}
+		],
+		"examples": [
+			"var noiseSynth = new Tone.NoiseSynth().toMaster();\nnoiseSynth.triggerAttackRelease(\"8n\");"
+		],
+		"extends": "Tone.Instrument"
 	},
 	"Abs": {
 		"description": "Return the absolute value of an incoming signal.",

@@ -102,11 +102,11 @@
 		"MetalSynth",
 		"MonoSynth",
 		"Monophonic",
-		"NoiseSynth",
 		"PluckSynth",
 		"PolySynth",
 		"Sampler",
-		"Synth"
+		"Synth",
+		"NoiseSynth"
 	],
 	"signal": [
 		"Abs",
