@@ -765,20 +765,6 @@
 		],
 		"extends": "Tone"
 	},
-	"AudioNode": {
-		"description": "Tone.AudioNode is the base class for classes which process audio.\n        AudioNodes have inputs and outputs.",
-		"params": [
-			{
-				"type": [
-					"AudioContext"
-				],
-				"optional": true,
-				"description": "The audio context to use with the class",
-				"name": "context"
-			}
-		],
-		"extends": "Tone"
-	},
 	"Buffer": {
 		"description": "Buffer loading and storage. Tone.Buffer is used internally by all\n         classes that make requests for audio files such as Tone.Player,\n         Tone.Sampler and Tone.Convolver.\n\n         Aside from load callbacks from individual buffers, Tone.Buffer\n \t\tprovides events which keep track of the loading progress\n \t\tof _all_ of the buffers. These are Tone.Buffer.on(\"load\" / \"progress\" / \"error\")",
 		"params": [
@@ -962,33 +948,6 @@
 		],
 		"extends": "Tone.Context"
 	},
-	"Param": {
-		"description": "Tone.Param wraps the native Web Audio's AudioParam to provide\n        additional unit conversion functionality. It also\n        serves as a base-class for classes which have a single,\n        automatable parameter.",
-		"params": [
-			{
-				"type": [
-					"AudioParam"
-				],
-				"description": "The parameter to wrap.",
-				"name": "param"
-			},
-			{
-				"type": [
-					"Tone.Type"
-				],
-				"description": "The units of the audio param.",
-				"name": "units"
-			},
-			{
-				"type": [
-					"Boolean"
-				],
-				"description": "If the param should be converted.",
-				"name": "convert"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
 	"Timeline": {
 		"description": "A Timeline class for scheduling and maintaining state\n        along a timeline. All events must have a \"time\" property.\n        Internally, events are stored in time order for fast\n        retrieval.",
 		"params": [
@@ -1050,6 +1009,20 @@
 		],
 		"extends": "Tone.TransportEvent"
 	},
+	"AudioNode": {
+		"description": "Tone.AudioNode is the base class for classes which process audio.\n        AudioNodes have inputs and outputs.",
+		"params": [
+			{
+				"type": [
+					"AudioContext"
+				],
+				"optional": true,
+				"description": "The audio context to use with the class",
+				"name": "context"
+			}
+		],
+		"extends": "Tone"
+	},
 	"Context": {
 		"description": "Wrapper around the native AudioContext.",
 		"params": [
@@ -1063,6 +1036,33 @@
 			}
 		],
 		"extends": "Tone.Emitter"
+	},
+	"Param": {
+		"description": "Tone.Param wraps the native Web Audio's AudioParam to provide\n        additional unit conversion functionality. It also\n        serves as a base-class for classes which have a single,\n        automatable parameter.",
+		"params": [
+			{
+				"type": [
+					"AudioParam"
+				],
+				"description": "The parameter to wrap.",
+				"name": "param"
+			},
+			{
+				"type": [
+					"Tone.Type"
+				],
+				"description": "The units of the audio param.",
+				"name": "units"
+			},
+			{
+				"type": [
+					"Boolean"
+				],
+				"description": "If the param should be converted.",
+				"name": "convert"
+			}
+		],
+		"extends": "Tone.AudioNode"
 	},
 	"Tone": {
 		"description": "Tone is the base class of all other classes.",
@@ -2584,6 +2584,27 @@
 		],
 		"extends": "Tone.Frequency"
 	},
+	"TransportTime": {
+		"description": "Tone.TransportTime is a the time along the Transport's\n        timeline. It is similar to Tone.Time, but instead of evaluating\n        against the AudioContext's clock, it is evaluated against\n        the Transport's position. See [TransportTime wiki](https://github.com/Tonejs/Tone.js/wiki/TransportTime).",
+		"params": [
+			{
+				"type": [
+					"Time"
+				],
+				"description": "The time value as a number or string",
+				"name": "val"
+			},
+			{
+				"type": [
+					"String"
+				],
+				"optional": true,
+				"description": "Unit values",
+				"name": "units"
+			}
+		],
+		"extends": "Tone.Time"
+	},
 	"Ticks": {
 		"description": "Tone.Ticks is a primitive type for encoding Time values.\n        Tone.Ticks can be constructed with or without the `new` keyword. Tone.Ticks can be passed\n        into the parameter of any method which takes time as an argument.",
 		"params": [
@@ -2615,7 +2636,8 @@
 			{
 				"type": [
 					"String",
-					"Number"
+					"Number",
+					"Object"
 				],
 				"description": "The time value.",
 				"name": "val"
@@ -2641,7 +2663,7 @@
 				"type": [
 					"Time"
 				],
-				"description": "The time value as a number or string",
+				"description": "The time value as a number, string or object",
 				"name": "val"
 			},
 			{
@@ -2654,29 +2676,8 @@
 			}
 		],
 		"examples": [
-			"Tone.TimeBase(4, \"n\")\nTone.TimeBase(2, \"t\")\nTone.TimeBase(\"2t\")\nTone.TimeBase(\"2t\") + Tone.TimeBase(\"4n\");"
+			"Tone.TimeBase(4, \"n\")\nTone.TimeBase(2, \"t\")\nTone.TimeBase(\"2t\")\nTone.TimeBase({\"2t\" : 2})\nTone.TimeBase(\"2t\") + Tone.TimeBase(\"4n\");"
 		],
 		"extends": "Tone"
-	},
-	"TransportTime": {
-		"description": "Tone.TransportTime is a the time along the Transport's\n        timeline. It is similar to Tone.Time, but instead of evaluating\n        against the AudioContext's clock, it is evaluated against\n        the Transport's position. See [TransportTime wiki](https://github.com/Tonejs/Tone.js/wiki/TransportTime).",
-		"params": [
-			{
-				"type": [
-					"Time"
-				],
-				"description": "The time value as a number or string",
-				"name": "val"
-			},
-			{
-				"type": [
-					"String"
-				],
-				"optional": true,
-				"description": "Unit values",
-				"name": "units"
-			}
-		],
-		"extends": "Tone.Time"
 	}
 }
