@@ -870,14 +870,6 @@
 		],
 		"extends": "Tone"
 	},
-	"Draw": {
-		"description": "Tone.Draw is useful for synchronizing visuals and audio events.\n        Callbacks from Tone.Transport or any of the Tone.Event classes\n        always happen _before_ the scheduled time and are not synchronized\n        to the animation frame so they are not good for triggering tightly\n        synchronized visuals and sound. Tone.Draw makes it easy to schedule\n        callbacks using the AudioContext time and uses requestAnimationFrame.",
-		"examples": [
-			"Tone.Transport.schedule(function(time){\n\t//use the time argument to schedule a callback with Tone.Draw\n\tTone.Draw.schedule(function(){\n\t\t//do drawing or DOM manipulation here\n\t}, time)\n}, \"+0.5\")"
-		],
-		"singleton": true,
-		"extends": "Tone"
-	},
 	"Emitter": {
 		"description": "Tone.Emitter gives classes which extend it\n        the ability to listen for and emit events.\n        Inspiration and reference from Jerome Etienne's [MicroEvent](https://github.com/jeromeetienne/microevent.js).\n        MIT (c) 2011 Jerome Etienne.",
 		"extends": "Tone"
@@ -1036,6 +1028,14 @@
 			}
 		],
 		"extends": "Tone.Emitter"
+	},
+	"Draw": {
+		"description": "Tone.Draw is useful for synchronizing visuals and audio events.\n        Callbacks from Tone.Transport or any of the Tone.Event classes\n        always happen _before_ the scheduled time and are not synchronized\n        to the animation frame so they are not good for triggering tightly\n        synchronized visuals and sound. Tone.Draw makes it easy to schedule\n        callbacks using the AudioContext time and uses requestAnimationFrame.",
+		"examples": [
+			"Tone.Transport.schedule(function(time){\n\t//use the time argument to schedule a callback with Tone.Draw\n\tTone.Draw.schedule(function(){\n\t\t//do drawing or DOM manipulation here\n\t}, time)\n}, \"+0.5\")"
+		],
+		"singleton": true,
+		"extends": "Tone"
 	},
 	"Param": {
 		"description": "Tone.Param wraps the native Web Audio's AudioParam to provide\n        additional unit conversion functionality. It also\n        serves as a base-class for classes which have a single,\n        automatable parameter.",
