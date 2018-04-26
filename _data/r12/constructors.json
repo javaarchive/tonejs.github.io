@@ -2559,6 +2559,27 @@
 		],
 		"extends": "Tone.TimeBase"
 	},
+	"TransportTime": {
+		"description": "Tone.TransportTime is a the time along the Transport's\n        timeline. It is similar to Tone.Time, but instead of evaluating\n        against the AudioContext's clock, it is evaluated against\n        the Transport's position. See [TransportTime wiki](https://github.com/Tonejs/Tone.js/wiki/TransportTime).",
+		"params": [
+			{
+				"type": [
+					"Time"
+				],
+				"description": "The time value as a number or string",
+				"name": "val"
+			},
+			{
+				"type": [
+					"String"
+				],
+				"optional": true,
+				"description": "Unit values",
+				"name": "units"
+			}
+		],
+		"extends": "Tone.Time"
+	},
 	"Midi": {
 		"description": "Tone.Midi is a primitive type for encoding Time values.\n        Tone.Midi can be constructed with or without the `new` keyword. Tone.Midi can be passed\n        into the parameter of any method which takes time as an argument.",
 		"params": [
@@ -2583,27 +2604,6 @@
 			"var t = Tone.Midi(\"4n\");//a quarter note"
 		],
 		"extends": "Tone.Frequency"
-	},
-	"TransportTime": {
-		"description": "Tone.TransportTime is a the time along the Transport's\n        timeline. It is similar to Tone.Time, but instead of evaluating\n        against the AudioContext's clock, it is evaluated against\n        the Transport's position. See [TransportTime wiki](https://github.com/Tonejs/Tone.js/wiki/TransportTime).",
-		"params": [
-			{
-				"type": [
-					"Time"
-				],
-				"description": "The time value as a number or string",
-				"name": "val"
-			},
-			{
-				"type": [
-					"String"
-				],
-				"optional": true,
-				"description": "Unit values",
-				"name": "units"
-			}
-		],
-		"extends": "Tone.Time"
 	},
 	"Ticks": {
 		"description": "Tone.Ticks is a primitive type for encoding Time values.\n        Tone.Ticks can be constructed with or without the `new` keyword. Tone.Ticks can be passed\n        into the parameter of any method which takes time as an argument.",
