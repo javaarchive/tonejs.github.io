@@ -27824,7 +27824,7 @@
 		{
 			"description": "Return the value of the frequency as a MIDI note",
 			"examples": [
-				"Tone.Midi(60).toMidi(); //60"
+				"Tone.Midi(60).toFrequency(); //261.6255653005986"
 			],
 			"returns": {
 				"type": [
@@ -27846,7 +27846,7 @@
 				}
 			],
 			"examples": [
-				"Tone.Frequency(\"A4\").transpose(3); //\"C5\""
+				"Tone.Midi(\"A4\").transpose(3); //\"C5\""
 			],
 			"returns": {
 				"type": [
