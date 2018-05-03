@@ -623,13 +623,6 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
-	"Split": {
-		"description": "Tone.Split splits an incoming signal into left and right channels.",
-		"examples": [
-			"var split = new Tone.Split();\nstereoSignal.connect(split);"
-		],
-		"extends": "Tone.AudioNode"
-	},
 	"Volume": {
 		"description": "Tone.Volume is a simple volume node, useful for creating a volume fader.",
 		"params": [
@@ -675,6 +668,13 @@
 		],
 		"examples": [
 			"var meter = new Tone.Meter();\nvar mic = new Tone.UserMedia().open();\n//connect mic to the meter\nmic.connect(meter);\n//the current level of the mic input in decibels\nvar level = meter.getValue();"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"Split": {
+		"description": "Tone.Split splits an incoming signal into left and right channels.",
+		"examples": [
+			"var split = new Tone.Split();\nstereoSignal.connect(split);"
 		],
 		"extends": "Tone.AudioNode"
 	},

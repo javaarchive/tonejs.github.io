@@ -110,10 +110,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Split": [
-		"AudioNode",
-		"Tone"
-	],
 	"Volume": [
 		"AudioNode",
 		"Tone"
@@ -123,6 +119,10 @@
 		"Tone"
 	],
 	"Meter": [
+		"AudioNode",
+		"Tone"
+	],
+	"Split": [
 		"AudioNode",
 		"Tone"
 	],
