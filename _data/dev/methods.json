@@ -18079,7 +18079,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerRelease",
-			"lineno": "Tone/instrument/Sampler.js#L148"
+			"lineno": "Tone/instrument/Sampler.js#L153"
 		},
 		{
 			"description": "Release all currently active notes.",
@@ -18101,7 +18101,7 @@
 			},
 			"scope": "instance",
 			"name": "releaseAll",
-			"lineno": "Tone/instrument/Sampler.js#L164"
+			"lineno": "Tone/instrument/Sampler.js#L175"
 		},
 		{
 			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
@@ -18116,7 +18116,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/instrument/Sampler.js#L190"
+			"lineno": "Tone/instrument/Sampler.js#L201"
 		},
 		{
 			"description": "Invoke the attack phase, then after the duration, invoke the release.",
@@ -18161,7 +18161,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Sampler.js#L204"
+			"lineno": "Tone/instrument/Sampler.js#L215"
 		},
 		{
 			"description": "Add a note to the sampler.",
@@ -18194,7 +18194,7 @@
 			],
 			"scope": "instance",
 			"name": "add",
-			"lineno": "Tone/instrument/Sampler.js#L221"
+			"lineno": "Tone/instrument/Sampler.js#L238"
 		},
 		{
 			"description": "Clean up",
@@ -18206,7 +18206,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/Sampler.js#L251"
+			"lineno": "Tone/instrument/Sampler.js#L268"
 		},
 		{
 			"description": "Unsync the instrument from the Transport",
@@ -28065,7 +28065,7 @@
 			},
 			"scope": "instance",
 			"name": "toMidi",
-			"lineno": "Tone/type/Time.js#L148",
+			"lineno": "Tone/type/Time.js#L149",
 			"inherits": "Tone.Time"
 		},
 		{
@@ -28213,7 +28213,7 @@
 			},
 			"scope": "instance",
 			"name": "toTicks",
-			"lineno": "Tone/type/Time.js#L130"
+			"lineno": "Tone/type/Time.js#L131"
 		},
 		{
 			"description": "Return the time in seconds.",
@@ -28224,7 +28224,7 @@
 			},
 			"scope": "instance",
 			"name": "toSeconds",
-			"lineno": "Tone/type/Time.js#L140"
+			"lineno": "Tone/type/Time.js#L141"
 		},
 		{
 			"description": "Return the value as a midi note.",
@@ -28235,7 +28235,7 @@
 			},
 			"scope": "instance",
 			"name": "toMidi",
-			"lineno": "Tone/type/Time.js#L148"
+			"lineno": "Tone/type/Time.js#L149"
 		},
 		{
 			"description": "Evaluate the time value. Returns the time\n in seconds.",
@@ -28496,7 +28496,7 @@
 			},
 			"scope": "instance",
 			"name": "toTicks",
-			"lineno": "Tone/type/Time.js#L130",
+			"lineno": "Tone/type/Time.js#L131",
 			"inherits": "Tone.Time"
 		},
 		{
@@ -28508,7 +28508,7 @@
 			},
 			"scope": "instance",
 			"name": "toSeconds",
-			"lineno": "Tone/type/Time.js#L140",
+			"lineno": "Tone/type/Time.js#L141",
 			"inherits": "Tone.Time"
 		},
 		{
@@ -28520,7 +28520,7 @@
 			},
 			"scope": "instance",
 			"name": "toMidi",
-			"lineno": "Tone/type/Time.js#L148",
+			"lineno": "Tone/type/Time.js#L149",
 			"inherits": "Tone.Time"
 		},
 		{

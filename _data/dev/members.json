@@ -8380,7 +8380,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "loaded",
-			"lineno": "Tone/instrument/Sampler.js#L234"
+			"lineno": "Tone/instrument/Sampler.js#L251"
 		},
 		{
 			"description": "The volume of the output in decibels.",
