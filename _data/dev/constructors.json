@@ -656,7 +656,7 @@
 		"extends": "Tone.AudioNode"
 	},
 	"Meter": {
-		"description": "Tone.Meter gets the Peak or [RMS](https://en.wikipedia.org/wiki/Root_mean_square)\n         of an input signal with some averaging applied. It can also get the raw\n         value of the input signal.",
+		"description": "Tone.Meter gets the [RMS](https://en.wikipedia.org/wiki/Root_mean_square)\n         of an input signal. It can also get the raw\n         value of the input signal.",
 		"params": [
 			{
 				"type": [
@@ -664,18 +664,10 @@
 				],
 				"description": "The amount of smoothing applied between frames.",
 				"name": "smoothing"
-			},
-			{
-				"type": [
-					"'rms'",
-					"'peak'"
-				],
-				"description": "Calculation method of dB value, defaults to RMS",
-				"name": "type"
 			}
 		],
 		"examples": [
-			"var meter = new Tone.Meter();\nvar mic = new Tone.UserMedia().open();\n//connect mic to the meter\nmic.connect(meter);\n//the current level of the mic input in decibels\nvar level = meter.getValue();"
+			"var meter = new Tone.Meter();\nvar mic = new Tone.UserMedia().open();\n//connect mic to the meter\nmic.connect(meter);\n//the current level of the mic input in decibels\nvar level = meter.getLevel();"
 		],
 		"extends": "Tone.AudioNode"
 	},

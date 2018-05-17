@@ -136,8 +136,7 @@
 		"size": 1024
 	},
 	"Meter": {
-		"smoothing": 0.8,
-		"type": "Tone.Meter.Type.RMS"
+		"smoothing": 0.8
 	},
 	"CtrlInterpolate": {
 		"index": 0,

@@ -4677,7 +4677,7 @@
 			},
 			"scope": "instance",
 			"name": "getLevel",
-			"lineno": "Tone/component/Meter.js#L70"
+			"lineno": "Tone/component/Meter.js#L63"
 		},
 		{
 			"description": "Get the signal value of the incoming signal",
@@ -4688,47 +4688,7 @@
 			},
 			"scope": "instance",
 			"name": "getValue",
-			"lineno": "Tone/component/Meter.js#L90"
-		},
-		{
-			"description": "Gets the peak value from a Float32Array, uses absolute values so\nnegative values are counted towards the peak.",
-			"params": [
-				{
-					"type": [
-						"Float32Array"
-					],
-					"description": "Float32Array with amplitude ratio readings",
-					"name": "values"
-				}
-			],
-			"returns": {
-				"type": [
-					"Number"
-				]
-			},
-			"scope": "instance",
-			"name": "getPeakFloatValue",
-			"lineno": "Tone/component/Meter.js#L102"
-		},
-		{
-			"description": "Gets the [RMS](https://en.wikipedia.org/wiki/Root_mean_square) value from a Float32Array",
-			"params": [
-				{
-					"type": [
-						"Float32Array"
-					],
-					"description": "Float32Array with amplitude ratio readings",
-					"name": "values"
-				}
-			],
-			"returns": {
-				"type": [
-					"Number"
-				]
-			},
-			"scope": "instance",
-			"name": "getRmsFloatValue",
-			"lineno": "Tone/component/Meter.js#L119"
+			"lineno": "Tone/component/Meter.js#L83"
 		},
 		{
 			"description": "Clean up.",
@@ -4740,7 +4700,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/component/Meter.js#L166"
+			"lineno": "Tone/component/Meter.js#L92"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
@@ -5901,7 +5861,7 @@
 			},
 			"scope": "instance",
 			"name": "toSeconds",
-			"lineno": "Tone/type/Type.js#L176"
+			"lineno": "Tone/type/Type.js#L175"
 		},
 		{
 			"description": "Convert a frequency representation into a number.",
@@ -5921,7 +5881,7 @@
 			},
 			"scope": "instance",
 			"name": "toFrequency",
-			"lineno": "Tone/type/Type.js#L193"
+			"lineno": "Tone/type/Type.js#L192"
 		},
 		{
 			"description": "Convert a time representation into ticks.",
@@ -5941,7 +5901,7 @@
 			},
 			"scope": "instance",
 			"name": "toTicks",
-			"lineno": "Tone/type/Type.js#L208"
+			"lineno": "Tone/type/Type.js#L207"
 		}
 	],
 	"loaded": [

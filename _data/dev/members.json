@@ -2981,34 +2981,13 @@
 	],
 	"Meter": [
 		{
-			"description": "Calculation method used to get the dB value",
-			"type": [
-				"'rms'",
-				"'peak'"
-			],
-			"scope": "instance",
-			"name": "type",
-			"lineno": "Tone/component/Meter.js#L41"
-		},
-		{
 			"description": "A value from 0 -> 1 where 0 represents no time averaging with the last analysis frame.",
 			"type": [
 				"Number"
 			],
-			"readonly": true,
 			"scope": "instance",
 			"name": "smoothing",
-			"lineno": "Tone/component/Meter.js#L128"
-		},
-		{
-			"description": "Either 'rms' or 'peak', determines calculation method of getValue",
-			"type": [
-				"'rms'",
-				"'peak'"
-			],
-			"scope": "instance",
-			"name": "type",
-			"lineno": "Tone/component/Meter.js#L144"
+			"lineno": "Tone/component/Meter.js#L30"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
