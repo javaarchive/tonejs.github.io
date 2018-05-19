@@ -15,4 +15,4 @@ git commit -m "update data $COMMIT_MESSAGE" -m "Automated commit"
 git add ../_documentation
 git commit -m "update documentation $COMMIT_MESSAGE" -m "Automated commit"
 
-git push -f
+# git push -f

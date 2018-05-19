@@ -38,11 +38,11 @@ git add ./examples
 git commit -m "updating to latest examples $COMMIT_MESSAGE" -m "Automated commit"
 
 # and the build
-cp -a $TMP_TONE/build/. $SITE_DIR/build/
-git add ./build/
-git commit -m "updating to latest build $COMMIT_MESSAGE" -m "Automated commit"
+# cp -a $TMP_TONE/build/. $SITE_DIR/build/
+# git add ./build/
+# git commit -m "updating to latest build $COMMIT_MESSAGE" -m "Automated commit"
 
 # push the changes
-git push -f
+# git push -f
 
 rm -rf $TMP_TONE
