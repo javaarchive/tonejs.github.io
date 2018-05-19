@@ -2,6 +2,8 @@ TODO.txt
 
 _site
 
+node_modules
+
 Gemfile.lock
 
 travis/tmp
