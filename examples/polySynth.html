@@ -7,25 +7,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="icon" type="image/png" sizes="174x174" href="./style/favicon.png">
 	
-	<script type="text/javascript" src="../build/Tone.js"></script>
-	<script type="text/javascript" src="./scripts/jquery.min.js"></script>
-	<script type="text/javascript" src="./scripts/draggabilly.js"></script>
-	<script type="text/javascript" src="./scripts/StartAudioContext.js"></script>
-	<script type="text/javascript" src="./scripts/Interface.js"></script>
-	<script type="text/javascript" src="https://tonejs.github.io/Logo/build/Logo.js"></script>
-	<script type="text/javascript" src="./scripts/qwerty-hancock.js"></script>
+	<script src="../build/Tone.js"></script>
+	<script src="./scripts/jquery.min.js"></script>
+	<script src="./scripts/draggabilly.js"></script>
+	<script src="./scripts/StartAudioContext.js"></script>
+	<script src="./scripts/Interface.js"></script>
+	<script src="https://tonejs.github.io/Logo/build/Logo.js"></script>
+	<script src="./scripts/Keyboard.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="./style/examples.css">
 
-	<script type="text/javascript">
+	<script>
 		// jshint ignore: start
 	</script>
 
 </head>
 <body>	
-	<style type="text/css">
-
-	</style>
 	<div id="Content" class="FullScreen">
 		<div id="Title">PolySynth</div>
 		<div id="Explanation">
@@ -39,7 +36,7 @@
 		<div id="Keyboard"></div>
 	</div>
 
-	<script type="text/javascript">
+	<script>
 
 		var synth = new Tone.PolySynth(6, Tone.Synth, {
 			"oscillator" : {
@@ -47,33 +44,19 @@
 			}
 		}).toMaster();
 
+		// GUI //
+
+		var keyboard = Interface.Keyboard();
+
+		keyboard.keyDown = function (note) {
+		    synth.triggerAttack(note);
+		};
+
+		keyboard.keyUp = function (note) {
+		    synth.triggerRelease(note);
+		};
+
+
 	</script>
-
-	<script id="GUI" type="text/javascript">
-		$(function(){
-
-			var keyboard = new QwertyHancock({
-				id: "Keyboard",
-				width: $("#Content").width(),
-				height: 150,
-				octaves: Interface.isMobile ? 1.26 : 3,
-				startNote: "C3",
-				whiteKeyColour: "white",
-				blackKeyColour: "#7F33ED",
-				activeColour : "#ED3333"
-			});
-
-			keyboard.keyDown = function (note) {
-			    synth.triggerAttack(note);
-			};
-
-			keyboard.keyUp = function (note) {
-			    synth.triggerRelease(note);
-			};
-
-		});
-	</script>
-
-	</style>
 </body>
 </html>

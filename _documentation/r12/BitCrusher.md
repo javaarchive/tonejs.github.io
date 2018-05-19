@@ -1,0 +1,6 @@
+---
+title : BitCrusher
+version : r12
+layout : docs
+category : effect
+---

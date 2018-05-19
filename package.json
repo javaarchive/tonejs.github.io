@@ -1,0 +1,18 @@
+{
+  "name": "tonejs.github.io",
+  "version": "1.0.0",
+  "description": "Tone.js website",
+  "main": "index.md",
+  "scripts": {
+    "build": "sh update.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tonejs/Tonejs.git"
+  },
+  "author": "Yotam Mann",
+  "license": "MIT",
+  "devDependencies": {
+    "jsdoc": "^3.5.5"
+  }
+}

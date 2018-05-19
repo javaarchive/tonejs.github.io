@@ -7,17 +7,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="icon" type="image/png" sizes="174x174" href="./style/favicon.png">
 
-	<script type="text/javascript" src="../build/Tone.js"></script>
-	<script type="text/javascript" src="./scripts/jquery.min.js"></script>
-	<script type="text/javascript" src="./scripts/draggabilly.js"></script>
-	<script type="text/javascript" src="https://tonejs.github.io/Logo/build/Logo.js"></script>
-	<script type="text/javascript" src="./scripts/StartAudioContext.js"></script>
-	<script type="text/javascript" src="./scripts/Interface.js"></script>
-	<script type="text/javascript" src="./scripts/nexusUI.js"></script>
+	<script src="../build/Tone.js"></script>
+	<script src="./scripts/jquery.min.js"></script>
+	<script src="./scripts/draggabilly.js"></script>
+	<script src="https://tonejs.github.io/Logo/build/Logo.js"></script>
+	<script src="./scripts/StartAudioContext.js"></script>
+	<script src="./scripts/Interface.js"></script>
+	<script src="./scripts/nexusUI.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="./style/examples.css">
 
-	<script type="text/javascript">
+	<script>
 		// jshint ignore: start
 	</script>
 
@@ -36,17 +36,16 @@
 		</div>
 		<canvas nx="matrix"></canvas>
 	</div>	
-	<script type="text/javascript">
+	<script>
 		//setup a polyphonic sampler
-		var keys = new Tone.MultiPlayer({
-			urls : {
-				"A" : "./audio/casio/A1.mp3",
-				"C#" : "./audio/casio/Cs2.mp3",
-				"E" : "./audio/casio/E2.mp3",
-				"F#" : "./audio/casio/Fs2.mp3",
-			},
-			volume : -10,
-			fadeOut : 0.1,
+		var keys = new Tone.Players({
+			"A" : "./audio/casio/A1.[mp3|ogg]",
+			"C#" : "./audio/casio/Cs2.[mp3|ogg]",
+			"E" : "./audio/casio/E2.[mp3|ogg]",
+			"F#" : "./audio/casio/Fs2.[mp3|ogg]",
+		}, {
+			"volume" : -10,
+			"fadeOut" : "64n",
 		}).toMaster();
 
 		//the notes
@@ -58,15 +57,15 @@
 				if (column[i] === 1){
 					//slightly randomized velocities
 					var vel = Math.random() * 0.5 + 0.5;
-					keys.start(noteNames[i], time, 0, "32n", 0, vel);
+					keys.get(noteNames[i]).start(time, 0, "32n", 0, vel);
 				}
 			}
 		}, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], "16n");
 
 		Tone.Transport.start();
 
-	</script>
-	<script type="text/javascript">
+		// GUI //
+
 		nx.onload = function(){
 			nx.colorize("#f5871f");
 			
@@ -76,38 +75,36 @@
 			matrix1.draw();
 		}
 
-		$(function(){
-
-			new Interface.Slider({
-				name : "BPM",
-				min : 80,
-				max : 200,
-				value : Tone.Transport.bpm.value,
-				drag : function(val){
-					Tone.Transport.bpm.value = val;
-				}
-			});
-
-			new Interface.Button({
-				text : "Start",
-				activeText : "Stop",
-				type : "toggle",
-				key : 32, //spacebar
-				start : function(){
-					loop.start();
-				},
-				end : function(){
-					loop.stop();
-				},
-			});
-
-			Interface.Loader();
-
-			$(window).on("resize", function(){
-				matrix1.resize($("#Content").width(), 250);
-				matrix1.draw();	
-			});
+		Interface.Slider({
+			name : "BPM",
+			min : 80,
+			max : 200,
+			value : Tone.Transport.bpm.value,
+			drag : function(val){
+				Tone.Transport.bpm.value = val;
+			}
 		});
+
+		Interface.Button({
+			text : "Start",
+			activeText : "Stop",
+			type : "toggle",
+			key : 32, //spacebar
+			start : function(){
+				loop.start();
+			},
+			end : function(){
+				loop.stop();
+			},
+		});
+
+		Interface.Loader();
+
+		$(window).on("resize", function(){
+			matrix1.resize($("#Content").width(), 250);
+			matrix1.draw();	
+		});
+
 	</script>
 </body>
 </html>

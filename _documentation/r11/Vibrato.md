@@ -1,0 +1,6 @@
+---
+title : Vibrato
+version : r11
+layout : docs
+category : effect
+---

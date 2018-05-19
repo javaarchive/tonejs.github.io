@@ -1,0 +1,4 @@
+---
+title : Min
+layout : forward
+---

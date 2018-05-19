@@ -7,17 +7,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="icon" type="image/png" sizes="174x174" href="./style/favicon.png">
 	
-	<script type="text/javascript" src="../build/Tone.js"></script>
-	<script type="text/javascript" src="./scripts/jquery.min.js"></script>
-	<script type="text/javascript" src="./scripts/draggabilly.js"></script>
-	<script type="text/javascript" src="./scripts/StartAudioContext.js"></script>
-	<script type="text/javascript" src="./scripts/Interface.js"></script>
-	<script type="text/javascript" src="https://tonejs.github.io/Logo/build/Logo.js"></script>
-	<script type="text/javascript" src="./scripts/qwerty-hancock.js"></script>
+	<script src="../build/Tone.js"></script>
+	<script src="./scripts/jquery.min.js"></script>
+	<script src="./scripts/draggabilly.js"></script>
+	<script src="./scripts/StartAudioContext.js"></script>
+	<script src="./scripts/Interface.js"></script>
+	<script src="https://tonejs.github.io/Logo/build/Logo.js"></script>
+	<script src="./scripts/Keyboard.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="./style/examples.css">
 
-	<script type="text/javascript">
+	<script>
 		// jshint ignore: start
 	</script>
 
@@ -44,53 +44,40 @@
 			<a href="https://tonejs.github.io/docs/#OmniOscillator" target="_blank">Tone.OmniOscillator</a>
 			routed through a 
 			<a href="https://tonejs.github.io/docs/#AmplitudeEnvelope" target="_blank">Tone.AmplitudeEnvelope</a>.
-			<img src="https://docs.google.com/drawings/d/1-1_0YW2Z1J2EPI36P8fNCMcZG7N1w1GZluPs4og4evo/pub?w=1163&h=231">
 		</div>
 		<div id="Keyboard"></div>
 	</div>
 
-	<script type="text/javascript">
+	<script>
 
 		var synth = new Tone.Synth({
 			"oscillator" : {
-				"type" : "square"
+				"type" : "amtriangle",
+				"harmonicity" : 0.5,
+				"modulationType" : "sine"
 			},
 			"envelope" : {
-				"attack" : 0.01,
+				"attackCurve" : 'exponential',
+				"attack" : 0.05,
 				"decay" : 0.2,
 				"sustain" : 0.2,
-				"release" : 0.2,
-			}
+				"release" : 1.5,
+			},
+			"portamento" : 0.05
 		}).toMaster();
 
+		// GUI //
+
+		var keyboard = Interface.Keyboard();
+
+		keyboard.keyDown = function (note) {
+		    synth.triggerAttack(note);
+		};
+
+		keyboard.keyUp = function () {
+		    synth.triggerRelease();
+		};
 	</script>
 
-	<script id="GUI" type="text/javascript">
-		$(function(){
-
-			var keyboard = new QwertyHancock({
-				id: "Keyboard",
-				width: $("#Content").width(),
-				height: 150,
-				octaves: Interface.isMobile ? 1.26 : 2,
-				startNote: "C4",
-				whiteKeyColour: "white",
-				blackKeyColour: "#22DBC0",
-				hoverColour: "#1EDF3E",
-				activeColour : "#ED33CF"
-			});
-
-			keyboard.keyDown = function (note, frequency) {
-			    synth.triggerAttack(frequency);
-			};
-
-			keyboard.keyUp = function () {
-			    synth.triggerRelease();
-			};
-
-		});
-	</script>
-
-	</style>
 </body>
 </html>

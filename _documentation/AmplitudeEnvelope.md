@@ -1,0 +1,4 @@
+---
+title : AmplitudeEnvelope
+layout : forward
+---

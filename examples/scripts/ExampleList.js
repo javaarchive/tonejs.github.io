@@ -4,7 +4,8 @@ var ExampleList = {
 		"Envelope" : "envelope",
 		"Noise" : "noises",
 		"Player" : "player",
-		"Microphone" : "mic"
+		"Microphone" : "mic",
+		"Mixer" : "mixer"
 	},
 	"Instruments" : {
 		"Synth" : "simpleSynth",
@@ -14,11 +15,13 @@ var ExampleList = {
 		"FatOscillator" : "jump",
 		"MetalSynth" : "bembe",
 		"Granular Synthesis" : "grainPlayer",
+		"Sampler" : "sampler"
 	},
 	"Effects" : {
 		"LFO Effects" : "lfoEffects",
 		"PingPongDelay" : "pingPongDelay",
 		"Buses" : "buses",
+		"Reverb" : "reverb",
 		"Spatialization" : "spatialPanner"
 	},
 	"Sequencing / Timing" : {
@@ -34,11 +37,13 @@ var ExampleList = {
 		"Ramping Values" : "rampTo",
 	},
 	"Visualization" : {
-		"Envelopes": "funkyShape",
+		"Animation Sync" : "animationSync",
+		"Envelopes" : "funkyShape",
 		"Analysis" : "analysis",
 		"Meter" : "meter"
 	},
 	"Misc" : {
 		"Module Loaders" : "require",
+		"Offline Rendering" : "offline"
 	},
 };

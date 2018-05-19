@@ -1,0 +1,613 @@
+{
+	"AmplitudeEnvelope": [
+		"Envelope",
+		"AudioNode",
+		"Tone"
+	],
+	"Compressor": [
+		"AudioNode",
+		"Tone"
+	],
+	"EQ3": [
+		"AudioNode",
+		"Tone"
+	],
+	"FeedbackCombFilter": [
+		"AudioNode",
+		"Tone"
+	],
+	"Gate": [
+		"AudioNode",
+		"Tone"
+	],
+	"Limiter": [
+		"AudioNode",
+		"Tone"
+	],
+	"LowpassCombFilter": [
+		"AudioNode",
+		"Tone"
+	],
+	"Merge": [
+		"AudioNode",
+		"Tone"
+	],
+	"Meter": [
+		"AudioNode",
+		"Tone"
+	],
+	"MidSideCompressor": [
+		"AudioNode",
+		"Tone"
+	],
+	"MultibandCompressor": [
+		"AudioNode",
+		"Tone"
+	],
+	"MultibandSplit": [
+		"AudioNode",
+		"Tone"
+	],
+	"PanVol": [
+		"AudioNode",
+		"Tone"
+	],
+	"Split": [
+		"AudioNode",
+		"Tone"
+	],
+	"Volume": [
+		"AudioNode",
+		"Tone"
+	],
+	"Analyser": [
+		"AudioNode",
+		"Tone"
+	],
+	"CrossFade": [
+		"AudioNode",
+		"Tone"
+	],
+	"Envelope": [
+		"AudioNode",
+		"Tone"
+	],
+	"FFT": [
+		"AudioNode",
+		"Tone"
+	],
+	"Filter": [
+		"AudioNode",
+		"Tone"
+	],
+	"Follower": [
+		"AudioNode",
+		"Tone"
+	],
+	"FrequencyEnvelope": [
+		"Envelope",
+		"AudioNode",
+		"Tone"
+	],
+	"LFO": [
+		"AudioNode",
+		"Tone"
+	],
+	"MidSideMerge": [
+		"AudioNode",
+		"Tone"
+	],
+	"MidSideSplit": [
+		"AudioNode",
+		"Tone"
+	],
+	"Mono": [
+		"AudioNode",
+		"Tone"
+	],
+	"Panner": [
+		"AudioNode",
+		"Tone"
+	],
+	"Panner3D": [
+		"AudioNode",
+		"Tone"
+	],
+	"ScaledEnvelope": [
+		"Envelope",
+		"AudioNode",
+		"Tone"
+	],
+	"Solo": [
+		"AudioNode",
+		"Tone"
+	],
+	"Waveform": [
+		"AudioNode",
+		"Tone"
+	],
+	"CtrlInterpolate": [
+		"Tone"
+	],
+	"CtrlMarkov": [
+		"Tone"
+	],
+	"CtrlPattern": [
+		"Tone"
+	],
+	"CtrlRandom": [
+		"Tone"
+	],
+	"Master": [
+		"Tone"
+	],
+	"AudioNode": [
+		"Tone"
+	],
+	"Buffer": [
+		"Tone"
+	],
+	"Buffers": [
+		"Tone"
+	],
+	"Clock": [
+		"Emitter",
+		"Tone"
+	],
+	"Context": [
+		"Emitter",
+		"Tone"
+	],
+	"Delay": [
+		"Tone"
+	],
+	"Draw": [
+		"Tone"
+	],
+	"Emitter": [
+		"Tone"
+	],
+	"Gain": [
+		"Tone"
+	],
+	"IntervalTimeline": [
+		"Tone"
+	],
+	"Listener": [
+		"Tone"
+	],
+	"OfflineContext": [
+		"Context",
+		"Emitter",
+		"Tone"
+	],
+	"Param": [
+		"AudioNode",
+		"Tone"
+	],
+	"Timeline": [
+		"Tone"
+	],
+	"TimelineState": [
+		"Timeline",
+		"Tone"
+	],
+	"Transport": [
+		"Emitter",
+		"Tone"
+	],
+	"TransportEvent": [
+		"Tone"
+	],
+	"TransportRepeatEvent": [
+		"TransportEvent",
+		"Tone"
+	],
+	"AutoFilter": [
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"Effect": [
+		"AudioNode",
+		"Tone"
+	],
+	"FeedbackEffect": [
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"AutoPanner": [
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"AutoWah": [
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"BitCrusher": [
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"Chebyshev": [
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"Chorus": [
+		"StereoXFeedbackEffect",
+		"StereoEffect",
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"Convolver": [
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"Distortion": [
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"FeedbackDelay": [
+		"FeedbackEffect",
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"Freeverb": [
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"JCReverb": [
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"MidSideEffect": [
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"Phaser": [
+		"StereoEffect",
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"PingPongDelay": [
+		"StereoXFeedbackEffect",
+		"StereoEffect",
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"PitchShift": [
+		"FeedbackEffect",
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"StereoEffect": [
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"StereoFeedbackEffect": [
+		"StereoEffect",
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"StereoWidener": [
+		"MidSideEffect",
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"StereoXFeedbackEffect": [
+		"StereoEffect",
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"Tremolo": [
+		"StereoEffect",
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"Vibrato": [
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
+	"Event": [
+		"Tone"
+	],
+	"Loop": [
+		"Tone"
+	],
+	"Part": [
+		"Event",
+		"Tone"
+	],
+	"Pattern": [
+		"Loop",
+		"Tone"
+	],
+	"Sequence": [
+		"Part",
+		"Event",
+		"Tone"
+	],
+	"AMSynth": [
+		"Monophonic",
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
+	"DuoSynth": [
+		"Monophonic",
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
+	"FMSynth": [
+		"Monophonic",
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
+	"Instrument": [
+		"AudioNode",
+		"Tone"
+	],
+	"MembraneSynth": [
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
+	"MetalSynth": [
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
+	"MonoSynth": [
+		"Monophonic",
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
+	"Monophonic": [
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
+	"NoiseSynth": [
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
+	"PluckSynth": [
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
+	"PolySynth": [
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
+	"Sampler": [
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
+	"Synth": [
+		"Monophonic",
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
+	"Abs": [
+		"SignalBase",
+		"Tone"
+	],
+	"Add": [
+		"Signal",
+		"Param",
+		"AudioNode",
+		"Tone"
+	],
+	"AudioToGain": [
+		"SignalBase",
+		"Tone"
+	],
+	"EqualPowerGain": [
+		"SignalBase",
+		"Tone"
+	],
+	"Expr": [
+		"SignalBase",
+		"Tone"
+	],
+	"GainToAudio": [
+		"SignalBase",
+		"Tone"
+	],
+	"GreaterThan": [
+		"Signal",
+		"Param",
+		"AudioNode",
+		"Tone"
+	],
+	"GreaterThanZero": [
+		"SignalBase",
+		"Tone"
+	],
+	"Modulo": [
+		"SignalBase",
+		"Tone"
+	],
+	"Multiply": [
+		"Signal",
+		"Param",
+		"AudioNode",
+		"Tone"
+	],
+	"Negate": [
+		"SignalBase",
+		"Tone"
+	],
+	"Normalize": [
+		"SignalBase",
+		"Tone"
+	],
+	"Pow": [
+		"SignalBase",
+		"Tone"
+	],
+	"Scale": [
+		"SignalBase",
+		"Tone"
+	],
+	"ScaleExp": [
+		"SignalBase",
+		"Tone"
+	],
+	"Signal": [
+		"Param",
+		"AudioNode",
+		"Tone"
+	],
+	"SignalBase": [
+		"Tone"
+	],
+	"Subtract": [
+		"Signal",
+		"Param",
+		"AudioNode",
+		"Tone"
+	],
+	"TickSignal": [
+		"TimelineSignal",
+		"Signal",
+		"Param",
+		"AudioNode",
+		"Tone"
+	],
+	"TimelineSignal": [
+		"Signal",
+		"Param",
+		"AudioNode",
+		"Tone"
+	],
+	"TransportTimelineSignal": [
+		"TimelineSignal",
+		"Signal",
+		"Param",
+		"AudioNode",
+		"Tone"
+	],
+	"WaveShaper": [
+		"SignalBase",
+		"Tone"
+	],
+	"Zero": [
+		"SignalBase",
+		"Tone"
+	],
+	"AMOscillator": [
+		"Oscillator",
+		"Source",
+		"AudioNode",
+		"Tone"
+	],
+	"BufferSource": [
+		"AudioNode",
+		"Tone"
+	],
+	"FMOscillator": [
+		"Source",
+		"AudioNode",
+		"Tone"
+	],
+	"FatOscillator": [
+		"Source",
+		"AudioNode",
+		"Tone"
+	],
+	"GrainPlayer": [
+		"Source",
+		"AudioNode",
+		"Tone"
+	],
+	"MultiPlayer": [
+		"Tone"
+	],
+	"Noise": [
+		"Source",
+		"AudioNode",
+		"Tone"
+	],
+	"OmniOscillator": [
+		"Source",
+		"AudioNode",
+		"Tone"
+	],
+	"Oscillator": [
+		"Source",
+		"AudioNode",
+		"Tone"
+	],
+	"PWMOscillator": [
+		"Source",
+		"AudioNode",
+		"Tone"
+	],
+	"Player": [
+		"Source",
+		"AudioNode",
+		"Tone"
+	],
+	"Players": [
+		"AudioNode",
+		"Tone"
+	],
+	"PulseOscillator": [
+		"Source",
+		"AudioNode",
+		"Tone"
+	],
+	"Source": [
+		"AudioNode",
+		"Tone"
+	],
+	"UserMedia": [
+		"AudioNode",
+		"Tone"
+	],
+	"Frequency": [
+		"TimeBase",
+		"Tone"
+	],
+	"Time": [
+		"TimeBase",
+		"Tone"
+	],
+	"TimeBase": [
+		"Tone"
+	],
+	"TransportTime": [
+		"Time",
+		"TimeBase",
+		"Tone"
+	]
+}

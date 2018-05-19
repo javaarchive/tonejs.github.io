@@ -1,34 +1,43 @@
 ---
 ---
 
+@import "common.scss";
+
 #demos {
 	$break-small: 450px;
 	$small-devisor : 2;
 	$break-medium: 800px;
 	$medium-devisor : 3;
 	$large-devisor : 4;
+	$margin: 2px;
 
 	width: 100%;
-	margin-bottom : 20px;
-	display: inline-block;
+	margin-bottom: 20px;
+	top: 20px;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
 
 	.demo {
 		position: relative;
-		float: left;
 		margin: 0px;
 		overflow: hidden;
+		margin: $margin;
 
 		@media screen and (max-width: $break-small) {
-			width: calc(100% / 2);
-			padding-bottom: calc(100% / 2);
+			width: calc(100%/#{$small-devisor} - #{$margin * $small-devisor});
 		}
 		@media screen and (min-width: $break-small) and (max-width: $break-medium){
-			width: calc(100% / 3);
-			padding-bottom: calc(100% / 3);
+			width: calc(100%/#{$medium-devisor} - #{$margin * $medium-devisor});
 		}
 		@media screen and (min-width: $break-medium){
-			width: calc(100% / 5);
-			padding-bottom: calc(100% / 5);
+			width: calc(100%/#{$large-devisor} - #{$margin * $large-devisor});
+		}
+
+		&:before {
+			content: "";
+			float: left;
+			padding-top: 100%;
 		}
 
 		#title {
@@ -59,10 +68,16 @@
 			position: absolute;
 			top: 0px;
 			left: 0px;
+			width: 100%;
+			height: 100%;
 
 			img {
-				width: 100%; 
-				height: 100%;
+				object-fit: cover;
+				position: absolute;
+				width: 100%;
+			    height: 100%;
+				top: 0px;
+				left: 0px;
 			}
 		}
 
@@ -72,6 +87,21 @@
 			}
 		}
 
+
+	}
+}
+
+#submit {
+	padding: 10px;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	background-color: $purple;
+	color: white;
+
+	&:hover {
+		background-color: $lightGray;
+		color: $purple;
 	}
 }
 

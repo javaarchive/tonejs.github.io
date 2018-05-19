@@ -1,0 +1,4 @@
+---
+title : EqualPowerGain
+layout : forward
+---
