@@ -4,8 +4,7 @@
   "description": "Tone.js website",
   "main": "index.md",
   "scripts": {
-    "build": "sh update.sh",
-    "docs": "jsdocs tmp/Tone.js/Tone",
+    "build": "sh update.sh"
   },
   "repository": {
     "type": "git",
