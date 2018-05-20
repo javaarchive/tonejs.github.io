@@ -2114,10 +2114,6 @@
 		],
 		"extends": "Tone.Param"
 	},
-	"SignalBase": {
-		"description": "Base class for all Signals. Used Internally.",
-		"extends": "Tone"
-	},
 	"Subtract": {
 		"description": "Subtract the signal connected to <code>input[1]</code> from the signal connected \n        to <code>input[0]</code>. If an argument is provided in the constructor, the \n        signals <code>.value</code> will be subtracted from the incoming signal.",
 		"params": [
@@ -2184,6 +2180,10 @@
 	"Zero": {
 		"description": "Tone.Zero outputs 0's at audio-rate. The reason this has to be\n        it's own class is that many browsers optimize out Tone.Signal\n        with a value of 0 and will not process nodes further down the graph.",
 		"extends": "Tone.SignalBase"
+	},
+	"SignalBase": {
+		"description": "Base class for all Signals. Used Internally.",
+		"extends": "Tone"
 	},
 	"AMOscillator": {
 		"description": "Tone.AMOscillator",

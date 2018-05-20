@@ -488,9 +488,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"SignalBase": [
-		"Tone"
-	],
 	"Subtract": [
 		"Signal",
 		"Param",
@@ -515,6 +512,9 @@
 	],
 	"Zero": [
 		"SignalBase",
+		"Tone"
+	],
+	"SignalBase": [
 		"Tone"
 	],
 	"AMOscillator": [

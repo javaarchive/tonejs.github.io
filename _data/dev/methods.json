@@ -21490,49 +21490,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"SignalBase": [
-		{
-			"description": "When signals connect to other signals or AudioParams,\n they take over the output value of that signal or AudioParam.\n For all other nodes, the behavior is the same as a default <code>connect</code>.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"AudioNode",
-						"Tone.Signal",
-						"Tone"
-					],
-					"name": "node"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "The output number to connect from.",
-					"name": "outputNumber"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "The input number to connect to.",
-					"name": "inputNumber"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.SignalBase"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/signal/SignalBase.js#L28"
-		}
-	],
 	"Subtract": [
 		{
 			"description": "Clean up.",
@@ -23565,6 +23522,49 @@
 			"name": "connect",
 			"lineno": "Tone/signal/SignalBase.js#L28",
 			"inherits": "Tone.SignalBase"
+		}
+	],
+	"SignalBase": [
+		{
+			"description": "When signals connect to other signals or AudioParams,\n they take over the output value of that signal or AudioParam.\n For all other nodes, the behavior is the same as a default <code>connect</code>.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"AudioNode",
+						"Tone.Signal",
+						"Tone"
+					],
+					"name": "node"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "The output number to connect from.",
+					"name": "outputNumber"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "The input number to connect to.",
+					"name": "inputNumber"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.SignalBase"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/signal/SignalBase.js#L28"
 		}
 	],
 	"AMOscillator": [
