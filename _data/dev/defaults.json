@@ -589,13 +589,6 @@
 		"type": "sine",
 		"phase": 0
 	},
-	"Oscillator": {
-		"type": "sine",
-		"frequency": 440,
-		"detune": 0,
-		"phase": 0,
-		"partials": "[]"
-	},
 	"OscillatorNode": {
 		"frequency": 440,
 		"detune": 0,
@@ -627,12 +620,6 @@
 		"fadeIn": 0,
 		"fadeOut": 0
 	},
-	"PulseOscillator": {
-		"frequency": 440,
-		"detune": 0,
-		"phase": 0,
-		"width": 0.2
-	},
 	"Source": {
 		"volume": 0,
 		"mute": false
@@ -655,6 +642,19 @@
 	"Noise": {
 		"type": "white",
 		"playbackRate": 1
+	},
+	"Oscillator": {
+		"type": "sine",
+		"frequency": 440,
+		"detune": 0,
+		"phase": 0,
+		"partials": "[]"
+	},
+	"PulseOscillator": {
+		"frequency": 440,
+		"detune": 0,
+		"phase": 0,
+		"width": 0.2
 	},
 	"TickSource": {
 		"frequency": 1

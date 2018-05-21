@@ -2320,31 +2320,6 @@
 		],
 		"extends": "Tone.Source"
 	},
-	"Oscillator": {
-		"description": "Tone.Oscillator supports a number of features including\n        phase rotation, multiple oscillator types (see Tone.Oscillator.type),\n        and Transport syncing (see Tone.Oscillator.syncFrequency).",
-		"params": [
-			{
-				"type": [
-					"Frequency"
-				],
-				"optional": true,
-				"description": "Starting frequency",
-				"name": "frequency"
-			},
-			{
-				"type": [
-					"string"
-				],
-				"optional": true,
-				"description": "The oscillator type. Read more about type below.",
-				"name": "type"
-			}
-		],
-		"examples": [
-			"//make and start a 440hz sine tone\nvar osc = new Tone.Oscillator(440, \"sine\").toMaster().start();"
-		],
-		"extends": "Tone.Source"
-	},
 	"OscillatorNode": {
 		"description": "Wrapper around the native fire-and-forget OscillatorNode. Adds the\n    ability to reschedule the stop method.",
 		"params": [
@@ -2435,31 +2410,6 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
-	"PulseOscillator": {
-		"description": "Tone.PulseOscillator is a pulse oscillator with control over pulse width,\n        also known as the duty cycle. At 50% duty cycle (width = 0.5) the wave is\n        a square and only odd-numbered harmonics are present. At all other widths\n        even-numbered harmonics are present. Read more\n        [here](https://wigglewave.wordpress.com/2014/08/16/pulse-waveforms-and-harmonics/).",
-		"params": [
-			{
-				"type": [
-					"Frequency"
-				],
-				"optional": true,
-				"description": "The frequency of the oscillator",
-				"name": "frequency"
-			},
-			{
-				"type": [
-					"NormalRange"
-				],
-				"optional": true,
-				"description": "The width of the pulse",
-				"name": "width"
-			}
-		],
-		"examples": [
-			"var pulse = new Tone.PulseOscillator(\"E5\", 0.4).toMaster().start();"
-		],
-		"extends": "Tone.Source"
-	},
 	"Source": {
 		"description": "Base class for sources. Sources have start/stop methods\n         and the ability to be synced to the\n         start/stop of Tone.Transport.",
 		"examples": [
@@ -2518,6 +2468,56 @@
 		],
 		"examples": [
 			"//initialize the noise and start\nvar noise = new Tone.Noise(\"pink\").start();\n\n//make an autofilter to shape the noise\nvar autoFilter = new Tone.AutoFilter({\n\t\"frequency\" : \"8m\",\n\t\"min\" : 800,\n\t\"max\" : 15000\n}).connect(Tone.Master);\n\n//connect the noise\nnoise.connect(autoFilter);\n//start the autofilter LFO\nautoFilter.start()"
+		],
+		"extends": "Tone.Source"
+	},
+	"Oscillator": {
+		"description": "Tone.Oscillator supports a number of features including\n        phase rotation, multiple oscillator types (see Tone.Oscillator.type),\n        and Transport syncing (see Tone.Oscillator.syncFrequency).",
+		"params": [
+			{
+				"type": [
+					"Frequency"
+				],
+				"optional": true,
+				"description": "Starting frequency",
+				"name": "frequency"
+			},
+			{
+				"type": [
+					"string"
+				],
+				"optional": true,
+				"description": "The oscillator type. Read more about type below.",
+				"name": "type"
+			}
+		],
+		"examples": [
+			"//make and start a 440hz sine tone\nvar osc = new Tone.Oscillator(440, \"sine\").toMaster().start();"
+		],
+		"extends": "Tone.Source"
+	},
+	"PulseOscillator": {
+		"description": "Tone.PulseOscillator is a pulse oscillator with control over pulse width,\n        also known as the duty cycle. At 50% duty cycle (width = 0.5) the wave is\n        a square and only odd-numbered harmonics are present. At all other widths\n        even-numbered harmonics are present. Read more\n        [here](https://wigglewave.wordpress.com/2014/08/16/pulse-waveforms-and-harmonics/).",
+		"params": [
+			{
+				"type": [
+					"Frequency"
+				],
+				"optional": true,
+				"description": "The frequency of the oscillator",
+				"name": "frequency"
+			},
+			{
+				"type": [
+					"NormalRange"
+				],
+				"optional": true,
+				"description": "The width of the pulse",
+				"name": "width"
+			}
+		],
+		"examples": [
+			"var pulse = new Tone.PulseOscillator(\"E5\", 0.4).toMaster().start();"
 		],
 		"extends": "Tone.Source"
 	},

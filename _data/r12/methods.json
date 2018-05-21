@@ -20797,232 +20797,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"Oscillator": [
-		{
-			"description": "Restart the oscillator. Does not stop the oscillator, but instead\njust cancels any scheduled 'stop' from being invoked.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Oscillator"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "restart",
-			"lineno": "Tone/source/Oscillator.js#L149"
-		},
-		{
-			"description": "Sync the signal to the Transport's bpm. Any changes to the transports bpm,\n will also affect the oscillators frequency.",
-			"examples": [
-				"Tone.Transport.bpm.value = 120;\nosc.frequency.value = 440;\n//the ration between the bpm and the frequency will be maintained\nosc.syncFrequency();\nTone.Transport.bpm.value = 240;\n// the frequency of the oscillator is doubled to 880"
-			],
-			"returns": {
-				"type": [
-					"Tone.Oscillator"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "syncFrequency",
-			"lineno": "Tone/source/Oscillator.js#L167"
-		},
-		{
-			"description": "Unsync the oscillator's frequency from the Transport.\n See Tone.Oscillator.syncFrequency",
-			"returns": {
-				"type": [
-					"Tone.Oscillator"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "unsyncFrequency",
-			"lineno": "Tone/source/Oscillator.js#L177"
-		},
-		{
-			"description": "Dispose and disconnect.",
-			"returns": {
-				"type": [
-					"Tone.Oscillator"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/source/Oscillator.js#L375"
-		},
-		{
-			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the source should be started.",
-					"name": "time"
-				}
-			],
-			"examples": [
-				"source.start(\"+0.5\"); //starts the source 0.5 seconds from now"
-			],
-			"returns": {
-				"type": [
-					"Tone.Source"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "start",
-			"lineno": "Tone/source/Source.js#L144",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Stop the source at the specified time. If no time is given,\n stop the source now.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the source should be stopped.",
-					"name": "time"
-				}
-			],
-			"examples": [
-				"source.stop(); // stops the source immediately"
-			],
-			"returns": {
-				"type": [
-					"Tone.Source"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "stop",
-			"lineno": "Tone/source/Source.js#L186",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Sync the source to the Transport so that all subsequent\n calls to `start` and `stop` are synced to the TransportTime\n instead of the AudioContext time.",
-			"examples": [
-				"//sync the source so that it plays between 0 and 0.3 on the Transport's timeline\nsource.sync().start(0).stop(0.3);\n//start the transport.\nTone.Transport.start();\n\n ",
-				"//start the transport with an offset and the sync'ed sources\n//will start in the correct position\nsource.sync().start(0.1);\n//the source will be invoked with an offset of 0.4\nTone.Transport.start(\"+0.5\", 0.5);"
-			],
-			"returns": {
-				"type": [
-					"Tone.Source"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "sync",
-			"lineno": "Tone/source/Source.js#L222",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Unsync the source to the Transport. See Tone.Source.sync",
-			"returns": {
-				"type": [
-					"Tone.Source"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L255",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"OscillatorNode": [
 		{
 			"description": "Get the playback state at the given time",
@@ -21903,184 +21677,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"PulseOscillator": [
-		{
-			"description": "Clean up method.",
-			"returns": {
-				"type": [
-					"Tone.PulseOscillator"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/source/PulseOscillator.js#L177"
-		},
-		{
-			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the source should be started.",
-					"name": "time"
-				}
-			],
-			"examples": [
-				"source.start(\"+0.5\"); //starts the source 0.5 seconds from now"
-			],
-			"returns": {
-				"type": [
-					"Tone.Source"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "start",
-			"lineno": "Tone/source/Source.js#L144",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Stop the source at the specified time. If no time is given,\n stop the source now.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the source should be stopped.",
-					"name": "time"
-				}
-			],
-			"examples": [
-				"source.stop(); // stops the source immediately"
-			],
-			"returns": {
-				"type": [
-					"Tone.Source"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "stop",
-			"lineno": "Tone/source/Source.js#L186",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Sync the source to the Transport so that all subsequent\n calls to `start` and `stop` are synced to the TransportTime\n instead of the AudioContext time.",
-			"examples": [
-				"//sync the source so that it plays between 0 and 0.3 on the Transport's timeline\nsource.sync().start(0).stop(0.3);\n//start the transport.\nTone.Transport.start();\n\n ",
-				"//start the transport with an offset and the sync'ed sources\n//will start in the correct position\nsource.sync().start(0.1);\n//the source will be invoked with an offset of 0.4\nTone.Transport.start(\"+0.5\", 0.5);"
-			],
-			"returns": {
-				"type": [
-					"Tone.Source"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "sync",
-			"lineno": "Tone/source/Source.js#L222",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Unsync the source to the Transport. See Tone.Source.sync",
-			"returns": {
-				"type": [
-					"Tone.Source"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L255",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"Source": [
 		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
@@ -22638,6 +22234,410 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/source/Noise.js#L161"
+		},
+		{
+			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the source should be started.",
+					"name": "time"
+				}
+			],
+			"examples": [
+				"source.start(\"+0.5\"); //starts the source 0.5 seconds from now"
+			],
+			"returns": {
+				"type": [
+					"Tone.Source"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "start",
+			"lineno": "Tone/source/Source.js#L144",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "Stop the source at the specified time. If no time is given,\n stop the source now.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the source should be stopped.",
+					"name": "time"
+				}
+			],
+			"examples": [
+				"source.stop(); // stops the source immediately"
+			],
+			"returns": {
+				"type": [
+					"Tone.Source"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "stop",
+			"lineno": "Tone/source/Source.js#L186",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "Sync the source to the Transport so that all subsequent\n calls to `start` and `stop` are synced to the TransportTime\n instead of the AudioContext time.",
+			"examples": [
+				"//sync the source so that it plays between 0 and 0.3 on the Transport's timeline\nsource.sync().start(0).stop(0.3);\n//start the transport.\nTone.Transport.start();\n\n ",
+				"//start the transport with an offset and the sync'ed sources\n//will start in the correct position\nsource.sync().start(0.1);\n//the source will be invoked with an offset of 0.4\nTone.Transport.start(\"+0.5\", 0.5);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Source"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "sync",
+			"lineno": "Tone/source/Source.js#L222",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "Unsync the source to the Transport. See Tone.Source.sync",
+			"returns": {
+				"type": [
+					"Tone.Source"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "unsync",
+			"lineno": "Tone/source/Source.js#L255",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Oscillator": [
+		{
+			"description": "Restart the oscillator. Does not stop the oscillator, but instead\njust cancels any scheduled 'stop' from being invoked.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Oscillator"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "restart",
+			"lineno": "Tone/source/Oscillator.js#L149"
+		},
+		{
+			"description": "Sync the signal to the Transport's bpm. Any changes to the transports bpm,\n will also affect the oscillators frequency.",
+			"examples": [
+				"Tone.Transport.bpm.value = 120;\nosc.frequency.value = 440;\n//the ration between the bpm and the frequency will be maintained\nosc.syncFrequency();\nTone.Transport.bpm.value = 240;\n// the frequency of the oscillator is doubled to 880"
+			],
+			"returns": {
+				"type": [
+					"Tone.Oscillator"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "syncFrequency",
+			"lineno": "Tone/source/Oscillator.js#L167"
+		},
+		{
+			"description": "Unsync the oscillator's frequency from the Transport.\n See Tone.Oscillator.syncFrequency",
+			"returns": {
+				"type": [
+					"Tone.Oscillator"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "unsyncFrequency",
+			"lineno": "Tone/source/Oscillator.js#L177"
+		},
+		{
+			"description": "Dispose and disconnect.",
+			"returns": {
+				"type": [
+					"Tone.Oscillator"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/source/Oscillator.js#L375"
+		},
+		{
+			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the source should be started.",
+					"name": "time"
+				}
+			],
+			"examples": [
+				"source.start(\"+0.5\"); //starts the source 0.5 seconds from now"
+			],
+			"returns": {
+				"type": [
+					"Tone.Source"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "start",
+			"lineno": "Tone/source/Source.js#L144",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "Stop the source at the specified time. If no time is given,\n stop the source now.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the source should be stopped.",
+					"name": "time"
+				}
+			],
+			"examples": [
+				"source.stop(); // stops the source immediately"
+			],
+			"returns": {
+				"type": [
+					"Tone.Source"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "stop",
+			"lineno": "Tone/source/Source.js#L186",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "Sync the source to the Transport so that all subsequent\n calls to `start` and `stop` are synced to the TransportTime\n instead of the AudioContext time.",
+			"examples": [
+				"//sync the source so that it plays between 0 and 0.3 on the Transport's timeline\nsource.sync().start(0).stop(0.3);\n//start the transport.\nTone.Transport.start();\n\n ",
+				"//start the transport with an offset and the sync'ed sources\n//will start in the correct position\nsource.sync().start(0.1);\n//the source will be invoked with an offset of 0.4\nTone.Transport.start(\"+0.5\", 0.5);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Source"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "sync",
+			"lineno": "Tone/source/Source.js#L222",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "Unsync the source to the Transport. See Tone.Source.sync",
+			"returns": {
+				"type": [
+					"Tone.Source"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "unsync",
+			"lineno": "Tone/source/Source.js#L255",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"PulseOscillator": [
+		{
+			"description": "Clean up method.",
+			"returns": {
+				"type": [
+					"Tone.PulseOscillator"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/source/PulseOscillator.js#L177"
 		},
 		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",

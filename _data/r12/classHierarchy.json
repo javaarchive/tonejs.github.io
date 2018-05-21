@@ -543,11 +543,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Oscillator": [
-		"Source",
-		"AudioNode",
-		"Tone"
-	],
 	"OscillatorNode": [
 		"AudioNode",
 		"Tone"
@@ -566,11 +561,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"PulseOscillator": [
-		"Source",
-		"AudioNode",
-		"Tone"
-	],
 	"Source": [
 		"AudioNode",
 		"Tone"
@@ -584,6 +574,16 @@
 		"Tone"
 	],
 	"Noise": [
+		"Source",
+		"AudioNode",
+		"Tone"
+	],
+	"Oscillator": [
+		"Source",
+		"AudioNode",
+		"Tone"
+	],
+	"PulseOscillator": [
 		"Source",
 		"AudioNode",
 		"Tone"

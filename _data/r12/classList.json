@@ -137,16 +137,16 @@
 		"FatOscillator",
 		"GrainPlayer",
 		"OmniOscillator",
-		"Oscillator",
 		"OscillatorNode",
 		"PWMOscillator",
 		"Player",
 		"Players",
-		"PulseOscillator",
 		"Source",
 		"UserMedia",
 		"BufferSource",
 		"Noise",
+		"Oscillator",
+		"PulseOscillator",
 		"TickSource"
 	],
 	"type": [
