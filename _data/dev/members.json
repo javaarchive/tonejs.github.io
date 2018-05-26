@@ -6401,109 +6401,6 @@
 			"lineno": "Tone/event/Event.js#L396"
 		}
 	],
-	"Part": [
-		{
-			"description": "The probability of the notes being triggered.",
-			"type": [
-				"NormalRange"
-			],
-			"scope": "instance",
-			"name": "probability",
-			"lineno": "Tone/event/Part.js#L370"
-		},
-		{
-			"description": "If the part should loop or not\n between Tone.Part.loopStart and\n Tone.Part.loopEnd. An integer\n value corresponds to the number of\n loops the Part does after it starts.",
-			"type": [
-				"Boolean",
-				"Positive"
-			],
-			"examples": [
-				"//loop the part 8 times\npart.loop = 8;"
-			],
-			"scope": "instance",
-			"name": "loop",
-			"lineno": "Tone/event/Part.js#L405"
-		},
-		{
-			"description": "The loopEnd point determines when it will\n loop if Tone.Part.loop is true.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "loopEnd",
-			"lineno": "Tone/event/Part.js#L433"
-		},
-		{
-			"description": "The loopStart point determines when it will\n loop if Tone.Part.loop is true.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "loopStart",
-			"lineno": "Tone/event/Part.js#L455"
-		},
-		{
-			"description": "The playback rate of the part",
-			"type": [
-				"Positive"
-			],
-			"scope": "instance",
-			"name": "playbackRate",
-			"lineno": "Tone/event/Part.js#L477"
-		},
-		{
-			"description": "The number of scheduled notes in the part.",
-			"type": [
-				"Positive"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "length",
-			"lineno": "Tone/event/Part.js#L493"
-		},
-		{
-			"description": "The callback to invoke.",
-			"type": [
-				"function"
-			],
-			"scope": "instance",
-			"name": "callback",
-			"lineno": "Tone/event/Event.js#L40",
-			"inherits": "Tone.Event"
-		},
-		{
-			"description": "If mute is true, the callback won't be\n invoked.",
-			"type": [
-				"Boolean"
-			],
-			"scope": "instance",
-			"name": "mute",
-			"lineno": "Tone/event/Event.js#L106",
-			"inherits": "Tone.Event"
-		},
-		{
-			"description": "Returns the playback state of the note, either \"started\" or \"stopped\".",
-			"type": [
-				"String"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "state",
-			"lineno": "Tone/event/Event.js#L172",
-			"inherits": "Tone.Event"
-		},
-		{
-			"description": "The current progress of the loop interval.\n Returns 0 if the event is not started yet or\n it is not set to loop.",
-			"type": [
-				"NormalRange"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "progress",
-			"lineno": "Tone/event/Event.js#L396",
-			"inherits": "Tone.Event"
-		}
-	],
 	"Pattern": [
 		{
 			"description": "The current index in the values array.",
@@ -6845,6 +6742,109 @@
 			"scope": "instance",
 			"name": "iterations",
 			"lineno": "Tone/event/Loop.js#L206"
+		}
+	],
+	"Part": [
+		{
+			"description": "The probability of the notes being triggered.",
+			"type": [
+				"NormalRange"
+			],
+			"scope": "instance",
+			"name": "probability",
+			"lineno": "Tone/event/Part.js#L370"
+		},
+		{
+			"description": "If the part should loop or not\n between Tone.Part.loopStart and\n Tone.Part.loopEnd. An integer\n value corresponds to the number of\n loops the Part does after it starts.",
+			"type": [
+				"Boolean",
+				"Positive"
+			],
+			"examples": [
+				"//loop the part 8 times\npart.loop = 8;"
+			],
+			"scope": "instance",
+			"name": "loop",
+			"lineno": "Tone/event/Part.js#L405"
+		},
+		{
+			"description": "The loopEnd point determines when it will\n loop if Tone.Part.loop is true.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "loopEnd",
+			"lineno": "Tone/event/Part.js#L433"
+		},
+		{
+			"description": "The loopStart point determines when it will\n loop if Tone.Part.loop is true.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "loopStart",
+			"lineno": "Tone/event/Part.js#L455"
+		},
+		{
+			"description": "The playback rate of the part",
+			"type": [
+				"Positive"
+			],
+			"scope": "instance",
+			"name": "playbackRate",
+			"lineno": "Tone/event/Part.js#L477"
+		},
+		{
+			"description": "The number of scheduled notes in the part.",
+			"type": [
+				"Positive"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "length",
+			"lineno": "Tone/event/Part.js#L493"
+		},
+		{
+			"description": "The callback to invoke.",
+			"type": [
+				"function"
+			],
+			"scope": "instance",
+			"name": "callback",
+			"lineno": "Tone/event/Event.js#L40",
+			"inherits": "Tone.Event"
+		},
+		{
+			"description": "If mute is true, the callback won't be\n invoked.",
+			"type": [
+				"Boolean"
+			],
+			"scope": "instance",
+			"name": "mute",
+			"lineno": "Tone/event/Event.js#L106",
+			"inherits": "Tone.Event"
+		},
+		{
+			"description": "Returns the playback state of the note, either \"started\" or \"stopped\".",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "state",
+			"lineno": "Tone/event/Event.js#L172",
+			"inherits": "Tone.Event"
+		},
+		{
+			"description": "The current progress of the loop interval.\n Returns 0 if the event is not started yet or\n it is not set to loop.",
+			"type": [
+				"NormalRange"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "progress",
+			"lineno": "Tone/event/Event.js#L396",
+			"inherits": "Tone.Event"
 		}
 	],
 	"AMSynth": [
@@ -9635,122 +9635,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"OscillatorNode": [
-		{
-			"description": "The callback to invoke after the\n buffer source is done playing.",
-			"type": [
-				"function"
-			],
-			"scope": "instance",
-			"name": "onended",
-			"lineno": "Tone/source/OscillatorNode.js#L22"
-		},
-		{
-			"description": "The frequency of the oscillator",
-			"type": [
-				"Frequency"
-			],
-			"scope": "instance",
-			"name": "frequency",
-			"lineno": "Tone/source/OscillatorNode.js#L60",
-			"signal": true
-		},
-		{
-			"description": "The detune of the oscillator",
-			"type": [
-				"Frequency"
-			],
-			"scope": "instance",
-			"name": "detune",
-			"lineno": "Tone/source/OscillatorNode.js#L68",
-			"signal": true
-		},
-		{
-			"description": "Returns the playback state of the oscillator, either \"started\" or \"stopped\".",
-			"type": [
-				"Tone.State"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "state",
-			"lineno": "Tone/source/OscillatorNode.js#L93"
-		},
-		{
-			"description": "The oscillator type. Either 'sine', 'sawtooth', 'square', or 'triangle'",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "type",
-			"lineno": "Tone/source/OscillatorNode.js#L183"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelCount is the number of channels used when up-mixing and down-mixing\n connections to any inputs to the node. The default value is 2 except for\n specific nodes where its value is specially determined.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelCount",
-			"lineno": "Tone/core/AudioNode.js#L62",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelCountMode determines how channels will be counted when up-mixing and\n down-mixing connections to any inputs to the node.\n The default value is \"max\". This attribute has no effect for nodes with no inputs.",
-			"type": [
-				"String"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelCountMode",
-			"lineno": "Tone/core/AudioNode.js#L81",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelInterpretation determines how individual channels will be treated\n when up-mixing and down-mixing connections to any inputs to the node.\n The default value is \"speakers\".",
-			"type": [
-				"String"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelInterpretation",
-			"lineno": "Tone/core/AudioNode.js#L99",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "The number of inputs feeding into the AudioNode.\n For source nodes, this will be 0.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "numberOfInputs",
-			"lineno": "Tone/core/AudioNode.js#L117",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "The number of outputs coming out of the AudioNode.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "numberOfOutputs",
-			"lineno": "Tone/core/AudioNode.js#L139",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"PWMOscillator": [
 		{
 			"description": "The frequency control.",
@@ -10935,6 +10819,122 @@
 			"name": "state",
 			"lineno": "Tone/source/Source.js#L92",
 			"inherits": "Tone.Source"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelCount is the number of channels used when up-mixing and down-mixing\n connections to any inputs to the node. The default value is 2 except for\n specific nodes where its value is specially determined.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelCount",
+			"lineno": "Tone/core/AudioNode.js#L62",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelCountMode determines how channels will be counted when up-mixing and\n down-mixing connections to any inputs to the node.\n The default value is \"max\". This attribute has no effect for nodes with no inputs.",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelCountMode",
+			"lineno": "Tone/core/AudioNode.js#L81",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelInterpretation determines how individual channels will be treated\n when up-mixing and down-mixing connections to any inputs to the node.\n The default value is \"speakers\".",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelInterpretation",
+			"lineno": "Tone/core/AudioNode.js#L99",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "The number of inputs feeding into the AudioNode.\n For source nodes, this will be 0.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "numberOfInputs",
+			"lineno": "Tone/core/AudioNode.js#L117",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "The number of outputs coming out of the AudioNode.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "numberOfOutputs",
+			"lineno": "Tone/core/AudioNode.js#L139",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"OscillatorNode": [
+		{
+			"description": "The callback to invoke after the\n buffer source is done playing.",
+			"type": [
+				"function"
+			],
+			"scope": "instance",
+			"name": "onended",
+			"lineno": "Tone/source/OscillatorNode.js#L23"
+		},
+		{
+			"description": "The frequency of the oscillator",
+			"type": [
+				"Frequency"
+			],
+			"scope": "instance",
+			"name": "frequency",
+			"lineno": "Tone/source/OscillatorNode.js#L61",
+			"signal": true
+		},
+		{
+			"description": "The detune of the oscillator",
+			"type": [
+				"Frequency"
+			],
+			"scope": "instance",
+			"name": "detune",
+			"lineno": "Tone/source/OscillatorNode.js#L69",
+			"signal": true
+		},
+		{
+			"description": "Returns the playback state of the oscillator, either \"started\" or \"stopped\".",
+			"type": [
+				"Tone.State"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "state",
+			"lineno": "Tone/source/OscillatorNode.js#L94"
+		},
+		{
+			"description": "The oscillator type. Either 'sine', 'sawtooth', 'square', or 'triangle'",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "type",
+			"lineno": "Tone/source/OscillatorNode.js#L184"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",

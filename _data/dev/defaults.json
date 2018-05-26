@@ -332,17 +332,6 @@
 		"mute": false,
 		"humanize": false
 	},
-	"Part": {
-		"callback": "Tone.noOp",
-		"loop": false,
-		"loopEnd": "1m",
-		"loopStart": 0,
-		"playbackRate": 1,
-		"probability": 1,
-		"humanize": false,
-		"mute": false,
-		"events": "[]"
-	},
 	"Pattern": {
 		"pattern": "Tone.CtrlPattern.Type.Up",
 		"callback": "Tone.noOp",
@@ -358,6 +347,17 @@
 		"iterations": "Infinity",
 		"probability": true,
 		"mute": false
+	},
+	"Part": {
+		"callback": "Tone.noOp",
+		"loop": false,
+		"loopEnd": "1m",
+		"loopStart": 0,
+		"playbackRate": 1,
+		"probability": 1,
+		"humanize": false,
+		"mute": false,
+		"events": "[]"
 	},
 	"AMSynth": {
 		"harmonicity": 3,
@@ -589,12 +589,6 @@
 		"type": "sine",
 		"phase": 0
 	},
-	"OscillatorNode": {
-		"frequency": 440,
-		"detune": 0,
-		"type": "sine",
-		"onended": "Tone.noOp"
-	},
 	"PWMOscillator": {
 		"frequency": 440,
 		"detune": 0,
@@ -649,6 +643,12 @@
 		"detune": 0,
 		"phase": 0,
 		"partials": "[]"
+	},
+	"OscillatorNode": {
+		"frequency": 440,
+		"detune": 0,
+		"type": "sine",
+		"onended": "Tone.noOp"
 	},
 	"PulseOscillator": {
 		"frequency": 440,

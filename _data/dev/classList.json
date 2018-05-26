@@ -88,10 +88,10 @@
 	],
 	"event": [
 		"Event",
-		"Part",
 		"Pattern",
 		"Sequence",
-		"Loop"
+		"Loop",
+		"Part"
 	],
 	"instrument": [
 		"AMSynth",
@@ -123,12 +123,12 @@
 		"Pow",
 		"Scale",
 		"ScaleExp",
-		"Signal",
 		"Subtract",
 		"TickSignal",
 		"TransportTimelineSignal",
 		"WaveShaper",
 		"Zero",
+		"Signal",
 		"SignalBase"
 	],
 	"source": [
@@ -137,7 +137,6 @@
 		"FatOscillator",
 		"GrainPlayer",
 		"OmniOscillator",
-		"OscillatorNode",
 		"PWMOscillator",
 		"Player",
 		"Players",
@@ -146,6 +145,7 @@
 		"BufferSource",
 		"Noise",
 		"Oscillator",
+		"OscillatorNode",
 		"PulseOscillator",
 		"TickSource"
 	],

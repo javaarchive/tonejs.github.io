@@ -1554,30 +1554,6 @@
 		],
 		"extends": "Tone"
 	},
-	"Part": {
-		"description": "Tone.Part is a collection Tone.Events which can be\n        started/stopped and looped as a single unit.",
-		"params": [
-			{
-				"type": [
-					"function"
-				],
-				"description": "The callback to invoke on each event",
-				"name": "callback"
-			},
-			{
-				"type": [
-					"Array"
-				],
-				"description": "the array of events",
-				"name": "events"
-			}
-		],
-		"examples": [
-			"var part = new Tone.Part(function(time, note){\n\t//the notes given as the second element in the array\n\t//will be passed in as the second argument\n\tsynth.triggerAttackRelease(note, \"8n\", time);\n}, [[0, \"C2\"], [\"0:2\", \"C3\"], [\"0:3:2\", \"G2\"]]);\n ",
-			"//use an array of objects as long as the object has a \"time\" attribute\nvar part = new Tone.Part(function(time, value){\n\t//the value is an object which contains both the note and the velocity\n\tsynth.triggerAttackRelease(value.note, \"8n\", time, value.velocity);\n}, [{\"time\" : 0, \"note\" : \"C3\", \"velocity\": 0.9},\n\t   {\"time\" : \"0:2\", \"note\" : \"C4\", \"velocity\": 0.5}\n]).start(0);"
-		],
-		"extends": "Tone.Event"
-	},
 	"Pattern": {
 		"description": "Tone.Pattern arpeggiates between the given notes\n        in a number of patterns. See Tone.CtrlPattern for\n        a full list of patterns.",
 		"params": [
@@ -1654,6 +1630,30 @@
 			"var loop = new Tone.Loop(function(time){\n\t//triggered every eighth note. \n\tconsole.log(time);\n}, \"8n\").start(0);\nTone.Transport.start();\n "
 		],
 		"extends": "Tone"
+	},
+	"Part": {
+		"description": "Tone.Part is a collection Tone.Events which can be\n        started/stopped and looped as a single unit.",
+		"params": [
+			{
+				"type": [
+					"function"
+				],
+				"description": "The callback to invoke on each event",
+				"name": "callback"
+			},
+			{
+				"type": [
+					"Array"
+				],
+				"description": "the array of events",
+				"name": "events"
+			}
+		],
+		"examples": [
+			"var part = new Tone.Part(function(time, note){\n\t//the notes given as the second element in the array\n\t//will be passed in as the second argument\n\tsynth.triggerAttackRelease(note, \"8n\", time);\n}, [[0, \"C2\"], [\"0:2\", \"C3\"], [\"0:3:2\", \"G2\"]]);\n ",
+			"//use an array of objects as long as the object has a \"time\" attribute\nvar part = new Tone.Part(function(time, value){\n\t//the value is an object which contains both the note and the velocity\n\tsynth.triggerAttackRelease(value.note, \"8n\", time, value.velocity);\n}, [{\"time\" : 0, \"note\" : \"C3\", \"velocity\": 0.9},\n\t   {\"time\" : \"0:2\", \"note\" : \"C4\", \"velocity\": 0.5}\n]).start(0);"
+		],
+		"extends": "Tone.Event"
 	},
 	"AMSynth": {
 		"description": "AMSynth uses the output of one Tone.Synth to modulate the\n         amplitude of another Tone.Synth. The harmonicity (the ratio between\n         the two signals) affects the timbre of the output signal greatly.\n         Read more about Amplitude Modulation Synthesis on\n         [SoundOnSound](https://web.archive.org/web/20160404103653/http://www.soundonsound.com:80/sos/mar00/articles/synthsecrets.htm).\n         <img src=\"https://docs.google.com/drawings/d/1TQu8Ed4iFr1YTLKpB3U1_hur-UwBrh5gdBXc8BxfGKw/pub?w=1009&h=457\">",
@@ -2087,33 +2087,6 @@
 		],
 		"extends": "Tone.SignalBase"
 	},
-	"Signal": {
-		"description": "A signal is an audio-rate value. Tone.Signal is a core component of the library.\n         Unlike a number, Signals can be scheduled with sample-level accuracy. Tone.Signal\n         has all of the methods available to native Web Audio\n         [AudioParam](http://webaudio.github.io/web-audio-api/#the-audioparam-interface)\n         as well as additional conveniences. Read more about working with signals\n         [here](https://github.com/Tonejs/Tone.js/wiki/Signals).",
-		"params": [
-			{
-				"type": [
-					"Number",
-					"AudioParam"
-				],
-				"optional": true,
-				"description": "Initial value of the signal. If an AudioParam\n                                    is passed in, that parameter will be wrapped\n                                    and controlled by the Signal.",
-				"name": "value"
-			},
-			{
-				"type": [
-					"string"
-				],
-				"optional": true,
-				"defaultvalue": "Number",
-				"description": "unit The units the signal is in.",
-				"name": "units"
-			}
-		],
-		"examples": [
-			"var signal = new Tone.Signal(10);"
-		],
-		"extends": "Tone.Param"
-	},
 	"Subtract": {
 		"description": "Subtract the signal connected to <code>input[1]</code> from the signal connected \n        to <code>input[0]</code>. If an argument is provided in the constructor, the \n        signals <code>.value</code> will be subtracted from the incoming signal.",
 		"params": [
@@ -2180,6 +2153,33 @@
 	"Zero": {
 		"description": "Tone.Zero outputs 0's at audio-rate. The reason this has to be\n        it's own class is that many browsers optimize out Tone.Signal\n        with a value of 0 and will not process nodes further down the graph.",
 		"extends": "Tone.SignalBase"
+	},
+	"Signal": {
+		"description": "A signal is an audio-rate value. Tone.Signal is a core component of the library.\n         Unlike a number, Signals can be scheduled with sample-level accuracy. Tone.Signal\n         has all of the methods available to native Web Audio\n         [AudioParam](http://webaudio.github.io/web-audio-api/#the-audioparam-interface)\n         as well as additional conveniences. Read more about working with signals\n         [here](https://github.com/Tonejs/Tone.js/wiki/Signals).",
+		"params": [
+			{
+				"type": [
+					"Number",
+					"AudioParam"
+				],
+				"optional": true,
+				"description": "Initial value of the signal. If an AudioParam\n                                    is passed in, that parameter will be wrapped\n                                    and controlled by the Signal.",
+				"name": "value"
+			},
+			{
+				"type": [
+					"string"
+				],
+				"optional": true,
+				"defaultvalue": "Number",
+				"description": "unit The units the signal is in.",
+				"name": "units"
+			}
+		],
+		"examples": [
+			"var signal = new Tone.Signal(10);"
+		],
+		"extends": "Tone.Param"
 	},
 	"SignalBase": {
 		"description": "Base class for all Signals. Used Internally.",
@@ -2319,27 +2319,6 @@
 			"var omniOsc = new Tone.OmniOscillator(\"C#4\", \"pwm\");"
 		],
 		"extends": "Tone.Source"
-	},
-	"OscillatorNode": {
-		"description": "Wrapper around the native fire-and-forget OscillatorNode. Adds the\n    ability to reschedule the stop method.",
-		"params": [
-			{
-				"type": [
-					"AudioBuffer",
-					"Tone.Buffer"
-				],
-				"description": "The buffer to play",
-				"name": "buffer"
-			},
-			{
-				"type": [
-					"function"
-				],
-				"description": "The callback to invoke when the\n                              buffer is done playing.",
-				"name": "onload"
-			}
-		],
-		"extends": "Tone.AudioNode"
 	},
 	"PWMOscillator": {
 		"description": "Tone.PWMOscillator modulates the width of a Tone.PulseOscillator\n        at the modulationFrequency. This has the effect of continuously\n        changing the timbre of the oscillator by altering the harmonics\n        generated.",
@@ -2495,6 +2474,27 @@
 			"//make and start a 440hz sine tone\nvar osc = new Tone.Oscillator(440, \"sine\").toMaster().start();"
 		],
 		"extends": "Tone.Source"
+	},
+	"OscillatorNode": {
+		"description": "Wrapper around the native fire-and-forget OscillatorNode. Adds the\n    ability to reschedule the stop method.",
+		"params": [
+			{
+				"type": [
+					"AudioBuffer",
+					"Tone.Buffer"
+				],
+				"description": "The buffer to play",
+				"name": "buffer"
+			},
+			{
+				"type": [
+					"function"
+				],
+				"description": "The callback to invoke when the\n                              buffer is done playing.",
+				"name": "onload"
+			}
+		],
+		"extends": "Tone.AudioNode"
 	},
 	"PulseOscillator": {
 		"description": "Tone.PulseOscillator is a pulse oscillator with control over pulse width,\n        also known as the duty cycle. At 50% duty cycle (width = 0.5) the wave is\n        a square and only odd-numbered harmonics are present. At all other widths\n        even-numbered harmonics are present. Read more\n        [here](https://wigglewave.wordpress.com/2014/08/16/pulse-waveforms-and-harmonics/).",

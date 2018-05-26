@@ -336,10 +336,6 @@
 	"Event": [
 		"Tone"
 	],
-	"Part": [
-		"Event",
-		"Tone"
-	],
 	"Pattern": [
 		"Loop",
 		"Tone"
@@ -350,6 +346,10 @@
 		"Tone"
 	],
 	"Loop": [
+		"Tone"
+	],
+	"Part": [
+		"Event",
 		"Tone"
 	],
 	"AMSynth": [
@@ -483,11 +483,6 @@
 		"SignalBase",
 		"Tone"
 	],
-	"Signal": [
-		"Param",
-		"AudioNode",
-		"Tone"
-	],
 	"Subtract": [
 		"Signal",
 		"Param",
@@ -512,6 +507,11 @@
 	],
 	"Zero": [
 		"SignalBase",
+		"Tone"
+	],
+	"Signal": [
+		"Param",
+		"AudioNode",
 		"Tone"
 	],
 	"SignalBase": [
@@ -540,10 +540,6 @@
 	],
 	"OmniOscillator": [
 		"Source",
-		"AudioNode",
-		"Tone"
-	],
-	"OscillatorNode": [
 		"AudioNode",
 		"Tone"
 	],
@@ -580,6 +576,10 @@
 	],
 	"Oscillator": [
 		"Source",
+		"AudioNode",
+		"Tone"
+	],
+	"OscillatorNode": [
 		"AudioNode",
 		"Tone"
 	],
