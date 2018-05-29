@@ -45,7 +45,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttack",
-			"lineno": "Tone/component/Envelope.js#L230",
+			"lineno": "Tone/component/Envelope.js#L253",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -72,7 +72,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerRelease",
-			"lineno": "Tone/component/Envelope.js#L278",
+			"lineno": "Tone/component/Envelope.js#L309",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -94,7 +94,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/component/Envelope.js#L304",
+			"lineno": "Tone/component/Envelope.js#L335",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -137,7 +137,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/component/Envelope.js#L319",
+			"lineno": "Tone/component/Envelope.js#L350",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -158,7 +158,7 @@
 			},
 			"scope": "instance",
 			"name": "cancel",
-			"lineno": "Tone/component/Envelope.js#L331",
+			"lineno": "Tone/component/Envelope.js#L362",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -833,252 +833,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"Envelope": [
-		{
-			"description": "Trigger the attack/decay portion of the ADSR envelope.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the attack should start.",
-					"name": "time"
-				},
-				{
-					"type": [
-						"NormalRange"
-					],
-					"optional": true,
-					"defaultvalue": 1,
-					"description": "The velocity of the envelope scales the vales.\n                              number between 0-1",
-					"name": "velocity"
-				}
-			],
-			"examples": [
-				"//trigger the attack 0.5 seconds from now with a velocity of 0.2\n env.triggerAttack(\"+0.5\", 0.2);"
-			],
-			"returns": {
-				"type": [
-					"Tone.Envelope"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerAttack",
-			"lineno": "Tone/component/Envelope.js#L230"
-		},
-		{
-			"description": "Triggers the release of the envelope.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the release portion of the envelope should start.",
-					"name": "time"
-				}
-			],
-			"examples": [
-				"//trigger release immediately\n env.triggerRelease();"
-			],
-			"returns": {
-				"type": [
-					"Tone.Envelope"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerRelease",
-			"lineno": "Tone/component/Envelope.js#L278"
-		},
-		{
-			"description": "Get the scheduled value at the given time. This will\n return the unconverted (raw) value.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The time in seconds.",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Number"
-				],
-				"description": "The scheduled value at the given time."
-			},
-			"scope": "instance",
-			"name": "getValueAtTime",
-			"lineno": "Tone/component/Envelope.js#L304"
-		},
-		{
-			"description": "triggerAttackRelease is shorthand for triggerAttack, then waiting\n some duration, then triggerRelease.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The duration of the sustain.",
-					"name": "duration"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the attack should be triggered.",
-					"name": "time"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 1,
-					"description": "The velocity of the envelope.",
-					"name": "velocity"
-				}
-			],
-			"examples": [
-				"//trigger the attack and then the release after 0.6 seconds.\nenv.triggerAttackRelease(0.6);"
-			],
-			"returns": {
-				"type": [
-					"Tone.Envelope"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerAttackRelease",
-			"lineno": "Tone/component/Envelope.js#L319"
-		},
-		{
-			"description": "Cancels all scheduled envelope changes after the given time.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"name": "after"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Envelope"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "cancel",
-			"lineno": "Tone/component/Envelope.js#L331"
-		},
-		{
-			"description": "Disconnect and dispose.",
-			"returns": {
-				"type": [
-					"Tone.Envelope"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/Envelope.js#L447"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"FFT": [
 		{
 			"description": "Gets the waveform of the audio source. Returns the waveform data\n of length [size](#size) as a Float32Array with values between -1 and 1.",
@@ -1673,7 +1427,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttack",
-			"lineno": "Tone/component/Envelope.js#L230",
+			"lineno": "Tone/component/Envelope.js#L253",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -1700,7 +1454,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerRelease",
-			"lineno": "Tone/component/Envelope.js#L278",
+			"lineno": "Tone/component/Envelope.js#L309",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -1722,7 +1476,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/component/Envelope.js#L304",
+			"lineno": "Tone/component/Envelope.js#L335",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -1765,7 +1519,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/component/Envelope.js#L319",
+			"lineno": "Tone/component/Envelope.js#L350",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -1786,7 +1540,7 @@
 			},
 			"scope": "instance",
 			"name": "cancel",
-			"lineno": "Tone/component/Envelope.js#L331",
+			"lineno": "Tone/component/Envelope.js#L362",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -4022,7 +3776,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttack",
-			"lineno": "Tone/component/Envelope.js#L230",
+			"lineno": "Tone/component/Envelope.js#L253",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -4049,7 +3803,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerRelease",
-			"lineno": "Tone/component/Envelope.js#L278",
+			"lineno": "Tone/component/Envelope.js#L309",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -4071,7 +3825,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/component/Envelope.js#L304",
+			"lineno": "Tone/component/Envelope.js#L335",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -4114,7 +3868,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/component/Envelope.js#L319",
+			"lineno": "Tone/component/Envelope.js#L350",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -4135,7 +3889,7 @@
 			},
 			"scope": "instance",
 			"name": "cancel",
-			"lineno": "Tone/component/Envelope.js#L331",
+			"lineno": "Tone/component/Envelope.js#L362",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -4592,6 +4346,252 @@
 			"scope": "instance",
 			"name": "connect",
 			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L214",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L229",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Envelope": [
+		{
+			"description": "Trigger the attack/decay portion of the ADSR envelope.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the attack should start.",
+					"name": "time"
+				},
+				{
+					"type": [
+						"NormalRange"
+					],
+					"optional": true,
+					"defaultvalue": 1,
+					"description": "The velocity of the envelope scales the vales.\n                              number between 0-1",
+					"name": "velocity"
+				}
+			],
+			"examples": [
+				"//trigger the attack 0.5 seconds from now with a velocity of 0.2\n env.triggerAttack(\"+0.5\", 0.2);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Envelope"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerAttack",
+			"lineno": "Tone/component/Envelope.js#L253"
+		},
+		{
+			"description": "Triggers the release of the envelope.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the release portion of the envelope should start.",
+					"name": "time"
+				}
+			],
+			"examples": [
+				"//trigger release immediately\n env.triggerRelease();"
+			],
+			"returns": {
+				"type": [
+					"Tone.Envelope"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerRelease",
+			"lineno": "Tone/component/Envelope.js#L309"
+		},
+		{
+			"description": "Get the scheduled value at the given time. This will\n return the unconverted (raw) value.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The time in seconds.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "The scheduled value at the given time."
+			},
+			"scope": "instance",
+			"name": "getValueAtTime",
+			"lineno": "Tone/component/Envelope.js#L335"
+		},
+		{
+			"description": "triggerAttackRelease is shorthand for triggerAttack, then waiting\n some duration, then triggerRelease.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The duration of the sustain.",
+					"name": "duration"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the attack should be triggered.",
+					"name": "time"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 1,
+					"description": "The velocity of the envelope.",
+					"name": "velocity"
+				}
+			],
+			"examples": [
+				"//trigger the attack and then the release after 0.6 seconds.\nenv.triggerAttackRelease(0.6);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Envelope"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerAttackRelease",
+			"lineno": "Tone/component/Envelope.js#L350"
+		},
+		{
+			"description": "Cancels all scheduled envelope changes after the given time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "after"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Envelope"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "cancel",
+			"lineno": "Tone/component/Envelope.js#L362"
+		},
+		{
+			"description": "Disconnect and dispose.",
+			"returns": {
+				"type": [
+					"Tone.Envelope"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/Envelope.js#L478"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -24050,233 +24050,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"FatOscillator": [
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.FatOscillator"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/source/FatOscillator.js#L278"
-		},
-		{
-			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the source should be started.",
-					"name": "time"
-				}
-			],
-			"examples": [
-				"source.start(\"+0.5\"); //starts the source 0.5 seconds from now"
-			],
-			"returns": {
-				"type": [
-					"Tone.Source"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "start",
-			"lineno": "Tone/source/Source.js#L144",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Stop the source at the specified time. If no time is given,\n stop the source now.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the source should be stopped.",
-					"name": "time"
-				}
-			],
-			"examples": [
-				"source.stop(); // stops the source immediately"
-			],
-			"returns": {
-				"type": [
-					"Tone.Source"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "stop",
-			"lineno": "Tone/source/Source.js#L186",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Sync the source to the Transport so that all subsequent\n calls to `start` and `stop` are synced to the TransportTime\n instead of the AudioContext time.",
-			"examples": [
-				"//sync the source so that it plays between 0 and 0.3 on the Transport's timeline\nsource.sync().start(0).stop(0.3);\n//start the transport.\nTone.Transport.start();\n\n ",
-				"//start the transport with an offset and the sync'ed sources\n//will start in the correct position\nsource.sync().start(0.1);\n//the source will be invoked with an offset of 0.4\nTone.Transport.start(\"+0.5\", 0.5);"
-			],
-			"returns": {
-				"type": [
-					"Tone.Source"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "sync",
-			"lineno": "Tone/source/Source.js#L222",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Unsync the source to the Transport. See Tone.Source.sync",
-			"returns": {
-				"type": [
-					"Tone.Source"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L255",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"GrainPlayer": [
 		{
 			"description": "Play the buffer at the given startTime. Optionally add an offset\n and/or duration which will play the buffer from a position\n within the buffer for the given duration.",
@@ -26197,6 +25970,233 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/source/BufferSource.js#L410"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L214",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L229",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"FatOscillator": [
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.FatOscillator"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/source/FatOscillator.js#L276"
+		},
+		{
+			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the source should be started.",
+					"name": "time"
+				}
+			],
+			"examples": [
+				"source.start(\"+0.5\"); //starts the source 0.5 seconds from now"
+			],
+			"returns": {
+				"type": [
+					"Tone.Source"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "start",
+			"lineno": "Tone/source/Source.js#L144",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "Stop the source at the specified time. If no time is given,\n stop the source now.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the source should be stopped.",
+					"name": "time"
+				}
+			],
+			"examples": [
+				"source.stop(); // stops the source immediately"
+			],
+			"returns": {
+				"type": [
+					"Tone.Source"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "stop",
+			"lineno": "Tone/source/Source.js#L186",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "Sync the source to the Transport so that all subsequent\n calls to `start` and `stop` are synced to the TransportTime\n instead of the AudioContext time.",
+			"examples": [
+				"//sync the source so that it plays between 0 and 0.3 on the Transport's timeline\nsource.sync().start(0).stop(0.3);\n//start the transport.\nTone.Transport.start();\n\n ",
+				"//start the transport with an offset and the sync'ed sources\n//will start in the correct position\nsource.sync().start(0.1);\n//the source will be invoked with an offset of 0.4\nTone.Transport.start(\"+0.5\", 0.5);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Source"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "sync",
+			"lineno": "Tone/source/Source.js#L222",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "Unsync the source to the Transport. See Tone.Source.sync",
+			"returns": {
+				"type": [
+					"Tone.Source"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "unsync",
+			"lineno": "Tone/source/Source.js#L255",
+			"inherits": "Tone.Source"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",

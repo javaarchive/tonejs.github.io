@@ -436,147 +436,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"Envelope": [
-		{
-			"description": "When triggerAttack is called, the attack time is the amount of\n time it takes for the envelope to reach it's maximum value.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "attack",
-			"lineno": "Tone/component/Envelope.js#L43"
-		},
-		{
-			"description": "After the attack portion of the envelope, the value will fall\n over the duration of the decay time to it's sustain value.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "decay",
-			"lineno": "Tone/component/Envelope.js#L50"
-		},
-		{
-			"description": "The sustain value is the value\n\twhich the envelope rests at after triggerAttack is\n\tcalled, but before triggerRelease is invoked.",
-			"type": [
-				"NormalRange"
-			],
-			"scope": "instance",
-			"name": "sustain",
-			"lineno": "Tone/component/Envelope.js#L58"
-		},
-		{
-			"description": "After triggerRelease is called, the envelope's\n value will fall to it's miminum value over the\n duration of the release time.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "release",
-			"lineno": "Tone/component/Envelope.js#L66"
-		},
-		{
-			"description": "Read the current value of the envelope. Useful for\nsyncronizing visual output to the envelope.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "value",
-			"lineno": "Tone/component/Envelope.js#L110"
-		},
-		{
-			"description": "The shape of the attack.\nCan be any of these strings:\n<ul>\n  <li>linear</li>\n  <li>exponential</li>\n  <li>sine</li>\n  <li>cosine</li>\n  <li>bounce</li>\n  <li>ripple</li>\n  <li>step</li>\n</ul>\nCan also be an array which describes the curve. Values\nin the array are evenly subdivided and linearly\ninterpolated over the duration of the attack.",
-			"type": [
-				"String",
-				"Array"
-			],
-			"examples": [
-				"env.attackCurve = \"linear\";",
-				"//can also be an array\nenv.attackCurve = [0, 0.2, 0.3, 0.4, 1]"
-			],
-			"scope": "instance",
-			"name": "attackCurve",
-			"lineno": "Tone/component/Envelope.js#L124"
-		},
-		{
-			"description": "The shape of the release. See the attack curve types.",
-			"type": [
-				"String",
-				"Array"
-			],
-			"examples": [
-				"env.releaseCurve = \"linear\";"
-			],
-			"scope": "instance",
-			"name": "releaseCurve",
-			"lineno": "Tone/component/Envelope.js#L180"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelCount is the number of channels used when up-mixing and down-mixing\n connections to any inputs to the node. The default value is 2 except for\n specific nodes where its value is specially determined.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelCount",
-			"lineno": "Tone/core/AudioNode.js#L62",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelCountMode determines how channels will be counted when up-mixing and\n down-mixing connections to any inputs to the node.\n The default value is \"max\". This attribute has no effect for nodes with no inputs.",
-			"type": [
-				"String"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelCountMode",
-			"lineno": "Tone/core/AudioNode.js#L81",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelInterpretation determines how individual channels will be treated\n when up-mixing and down-mixing connections to any inputs to the node.\n The default value is \"speakers\".",
-			"type": [
-				"String"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelInterpretation",
-			"lineno": "Tone/core/AudioNode.js#L99",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "The number of inputs feeding into the AudioNode.\n For source nodes, this will be 0.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "numberOfInputs",
-			"lineno": "Tone/core/AudioNode.js#L117",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "The number of outputs coming out of the AudioNode.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "numberOfOutputs",
-			"lineno": "Tone/core/AudioNode.js#L139",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"FFT": [
 		{
 			"description": "The size of analysis. This must be a power of two in the range 32 to 32768.",
@@ -1030,7 +889,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "value",
-			"lineno": "Tone/component/Envelope.js#L110",
+			"lineno": "Tone/component/Envelope.js#L112",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -1045,7 +904,7 @@
 			],
 			"scope": "instance",
 			"name": "attackCurve",
-			"lineno": "Tone/component/Envelope.js#L124",
+			"lineno": "Tone/component/Envelope.js#L171",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -1059,7 +918,20 @@
 			],
 			"scope": "instance",
 			"name": "releaseCurve",
-			"lineno": "Tone/component/Envelope.js#L180",
+			"lineno": "Tone/component/Envelope.js#L204",
+			"inherits": "Tone.Envelope"
+		},
+		{
+			"description": "The shape of the decay either \"linear\" or \"exponential\"",
+			"type": [
+				"String"
+			],
+			"examples": [
+				"env.decayCurve = \"linear\";"
+			],
+			"scope": "instance",
+			"name": "decayCurve",
+			"lineno": "Tone/component/Envelope.js#L221",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -2617,7 +2489,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "value",
-			"lineno": "Tone/component/Envelope.js#L110",
+			"lineno": "Tone/component/Envelope.js#L112",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -2632,7 +2504,7 @@
 			],
 			"scope": "instance",
 			"name": "attackCurve",
-			"lineno": "Tone/component/Envelope.js#L124",
+			"lineno": "Tone/component/Envelope.js#L171",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -2646,7 +2518,20 @@
 			],
 			"scope": "instance",
 			"name": "releaseCurve",
-			"lineno": "Tone/component/Envelope.js#L180",
+			"lineno": "Tone/component/Envelope.js#L204",
+			"inherits": "Tone.Envelope"
+		},
+		{
+			"description": "The shape of the decay either \"linear\" or \"exponential\"",
+			"type": [
+				"String"
+			],
+			"examples": [
+				"env.decayCurve = \"linear\";"
+			],
+			"scope": "instance",
+			"name": "decayCurve",
+			"lineno": "Tone/component/Envelope.js#L221",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -2911,6 +2796,159 @@
 			"scope": "instance",
 			"name": "size",
 			"lineno": "Tone/component/Waveform.js#L43"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelCount is the number of channels used when up-mixing and down-mixing\n connections to any inputs to the node. The default value is 2 except for\n specific nodes where its value is specially determined.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelCount",
+			"lineno": "Tone/core/AudioNode.js#L62",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelCountMode determines how channels will be counted when up-mixing and\n down-mixing connections to any inputs to the node.\n The default value is \"max\". This attribute has no effect for nodes with no inputs.",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelCountMode",
+			"lineno": "Tone/core/AudioNode.js#L81",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelInterpretation determines how individual channels will be treated\n when up-mixing and down-mixing connections to any inputs to the node.\n The default value is \"speakers\".",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelInterpretation",
+			"lineno": "Tone/core/AudioNode.js#L99",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "The number of inputs feeding into the AudioNode.\n For source nodes, this will be 0.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "numberOfInputs",
+			"lineno": "Tone/core/AudioNode.js#L117",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "The number of outputs coming out of the AudioNode.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "numberOfOutputs",
+			"lineno": "Tone/core/AudioNode.js#L139",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Envelope": [
+		{
+			"description": "When triggerAttack is called, the attack time is the amount of\n time it takes for the envelope to reach it's maximum value.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "attack",
+			"lineno": "Tone/component/Envelope.js#L43"
+		},
+		{
+			"description": "After the attack portion of the envelope, the value will fall\n over the duration of the decay time to it's sustain value.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "decay",
+			"lineno": "Tone/component/Envelope.js#L50"
+		},
+		{
+			"description": "The sustain value is the value\n\twhich the envelope rests at after triggerAttack is\n\tcalled, but before triggerRelease is invoked.",
+			"type": [
+				"NormalRange"
+			],
+			"scope": "instance",
+			"name": "sustain",
+			"lineno": "Tone/component/Envelope.js#L58"
+		},
+		{
+			"description": "After triggerRelease is called, the envelope's\n value will fall to it's miminum value over the\n duration of the release time.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "release",
+			"lineno": "Tone/component/Envelope.js#L66"
+		},
+		{
+			"description": "Read the current value of the envelope. Useful for\nsyncronizing visual output to the envelope.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "value",
+			"lineno": "Tone/component/Envelope.js#L112"
+		},
+		{
+			"description": "The shape of the attack.\nCan be any of these strings:\n<ul>\n  <li>linear</li>\n  <li>exponential</li>\n  <li>sine</li>\n  <li>cosine</li>\n  <li>bounce</li>\n  <li>ripple</li>\n  <li>step</li>\n</ul>\nCan also be an array which describes the curve. Values\nin the array are evenly subdivided and linearly\ninterpolated over the duration of the attack.",
+			"type": [
+				"String",
+				"Array"
+			],
+			"examples": [
+				"env.attackCurve = \"linear\";",
+				"//can also be an array\nenv.attackCurve = [0, 0.2, 0.3, 0.4, 1]"
+			],
+			"scope": "instance",
+			"name": "attackCurve",
+			"lineno": "Tone/component/Envelope.js#L171"
+		},
+		{
+			"description": "The shape of the release. See the attack curve types.",
+			"type": [
+				"String",
+				"Array"
+			],
+			"examples": [
+				"env.releaseCurve = \"linear\";"
+			],
+			"scope": "instance",
+			"name": "releaseCurve",
+			"lineno": "Tone/component/Envelope.js#L204"
+		},
+		{
+			"description": "The shape of the decay either \"linear\" or \"exponential\"",
+			"type": [
+				"String"
+			],
+			"examples": [
+				"env.decayCurve = \"linear\";"
+			],
+			"scope": "instance",
+			"name": "decayCurve",
+			"lineno": "Tone/component/Envelope.js#L221"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -9000,200 +9038,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"FatOscillator": [
-		{
-			"description": "The oscillator's frequency",
-			"type": [
-				"Frequency"
-			],
-			"scope": "instance",
-			"name": "frequency",
-			"lineno": "Tone/source/FatOscillator.js#L28",
-			"signal": true
-		},
-		{
-			"description": "The detune control signal.",
-			"type": [
-				"Cents"
-			],
-			"scope": "instance",
-			"name": "detune",
-			"lineno": "Tone/source/FatOscillator.js#L35",
-			"signal": true
-		},
-		{
-			"description": "The type of the carrier oscillator",
-			"type": [
-				"string"
-			],
-			"scope": "instance",
-			"name": "type",
-			"lineno": "Tone/source/FatOscillator.js#L142"
-		},
-		{
-			"description": "The detune spread between the oscillators. If \"count\" is\nset to 3 oscillators and the \"spread\" is set to 40,\nthe three oscillators would be detuned like this: [-20, 0, 20]\nfor a total detune spread of 40 cents.",
-			"type": [
-				"Cents"
-			],
-			"scope": "instance",
-			"name": "spread",
-			"lineno": "Tone/source/FatOscillator.js#L160"
-		},
-		{
-			"description": "The number of detuned oscillators",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "count",
-			"lineno": "Tone/source/FatOscillator.js#L185"
-		},
-		{
-			"description": "The phase of the oscillator in degrees.",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "phase",
-			"lineno": "Tone/source/FatOscillator.js#L230"
-		},
-		{
-			"description": "The partials of the carrier waveform. A partial represents\nthe amplitude at a harmonic. The first harmonic is the\nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series.\nSetting this value will automatically set the type to \"custom\".\nThe value is an empty array when the type is not \"custom\".",
-			"type": [
-				"Array"
-			],
-			"examples": [
-				"osc.partials = [1, 0.2, 0.01];"
-			],
-			"scope": "instance",
-			"name": "partials",
-			"lineno": "Tone/source/FatOscillator.js#L248"
-		},
-		{
-			"description": "Mute the output.",
-			"type": [
-				"boolean"
-			],
-			"examples": [
-				"//mute the output\nsource.mute = true;"
-			],
-			"scope": "instance",
-			"name": "mute",
-			"lineno": "Tone/source/Players.js#L104",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeIn time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeIn",
-			"lineno": "Tone/source/Players.js#L122",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The fadeOut time of the amplitude envelope.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "fadeOut",
-			"lineno": "Tone/source/Players.js#L140",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "The volume of the output in decibels.",
-			"type": [
-				"Decibels"
-			],
-			"examples": [
-				"source.volume.value = -6;"
-			],
-			"scope": "instance",
-			"name": "volume",
-			"lineno": "Tone/source/Source.js#L47",
-			"inherits": "Tone.Source",
-			"signal": true
-		},
-		{
-			"description": "Returns the playback state of the source, either \"started\" or \"stopped\".",
-			"type": [
-				"Tone.State"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "state",
-			"lineno": "Tone/source/Source.js#L92",
-			"inherits": "Tone.Source"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelCount is the number of channels used when up-mixing and down-mixing\n connections to any inputs to the node. The default value is 2 except for\n specific nodes where its value is specially determined.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelCount",
-			"lineno": "Tone/core/AudioNode.js#L62",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelCountMode determines how channels will be counted when up-mixing and\n down-mixing connections to any inputs to the node.\n The default value is \"max\". This attribute has no effect for nodes with no inputs.",
-			"type": [
-				"String"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelCountMode",
-			"lineno": "Tone/core/AudioNode.js#L81",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelInterpretation determines how individual channels will be treated\n when up-mixing and down-mixing connections to any inputs to the node.\n The default value is \"speakers\".",
-			"type": [
-				"String"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelInterpretation",
-			"lineno": "Tone/core/AudioNode.js#L99",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "The number of inputs feeding into the AudioNode.\n For source nodes, this will be 0.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "numberOfInputs",
-			"lineno": "Tone/core/AudioNode.js#L117",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "The number of outputs coming out of the AudioNode.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "numberOfOutputs",
-			"lineno": "Tone/core/AudioNode.js#L139",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"GrainPlayer": [
 		{
 			"description": "The audio buffer belonging to the player.",
@@ -10556,6 +10400,200 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
+	"FatOscillator": [
+		{
+			"description": "The oscillator's frequency",
+			"type": [
+				"Frequency"
+			],
+			"scope": "instance",
+			"name": "frequency",
+			"lineno": "Tone/source/FatOscillator.js#L28",
+			"signal": true
+		},
+		{
+			"description": "The detune control signal.",
+			"type": [
+				"Cents"
+			],
+			"scope": "instance",
+			"name": "detune",
+			"lineno": "Tone/source/FatOscillator.js#L35",
+			"signal": true
+		},
+		{
+			"description": "The type of the carrier oscillator",
+			"type": [
+				"string"
+			],
+			"scope": "instance",
+			"name": "type",
+			"lineno": "Tone/source/FatOscillator.js#L142"
+		},
+		{
+			"description": "The detune spread between the oscillators. If \"count\" is\nset to 3 oscillators and the \"spread\" is set to 40,\nthe three oscillators would be detuned like this: [-20, 0, 20]\nfor a total detune spread of 40 cents.",
+			"type": [
+				"Cents"
+			],
+			"scope": "instance",
+			"name": "spread",
+			"lineno": "Tone/source/FatOscillator.js#L160"
+		},
+		{
+			"description": "The number of detuned oscillators",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "count",
+			"lineno": "Tone/source/FatOscillator.js#L185"
+		},
+		{
+			"description": "The phase of the oscillator in degrees.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "phase",
+			"lineno": "Tone/source/FatOscillator.js#L228"
+		},
+		{
+			"description": "The partials of the carrier waveform. A partial represents\nthe amplitude at a harmonic. The first harmonic is the\nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series.\nSetting this value will automatically set the type to \"custom\".\nThe value is an empty array when the type is not \"custom\".",
+			"type": [
+				"Array"
+			],
+			"examples": [
+				"osc.partials = [1, 0.2, 0.01];"
+			],
+			"scope": "instance",
+			"name": "partials",
+			"lineno": "Tone/source/FatOscillator.js#L246"
+		},
+		{
+			"description": "Mute the output.",
+			"type": [
+				"boolean"
+			],
+			"examples": [
+				"//mute the output\nsource.mute = true;"
+			],
+			"scope": "instance",
+			"name": "mute",
+			"lineno": "Tone/source/Players.js#L104",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeIn time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeIn",
+			"lineno": "Tone/source/Players.js#L122",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The fadeOut time of the amplitude envelope.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "fadeOut",
+			"lineno": "Tone/source/Players.js#L140",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "The volume of the output in decibels.",
+			"type": [
+				"Decibels"
+			],
+			"examples": [
+				"source.volume.value = -6;"
+			],
+			"scope": "instance",
+			"name": "volume",
+			"lineno": "Tone/source/Source.js#L47",
+			"inherits": "Tone.Source",
+			"signal": true
+		},
+		{
+			"description": "Returns the playback state of the source, either \"started\" or \"stopped\".",
+			"type": [
+				"Tone.State"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "state",
+			"lineno": "Tone/source/Source.js#L92",
+			"inherits": "Tone.Source"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelCount is the number of channels used when up-mixing and down-mixing\n connections to any inputs to the node. The default value is 2 except for\n specific nodes where its value is specially determined.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelCount",
+			"lineno": "Tone/core/AudioNode.js#L62",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelCountMode determines how channels will be counted when up-mixing and\n down-mixing connections to any inputs to the node.\n The default value is \"max\". This attribute has no effect for nodes with no inputs.",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelCountMode",
+			"lineno": "Tone/core/AudioNode.js#L81",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelInterpretation determines how individual channels will be treated\n when up-mixing and down-mixing connections to any inputs to the node.\n The default value is \"speakers\".",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelInterpretation",
+			"lineno": "Tone/core/AudioNode.js#L99",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "The number of inputs feeding into the AudioNode.\n For source nodes, this will be 0.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "numberOfInputs",
+			"lineno": "Tone/core/AudioNode.js#L117",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "The number of outputs coming out of the AudioNode.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "numberOfOutputs",
+			"lineno": "Tone/core/AudioNode.js#L139",
+			"inherits": "Tone.AudioNode"
+		}
+	],
 	"Noise": [
 		{
 			"description": "The playback rate of the noise. Affects\n the \"frequency\" of the noise.",
@@ -11267,7 +11305,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "value",
-			"lineno": "Tone/component/Envelope.js#L110",
+			"lineno": "Tone/component/Envelope.js#L112",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -11282,7 +11320,7 @@
 			],
 			"scope": "instance",
 			"name": "attackCurve",
-			"lineno": "Tone/component/Envelope.js#L124",
+			"lineno": "Tone/component/Envelope.js#L171",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -11296,7 +11334,20 @@
 			],
 			"scope": "instance",
 			"name": "releaseCurve",
-			"lineno": "Tone/component/Envelope.js#L180",
+			"lineno": "Tone/component/Envelope.js#L204",
+			"inherits": "Tone.Envelope"
+		},
+		{
+			"description": "The shape of the decay either \"linear\" or \"exponential\"",
+			"type": [
+				"String"
+			],
+			"examples": [
+				"env.decayCurve = \"linear\";"
+			],
+			"scope": "instance",
+			"name": "decayCurve",
+			"lineno": "Tone/component/Envelope.js#L221",
 			"inherits": "Tone.Envelope"
 		},
 		{

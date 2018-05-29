@@ -20,10 +20,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Envelope": [
-		"AudioNode",
-		"Tone"
-	],
 	"FFT": [
 		"AudioNode",
 		"Tone"
@@ -115,6 +111,10 @@
 		"Tone"
 	],
 	"Waveform": [
+		"AudioNode",
+		"Tone"
+	],
+	"Envelope": [
 		"AudioNode",
 		"Tone"
 	],
@@ -528,11 +528,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"FatOscillator": [
-		"Source",
-		"AudioNode",
-		"Tone"
-	],
 	"GrainPlayer": [
 		"Source",
 		"AudioNode",
@@ -566,6 +561,11 @@
 		"Tone"
 	],
 	"BufferSource": [
+		"AudioNode",
+		"Tone"
+	],
+	"FatOscillator": [
+		"Source",
 		"AudioNode",
 		"Tone"
 	],
