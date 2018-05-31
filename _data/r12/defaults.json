@@ -506,11 +506,6 @@
 	"Monophonic": {
 		"portamento": 0
 	},
-	"PluckSynth": {
-		"attackNoise": 1,
-		"dampening": 4000,
-		"resonance": 0.7
-	},
 	"PolySynth": {
 		"polyphony": 4,
 		"volume": 0,
@@ -537,6 +532,11 @@
 			"decay": 0.1,
 			"sustain": 0
 		}
+	},
+	"PluckSynth": {
+		"attackNoise": 1,
+		"dampening": 4000,
+		"resonance": 0.7
 	},
 	"Sampler": {
 		"attack": 0,

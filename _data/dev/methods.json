@@ -16770,258 +16770,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"PluckSynth": [
-		{
-			"description": "Trigger the note.",
-			"params": [
-				{
-					"type": [
-						"Frequency"
-					],
-					"description": "The note to trigger.",
-					"name": "note"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the note should be triggered.",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.PluckSynth"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerAttack",
-			"lineno": "Tone/instrument/PluckSynth.js#L84"
-		},
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.PluckSynth"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/instrument/PluckSynth.js#L98"
-		},
-		{
-			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
-			"examples": [
-				"instrument.sync()\n//schedule 3 notes when the transport first starts\ninstrument.triggerAttackRelease('C4', '8n', 0)\ninstrument.triggerAttackRelease('E4', '8n', '8n')\ninstrument.triggerAttackRelease('G4', '8n', '4n')\n//start the transport to hear the notes\nTransport.start()"
-			],
-			"returns": {
-				"type": [
-					"Tone.Instrument"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "sync",
-			"lineno": "Tone/instrument/Instrument.js#L82",
-			"inherits": "Tone.Instrument"
-		},
-		{
-			"description": "Unsync the instrument from the Transport",
-			"returns": {
-				"type": [
-					"Tone.Instrument"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "unsync",
-			"lineno": "Tone/instrument/Instrument.js#L111",
-			"inherits": "Tone.Instrument"
-		},
-		{
-			"description": "Trigger the attack and then the release after the duration.",
-			"params": [
-				{
-					"type": [
-						"Frequency"
-					],
-					"description": "The note to trigger.",
-					"name": "note"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "How long the note should be held for before\n                         triggering the release. This value must be greater than 0.",
-					"name": "duration"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the note should be triggered.",
-					"name": "time"
-				},
-				{
-					"type": [
-						"NormalRange"
-					],
-					"optional": true,
-					"defaultvalue": 1,
-					"description": "The velocity the note should be triggered at.",
-					"name": "velocity"
-				}
-			],
-			"examples": [
-				"//trigger \"C4\" for the duration of an 8th note\nsynth.triggerAttackRelease(\"C4\", \"8n\");"
-			],
-			"returns": {
-				"type": [
-					"Tone.Instrument"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Instrument.js#L135",
-			"inherits": "Tone.Instrument"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"PolySynth": [
 		{
 			"description": "Trigger the attack portion of the note",
@@ -17872,6 +17620,208 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/instrument/NoiseSynth.js#L134"
+		},
+		{
+			"description": "Unsync the instrument from the Transport",
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "unsync",
+			"lineno": "Tone/instrument/Instrument.js#L111",
+			"inherits": "Tone.Instrument"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L214",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L229",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"PluckSynth": [
+		{
+			"description": "Trigger the note.",
+			"params": [
+				{
+					"type": [
+						"Frequency"
+					],
+					"description": "The note to trigger.",
+					"name": "note"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the note should be triggered.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.PluckSynth"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerAttack",
+			"lineno": "Tone/instrument/PluckSynth.js#L84"
+		},
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.PluckSynth"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/instrument/PluckSynth.js#L107"
+		},
+		{
+			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
+			"examples": [
+				"instrument.sync()\n//schedule 3 notes when the transport first starts\ninstrument.triggerAttackRelease('C4', '8n', 0)\ninstrument.triggerAttackRelease('E4', '8n', '8n')\ninstrument.triggerAttackRelease('G4', '8n', '4n')\n//start the transport to hear the notes\nTransport.start()"
+			],
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "sync",
+			"lineno": "Tone/instrument/Instrument.js#L82",
+			"inherits": "Tone.Instrument"
 		},
 		{
 			"description": "Unsync the instrument from the Transport",

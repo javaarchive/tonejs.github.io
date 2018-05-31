@@ -395,11 +395,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"PluckSynth": [
-		"Instrument",
-		"AudioNode",
-		"Tone"
-	],
 	"PolySynth": [
 		"Instrument",
 		"AudioNode",
@@ -412,6 +407,11 @@
 		"Tone"
 	],
 	"NoiseSynth": [
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
+	"PluckSynth": [
 		"Instrument",
 		"AudioNode",
 		"Tone"
