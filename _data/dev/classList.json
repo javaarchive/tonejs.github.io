@@ -8,9 +8,7 @@
 		"FFT",
 		"FeedbackCombFilter",
 		"Filter",
-		"Follower",
 		"FrequencyEnvelope",
-		"Gate",
 		"LFO",
 		"Limiter",
 		"LowpassCombFilter",
@@ -29,6 +27,8 @@
 		"Volume",
 		"Waveform",
 		"Envelope",
+		"Follower",
+		"Gate",
 		"Meter",
 		"Split"
 	],
@@ -61,7 +61,6 @@
 		"Tone"
 	],
 	"effect": [
-		"AutoFilter",
 		"AutoPanner",
 		"AutoWah",
 		"BitCrusher",
@@ -84,7 +83,8 @@
 		"StereoWidener",
 		"StereoXFeedbackEffect",
 		"Tremolo",
-		"Vibrato"
+		"Vibrato",
+		"AutoFilter"
 	],
 	"event": [
 		"Event",
@@ -110,26 +110,26 @@
 	],
 	"signal": [
 		"Abs",
-		"Add",
 		"AudioToGain",
 		"EqualPowerGain",
 		"GainToAudio",
-		"GreaterThan",
 		"GreaterThanZero",
 		"Modulo",
-		"Multiply",
 		"Negate",
 		"Normalize",
 		"Pow",
 		"Scale",
 		"ScaleExp",
-		"Subtract",
 		"TickSignal",
-		"TransportTimelineSignal",
 		"WaveShaper",
 		"Zero",
+		"Add",
+		"GreaterThan",
+		"Multiply",
 		"Signal",
-		"SignalBase"
+		"SignalBase",
+		"Subtract",
+		"TransportTimelineSignal"
 	],
 	"source": [
 		"AMOscillator",

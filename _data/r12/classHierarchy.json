@@ -32,16 +32,8 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Follower": [
-		"AudioNode",
-		"Tone"
-	],
 	"FrequencyEnvelope": [
 		"Envelope",
-		"AudioNode",
-		"Tone"
-	],
-	"Gate": [
 		"AudioNode",
 		"Tone"
 	],
@@ -115,6 +107,14 @@
 		"Tone"
 	],
 	"Envelope": [
+		"AudioNode",
+		"Tone"
+	],
+	"Follower": [
+		"AudioNode",
+		"Tone"
+	],
+	"Gate": [
 		"AudioNode",
 		"Tone"
 	],
@@ -200,11 +200,6 @@
 		"Tone"
 	],
 	"Param": [
-		"AudioNode",
-		"Tone"
-	],
-	"AutoFilter": [
-		"Effect",
 		"AudioNode",
 		"Tone"
 	],
@@ -333,6 +328,11 @@
 		"AudioNode",
 		"Tone"
 	],
+	"AutoFilter": [
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
 	"Event": [
 		"Tone"
 	],
@@ -425,12 +425,6 @@
 		"SignalBase",
 		"Tone"
 	],
-	"Add": [
-		"Signal",
-		"Param",
-		"AudioNode",
-		"Tone"
-	],
 	"AudioToGain": [
 		"SignalBase",
 		"Tone"
@@ -443,24 +437,12 @@
 		"SignalBase",
 		"Tone"
 	],
-	"GreaterThan": [
-		"Signal",
-		"Param",
-		"AudioNode",
-		"Tone"
-	],
 	"GreaterThanZero": [
 		"SignalBase",
 		"Tone"
 	],
 	"Modulo": [
 		"SignalBase",
-		"Tone"
-	],
-	"Multiply": [
-		"Signal",
-		"Param",
-		"AudioNode",
 		"Tone"
 	],
 	"Negate": [
@@ -483,19 +465,7 @@
 		"SignalBase",
 		"Tone"
 	],
-	"Subtract": [
-		"Signal",
-		"Param",
-		"AudioNode",
-		"Tone"
-	],
 	"TickSignal": [
-		"Signal",
-		"Param",
-		"AudioNode",
-		"Tone"
-	],
-	"TransportTimelineSignal": [
 		"Signal",
 		"Param",
 		"AudioNode",
@@ -509,12 +479,42 @@
 		"SignalBase",
 		"Tone"
 	],
+	"Add": [
+		"Signal",
+		"Param",
+		"AudioNode",
+		"Tone"
+	],
+	"GreaterThan": [
+		"Signal",
+		"Param",
+		"AudioNode",
+		"Tone"
+	],
+	"Multiply": [
+		"Signal",
+		"Param",
+		"AudioNode",
+		"Tone"
+	],
 	"Signal": [
 		"Param",
 		"AudioNode",
 		"Tone"
 	],
 	"SignalBase": [
+		"Tone"
+	],
+	"Subtract": [
+		"Signal",
+		"Param",
+		"AudioNode",
+		"Tone"
+	],
+	"TransportTimelineSignal": [
+		"Signal",
+		"Param",
+		"AudioNode",
 		"Tone"
 	],
 	"AMOscillator": [

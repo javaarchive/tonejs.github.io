@@ -211,32 +211,6 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
-	"Follower": {
-		"description": "Tone.Follower is a  crude envelope follower which will follow\n         the amplitude of an incoming signal.\n         Take care with small (< 0.02) attack or decay values\n         as follower has some ripple which is exaggerated\n         at these values. Read more about envelope followers (also known\n         as envelope detectors) on [Wikipedia](https://en.wikipedia.org/wiki/Envelope_detector).",
-		"params": [
-			{
-				"type": [
-					"Time",
-					"Object"
-				],
-				"optional": true,
-				"description": "The rate at which the follower rises.",
-				"name": "attack"
-			},
-			{
-				"type": [
-					"Time"
-				],
-				"optional": true,
-				"description": "The rate at which the folower falls.",
-				"name": "release"
-			}
-		],
-		"examples": [
-			"var follower = new Tone.Follower(0.2, 0.4);"
-		],
-		"extends": "Tone.AudioNode"
-	},
 	"FrequencyEnvelope": {
 		"description": "Tone.FrequencyEnvelope is a Tone.ScaledEnvelope, but instead of `min` and `max`\n        it's got a `baseFrequency` and `octaves` parameter.",
 		"params": [
@@ -278,40 +252,6 @@
 			"var freqEnv = new Tone.FrequencyEnvelope({\n \t\"attack\" : 0.2,\n \t\"baseFrequency\" : \"C2\",\n \t\"octaves\" : 4\n });\n freqEnv.connect(oscillator.frequency);"
 		],
 		"extends": "Tone.Envelope"
-	},
-	"Gate": {
-		"description": "Tone.Gate only passes a signal through when the incoming\n         signal exceeds a specified threshold. To do this, Gate uses\n         a Tone.Follower to follow the amplitude of the incoming signal.\n         A common implementation of this class is a [Noise Gate](https://en.wikipedia.org/wiki/Noise_gate).",
-		"params": [
-			{
-				"type": [
-					"Decibels",
-					"Object"
-				],
-				"optional": true,
-				"description": "The threshold above which the gate will open.",
-				"name": "threshold"
-			},
-			{
-				"type": [
-					"Time"
-				],
-				"optional": true,
-				"description": "The follower's attack time",
-				"name": "attack"
-			},
-			{
-				"type": [
-					"Time"
-				],
-				"optional": true,
-				"description": "The follower's release time",
-				"name": "release"
-			}
-		],
-		"examples": [
-			"var gate = new Tone.Gate(-30, 0.2, 0.3).toMaster();\nvar mic = new Tone.UserMedia().connect(gate);\n//the gate will only pass through the incoming\n//signal when it's louder than -30db"
-		],
-		"extends": "Tone.AudioNode"
 	},
 	"LFO": {
 		"description": "LFO stands for low frequency oscillator. Tone.LFO produces an output signal\n         which can be attached to an AudioParam or Tone.Signal\n         in order to modulate that parameter with an oscillator. The LFO can\n         also be synced to the transport to start/stop and change when the tempo changes.",
@@ -652,6 +592,66 @@
 		],
 		"examples": [
 			"//an amplitude envelope\nvar gainNode = Tone.context.createGain();\nvar env = new Tone.Envelope({\n\t\"attack\" : 0.1,\n\t\"decay\" : 0.2,\n\t\"sustain\" : 1,\n\t\"release\" : 0.8,\n});\nenv.connect(gainNode.gain);"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"Follower": {
+		"description": "Tone.Follower is a  crude envelope follower which will follow\n         the amplitude of an incoming signal.\n         Take care with small (< 0.02) attack or decay values\n         as follower has some ripple which is exaggerated\n         at these values. Read more about envelope followers (also known\n         as envelope detectors) on [Wikipedia](https://en.wikipedia.org/wiki/Envelope_detector).",
+		"params": [
+			{
+				"type": [
+					"Time",
+					"Object"
+				],
+				"optional": true,
+				"description": "The rate at which the follower rises.",
+				"name": "attack"
+			},
+			{
+				"type": [
+					"Time"
+				],
+				"optional": true,
+				"description": "The rate at which the folower falls.",
+				"name": "release"
+			}
+		],
+		"examples": [
+			"var follower = new Tone.Follower(0.2, 0.4);"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"Gate": {
+		"description": "Tone.Gate only passes a signal through when the incoming\n         signal exceeds a specified threshold. To do this, Gate uses\n         a Tone.Follower to follow the amplitude of the incoming signal.\n         A common implementation of this class is a [Noise Gate](https://en.wikipedia.org/wiki/Noise_gate).",
+		"params": [
+			{
+				"type": [
+					"Decibels",
+					"Object"
+				],
+				"optional": true,
+				"description": "The threshold above which the gate will open.",
+				"name": "threshold"
+			},
+			{
+				"type": [
+					"Time"
+				],
+				"optional": true,
+				"description": "The follower's attack time",
+				"name": "attack"
+			},
+			{
+				"type": [
+					"Time"
+				],
+				"optional": true,
+				"description": "The follower's release time",
+				"name": "release"
+			}
+		],
+		"examples": [
+			"var gate = new Tone.Gate(-30, 0.2, 0.3).toMaster();\nvar mic = new Tone.UserMedia().connect(gate);\n//the gate will only pass through the incoming\n//signal when it's louder than -30db"
 		],
 		"extends": "Tone.AudioNode"
 	},
@@ -1067,40 +1067,6 @@
 	"Tone": {
 		"description": "Tone is the base class of all other classes.",
 		"params": []
-	},
-	"AutoFilter": {
-		"description": "Tone.AutoFilter is a Tone.Filter with a Tone.LFO connected to the filter cutoff frequency.\n        Setting the LFO rate and depth allows for control over the filter modulation rate \n        and depth.",
-		"params": [
-			{
-				"type": [
-					"Time",
-					"Object"
-				],
-				"optional": true,
-				"description": "The rate of the LFO.",
-				"name": "frequency"
-			},
-			{
-				"type": [
-					"Frequency"
-				],
-				"optional": true,
-				"description": "The lower value of the LFOs oscillation",
-				"name": "baseFrequency"
-			},
-			{
-				"type": [
-					"Frequency"
-				],
-				"optional": true,
-				"description": "The number of octaves above the baseFrequency",
-				"name": "octaves"
-			}
-		],
-		"examples": [
-			"//create an autofilter and start it's LFO\nvar autoFilter = new Tone.AutoFilter(\"4n\").toMaster().start();\n//route an oscillator through the filter and start it\nvar oscillator = new Tone.Oscillator().connect(autoFilter).start();"
-		],
-		"extends": "Tone.Effect"
 	},
 	"AutoPanner": {
 		"description": "Tone.AutoPanner is a Tone.Panner with an LFO connected to the pan amount. \n        More on using autopanners [here](https://www.ableton.com/en/blog/autopan-chopper-effect-and-more-liveschool/).",
@@ -1531,6 +1497,40 @@
 		],
 		"extends": "Tone.Effect"
 	},
+	"AutoFilter": {
+		"description": "Tone.AutoFilter is a Tone.Filter with a Tone.LFO connected to the filter cutoff frequency.\n        Setting the LFO rate and depth allows for control over the filter modulation rate \n        and depth.",
+		"params": [
+			{
+				"type": [
+					"Time",
+					"Object"
+				],
+				"optional": true,
+				"description": "The rate of the LFO.",
+				"name": "frequency"
+			},
+			{
+				"type": [
+					"Frequency"
+				],
+				"optional": true,
+				"description": "The lower value of the LFOs oscillation",
+				"name": "baseFrequency"
+			},
+			{
+				"type": [
+					"Frequency"
+				],
+				"optional": true,
+				"description": "The number of octaves above the baseFrequency",
+				"name": "octaves"
+			}
+		],
+		"examples": [
+			"//create an autofilter and start it's LFO\nvar autoFilter = new Tone.AutoFilter(\"4n\").toMaster().start();\n//route an oscillator through the filter and start it\nvar oscillator = new Tone.Oscillator().connect(autoFilter).start();"
+		],
+		"extends": "Tone.Effect"
+	},
 	"Event": {
 		"description": "Tone.Event abstracts away Tone.Transport.schedule and provides a schedulable\n         callback for a single or repeatable events along the timeline.",
 		"params": [
@@ -1880,24 +1880,6 @@
 		],
 		"extends": "Tone.SignalBase"
 	},
-	"Add": {
-		"description": "Add a signal and a number or two signals. When no value is\n        passed into the constructor, Tone.Add will sum <code>input[0]</code>\n        and <code>input[1]</code>. If a value is passed into the constructor, \n        the it will be added to the input.",
-		"params": [
-			{
-				"type": [
-					"number"
-				],
-				"optional": true,
-				"description": "If no value is provided, Tone.Add will sum the first\n                        and second inputs.",
-				"name": "value"
-			}
-		],
-		"examples": [
-			"var signal = new Tone.Signal(2);\nvar add = new Tone.Add(2);\nsignal.connect(add);\n//the output of add equals 4\n ",
-			"//if constructed with no arguments\n//it will add the first and second inputs\nvar add = new Tone.Add();\nvar sig0 = new Tone.Signal(3).connect(add, 0, 0);\nvar sig1 = new Tone.Signal(4).connect(add, 0, 1);\n//the output of add equals 7. "
-		],
-		"extends": "Tone.Signal"
-	},
 	"AudioToGain": {
 		"description": "AudioToGain converts an input in AudioRange [-1,1] to NormalRange [0,1]. \n        See Tone.GainToAudio.",
 		"examples": [
@@ -1918,24 +1900,6 @@
 			"var g2a = new Tone.GainToAudio();"
 		],
 		"extends": "Tone.SignalBase"
-	},
-	"GreaterThan": {
-		"description": "Output 1 if the signal is greater than the value, otherwise outputs 0.\n         can compare two signals or a signal and a number.",
-		"params": [
-			{
-				"type": [
-					"number"
-				],
-				"optional": true,
-				"defaultvalue": 0,
-				"description": "the value to compare to the incoming signal",
-				"name": "value"
-			}
-		],
-		"examples": [
-			"var gt = new Tone.GreaterThan(2);\nvar sig = new Tone.Signal(4).connect(gt);\n//output of gt is equal 1."
-		],
-		"extends": "Tone.Signal"
 	},
 	"GreaterThanZero": {
 		"description": "GreaterThanZero outputs 1 when the input is strictly greater than zero",
@@ -1959,24 +1923,6 @@
 			"var mod = new Tone.Modulo(0.2)\nvar sig = new Tone.Signal(0.5).connect(mod);\n//mod outputs 0.1"
 		],
 		"extends": "Tone.SignalBase"
-	},
-	"Multiply": {
-		"description": "Multiply two incoming signals. Or, if a number is given in the constructor,\n         multiplies the incoming signal by that value.",
-		"params": [
-			{
-				"type": [
-					"number"
-				],
-				"optional": true,
-				"description": "Constant value to multiple. If no value is provided,\n                        it will return the product of the first and second inputs",
-				"name": "value"
-			}
-		],
-		"examples": [
-			"var mult = new Tone.Multiply();\nvar sigA = new Tone.Signal(3);\nvar sigB = new Tone.Signal(4);\nsigA.connect(mult, 0, 0);\nsigB.connect(mult, 0, 1);\n//output of mult is 12.\n ",
-			"var mult = new Tone.Multiply(10);\nvar sig = new Tone.Signal(2).connect(mult);\n//the output of mult is 20."
-		],
-		"extends": "Tone.Signal"
 	},
 	"Negate": {
 		"description": "Negate the incoming signal. i.e. an input signal of 10 will output -10",
@@ -2087,24 +2033,6 @@
 		],
 		"extends": "Tone.SignalBase"
 	},
-	"Subtract": {
-		"description": "Subtract the signal connected to <code>input[1]</code> from the signal connected \n        to <code>input[0]</code>. If an argument is provided in the constructor, the \n        signals <code>.value</code> will be subtracted from the incoming signal.",
-		"params": [
-			{
-				"type": [
-					"number"
-				],
-				"optional": true,
-				"description": "The value to subtract from the incoming signal. If the value\n                        is omitted, it will subtract the second signal from the first.",
-				"name": "value"
-			}
-		],
-		"examples": [
-			"var sub = new Tone.Subtract(1);\nvar sig = new Tone.Signal(4).connect(sub);\n//the output of sub is 3. \n ",
-			"var sub = new Tone.Subtract();\nvar sigA = new Tone.Signal(10);\nvar sigB = new Tone.Signal(2.5);\nsigA.connect(sub, 0, 0);\nsigB.connect(sub, 0, 1);\n//output of sub is 7.5"
-		],
-		"extends": "Tone.Signal"
-	},
 	"TickSignal": {
 		"description": "Tone.TickSignal extends Tone.Signal, but adds the capability\n       to calculate the number of elapsed ticks. exponential and target curves\n       are approximated with multiple linear ramps.\n\n       Thank you Bruno Dias, H. Sofia Pinto, and David M. Matos, for your [WAC paper](https://smartech.gatech.edu/bitstream/handle/1853/54588/WAC2016-49.pdf)\n       describing integrating timing functions for tempo calculations.",
 		"params": [
@@ -2116,10 +2044,6 @@
 				"name": "value"
 			}
 		],
-		"extends": "Tone.Signal"
-	},
-	"TransportTimelineSignal": {
-		"description": "Tone.TransportTimelineSignal extends Tone.Signal, but adds the ability to synchronize the signal to the signal to the Tone.Transport",
 		"extends": "Tone.Signal"
 	},
 	"WaveShaper": {
@@ -2154,6 +2078,60 @@
 		"description": "Tone.Zero outputs 0's at audio-rate. The reason this has to be\n        it's own class is that many browsers optimize out Tone.Signal\n        with a value of 0 and will not process nodes further down the graph.",
 		"extends": "Tone.SignalBase"
 	},
+	"Add": {
+		"description": "Add a signal and a number or two signals. When no value is\n        passed into the constructor, Tone.Add will sum <code>input[0]</code>\n        and <code>input[1]</code>. If a value is passed into the constructor, \n        the it will be added to the input.",
+		"params": [
+			{
+				"type": [
+					"number"
+				],
+				"optional": true,
+				"description": "If no value is provided, Tone.Add will sum the first\n                        and second inputs.",
+				"name": "value"
+			}
+		],
+		"examples": [
+			"var signal = new Tone.Signal(2);\nvar add = new Tone.Add(2);\nsignal.connect(add);\n//the output of add equals 4\n ",
+			"//if constructed with no arguments\n//it will add the first and second inputs\nvar add = new Tone.Add();\nvar sig0 = new Tone.Signal(3).connect(add, 0, 0);\nvar sig1 = new Tone.Signal(4).connect(add, 0, 1);\n//the output of add equals 7. "
+		],
+		"extends": "Tone.Signal"
+	},
+	"GreaterThan": {
+		"description": "Output 1 if the signal is greater than the value, otherwise outputs 0.\n         can compare two signals or a signal and a number.",
+		"params": [
+			{
+				"type": [
+					"number"
+				],
+				"optional": true,
+				"defaultvalue": 0,
+				"description": "the value to compare to the incoming signal",
+				"name": "value"
+			}
+		],
+		"examples": [
+			"var gt = new Tone.GreaterThan(2);\nvar sig = new Tone.Signal(4).connect(gt);\n//output of gt is equal 1."
+		],
+		"extends": "Tone.Signal"
+	},
+	"Multiply": {
+		"description": "Multiply two incoming signals. Or, if a number is given in the constructor,\n         multiplies the incoming signal by that value.",
+		"params": [
+			{
+				"type": [
+					"number"
+				],
+				"optional": true,
+				"description": "Constant value to multiple. If no value is provided,\n                        it will return the product of the first and second inputs",
+				"name": "value"
+			}
+		],
+		"examples": [
+			"var mult = new Tone.Multiply();\nvar sigA = new Tone.Signal(3);\nvar sigB = new Tone.Signal(4);\nsigA.connect(mult, 0, 0);\nsigB.connect(mult, 0, 1);\n//output of mult is 12.\n ",
+			"var mult = new Tone.Multiply(10);\nvar sig = new Tone.Signal(2).connect(mult);\n//the output of mult is 20."
+		],
+		"extends": "Tone.Signal"
+	},
 	"Signal": {
 		"description": "A signal is an audio-rate value. Tone.Signal is a core component of the library.\n         Unlike a number, Signals can be scheduled with sample-level accuracy. Tone.Signal\n         has all of the methods available to native Web Audio\n         [AudioParam](http://webaudio.github.io/web-audio-api/#the-audioparam-interface)\n         as well as additional conveniences. Read more about working with signals\n         [here](https://github.com/Tonejs/Tone.js/wiki/Signals).",
 		"params": [
@@ -2184,6 +2162,28 @@
 	"SignalBase": {
 		"description": "Base class for all Signals. Used Internally.",
 		"extends": "Tone"
+	},
+	"Subtract": {
+		"description": "Subtract the signal connected to <code>input[1]</code> from the signal connected \n        to <code>input[0]</code>. If an argument is provided in the constructor, the \n        signals <code>.value</code> will be subtracted from the incoming signal.",
+		"params": [
+			{
+				"type": [
+					"number"
+				],
+				"optional": true,
+				"description": "The value to subtract from the incoming signal. If the value\n                        is omitted, it will subtract the second signal from the first.",
+				"name": "value"
+			}
+		],
+		"examples": [
+			"var sub = new Tone.Subtract(1);\nvar sig = new Tone.Signal(4).connect(sub);\n//the output of sub is 3. \n ",
+			"var sub = new Tone.Subtract();\nvar sigA = new Tone.Signal(10);\nvar sigB = new Tone.Signal(2.5);\nsigA.connect(sub, 0, 0);\nsigB.connect(sub, 0, 1);\n//output of sub is 7.5"
+		],
+		"extends": "Tone.Signal"
+	},
+	"TransportTimelineSignal": {
+		"description": "Tone.TransportTimelineSignal extends Tone.Signal, but adds the ability to synchronize the signal to the signal to the Tone.Transport",
+		"extends": "Tone.Signal"
 	},
 	"AMOscillator": {
 		"description": "Tone.AMOscillator",

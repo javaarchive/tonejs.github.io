@@ -32,19 +32,10 @@
 		"Q": 1,
 		"gain": 0
 	},
-	"Follower": {
-		"attack": 0.05,
-		"release": 0.5
-	},
 	"FrequencyEnvelope": {
 		"baseFrequency": 200,
 		"octaves": 4,
 		"exponent": 2
-	},
-	"Gate": {
-		"attack": 0.1,
-		"release": 0.1,
-		"threshold": -40
 	},
 	"LFO": {
 		"type": "sine",
@@ -136,6 +127,13 @@
 		"decayCurve": "exponential",
 		"releaseCurve": "exponential"
 	},
+	"Follower": {
+		"smoothing": 0.05
+	},
+	"Gate": {
+		"smoothing": 0.1,
+		"threshold": -40
+	},
 	"Meter": {
 		"smoothing": 0.8
 	},
@@ -219,18 +217,6 @@
 		"units": "Tone.Type.Default",
 		"convert": true,
 		"param": "undefined"
-	},
-	"AutoFilter": {
-		"frequency": 1,
-		"type": "sine",
-		"depth": 1,
-		"baseFrequency": 200,
-		"octaves": 2.6,
-		"filter": {
-			"type": "lowpass",
-			"rolloff": -12,
-			"Q": 1
-		}
 	},
 	"AutoPanner": {
 		"frequency": 1,
@@ -321,6 +307,18 @@
 		"frequency": 5,
 		"depth": 0.1,
 		"type": "sine"
+	},
+	"AutoFilter": {
+		"frequency": 1,
+		"type": "sine",
+		"depth": 1,
+		"baseFrequency": 200,
+		"octaves": 2.6,
+		"filter": {
+			"type": "lowpass",
+			"rolloff": -12,
+			"Q": 1
+		}
 	},
 	"Event": {
 		"callback": "Tone.noOp",
