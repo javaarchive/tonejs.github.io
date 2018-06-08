@@ -28,24 +28,11 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Filter": [
-		"AudioNode",
-		"Tone"
-	],
-	"FrequencyEnvelope": [
-		"Envelope",
-		"AudioNode",
-		"Tone"
-	],
 	"LFO": [
 		"AudioNode",
 		"Tone"
 	],
 	"Limiter": [
-		"AudioNode",
-		"Tone"
-	],
-	"LowpassCombFilter": [
 		"AudioNode",
 		"Tone"
 	],
@@ -110,11 +97,24 @@
 		"AudioNode",
 		"Tone"
 	],
+	"Filter": [
+		"AudioNode",
+		"Tone"
+	],
 	"Follower": [
 		"AudioNode",
 		"Tone"
 	],
+	"FrequencyEnvelope": [
+		"Envelope",
+		"AudioNode",
+		"Tone"
+	],
 	"Gate": [
+		"AudioNode",
+		"Tone"
+	],
+	"LowpassCombFilter": [
 		"AudioNode",
 		"Tone"
 	],

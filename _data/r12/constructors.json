@@ -177,82 +177,6 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
-	"Filter": {
-		"description": "Tone.Filter is a filter which allows for all of the same native methods\n         as the [BiquadFilterNode](http://webaudio.github.io/web-audio-api/#the-biquadfilternode-interface).\n         Tone.Filter has the added ability to set the filter rolloff at -12\n         (default), -24 and -48.",
-		"params": [
-			{
-				"type": [
-					"Frequency",
-					"Object"
-				],
-				"optional": true,
-				"description": "The cutoff frequency of the filter.",
-				"name": "frequency"
-			},
-			{
-				"type": [
-					"string"
-				],
-				"optional": true,
-				"description": "The type of filter.",
-				"name": "type"
-			},
-			{
-				"type": [
-					"number"
-				],
-				"optional": true,
-				"description": "The drop in decibels per octave after the cutoff frequency.\n                           3 choices: -12, -24, and -48",
-				"name": "rolloff"
-			}
-		],
-		"examples": [
-			"var filter = new Tone.Filter(200, \"highpass\");"
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"FrequencyEnvelope": {
-		"description": "Tone.FrequencyEnvelope is a Tone.ScaledEnvelope, but instead of `min` and `max`\n        it's got a `baseFrequency` and `octaves` parameter.",
-		"params": [
-			{
-				"type": [
-					"Time",
-					"Object"
-				],
-				"optional": true,
-				"description": "the attack time in seconds",
-				"name": "attack"
-			},
-			{
-				"type": [
-					"Time"
-				],
-				"optional": true,
-				"description": "the decay time in seconds",
-				"name": "decay"
-			},
-			{
-				"type": [
-					"number"
-				],
-				"optional": true,
-				"description": "a percentage (0-1) of the full amplitude",
-				"name": "sustain"
-			},
-			{
-				"type": [
-					"Time"
-				],
-				"optional": true,
-				"description": "the release time in seconds",
-				"name": "release"
-			}
-		],
-		"examples": [
-			"var freqEnv = new Tone.FrequencyEnvelope({\n \t\"attack\" : 0.2,\n \t\"baseFrequency\" : \"C2\",\n \t\"octaves\" : 4\n });\n freqEnv.connect(oscillator.frequency);"
-		],
-		"extends": "Tone.Envelope"
-	},
 	"LFO": {
 		"description": "LFO stands for low frequency oscillator. Tone.LFO produces an output signal\n         which can be attached to an AudioParam or Tone.Signal\n         in order to modulate that parameter with an oscillator. The LFO can\n         also be synced to the transport to start/stop and change when the tempo changes.",
 		"params": [
@@ -300,37 +224,6 @@
 		],
 		"examples": [
 			"var limiter = new Tone.Limiter(-6);"
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"LowpassCombFilter": {
-		"description": "Tone.Lowpass is a lowpass feedback comb filter. It is similar to\n        Tone.FeedbackCombFilter, but includes a lowpass filter.",
-		"params": [
-			{
-				"type": [
-					"Time",
-					"Object"
-				],
-				"optional": true,
-				"description": "The delay time of the comb filter",
-				"name": "delayTime"
-			},
-			{
-				"type": [
-					"NormalRange"
-				],
-				"optional": true,
-				"description": "The resonance (feedback) of the comb filter",
-				"name": "resonance"
-			},
-			{
-				"type": [
-					"Frequency"
-				],
-				"optional": true,
-				"description": "The cutoff of the lowpass filter dampens the\n                               signal as it is fedback.",
-				"name": "dampening"
-			}
 		],
 		"extends": "Tone.AudioNode"
 	},
@@ -595,6 +488,40 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
+	"Filter": {
+		"description": "Tone.Filter is a filter which allows for all of the same native methods\n         as the [BiquadFilterNode](http://webaudio.github.io/web-audio-api/#the-biquadfilternode-interface).\n         Tone.Filter has the added ability to set the filter rolloff at -12\n         (default), -24 and -48.",
+		"params": [
+			{
+				"type": [
+					"Frequency",
+					"Object"
+				],
+				"optional": true,
+				"description": "The cutoff frequency of the filter.",
+				"name": "frequency"
+			},
+			{
+				"type": [
+					"string"
+				],
+				"optional": true,
+				"description": "The type of filter.",
+				"name": "type"
+			},
+			{
+				"type": [
+					"number"
+				],
+				"optional": true,
+				"description": "The drop in decibels per octave after the cutoff frequency.\n                           3 choices: -12, -24, and -48",
+				"name": "rolloff"
+			}
+		],
+		"examples": [
+			"var filter = new Tone.Filter(200, \"highpass\");"
+		],
+		"extends": "Tone.AudioNode"
+	},
 	"Follower": {
 		"description": "Tone.Follower is a  crude envelope follower which will follow\n         the amplitude of an incoming signal.\n         Take care with small (< 0.02) attack or decay values\n         as follower has some ripple which is exaggerated\n         at these values. Read more about envelope followers (also known\n         as envelope detectors) on [Wikipedia](https://en.wikipedia.org/wiki/Envelope_detector).",
 		"params": [
@@ -620,6 +547,48 @@
 			"var follower = new Tone.Follower(0.2, 0.4);"
 		],
 		"extends": "Tone.AudioNode"
+	},
+	"FrequencyEnvelope": {
+		"description": "Tone.FrequencyEnvelope is a Tone.ScaledEnvelope, but instead of `min` and `max`\n        it's got a `baseFrequency` and `octaves` parameter.",
+		"params": [
+			{
+				"type": [
+					"Time",
+					"Object"
+				],
+				"optional": true,
+				"description": "the attack time in seconds",
+				"name": "attack"
+			},
+			{
+				"type": [
+					"Time"
+				],
+				"optional": true,
+				"description": "the decay time in seconds",
+				"name": "decay"
+			},
+			{
+				"type": [
+					"number"
+				],
+				"optional": true,
+				"description": "a percentage (0-1) of the full amplitude",
+				"name": "sustain"
+			},
+			{
+				"type": [
+					"Time"
+				],
+				"optional": true,
+				"description": "the release time in seconds",
+				"name": "release"
+			}
+		],
+		"examples": [
+			"var freqEnv = new Tone.FrequencyEnvelope({\n \t\"attack\" : 0.2,\n \t\"baseFrequency\" : \"C2\",\n \t\"octaves\" : 4\n });\n freqEnv.connect(oscillator.frequency);"
+		],
+		"extends": "Tone.Envelope"
 	},
 	"Gate": {
 		"description": "Tone.Gate only passes a signal through when the incoming\n         signal exceeds a specified threshold. To do this, Gate uses\n         a Tone.Follower to follow the amplitude of the incoming signal.\n         A common implementation of this class is a [Noise Gate](https://en.wikipedia.org/wiki/Noise_gate).",
@@ -652,6 +621,37 @@
 		],
 		"examples": [
 			"var gate = new Tone.Gate(-30, 0.2, 0.3).toMaster();\nvar mic = new Tone.UserMedia().connect(gate);\n//the gate will only pass through the incoming\n//signal when it's louder than -30db"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"LowpassCombFilter": {
+		"description": "Tone.Lowpass is a lowpass feedback comb filter. It is similar to\n        Tone.FeedbackCombFilter, but includes a lowpass filter.",
+		"params": [
+			{
+				"type": [
+					"Time",
+					"Object"
+				],
+				"optional": true,
+				"description": "The delay time of the comb filter",
+				"name": "delayTime"
+			},
+			{
+				"type": [
+					"NormalRange"
+				],
+				"optional": true,
+				"description": "The resonance (feedback) of the comb filter",
+				"name": "resonance"
+			},
+			{
+				"type": [
+					"Frequency"
+				],
+				"optional": true,
+				"description": "The cutoff of the lowpass filter dampens the\n                               signal as it is fedback.",
+				"name": "dampening"
+			}
 		],
 		"extends": "Tone.AudioNode"
 	},

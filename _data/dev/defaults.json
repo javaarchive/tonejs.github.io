@@ -25,18 +25,6 @@
 		"delayTime": 0.1,
 		"resonance": 0.5
 	},
-	"Filter": {
-		"type": "lowpass",
-		"frequency": 350,
-		"rolloff": -12,
-		"Q": 1,
-		"gain": 0
-	},
-	"FrequencyEnvelope": {
-		"baseFrequency": 200,
-		"octaves": 4,
-		"exponent": 2
-	},
 	"LFO": {
 		"type": "sine",
 		"min": 0,
@@ -48,11 +36,6 @@
 	},
 	"Limiter": {
 		"threshold": -12
-	},
-	"LowpassCombFilter": {
-		"delayTime": 0.1,
-		"resonance": 0.5,
-		"dampening": 3000
 	},
 	"MidSideCompressor": {
 		"mid": {
@@ -127,12 +110,29 @@
 		"decayCurve": "exponential",
 		"releaseCurve": "exponential"
 	},
+	"Filter": {
+		"type": "lowpass",
+		"frequency": 350,
+		"rolloff": -12,
+		"Q": 1,
+		"gain": 0
+	},
 	"Follower": {
 		"smoothing": 0.05
+	},
+	"FrequencyEnvelope": {
+		"baseFrequency": 200,
+		"octaves": 4,
+		"exponent": 1
 	},
 	"Gate": {
 		"smoothing": 0.1,
 		"threshold": -40
+	},
+	"LowpassCombFilter": {
+		"delayTime": 0.1,
+		"resonance": 0.5,
+		"dampening": 3000
 	},
 	"Meter": {
 		"smoothing": 0.8
