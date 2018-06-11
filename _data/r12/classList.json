@@ -121,6 +121,7 @@
 		"Scale",
 		"ScaleExp",
 		"TickSignal",
+		"TransportTimelineSignal",
 		"WaveShaper",
 		"Zero",
 		"Add",
@@ -128,8 +129,7 @@
 		"Multiply",
 		"Signal",
 		"SignalBase",
-		"Subtract",
-		"TransportTimelineSignal"
+		"Subtract"
 	],
 	"source": [
 		"AMOscillator",

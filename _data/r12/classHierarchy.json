@@ -471,6 +471,12 @@
 		"AudioNode",
 		"Tone"
 	],
+	"TransportTimelineSignal": [
+		"Signal",
+		"Param",
+		"AudioNode",
+		"Tone"
+	],
 	"WaveShaper": [
 		"SignalBase",
 		"Tone"
@@ -506,12 +512,6 @@
 		"Tone"
 	],
 	"Subtract": [
-		"Signal",
-		"Param",
-		"AudioNode",
-		"Tone"
-	],
-	"TransportTimelineSignal": [
 		"Signal",
 		"Param",
 		"AudioNode",

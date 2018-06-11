@@ -2046,6 +2046,10 @@
 		],
 		"extends": "Tone.Signal"
 	},
+	"TransportTimelineSignal": {
+		"description": "Tone.TransportTimelineSignal extends Tone.Signal, but adds the ability to synchronize the signal to the signal to the Tone.Transport",
+		"extends": "Tone.Signal"
+	},
 	"WaveShaper": {
 		"description": "Wraps the native Web Audio API\n        [WaveShaperNode](http://webaudio.github.io/web-audio-api/#the-waveshapernode-interface).",
 		"params": [
@@ -2179,10 +2183,6 @@
 			"var sub = new Tone.Subtract(1);\nvar sig = new Tone.Signal(4).connect(sub);\n//the output of sub is 3. \n ",
 			"var sub = new Tone.Subtract();\nvar sigA = new Tone.Signal(10);\nvar sigB = new Tone.Signal(2.5);\nsigA.connect(sub, 0, 0);\nsigB.connect(sub, 0, 1);\n//output of sub is 7.5"
 		],
-		"extends": "Tone.Signal"
-	},
-	"TransportTimelineSignal": {
-		"description": "Tone.TransportTimelineSignal extends Tone.Signal, but adds the ability to synchronize the signal to the signal to the Tone.Transport",
 		"extends": "Tone.Signal"
 	},
 	"AMOscillator": {
