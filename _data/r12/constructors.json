@@ -1762,34 +1762,6 @@
 		"description": "This is an abstract base class for other monophonic instruments to \n         extend. IMPORTANT: It does not make any sound on its own and\n         shouldn't be directly instantiated.",
 		"extends": "Tone.Instrument"
 	},
-	"PolySynth": {
-		"description": "Tone.PolySynth handles voice creation and allocation for any\n         instruments passed in as the second paramter. PolySynth is\n         not a synthesizer by itself, it merely manages voices of\n         one of the other types of synths, allowing any of the\n         monophonic synthesizers to be polyphonic.",
-		"params": [
-			{
-				"type": [
-					"number",
-					"Object"
-				],
-				"optional": true,
-				"defaultvalue": 4,
-				"description": "The number of voices to create",
-				"name": "polyphony"
-			},
-			{
-				"type": [
-					"function"
-				],
-				"optional": true,
-				"defaultvalue": "Tone.Synth",
-				"description": "The constructor of the voices\n                                           uses Tone.Synth by default.",
-				"name": "voice"
-			}
-		],
-		"examples": [
-			"//a polysynth composed of 6 Voices of Synth\nvar synth = new Tone.PolySynth(6, Tone.Synth).toMaster();\n//set the attributes using the set interface\nsynth.set(\"detune\", -1200);\n//play a chord\nsynth.triggerAttackRelease([\"C4\", \"E4\", \"A4\"], \"4n\");"
-		],
-		"extends": "Tone.Instrument"
-	},
 	"Synth": {
 		"description": "Tone.Synth is composed simply of a Tone.OmniOscillator\n         routed through a Tone.AmplitudeEnvelope.\n         <img src=\"https://docs.google.com/drawings/d/1-1_0YW2Z1J2EPI36P8fNCMcZG7N1w1GZluPs4og4evo/pub?w=1163&h=231\">",
 		"params": [
@@ -1838,6 +1810,34 @@
 		],
 		"examples": [
 			"var plucky = new Tone.PluckSynth().toMaster();\nplucky.triggerAttack(\"C4\");"
+		],
+		"extends": "Tone.Instrument"
+	},
+	"PolySynth": {
+		"description": "Tone.PolySynth handles voice creation and allocation for any\n         instruments passed in as the second paramter. PolySynth is\n         not a synthesizer by itself, it merely manages voices of\n         one of the other types of synths, allowing any of the\n         monophonic synthesizers to be polyphonic.",
+		"params": [
+			{
+				"type": [
+					"number",
+					"Object"
+				],
+				"optional": true,
+				"defaultvalue": 4,
+				"description": "The number of voices to create",
+				"name": "polyphony"
+			},
+			{
+				"type": [
+					"function"
+				],
+				"optional": true,
+				"defaultvalue": "Tone.Synth",
+				"description": "The constructor of the voices\n                                           uses Tone.Synth by default.",
+				"name": "voice"
+			}
+		],
+		"examples": [
+			"//a polysynth composed of 6 Voices of Synth\nvar synth = new Tone.PolySynth(6, Tone.Synth).toMaster();\n//set the attributes using the set interface\nsynth.set(\"detune\", -1200);\n//play a chord\nsynth.triggerAttackRelease([\"C4\", \"E4\", \"A4\"], \"4n\");"
 		],
 		"extends": "Tone.Instrument"
 	},

@@ -506,12 +506,6 @@
 	"Monophonic": {
 		"portamento": 0
 	},
-	"PolySynth": {
-		"polyphony": 4,
-		"volume": 0,
-		"detune": 0,
-		"voice": "Tone.Synth"
-	},
 	"Synth": {
 		"oscillator": {
 			"type": "triangle"
@@ -537,6 +531,12 @@
 		"attackNoise": 1,
 		"dampening": 4000,
 		"resonance": 0.7
+	},
+	"PolySynth": {
+		"polyphony": 4,
+		"volume": 0,
+		"detune": 0,
+		"voice": "Tone.Synth"
 	},
 	"Sampler": {
 		"attack": 0,
