@@ -556,10 +556,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"UserMedia": [
-		"AudioNode",
-		"Tone"
-	],
 	"BufferSource": [
 		"AudioNode",
 		"Tone"
@@ -589,6 +585,10 @@
 		"Tone"
 	],
 	"TickSource": [
+		"Tone"
+	],
+	"UserMedia": [
+		"AudioNode",
 		"Tone"
 	],
 	"Frequency": [

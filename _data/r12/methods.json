@@ -21481,151 +21481,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"UserMedia": [
-		{
-			"description": "Open the media stream. If a string is passed in, it is assumed\n to be the label or id of the stream, if a number is passed in,\n it is the input number of the stream.",
-			"params": [
-				{
-					"type": [
-						"String",
-						"Number"
-					],
-					"optional": true,
-					"defaultvalue": "\"default\"",
-					"description": "The label or id of the audio input media device.\n                                               With no argument, the default stream is opened.",
-					"name": "labelOrId"
-				}
-			],
-			"returns": {
-				"type": [
-					"Promise"
-				],
-				"description": "The promise is resolved when the stream is open."
-			},
-			"scope": "instance",
-			"name": "open",
-			"lineno": "Tone/source/UserMedia.js#L90"
-		},
-		{
-			"description": "Close the media stream",
-			"returns": {
-				"type": [
-					"Tone.UserMedia"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "close",
-			"lineno": "Tone/source/UserMedia.js#L135"
-		},
-		{
-			"description": "Returns a promise which resolves with the list of audio input devices available.",
-			"examples": [
-				"Tone.UserMedia.enumerateDevices().then(function(devices){\n\tconsole.log(devices)\n})"
-			],
-			"returns": {
-				"type": [
-					"Promise"
-				],
-				"description": "The promise that is resolved with the devices"
-			},
-			"scope": "static",
-			"name": "enumerateDevices",
-			"lineno": "Tone/source/UserMedia.js#L158"
-		},
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.UserMedia"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/source/UserMedia.js#L256"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"BufferSource": [
 		{
 			"description": "Get the playback state at the given time",
@@ -23067,6 +22922,151 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/source/TickSource.js#L347"
+		}
+	],
+	"UserMedia": [
+		{
+			"description": "Open the media stream. If a string is passed in, it is assumed\n to be the label or id of the stream, if a number is passed in,\n it is the input number of the stream.",
+			"params": [
+				{
+					"type": [
+						"String",
+						"Number"
+					],
+					"optional": true,
+					"defaultvalue": "\"default\"",
+					"description": "The label or id of the audio input media device.\n                                               With no argument, the default stream is opened.",
+					"name": "labelOrId"
+				}
+			],
+			"returns": {
+				"type": [
+					"Promise"
+				],
+				"description": "The promise is resolved when the stream is open."
+			},
+			"scope": "instance",
+			"name": "open",
+			"lineno": "Tone/source/UserMedia.js#L90"
+		},
+		{
+			"description": "Close the media stream",
+			"returns": {
+				"type": [
+					"Tone.UserMedia"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "close",
+			"lineno": "Tone/source/UserMedia.js#L135"
+		},
+		{
+			"description": "Returns a promise which resolves with the list of audio input devices available.",
+			"examples": [
+				"Tone.UserMedia.enumerateDevices().then(function(devices){\n\tconsole.log(devices)\n})"
+			],
+			"returns": {
+				"type": [
+					"Promise"
+				],
+				"description": "The promise that is resolved with the devices"
+			},
+			"scope": "static",
+			"name": "enumerateDevices",
+			"lineno": "Tone/source/UserMedia.js#L158"
+		},
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.UserMedia"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/source/UserMedia.js#L256"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
 		}
 	],
 	"midi": [

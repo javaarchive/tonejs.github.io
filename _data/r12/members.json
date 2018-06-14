@@ -10069,149 +10069,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"UserMedia": [
-		{
-			"description": "The volume of the output in decibels.",
-			"type": [
-				"Decibels"
-			],
-			"examples": [
-				"input.volume.value = -6;"
-			],
-			"scope": "instance",
-			"name": "volume",
-			"lineno": "Tone/source/UserMedia.js#L65",
-			"signal": true
-		},
-		{
-			"description": "Returns the playback state of the source, \"started\" when the microphone is open\n and \"stopped\" when the mic is closed.",
-			"type": [
-				"Tone.State"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "state",
-			"lineno": "Tone/source/UserMedia.js#L166"
-		},
-		{
-			"description": "Returns an identifier for the represented device that is\n\tpersisted across sessions. It is un-guessable by other applications and\n\tunique to the origin of the calling application. It is reset when the\n\tuser clears cookies (for Private Browsing, a different identifier is\n\tused that is not persisted across sessions). Returns undefined when the\n\tdevice is not open.",
-			"type": [
-				"String"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "deviceId",
-			"lineno": "Tone/source/UserMedia.js#L180"
-		},
-		{
-			"description": "Returns a group identifier. Two devices have the\n\tsame group identifier if they belong to the same physical device.\n\tReturns undefined when the device is not open.",
-			"type": [
-				"String"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "groupId",
-			"lineno": "Tone/source/UserMedia.js#L200"
-		},
-		{
-			"description": "Returns a label describing this device (for example \"Built-in Microphone\").\n\tReturns undefined when the device is not open or label is not available\n\tbecause of permissions.",
-			"type": [
-				"String"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "groupId",
-			"lineno": "Tone/source/UserMedia.js#L217"
-		},
-		{
-			"description": "Mute the output.",
-			"type": [
-				"boolean"
-			],
-			"examples": [
-				"//mute the output\nuserMedia.mute = true;"
-			],
-			"scope": "instance",
-			"name": "mute",
-			"lineno": "Tone/source/UserMedia.js#L234"
-		},
-		{
-			"description": "If getUserMedia is supported by the browser.",
-			"type": [
-				"Boolean"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "supported",
-			"lineno": "Tone/source/UserMedia.js#L266"
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelCount is the number of channels used when up-mixing and down-mixing\n connections to any inputs to the node. The default value is 2 except for\n specific nodes where its value is specially determined.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelCount",
-			"lineno": "Tone/core/AudioNode.js#L62",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelCountMode determines how channels will be counted when up-mixing and\n down-mixing connections to any inputs to the node.\n The default value is \"max\". This attribute has no effect for nodes with no inputs.",
-			"type": [
-				"String"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelCountMode",
-			"lineno": "Tone/core/AudioNode.js#L81",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelInterpretation determines how individual channels will be treated\n when up-mixing and down-mixing connections to any inputs to the node.\n The default value is \"speakers\".",
-			"type": [
-				"String"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelInterpretation",
-			"lineno": "Tone/core/AudioNode.js#L99",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "The number of inputs feeding into the AudioNode.\n For source nodes, this will be 0.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "numberOfInputs",
-			"lineno": "Tone/core/AudioNode.js#L117",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "The number of outputs coming out of the AudioNode.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "numberOfOutputs",
-			"lineno": "Tone/core/AudioNode.js#L139",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"BufferSource": [
 		{
 			"description": "The callback to invoke after the\n buffer source is done playing.",
@@ -11226,6 +11083,149 @@
 			"scope": "instance",
 			"name": "seconds",
 			"lineno": "Tone/source/TickSource.js#L188"
+		}
+	],
+	"UserMedia": [
+		{
+			"description": "The volume of the output in decibels.",
+			"type": [
+				"Decibels"
+			],
+			"examples": [
+				"input.volume.value = -6;"
+			],
+			"scope": "instance",
+			"name": "volume",
+			"lineno": "Tone/source/UserMedia.js#L65",
+			"signal": true
+		},
+		{
+			"description": "Returns the playback state of the source, \"started\" when the microphone is open\n and \"stopped\" when the mic is closed.",
+			"type": [
+				"Tone.State"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "state",
+			"lineno": "Tone/source/UserMedia.js#L166"
+		},
+		{
+			"description": "Returns an identifier for the represented device that is\n\tpersisted across sessions. It is un-guessable by other applications and\n\tunique to the origin of the calling application. It is reset when the\n\tuser clears cookies (for Private Browsing, a different identifier is\n\tused that is not persisted across sessions). Returns undefined when the\n\tdevice is not open.",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "deviceId",
+			"lineno": "Tone/source/UserMedia.js#L180"
+		},
+		{
+			"description": "Returns a group identifier. Two devices have the\n\tsame group identifier if they belong to the same physical device.\n\tReturns undefined when the device is not open.",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "groupId",
+			"lineno": "Tone/source/UserMedia.js#L200"
+		},
+		{
+			"description": "Returns a label describing this device (for example \"Built-in Microphone\").\n\tReturns undefined when the device is not open or label is not available\n\tbecause of permissions.",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "groupId",
+			"lineno": "Tone/source/UserMedia.js#L217"
+		},
+		{
+			"description": "Mute the output.",
+			"type": [
+				"boolean"
+			],
+			"examples": [
+				"//mute the output\nuserMedia.mute = true;"
+			],
+			"scope": "instance",
+			"name": "mute",
+			"lineno": "Tone/source/UserMedia.js#L234"
+		},
+		{
+			"description": "If getUserMedia is supported by the browser.",
+			"type": [
+				"Boolean"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "supported",
+			"lineno": "Tone/source/UserMedia.js#L266"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelCount is the number of channels used when up-mixing and down-mixing\n connections to any inputs to the node. The default value is 2 except for\n specific nodes where its value is specially determined.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelCount",
+			"lineno": "Tone/core/AudioNode.js#L62",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelCountMode determines how channels will be counted when up-mixing and\n down-mixing connections to any inputs to the node.\n The default value is \"max\". This attribute has no effect for nodes with no inputs.",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelCountMode",
+			"lineno": "Tone/core/AudioNode.js#L81",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelInterpretation determines how individual channels will be treated\n when up-mixing and down-mixing connections to any inputs to the node.\n The default value is \"speakers\".",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelInterpretation",
+			"lineno": "Tone/core/AudioNode.js#L99",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "The number of inputs feeding into the AudioNode.\n For source nodes, this will be 0.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "numberOfInputs",
+			"lineno": "Tone/core/AudioNode.js#L117",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "The number of outputs coming out of the AudioNode.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "numberOfOutputs",
+			"lineno": "Tone/core/AudioNode.js#L139",
+			"inherits": "Tone.AudioNode"
 		}
 	],
 	"AmplitudeEnvelope": [

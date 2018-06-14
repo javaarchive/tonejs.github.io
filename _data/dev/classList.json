@@ -140,14 +140,14 @@
 		"Player",
 		"Players",
 		"Source",
-		"UserMedia",
 		"BufferSource",
 		"FatOscillator",
 		"Noise",
 		"Oscillator",
 		"OscillatorNode",
 		"PulseOscillator",
-		"TickSource"
+		"TickSource",
+		"UserMedia"
 	],
 	"type": [
 		"Frequency",

@@ -610,10 +610,6 @@
 		"volume": 0,
 		"mute": false
 	},
-	"UserMedia": {
-		"volume": 0,
-		"mute": false
-	},
 	"BufferSource": {
 		"onended": "Tone.noOp",
 		"onload": "Tone.noOp",
@@ -658,5 +654,9 @@
 	},
 	"TickSource": {
 		"frequency": 1
+	},
+	"UserMedia": {
+		"volume": 0,
+		"mute": false
 	}
 }
