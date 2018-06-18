@@ -144,10 +144,6 @@
 	"Buffers": [
 		"Tone"
 	],
-	"Clock": [
-		"Emitter",
-		"Tone"
-	],
 	"Delay": [
 		"Tone"
 	],
@@ -190,6 +186,10 @@
 		"Tone"
 	],
 	"AudioNode": [
+		"Tone"
+	],
+	"Clock": [
+		"Emitter",
 		"Tone"
 	],
 	"Context": [
@@ -374,11 +374,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"MembraneSynth": [
-		"Instrument",
-		"AudioNode",
-		"Tone"
-	],
 	"MetalSynth": [
 		"Instrument",
 		"AudioNode",
@@ -397,6 +392,11 @@
 	],
 	"Synth": [
 		"Monophonic",
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
+	"MembraneSynth": [
 		"Instrument",
 		"AudioNode",
 		"Tone"

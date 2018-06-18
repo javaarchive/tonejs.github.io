@@ -825,29 +825,6 @@
 		],
 		"extends": "Tone"
 	},
-	"Clock": {
-		"description": "A sample accurate clock which provides a callback at the given rate.\n         While the callback is not sample-accurate (it is still susceptible to\n         loose JS timing), the time passed in as the argument to the callback\n         is precise. For most applications, it is better to use Tone.Transport\n         instead of the Clock by itself since you can synchronize multiple callbacks.",
-		"params": [
-			{
-				"type": [
-					"function"
-				],
-				"description": "The callback to be invoked with the time of the audio event",
-				"name": "callback"
-			},
-			{
-				"type": [
-					"Frequency"
-				],
-				"description": "The rate of the callback",
-				"name": "frequency"
-			}
-		],
-		"examples": [
-			"//the callback will be invoked approximately once a second\n//and will print the time exactly once a second apart.\nvar clock = new Tone.Clock(function(time){\n\tconsole.log(time);\n}, 1);"
-		],
-		"extends": "Tone.Emitter"
-	},
 	"Delay": {
 		"description": "Wrapper around Web Audio's native [DelayNode](http://webaudio.github.io/web-audio-api/#the-delaynode-interface).",
 		"params": [
@@ -1014,6 +991,29 @@
 			}
 		],
 		"extends": "Tone"
+	},
+	"Clock": {
+		"description": "A sample accurate clock which provides a callback at the given rate.\n         While the callback is not sample-accurate (it is still susceptible to\n         loose JS timing), the time passed in as the argument to the callback\n         is precise. For most applications, it is better to use Tone.Transport\n         instead of the Clock by itself since you can synchronize multiple callbacks.",
+		"params": [
+			{
+				"type": [
+					"function"
+				],
+				"description": "The callback to be invoked with the time of the audio event",
+				"name": "callback"
+			},
+			{
+				"type": [
+					"Frequency"
+				],
+				"description": "The rate of the callback",
+				"name": "frequency"
+			}
+		],
+		"examples": [
+			"//the callback will be invoked approximately once a second\n//and will print the time exactly once a second apart.\nvar clock = new Tone.Clock(function(time){\n\tconsole.log(time);\n}, 1);"
+		],
+		"extends": "Tone.Emitter"
 	},
 	"Context": {
 		"description": "Wrapper around the native AudioContext.",
@@ -1710,23 +1710,6 @@
 		"description": "Base-class for all instruments",
 		"extends": "Tone.AudioNode"
 	},
-	"MembraneSynth": {
-		"description": "Tone.MembraneSynth makes kick and tom sounds using a single oscillator\n         with an amplitude envelope and frequency ramp. A Tone.OmniOscillator\n         is routed through a Tone.AmplitudeEnvelope to the output. The drum\n         quality of the sound comes from the frequency envelope applied\n         during Tone.MembraneSynth.triggerAttack(note). The frequency envelope\n         starts at <code>note * .octaves</code> and ramps to <code>note</code>\n         over the duration of <code>.pitchDecay</code>.",
-		"params": [
-			{
-				"type": [
-					"Object"
-				],
-				"optional": true,
-				"description": "the options available for the synth\n                         see defaults below",
-				"name": "options"
-			}
-		],
-		"examples": [
-			"var synth = new Tone.MembraneSynth().toMaster();\nsynth.triggerAttackRelease(\"C2\", \"8n\");"
-		],
-		"extends": "Tone.Instrument"
-	},
 	"MetalSynth": {
 		"description": "A highly inharmonic and spectrally complex source with a highpass filter\n         and amplitude envelope which is good for making metalophone sounds. Based\n         on CymbalSynth by [@polyrhythmatic](https://github.com/polyrhythmatic).\n         Inspiration from [Sound on Sound](https://web.archive.org/web/20160610143924/https://www.soundonsound.com/sos/jul02/articles/synthsecrets0702.asp).",
 		"params": [
@@ -1778,6 +1761,23 @@
 			"var synth = new Tone.Synth().toMaster();\nsynth.triggerAttackRelease(\"C4\", \"8n\");"
 		],
 		"extends": "Tone.Monophonic"
+	},
+	"MembraneSynth": {
+		"description": "Tone.MembraneSynth makes kick and tom sounds using a single oscillator\n         with an amplitude envelope and frequency ramp. A Tone.OmniOscillator\n         is routed through a Tone.AmplitudeEnvelope to the output. The drum\n         quality of the sound comes from the frequency envelope applied\n         during Tone.MembraneSynth.triggerAttack(note). The frequency envelope\n         starts at <code>note * .octaves</code> and ramps to <code>note</code>\n         over the duration of <code>.pitchDecay</code>.",
+		"params": [
+			{
+				"type": [
+					"Object"
+				],
+				"optional": true,
+				"description": "the options available for the synth\n                         see defaults below",
+				"name": "options"
+			}
+		],
+		"examples": [
+			"var synth = new Tone.MembraneSynth().toMaster();\nsynth.triggerAttackRelease(\"C2\", \"8n\");"
+		],
+		"extends": "Tone.Instrument"
 	},
 	"NoiseSynth": {
 		"description": "Tone.NoiseSynth is composed of a noise generator (Tone.Noise), one filter (Tone.Filter),\n         and two envelopes (Tone.Envelop). One envelope controls the amplitude\n         of the noise and the other is controls the cutoff frequency of the filter.\n         <img src=\"https://docs.google.com/drawings/d/1rqzuX9rBlhT50MRvD2TKml9bnZhcZmzXF1rf_o7vdnE/pub?w=918&h=242\">",

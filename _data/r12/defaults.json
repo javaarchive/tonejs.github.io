@@ -161,10 +161,6 @@
 		"onload": "Tone.noOp",
 		"baseUrl": ""
 	},
-	"Clock": {
-		"callback": "Tone.noOp",
-		"frequency": 1
-	},
 	"Delay": {
 		"maxDelay": 1,
 		"delayTime": 0
@@ -207,6 +203,10 @@
 	"TransportRepeatEvent": {
 		"duration": "Infinity",
 		"interval": 1
+	},
+	"Clock": {
+		"callback": "Tone.noOp",
+		"frequency": 1
 	},
 	"Context": {
 		"clockSource": "worker",
@@ -450,20 +450,6 @@
 	"Instrument": {
 		"volume": 0
 	},
-	"MembraneSynth": {
-		"pitchDecay": 0.05,
-		"octaves": 10,
-		"oscillator": {
-			"type": "sine"
-		},
-		"envelope": {
-			"attack": 0.001,
-			"decay": 0.4,
-			"sustain": 0.01,
-			"release": 1.4,
-			"attackCurve": "exponential"
-		}
-	},
 	"MetalSynth": {
 		"frequency": 200,
 		"envelope": {
@@ -515,6 +501,20 @@
 			"decay": 0.1,
 			"sustain": 0.3,
 			"release": 1
+		}
+	},
+	"MembraneSynth": {
+		"pitchDecay": 0.05,
+		"octaves": 10,
+		"oscillator": {
+			"type": "sine"
+		},
+		"envelope": {
+			"attack": 0.001,
+			"decay": 0.4,
+			"sustain": 0.01,
+			"release": 1.4,
+			"attackCurve": "exponential"
 		}
 	},
 	"NoiseSynth": {

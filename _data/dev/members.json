@@ -3367,37 +3367,6 @@
 			"lineno": "Tone/core/Buffers.js#L108"
 		}
 	],
-	"Clock": [
-		{
-			"description": "The callback function to invoke at the scheduled tick.",
-			"type": [
-				"function"
-			],
-			"scope": "instance",
-			"name": "callback",
-			"lineno": "Tone/core/Clock.js#L33"
-		},
-		{
-			"description": "The rate the callback function should be invoked.",
-			"type": [
-				"BPM"
-			],
-			"scope": "instance",
-			"name": "frequency",
-			"lineno": "Tone/core/Clock.js#L61",
-			"signal": true
-		},
-		{
-			"description": "Returns the playback state of the source, either \"started\", \"stopped\" or \"paused\".",
-			"type": [
-				"Tone.State"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "state",
-			"lineno": "Tone/core/Clock.js#L97"
-		}
-	],
 	"Delay": [
 		{
 			"description": "The amount of time the incoming signal is\n delayed.",
@@ -3798,6 +3767,37 @@
 			"scope": "instance",
 			"name": "numberOfOutputs",
 			"lineno": "Tone/core/AudioNode.js#L139"
+		}
+	],
+	"Clock": [
+		{
+			"description": "The callback function to invoke at the scheduled tick.",
+			"type": [
+				"function"
+			],
+			"scope": "instance",
+			"name": "callback",
+			"lineno": "Tone/core/Clock.js#L33"
+		},
+		{
+			"description": "The rate the callback function should be invoked.",
+			"type": [
+				"BPM"
+			],
+			"scope": "instance",
+			"name": "frequency",
+			"lineno": "Tone/core/Clock.js#L61",
+			"signal": true
+		},
+		{
+			"description": "Returns the playback state of the source, either \"started\", \"stopped\" or \"paused\".",
+			"type": [
+				"Tone.State"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "state",
+			"lineno": "Tone/core/Clock.js#L97"
 		}
 	],
 	"Context": [
@@ -7433,124 +7433,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"MembraneSynth": [
-		{
-			"description": "The oscillator.",
-			"type": [
-				"Tone.OmniOscillator"
-			],
-			"scope": "instance",
-			"name": "oscillator",
-			"lineno": "Tone/instrument/MembraneSynth.js#L32"
-		},
-		{
-			"description": "The amplitude envelope.",
-			"type": [
-				"Tone.AmplitudeEnvelope"
-			],
-			"scope": "instance",
-			"name": "envelope",
-			"lineno": "Tone/instrument/MembraneSynth.js#L38"
-		},
-		{
-			"description": "The number of octaves the pitch envelope ramps.",
-			"type": [
-				"Positive"
-			],
-			"scope": "instance",
-			"name": "octaves",
-			"lineno": "Tone/instrument/MembraneSynth.js#L44"
-		},
-		{
-			"description": "The amount of time the frequency envelope takes.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "pitchDecay",
-			"lineno": "Tone/instrument/MembraneSynth.js#L50"
-		},
-		{
-			"description": "The volume of the output in decibels.",
-			"type": [
-				"Decibels"
-			],
-			"examples": [
-				"source.volume.value = -6;"
-			],
-			"scope": "instance",
-			"name": "volume",
-			"lineno": "Tone/instrument/Instrument.js#L31",
-			"inherits": "Tone.Instrument",
-			"signal": true
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelCount is the number of channels used when up-mixing and down-mixing\n connections to any inputs to the node. The default value is 2 except for\n specific nodes where its value is specially determined.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelCount",
-			"lineno": "Tone/core/AudioNode.js#L62",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelCountMode determines how channels will be counted when up-mixing and\n down-mixing connections to any inputs to the node.\n The default value is \"max\". This attribute has no effect for nodes with no inputs.",
-			"type": [
-				"String"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelCountMode",
-			"lineno": "Tone/core/AudioNode.js#L81",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelInterpretation determines how individual channels will be treated\n when up-mixing and down-mixing connections to any inputs to the node.\n The default value is \"speakers\".",
-			"type": [
-				"String"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelInterpretation",
-			"lineno": "Tone/core/AudioNode.js#L99",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "The number of inputs feeding into the AudioNode.\n For source nodes, this will be 0.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "numberOfInputs",
-			"lineno": "Tone/core/AudioNode.js#L117",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "The number of outputs coming out of the AudioNode.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "numberOfOutputs",
-			"lineno": "Tone/core/AudioNode.js#L139",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"MetalSynth": [
 		{
 			"description": "The frequency of the cymbal",
@@ -7975,6 +7857,124 @@
 			"name": "portamento",
 			"lineno": "Tone/instrument/Monophonic.js#L24",
 			"inherits": "Tone.Monophonic"
+		},
+		{
+			"description": "The volume of the output in decibels.",
+			"type": [
+				"Decibels"
+			],
+			"examples": [
+				"source.volume.value = -6;"
+			],
+			"scope": "instance",
+			"name": "volume",
+			"lineno": "Tone/instrument/Instrument.js#L31",
+			"inherits": "Tone.Instrument",
+			"signal": true
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelCount is the number of channels used when up-mixing and down-mixing\n connections to any inputs to the node. The default value is 2 except for\n specific nodes where its value is specially determined.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelCount",
+			"lineno": "Tone/core/AudioNode.js#L62",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelCountMode determines how channels will be counted when up-mixing and\n down-mixing connections to any inputs to the node.\n The default value is \"max\". This attribute has no effect for nodes with no inputs.",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelCountMode",
+			"lineno": "Tone/core/AudioNode.js#L81",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelInterpretation determines how individual channels will be treated\n when up-mixing and down-mixing connections to any inputs to the node.\n The default value is \"speakers\".",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelInterpretation",
+			"lineno": "Tone/core/AudioNode.js#L99",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "The number of inputs feeding into the AudioNode.\n For source nodes, this will be 0.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "numberOfInputs",
+			"lineno": "Tone/core/AudioNode.js#L117",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "The number of outputs coming out of the AudioNode.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "numberOfOutputs",
+			"lineno": "Tone/core/AudioNode.js#L139",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"MembraneSynth": [
+		{
+			"description": "The oscillator.",
+			"type": [
+				"Tone.OmniOscillator"
+			],
+			"scope": "instance",
+			"name": "oscillator",
+			"lineno": "Tone/instrument/MembraneSynth.js#L32"
+		},
+		{
+			"description": "The amplitude envelope.",
+			"type": [
+				"Tone.AmplitudeEnvelope"
+			],
+			"scope": "instance",
+			"name": "envelope",
+			"lineno": "Tone/instrument/MembraneSynth.js#L38"
+		},
+		{
+			"description": "The number of octaves the pitch envelope ramps.",
+			"type": [
+				"Positive"
+			],
+			"scope": "instance",
+			"name": "octaves",
+			"lineno": "Tone/instrument/MembraneSynth.js#L44"
+		},
+		{
+			"description": "The amount of time the frequency envelope takes.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "pitchDecay",
+			"lineno": "Tone/instrument/MembraneSynth.js#L50"
 		},
 		{
 			"description": "The volume of the output in decibels.",

@@ -6054,337 +6054,6 @@
 			"lineno": "Tone/core/Buffers.js#L154"
 		}
 	],
-	"Clock": [
-		{
-			"description": "Start the clock at the given time. Optionally pass in an offset\n of where to start the tick counter from.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"description": "The time the clock should start",
-					"name": "time"
-				},
-				{
-					"type": [
-						"Ticks"
-					],
-					"optional": true,
-					"description": "Where the tick counter starts counting from.",
-					"name": "offset"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Clock"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "start",
-			"lineno": "Tone/core/Clock.js#L117"
-		},
-		{
-			"description": "Stop the clock. Stopping the clock resets the tick counter to 0.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "The time when the clock should stop.",
-					"name": "time"
-				}
-			],
-			"examples": [
-				"clock.stop();"
-			],
-			"returns": {
-				"type": [
-					"Tone.Clock"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "stop",
-			"lineno": "Tone/core/Clock.js#L136"
-		},
-		{
-			"description": "Pause the clock. Pausing does not reset the tick counter.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "The time when the clock should stop.",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Clock"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "pause",
-			"lineno": "Tone/core/Clock.js#L152"
-		},
-		{
-			"description": "Return the elapsed seconds at the given time.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "When to get the elapsed seconds",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Seconds"
-				],
-				"description": "The number of elapsed seconds"
-			},
-			"scope": "instance",
-			"name": "getSecondsAtTime",
-			"lineno": "Tone/core/Clock.js#L197"
-		},
-		{
-			"description": "Set the clock's ticks at the given time.",
-			"params": [
-				{
-					"type": [
-						"Ticks"
-					],
-					"description": "The tick value to set",
-					"name": "ticks"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "When to set the tick value",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Clock"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "setTicksAtTime",
-			"lineno": "Tone/core/Clock.js#L207"
-		},
-		{
-			"description": "Get the clock's ticks at the given time.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "When to get the tick value",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Ticks"
-				],
-				"description": "The tick value at the given time."
-			},
-			"scope": "instance",
-			"name": "getTicksAtTime",
-			"lineno": "Tone/core/Clock.js#L217"
-		},
-		{
-			"description": "Get the time of the next tick",
-			"params": [
-				{
-					"type": [
-						"Ticks"
-					],
-					"description": "The tick number.",
-					"name": "ticks"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"name": "before"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Clock"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "nextTickTime",
-			"lineno": "Tone/core/Clock.js#L227"
-		},
-		{
-			"description": "Returns the scheduled state at the given time.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The time to query.",
-					"name": "time"
-				}
-			],
-			"examples": [
-				"clock.start(\"+0.1\");\nclock.getStateAtTime(\"+0.1\"); //returns \"started\""
-			],
-			"returns": {
-				"type": [
-					"String"
-				],
-				"description": "The name of the state input in setStateAtTime."
-			},
-			"scope": "instance",
-			"name": "getStateAtTime",
-			"lineno": "Tone/core/Clock.js#L276"
-		},
-		{
-			"description": "Clean up",
-			"returns": {
-				"type": [
-					"Tone.Clock"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/core/Clock.js#L285"
-		},
-		{
-			"description": "Bind a callback to a specific event.",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"description": "The name of the event to listen for.",
-					"name": "event"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"description": "The callback to invoke when the\n                               event is emitted",
-					"name": "callback"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Emitter"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "on",
-			"lineno": "Tone/core/Emitter.js#L32",
-			"inherits": "Tone.Emitter"
-		},
-		{
-			"description": "Bind a callback which is only invoked once",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"description": "The name of the event to listen for.",
-					"name": "event"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"description": "The callback to invoke when the\n                               event is emitted",
-					"name": "callback"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Emitter"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "once",
-			"lineno": "Tone/core/Emitter.js#L52",
-			"inherits": "Tone.Emitter"
-		},
-		{
-			"description": "Remove the event listener.",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"description": "The event to stop listening to.",
-					"name": "event"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"optional": true,
-					"description": "The callback which was bound to\n                               the event with Tone.Emitter.on.\n                               If no callback is given, all callbacks\n                               events are removed.",
-					"name": "callback"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Emitter"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "off",
-			"lineno": "Tone/core/Emitter.js#L71",
-			"inherits": "Tone.Emitter"
-		},
-		{
-			"description": "Invoke all of the callbacks bound to the event\n with any arguments passed in.",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"description": "The name of the event.",
-					"name": "event"
-				},
-				{
-					"type": [
-						"*"
-					],
-					"description": "The arguments to pass to the functions listening.",
-					"name": "args..."
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Emitter"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "emit",
-			"lineno": "Tone/core/Emitter.js#L98",
-			"inherits": "Tone.Emitter"
-		}
-	],
 	"Delay": [
 		{
 			"description": "Clean up.",
@@ -8867,6 +8536,337 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/core/TransportRepeatEvent.js#L119"
+		}
+	],
+	"Clock": [
+		{
+			"description": "Start the clock at the given time. Optionally pass in an offset\n of where to start the tick counter from.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"description": "The time the clock should start",
+					"name": "time"
+				},
+				{
+					"type": [
+						"Ticks"
+					],
+					"optional": true,
+					"description": "Where the tick counter starts counting from.",
+					"name": "offset"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Clock"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "start",
+			"lineno": "Tone/core/Clock.js#L117"
+		},
+		{
+			"description": "Stop the clock. Stopping the clock resets the tick counter to 0.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "The time when the clock should stop.",
+					"name": "time"
+				}
+			],
+			"examples": [
+				"clock.stop();"
+			],
+			"returns": {
+				"type": [
+					"Tone.Clock"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "stop",
+			"lineno": "Tone/core/Clock.js#L139"
+		},
+		{
+			"description": "Pause the clock. Pausing does not reset the tick counter.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "The time when the clock should stop.",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Clock"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "pause",
+			"lineno": "Tone/core/Clock.js#L155"
+		},
+		{
+			"description": "Return the elapsed seconds at the given time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "When to get the elapsed seconds",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Seconds"
+				],
+				"description": "The number of elapsed seconds"
+			},
+			"scope": "instance",
+			"name": "getSecondsAtTime",
+			"lineno": "Tone/core/Clock.js#L200"
+		},
+		{
+			"description": "Set the clock's ticks at the given time.",
+			"params": [
+				{
+					"type": [
+						"Ticks"
+					],
+					"description": "The tick value to set",
+					"name": "ticks"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "When to set the tick value",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Clock"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "setTicksAtTime",
+			"lineno": "Tone/core/Clock.js#L210"
+		},
+		{
+			"description": "Get the clock's ticks at the given time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "When to get the tick value",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Ticks"
+				],
+				"description": "The tick value at the given time."
+			},
+			"scope": "instance",
+			"name": "getTicksAtTime",
+			"lineno": "Tone/core/Clock.js#L220"
+		},
+		{
+			"description": "Get the time of the next tick",
+			"params": [
+				{
+					"type": [
+						"Ticks"
+					],
+					"description": "The tick number.",
+					"name": "ticks"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"name": "before"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Clock"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "nextTickTime",
+			"lineno": "Tone/core/Clock.js#L230"
+		},
+		{
+			"description": "Returns the scheduled state at the given time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to query.",
+					"name": "time"
+				}
+			],
+			"examples": [
+				"clock.start(\"+0.1\");\nclock.getStateAtTime(\"+0.1\"); //returns \"started\""
+			],
+			"returns": {
+				"type": [
+					"String"
+				],
+				"description": "The name of the state input in setStateAtTime."
+			},
+			"scope": "instance",
+			"name": "getStateAtTime",
+			"lineno": "Tone/core/Clock.js#L279"
+		},
+		{
+			"description": "Clean up",
+			"returns": {
+				"type": [
+					"Tone.Clock"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/core/Clock.js#L288"
+		},
+		{
+			"description": "Bind a callback to a specific event.",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"description": "The name of the event to listen for.",
+					"name": "event"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"description": "The callback to invoke when the\n                               event is emitted",
+					"name": "callback"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Emitter"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "on",
+			"lineno": "Tone/core/Emitter.js#L32",
+			"inherits": "Tone.Emitter"
+		},
+		{
+			"description": "Bind a callback which is only invoked once",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"description": "The name of the event to listen for.",
+					"name": "event"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"description": "The callback to invoke when the\n                               event is emitted",
+					"name": "callback"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Emitter"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "once",
+			"lineno": "Tone/core/Emitter.js#L52",
+			"inherits": "Tone.Emitter"
+		},
+		{
+			"description": "Remove the event listener.",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"description": "The event to stop listening to.",
+					"name": "event"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"optional": true,
+					"description": "The callback which was bound to\n                               the event with Tone.Emitter.on.\n                               If no callback is given, all callbacks\n                               events are removed.",
+					"name": "callback"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Emitter"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "off",
+			"lineno": "Tone/core/Emitter.js#L71",
+			"inherits": "Tone.Emitter"
+		},
+		{
+			"description": "Invoke all of the callbacks bound to the event\n with any arguments passed in.",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"description": "The name of the event.",
+					"name": "event"
+				},
+				{
+					"type": [
+						"*"
+					],
+					"description": "The arguments to pass to the functions listening.",
+					"name": "args..."
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Emitter"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "emit",
+			"lineno": "Tone/core/Emitter.js#L98",
+			"inherits": "Tone.Emitter"
 		}
 	],
 	"Context": [
@@ -15551,293 +15551,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"MembraneSynth": [
-		{
-			"description": "Trigger the note at the given time with the given velocity.",
-			"params": [
-				{
-					"type": [
-						"Frequency"
-					],
-					"description": "the note",
-					"name": "note"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "the time, if not given is now",
-					"name": "time"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 1,
-					"description": "velocity defaults to 1",
-					"name": "velocity"
-				}
-			],
-			"examples": [
-				"kick.triggerAttack(60);"
-			],
-			"returns": {
-				"type": [
-					"Tone.MembraneSynth"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerAttack",
-			"lineno": "Tone/instrument/MembraneSynth.js#L87"
-		},
-		{
-			"description": "Trigger the release portion of the note.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "the time the note will release",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.MembraneSynth"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerRelease",
-			"lineno": "Tone/instrument/MembraneSynth.js#L104"
-		},
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.MembraneSynth"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/instrument/MembraneSynth.js#L115"
-		},
-		{
-			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
-			"examples": [
-				"instrument.sync()\n//schedule 3 notes when the transport first starts\ninstrument.triggerAttackRelease('C4', '8n', 0)\ninstrument.triggerAttackRelease('E4', '8n', '8n')\ninstrument.triggerAttackRelease('G4', '8n', '4n')\n//start the transport to hear the notes\nTransport.start()"
-			],
-			"returns": {
-				"type": [
-					"Tone.Instrument"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "sync",
-			"lineno": "Tone/instrument/Instrument.js#L82",
-			"inherits": "Tone.Instrument"
-		},
-		{
-			"description": "Unsync the instrument from the Transport",
-			"returns": {
-				"type": [
-					"Tone.Instrument"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "unsync",
-			"lineno": "Tone/instrument/Instrument.js#L111",
-			"inherits": "Tone.Instrument"
-		},
-		{
-			"description": "Trigger the attack and then the release after the duration.",
-			"params": [
-				{
-					"type": [
-						"Frequency"
-					],
-					"description": "The note to trigger.",
-					"name": "note"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "How long the note should be held for before\n                         triggering the release. This value must be greater than 0.",
-					"name": "duration"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the note should be triggered.",
-					"name": "time"
-				},
-				{
-					"type": [
-						"NormalRange"
-					],
-					"optional": true,
-					"defaultvalue": 1,
-					"description": "The velocity the note should be triggered at.",
-					"name": "velocity"
-				}
-			],
-			"examples": [
-				"//trigger \"C4\" for the duration of an 8th note\nsynth.triggerAttackRelease(\"C4\", \"8n\");"
-			],
-			"returns": {
-				"type": [
-					"Tone.Instrument"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Instrument.js#L135",
-			"inherits": "Tone.Instrument"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"MetalSynth": [
 		{
 			"description": "Trigger the attack.",
@@ -16934,6 +16647,293 @@
 			"name": "setNote",
 			"lineno": "Tone/instrument/Monophonic.js#L112",
 			"inherits": "Tone.Monophonic"
+		},
+		{
+			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
+			"examples": [
+				"instrument.sync()\n//schedule 3 notes when the transport first starts\ninstrument.triggerAttackRelease('C4', '8n', 0)\ninstrument.triggerAttackRelease('E4', '8n', '8n')\ninstrument.triggerAttackRelease('G4', '8n', '4n')\n//start the transport to hear the notes\nTransport.start()"
+			],
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "sync",
+			"lineno": "Tone/instrument/Instrument.js#L82",
+			"inherits": "Tone.Instrument"
+		},
+		{
+			"description": "Unsync the instrument from the Transport",
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "unsync",
+			"lineno": "Tone/instrument/Instrument.js#L111",
+			"inherits": "Tone.Instrument"
+		},
+		{
+			"description": "Trigger the attack and then the release after the duration.",
+			"params": [
+				{
+					"type": [
+						"Frequency"
+					],
+					"description": "The note to trigger.",
+					"name": "note"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "How long the note should be held for before\n                         triggering the release. This value must be greater than 0.",
+					"name": "duration"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the note should be triggered.",
+					"name": "time"
+				},
+				{
+					"type": [
+						"NormalRange"
+					],
+					"optional": true,
+					"defaultvalue": 1,
+					"description": "The velocity the note should be triggered at.",
+					"name": "velocity"
+				}
+			],
+			"examples": [
+				"//trigger \"C4\" for the duration of an 8th note\nsynth.triggerAttackRelease(\"C4\", \"8n\");"
+			],
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerAttackRelease",
+			"lineno": "Tone/instrument/Instrument.js#L135",
+			"inherits": "Tone.Instrument"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L214",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L229",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"MembraneSynth": [
+		{
+			"description": "Trigger the note at the given time with the given velocity.",
+			"params": [
+				{
+					"type": [
+						"Frequency"
+					],
+					"description": "the note",
+					"name": "note"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "the time, if not given is now",
+					"name": "time"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 1,
+					"description": "velocity defaults to 1",
+					"name": "velocity"
+				}
+			],
+			"examples": [
+				"kick.triggerAttack(60);"
+			],
+			"returns": {
+				"type": [
+					"Tone.MembraneSynth"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerAttack",
+			"lineno": "Tone/instrument/MembraneSynth.js#L87"
+		},
+		{
+			"description": "Trigger the release portion of the note.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "the time the note will release",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.MembraneSynth"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerRelease",
+			"lineno": "Tone/instrument/MembraneSynth.js#L107"
+		},
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.MembraneSynth"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/instrument/MembraneSynth.js#L118"
 		},
 		{
 			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
