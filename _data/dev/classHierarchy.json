@@ -528,22 +528,12 @@
 		"AudioNode",
 		"Tone"
 	],
-	"GrainPlayer": [
-		"Source",
-		"AudioNode",
-		"Tone"
-	],
 	"OmniOscillator": [
 		"Source",
 		"AudioNode",
 		"Tone"
 	],
 	"PWMOscillator": [
-		"Source",
-		"AudioNode",
-		"Tone"
-	],
-	"Player": [
 		"Source",
 		"AudioNode",
 		"Tone"
@@ -565,6 +555,11 @@
 		"AudioNode",
 		"Tone"
 	],
+	"GrainPlayer": [
+		"Source",
+		"AudioNode",
+		"Tone"
+	],
 	"Noise": [
 		"Source",
 		"AudioNode",
@@ -576,6 +571,11 @@
 		"Tone"
 	],
 	"OscillatorNode": [
+		"AudioNode",
+		"Tone"
+	],
+	"Player": [
+		"Source",
 		"AudioNode",
 		"Tone"
 	],

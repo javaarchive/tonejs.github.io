@@ -564,17 +564,6 @@
 		"modulationType": "square",
 		"harmonicity": 1
 	},
-	"GrainPlayer": {
-		"onload": "Tone.noOp",
-		"overlap": 0.1,
-		"grainSize": 0.2,
-		"playbackRate": 1,
-		"detune": 0,
-		"loop": false,
-		"loopStart": 0,
-		"loopEnd": 0,
-		"reverse": false
-	},
 	"OmniOscillator": {
 		"frequency": 440,
 		"detune": 0,
@@ -586,18 +575,6 @@
 		"detune": 0,
 		"phase": 0,
 		"modulationFrequency": 0.4
-	},
-	"Player": {
-		"onload": "Tone.noOp",
-		"playbackRate": 1,
-		"loop": false,
-		"autostart": false,
-		"loopStart": 0,
-		"loopEnd": 0,
-		"retrigger": false,
-		"reverse": false,
-		"fadeIn": 0,
-		"fadeOut": 0
 	},
 	"Players": {
 		"volume": 0,
@@ -629,6 +606,17 @@
 		"count": 3,
 		"type": "sawtooth"
 	},
+	"GrainPlayer": {
+		"onload": "Tone.noOp",
+		"overlap": 0.1,
+		"grainSize": 0.2,
+		"playbackRate": 1,
+		"detune": 0,
+		"loop": false,
+		"loopStart": 0,
+		"loopEnd": 0,
+		"reverse": false
+	},
 	"Noise": {
 		"type": "white",
 		"playbackRate": 1
@@ -645,6 +633,18 @@
 		"detune": 0,
 		"type": "sine",
 		"onended": "Tone.noOp"
+	},
+	"Player": {
+		"onload": "Tone.noOp",
+		"playbackRate": 1,
+		"loop": false,
+		"autostart": false,
+		"loopStart": 0,
+		"loopEnd": 0,
+		"retrigger": false,
+		"reverse": false,
+		"fadeIn": 0,
+		"fadeOut": 0
 	},
 	"PulseOscillator": {
 		"frequency": 440,
