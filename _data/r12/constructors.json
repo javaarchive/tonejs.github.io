@@ -415,24 +415,6 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
-	"Volume": {
-		"description": "Tone.Volume is a simple volume node, useful for creating a volume fader.",
-		"params": [
-			{
-				"type": [
-					"Decibels"
-				],
-				"optional": true,
-				"defaultvalue": 0,
-				"description": "the initial volume",
-				"name": "volume"
-			}
-		],
-		"examples": [
-			"var vol = new Tone.Volume(-12);\ninstrument.chain(vol, Tone.Master);"
-		],
-		"extends": "Tone.AudioNode"
-	},
 	"Waveform": {
 		"description": "Get the current waveform data of the connected audio source.",
 		"params": [
@@ -678,6 +660,24 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
+	"Volume": {
+		"description": "Tone.Volume is a simple volume node, useful for creating a volume fader.",
+		"params": [
+			{
+				"type": [
+					"Decibels"
+				],
+				"optional": true,
+				"defaultvalue": 0,
+				"description": "the initial volume",
+				"name": "volume"
+			}
+		],
+		"examples": [
+			"var vol = new Tone.Volume(-12);\ninstrument.chain(vol, Tone.Master);"
+		],
+		"extends": "Tone.AudioNode"
+	},
 	"CtrlInterpolate": {
 		"description": "Tone.CtrlInterpolate will interpolate between given values based\n        on the \"index\" property. Passing in an array or object literal\n        will interpolate each of the parameters. Note (i.e. \"C3\")\n        and Time (i.e. \"4n + 2\") can be interpolated. All other values are\n        assumed to be numbers.",
 		"params": [
@@ -825,52 +825,8 @@
 		],
 		"extends": "Tone"
 	},
-	"Delay": {
-		"description": "Wrapper around Web Audio's native [DelayNode](http://webaudio.github.io/web-audio-api/#the-delaynode-interface).",
-		"params": [
-			{
-				"type": [
-					"Time"
-				],
-				"optional": true,
-				"description": "The delay applied to the incoming signal.",
-				"name": "delayTime"
-			},
-			{
-				"type": [
-					"Time"
-				],
-				"optional": true,
-				"description": "The maximum delay time.",
-				"name": "maxDelay"
-			}
-		],
-		"extends": "Tone"
-	},
 	"Emitter": {
 		"description": "Tone.Emitter gives classes which extend it\n        the ability to listen for and emit events.\n        Inspiration and reference from Jerome Etienne's [MicroEvent](https://github.com/jeromeetienne/microevent.js).\n        MIT (c) 2011 Jerome Etienne.",
-		"extends": "Tone"
-	},
-	"Gain": {
-		"description": "A thin wrapper around the Native Web Audio GainNode.\n        The GainNode is a basic building block of the Web Audio\n        API and is useful for routing audio and adjusting gains.",
-		"params": [
-			{
-				"type": [
-					"Number"
-				],
-				"optional": true,
-				"description": "The initial gain of the GainNode",
-				"name": "gain"
-			},
-			{
-				"type": [
-					"Tone.Type"
-				],
-				"optional": true,
-				"description": "The units of the gain parameter.",
-				"name": "units"
-			}
-		],
 		"extends": "Tone"
 	},
 	"IntervalTimeline": {
@@ -1029,12 +985,56 @@
 		],
 		"extends": "Tone.Emitter"
 	},
+	"Delay": {
+		"description": "Wrapper around Web Audio's native [DelayNode](http://webaudio.github.io/web-audio-api/#the-delaynode-interface).",
+		"params": [
+			{
+				"type": [
+					"Time"
+				],
+				"optional": true,
+				"description": "The delay applied to the incoming signal.",
+				"name": "delayTime"
+			},
+			{
+				"type": [
+					"Time"
+				],
+				"optional": true,
+				"description": "The maximum delay time.",
+				"name": "maxDelay"
+			}
+		],
+		"extends": "Tone"
+	},
 	"Draw": {
 		"description": "Tone.Draw is useful for synchronizing visuals and audio events.\n        Callbacks from Tone.Transport or any of the Tone.Event classes\n        always happen _before_ the scheduled time and are not synchronized\n        to the animation frame so they are not good for triggering tightly\n        synchronized visuals and sound. Tone.Draw makes it easy to schedule\n        callbacks using the AudioContext time and uses requestAnimationFrame.",
 		"examples": [
 			"Tone.Transport.schedule(function(time){\n\t//use the time argument to schedule a callback with Tone.Draw\n\tTone.Draw.schedule(function(){\n\t\t//do drawing or DOM manipulation here\n\t}, time)\n}, \"+0.5\")"
 		],
 		"singleton": true,
+		"extends": "Tone"
+	},
+	"Gain": {
+		"description": "A thin wrapper around the Native Web Audio GainNode.\n        The GainNode is a basic building block of the Web Audio\n        API and is useful for routing audio and adjusting gains.",
+		"params": [
+			{
+				"type": [
+					"Number"
+				],
+				"optional": true,
+				"description": "The initial gain of the GainNode",
+				"name": "gain"
+			},
+			{
+				"type": [
+					"Tone.Type"
+				],
+				"optional": true,
+				"description": "The units of the gain parameter.",
+				"name": "units"
+			}
+		],
 		"extends": "Tone"
 	},
 	"Param": {

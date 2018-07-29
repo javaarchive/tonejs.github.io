@@ -2307,100 +2307,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"Volume": [
-		{
-			"description": "clean up",
-			"returns": {
-				"type": [
-					"Tone.Volume"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/Volume.js#L88"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"Waveform": [
 		{
 			"description": "Gets the waveform of the audio source. Returns the waveform data\n of length [size](#size) as a Float32Array with values between -1 and 1.",
@@ -3374,6 +3280,100 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/component/Split.js#L52"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Volume": [
+		{
+			"description": "clean up",
+			"returns": {
+				"type": [
+					"Tone.Volume"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/Volume.js#L88"
 		},
 		{
 			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
@@ -4523,20 +4523,6 @@
 			"lineno": "Tone/core/Buffers.js#L154"
 		}
 	],
-	"Delay": [
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.Delay"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/core/Delay.js#L74"
-		}
-	],
 	"Emitter": [
 		{
 			"description": "Bind a callback to a specific event.",
@@ -4683,20 +4669,6 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/core/Emitter.js#L131"
-		}
-	],
-	"Gain": [
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.Gain"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/core/Gain.js#L55"
 		}
 	],
 	"IntervalTimeline": [
@@ -7533,6 +7505,20 @@
 			"inherits": "Tone.Emitter"
 		}
 	],
+	"Delay": [
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.Delay"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/core/Delay.js#L74"
+		}
+	],
 	"Draw": [
 		{
 			"description": "Schedule a function at the given time to be invoked\n on the nearest animation frame.",
@@ -7583,6 +7569,20 @@
 			"scope": "instance",
 			"name": "cancel",
 			"lineno": "Tone/core/Draw.js#L86"
+		}
+	],
+	"Gain": [
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.Gain"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/core/Gain.js#L55"
 		}
 	],
 	"Param": [

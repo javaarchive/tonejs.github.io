@@ -85,10 +85,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Volume": [
-		"AudioNode",
-		"Tone"
-	],
 	"Waveform": [
 		"AudioNode",
 		"Tone"
@@ -126,6 +122,10 @@
 		"AudioNode",
 		"Tone"
 	],
+	"Volume": [
+		"AudioNode",
+		"Tone"
+	],
 	"CtrlInterpolate": [
 		"Tone"
 	],
@@ -144,13 +144,7 @@
 	"Buffers": [
 		"Tone"
 	],
-	"Delay": [
-		"Tone"
-	],
 	"Emitter": [
-		"Tone"
-	],
-	"Gain": [
 		"Tone"
 	],
 	"IntervalTimeline": [
@@ -196,7 +190,13 @@
 		"Emitter",
 		"Tone"
 	],
+	"Delay": [
+		"Tone"
+	],
 	"Draw": [
+		"Tone"
+	],
+	"Gain": [
 		"Tone"
 	],
 	"Param": [

@@ -21,7 +21,6 @@
 		"Panner3D",
 		"ScaledEnvelope",
 		"Solo",
-		"Volume",
 		"Waveform",
 		"Envelope",
 		"Filter",
@@ -30,7 +29,8 @@
 		"Gate",
 		"LowpassCombFilter",
 		"Meter",
-		"Split"
+		"Split",
+		"Volume"
 	],
 	"control": [
 		"CtrlInterpolate",
@@ -41,9 +41,7 @@
 	"core": [
 		"Buffer",
 		"Buffers",
-		"Delay",
 		"Emitter",
-		"Gain",
 		"IntervalTimeline",
 		"Listener",
 		"Master",
@@ -56,7 +54,9 @@
 		"AudioNode",
 		"Clock",
 		"Context",
+		"Delay",
 		"Draw",
+		"Gain",
 		"Param",
 		"Tone"
 	],

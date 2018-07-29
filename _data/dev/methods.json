@@ -197,7 +197,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -223,7 +223,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -246,7 +246,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -328,7 +328,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -351,7 +351,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -377,7 +377,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -400,7 +400,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -471,7 +471,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -494,7 +494,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -520,7 +520,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -543,7 +543,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -614,7 +614,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -637,7 +637,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -663,7 +663,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -686,7 +686,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -757,7 +757,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -780,7 +780,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -806,7 +806,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -829,7 +829,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -911,7 +911,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -934,7 +934,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -960,7 +960,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -983,7 +983,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -1054,7 +1054,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1077,7 +1077,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1103,7 +1103,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1126,7 +1126,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -1252,7 +1252,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1278,7 +1278,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1301,7 +1301,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -1372,7 +1372,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1395,7 +1395,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1421,7 +1421,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1444,7 +1444,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -1515,7 +1515,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1538,7 +1538,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1564,7 +1564,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1587,7 +1587,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -1658,7 +1658,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1681,7 +1681,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1707,7 +1707,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1730,7 +1730,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -1801,7 +1801,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1824,7 +1824,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1850,7 +1850,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1873,7 +1873,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -1944,7 +1944,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1967,7 +1967,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -1993,7 +1993,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2016,7 +2016,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -2087,7 +2087,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2110,7 +2110,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2136,7 +2136,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2159,7 +2159,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -2230,7 +2230,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2253,7 +2253,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2279,7 +2279,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2302,7 +2302,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -2373,7 +2373,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2396,7 +2396,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2422,7 +2422,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2445,7 +2445,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -2516,7 +2516,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2539,7 +2539,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2565,7 +2565,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2588,7 +2588,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -2659,7 +2659,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2682,7 +2682,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2708,7 +2708,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2731,7 +2731,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -2866,7 +2866,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2889,7 +2889,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2915,7 +2915,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -2938,7 +2938,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -3140,7 +3140,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -3166,7 +3166,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -3189,7 +3189,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -3260,7 +3260,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -3283,7 +3283,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -3309,7 +3309,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -3332,150 +3332,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Volume": [
-		{
-			"description": "clean up",
-			"returns": {
-				"type": [
-					"Tone.Volume"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/component/Volume.js#L88"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect the output of this node to the rest of the nodes in series.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"examples": [
-				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "connect the output of this node to the rest of the nodes in parallel.",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -3557,7 +3414,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -3580,7 +3437,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -3606,7 +3463,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -3629,7 +3486,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -3826,7 +3683,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -3852,7 +3709,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -3875,7 +3732,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -3946,7 +3803,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -3969,7 +3826,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -3995,7 +3852,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -4018,7 +3875,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -4077,7 +3934,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -4103,7 +3960,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -4126,7 +3983,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -4328,7 +4185,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -4354,7 +4211,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -4377,7 +4234,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -4448,7 +4305,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -4471,7 +4328,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -4497,7 +4354,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -4520,7 +4377,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -4591,7 +4448,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -4614,7 +4471,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -4640,7 +4497,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -4663,7 +4520,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -4756,7 +4613,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -4779,7 +4636,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -4805,7 +4662,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -4828,7 +4685,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -4899,7 +4756,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -4922,7 +4779,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -4948,7 +4805,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -4971,7 +4828,150 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Volume": [
+		{
+			"description": "clean up",
+			"returns": {
+				"type": [
+					"Tone.Volume"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/Volume.js#L88"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L167",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L184",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L205",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -5939,13 +5939,13 @@
 			"params": [],
 			"scope": "inner",
 			"name": "toneConnect",
-			"lineno": "Tone/core/Context.js#L509"
+			"lineno": "Tone/core/Context.js#L508"
 		},
 		{
 			"params": [],
 			"scope": "inner",
 			"name": "toneDisconnect",
-			"lineno": "Tone/core/Context.js#L533"
+			"lineno": "Tone/core/Context.js#L532"
 		},
 		{
 			"params": [],
@@ -6052,20 +6052,6 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/core/Buffers.js#L154"
-		}
-	],
-	"Delay": [
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.Delay"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/core/Delay.js#L74"
 		}
 	],
 	"Emitter": [
@@ -6214,20 +6200,6 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/core/Emitter.js#L131"
-		}
-	],
-	"Gain": [
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.Gain"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/core/Gain.js#L55"
 		}
 	],
 	"IntervalTimeline": [
@@ -6714,7 +6686,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173"
+			"lineno": "Tone/core/AudioNode.js#L167"
 		},
 		{
 			"description": "disconnect the output",
@@ -6736,7 +6708,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193"
+			"lineno": "Tone/core/AudioNode.js#L184"
 		},
 		{
 			"description": "Connect the output of this node to the rest of the nodes in series.",
@@ -6761,7 +6733,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214"
+			"lineno": "Tone/core/AudioNode.js#L205"
 		},
 		{
 			"description": "connect the output of this node to the rest of the nodes in parallel.",
@@ -6783,7 +6755,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229"
+			"lineno": "Tone/core/AudioNode.js#L220"
 		},
 		{
 			"description": "Dispose and disconnect",
@@ -6795,7 +6767,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/AudioNode.js#L246"
+			"lineno": "Tone/core/AudioNode.js#L237"
 		}
 	],
 	"OfflineContext": [
@@ -9111,6 +9083,20 @@
 			"inherits": "Tone.Emitter"
 		}
 	],
+	"Delay": [
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.Delay"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/core/Delay.js#L74"
+		}
+	],
 	"Draw": [
 		{
 			"description": "Schedule a function at the given time to be invoked\n on the nearest animation frame.",
@@ -9161,6 +9147,20 @@
 			"scope": "instance",
 			"name": "cancel",
 			"lineno": "Tone/core/Draw.js#L86"
+		}
+	],
+	"Gain": [
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.Gain"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/core/Gain.js#L55"
 		}
 	],
 	"Param": [
@@ -9682,7 +9682,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -9705,7 +9705,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -9731,7 +9731,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -9754,7 +9754,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -10082,7 +10082,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10105,7 +10105,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10131,7 +10131,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10154,7 +10154,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -10225,7 +10225,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10248,7 +10248,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10274,7 +10274,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10297,7 +10297,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -10368,7 +10368,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10391,7 +10391,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10417,7 +10417,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10440,7 +10440,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -10511,7 +10511,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10534,7 +10534,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10560,7 +10560,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10583,7 +10583,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -10654,7 +10654,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10677,7 +10677,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10703,7 +10703,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10726,7 +10726,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -10824,7 +10824,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10847,7 +10847,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10873,7 +10873,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10896,7 +10896,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -10967,7 +10967,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -10990,7 +10990,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11016,7 +11016,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11039,7 +11039,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -11110,7 +11110,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11133,7 +11133,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11159,7 +11159,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11182,7 +11182,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -11253,7 +11253,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11276,7 +11276,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11302,7 +11302,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11325,7 +11325,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -11396,7 +11396,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11419,7 +11419,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11445,7 +11445,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11468,7 +11468,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -11539,7 +11539,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11562,7 +11562,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11588,7 +11588,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11611,7 +11611,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -11682,7 +11682,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11705,7 +11705,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11731,7 +11731,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11754,7 +11754,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -11825,7 +11825,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11848,7 +11848,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11874,7 +11874,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11897,7 +11897,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -11968,7 +11968,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -11991,7 +11991,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12017,7 +12017,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12040,7 +12040,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -12111,7 +12111,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12134,7 +12134,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12160,7 +12160,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12183,7 +12183,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -12254,7 +12254,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12277,7 +12277,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12303,7 +12303,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12326,7 +12326,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -12437,7 +12437,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12460,7 +12460,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12486,7 +12486,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12509,7 +12509,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -12580,7 +12580,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12603,7 +12603,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12629,7 +12629,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12652,7 +12652,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -12723,7 +12723,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12746,7 +12746,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12772,7 +12772,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12795,7 +12795,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -12866,7 +12866,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12889,7 +12889,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12915,7 +12915,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -12938,7 +12938,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -13009,7 +13009,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -13032,7 +13032,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -13058,7 +13058,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -13081,7 +13081,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -13233,7 +13233,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -13256,7 +13256,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -13282,7 +13282,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -13305,7 +13305,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -13376,7 +13376,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -13399,7 +13399,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -13425,7 +13425,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -13448,7 +13448,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -13600,7 +13600,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -13623,7 +13623,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -13649,7 +13649,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -13672,7 +13672,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -14557,7 +14557,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -14580,7 +14580,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -14606,7 +14606,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -14629,7 +14629,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -14906,7 +14906,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -14929,7 +14929,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -14955,7 +14955,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -14978,7 +14978,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -15256,7 +15256,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -15279,7 +15279,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -15305,7 +15305,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -15328,7 +15328,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -15475,7 +15475,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -15498,7 +15498,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -15524,7 +15524,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -15547,7 +15547,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -15734,7 +15734,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -15757,7 +15757,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -15783,7 +15783,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -15806,7 +15806,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -16084,7 +16084,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -16107,7 +16107,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -16133,7 +16133,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -16156,7 +16156,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -16431,7 +16431,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -16454,7 +16454,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -16480,7 +16480,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -16503,7 +16503,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -16781,7 +16781,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -16804,7 +16804,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -16830,7 +16830,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -16853,7 +16853,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -17068,7 +17068,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -17091,7 +17091,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -17117,7 +17117,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -17140,7 +17140,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -17336,7 +17336,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -17359,7 +17359,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -17385,7 +17385,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -17408,7 +17408,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -17538,7 +17538,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -17561,7 +17561,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -17587,7 +17587,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -17610,7 +17610,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -17914,7 +17914,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -17937,7 +17937,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -17963,7 +17963,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -17986,7 +17986,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -18053,7 +18053,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerRelease",
-			"lineno": "Tone/instrument/Sampler.js#L154"
+			"lineno": "Tone/instrument/Sampler.js#L159"
 		},
 		{
 			"description": "Release all currently active notes.",
@@ -18075,7 +18075,7 @@
 			},
 			"scope": "instance",
 			"name": "releaseAll",
-			"lineno": "Tone/instrument/Sampler.js#L177"
+			"lineno": "Tone/instrument/Sampler.js#L182"
 		},
 		{
 			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
@@ -18090,7 +18090,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/instrument/Sampler.js#L203"
+			"lineno": "Tone/instrument/Sampler.js#L208"
 		},
 		{
 			"description": "Invoke the attack phase, then after the duration, invoke the release.",
@@ -18135,7 +18135,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Sampler.js#L217"
+			"lineno": "Tone/instrument/Sampler.js#L222"
 		},
 		{
 			"description": "Add a note to the sampler.",
@@ -18168,7 +18168,7 @@
 			],
 			"scope": "instance",
 			"name": "add",
-			"lineno": "Tone/instrument/Sampler.js#L240"
+			"lineno": "Tone/instrument/Sampler.js#L245"
 		},
 		{
 			"description": "Clean up",
@@ -18180,7 +18180,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/Sampler.js#L270"
+			"lineno": "Tone/instrument/Sampler.js#L275"
 		},
 		{
 			"description": "Unsync the instrument from the Transport",
@@ -18249,7 +18249,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -18272,7 +18272,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -18298,7 +18298,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -18321,7 +18321,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -19692,7 +19692,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -19715,7 +19715,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -19741,7 +19741,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -19764,7 +19764,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -20279,7 +20279,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -20302,7 +20302,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -20328,7 +20328,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -20351,7 +20351,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -21008,7 +21008,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -21031,7 +21031,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -21057,7 +21057,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -21080,7 +21080,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -21601,7 +21601,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -21624,7 +21624,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -21650,7 +21650,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -21673,7 +21673,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -22194,7 +22194,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -22217,7 +22217,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -22243,7 +22243,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -22266,7 +22266,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -22786,7 +22786,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -22809,7 +22809,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -22835,7 +22835,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -22858,7 +22858,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -23422,7 +23422,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -23445,7 +23445,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -23471,7 +23471,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -23494,7 +23494,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -23678,7 +23678,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -23701,7 +23701,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -23727,7 +23727,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -23750,7 +23750,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -23905,7 +23905,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -23928,7 +23928,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -23954,7 +23954,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -23977,7 +23977,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -24172,7 +24172,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -24195,7 +24195,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -24221,7 +24221,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -24244,7 +24244,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -24399,7 +24399,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -24422,7 +24422,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -24448,7 +24448,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -24471,7 +24471,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -24636,7 +24636,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -24659,7 +24659,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -24685,7 +24685,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -24708,7 +24708,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -24859,7 +24859,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -24882,7 +24882,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -24908,7 +24908,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -24931,7 +24931,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -25114,7 +25114,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -25137,7 +25137,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -25163,7 +25163,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -25186,7 +25186,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -25341,7 +25341,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -25364,7 +25364,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -25390,7 +25390,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -25413,7 +25413,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -25581,7 +25581,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -25604,7 +25604,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -25630,7 +25630,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -25653,7 +25653,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -25829,7 +25829,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -25852,7 +25852,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -25878,7 +25878,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -25901,7 +25901,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -26104,7 +26104,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -26127,7 +26127,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -26153,7 +26153,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -26176,7 +26176,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -26345,7 +26345,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -26368,7 +26368,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -26394,7 +26394,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -26417,7 +26417,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -26716,7 +26716,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -26739,7 +26739,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -26765,7 +26765,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -26788,7 +26788,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -26943,7 +26943,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -26966,7 +26966,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -26992,7 +26992,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -27015,7 +27015,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
@@ -27408,7 +27408,7 @@
 			},
 			"scope": "instance",
 			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
+			"lineno": "Tone/core/AudioNode.js#L167",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -27431,7 +27431,7 @@
 			},
 			"scope": "instance",
 			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
+			"lineno": "Tone/core/AudioNode.js#L184",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -27457,7 +27457,7 @@
 			},
 			"scope": "instance",
 			"name": "chain",
-			"lineno": "Tone/core/AudioNode.js#L214",
+			"lineno": "Tone/core/AudioNode.js#L205",
 			"inherits": "Tone.AudioNode"
 		},
 		{
@@ -27480,7 +27480,7 @@
 			},
 			"scope": "instance",
 			"name": "fan",
-			"lineno": "Tone/core/AudioNode.js#L229",
+			"lineno": "Tone/core/AudioNode.js#L220",
 			"inherits": "Tone.AudioNode"
 		}
 	],
