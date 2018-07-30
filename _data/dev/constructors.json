@@ -817,19 +817,6 @@
 		"description": "Similar to Tone.Timeline, but all events represent\n        intervals with both \"time\" and \"duration\" times. The\n        events are placed in a tree structure optimized\n        for querying an intersection point with the timeline\n        events. Internally uses an [Interval Tree](https://en.wikipedia.org/wiki/Interval_tree)\n        to represent the data.",
 		"extends": "Tone"
 	},
-	"Listener": {
-		"description": "Both Tone.Panner3D and Tone.Listener have a position in 3D space\n         using a right-handed cartesian coordinate system.\n         The units used in the coordinate system are not defined;\n         these coordinates are independent/invariant of any particular\n         units such as meters or feet. Tone.Panner3D objects have an forward\n         vector representing the direction the sound is projecting. Additionally,\n         they have a sound cone representing how directional the sound is.\n         For example, the sound could be omnidirectional, in which case it would\n         be heard anywhere regardless of its forward, or it can be more directional\n         and heard only if it is facing the listener. Tone.Listener objects\n         (representing a person's ears) have an forward and up vector\n         representing in which direction the person is facing. Because both the\n         source stream and the listener can be moving, they both have a velocity\n         vector representing both the speed and direction of movement. Taken together,\n         these two velocities can be used to generate a doppler shift effect which changes the pitch.\n         <br><br>\n         Note: the position of the Listener will have no effect on nodes not connected to a Tone.Panner3D",
-		"singleton": true,
-		"extends": "Tone"
-	},
-	"Master": {
-		"description": "A single master output which is connected to the\n         AudioDestinationNode (aka your speakers).\n         It provides useful conveniences such as the ability\n         to set the volume and mute the entire application.\n         It also gives you the ability to apply master effects to your application.\n         <br><br>\n         Like Tone.Transport, A single Tone.Master is created\n         on initialization and you do not need to explicitly construct one.",
-		"examples": [
-			"//the audio will go from the oscillator to the speakers\noscillator.connect(Tone.Master);\n//a convenience for connecting to the master output is also provided:\noscillator.toMaster();\n//the above two examples are equivalent."
-		],
-		"singleton": true,
-		"extends": "Tone"
-	},
 	"OfflineContext": {
 		"description": "Wrapper around the OfflineAudioContext",
 		"params": [
@@ -884,15 +871,6 @@
 			}
 		],
 		"extends": "Tone.Timeline"
-	},
-	"Transport": {
-		"description": "Transport for timing musical events.\n         Supports tempo curves and time changes. Unlike browser-based timing (setInterval, requestAnimationFrame)\n         Tone.Transport timing events pass in the exact time of the scheduled event\n         in the argument of the callback function. Pass that time value to the object\n         you're scheduling. <br><br>\n         A single transport is created for you when the library is initialized.\n         <br><br>\n         The transport emits the events: \"start\", \"stop\", \"pause\", and \"loop\" which are\n         called with the time of that event as the argument.",
-		"examples": [
-			"//repeated event every 8th note\nTone.Transport.scheduleRepeat(function(time){\n\t//do something with the time\n}, \"8n\");\n ",
-			"//schedule an event on the 16th measure\nTone.Transport.schedule(function(time){\n\t//do something with the time\n}, \"16:0:0\");"
-		],
-		"singleton": true,
-		"extends": "Tone.Emitter"
 	},
 	"TransportEvent": {
 		"description": "Tone.TransportEvent is an internal class used by (Tone.Transport)[Transport]\n        to schedule events. Do no invoke this class directly, it is\n        handled from within Tone.Transport.",
@@ -1021,6 +999,19 @@
 		],
 		"extends": "Tone"
 	},
+	"Listener": {
+		"description": "Both Tone.Panner3D and Tone.Listener have a position in 3D space\n         using a right-handed cartesian coordinate system.\n         The units used in the coordinate system are not defined;\n         these coordinates are independent/invariant of any particular\n         units such as meters or feet. Tone.Panner3D objects have an forward\n         vector representing the direction the sound is projecting. Additionally,\n         they have a sound cone representing how directional the sound is.\n         For example, the sound could be omnidirectional, in which case it would\n         be heard anywhere regardless of its forward, or it can be more directional\n         and heard only if it is facing the listener. Tone.Listener objects\n         (representing a person's ears) have an forward and up vector\n         representing in which direction the person is facing. Because both the\n         source stream and the listener can be moving, they both have a velocity\n         vector representing both the speed and direction of movement. Taken together,\n         these two velocities can be used to generate a doppler shift effect which changes the pitch.\n         <br><br>\n         Note: the position of the Listener will have no effect on nodes not connected to a Tone.Panner3D",
+		"singleton": true,
+		"extends": "Tone"
+	},
+	"Master": {
+		"description": "A single master output which is connected to the\n         AudioDestinationNode (aka your speakers).\n         It provides useful conveniences such as the ability\n         to set the volume and mute the entire application.\n         It also gives you the ability to apply master effects to your application.\n         <br><br>\n         Like Tone.Transport, A single Tone.Master is created\n         on initialization and you do not need to explicitly construct one.",
+		"examples": [
+			"//the audio will go from the oscillator to the speakers\noscillator.connect(Tone.Master);\n//a convenience for connecting to the master output is also provided:\noscillator.toMaster();\n//the above two examples are equivalent."
+		],
+		"singleton": true,
+		"extends": "Tone"
+	},
 	"Param": {
 		"description": "Tone.Param wraps the native Web Audio's AudioParam to provide\n        additional unit conversion functionality. It also\n        serves as a base-class for classes which have a single,\n        automatable parameter.",
 		"params": [
@@ -1051,6 +1042,15 @@
 	"Tone": {
 		"description": "Tone is the base class of all other classes.",
 		"params": []
+	},
+	"Transport": {
+		"description": "Transport for timing musical events.\n         Supports tempo curves and time changes. Unlike browser-based timing (setInterval, requestAnimationFrame)\n         Tone.Transport timing events pass in the exact time of the scheduled event\n         in the argument of the callback function. Pass that time value to the object\n         you're scheduling. <br><br>\n         A single transport is created for you when the library is initialized.\n         <br><br>\n         The transport emits the events: \"start\", \"stop\", \"pause\", and \"loop\" which are\n         called with the time of that event as the argument.",
+		"examples": [
+			"//repeated event every 8th note\nTone.Transport.scheduleRepeat(function(time){\n\t//do something with the time\n}, \"8n\");\n ",
+			"//schedule an event on the 16th measure\nTone.Transport.schedule(function(time){\n\t//do something with the time\n}, \"16:0:0\");"
+		],
+		"singleton": true,
+		"extends": "Tone.Emitter"
 	},
 	"AutoPanner": {
 		"description": "Tone.AutoPanner is a Tone.Panner with an LFO connected to the pan amount. \n        More on using autopanners [here](https://www.ableton.com/en/blog/autopan-chopper-effect-and-more-liveschool/).",
@@ -2275,27 +2275,6 @@
 		],
 		"extends": "Tone.Source"
 	},
-	"Players": {
-		"description": "Tone.Players combines multiple [Tone.Player](Player) objects.",
-		"params": [
-			{
-				"type": [
-					"Object"
-				],
-				"description": "An object mapping a name to a url.",
-				"name": "urls"
-			},
-			{
-				"type": [
-					"function"
-				],
-				"optional": true,
-				"description": "The function to invoke when all buffers are loaded.",
-				"name": "onload"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
 	"Source": {
 		"description": "Base class for sources. Sources have start/stop methods\n         and the ability to be synced to the\n         start/stop of Tone.Transport.",
 		"examples": [
@@ -2462,6 +2441,27 @@
 			"var player = new Tone.Player(\"./path/to/sample.mp3\").toMaster();\n//play as soon as the buffer is loaded\nplayer.autostart = true;"
 		],
 		"extends": "Tone.Source"
+	},
+	"Players": {
+		"description": "Tone.Players combines multiple [Tone.Player](Player) objects.",
+		"params": [
+			{
+				"type": [
+					"Object"
+				],
+				"description": "An object mapping a name to a url.",
+				"name": "urls"
+			},
+			{
+				"type": [
+					"function"
+				],
+				"optional": true,
+				"description": "The function to invoke when all buffers are loaded.",
+				"name": "onload"
+			}
+		],
+		"extends": "Tone.AudioNode"
 	},
 	"PulseOscillator": {
 		"description": "Tone.PulseOscillator is a pulse oscillator with control over pulse width,\n        also known as the duty cycle. At 50% duty cycle (width = 0.5) the wave is\n        a square and only odd-numbered harmonics are present. At all other widths\n        even-numbered harmonics are present. Read more\n        [here](https://wigglewave.wordpress.com/2014/08/16/pulse-waveforms-and-harmonics/).",

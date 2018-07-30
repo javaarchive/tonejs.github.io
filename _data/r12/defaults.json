@@ -161,32 +161,8 @@
 		"onload": "Tone.noOp",
 		"baseUrl": ""
 	},
-	"Listener": {
-		"positionX": 0,
-		"positionY": 0,
-		"positionZ": 0,
-		"forwardX": 0,
-		"forwardY": 0,
-		"forwardZ": 1,
-		"upX": 0,
-		"upY": 1,
-		"upZ": 0
-	},
-	"Master": {
-		"volume": 0,
-		"mute": false
-	},
 	"Timeline": {
 		"memory": "Infinity"
-	},
-	"Transport": {
-		"bpm": 120,
-		"swing": 0,
-		"swingSubdivision": "8n",
-		"timeSignature": 4,
-		"loopStart": 0,
-		"loopEnd": "4m",
-		"PPQ": 192
 	},
 	"TransportEvent": {
 		"once": false,
@@ -214,10 +190,34 @@
 		"gain": 1,
 		"convert": true
 	},
+	"Listener": {
+		"positionX": 0,
+		"positionY": 0,
+		"positionZ": 0,
+		"forwardX": 0,
+		"forwardY": 0,
+		"forwardZ": 1,
+		"upX": 0,
+		"upY": 1,
+		"upZ": 0
+	},
+	"Master": {
+		"volume": 0,
+		"mute": false
+	},
 	"Param": {
 		"units": "Tone.Type.Default",
 		"convert": true,
 		"param": "undefined"
+	},
+	"Transport": {
+		"bpm": 120,
+		"swing": 0,
+		"swingSubdivision": "8n",
+		"timeSignature": 4,
+		"loopStart": 0,
+		"loopEnd": "4m",
+		"PPQ": 192
 	},
 	"AutoPanner": {
 		"frequency": 1,
@@ -576,13 +576,6 @@
 		"phase": 0,
 		"modulationFrequency": 0.4
 	},
-	"Players": {
-		"volume": 0,
-		"mute": false,
-		"onload": "Tone.noOp",
-		"fadeIn": 0,
-		"fadeOut": 0
-	},
 	"Source": {
 		"volume": 0,
 		"mute": false
@@ -643,6 +636,13 @@
 		"loopEnd": 0,
 		"retrigger": false,
 		"reverse": false,
+		"fadeIn": 0,
+		"fadeOut": 0
+	},
+	"Players": {
+		"volume": 0,
+		"mute": false,
+		"onload": "Tone.noOp",
 		"fadeIn": 0,
 		"fadeOut": 0
 	},

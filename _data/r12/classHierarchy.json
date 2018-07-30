@@ -150,12 +150,6 @@
 	"IntervalTimeline": [
 		"Tone"
 	],
-	"Listener": [
-		"Tone"
-	],
-	"Master": [
-		"Tone"
-	],
 	"OfflineContext": [
 		"Context",
 		"Emitter",
@@ -166,10 +160,6 @@
 	],
 	"TimelineState": [
 		"Timeline",
-		"Tone"
-	],
-	"Transport": [
-		"Emitter",
 		"Tone"
 	],
 	"TransportEvent": [
@@ -199,8 +189,18 @@
 	"Gain": [
 		"Tone"
 	],
+	"Listener": [
+		"Tone"
+	],
+	"Master": [
+		"Tone"
+	],
 	"Param": [
 		"AudioNode",
+		"Tone"
+	],
+	"Transport": [
+		"Emitter",
 		"Tone"
 	],
 	"AutoPanner": [
@@ -538,10 +538,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Players": [
-		"AudioNode",
-		"Tone"
-	],
 	"Source": [
 		"AudioNode",
 		"Tone"
@@ -576,6 +572,10 @@
 	],
 	"Player": [
 		"Source",
+		"AudioNode",
+		"Tone"
+	],
+	"Players": [
 		"AudioNode",
 		"Tone"
 	],
