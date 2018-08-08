@@ -39,16 +39,15 @@
 		"CtrlRandom"
 	],
 	"core": [
-		"Buffer",
 		"Buffers",
 		"Emitter",
 		"IntervalTimeline",
-		"OfflineContext",
 		"Timeline",
 		"TimelineState",
 		"TransportEvent",
 		"TransportRepeatEvent",
 		"AudioNode",
+		"Buffer",
 		"Clock",
 		"Context",
 		"Delay",
@@ -56,6 +55,7 @@
 		"Gain",
 		"Listener",
 		"Master",
+		"OfflineContext",
 		"Param",
 		"Tone",
 		"Transport"
@@ -66,7 +66,6 @@
 		"BitCrusher",
 		"Chebyshev",
 		"Chorus",
-		"Convolver",
 		"Distortion",
 		"Effect",
 		"FeedbackDelay",
@@ -84,7 +83,8 @@
 		"StereoXFeedbackEffect",
 		"Tremolo",
 		"Vibrato",
-		"AutoFilter"
+		"AutoFilter",
+		"Convolver"
 	],
 	"event": [
 		"Event",
@@ -100,9 +100,9 @@
 		"Instrument",
 		"MetalSynth",
 		"MonoSynth",
-		"Monophonic",
 		"Synth",
 		"MembraneSynth",
+		"Monophonic",
 		"NoiseSynth",
 		"PluckSynth",
 		"PolySynth",

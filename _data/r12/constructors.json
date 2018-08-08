@@ -765,40 +765,6 @@
 		],
 		"extends": "Tone"
 	},
-	"Buffer": {
-		"description": "Buffer loading and storage. Tone.Buffer is used internally by all\n         classes that make requests for audio files such as Tone.Player,\n         Tone.Sampler and Tone.Convolver.\n\n         Aside from load callbacks from individual buffers, Tone.Buffer\n \t\tprovides events which keep track of the loading progress\n \t\tof _all_ of the buffers. These are Tone.Buffer.on(\"load\" / \"progress\" / \"error\")",
-		"params": [
-			{
-				"type": [
-					"AudioBuffer",
-					"String"
-				],
-				"description": "The url to load, or the audio buffer to set.",
-				"name": "url"
-			},
-			{
-				"type": [
-					"function"
-				],
-				"optional": true,
-				"description": "A callback which is invoked after the buffer is loaded.\n                           It's recommended to use `Tone.Buffer.on('load', callback)` instead\n                           since it will give you a callback when _all_ buffers are loaded.",
-				"name": "onload"
-			},
-			{
-				"type": [
-					"function"
-				],
-				"optional": true,
-				"description": "The callback to invoke if there is an error",
-				"name": "onerror"
-			}
-		],
-		"examples": [
-			"var buffer = new Tone.Buffer(\"path/to/sound.mp3\", function(){\n\t//the buffer is now available.\n\tvar buff = buffer.get();\n});\n ",
-			"//can load provide fallback extension types if the first type is not supported.\nvar buffer = new Tone.Buffer(\"path/to/sound.[mp3|ogg|wav]\");"
-		],
-		"extends": "Tone"
-	},
 	"Buffers": {
 		"description": "A data structure for holding multiple buffers.",
 		"params": [
@@ -832,33 +798,6 @@
 	"IntervalTimeline": {
 		"description": "Similar to Tone.Timeline, but all events represent\n        intervals with both \"time\" and \"duration\" times. The\n        events are placed in a tree structure optimized\n        for querying an intersection point with the timeline\n        events. Internally uses an [Interval Tree](https://en.wikipedia.org/wiki/Interval_tree)\n        to represent the data.",
 		"extends": "Tone"
-	},
-	"OfflineContext": {
-		"description": "Wrapper around the OfflineAudioContext",
-		"params": [
-			{
-				"type": [
-					"Number"
-				],
-				"description": "The number of channels to render",
-				"name": "channels"
-			},
-			{
-				"type": [
-					"Number"
-				],
-				"description": "The duration to render in samples",
-				"name": "duration"
-			},
-			{
-				"type": [
-					"Number"
-				],
-				"description": "the sample rate to render at",
-				"name": "sampleRate"
-			}
-		],
-		"extends": "Tone.Context"
 	},
 	"Timeline": {
 		"description": "A Timeline class for scheduling and maintaining state\n        along a timeline. All events must have a \"time\" property.\n        Internally, events are stored in time order for fast\n        retrieval.",
@@ -923,6 +862,40 @@
 				"description": "The audio context to use with the class",
 				"name": "context"
 			}
+		],
+		"extends": "Tone"
+	},
+	"Buffer": {
+		"description": "Buffer loading and storage. Tone.Buffer is used internally by all\n         classes that make requests for audio files such as Tone.Player,\n         Tone.Sampler and Tone.Convolver.\n\n         Aside from load callbacks from individual buffers, Tone.Buffer\n \t\tprovides events which keep track of the loading progress\n \t\tof _all_ of the buffers. These are Tone.Buffer.on(\"load\" / \"progress\" / \"error\")",
+		"params": [
+			{
+				"type": [
+					"AudioBuffer",
+					"String"
+				],
+				"description": "The url to load, or the audio buffer to set.",
+				"name": "url"
+			},
+			{
+				"type": [
+					"function"
+				],
+				"optional": true,
+				"description": "A callback which is invoked after the buffer is loaded.\n                           It's recommended to use `Tone.Buffer.on('load', callback)` instead\n                           since it will give you a callback when _all_ buffers are loaded.",
+				"name": "onload"
+			},
+			{
+				"type": [
+					"function"
+				],
+				"optional": true,
+				"description": "The callback to invoke if there is an error",
+				"name": "onerror"
+			}
+		],
+		"examples": [
+			"var buffer = new Tone.Buffer(\"path/to/sound.mp3\", function(){\n\t//the buffer is now available.\n\tvar buff = buffer.get();\n});\n ",
+			"//can load provide fallback extension types if the first type is not supported.\nvar buffer = new Tone.Buffer(\"path/to/sound.[mp3|ogg|wav]\");"
 		],
 		"extends": "Tone"
 	},
@@ -1027,6 +1000,33 @@
 		],
 		"singleton": true,
 		"extends": "Tone"
+	},
+	"OfflineContext": {
+		"description": "Wrapper around the OfflineAudioContext",
+		"params": [
+			{
+				"type": [
+					"Number"
+				],
+				"description": "The number of channels to render",
+				"name": "channels"
+			},
+			{
+				"type": [
+					"Number"
+				],
+				"description": "The duration to render in samples",
+				"name": "duration"
+			},
+			{
+				"type": [
+					"Number"
+				],
+				"description": "the sample rate to render at",
+				"name": "sampleRate"
+			}
+		],
+		"extends": "Tone.Context"
 	},
 	"Param": {
 		"description": "Tone.Param wraps the native Web Audio's AudioParam to provide\n        additional unit conversion functionality. It also\n        serves as a base-class for classes which have a single,\n        automatable parameter.",
@@ -1187,33 +1187,6 @@
 			"var chorus = new Tone.Chorus(4, 2.5, 0.5);\nvar synth = new Tone.PolySynth(4, Tone.MonoSynth).connect(chorus);\nsynth.triggerAttackRelease([\"C3\",\"E3\",\"G3\"], \"8n\");"
 		],
 		"extends": "Tone.StereoEffect"
-	},
-	"Convolver": {
-		"description": "Tone.Convolver is a wrapper around the Native Web Audio\n         [ConvolverNode](http://webaudio.github.io/web-audio-api/#the-convolvernode-interface).\n         Convolution is useful for reverb and filter emulation. Read more about convolution reverb on\n         [Wikipedia](https://en.wikipedia.org/wiki/Convolution_reverb).",
-		"params": [
-			{
-				"type": [
-					"string",
-					"Tone.Buffer",
-					"Object"
-				],
-				"optional": true,
-				"description": "The URL of the impulse response or the Tone.Buffer\n                                          contianing the impulse response.",
-				"name": "url"
-			},
-			{
-				"type": [
-					"function"
-				],
-				"optional": true,
-				"description": "The callback to invoke when the url is loaded.",
-				"name": "onload"
-			}
-		],
-		"examples": [
-			"//initializing the convolver with an impulse response\nvar convolver = new Tone.Convolver(\"./path/to/ir.wav\").toMaster();"
-		],
-		"extends": "Tone.Effect"
 	},
 	"Distortion": {
 		"description": "Tone.Distortion is a simple distortion effect using Tone.WaveShaper.\n        Algorithm from [a stackoverflow answer](http://stackoverflow.com/a/22313408).",
@@ -1531,6 +1504,33 @@
 		],
 		"extends": "Tone.Effect"
 	},
+	"Convolver": {
+		"description": "Tone.Convolver is a wrapper around the Native Web Audio\n         [ConvolverNode](http://webaudio.github.io/web-audio-api/#the-convolvernode-interface).\n         Convolution is useful for reverb and filter emulation. Read more about convolution reverb on\n         [Wikipedia](https://en.wikipedia.org/wiki/Convolution_reverb).",
+		"params": [
+			{
+				"type": [
+					"string",
+					"Tone.Buffer",
+					"Object"
+				],
+				"optional": true,
+				"description": "The URL of the impulse response or the Tone.Buffer\n                                          contianing the impulse response.",
+				"name": "url"
+			},
+			{
+				"type": [
+					"function"
+				],
+				"optional": true,
+				"description": "The callback to invoke when the url is loaded.",
+				"name": "onload"
+			}
+		],
+		"examples": [
+			"//initializing the convolver with an impulse response\nvar convolver = new Tone.Convolver(\"./path/to/ir.wav\").toMaster();"
+		],
+		"extends": "Tone.Effect"
+	},
 	"Event": {
 		"description": "Tone.Event abstracts away Tone.Transport.schedule and provides a schedulable\n         callback for a single or repeatable events along the timeline.",
 		"params": [
@@ -1741,10 +1741,6 @@
 		],
 		"extends": "Tone.Monophonic"
 	},
-	"Monophonic": {
-		"description": "This is an abstract base class for other monophonic instruments to \n         extend. IMPORTANT: It does not make any sound on its own and\n         shouldn't be directly instantiated.",
-		"extends": "Tone.Instrument"
-	},
 	"Synth": {
 		"description": "Tone.Synth is composed simply of a Tone.OmniOscillator\n         routed through a Tone.AmplitudeEnvelope.\n         <img src=\"https://docs.google.com/drawings/d/1-1_0YW2Z1J2EPI36P8fNCMcZG7N1w1GZluPs4og4evo/pub?w=1163&h=231\">",
 		"params": [
@@ -1777,6 +1773,10 @@
 		"examples": [
 			"var synth = new Tone.MembraneSynth().toMaster();\nsynth.triggerAttackRelease(\"C2\", \"8n\");"
 		],
+		"extends": "Tone.Instrument"
+	},
+	"Monophonic": {
+		"description": "This is an abstract base class for other monophonic instruments to \n         extend. IMPORTANT: It does not make any sound on its own and\n         shouldn't be directly instantiated.",
 		"extends": "Tone.Instrument"
 	},
 	"NoiseSynth": {

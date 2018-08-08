@@ -138,9 +138,6 @@
 	"CtrlRandom": [
 		"Tone"
 	],
-	"Buffer": [
-		"Tone"
-	],
 	"Buffers": [
 		"Tone"
 	],
@@ -148,11 +145,6 @@
 		"Tone"
 	],
 	"IntervalTimeline": [
-		"Tone"
-	],
-	"OfflineContext": [
-		"Context",
-		"Emitter",
 		"Tone"
 	],
 	"Timeline": [
@@ -170,6 +162,9 @@
 		"Tone"
 	],
 	"AudioNode": [
+		"Tone"
+	],
+	"Buffer": [
 		"Tone"
 	],
 	"Clock": [
@@ -193,6 +188,11 @@
 		"Tone"
 	],
 	"Master": [
+		"Tone"
+	],
+	"OfflineContext": [
+		"Context",
+		"Emitter",
 		"Tone"
 	],
 	"Param": [
@@ -225,11 +225,6 @@
 	],
 	"Chorus": [
 		"StereoEffect",
-		"Effect",
-		"AudioNode",
-		"Tone"
-	],
-	"Convolver": [
 		"Effect",
 		"AudioNode",
 		"Tone"
@@ -333,6 +328,11 @@
 		"AudioNode",
 		"Tone"
 	],
+	"Convolver": [
+		"Effect",
+		"AudioNode",
+		"Tone"
+	],
 	"Event": [
 		"Tone"
 	],
@@ -385,11 +385,6 @@
 		"AudioNode",
 		"Tone"
 	],
-	"Monophonic": [
-		"Instrument",
-		"AudioNode",
-		"Tone"
-	],
 	"Synth": [
 		"Monophonic",
 		"Instrument",
@@ -397,6 +392,11 @@
 		"Tone"
 	],
 	"MembraneSynth": [
+		"Instrument",
+		"AudioNode",
+		"Tone"
+	],
+	"Monophonic": [
 		"Instrument",
 		"AudioNode",
 		"Tone"

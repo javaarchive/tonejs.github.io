@@ -3295,57 +3295,6 @@
 			"lineno": "Tone/control/CtrlRandom.js#L56"
 		}
 	],
-	"Buffer": [
-		{
-			"description": "If the buffer is loaded or not",
-			"type": [
-				"Boolean"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "loaded",
-			"lineno": "Tone/core/Buffer.js#L175"
-		},
-		{
-			"description": "The duration of the buffer.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "duration",
-			"lineno": "Tone/core/Buffer.js#L188"
-		},
-		{
-			"description": "The length of the buffer in samples",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "length",
-			"lineno": "Tone/core/Buffer.js#L205"
-		},
-		{
-			"description": "The number of discrete audio channels. Returns 0 if no buffer\nis loaded.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "numberOfChannels",
-			"lineno": "Tone/core/Buffer.js#L222"
-		},
-		{
-			"description": "Reverse the buffer.",
-			"type": [
-				"Boolean"
-			],
-			"scope": "instance",
-			"name": "reverse",
-			"lineno": "Tone/core/Buffer.js#L350"
-		}
-	],
 	"Buffers": [
 		{
 			"description": "A path which is prefixed before every url.",
@@ -3498,6 +3447,57 @@
 			"scope": "instance",
 			"name": "numberOfOutputs",
 			"lineno": "Tone/core/AudioNode.js#L139"
+		}
+	],
+	"Buffer": [
+		{
+			"description": "If the buffer is loaded or not",
+			"type": [
+				"Boolean"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "loaded",
+			"lineno": "Tone/core/Buffer.js#L175"
+		},
+		{
+			"description": "The duration of the buffer.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "duration",
+			"lineno": "Tone/core/Buffer.js#L188"
+		},
+		{
+			"description": "The length of the buffer in samples",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "length",
+			"lineno": "Tone/core/Buffer.js#L205"
+		},
+		{
+			"description": "The number of discrete audio channels. Returns 0 if no buffer\nis loaded.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "numberOfChannels",
+			"lineno": "Tone/core/Buffer.js#L222"
+		},
+		{
+			"description": "Reverse the buffer.",
+			"type": [
+				"Boolean"
+			],
+			"scope": "instance",
+			"name": "reverse",
+			"lineno": "Tone/core/Buffer.js#L350"
 		}
 	],
 	"Clock": [
@@ -4597,94 +4597,6 @@
 			"name": "wet",
 			"lineno": "Tone/effect/StereoEffect.js#L32",
 			"inherits": "Tone.StereoEffect",
-			"signal": true
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelCount is the number of channels used when up-mixing and down-mixing\n connections to any inputs to the node. The default value is 2 except for\n specific nodes where its value is specially determined.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelCount",
-			"lineno": "Tone/core/AudioNode.js#L62",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelCountMode determines how channels will be counted when up-mixing and\n down-mixing connections to any inputs to the node.\n The default value is \"max\". This attribute has no effect for nodes with no inputs.",
-			"type": [
-				"String"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelCountMode",
-			"lineno": "Tone/core/AudioNode.js#L81",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelInterpretation determines how individual channels will be treated\n when up-mixing and down-mixing connections to any inputs to the node.\n The default value is \"speakers\".",
-			"type": [
-				"String"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelInterpretation",
-			"lineno": "Tone/core/AudioNode.js#L99",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "The number of inputs feeding into the AudioNode.\n For source nodes, this will be 0.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "numberOfInputs",
-			"lineno": "Tone/core/AudioNode.js#L117",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "The number of outputs coming out of the AudioNode.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "numberOfOutputs",
-			"lineno": "Tone/core/AudioNode.js#L139",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Convolver": [
-		{
-			"description": "The convolver's buffer",
-			"type": [
-				"AudioBuffer"
-			],
-			"scope": "instance",
-			"name": "buffer",
-			"lineno": "Tone/effect/Convolver.js#L56"
-		},
-		{
-			"description": "The wet control is how much of the effected\n will pass through to the output. 1 = 100% effected\n signal, 0 = 100% dry signal.",
-			"type": [
-				"NormalRange"
-			],
-			"scope": "instance",
-			"name": "wet",
-			"lineno": "Tone/effect/Effect.js#L34",
-			"inherits": "Tone.Effect",
 			"signal": true
 		},
 		{
@@ -6332,6 +6244,94 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
+	"Convolver": [
+		{
+			"description": "The convolver's buffer",
+			"type": [
+				"AudioBuffer"
+			],
+			"scope": "instance",
+			"name": "buffer",
+			"lineno": "Tone/effect/Convolver.js#L56"
+		},
+		{
+			"description": "The wet control is how much of the effected\n will pass through to the output. 1 = 100% effected\n signal, 0 = 100% dry signal.",
+			"type": [
+				"NormalRange"
+			],
+			"scope": "instance",
+			"name": "wet",
+			"lineno": "Tone/effect/Effect.js#L34",
+			"inherits": "Tone.Effect",
+			"signal": true
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelCount is the number of channels used when up-mixing and down-mixing\n connections to any inputs to the node. The default value is 2 except for\n specific nodes where its value is specially determined.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelCount",
+			"lineno": "Tone/core/AudioNode.js#L62",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelCountMode determines how channels will be counted when up-mixing and\n down-mixing connections to any inputs to the node.\n The default value is \"max\". This attribute has no effect for nodes with no inputs.",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelCountMode",
+			"lineno": "Tone/core/AudioNode.js#L81",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelInterpretation determines how individual channels will be treated\n when up-mixing and down-mixing connections to any inputs to the node.\n The default value is \"speakers\".",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelInterpretation",
+			"lineno": "Tone/core/AudioNode.js#L99",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "The number of inputs feeding into the AudioNode.\n For source nodes, this will be 0.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "numberOfInputs",
+			"lineno": "Tone/core/AudioNode.js#L117",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "The number of outputs coming out of the AudioNode.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "numberOfOutputs",
+			"lineno": "Tone/core/AudioNode.js#L139",
+			"inherits": "Tone.AudioNode"
+		}
+	],
 	"Event": [
 		{
 			"description": "The callback to invoke.",
@@ -7718,97 +7718,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"Monophonic": [
-		{
-			"description": "The glide time between notes.",
-			"type": [
-				"Time"
-			],
-			"scope": "instance",
-			"name": "portamento",
-			"lineno": "Tone/instrument/Monophonic.js#L24"
-		},
-		{
-			"description": "The volume of the output in decibels.",
-			"type": [
-				"Decibels"
-			],
-			"examples": [
-				"source.volume.value = -6;"
-			],
-			"scope": "instance",
-			"name": "volume",
-			"lineno": "Tone/instrument/Instrument.js#L31",
-			"inherits": "Tone.Instrument",
-			"signal": true
-		},
-		{
-			"description": "Get the audio context belonging to this instance.",
-			"type": [
-				"Tone.Context"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "context",
-			"lineno": "Tone/core/AudioNode.js#L27",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelCount is the number of channels used when up-mixing and down-mixing\n connections to any inputs to the node. The default value is 2 except for\n specific nodes where its value is specially determined.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelCount",
-			"lineno": "Tone/core/AudioNode.js#L62",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelCountMode determines how channels will be counted when up-mixing and\n down-mixing connections to any inputs to the node.\n The default value is \"max\". This attribute has no effect for nodes with no inputs.",
-			"type": [
-				"String"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelCountMode",
-			"lineno": "Tone/core/AudioNode.js#L81",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "channelInterpretation determines how individual channels will be treated\n when up-mixing and down-mixing connections to any inputs to the node.\n The default value is \"speakers\".",
-			"type": [
-				"String"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "channelInterpretation",
-			"lineno": "Tone/core/AudioNode.js#L99",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "The number of inputs feeding into the AudioNode.\n For source nodes, this will be 0.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "numberOfInputs",
-			"lineno": "Tone/core/AudioNode.js#L117",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "The number of outputs coming out of the AudioNode.",
-			"type": [
-				"Number"
-			],
-			"readonly": true,
-			"scope": "instance",
-			"name": "numberOfOutputs",
-			"lineno": "Tone/core/AudioNode.js#L139",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"Synth": [
 		{
 			"description": "The oscillator.",
@@ -7975,6 +7884,97 @@
 			"scope": "instance",
 			"name": "pitchDecay",
 			"lineno": "Tone/instrument/MembraneSynth.js#L50"
+		},
+		{
+			"description": "The volume of the output in decibels.",
+			"type": [
+				"Decibels"
+			],
+			"examples": [
+				"source.volume.value = -6;"
+			],
+			"scope": "instance",
+			"name": "volume",
+			"lineno": "Tone/instrument/Instrument.js#L31",
+			"inherits": "Tone.Instrument",
+			"signal": true
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelCount is the number of channels used when up-mixing and down-mixing\n connections to any inputs to the node. The default value is 2 except for\n specific nodes where its value is specially determined.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelCount",
+			"lineno": "Tone/core/AudioNode.js#L62",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelCountMode determines how channels will be counted when up-mixing and\n down-mixing connections to any inputs to the node.\n The default value is \"max\". This attribute has no effect for nodes with no inputs.",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelCountMode",
+			"lineno": "Tone/core/AudioNode.js#L81",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelInterpretation determines how individual channels will be treated\n when up-mixing and down-mixing connections to any inputs to the node.\n The default value is \"speakers\".",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelInterpretation",
+			"lineno": "Tone/core/AudioNode.js#L99",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "The number of inputs feeding into the AudioNode.\n For source nodes, this will be 0.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "numberOfInputs",
+			"lineno": "Tone/core/AudioNode.js#L117",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "The number of outputs coming out of the AudioNode.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "numberOfOutputs",
+			"lineno": "Tone/core/AudioNode.js#L139",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Monophonic": [
+		{
+			"description": "The glide time between notes.",
+			"type": [
+				"Time"
+			],
+			"scope": "instance",
+			"name": "portamento",
+			"lineno": "Tone/instrument/Monophonic.js#L24"
 		},
 		{
 			"description": "The volume of the output in decibels.",
@@ -8288,7 +8288,7 @@
 			],
 			"scope": "instance",
 			"name": "detune",
-			"lineno": "Tone/instrument/PolySynth.js#L45",
+			"lineno": "Tone/instrument/PolySynth.js#L46",
 			"signal": true
 		},
 		{
@@ -8392,6 +8392,15 @@
 			"lineno": "Tone/instrument/Sampler.js#L69"
 		},
 		{
+			"description": "The shape of the attack/release curve.\n Either \"linear\" or \"exponential\"",
+			"type": [
+				"String"
+			],
+			"scope": "instance",
+			"name": "curve",
+			"lineno": "Tone/instrument/Sampler.js#L76"
+		},
+		{
 			"description": "If the buffers are loaded or not",
 			"type": [
 				"Boolean"
@@ -8399,7 +8408,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "loaded",
-			"lineno": "Tone/instrument/Sampler.js#L258"
+			"lineno": "Tone/instrument/Sampler.js#L266"
 		},
 		{
 			"description": "The volume of the output in decibels.",
@@ -11467,52 +11476,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"OfflineContext": [
-		{
-			"description": "The amount of time events are scheduled\n into the future",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "lookAhead",
-			"lineno": "Tone/core/Context.js#L49",
-			"inherits": "Tone.Context"
-		},
-		{
-			"description": "How often the Web Worker callback is invoked.\n This number corresponds to how responsive the scheduling\n can be. Context.updateInterval + Context.lookAhead gives you the\n total latency between scheduling an event and hearing it.",
-			"type": [
-				"Number"
-			],
-			"scope": "instance",
-			"name": "updateInterval",
-			"lineno": "Tone/core/Context.js#L231",
-			"inherits": "Tone.Context"
-		},
-		{
-			"description": "What the source of the clock is, either \"worker\" (Web Worker [default]),\n \"timeout\" (setTimeout), or \"offline\" (none).",
-			"type": [
-				"String"
-			],
-			"scope": "instance",
-			"name": "clockSource",
-			"lineno": "Tone/core/Context.js#L249",
-			"inherits": "Tone.Context"
-		},
-		{
-			"description": "The type of playback, which affects tradeoffs between audio\n output latency and responsiveness.\n\n In addition to setting the value in seconds, the latencyHint also\n accepts the strings \"interactive\" (prioritizes low latency),\n \"playback\" (prioritizes sustained playback), \"balanced\" (balances\n latency and performance), and \"fastest\" (lowest latency, might glitch more often).",
-			"type": [
-				"String",
-				"Seconds"
-			],
-			"examples": [
-				"//set the lookAhead to 0.3 seconds\nTone.context.latencyHint = 0.3;"
-			],
-			"scope": "instance",
-			"name": "latencyHint",
-			"lineno": "Tone/core/Context.js#L265",
-			"inherits": "Tone.Context"
-		}
-	],
 	"TimelineState": [
 		{
 			"description": "The memory of the timeline, i.e.\n how many events in the past it will retain",
@@ -11576,6 +11539,52 @@
 			"name": "callback",
 			"lineno": "Tone/core/TransportEvent.js#L37",
 			"inherits": "Tone.TransportEvent"
+		}
+	],
+	"OfflineContext": [
+		{
+			"description": "The amount of time events are scheduled\n into the future",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "lookAhead",
+			"lineno": "Tone/core/Context.js#L49",
+			"inherits": "Tone.Context"
+		},
+		{
+			"description": "How often the Web Worker callback is invoked.\n This number corresponds to how responsive the scheduling\n can be. Context.updateInterval + Context.lookAhead gives you the\n total latency between scheduling an event and hearing it.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "updateInterval",
+			"lineno": "Tone/core/Context.js#L231",
+			"inherits": "Tone.Context"
+		},
+		{
+			"description": "What the source of the clock is, either \"worker\" (Web Worker [default]),\n \"timeout\" (setTimeout), or \"offline\" (none).",
+			"type": [
+				"String"
+			],
+			"scope": "instance",
+			"name": "clockSource",
+			"lineno": "Tone/core/Context.js#L249",
+			"inherits": "Tone.Context"
+		},
+		{
+			"description": "The type of playback, which affects tradeoffs between audio\n output latency and responsiveness.\n\n In addition to setting the value in seconds, the latencyHint also\n accepts the strings \"interactive\" (prioritizes low latency),\n \"playback\" (prioritizes sustained playback), \"balanced\" (balances\n latency and performance), and \"fastest\" (lowest latency, might glitch more often).",
+			"type": [
+				"String",
+				"Seconds"
+			],
+			"examples": [
+				"//set the lookAhead to 0.3 seconds\nTone.context.latencyHint = 0.3;"
+			],
+			"scope": "instance",
+			"name": "latencyHint",
+			"lineno": "Tone/core/Context.js#L265",
+			"inherits": "Tone.Context"
 		}
 	],
 	"MidSideEffect": [

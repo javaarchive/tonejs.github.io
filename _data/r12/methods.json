@@ -3521,920 +3521,6 @@
 			"lineno": "Tone/control/CtrlPattern.js#L264"
 		}
 	],
-	"Buffer": [
-		{
-			"description": "Pass in an AudioBuffer or Tone.Buffer to set the value\n of this buffer.",
-			"params": [
-				{
-					"type": [
-						"AudioBuffer",
-						"Tone.Buffer"
-					],
-					"description": "the buffer",
-					"name": "buffer"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Buffer"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "set",
-			"lineno": "Tone/core/Buffer.js#L97"
-		},
-		{
-			"returns": {
-				"type": [
-					"AudioBuffer"
-				],
-				"description": "The audio buffer stored in the object."
-			},
-			"scope": "instance",
-			"name": "get",
-			"lineno": "Tone/core/Buffer.js#L116"
-		},
-		{
-			"description": "Makes an xhr reqest for the selected url then decodes\n the file as an audio buffer. Invokes\n the callback once the audio buffer loads.",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"description": "The url of the buffer to load.\n                     filetype support depends on the\n                     browser.",
-					"name": "url"
-				}
-			],
-			"returns": {
-				"type": [
-					"Promise"
-				],
-				"description": "returns a Promise which resolves with the Tone.Buffer"
-			},
-			"scope": "instance",
-			"name": "load",
-			"lineno": "Tone/core/Buffer.js#L129"
-		},
-		{
-			"description": "dispose and disconnect",
-			"returns": {
-				"type": [
-					"Tone.Buffer"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/core/Buffer.js#L164"
-		},
-		{
-			"description": "Set the audio buffer from the array. To create a multichannel AudioBuffer,\n pass in a multidimensional array.",
-			"params": [
-				{
-					"type": [
-						"Float32Array"
-					],
-					"description": "The array to fill the audio buffer",
-					"name": "array"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Buffer"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "fromArray",
-			"lineno": "Tone/core/Buffer.js#L246"
-		},
-		{
-			"description": "Sums muliple channels into 1 channel",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"optional": true,
-					"description": "Optionally only copy a single channel from the array.",
-					"name": "channel"
-				}
-			],
-			"returns": {
-				"type": [
-					"Array"
-				]
-			},
-			"scope": "instance",
-			"name": "toMono",
-			"lineno": "Tone/core/Buffer.js#L266"
-		},
-		{
-			"description": "Get the buffer as an array. Single channel buffers will return a 1-dimensional\n\tFloat32Array, and multichannel buffers will return multidimensional arrays.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"optional": true,
-					"description": "Optionally only copy a single channel from the array.",
-					"name": "channel"
-				}
-			],
-			"returns": {
-				"type": [
-					"Array"
-				]
-			},
-			"scope": "instance",
-			"name": "toArray",
-			"lineno": "Tone/core/Buffer.js#L293"
-		},
-		{
-			"description": "Returns the Float32Array representing the PCM audio data for the specific channel.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The channel number to return",
-					"name": "channel"
-				}
-			],
-			"returns": {
-				"type": [
-					"Float32Array"
-				],
-				"description": "The audio as a TypedArray"
-			},
-			"scope": "instance",
-			"name": "getChannelData",
-			"lineno": "Tone/core/Buffer.js#L312"
-		},
-		{
-			"description": "Cut a subsection of the array and return a buffer of the\n subsection. Does not modify the original buffer",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The time to start the slice",
-					"name": "start"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"description": "The end time to slice. If none is given\n                    will default to the end of the buffer",
-					"name": "end"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Buffer"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "slice",
-			"lineno": "Tone/core/Buffer.js#L324"
-		},
-		{
-			"description": "Create a Tone.Buffer from the array. To create a multichannel AudioBuffer,\n pass in a multidimensional array.",
-			"params": [
-				{
-					"type": [
-						"Float32Array"
-					],
-					"description": "The array to fill the audio buffer",
-					"name": "array"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Buffer"
-				],
-				"description": "A Tone.Buffer created from the array"
-			},
-			"scope": "static",
-			"name": "fromArray",
-			"lineno": "Tone/core/Buffer.js#L395"
-		},
-		{
-			"description": "Creates a Tone.Buffer from a URL, returns a promise\nwhich resolves to a Tone.Buffer",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"description": "The url to load.",
-					"name": "url"
-				}
-			],
-			"returns": {
-				"type": [
-					"Promise.<Tone.Buffer>"
-				],
-				"description": "A promise which resolves to a Tone.Buffer"
-			},
-			"scope": "static",
-			"name": "fromUrl",
-			"lineno": "Tone/core/Buffer.js#L405"
-		},
-		{
-			"description": "Loads a url using XMLHttpRequest.",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"name": "url"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"name": "onload"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"name": "onerror"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"name": "onprogress"
-				}
-			],
-			"returns": {
-				"type": [
-					"XMLHttpRequest"
-				]
-			},
-			"scope": "static",
-			"name": "load",
-			"lineno": "Tone/core/Buffer.js#L431"
-		},
-		{
-			"description": "Stop all of the downloads in progress",
-			"returns": {
-				"type": [
-					"Tone.Buffer"
-				]
-			},
-			"scope": "static",
-			"name": "cancelDownloads",
-			"lineno": "Tone/core/Buffer.js#L518"
-		},
-		{
-			"description": "Checks a url's extension to see if the current browser can play that file type.",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"description": "The url/extension to test",
-					"name": "url"
-				}
-			],
-			"examples": [
-				"Tone.Buffer.supportsType(\"wav\"); //returns true\nTone.Buffer.supportsType(\"path/to/file.wav\"); //returns true"
-			],
-			"returns": {
-				"type": [
-					"Boolean"
-				],
-				"description": "If the file extension can be played"
-			},
-			"scope": "static",
-			"name": "supportsType",
-			"lineno": "Tone/core/Buffer.js#L535"
-		}
-	],
-	"load": [
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "onError",
-			"lineno": "Tone/core/Buffer.js#L449"
-		},
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "onProgress",
-			"lineno": "Tone/core/Buffer.js#L459"
-		}
-	],
-	"Tone": [
-		{
-			"description": "Returns a Promise which resolves when all of the buffers have loaded",
-			"returns": {
-				"type": [
-					"Promise"
-				]
-			},
-			"scope": "static",
-			"name": "loaded",
-			"lineno": "Tone/core/Buffer.js#L546"
-		},
-		{
-			"description": "Send this signal to the channel name.",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"description": "A named channel to send the signal to.",
-					"name": "channelName"
-				},
-				{
-					"type": [
-						"Decibels"
-					],
-					"description": "The amount of the source to send to the bus.",
-					"name": "amount"
-				}
-			],
-			"examples": [
-				"source.send(\"reverb\", -12);"
-			],
-			"returns": {
-				"type": [
-					"GainNode"
-				],
-				"description": "The gain node which connects this node to the desired channel.\n                    Can be used to adjust the levels of the send."
-			},
-			"scope": "instance",
-			"name": "send",
-			"lineno": "Tone/core/Bus.js#L29"
-		},
-		{
-			"description": "Recieve the input from the desired channelName to the input",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"description": "A named channel to send the signal to.",
-					"name": "channelName"
-				},
-				{
-					"type": [
-						"Number"
-					],
-					"optional": true,
-					"description": "The channel to connect to",
-					"name": "channelNumber"
-				}
-			],
-			"examples": [
-				"reverbEffect.receive(\"reverb\");"
-			],
-			"returns": {
-				"type": [
-					"Tone"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "receive",
-			"lineno": "Tone/core/Bus.js#L49"
-		},
-		{
-			"description": "Generate a buffer by rendering all of the Tone.js code within the callback using the OfflineAudioContext.\n The OfflineAudioContext is capable of rendering much faster than real time in many cases.\n The callback function also passes in an offline instance of Tone.Transport which can be used\n to schedule events along the Transport. **NOTE** OfflineAudioContext has the same restrictions\n as the AudioContext in that on certain platforms (like iOS) it must be invoked by an explicit\n user action like a click or tap.",
-			"params": [
-				{
-					"type": [
-						"function"
-					],
-					"description": "All Tone.js nodes which are created and scheduled within this callback are recorded into the output Buffer.",
-					"name": "callback"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "the amount of time to record for.",
-					"name": "duration"
-				}
-			],
-			"examples": [
-				"//render 2 seconds of the oscillator\nTone.Offline(function(){\n\t//only nodes created in this callback will be recorded\n\tvar oscillator = new Tone.Oscillator().toMaster().start(0)\n\t//schedule their events\n}, 2).then(function(buffer){\n\t//do something with the output buffer\n})",
-				"//can also schedule events along the Transport\n//using the passed in Offline Transport\nTone.Offline(function(Transport){\n\tvar osc = new Tone.Oscillator().toMaster()\n\tTransport.schedule(function(time){\n\t\tosc.start(time).stop(time + 0.1)\n\t}, 1)\n\tTransport.start(0.2)\n}, 4).then(function(buffer){\n\t//do something with the output buffer\n})"
-			],
-			"returns": {
-				"type": [
-					"Promise"
-				],
-				"description": "The promise which is invoked with the Tone.Buffer of the recorded output."
-			},
-			"scope": "static",
-			"name": "Offline",
-			"lineno": "Tone/core/Offline.js#L59"
-		},
-		{
-			"params": [
-				{
-					"type": [
-						"Array"
-					],
-					"description": "The arguments array",
-					"name": "values"
-				},
-				{
-					"type": [
-						"Array"
-					],
-					"description": "The names of the arguments",
-					"name": "keys"
-				},
-				{
-					"type": [
-						"function",
-						"Object"
-					],
-					"description": "The class constructor",
-					"name": "constr"
-				}
-			],
-			"returns": {
-				"type": [
-					"Object"
-				],
-				"description": "An object composed of the  defaults between the class' defaults\n                       and the passed in arguments."
-			},
-			"scope": "static",
-			"name": "defaults",
-			"lineno": "Tone/core/Tone.js#L228"
-		},
-		{
-			"description": "If the `given` parameter is undefined, use the `fallback`.\n If both `given` and `fallback` are object literals, it will\n return a deep copy which includes all of the parameters from both\n objects. If a parameter is undefined in given, it will return\n the fallback property.\n <br><br>\n WARNING: if object is self referential, it will go into an an\n infinite recursive loop.",
-			"params": [
-				{
-					"type": [
-						"*"
-					],
-					"name": "given"
-				},
-				{
-					"type": [
-						"*"
-					],
-					"name": "fallback"
-				}
-			],
-			"returns": {
-				"type": [
-					"*"
-				]
-			},
-			"scope": "static",
-			"name": "defaultArg",
-			"lineno": "Tone/core/Tone.js#L260"
-		},
-		{
-			"description": "connect together all of the arguments in series",
-			"params": [
-				{
-					"type": [
-						"AudioParam",
-						"Tone",
-						"AudioNode"
-					],
-					"name": "nodes"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone"
-				]
-			},
-			"scope": "static",
-			"name": "connectSeries",
-			"lineno": "Tone/core/Tone.js#L287"
-		},
-		{
-			"description": "Test if the arg is undefined",
-			"params": [
-				{
-					"type": [
-						"*"
-					],
-					"description": "the argument to test",
-					"name": "arg"
-				}
-			],
-			"returns": {
-				"type": [
-					"Boolean"
-				],
-				"description": "true if the arg is undefined"
-			},
-			"scope": "static",
-			"name": "isUndef",
-			"lineno": "Tone/core/Tone.js#L308"
-		},
-		{
-			"description": "Test if the arg is not undefined",
-			"params": [
-				{
-					"type": [
-						"*"
-					],
-					"description": "the argument to test",
-					"name": "arg"
-				}
-			],
-			"returns": {
-				"type": [
-					"Boolean"
-				],
-				"description": "true if the arg is undefined"
-			},
-			"scope": "static",
-			"name": "isDefined",
-			"lineno": "Tone/core/Tone.js#L319"
-		},
-		{
-			"description": "Test if the arg is a function",
-			"params": [
-				{
-					"type": [
-						"*"
-					],
-					"description": "the argument to test",
-					"name": "arg"
-				}
-			],
-			"returns": {
-				"type": [
-					"Boolean"
-				],
-				"description": "true if the arg is a function"
-			},
-			"scope": "static",
-			"name": "isFunction",
-			"lineno": "Tone/core/Tone.js#L330"
-		},
-		{
-			"description": "Test if the argument is a number.",
-			"params": [
-				{
-					"type": [
-						"*"
-					],
-					"description": "the argument to test",
-					"name": "arg"
-				}
-			],
-			"returns": {
-				"type": [
-					"Boolean"
-				],
-				"description": "true if the arg is a number"
-			},
-			"scope": "static",
-			"name": "isNumber",
-			"lineno": "Tone/core/Tone.js#L341"
-		},
-		{
-			"description": "Test if the given argument is an object literal (i.e. `{}`);",
-			"params": [
-				{
-					"type": [
-						"*"
-					],
-					"description": "the argument to test",
-					"name": "arg"
-				}
-			],
-			"returns": {
-				"type": [
-					"Boolean"
-				],
-				"description": "true if the arg is an object literal."
-			},
-			"scope": "static",
-			"name": "isObject",
-			"lineno": "Tone/core/Tone.js#L352"
-		},
-		{
-			"description": "Test if the argument is a boolean.",
-			"params": [
-				{
-					"type": [
-						"*"
-					],
-					"description": "the argument to test",
-					"name": "arg"
-				}
-			],
-			"returns": {
-				"type": [
-					"Boolean"
-				],
-				"description": "true if the arg is a boolean"
-			},
-			"scope": "static",
-			"name": "isBoolean",
-			"lineno": "Tone/core/Tone.js#L363"
-		},
-		{
-			"description": "Test if the argument is an Array",
-			"params": [
-				{
-					"type": [
-						"*"
-					],
-					"description": "the argument to test",
-					"name": "arg"
-				}
-			],
-			"returns": {
-				"type": [
-					"Boolean"
-				],
-				"description": "true if the arg is an array"
-			},
-			"scope": "static",
-			"name": "isArray",
-			"lineno": "Tone/core/Tone.js#L374"
-		},
-		{
-			"description": "Test if the argument is a string.",
-			"params": [
-				{
-					"type": [
-						"*"
-					],
-					"description": "the argument to test",
-					"name": "arg"
-				}
-			],
-			"returns": {
-				"type": [
-					"Boolean"
-				],
-				"description": "true if the arg is a string"
-			},
-			"scope": "static",
-			"name": "isString",
-			"lineno": "Tone/core/Tone.js#L385"
-		},
-		{
-			"description": "Test if the argument is in the form of a note in scientific pitch notation.\n e.g. \"C4\"",
-			"params": [
-				{
-					"type": [
-						"*"
-					],
-					"description": "the argument to test",
-					"name": "arg"
-				}
-			],
-			"returns": {
-				"type": [
-					"Boolean"
-				],
-				"description": "true if the arg is a string"
-			},
-			"scope": "static",
-			"name": "isNote",
-			"lineno": "Tone/core/Tone.js#L397"
-		},
-		{
-			"description": "Equal power gain scale. Good for cross-fading.",
-			"params": [
-				{
-					"type": [
-						"NormalRange"
-					],
-					"description": "(0-1)",
-					"name": "percent"
-				}
-			],
-			"returns": {
-				"type": [
-					"Number"
-				],
-				"description": "output gain (0-1)"
-			},
-			"scope": "static",
-			"name": "equalPowerScale",
-			"lineno": "Tone/core/Tone.js#L463"
-		},
-		{
-			"description": "Convert decibels into gain.",
-			"params": [
-				{
-					"type": [
-						"Decibels"
-					],
-					"name": "db"
-				}
-			],
-			"returns": {
-				"type": [
-					"Number"
-				]
-			},
-			"scope": "static",
-			"name": "dbToGain",
-			"lineno": "Tone/core/Tone.js#L475"
-		},
-		{
-			"description": "Convert gain to decibels.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "(0-1)",
-					"name": "gain"
-				}
-			],
-			"returns": {
-				"type": [
-					"Decibels"
-				]
-			},
-			"scope": "static",
-			"name": "gainToDb",
-			"lineno": "Tone/core/Tone.js#L486"
-		},
-		{
-			"description": "Convert an interval (in semitones) to a frequency ratio.",
-			"params": [
-				{
-					"type": [
-						"Interval"
-					],
-					"description": "the number of semitones above the base note",
-					"name": "interval"
-				}
-			],
-			"examples": [
-				"tone.intervalToFrequencyRatio(0); // 1\ntone.intervalToFrequencyRatio(12); // 2\ntone.intervalToFrequencyRatio(-12); // 0.5"
-			],
-			"returns": {
-				"type": [
-					"Number"
-				],
-				"description": "the frequency ratio"
-			},
-			"scope": "static",
-			"name": "intervalToFrequencyRatio",
-			"lineno": "Tone/core/Tone.js#L501"
-		},
-		{
-			"description": "Return the current time of the AudioContext clock.",
-			"returns": {
-				"type": [
-					"Number"
-				],
-				"description": "the currentTime from the AudioContext"
-			},
-			"scope": "static",
-			"name": "now",
-			"lineno": "Tone/core/Tone.js#L524"
-		},
-		{
-			"description": "have a child inherit all of Tone's (or a parent's) prototype\n to inherit the parent's properties, make sure to call\n Parent.call(this) in the child's constructor\n\n based on closure library's inherit function",
-			"params": [
-				{
-					"type": [
-						"function"
-					],
-					"name": "child"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"optional": true,
-					"description": "(optional) parent to inherit from\n                            if no parent is supplied, the child\n                            will inherit from Tone",
-					"name": "parent"
-				}
-			],
-			"scope": "static",
-			"name": "extend",
-			"lineno": "Tone/core/Tone.js#L546"
-		},
-		{
-			"description": "Convert Time into seconds.\n\n Unlike the method which it overrides, this takes into account\n transporttime and musical notation.\n\n Time : 1.40\n Notation: 4n or 1m or 2t\n Now Relative: +3n\n Math: 3n+16n or even complicated expressions ((3n*2)/6 + 1)",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Seconds"
-				]
-			},
-			"scope": "instance",
-			"name": "toSeconds",
-			"lineno": "Tone/type/Type.js#L177"
-		},
-		{
-			"description": "Convert a frequency representation into a number.",
-			"params": [
-				{
-					"type": [
-						"Frequency"
-					],
-					"name": "freq"
-				}
-			],
-			"returns": {
-				"type": [
-					"Hertz"
-				],
-				"description": "the frequency in hertz"
-			},
-			"scope": "instance",
-			"name": "toFrequency",
-			"lineno": "Tone/type/Type.js#L194"
-		},
-		{
-			"description": "Convert a time representation into ticks.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"Ticks"
-				],
-				"description": "the time in ticks"
-			},
-			"scope": "instance",
-			"name": "toTicks",
-			"lineno": "Tone/type/Type.js#L209"
-		}
-	],
-	"loaded": [
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "removeEvents",
-			"lineno": "Tone/core/Buffer.js#L548"
-		}
-	],
-	"<anonymous>": [
-		{
-			"scope": "inner",
-			"name": "onload",
-			"lineno": "Tone/core/Buffer.js#L554"
-		},
-		{
-			"scope": "inner",
-			"name": "onerror",
-			"lineno": "Tone/core/Buffer.js#L557"
-		},
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "toneConnect",
-			"lineno": "Tone/core/Context.js#L509"
-		},
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "toneDisconnect",
-			"lineno": "Tone/core/Context.js#L533"
-		},
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "ConstantSourceNode",
-			"lineno": "Tone/shim/ConstantSourceNode.js#L6"
-		},
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "WaveShaperNode",
-			"lineno": "Tone/shim/WaveShaperNode.js#L10"
-		},
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "createBuffers",
-			"lineno": "Tone/source/Noise.js#L247"
-		}
-	],
 	"Buffers": [
 		{
 			"description": "True if the buffers object has a buffer by that name.",
@@ -4959,259 +4045,6 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/core/IntervalTimeline.js#L585"
-		}
-	],
-	"OfflineContext": [
-		{
-			"description": "Override the now method to point to the internal clock time",
-			"returns": {
-				"type": [
-					"Number"
-				]
-			},
-			"scope": "instance",
-			"name": "now",
-			"lineno": "Tone/core/OfflineContext.js#L48"
-		},
-		{
-			"description": "Render the output of the OfflineContext",
-			"returns": {
-				"type": [
-					"Promise"
-				]
-			},
-			"scope": "instance",
-			"name": "render",
-			"lineno": "Tone/core/OfflineContext.js#L56"
-		},
-		{
-			"description": "Close the context",
-			"returns": {
-				"type": [
-					"Promise"
-				]
-			},
-			"scope": "instance",
-			"name": "close",
-			"lineno": "Tone/core/OfflineContext.js#L71"
-		},
-		{
-			"scope": "instance",
-			"name": "createBufferSource",
-			"lineno": "Tone/shim/BufferSourceNode.js#L13"
-		},
-		{
-			"description": "Promise which is invoked when the context is running.\n Tries to resume the context if it's not started.",
-			"returns": {
-				"type": [
-					"Promise"
-				]
-			},
-			"scope": "instance",
-			"name": "ready",
-			"lineno": "Tone/core/Context.js#L139",
-			"inherits": "Tone.Context"
-		},
-		{
-			"description": "Generate a looped buffer at some constant value.",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"name": "val"
-				}
-			],
-			"returns": {
-				"type": [
-					"BufferSourceNode"
-				]
-			},
-			"scope": "instance",
-			"name": "getConstant",
-			"lineno": "Tone/core/Context.js#L167",
-			"inherits": "Tone.Context"
-		},
-		{
-			"description": "A setTimeout which is gaurenteed by the clock source.\n Also runs in the offline context.",
-			"params": [
-				{
-					"type": [
-						"function"
-					],
-					"description": "The callback to invoke",
-					"name": "fn"
-				},
-				{
-					"type": [
-						"Seconds"
-					],
-					"description": "The timeout in seconds",
-					"name": "timeout"
-				}
-			],
-			"returns": {
-				"type": [
-					"Number"
-				],
-				"description": "ID to use when invoking Tone.Context.clearTimeout"
-			},
-			"scope": "instance",
-			"name": "setTimeout",
-			"lineno": "Tone/core/Context.js#L206",
-			"inherits": "Tone.Context"
-		},
-		{
-			"description": "Clears a previously scheduled timeout with Tone.context.setTimeout",
-			"params": [
-				{
-					"type": [
-						"Number"
-					],
-					"description": "The ID returned from setTimeout",
-					"name": "id"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Context"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "clearTimeout",
-			"lineno": "Tone/core/Context.js#L222",
-			"inherits": "Tone.Context"
-		},
-		{
-			"description": "Unlike other dispose methods, this returns a Promise\n which executes when the context is closed and disposed",
-			"returns": {
-				"type": [
-					"Promise"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/core/Context.js#L317",
-			"inherits": "Tone.Context"
-		},
-		{
-			"description": "Bind a callback to a specific event.",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"description": "The name of the event to listen for.",
-					"name": "event"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"description": "The callback to invoke when the\n                               event is emitted",
-					"name": "callback"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Emitter"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "on",
-			"lineno": "Tone/core/Emitter.js#L32",
-			"inherits": "Tone.Emitter"
-		},
-		{
-			"description": "Bind a callback which is only invoked once",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"description": "The name of the event to listen for.",
-					"name": "event"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"description": "The callback to invoke when the\n                               event is emitted",
-					"name": "callback"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Emitter"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "once",
-			"lineno": "Tone/core/Emitter.js#L52",
-			"inherits": "Tone.Emitter"
-		},
-		{
-			"description": "Remove the event listener.",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"description": "The event to stop listening to.",
-					"name": "event"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"optional": true,
-					"description": "The callback which was bound to\n                               the event with Tone.Emitter.on.\n                               If no callback is given, all callbacks\n                               events are removed.",
-					"name": "callback"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Emitter"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "off",
-			"lineno": "Tone/core/Emitter.js#L71",
-			"inherits": "Tone.Emitter"
-		},
-		{
-			"description": "Invoke all of the callbacks bound to the event\n with any arguments passed in.",
-			"params": [
-				{
-					"type": [
-						"String"
-					],
-					"description": "The name of the event.",
-					"name": "event"
-				},
-				{
-					"type": [
-						"*"
-					],
-					"description": "The arguments to pass to the functions listening.",
-					"name": "args..."
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.Emitter"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "emit",
-			"lineno": "Tone/core/Emitter.js#L98",
-			"inherits": "Tone.Emitter"
 		}
 	],
 	"Timeline": [
@@ -6280,6 +5113,920 @@
 			"lineno": "Tone/core/Master.js#L136"
 		}
 	],
+	"Buffer": [
+		{
+			"description": "Pass in an AudioBuffer or Tone.Buffer to set the value\n of this buffer.",
+			"params": [
+				{
+					"type": [
+						"AudioBuffer",
+						"Tone.Buffer"
+					],
+					"description": "the buffer",
+					"name": "buffer"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Buffer"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "set",
+			"lineno": "Tone/core/Buffer.js#L97"
+		},
+		{
+			"returns": {
+				"type": [
+					"AudioBuffer"
+				],
+				"description": "The audio buffer stored in the object."
+			},
+			"scope": "instance",
+			"name": "get",
+			"lineno": "Tone/core/Buffer.js#L116"
+		},
+		{
+			"description": "Makes an xhr reqest for the selected url then decodes\n the file as an audio buffer. Invokes\n the callback once the audio buffer loads.",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"description": "The url of the buffer to load.\n                     filetype support depends on the\n                     browser.",
+					"name": "url"
+				}
+			],
+			"returns": {
+				"type": [
+					"Promise"
+				],
+				"description": "returns a Promise which resolves with the Tone.Buffer"
+			},
+			"scope": "instance",
+			"name": "load",
+			"lineno": "Tone/core/Buffer.js#L129"
+		},
+		{
+			"description": "dispose and disconnect",
+			"returns": {
+				"type": [
+					"Tone.Buffer"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/core/Buffer.js#L164"
+		},
+		{
+			"description": "Set the audio buffer from the array. To create a multichannel AudioBuffer,\n pass in a multidimensional array.",
+			"params": [
+				{
+					"type": [
+						"Float32Array"
+					],
+					"description": "The array to fill the audio buffer",
+					"name": "array"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Buffer"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fromArray",
+			"lineno": "Tone/core/Buffer.js#L246"
+		},
+		{
+			"description": "Sums muliple channels into 1 channel",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"optional": true,
+					"description": "Optionally only copy a single channel from the array.",
+					"name": "channel"
+				}
+			],
+			"returns": {
+				"type": [
+					"Array"
+				]
+			},
+			"scope": "instance",
+			"name": "toMono",
+			"lineno": "Tone/core/Buffer.js#L266"
+		},
+		{
+			"description": "Get the buffer as an array. Single channel buffers will return a 1-dimensional\n\tFloat32Array, and multichannel buffers will return multidimensional arrays.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"optional": true,
+					"description": "Optionally only copy a single channel from the array.",
+					"name": "channel"
+				}
+			],
+			"returns": {
+				"type": [
+					"Array"
+				]
+			},
+			"scope": "instance",
+			"name": "toArray",
+			"lineno": "Tone/core/Buffer.js#L293"
+		},
+		{
+			"description": "Returns the Float32Array representing the PCM audio data for the specific channel.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The channel number to return",
+					"name": "channel"
+				}
+			],
+			"returns": {
+				"type": [
+					"Float32Array"
+				],
+				"description": "The audio as a TypedArray"
+			},
+			"scope": "instance",
+			"name": "getChannelData",
+			"lineno": "Tone/core/Buffer.js#L312"
+		},
+		{
+			"description": "Cut a subsection of the array and return a buffer of the\n subsection. Does not modify the original buffer",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to start the slice",
+					"name": "start"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"description": "The end time to slice. If none is given\n                    will default to the end of the buffer",
+					"name": "end"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Buffer"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "slice",
+			"lineno": "Tone/core/Buffer.js#L324"
+		},
+		{
+			"description": "Create a Tone.Buffer from the array. To create a multichannel AudioBuffer,\n pass in a multidimensional array.",
+			"params": [
+				{
+					"type": [
+						"Float32Array"
+					],
+					"description": "The array to fill the audio buffer",
+					"name": "array"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Buffer"
+				],
+				"description": "A Tone.Buffer created from the array"
+			},
+			"scope": "static",
+			"name": "fromArray",
+			"lineno": "Tone/core/Buffer.js#L395"
+		},
+		{
+			"description": "Creates a Tone.Buffer from a URL, returns a promise\nwhich resolves to a Tone.Buffer",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"description": "The url to load.",
+					"name": "url"
+				}
+			],
+			"returns": {
+				"type": [
+					"Promise.<Tone.Buffer>"
+				],
+				"description": "A promise which resolves to a Tone.Buffer"
+			},
+			"scope": "static",
+			"name": "fromUrl",
+			"lineno": "Tone/core/Buffer.js#L405"
+		},
+		{
+			"description": "Loads a url using XMLHttpRequest.",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"name": "url"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"name": "onload"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"name": "onerror"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"name": "onprogress"
+				}
+			],
+			"returns": {
+				"type": [
+					"XMLHttpRequest"
+				]
+			},
+			"scope": "static",
+			"name": "load",
+			"lineno": "Tone/core/Buffer.js#L431"
+		},
+		{
+			"description": "Stop all of the downloads in progress",
+			"returns": {
+				"type": [
+					"Tone.Buffer"
+				]
+			},
+			"scope": "static",
+			"name": "cancelDownloads",
+			"lineno": "Tone/core/Buffer.js#L518"
+		},
+		{
+			"description": "Checks a url's extension to see if the current browser can play that file type.",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"description": "The url/extension to test",
+					"name": "url"
+				}
+			],
+			"examples": [
+				"Tone.Buffer.supportsType(\"wav\"); //returns true\nTone.Buffer.supportsType(\"path/to/file.wav\"); //returns true"
+			],
+			"returns": {
+				"type": [
+					"Boolean"
+				],
+				"description": "If the file extension can be played"
+			},
+			"scope": "static",
+			"name": "supportsType",
+			"lineno": "Tone/core/Buffer.js#L535"
+		}
+	],
+	"load": [
+		{
+			"params": [],
+			"scope": "inner",
+			"name": "onError",
+			"lineno": "Tone/core/Buffer.js#L449"
+		},
+		{
+			"params": [],
+			"scope": "inner",
+			"name": "onProgress",
+			"lineno": "Tone/core/Buffer.js#L459"
+		}
+	],
+	"Tone": [
+		{
+			"description": "Returns a Promise which resolves when all of the buffers have loaded",
+			"returns": {
+				"type": [
+					"Promise"
+				]
+			},
+			"scope": "static",
+			"name": "loaded",
+			"lineno": "Tone/core/Buffer.js#L546"
+		},
+		{
+			"description": "Send this signal to the channel name.",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"description": "A named channel to send the signal to.",
+					"name": "channelName"
+				},
+				{
+					"type": [
+						"Decibels"
+					],
+					"description": "The amount of the source to send to the bus.",
+					"name": "amount"
+				}
+			],
+			"examples": [
+				"source.send(\"reverb\", -12);"
+			],
+			"returns": {
+				"type": [
+					"GainNode"
+				],
+				"description": "The gain node which connects this node to the desired channel.\n                    Can be used to adjust the levels of the send."
+			},
+			"scope": "instance",
+			"name": "send",
+			"lineno": "Tone/core/Bus.js#L29"
+		},
+		{
+			"description": "Recieve the input from the desired channelName to the input",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"description": "A named channel to send the signal to.",
+					"name": "channelName"
+				},
+				{
+					"type": [
+						"Number"
+					],
+					"optional": true,
+					"description": "The channel to connect to",
+					"name": "channelNumber"
+				}
+			],
+			"examples": [
+				"reverbEffect.receive(\"reverb\");"
+			],
+			"returns": {
+				"type": [
+					"Tone"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "receive",
+			"lineno": "Tone/core/Bus.js#L49"
+		},
+		{
+			"description": "Generate a buffer by rendering all of the Tone.js code within the callback using the OfflineAudioContext.\n The OfflineAudioContext is capable of rendering much faster than real time in many cases.\n The callback function also passes in an offline instance of Tone.Transport which can be used\n to schedule events along the Transport. **NOTE** OfflineAudioContext has the same restrictions\n as the AudioContext in that on certain platforms (like iOS) it must be invoked by an explicit\n user action like a click or tap.",
+			"params": [
+				{
+					"type": [
+						"function"
+					],
+					"description": "All Tone.js nodes which are created and scheduled within this callback are recorded into the output Buffer.",
+					"name": "callback"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "the amount of time to record for.",
+					"name": "duration"
+				}
+			],
+			"examples": [
+				"//render 2 seconds of the oscillator\nTone.Offline(function(){\n\t//only nodes created in this callback will be recorded\n\tvar oscillator = new Tone.Oscillator().toMaster().start(0)\n\t//schedule their events\n}, 2).then(function(buffer){\n\t//do something with the output buffer\n})",
+				"//can also schedule events along the Transport\n//using the passed in Offline Transport\nTone.Offline(function(Transport){\n\tvar osc = new Tone.Oscillator().toMaster()\n\tTransport.schedule(function(time){\n\t\tosc.start(time).stop(time + 0.1)\n\t}, 1)\n\tTransport.start(0.2)\n}, 4).then(function(buffer){\n\t//do something with the output buffer\n})"
+			],
+			"returns": {
+				"type": [
+					"Promise"
+				],
+				"description": "The promise which is invoked with the Tone.Buffer of the recorded output."
+			},
+			"scope": "static",
+			"name": "Offline",
+			"lineno": "Tone/core/Offline.js#L59"
+		},
+		{
+			"params": [
+				{
+					"type": [
+						"Array"
+					],
+					"description": "The arguments array",
+					"name": "values"
+				},
+				{
+					"type": [
+						"Array"
+					],
+					"description": "The names of the arguments",
+					"name": "keys"
+				},
+				{
+					"type": [
+						"function",
+						"Object"
+					],
+					"description": "The class constructor",
+					"name": "constr"
+				}
+			],
+			"returns": {
+				"type": [
+					"Object"
+				],
+				"description": "An object composed of the  defaults between the class' defaults\n                       and the passed in arguments."
+			},
+			"scope": "static",
+			"name": "defaults",
+			"lineno": "Tone/core/Tone.js#L228"
+		},
+		{
+			"description": "If the `given` parameter is undefined, use the `fallback`.\n If both `given` and `fallback` are object literals, it will\n return a deep copy which includes all of the parameters from both\n objects. If a parameter is undefined in given, it will return\n the fallback property.\n <br><br>\n WARNING: if object is self referential, it will go into an an\n infinite recursive loop.",
+			"params": [
+				{
+					"type": [
+						"*"
+					],
+					"name": "given"
+				},
+				{
+					"type": [
+						"*"
+					],
+					"name": "fallback"
+				}
+			],
+			"returns": {
+				"type": [
+					"*"
+				]
+			},
+			"scope": "static",
+			"name": "defaultArg",
+			"lineno": "Tone/core/Tone.js#L260"
+		},
+		{
+			"description": "connect together all of the arguments in series",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone"
+				]
+			},
+			"scope": "static",
+			"name": "connectSeries",
+			"lineno": "Tone/core/Tone.js#L287"
+		},
+		{
+			"description": "Test if the arg is undefined",
+			"params": [
+				{
+					"type": [
+						"*"
+					],
+					"description": "the argument to test",
+					"name": "arg"
+				}
+			],
+			"returns": {
+				"type": [
+					"Boolean"
+				],
+				"description": "true if the arg is undefined"
+			},
+			"scope": "static",
+			"name": "isUndef",
+			"lineno": "Tone/core/Tone.js#L308"
+		},
+		{
+			"description": "Test if the arg is not undefined",
+			"params": [
+				{
+					"type": [
+						"*"
+					],
+					"description": "the argument to test",
+					"name": "arg"
+				}
+			],
+			"returns": {
+				"type": [
+					"Boolean"
+				],
+				"description": "true if the arg is undefined"
+			},
+			"scope": "static",
+			"name": "isDefined",
+			"lineno": "Tone/core/Tone.js#L319"
+		},
+		{
+			"description": "Test if the arg is a function",
+			"params": [
+				{
+					"type": [
+						"*"
+					],
+					"description": "the argument to test",
+					"name": "arg"
+				}
+			],
+			"returns": {
+				"type": [
+					"Boolean"
+				],
+				"description": "true if the arg is a function"
+			},
+			"scope": "static",
+			"name": "isFunction",
+			"lineno": "Tone/core/Tone.js#L330"
+		},
+		{
+			"description": "Test if the argument is a number.",
+			"params": [
+				{
+					"type": [
+						"*"
+					],
+					"description": "the argument to test",
+					"name": "arg"
+				}
+			],
+			"returns": {
+				"type": [
+					"Boolean"
+				],
+				"description": "true if the arg is a number"
+			},
+			"scope": "static",
+			"name": "isNumber",
+			"lineno": "Tone/core/Tone.js#L341"
+		},
+		{
+			"description": "Test if the given argument is an object literal (i.e. `{}`);",
+			"params": [
+				{
+					"type": [
+						"*"
+					],
+					"description": "the argument to test",
+					"name": "arg"
+				}
+			],
+			"returns": {
+				"type": [
+					"Boolean"
+				],
+				"description": "true if the arg is an object literal."
+			},
+			"scope": "static",
+			"name": "isObject",
+			"lineno": "Tone/core/Tone.js#L352"
+		},
+		{
+			"description": "Test if the argument is a boolean.",
+			"params": [
+				{
+					"type": [
+						"*"
+					],
+					"description": "the argument to test",
+					"name": "arg"
+				}
+			],
+			"returns": {
+				"type": [
+					"Boolean"
+				],
+				"description": "true if the arg is a boolean"
+			},
+			"scope": "static",
+			"name": "isBoolean",
+			"lineno": "Tone/core/Tone.js#L363"
+		},
+		{
+			"description": "Test if the argument is an Array",
+			"params": [
+				{
+					"type": [
+						"*"
+					],
+					"description": "the argument to test",
+					"name": "arg"
+				}
+			],
+			"returns": {
+				"type": [
+					"Boolean"
+				],
+				"description": "true if the arg is an array"
+			},
+			"scope": "static",
+			"name": "isArray",
+			"lineno": "Tone/core/Tone.js#L374"
+		},
+		{
+			"description": "Test if the argument is a string.",
+			"params": [
+				{
+					"type": [
+						"*"
+					],
+					"description": "the argument to test",
+					"name": "arg"
+				}
+			],
+			"returns": {
+				"type": [
+					"Boolean"
+				],
+				"description": "true if the arg is a string"
+			},
+			"scope": "static",
+			"name": "isString",
+			"lineno": "Tone/core/Tone.js#L385"
+		},
+		{
+			"description": "Test if the argument is in the form of a note in scientific pitch notation.\n e.g. \"C4\"",
+			"params": [
+				{
+					"type": [
+						"*"
+					],
+					"description": "the argument to test",
+					"name": "arg"
+				}
+			],
+			"returns": {
+				"type": [
+					"Boolean"
+				],
+				"description": "true if the arg is a string"
+			},
+			"scope": "static",
+			"name": "isNote",
+			"lineno": "Tone/core/Tone.js#L397"
+		},
+		{
+			"description": "Equal power gain scale. Good for cross-fading.",
+			"params": [
+				{
+					"type": [
+						"NormalRange"
+					],
+					"description": "(0-1)",
+					"name": "percent"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "output gain (0-1)"
+			},
+			"scope": "static",
+			"name": "equalPowerScale",
+			"lineno": "Tone/core/Tone.js#L463"
+		},
+		{
+			"description": "Convert decibels into gain.",
+			"params": [
+				{
+					"type": [
+						"Decibels"
+					],
+					"name": "db"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				]
+			},
+			"scope": "static",
+			"name": "dbToGain",
+			"lineno": "Tone/core/Tone.js#L475"
+		},
+		{
+			"description": "Convert gain to decibels.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "(0-1)",
+					"name": "gain"
+				}
+			],
+			"returns": {
+				"type": [
+					"Decibels"
+				]
+			},
+			"scope": "static",
+			"name": "gainToDb",
+			"lineno": "Tone/core/Tone.js#L486"
+		},
+		{
+			"description": "Convert an interval (in semitones) to a frequency ratio.",
+			"params": [
+				{
+					"type": [
+						"Interval"
+					],
+					"description": "the number of semitones above the base note",
+					"name": "interval"
+				}
+			],
+			"examples": [
+				"tone.intervalToFrequencyRatio(0); // 1\ntone.intervalToFrequencyRatio(12); // 2\ntone.intervalToFrequencyRatio(-12); // 0.5"
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "the frequency ratio"
+			},
+			"scope": "static",
+			"name": "intervalToFrequencyRatio",
+			"lineno": "Tone/core/Tone.js#L501"
+		},
+		{
+			"description": "Return the current time of the AudioContext clock.",
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "the currentTime from the AudioContext"
+			},
+			"scope": "static",
+			"name": "now",
+			"lineno": "Tone/core/Tone.js#L524"
+		},
+		{
+			"description": "have a child inherit all of Tone's (or a parent's) prototype\n to inherit the parent's properties, make sure to call\n Parent.call(this) in the child's constructor\n\n based on closure library's inherit function",
+			"params": [
+				{
+					"type": [
+						"function"
+					],
+					"name": "child"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"optional": true,
+					"description": "(optional) parent to inherit from\n                            if no parent is supplied, the child\n                            will inherit from Tone",
+					"name": "parent"
+				}
+			],
+			"scope": "static",
+			"name": "extend",
+			"lineno": "Tone/core/Tone.js#L546"
+		},
+		{
+			"description": "Convert Time into seconds.\n\n Unlike the method which it overrides, this takes into account\n transporttime and musical notation.\n\n Time : 1.40\n Notation: 4n or 1m or 2t\n Now Relative: +3n\n Math: 3n+16n or even complicated expressions ((3n*2)/6 + 1)",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Seconds"
+				]
+			},
+			"scope": "instance",
+			"name": "toSeconds",
+			"lineno": "Tone/type/Type.js#L177"
+		},
+		{
+			"description": "Convert a frequency representation into a number.",
+			"params": [
+				{
+					"type": [
+						"Frequency"
+					],
+					"name": "freq"
+				}
+			],
+			"returns": {
+				"type": [
+					"Hertz"
+				],
+				"description": "the frequency in hertz"
+			},
+			"scope": "instance",
+			"name": "toFrequency",
+			"lineno": "Tone/type/Type.js#L194"
+		},
+		{
+			"description": "Convert a time representation into ticks.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"Ticks"
+				],
+				"description": "the time in ticks"
+			},
+			"scope": "instance",
+			"name": "toTicks",
+			"lineno": "Tone/type/Type.js#L209"
+		}
+	],
+	"loaded": [
+		{
+			"params": [],
+			"scope": "inner",
+			"name": "removeEvents",
+			"lineno": "Tone/core/Buffer.js#L548"
+		}
+	],
+	"<anonymous>": [
+		{
+			"scope": "inner",
+			"name": "onload",
+			"lineno": "Tone/core/Buffer.js#L554"
+		},
+		{
+			"scope": "inner",
+			"name": "onerror",
+			"lineno": "Tone/core/Buffer.js#L557"
+		},
+		{
+			"params": [],
+			"scope": "inner",
+			"name": "toneConnect",
+			"lineno": "Tone/core/Context.js#L509"
+		},
+		{
+			"params": [],
+			"scope": "inner",
+			"name": "toneDisconnect",
+			"lineno": "Tone/core/Context.js#L533"
+		},
+		{
+			"params": [],
+			"scope": "inner",
+			"name": "ConstantSourceNode",
+			"lineno": "Tone/shim/ConstantSourceNode.js#L6"
+		},
+		{
+			"params": [],
+			"scope": "inner",
+			"name": "WaveShaperNode",
+			"lineno": "Tone/shim/WaveShaperNode.js#L10"
+		},
+		{
+			"params": [],
+			"scope": "inner",
+			"name": "createBuffers",
+			"lineno": "Tone/source/Noise.js#L247"
+		}
+	],
 	"Clock": [
 		{
 			"description": "Start the clock at the given time. Optionally pass in an offset\n of where to start the tick counter from.",
@@ -7066,6 +6813,259 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/core/Master.js#L110"
+		}
+	],
+	"OfflineContext": [
+		{
+			"description": "Override the now method to point to the internal clock time",
+			"returns": {
+				"type": [
+					"Number"
+				]
+			},
+			"scope": "instance",
+			"name": "now",
+			"lineno": "Tone/core/OfflineContext.js#L48"
+		},
+		{
+			"description": "Render the output of the OfflineContext",
+			"returns": {
+				"type": [
+					"Promise"
+				]
+			},
+			"scope": "instance",
+			"name": "render",
+			"lineno": "Tone/core/OfflineContext.js#L56"
+		},
+		{
+			"description": "Close the context",
+			"returns": {
+				"type": [
+					"Promise"
+				]
+			},
+			"scope": "instance",
+			"name": "close",
+			"lineno": "Tone/core/OfflineContext.js#L71"
+		},
+		{
+			"scope": "instance",
+			"name": "createBufferSource",
+			"lineno": "Tone/shim/BufferSourceNode.js#L13"
+		},
+		{
+			"description": "Promise which is invoked when the context is running.\n Tries to resume the context if it's not started.",
+			"returns": {
+				"type": [
+					"Promise"
+				]
+			},
+			"scope": "instance",
+			"name": "ready",
+			"lineno": "Tone/core/Context.js#L139",
+			"inherits": "Tone.Context"
+		},
+		{
+			"description": "Generate a looped buffer at some constant value.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"name": "val"
+				}
+			],
+			"returns": {
+				"type": [
+					"BufferSourceNode"
+				]
+			},
+			"scope": "instance",
+			"name": "getConstant",
+			"lineno": "Tone/core/Context.js#L167",
+			"inherits": "Tone.Context"
+		},
+		{
+			"description": "A setTimeout which is gaurenteed by the clock source.\n Also runs in the offline context.",
+			"params": [
+				{
+					"type": [
+						"function"
+					],
+					"description": "The callback to invoke",
+					"name": "fn"
+				},
+				{
+					"type": [
+						"Seconds"
+					],
+					"description": "The timeout in seconds",
+					"name": "timeout"
+				}
+			],
+			"returns": {
+				"type": [
+					"Number"
+				],
+				"description": "ID to use when invoking Tone.Context.clearTimeout"
+			},
+			"scope": "instance",
+			"name": "setTimeout",
+			"lineno": "Tone/core/Context.js#L206",
+			"inherits": "Tone.Context"
+		},
+		{
+			"description": "Clears a previously scheduled timeout with Tone.context.setTimeout",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"description": "The ID returned from setTimeout",
+					"name": "id"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Context"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "clearTimeout",
+			"lineno": "Tone/core/Context.js#L222",
+			"inherits": "Tone.Context"
+		},
+		{
+			"description": "Unlike other dispose methods, this returns a Promise\n which executes when the context is closed and disposed",
+			"returns": {
+				"type": [
+					"Promise"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/core/Context.js#L317",
+			"inherits": "Tone.Context"
+		},
+		{
+			"description": "Bind a callback to a specific event.",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"description": "The name of the event to listen for.",
+					"name": "event"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"description": "The callback to invoke when the\n                               event is emitted",
+					"name": "callback"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Emitter"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "on",
+			"lineno": "Tone/core/Emitter.js#L32",
+			"inherits": "Tone.Emitter"
+		},
+		{
+			"description": "Bind a callback which is only invoked once",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"description": "The name of the event to listen for.",
+					"name": "event"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"description": "The callback to invoke when the\n                               event is emitted",
+					"name": "callback"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Emitter"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "once",
+			"lineno": "Tone/core/Emitter.js#L52",
+			"inherits": "Tone.Emitter"
+		},
+		{
+			"description": "Remove the event listener.",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"description": "The event to stop listening to.",
+					"name": "event"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"optional": true,
+					"description": "The callback which was bound to\n                               the event with Tone.Emitter.on.\n                               If no callback is given, all callbacks\n                               events are removed.",
+					"name": "callback"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Emitter"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "off",
+			"lineno": "Tone/core/Emitter.js#L71",
+			"inherits": "Tone.Emitter"
+		},
+		{
+			"description": "Invoke all of the callbacks bound to the event\n with any arguments passed in.",
+			"params": [
+				{
+					"type": [
+						"String"
+					],
+					"description": "The name of the event.",
+					"name": "event"
+				},
+				{
+					"type": [
+						"*"
+					],
+					"description": "The arguments to pass to the functions listening.",
+					"name": "args..."
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.Emitter"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "emit",
+			"lineno": "Tone/core/Emitter.js#L98",
+			"inherits": "Tone.Emitter"
 		}
 	],
 	"Param": [
@@ -8764,127 +8764,6 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/effect/Chorus.js#L196"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		}
-	],
-	"Convolver": [
-		{
-			"description": "Load an impulse response url as an audio buffer.\n Decodes the audio asynchronously and invokes\n the callback once the audio buffer loads.",
-			"params": [
-				{
-					"type": [
-						"string"
-					],
-					"description": "The url of the buffer to load.\n                     filetype support depends on the\n                     browser.",
-					"name": "url"
-				},
-				{
-					"type": [
-						"function"
-					],
-					"optional": true,
-					"name": "callback"
-				}
-			],
-			"returns": {
-				"type": [
-					"Promise"
-				]
-			},
-			"scope": "instance",
-			"name": "load",
-			"lineno": "Tone/effect/Convolver.js#L82"
-		},
-		{
-			"description": "Clean up.",
-			"returns": {
-				"type": [
-					"Tone.Convolver"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/effect/Convolver.js#L95"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -10779,6 +10658,127 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/effect/AutoFilter.js#L187"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Convolver": [
+		{
+			"description": "Load an impulse response url as an audio buffer.\n Decodes the audio asynchronously and invokes\n the callback once the audio buffer loads.",
+			"params": [
+				{
+					"type": [
+						"string"
+					],
+					"description": "The url of the buffer to load.\n                     filetype support depends on the\n                     browser.",
+					"name": "url"
+				},
+				{
+					"type": [
+						"function"
+					],
+					"optional": true,
+					"name": "callback"
+				}
+			],
+			"returns": {
+				"type": [
+					"Promise"
+				]
+			},
+			"scope": "instance",
+			"name": "load",
+			"lineno": "Tone/effect/Convolver.js#L82"
+		},
+		{
+			"description": "Clean up.",
+			"returns": {
+				"type": [
+					"Tone.Convolver"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/effect/Convolver.js#L95"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -13051,304 +13051,6 @@
 			"inherits": "Tone.AudioNode"
 		}
 	],
-	"Monophonic": [
-		{
-			"description": "Trigger the attack of the note optionally with a given velocity.",
-			"params": [
-				{
-					"type": [
-						"Frequency"
-					],
-					"description": "The note to trigger.",
-					"name": "note"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the note should start.",
-					"name": "time"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 1,
-					"description": "velocity The velocity scaler \n                               determines how \"loud\" the note \n                               will be triggered.",
-					"name": "velocity"
-				}
-			],
-			"examples": [
-				"synth.triggerAttack(\"C4\");\n ",
-				"//trigger the note a half second from now at half velocity\nsynth.triggerAttack(\"C4\", \"+0.5\", 0.5);"
-			],
-			"returns": {
-				"type": [
-					"Tone.Monophonic"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerAttack",
-			"lineno": "Tone/instrument/Monophonic.js#L54"
-		},
-		{
-			"description": "Trigger the release portion of the envelope",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "If no time is given, the release happens immediatly",
-					"name": "time"
-				}
-			],
-			"examples": [
-				"synth.triggerRelease();"
-			],
-			"returns": {
-				"type": [
-					"Tone.Monophonic"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerRelease",
-			"lineno": "Tone/instrument/Monophonic.js#L68"
-		},
-		{
-			"description": "Get the level of the output at the given time. Measures\n the envelope(s) value at the time.",
-			"params": [
-				{
-					"type": [
-						"Time"
-					],
-					"description": "The time to query the envelope value",
-					"name": "time"
-				}
-			],
-			"returns": {
-				"type": [
-					"NormalRange"
-				],
-				"description": "The output level between 0-1"
-			},
-			"scope": "instance",
-			"name": "getLevelAtTime",
-			"lineno": "Tone/instrument/Monophonic.js#L94"
-		},
-		{
-			"description": "Set the note at the given time. If no time is given, the note\n will set immediately.",
-			"params": [
-				{
-					"type": [
-						"Frequency"
-					],
-					"description": "The note to change to.",
-					"name": "note"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "The time when the note should be set.",
-					"name": "time"
-				}
-			],
-			"examples": [
-				"//change to F#6 in one quarter note from now.\nsynth.setNote(\"F#6\", \"+4n\");",
-				"//change to Bb4 right now\nsynth.setNote(\"Bb4\");"
-			],
-			"returns": {
-				"type": [
-					"Tone.Monophonic"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "setNote",
-			"lineno": "Tone/instrument/Monophonic.js#L112"
-		},
-		{
-			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
-			"examples": [
-				"instrument.sync()\n//schedule 3 notes when the transport first starts\ninstrument.triggerAttackRelease('C4', '8n', 0)\ninstrument.triggerAttackRelease('E4', '8n', '8n')\ninstrument.triggerAttackRelease('G4', '8n', '4n')\n//start the transport to hear the notes\nTransport.start()"
-			],
-			"returns": {
-				"type": [
-					"Tone.Instrument"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "sync",
-			"lineno": "Tone/instrument/Instrument.js#L82",
-			"inherits": "Tone.Instrument"
-		},
-		{
-			"description": "Unsync the instrument from the Transport",
-			"returns": {
-				"type": [
-					"Tone.Instrument"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "unsync",
-			"lineno": "Tone/instrument/Instrument.js#L111",
-			"inherits": "Tone.Instrument"
-		},
-		{
-			"description": "Trigger the attack and then the release after the duration.",
-			"params": [
-				{
-					"type": [
-						"Frequency"
-					],
-					"description": "The note to trigger.",
-					"name": "note"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"description": "How long the note should be held for before\n                         triggering the release. This value must be greater than 0.",
-					"name": "duration"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"defaultvalue": "now",
-					"description": "When the note should be triggered.",
-					"name": "time"
-				},
-				{
-					"type": [
-						"NormalRange"
-					],
-					"optional": true,
-					"defaultvalue": 1,
-					"description": "The velocity the note should be triggered at.",
-					"name": "velocity"
-				}
-			],
-			"examples": [
-				"//trigger \"C4\" for the duration of an 8th note\nsynth.triggerAttackRelease(\"C4\", \"8n\");"
-			],
-			"returns": {
-				"type": [
-					"Tone.Instrument"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Instrument.js#L135",
-			"inherits": "Tone.Instrument"
-		},
-		{
-			"description": "clean up",
-			"returns": {
-				"type": [
-					"Tone.Instrument"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "dispose",
-			"lineno": "Tone/instrument/Instrument.js#L147",
-			"inherits": "Tone.Instrument"
-		},
-		{
-			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
-			"params": [
-				{
-					"type": [
-						"Tone",
-						"AudioParam",
-						"AudioNode"
-					],
-					"name": "unit"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which output to connect from",
-					"name": "outputNum"
-				},
-				{
-					"type": [
-						"number"
-					],
-					"optional": true,
-					"defaultvalue": 0,
-					"description": "optionally which input to connect to",
-					"name": "inputNum"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "connect",
-			"lineno": "Tone/core/AudioNode.js#L173",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "disconnect the output",
-			"params": [
-				{
-					"type": [
-						"Number",
-						"AudioNode"
-					],
-					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
-					"name": "output"
-				}
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "disconnect",
-			"lineno": "Tone/core/AudioNode.js#L193",
-			"inherits": "Tone.AudioNode"
-		},
-		{
-			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
-			"examples": [
-				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
-			],
-			"returns": {
-				"type": [
-					"Tone.AudioNode"
-				],
-				"description": "this"
-			},
-			"scope": "instance",
-			"name": "toMaster",
-			"lineno": "Tone/core/Master.js#L129",
-			"inherits": "Tone.AudioNode"
-		}
-	],
 	"Synth": [
 		{
 			"description": "clean up",
@@ -13805,6 +13507,304 @@
 			"scope": "instance",
 			"name": "triggerAttackRelease",
 			"lineno": "Tone/instrument/Instrument.js#L135",
+			"inherits": "Tone.Instrument"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L173",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L193",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L129",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Monophonic": [
+		{
+			"description": "Trigger the attack of the note optionally with a given velocity.",
+			"params": [
+				{
+					"type": [
+						"Frequency"
+					],
+					"description": "The note to trigger.",
+					"name": "note"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the note should start.",
+					"name": "time"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 1,
+					"description": "velocity The velocity scaler \n                               determines how \"loud\" the note \n                               will be triggered.",
+					"name": "velocity"
+				}
+			],
+			"examples": [
+				"synth.triggerAttack(\"C4\");\n ",
+				"//trigger the note a half second from now at half velocity\nsynth.triggerAttack(\"C4\", \"+0.5\", 0.5);"
+			],
+			"returns": {
+				"type": [
+					"Tone.Monophonic"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerAttack",
+			"lineno": "Tone/instrument/Monophonic.js#L54"
+		},
+		{
+			"description": "Trigger the release portion of the envelope",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "If no time is given, the release happens immediatly",
+					"name": "time"
+				}
+			],
+			"examples": [
+				"synth.triggerRelease();"
+			],
+			"returns": {
+				"type": [
+					"Tone.Monophonic"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerRelease",
+			"lineno": "Tone/instrument/Monophonic.js#L68"
+		},
+		{
+			"description": "Get the level of the output at the given time. Measures\n the envelope(s) value at the time.",
+			"params": [
+				{
+					"type": [
+						"Time"
+					],
+					"description": "The time to query the envelope value",
+					"name": "time"
+				}
+			],
+			"returns": {
+				"type": [
+					"NormalRange"
+				],
+				"description": "The output level between 0-1"
+			},
+			"scope": "instance",
+			"name": "getLevelAtTime",
+			"lineno": "Tone/instrument/Monophonic.js#L94"
+		},
+		{
+			"description": "Set the note at the given time. If no time is given, the note\n will set immediately.",
+			"params": [
+				{
+					"type": [
+						"Frequency"
+					],
+					"description": "The note to change to.",
+					"name": "note"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "The time when the note should be set.",
+					"name": "time"
+				}
+			],
+			"examples": [
+				"//change to F#6 in one quarter note from now.\nsynth.setNote(\"F#6\", \"+4n\");",
+				"//change to Bb4 right now\nsynth.setNote(\"Bb4\");"
+			],
+			"returns": {
+				"type": [
+					"Tone.Monophonic"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "setNote",
+			"lineno": "Tone/instrument/Monophonic.js#L112"
+		},
+		{
+			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
+			"examples": [
+				"instrument.sync()\n//schedule 3 notes when the transport first starts\ninstrument.triggerAttackRelease('C4', '8n', 0)\ninstrument.triggerAttackRelease('E4', '8n', '8n')\ninstrument.triggerAttackRelease('G4', '8n', '4n')\n//start the transport to hear the notes\nTransport.start()"
+			],
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "sync",
+			"lineno": "Tone/instrument/Instrument.js#L82",
+			"inherits": "Tone.Instrument"
+		},
+		{
+			"description": "Unsync the instrument from the Transport",
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "unsync",
+			"lineno": "Tone/instrument/Instrument.js#L111",
+			"inherits": "Tone.Instrument"
+		},
+		{
+			"description": "Trigger the attack and then the release after the duration.",
+			"params": [
+				{
+					"type": [
+						"Frequency"
+					],
+					"description": "The note to trigger.",
+					"name": "note"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"description": "How long the note should be held for before\n                         triggering the release. This value must be greater than 0.",
+					"name": "duration"
+				},
+				{
+					"type": [
+						"Time"
+					],
+					"optional": true,
+					"defaultvalue": "now",
+					"description": "When the note should be triggered.",
+					"name": "time"
+				},
+				{
+					"type": [
+						"NormalRange"
+					],
+					"optional": true,
+					"defaultvalue": 1,
+					"description": "The velocity the note should be triggered at.",
+					"name": "velocity"
+				}
+			],
+			"examples": [
+				"//trigger \"C4\" for the duration of an 8th note\nsynth.triggerAttackRelease(\"C4\", \"8n\");"
+			],
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "triggerAttackRelease",
+			"lineno": "Tone/instrument/Instrument.js#L135",
+			"inherits": "Tone.Instrument"
+		},
+		{
+			"description": "clean up",
+			"returns": {
+				"type": [
+					"Tone.Instrument"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/instrument/Instrument.js#L147",
 			"inherits": "Tone.Instrument"
 		},
 		{

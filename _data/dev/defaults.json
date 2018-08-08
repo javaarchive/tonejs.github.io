@@ -150,12 +150,6 @@
 		"max": 1,
 		"integer": false
 	},
-	"Buffer": {
-		"url": "undefined",
-		"reverse": false,
-		"onload": "Tone.noOp",
-		"onerror": "Tone.noOp"
-	},
 	"Buffers": {
 		"onload": "Tone.noOp",
 		"baseUrl": ""
@@ -170,6 +164,12 @@
 	"TransportRepeatEvent": {
 		"duration": "Infinity",
 		"interval": 1
+	},
+	"Buffer": {
+		"url": "undefined",
+		"reverse": false,
+		"onload": "Tone.noOp",
+		"onerror": "Tone.noOp"
 	},
 	"Clock": {
 		"callback": "Tone.noOp",
@@ -248,9 +248,6 @@
 		"type": "sine",
 		"spread": 180
 	},
-	"Convolver": {
-		"onload": "Tone.noOp"
-	},
 	"Distortion": {
 		"distortion": 0.4,
 		"oversample": "none"
@@ -319,6 +316,9 @@
 			"rolloff": -12,
 			"Q": 1
 		}
+	},
+	"Convolver": {
+		"onload": "Tone.noOp"
 	},
 	"Event": {
 		"callback": "Tone.noOp",
@@ -488,9 +488,6 @@
 			"exponent": 2
 		}
 	},
-	"Monophonic": {
-		"portamento": 0
-	},
 	"Synth": {
 		"oscillator": {
 			"type": "triangle"
@@ -515,6 +512,9 @@
 			"release": 1.4,
 			"attackCurve": "exponential"
 		}
+	},
+	"Monophonic": {
+		"portamento": 0
 	},
 	"NoiseSynth": {
 		"noise": {
@@ -541,7 +541,8 @@
 		"attack": 0,
 		"release": 0.1,
 		"onload": "Tone.noOp",
-		"baseUrl": ""
+		"baseUrl": "",
+		"curve": "exponential"
 	},
 	"Signal": {
 		"value": 0,
