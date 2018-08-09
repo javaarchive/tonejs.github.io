@@ -3548,7 +3548,7 @@
 			],
 			"scope": "instance",
 			"name": "updateInterval",
-			"lineno": "Tone/core/Context.js#L231"
+			"lineno": "Tone/core/Context.js#L246"
 		},
 		{
 			"description": "What the source of the clock is, either \"worker\" (Web Worker [default]),\n \"timeout\" (setTimeout), or \"offline\" (none).",
@@ -3557,7 +3557,7 @@
 			],
 			"scope": "instance",
 			"name": "clockSource",
-			"lineno": "Tone/core/Context.js#L249"
+			"lineno": "Tone/core/Context.js#L264"
 		},
 		{
 			"description": "The type of playback, which affects tradeoffs between audio\n output latency and responsiveness.\n\n In addition to setting the value in seconds, the latencyHint also\n accepts the strings \"interactive\" (prioritizes low latency),\n \"playback\" (prioritizes sustained playback), \"balanced\" (balances\n latency and performance), and \"fastest\" (lowest latency, might glitch more often).",
@@ -3570,7 +3570,7 @@
 			],
 			"scope": "instance",
 			"name": "latencyHint",
-			"lineno": "Tone/core/Context.js#L265"
+			"lineno": "Tone/core/Context.js#L280"
 		}
 	],
 	"Delay": [
@@ -3625,6 +3625,72 @@
 			"name": "gain",
 			"lineno": "Tone/core/Gain.js#L30",
 			"signal": true
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelCount is the number of channels used when up-mixing and down-mixing\n connections to any inputs to the node. The default value is 2 except for\n specific nodes where its value is specially determined.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelCount",
+			"lineno": "Tone/core/AudioNode.js#L62",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelCountMode determines how channels will be counted when up-mixing and\n down-mixing connections to any inputs to the node.\n The default value is \"max\". This attribute has no effect for nodes with no inputs.",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelCountMode",
+			"lineno": "Tone/core/AudioNode.js#L81",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelInterpretation determines how individual channels will be treated\n when up-mixing and down-mixing connections to any inputs to the node.\n The default value is \"speakers\".",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelInterpretation",
+			"lineno": "Tone/core/AudioNode.js#L99",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "The number of inputs feeding into the AudioNode.\n For source nodes, this will be 0.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "numberOfInputs",
+			"lineno": "Tone/core/AudioNode.js#L117",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "The number of outputs coming out of the AudioNode.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "numberOfOutputs",
+			"lineno": "Tone/core/AudioNode.js#L139",
+			"inherits": "Tone.AudioNode"
 		}
 	],
 	"Listener": [
@@ -11559,7 +11625,7 @@
 			],
 			"scope": "instance",
 			"name": "updateInterval",
-			"lineno": "Tone/core/Context.js#L231",
+			"lineno": "Tone/core/Context.js#L246",
 			"inherits": "Tone.Context"
 		},
 		{
@@ -11569,7 +11635,7 @@
 			],
 			"scope": "instance",
 			"name": "clockSource",
-			"lineno": "Tone/core/Context.js#L249",
+			"lineno": "Tone/core/Context.js#L264",
 			"inherits": "Tone.Context"
 		},
 		{
@@ -11583,7 +11649,7 @@
 			],
 			"scope": "instance",
 			"name": "latencyHint",
-			"lineno": "Tone/core/Context.js#L265",
+			"lineno": "Tone/core/Context.js#L280",
 			"inherits": "Tone.Context"
 		}
 	],

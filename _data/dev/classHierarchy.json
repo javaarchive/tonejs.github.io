@@ -182,6 +182,7 @@
 		"Tone"
 	],
 	"Gain": [
+		"AudioNode",
 		"Tone"
 	],
 	"Listener": [

@@ -970,7 +970,7 @@
 				"name": "units"
 			}
 		],
-		"extends": "Tone"
+		"extends": "Tone.AudioNode"
 	},
 	"Listener": {
 		"description": "Both Tone.Panner3D and Tone.Listener have a position in 3D space\n         using a right-handed cartesian coordinate system.\n         The units used in the coordinate system are not defined;\n         these coordinates are independent/invariant of any particular\n         units such as meters or feet. Tone.Panner3D objects have an forward\n         vector representing the direction the sound is projecting. Additionally,\n         they have a sound cone representing how directional the sound is.\n         For example, the sound could be omnidirectional, in which case it would\n         be heard anywhere regardless of its forward, or it can be more directional\n         and heard only if it is facing the listener. Tone.Listener objects\n         (representing a person's ears) have an forward and up vector\n         representing in which direction the person is facing. Because both the\n         source stream and the listener can be moving, they both have a velocity\n         vector representing both the speed and direction of movement. Taken together,\n         these two velocities can be used to generate a doppler shift effect which changes the pitch.\n         <br><br>\n         Note: the position of the Listener will have no effect on nodes not connected to a Tone.Panner3D",
