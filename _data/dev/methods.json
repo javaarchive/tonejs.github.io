@@ -7573,13 +7573,13 @@
 			"params": [],
 			"scope": "inner",
 			"name": "toneConnect",
-			"lineno": "Tone/core/Context.js#L523"
+			"lineno": "Tone/core/Context.js#L549"
 		},
 		{
 			"params": [],
 			"scope": "inner",
 			"name": "toneDisconnect",
-			"lineno": "Tone/core/Context.js#L547"
+			"lineno": "Tone/core/Context.js#L573"
 		},
 		{
 			"params": [],
@@ -7941,7 +7941,7 @@
 			},
 			"scope": "instance",
 			"name": "now",
-			"lineno": "Tone/core/Context.js#L134"
+			"lineno": "Tone/core/Context.js#L143"
 		},
 		{
 			"description": "Starts the audio context from a suspended state. This is required\n to initially start the AudioContext.",
@@ -7952,7 +7952,7 @@
 			},
 			"scope": "instance",
 			"name": "resume",
-			"lineno": "Tone/core/Context.js#L158"
+			"lineno": "Tone/core/Context.js#L167"
 		},
 		{
 			"description": "Promise which is invoked when the context is running.\n Tries to resume the context if it's not started.",
@@ -7963,7 +7963,7 @@
 			},
 			"scope": "instance",
 			"name": "close",
-			"lineno": "Tone/core/Context.js#L171"
+			"lineno": "Tone/core/Context.js#L180"
 		},
 		{
 			"description": "Generate a looped buffer at some constant value.",
@@ -7982,7 +7982,7 @@
 			},
 			"scope": "instance",
 			"name": "getConstant",
-			"lineno": "Tone/core/Context.js#L182"
+			"lineno": "Tone/core/Context.js#L195"
 		},
 		{
 			"description": "A setTimeout which is gaurenteed by the clock source.\n Also runs in the offline context.",
@@ -8010,7 +8010,7 @@
 			},
 			"scope": "instance",
 			"name": "setTimeout",
-			"lineno": "Tone/core/Context.js#L221"
+			"lineno": "Tone/core/Context.js#L234"
 		},
 		{
 			"description": "Clears a previously scheduled timeout with Tone.context.setTimeout",
@@ -8031,7 +8031,7 @@
 			},
 			"scope": "instance",
 			"name": "clearTimeout",
-			"lineno": "Tone/core/Context.js#L237"
+			"lineno": "Tone/core/Context.js#L250"
 		},
 		{
 			"description": "Unlike other dispose methods, this returns a Promise\n which executes when the context is closed and disposed",
@@ -8043,7 +8043,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/Context.js#L332"
+			"lineno": "Tone/core/Context.js#L358"
 		},
 		{
 			"scope": "instance",
@@ -8584,7 +8584,7 @@
 			},
 			"scope": "instance",
 			"name": "getConstant",
-			"lineno": "Tone/core/Context.js#L182",
+			"lineno": "Tone/core/Context.js#L195",
 			"inherits": "Tone.Context"
 		},
 		{
@@ -8613,7 +8613,7 @@
 			},
 			"scope": "instance",
 			"name": "setTimeout",
-			"lineno": "Tone/core/Context.js#L221",
+			"lineno": "Tone/core/Context.js#L234",
 			"inherits": "Tone.Context"
 		},
 		{
@@ -8635,7 +8635,7 @@
 			},
 			"scope": "instance",
 			"name": "clearTimeout",
-			"lineno": "Tone/core/Context.js#L237",
+			"lineno": "Tone/core/Context.js#L250",
 			"inherits": "Tone.Context"
 		},
 		{
@@ -8648,7 +8648,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/Context.js#L332",
+			"lineno": "Tone/core/Context.js#L358",
 			"inherits": "Tone.Context"
 		},
 		{
@@ -9501,7 +9501,7 @@
 			],
 			"scope": "static",
 			"name": "setContext",
-			"lineno": "Tone/core/Tone.js#L664"
+			"lineno": "Tone/core/Tone.js#L671"
 		},
 		{
 			"description": "Get the context when it becomes available",
@@ -9521,7 +9521,7 @@
 			},
 			"scope": "static",
 			"name": "getContext",
-			"lineno": "Tone/core/Tone.js#L735"
+			"lineno": "Tone/core/Tone.js#L742"
 		}
 	],
 	"extend": [
@@ -9537,7 +9537,7 @@
 			"params": [],
 			"scope": "inner",
 			"name": "resCallback",
-			"lineno": "Tone/core/Tone.js#L739"
+			"lineno": "Tone/core/Tone.js#L746"
 		}
 	],
 	"Transport": [

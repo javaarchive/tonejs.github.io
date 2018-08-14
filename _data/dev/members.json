@@ -3539,7 +3539,7 @@
 			],
 			"scope": "instance",
 			"name": "lookAhead",
-			"lineno": "Tone/core/Context.js#L49"
+			"lineno": "Tone/core/Context.js#L58"
 		},
 		{
 			"description": "How often the Web Worker callback is invoked.\n This number corresponds to how responsive the scheduling\n can be. Context.updateInterval + Context.lookAhead gives you the\n total latency between scheduling an event and hearing it.",
@@ -3548,7 +3548,17 @@
 			],
 			"scope": "instance",
 			"name": "updateInterval",
-			"lineno": "Tone/core/Context.js#L246"
+			"lineno": "Tone/core/Context.js#L259"
+		},
+		{
+			"description": "The unwrapped AudioContext.",
+			"type": [
+				"AudioContext"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "rawContext",
+			"lineno": "Tone/core/Context.js#L277"
 		},
 		{
 			"description": "What the source of the clock is, either \"worker\" (Web Worker [default]),\n \"timeout\" (setTimeout), or \"offline\" (none).",
@@ -3557,7 +3567,7 @@
 			],
 			"scope": "instance",
 			"name": "clockSource",
-			"lineno": "Tone/core/Context.js#L264"
+			"lineno": "Tone/core/Context.js#L290"
 		},
 		{
 			"description": "The type of playback, which affects tradeoffs between audio\n output latency and responsiveness.\n\n In addition to setting the value in seconds, the latencyHint also\n accepts the strings \"interactive\" (prioritizes low latency),\n \"playback\" (prioritizes sustained playback), \"balanced\" (balances\n latency and performance), and \"fastest\" (lowest latency, might glitch more often).",
@@ -3570,7 +3580,7 @@
 			],
 			"scope": "instance",
 			"name": "latencyHint",
-			"lineno": "Tone/core/Context.js#L280"
+			"lineno": "Tone/core/Context.js#L306"
 		}
 	],
 	"Delay": [
@@ -3922,7 +3932,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "context",
-			"lineno": "Tone/core/Tone.js#L643"
+			"lineno": "Tone/core/Tone.js#L650"
 		}
 	],
 	"Transport": [
@@ -11615,7 +11625,7 @@
 			],
 			"scope": "instance",
 			"name": "lookAhead",
-			"lineno": "Tone/core/Context.js#L49",
+			"lineno": "Tone/core/Context.js#L58",
 			"inherits": "Tone.Context"
 		},
 		{
@@ -11625,7 +11635,18 @@
 			],
 			"scope": "instance",
 			"name": "updateInterval",
-			"lineno": "Tone/core/Context.js#L246",
+			"lineno": "Tone/core/Context.js#L259",
+			"inherits": "Tone.Context"
+		},
+		{
+			"description": "The unwrapped AudioContext.",
+			"type": [
+				"AudioContext"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "rawContext",
+			"lineno": "Tone/core/Context.js#L277",
 			"inherits": "Tone.Context"
 		},
 		{
@@ -11635,7 +11656,7 @@
 			],
 			"scope": "instance",
 			"name": "clockSource",
-			"lineno": "Tone/core/Context.js#L264",
+			"lineno": "Tone/core/Context.js#L290",
 			"inherits": "Tone.Context"
 		},
 		{
@@ -11649,7 +11670,7 @@
 			],
 			"scope": "instance",
 			"name": "latencyHint",
-			"lineno": "Tone/core/Context.js#L280",
+			"lineno": "Tone/core/Context.js#L306",
 			"inherits": "Tone.Context"
 		}
 	],
