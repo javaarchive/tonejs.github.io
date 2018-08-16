@@ -14942,6 +14942,38 @@
 			"lineno": "Tone/shim/AudioBuffer.js#L16"
 		}
 	],
+	"AudioContext": [
+		{
+			"scope": "instance",
+			"name": "close",
+			"lineno": "Tone/shim/AudioContext.js#L10"
+		},
+		{
+			"scope": "instance",
+			"name": "resume",
+			"lineno": "Tone/shim/AudioContext.js#L20"
+		},
+		{
+			"scope": "instance",
+			"name": "decodeAudioData",
+			"lineno": "Tone/shim/AudioContext.js#L52"
+		},
+		{
+			"scope": "instance",
+			"name": "createConstantSource",
+			"lineno": "Tone/shim/ConstantSourceNode.js#L47"
+		},
+		{
+			"scope": "instance",
+			"name": "createStereoPanner",
+			"lineno": "Tone/shim/StereoPannerNode.js#L95"
+		},
+		{
+			"scope": "instance",
+			"name": "createWaveShaper",
+			"lineno": "Tone/shim/WaveShaperNode.js#L52"
+		}
+	],
 	"<anonymous>~ConstantSourceNode": [
 		{
 			"scope": "instance",
@@ -14962,45 +14994,6 @@
 			"scope": "instance",
 			"name": "disconnect",
 			"lineno": "Tone/shim/ConstantSourceNode.js#L42"
-		}
-	],
-	"AudioContext": [
-		{
-			"scope": "instance",
-			"name": "createConstantSource",
-			"lineno": "Tone/shim/ConstantSourceNode.js#L47"
-		},
-		{
-			"scope": "instance",
-			"name": "createWaveShaper",
-			"lineno": "Tone/shim/WaveShaperNode.js#L52"
-		},
-		{
-			"scope": "instance",
-			"name": "close",
-			"lineno": "Tone/shim/AudioContext.js#L10"
-		},
-		{
-			"scope": "instance",
-			"name": "resume",
-			"lineno": "Tone/shim/AudioContext.js#L20"
-		},
-		{
-			"scope": "instance",
-			"name": "decodeAudioData",
-			"lineno": "Tone/shim/AudioContext.js#L52"
-		},
-		{
-			"scope": "instance",
-			"name": "createStereoPanner",
-			"lineno": "Tone/shim/StereoPannerNode.js#L95"
-		}
-	],
-	"<anonymous>~WaveShaperNode": [
-		{
-			"scope": "instance",
-			"name": "_defineProperty",
-			"lineno": "Tone/shim/WaveShaperNode.js#L34"
 		}
 	],
 	"OfflineAudioContext": [
@@ -15027,6 +15020,13 @@
 			"scope": "instance",
 			"name": "connect",
 			"lineno": "Tone/shim/StereoPannerNode.js#L90"
+		}
+	],
+	"<anonymous>~WaveShaperNode": [
+		{
+			"scope": "instance",
+			"name": "_defineProperty",
+			"lineno": "Tone/shim/WaveShaperNode.js#L34"
 		}
 	],
 	"Abs": [
