@@ -1,4 +1,176 @@
 {
+	"MultibandCompressor": {
+		"description": "A compressor with seperate controls over low/mid/high dynamics",
+		"params": [
+			{
+				"type": [
+					"Object"
+				],
+				"description": "The low/mid/high compressor settings.",
+				"name": "options"
+			}
+		],
+		"examples": [
+			"var multiband = new Tone.MultibandCompressor({\n \t\"lowFrequency\" : 200,\n \t\"highFrequency\" : 1300\n \t\"low\" : {\n \t\t\"threshold\" : -12\n \t}\n })"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"PanVol": {
+		"description": "Tone.PanVol is a Tone.Panner and Tone.Volume in one.",
+		"params": [
+			{
+				"type": [
+					"AudioRange"
+				],
+				"description": "the initial pan",
+				"name": "pan"
+			},
+			{
+				"type": [
+					"number"
+				],
+				"description": "The output volume.",
+				"name": "volume"
+			}
+		],
+		"examples": [
+			"//pan the incoming signal left and drop the volume\nvar panVol = new Tone.PanVol(-0.25, -12);"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"Panner": {
+		"description": "Tone.Panner is an equal power Left/Right Panner and does not\n         support 3D. Panner uses the StereoPannerNode when available.",
+		"params": [
+			{
+				"type": [
+					"NormalRange"
+				],
+				"optional": true,
+				"defaultvalue": 0,
+				"description": "The initail panner value (center).",
+				"name": "initialPan"
+			}
+		],
+		"examples": [
+			"//pan the input signal hard right.\n var panner = new Tone.Panner(1);"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"Panner3D": {
+		"description": "A spatialized panner node which supports equalpower or HRTF panning.\n         Tries to normalize the API across various browsers. See Tone.Listener",
+		"params": [
+			{
+				"type": [
+					"Number"
+				],
+				"description": "The initial x position.",
+				"name": "positionX"
+			},
+			{
+				"type": [
+					"Number"
+				],
+				"description": "The initial y position.",
+				"name": "positionY"
+			},
+			{
+				"type": [
+					"Number"
+				],
+				"description": "The initial z position.",
+				"name": "positionZ"
+			}
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"ScaledEnvelope": {
+		"description": "Tone.ScaledEnvelop is an envelope which can be scaled\n        to any range. It's useful for applying an envelope\n        to a frequency or any other non-NormalRange signal\n        parameter.",
+		"params": [
+			{
+				"type": [
+					"Time",
+					"Object"
+				],
+				"optional": true,
+				"description": "the attack time in seconds",
+				"name": "attack"
+			},
+			{
+				"type": [
+					"Time"
+				],
+				"optional": true,
+				"description": "the decay time in seconds",
+				"name": "decay"
+			},
+			{
+				"type": [
+					"number"
+				],
+				"optional": true,
+				"description": "a percentage (0-1) of the full amplitude",
+				"name": "sustain"
+			},
+			{
+				"type": [
+					"Time"
+				],
+				"optional": true,
+				"description": "the release time in seconds",
+				"name": "release"
+			}
+		],
+		"examples": [
+			"var scaledEnv = new Tone.ScaledEnvelope({\n \t\"attack\" : 0.2,\n \t\"min\" : 200,\n \t\"max\" : 2000\n });\n scaledEnv.connect(oscillator.frequency);"
+		],
+		"extends": "Tone.Envelope"
+	},
+	"Solo": {
+		"description": "Tone.Solo lets you isolate a specific audio stream. When\n        an instance is set to `solo=true`, it will mute all other instances.",
+		"examples": [
+			"var soloA = new Tone.Solo()\nvar soloB = new Tone.Solo()\nsoloA.solo = true\n//no audio will pass through soloB"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"Split": {
+		"description": "Tone.Split splits an incoming signal into left and right channels.",
+		"examples": [
+			"var split = new Tone.Split();\nstereoSignal.connect(split);"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"Volume": {
+		"description": "Tone.Volume is a simple volume node, useful for creating a volume fader.",
+		"params": [
+			{
+				"type": [
+					"Decibels"
+				],
+				"optional": true,
+				"defaultvalue": 0,
+				"description": "the initial volume",
+				"name": "volume"
+			}
+		],
+		"examples": [
+			"var vol = new Tone.Volume(-12);\ninstrument.chain(vol, Tone.Master);"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"Waveform": {
+		"description": "Get the current waveform data of the connected audio source.",
+		"params": [
+			{
+				"type": [
+					"Number"
+				],
+				"optional": true,
+				"description": "The size of the FFT. Value must be a power of\n                      two in the range 32 to 32768.",
+				"name": "size"
+			}
+		],
+		"extends": "Tone.AudioNode"
+	},
 	"AmplitudeEnvelope": {
 		"description": "Tone.AmplitudeEnvelope is a Tone.Envelope connected to a gain node.\n         Unlike Tone.Envelope, which outputs the envelope's value, Tone.AmplitudeEnvelope accepts\n         an audio signal as the input and will apply the envelope to the amplitude\n         of the signal. Read more about ADSR Envelopes on [Wikipedia](https://en.wikipedia.org/wiki/Synthesizer#ADSR_envelope).",
 		"params": [
@@ -140,295 +312,6 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
-	"FFT": {
-		"description": "Get the current waveform data of the connected audio source.",
-		"params": [
-			{
-				"type": [
-					"Number"
-				],
-				"optional": true,
-				"description": "The size of the FFT. Value must be a power of\n                      two in the range 32 to 32768.",
-				"name": "size"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"FeedbackCombFilter": {
-		"description": "Comb filters are basic building blocks for physical modeling. Read more\n        about comb filters on [CCRMA's website](https://ccrma.stanford.edu/~jos/pasp/Feedback_Comb_Filters.html).",
-		"params": [
-			{
-				"type": [
-					"Time",
-					"Object"
-				],
-				"optional": true,
-				"description": "The delay time of the filter.",
-				"name": "delayTime"
-			},
-			{
-				"type": [
-					"NormalRange"
-				],
-				"optional": true,
-				"description": "The amount of feedback the filter has.",
-				"name": "resonance"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"LFO": {
-		"description": "LFO stands for low frequency oscillator. Tone.LFO produces an output signal\n         which can be attached to an AudioParam or Tone.Signal\n         in order to modulate that parameter with an oscillator. The LFO can\n         also be synced to the transport to start/stop and change when the tempo changes.",
-		"params": [
-			{
-				"type": [
-					"Frequency",
-					"Object"
-				],
-				"optional": true,
-				"description": "The frequency of the oscillation. Typically, LFOs will be\n                              in the frequency range of 0.1 to 10 hertz.",
-				"name": "frequency"
-			},
-			{
-				"type": [
-					"number"
-				],
-				"optional": true,
-				"description": "The minimum output value of the LFO.",
-				"name": "min"
-			},
-			{
-				"type": [
-					"number"
-				],
-				"optional": true,
-				"description": "The maximum value of the LFO.",
-				"name": "max"
-			}
-		],
-		"examples": [
-			"var lfo = new Tone.LFO(\"4n\", 400, 4000);\nlfo.connect(filter.frequency);"
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"Limiter": {
-		"description": "Tone.Limiter will limit the loudness of an incoming signal.\n        It is composed of a Tone.Compressor with a fast attack\n        and release. Limiters are commonly used to safeguard against\n        signal clipping. Unlike a compressor, limiters do not provide\n        smooth gain reduction and almost completely prevent\n        additional gain above the threshold.",
-		"params": [
-			{
-				"type": [
-					"number"
-				],
-				"description": "The theshold above which the limiting is applied.",
-				"name": "threshold"
-			}
-		],
-		"examples": [
-			"var limiter = new Tone.Limiter(-6);"
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"Merge": {
-		"description": "Tone.Merge brings two signals into the left and right\n         channels of a single stereo channel.",
-		"examples": [
-			"var merge = new Tone.Merge().toMaster();\n//routing a sine tone in the left channel\n//and noise in the right channel\nvar osc = new Tone.Oscillator().connect(merge.left);\nvar noise = new Tone.Noise().connect(merge.right);\n//starting our oscillators\nnoise.start();\nosc.start();"
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"MidSideCompressor": {
-		"description": "Tone.MidSideCompressor applies two different compressors to the mid\n        and side signal components. See Tone.MidSideSplit.",
-		"params": [
-			{
-				"type": [
-					"Object"
-				],
-				"description": "The options that are passed to the mid and side\n                         compressors.",
-				"name": "options"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"MidSideMerge": {
-		"description": "Mid/Side processing separates the the 'mid' signal\n        (which comes out of both the left and the right channel)\n        and the 'side' (which only comes out of the the side channels).\n        MidSideMerge merges the mid and side signal after they've been seperated\n        by Tone.MidSideSplit.<br><br>\n        <code>\n        Left = (Mid+Side)/sqrt(2);   // obtain left signal from mid and side<br>\n        Right = (Mid-Side)/sqrt(2);   // obtain right signal from mid and side<br>\n        </code>",
-		"extends": "Tone.AudioNode"
-	},
-	"MidSideSplit": {
-		"description": "Mid/Side processing separates the the 'mid' signal\n        (which comes out of both the left and the right channel)\n        and the 'side' (which only comes out of the the side channels). <br><br>\n        <code>\n        Mid = (Left+Right)/sqrt(2);   // obtain mid-signal from left and right<br>\n        Side = (Left-Right)/sqrt(2);   // obtain side-signal from left and righ<br>\n        </code>",
-		"extends": "Tone.AudioNode"
-	},
-	"Mono": {
-		"description": "Tone.Mono coerces the incoming mono or stereo signal into a mono signal\n        where both left and right channels have the same value. This can be useful\n        for [stereo imaging](https://en.wikipedia.org/wiki/Stereo_imaging).",
-		"extends": "Tone.AudioNode"
-	},
-	"MultibandCompressor": {
-		"description": "A compressor with seperate controls over low/mid/high dynamics",
-		"params": [
-			{
-				"type": [
-					"Object"
-				],
-				"description": "The low/mid/high compressor settings.",
-				"name": "options"
-			}
-		],
-		"examples": [
-			"var multiband = new Tone.MultibandCompressor({\n \t\"lowFrequency\" : 200,\n \t\"highFrequency\" : 1300\n \t\"low\" : {\n \t\t\"threshold\" : -12\n \t}\n })"
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"MultibandSplit": {
-		"description": "Split the incoming signal into three bands (low, mid, high)\n        with two crossover frequency controls.",
-		"params": [
-			{
-				"type": [
-					"Frequency",
-					"Object"
-				],
-				"optional": true,
-				"description": "the low/mid crossover frequency",
-				"name": "lowFrequency"
-			},
-			{
-				"type": [
-					"Frequency"
-				],
-				"optional": true,
-				"description": "the mid/high crossover frequency",
-				"name": "highFrequency"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"PanVol": {
-		"description": "Tone.PanVol is a Tone.Panner and Tone.Volume in one.",
-		"params": [
-			{
-				"type": [
-					"AudioRange"
-				],
-				"description": "the initial pan",
-				"name": "pan"
-			},
-			{
-				"type": [
-					"number"
-				],
-				"description": "The output volume.",
-				"name": "volume"
-			}
-		],
-		"examples": [
-			"//pan the incoming signal left and drop the volume\nvar panVol = new Tone.PanVol(-0.25, -12);"
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"Panner": {
-		"description": "Tone.Panner is an equal power Left/Right Panner and does not\n         support 3D. Panner uses the StereoPannerNode when available.",
-		"params": [
-			{
-				"type": [
-					"NormalRange"
-				],
-				"optional": true,
-				"defaultvalue": 0,
-				"description": "The initail panner value (center).",
-				"name": "initialPan"
-			}
-		],
-		"examples": [
-			"//pan the input signal hard right.\n var panner = new Tone.Panner(1);"
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"Panner3D": {
-		"description": "A spatialized panner node which supports equalpower or HRTF panning.\n         Tries to normalize the API across various browsers. See Tone.Listener",
-		"params": [
-			{
-				"type": [
-					"Number"
-				],
-				"description": "The initial x position.",
-				"name": "positionX"
-			},
-			{
-				"type": [
-					"Number"
-				],
-				"description": "The initial y position.",
-				"name": "positionY"
-			},
-			{
-				"type": [
-					"Number"
-				],
-				"description": "The initial z position.",
-				"name": "positionZ"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"ScaledEnvelope": {
-		"description": "Tone.ScaledEnvelop is an envelope which can be scaled\n        to any range. It's useful for applying an envelope\n        to a frequency or any other non-NormalRange signal\n        parameter.",
-		"params": [
-			{
-				"type": [
-					"Time",
-					"Object"
-				],
-				"optional": true,
-				"description": "the attack time in seconds",
-				"name": "attack"
-			},
-			{
-				"type": [
-					"Time"
-				],
-				"optional": true,
-				"description": "the decay time in seconds",
-				"name": "decay"
-			},
-			{
-				"type": [
-					"number"
-				],
-				"optional": true,
-				"description": "a percentage (0-1) of the full amplitude",
-				"name": "sustain"
-			},
-			{
-				"type": [
-					"Time"
-				],
-				"optional": true,
-				"description": "the release time in seconds",
-				"name": "release"
-			}
-		],
-		"examples": [
-			"var scaledEnv = new Tone.ScaledEnvelope({\n \t\"attack\" : 0.2,\n \t\"min\" : 200,\n \t\"max\" : 2000\n });\n scaledEnv.connect(oscillator.frequency);"
-		],
-		"extends": "Tone.Envelope"
-	},
-	"Solo": {
-		"description": "Tone.Solo lets you isolate a specific audio stream. When\n        an instance is set to `solo=true`, it will mute all other instances.",
-		"examples": [
-			"var soloA = new Tone.Solo()\nvar soloB = new Tone.Solo()\nsoloA.solo = true\n//no audio will pass through soloB"
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"Waveform": {
-		"description": "Get the current waveform data of the connected audio source.",
-		"params": [
-			{
-				"type": [
-					"Number"
-				],
-				"optional": true,
-				"description": "The size of the FFT. Value must be a power of\n                      two in the range 32 to 32768.",
-				"name": "size"
-			}
-		],
-		"extends": "Tone.AudioNode"
-	},
 	"Envelope": {
 		"description": "Tone.Envelope is an [ADSR](https://en.wikipedia.org/wiki/Synthesizer#ADSR_envelope)\n         envelope generator. Tone.Envelope outputs a signal which\n         can be connected to an AudioParam or Tone.Signal.\n         <img src=\"https://upload.wikimedia.org/wikipedia/commons/e/ea/ADSR_parameter.svg\">",
 		"params": [
@@ -467,6 +350,43 @@
 		],
 		"examples": [
 			"//an amplitude envelope\nvar gainNode = Tone.context.createGain();\nvar env = new Tone.Envelope({\n\t\"attack\" : 0.1,\n\t\"decay\" : 0.2,\n\t\"sustain\" : 1,\n\t\"release\" : 0.8,\n});\nenv.connect(gainNode.gain);"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"FFT": {
+		"description": "Get the current waveform data of the connected audio source.",
+		"params": [
+			{
+				"type": [
+					"Number"
+				],
+				"optional": true,
+				"description": "The size of the FFT. Value must be a power of\n                      two in the range 32 to 32768.",
+				"name": "size"
+			}
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"FeedbackCombFilter": {
+		"description": "Comb filters are basic building blocks for physical modeling. Read more\n        about comb filters on [CCRMA's website](https://ccrma.stanford.edu/~jos/pasp/Feedback_Comb_Filters.html).",
+		"params": [
+			{
+				"type": [
+					"Time",
+					"Object"
+				],
+				"optional": true,
+				"description": "The delay time of the filter.",
+				"name": "delayTime"
+			},
+			{
+				"type": [
+					"NormalRange"
+				],
+				"optional": true,
+				"description": "The amount of feedback the filter has.",
+				"name": "resonance"
+			}
 		],
 		"extends": "Tone.AudioNode"
 	},
@@ -590,6 +510,56 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
+	"LFO": {
+		"description": "LFO stands for low frequency oscillator. Tone.LFO produces an output signal\n         which can be attached to an AudioParam or Tone.Signal\n         in order to modulate that parameter with an oscillator. The LFO can\n         also be synced to the transport to start/stop and change when the tempo changes.",
+		"params": [
+			{
+				"type": [
+					"Frequency",
+					"Object"
+				],
+				"optional": true,
+				"description": "The frequency of the oscillation. Typically, LFOs will be\n                              in the frequency range of 0.1 to 10 hertz.",
+				"name": "frequency"
+			},
+			{
+				"type": [
+					"number"
+				],
+				"optional": true,
+				"description": "The minimum output value of the LFO.",
+				"name": "min"
+			},
+			{
+				"type": [
+					"number"
+				],
+				"optional": true,
+				"description": "The maximum value of the LFO.",
+				"name": "max"
+			}
+		],
+		"examples": [
+			"var lfo = new Tone.LFO(\"4n\", 400, 4000);\nlfo.connect(filter.frequency);"
+		],
+		"extends": "Tone.AudioNode"
+	},
+	"Limiter": {
+		"description": "Tone.Limiter will limit the loudness of an incoming signal.\n        It is composed of a Tone.Compressor with a fast attack\n        and release. Limiters are commonly used to safeguard against\n        signal clipping. Unlike a compressor, limiters do not provide\n        smooth gain reduction and almost completely prevent\n        additional gain above the threshold.",
+		"params": [
+			{
+				"type": [
+					"number"
+				],
+				"description": "The theshold above which the limiting is applied.",
+				"name": "threshold"
+			}
+		],
+		"examples": [
+			"var limiter = new Tone.Limiter(-6);"
+		],
+		"extends": "Tone.AudioNode"
+	},
 	"LowpassCombFilter": {
 		"description": "Tone.Lowpass is a lowpass feedback comb filter. It is similar to\n        Tone.FeedbackCombFilter, but includes a lowpass filter.",
 		"params": [
@@ -621,6 +591,13 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
+	"Merge": {
+		"description": "Tone.Merge brings two signals into the left and right\n         channels of a single stereo channel.",
+		"examples": [
+			"var merge = new Tone.Merge().toMaster();\n//routing a sine tone in the left channel\n//and noise in the right channel\nvar osc = new Tone.Oscillator().connect(merge.left);\nvar noise = new Tone.Noise().connect(merge.right);\n//starting our oscillators\nnoise.start();\nosc.start();"
+		],
+		"extends": "Tone.AudioNode"
+	},
 	"Meter": {
 		"description": "Tone.Meter gets the [RMS](https://en.wikipedia.org/wiki/Root_mean_square)\n         of an input signal. It can also get the raw\n         value of the input signal.",
 		"params": [
@@ -637,28 +614,51 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
-	"Split": {
-		"description": "Tone.Split splits an incoming signal into left and right channels.",
-		"examples": [
-			"var split = new Tone.Split();\nstereoSignal.connect(split);"
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"Volume": {
-		"description": "Tone.Volume is a simple volume node, useful for creating a volume fader.",
+	"MidSideCompressor": {
+		"description": "Tone.MidSideCompressor applies two different compressors to the mid\n        and side signal components. See Tone.MidSideSplit.",
 		"params": [
 			{
 				"type": [
-					"Decibels"
+					"Object"
 				],
-				"optional": true,
-				"defaultvalue": 0,
-				"description": "the initial volume",
-				"name": "volume"
+				"description": "The options that are passed to the mid and side\n                         compressors.",
+				"name": "options"
 			}
 		],
-		"examples": [
-			"var vol = new Tone.Volume(-12);\ninstrument.chain(vol, Tone.Master);"
+		"extends": "Tone.AudioNode"
+	},
+	"MidSideMerge": {
+		"description": "Mid/Side processing separates the the 'mid' signal\n        (which comes out of both the left and the right channel)\n        and the 'side' (which only comes out of the the side channels).\n        MidSideMerge merges the mid and side signal after they've been seperated\n        by Tone.MidSideSplit.<br><br>\n        <code>\n        Left = (Mid+Side)/sqrt(2);   // obtain left signal from mid and side<br>\n        Right = (Mid-Side)/sqrt(2);   // obtain right signal from mid and side<br>\n        </code>",
+		"extends": "Tone.AudioNode"
+	},
+	"MidSideSplit": {
+		"description": "Mid/Side processing separates the the 'mid' signal\n        (which comes out of both the left and the right channel)\n        and the 'side' (which only comes out of the the side channels). <br><br>\n        <code>\n        Mid = (Left+Right)/sqrt(2);   // obtain mid-signal from left and right<br>\n        Side = (Left-Right)/sqrt(2);   // obtain side-signal from left and righ<br>\n        </code>",
+		"extends": "Tone.AudioNode"
+	},
+	"Mono": {
+		"description": "Tone.Mono coerces the incoming mono or stereo signal into a mono signal\n        where both left and right channels have the same value. This can be useful\n        for [stereo imaging](https://en.wikipedia.org/wiki/Stereo_imaging).",
+		"extends": "Tone.AudioNode"
+	},
+	"MultibandSplit": {
+		"description": "Split the incoming signal into three bands (low, mid, high)\n        with two crossover frequency controls.",
+		"params": [
+			{
+				"type": [
+					"Frequency",
+					"Object"
+				],
+				"optional": true,
+				"description": "the low/mid crossover frequency",
+				"name": "lowFrequency"
+			},
+			{
+				"type": [
+					"Frequency"
+				],
+				"optional": true,
+				"description": "the mid/high crossover frequency",
+				"name": "highFrequency"
+			}
 		],
 		"extends": "Tone.AudioNode"
 	},
@@ -749,92 +749,6 @@
 		],
 		"extends": "Tone"
 	},
-	"Buffers": {
-		"description": "A data structure for holding multiple buffers.",
-		"params": [
-			{
-				"type": [
-					"Object",
-					"Array"
-				],
-				"description": "An object literal or array\n                                     of urls to load.",
-				"name": "urls"
-			},
-			{
-				"type": [
-					"function"
-				],
-				"optional": true,
-				"description": "The callback to invoke when\n                                the buffers are loaded.",
-				"name": "callback"
-			}
-		],
-		"examples": [
-			"//load a whole bank of piano samples\nvar pianoSamples = new Tone.Buffers({\n\t\"C4\" : \"path/to/C4.mp3\"\n\t\"C#4\" : \"path/to/C#4.mp3\"\n\t\"D4\" : \"path/to/D4.mp3\"\n\t\"D#4\" : \"path/to/D#4.mp3\"\n\t...\n}, function(){\n\t//play one of the samples when they all load\n\tplayer.buffer = pianoSamples.get(\"C4\");\n\tplayer.start();\n});\n\t",
-			"//To pass in additional parameters in the second parameter\nvar buffers = new Tone.Buffers(urls, {\n\t\"onload\" : callback,\n\t\"baseUrl\" : \"../path/to/audio/\"\n})"
-		],
-		"extends": "Tone"
-	},
-	"Emitter": {
-		"description": "Tone.Emitter gives classes which extend it\n        the ability to listen for and emit events.\n        Inspiration and reference from Jerome Etienne's [MicroEvent](https://github.com/jeromeetienne/microevent.js).\n        MIT (c) 2011 Jerome Etienne.",
-		"extends": "Tone"
-	},
-	"IntervalTimeline": {
-		"description": "Similar to Tone.Timeline, but all events represent\n        intervals with both \"time\" and \"duration\" times. The\n        events are placed in a tree structure optimized\n        for querying an intersection point with the timeline\n        events. Internally uses an [Interval Tree](https://en.wikipedia.org/wiki/Interval_tree)\n        to represent the data.",
-		"extends": "Tone"
-	},
-	"Timeline": {
-		"description": "A Timeline class for scheduling and maintaining state\n        along a timeline. All events must have a \"time\" property.\n        Internally, events are stored in time order for fast\n        retrieval.",
-		"params": [
-			{
-				"type": [
-					"Positive"
-				],
-				"optional": true,
-				"defaultvalue": "Infinity",
-				"description": "The number of previous events that are retained.",
-				"name": "memory"
-			}
-		],
-		"extends": "Tone"
-	},
-	"TimelineState": {
-		"description": "A Timeline State. Provides the methods: <code>setStateAtTime(\"state\", time)</code>\n         and <code>getValueAtTime(time)</code>.",
-		"params": [
-			{
-				"type": [
-					"String"
-				],
-				"description": "The initial state of the TimelineState. \n                         Defaults to <code>undefined</code>",
-				"name": "initial"
-			}
-		],
-		"extends": "Tone.Timeline"
-	},
-	"TransportEvent": {
-		"description": "Tone.TransportEvent is an internal class used by (Tone.Transport)[Transport]\n        to schedule events. Do no invoke this class directly, it is\n        handled from within Tone.Transport.",
-		"params": [
-			{
-				"type": [
-					"Object"
-				],
-				"name": "options"
-			}
-		],
-		"extends": "Tone"
-	},
-	"TransportRepeatEvent": {
-		"description": "Tone.TransportRepeatEvent is an internal class used by Tone.Transport\n        to schedule repeat events. This class should not be instantiated directly.",
-		"params": [
-			{
-				"type": [
-					"Object"
-				],
-				"name": "options"
-			}
-		],
-		"extends": "Tone.TransportEvent"
-	},
 	"AudioNode": {
 		"description": "Tone.AudioNode is the base class for classes which process audio.\n        AudioNodes have inputs and outputs.",
 		"params": [
@@ -880,6 +794,32 @@
 		"examples": [
 			"var buffer = new Tone.Buffer(\"path/to/sound.mp3\", function(){\n\t//the buffer is now available.\n\tvar buff = buffer.get();\n});\n ",
 			"//can load provide fallback extension types if the first type is not supported.\nvar buffer = new Tone.Buffer(\"path/to/sound.[mp3|ogg|wav]\");"
+		],
+		"extends": "Tone"
+	},
+	"Buffers": {
+		"description": "A data structure for holding multiple buffers.",
+		"params": [
+			{
+				"type": [
+					"Object",
+					"Array"
+				],
+				"description": "An object literal or array\n                                     of urls to load.",
+				"name": "urls"
+			},
+			{
+				"type": [
+					"function"
+				],
+				"optional": true,
+				"description": "The callback to invoke when\n                                the buffers are loaded.",
+				"name": "callback"
+			}
+		],
+		"examples": [
+			"//load a whole bank of piano samples\nvar pianoSamples = new Tone.Buffers({\n\t\"C4\" : \"path/to/C4.mp3\"\n\t\"C#4\" : \"path/to/C#4.mp3\"\n\t\"D4\" : \"path/to/D4.mp3\"\n\t\"D#4\" : \"path/to/D#4.mp3\"\n\t...\n}, function(){\n\t//play one of the samples when they all load\n\tplayer.buffer = pianoSamples.get(\"C4\");\n\tplayer.start();\n});\n\t",
+			"//To pass in additional parameters in the second parameter\nvar buffers = new Tone.Buffers(urls, {\n\t\"onload\" : callback,\n\t\"baseUrl\" : \"../path/to/audio/\"\n})"
 		],
 		"extends": "Tone"
 	},
@@ -950,6 +890,10 @@
 		"singleton": true,
 		"extends": "Tone"
 	},
+	"Emitter": {
+		"description": "Tone.Emitter gives classes which extend it\n        the ability to listen for and emit events.\n        Inspiration and reference from Jerome Etienne's [MicroEvent](https://github.com/jeromeetienne/microevent.js).\n        MIT (c) 2011 Jerome Etienne.",
+		"extends": "Tone"
+	},
 	"Gain": {
 		"description": "A thin wrapper around the Native Web Audio GainNode.\n        The GainNode is a basic building block of the Web Audio\n        API and is useful for routing audio and adjusting gains.",
 		"params": [
@@ -971,6 +915,10 @@
 			}
 		],
 		"extends": "Tone.AudioNode"
+	},
+	"IntervalTimeline": {
+		"description": "Similar to Tone.Timeline, but all events represent\n        intervals with both \"time\" and \"duration\" times. The\n        events are placed in a tree structure optimized\n        for querying an intersection point with the timeline\n        events. Internally uses an [Interval Tree](https://en.wikipedia.org/wiki/Interval_tree)\n        to represent the data.",
+		"extends": "Tone"
 	},
 	"Listener": {
 		"description": "Both Tone.Panner3D and Tone.Listener have a position in 3D space\n         using a right-handed cartesian coordinate system.\n         The units used in the coordinate system are not defined;\n         these coordinates are independent/invariant of any particular\n         units such as meters or feet. Tone.Panner3D objects have an forward\n         vector representing the direction the sound is projecting. Additionally,\n         they have a sound cone representing how directional the sound is.\n         For example, the sound could be omnidirectional, in which case it would\n         be heard anywhere regardless of its forward, or it can be more directional\n         and heard only if it is facing the listener. Tone.Listener objects\n         (representing a person's ears) have an forward and up vector\n         representing in which direction the person is facing. Because both the\n         source stream and the listener can be moving, they both have a velocity\n         vector representing both the speed and direction of movement. Taken together,\n         these two velocities can be used to generate a doppler shift effect which changes the pitch.\n         <br><br>\n         Note: the position of the Listener will have no effect on nodes not connected to a Tone.Panner3D",
@@ -1039,6 +987,34 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
+	"Timeline": {
+		"description": "A Timeline class for scheduling and maintaining state\n        along a timeline. All events must have a \"time\" property.\n        Internally, events are stored in time order for fast\n        retrieval.",
+		"params": [
+			{
+				"type": [
+					"Positive"
+				],
+				"optional": true,
+				"defaultvalue": "Infinity",
+				"description": "The number of previous events that are retained.",
+				"name": "memory"
+			}
+		],
+		"extends": "Tone"
+	},
+	"TimelineState": {
+		"description": "A Timeline State. Provides the methods: <code>setStateAtTime(\"state\", time)</code>\n         and <code>getValueAtTime(time)</code>.",
+		"params": [
+			{
+				"type": [
+					"String"
+				],
+				"description": "The initial state of the TimelineState. \n                         Defaults to <code>undefined</code>",
+				"name": "initial"
+			}
+		],
+		"extends": "Tone.Timeline"
+	},
 	"Tone": {
 		"description": "Tone is the base class of all other classes.",
 		"params": []
@@ -1051,6 +1027,64 @@
 		],
 		"singleton": true,
 		"extends": "Tone.Emitter"
+	},
+	"TransportEvent": {
+		"description": "Tone.TransportEvent is an internal class used by (Tone.Transport)[Transport]\n        to schedule events. Do no invoke this class directly, it is\n        handled from within Tone.Transport.",
+		"params": [
+			{
+				"type": [
+					"Object"
+				],
+				"name": "options"
+			}
+		],
+		"extends": "Tone"
+	},
+	"TransportRepeatEvent": {
+		"description": "Tone.TransportRepeatEvent is an internal class used by Tone.Transport\n        to schedule repeat events. This class should not be instantiated directly.",
+		"params": [
+			{
+				"type": [
+					"Object"
+				],
+				"name": "options"
+			}
+		],
+		"extends": "Tone.TransportEvent"
+	},
+	"AutoFilter": {
+		"description": "Tone.AutoFilter is a Tone.Filter with a Tone.LFO connected to the filter cutoff frequency.\n        Setting the LFO rate and depth allows for control over the filter modulation rate \n        and depth.",
+		"params": [
+			{
+				"type": [
+					"Time",
+					"Object"
+				],
+				"optional": true,
+				"description": "The rate of the LFO.",
+				"name": "frequency"
+			},
+			{
+				"type": [
+					"Frequency"
+				],
+				"optional": true,
+				"description": "The lower value of the LFOs oscillation",
+				"name": "baseFrequency"
+			},
+			{
+				"type": [
+					"Frequency"
+				],
+				"optional": true,
+				"description": "The number of octaves above the baseFrequency",
+				"name": "octaves"
+			}
+		],
+		"examples": [
+			"//create an autofilter and start it's LFO\nvar autoFilter = new Tone.AutoFilter(\"4n\").toMaster().start();\n//route an oscillator through the filter and start it\nvar oscillator = new Tone.Oscillator().connect(autoFilter).start();"
+		],
+		"extends": "Tone.Effect"
 	},
 	"AutoPanner": {
 		"description": "Tone.AutoPanner is a Tone.Panner with an LFO connected to the pan amount. \n        More on using autopanners [here](https://www.ableton.com/en/blog/autopan-chopper-effect-and-more-liveschool/).",
@@ -1171,6 +1205,33 @@
 			"var chorus = new Tone.Chorus(4, 2.5, 0.5);\nvar synth = new Tone.PolySynth(4, Tone.MonoSynth).connect(chorus);\nsynth.triggerAttackRelease([\"C3\",\"E3\",\"G3\"], \"8n\");"
 		],
 		"extends": "Tone.StereoEffect"
+	},
+	"Convolver": {
+		"description": "Tone.Convolver is a wrapper around the Native Web Audio\n         [ConvolverNode](http://webaudio.github.io/web-audio-api/#the-convolvernode-interface).\n         Convolution is useful for reverb and filter emulation. Read more about convolution reverb on\n         [Wikipedia](https://en.wikipedia.org/wiki/Convolution_reverb).",
+		"params": [
+			{
+				"type": [
+					"string",
+					"Tone.Buffer",
+					"Object"
+				],
+				"optional": true,
+				"description": "The URL of the impulse response or the Tone.Buffer\n                                          contianing the impulse response.",
+				"name": "url"
+			},
+			{
+				"type": [
+					"function"
+				],
+				"optional": true,
+				"description": "The callback to invoke when the url is loaded.",
+				"name": "onload"
+			}
+		],
+		"examples": [
+			"//initializing the convolver with an impulse response\nvar convolver = new Tone.Convolver(\"./path/to/ir.wav\").toMaster();"
+		],
+		"extends": "Tone.Effect"
 	},
 	"Distortion": {
 		"description": "Tone.Distortion is a simple distortion effect using Tone.WaveShaper.\n        Algorithm from [a stackoverflow answer](http://stackoverflow.com/a/22313408).",
@@ -1454,67 +1515,6 @@
 		],
 		"extends": "Tone.Effect"
 	},
-	"AutoFilter": {
-		"description": "Tone.AutoFilter is a Tone.Filter with a Tone.LFO connected to the filter cutoff frequency.\n        Setting the LFO rate and depth allows for control over the filter modulation rate \n        and depth.",
-		"params": [
-			{
-				"type": [
-					"Time",
-					"Object"
-				],
-				"optional": true,
-				"description": "The rate of the LFO.",
-				"name": "frequency"
-			},
-			{
-				"type": [
-					"Frequency"
-				],
-				"optional": true,
-				"description": "The lower value of the LFOs oscillation",
-				"name": "baseFrequency"
-			},
-			{
-				"type": [
-					"Frequency"
-				],
-				"optional": true,
-				"description": "The number of octaves above the baseFrequency",
-				"name": "octaves"
-			}
-		],
-		"examples": [
-			"//create an autofilter and start it's LFO\nvar autoFilter = new Tone.AutoFilter(\"4n\").toMaster().start();\n//route an oscillator through the filter and start it\nvar oscillator = new Tone.Oscillator().connect(autoFilter).start();"
-		],
-		"extends": "Tone.Effect"
-	},
-	"Convolver": {
-		"description": "Tone.Convolver is a wrapper around the Native Web Audio\n         [ConvolverNode](http://webaudio.github.io/web-audio-api/#the-convolvernode-interface).\n         Convolution is useful for reverb and filter emulation. Read more about convolution reverb on\n         [Wikipedia](https://en.wikipedia.org/wiki/Convolution_reverb).",
-		"params": [
-			{
-				"type": [
-					"string",
-					"Tone.Buffer",
-					"Object"
-				],
-				"optional": true,
-				"description": "The URL of the impulse response or the Tone.Buffer\n                                          contianing the impulse response.",
-				"name": "url"
-			},
-			{
-				"type": [
-					"function"
-				],
-				"optional": true,
-				"description": "The callback to invoke when the url is loaded.",
-				"name": "onload"
-			}
-		],
-		"examples": [
-			"//initializing the convolver with an impulse response\nvar convolver = new Tone.Convolver(\"./path/to/ir.wav\").toMaster();"
-		],
-		"extends": "Tone.Effect"
-	},
 	"Event": {
 		"description": "Tone.Event abstracts away Tone.Transport.schedule and provides a schedulable\n         callback for a single or repeatable events along the timeline.",
 		"params": [
@@ -1537,6 +1537,53 @@
 			"var chord = new Tone.Event(function(time, chord){\n\t//the chord as well as the exact time of the event\n\t//are passed in as arguments to the callback function\n}, [\"D4\", \"E4\", \"F4\"]);\n//start the chord at the beginning of the transport timeline\nchord.start();\n//loop it every measure for 8 measures\nchord.loop = 8;\nchord.loopEnd = \"1m\";"
 		],
 		"extends": "Tone"
+	},
+	"Loop": {
+		"description": "Tone.Loop creates a looped callback at the \n        specified interval. The callback can be \n        started, stopped and scheduled along\n        the Transport's timeline.",
+		"params": [
+			{
+				"type": [
+					"function"
+				],
+				"description": "The callback to invoke with the event.",
+				"name": "callback"
+			},
+			{
+				"type": [
+					"Time"
+				],
+				"description": "The time between successive callback calls.",
+				"name": "interval"
+			}
+		],
+		"examples": [
+			"var loop = new Tone.Loop(function(time){\n\t//triggered every eighth note. \n\tconsole.log(time);\n}, \"8n\").start(0);\nTone.Transport.start();\n "
+		],
+		"extends": "Tone"
+	},
+	"Part": {
+		"description": "Tone.Part is a collection Tone.Events which can be\n        started/stopped and looped as a single unit.",
+		"params": [
+			{
+				"type": [
+					"function"
+				],
+				"description": "The callback to invoke on each event",
+				"name": "callback"
+			},
+			{
+				"type": [
+					"Array"
+				],
+				"description": "the array of events",
+				"name": "events"
+			}
+		],
+		"examples": [
+			"var part = new Tone.Part(function(time, note){\n\t//the notes given as the second element in the array\n\t//will be passed in as the second argument\n\tsynth.triggerAttackRelease(note, \"8n\", time);\n}, [[0, \"C2\"], [\"0:2\", \"C3\"], [\"0:3:2\", \"G2\"]]);\n ",
+			"//use an array of objects as long as the object has a \"time\" attribute\nvar part = new Tone.Part(function(time, value){\n\t//the value is an object which contains both the note and the velocity\n\tsynth.triggerAttackRelease(value.note, \"8n\", time, value.velocity);\n}, [{\"time\" : 0, \"note\" : \"C3\", \"velocity\": 0.9},\n\t   {\"time\" : \"0:2\", \"note\" : \"C4\", \"velocity\": 0.5}\n]).start(0);"
+		],
+		"extends": "Tone.Event"
 	},
 	"Pattern": {
 		"description": "Tone.Pattern arpeggiates between the given notes\n        in a number of patterns. See Tone.CtrlPattern for\n        a full list of patterns.",
@@ -1591,53 +1638,6 @@
 			"var seq = new Tone.Sequence(function(time, note){\n\tconsole.log(note);\n//subdivisions are given as subarrays\n}, [\"C4\", [\"E4\", \"D4\", \"E4\"], \"G4\", [\"A4\", \"G4\"]]);"
 		],
 		"extends": "Tone.Part"
-	},
-	"Loop": {
-		"description": "Tone.Loop creates a looped callback at the \n        specified interval. The callback can be \n        started, stopped and scheduled along\n        the Transport's timeline.",
-		"params": [
-			{
-				"type": [
-					"function"
-				],
-				"description": "The callback to invoke with the event.",
-				"name": "callback"
-			},
-			{
-				"type": [
-					"Time"
-				],
-				"description": "The time between successive callback calls.",
-				"name": "interval"
-			}
-		],
-		"examples": [
-			"var loop = new Tone.Loop(function(time){\n\t//triggered every eighth note. \n\tconsole.log(time);\n}, \"8n\").start(0);\nTone.Transport.start();\n "
-		],
-		"extends": "Tone"
-	},
-	"Part": {
-		"description": "Tone.Part is a collection Tone.Events which can be\n        started/stopped and looped as a single unit.",
-		"params": [
-			{
-				"type": [
-					"function"
-				],
-				"description": "The callback to invoke on each event",
-				"name": "callback"
-			},
-			{
-				"type": [
-					"Array"
-				],
-				"description": "the array of events",
-				"name": "events"
-			}
-		],
-		"examples": [
-			"var part = new Tone.Part(function(time, note){\n\t//the notes given as the second element in the array\n\t//will be passed in as the second argument\n\tsynth.triggerAttackRelease(note, \"8n\", time);\n}, [[0, \"C2\"], [\"0:2\", \"C3\"], [\"0:3:2\", \"G2\"]]);\n ",
-			"//use an array of objects as long as the object has a \"time\" attribute\nvar part = new Tone.Part(function(time, value){\n\t//the value is an object which contains both the note and the velocity\n\tsynth.triggerAttackRelease(value.note, \"8n\", time, value.velocity);\n}, [{\"time\" : 0, \"note\" : \"C3\", \"velocity\": 0.9},\n\t   {\"time\" : \"0:2\", \"note\" : \"C4\", \"velocity\": 0.5}\n]).start(0);"
-		],
-		"extends": "Tone.Event"
 	},
 	"AMSynth": {
 		"description": "AMSynth uses the output of one Tone.Synth to modulate the\n         amplitude of another Tone.Synth. The harmonicity (the ratio between\n         the two signals) affects the timbre of the output signal greatly.\n         Read more about Amplitude Modulation Synthesis on\n         [SoundOnSound](https://web.archive.org/web/20160404103653/http://www.soundonsound.com:80/sos/mar00/articles/synthsecrets.htm).\n         <img src=\"https://docs.google.com/drawings/d/1TQu8Ed4iFr1YTLKpB3U1_hur-UwBrh5gdBXc8BxfGKw/pub?w=1009&h=457\">",
@@ -1694,6 +1694,23 @@
 		"description": "Base-class for all instruments",
 		"extends": "Tone.AudioNode"
 	},
+	"MembraneSynth": {
+		"description": "Tone.MembraneSynth makes kick and tom sounds using a single oscillator\n         with an amplitude envelope and frequency ramp. A Tone.OmniOscillator\n         is routed through a Tone.AmplitudeEnvelope to the output. The drum\n         quality of the sound comes from the frequency envelope applied\n         during Tone.MembraneSynth.triggerAttack(note). The frequency envelope\n         starts at <code>note * .octaves</code> and ramps to <code>note</code>\n         over the duration of <code>.pitchDecay</code>.",
+		"params": [
+			{
+				"type": [
+					"Object"
+				],
+				"optional": true,
+				"description": "the options available for the synth\n                         see defaults below",
+				"name": "options"
+			}
+		],
+		"examples": [
+			"var synth = new Tone.MembraneSynth().toMaster();\nsynth.triggerAttackRelease(\"C2\", \"8n\");"
+		],
+		"extends": "Tone.Instrument"
+	},
 	"MetalSynth": {
 		"description": "A highly inharmonic and spectrally complex source with a highpass filter\n         and amplitude envelope which is good for making metalophone sounds. Based\n         on CymbalSynth by [@polyrhythmatic](https://github.com/polyrhythmatic).\n         Inspiration from [Sound on Sound](https://web.archive.org/web/20160610143924/https://www.soundonsound.com/sos/jul02/articles/synthsecrets0702.asp).",
 		"params": [
@@ -1724,40 +1741,6 @@
 			"var synth = new Tone.MonoSynth({\n\t\"oscillator\" : {\n\t\t\"type\" : \"square\"\n },\n \"envelope\" : {\n \t\"attack\" : 0.1\n }\n}).toMaster();\nsynth.triggerAttackRelease(\"C4\", \"8n\");"
 		],
 		"extends": "Tone.Monophonic"
-	},
-	"Synth": {
-		"description": "Tone.Synth is composed simply of a Tone.OmniOscillator\n         routed through a Tone.AmplitudeEnvelope.\n         <img src=\"https://docs.google.com/drawings/d/1-1_0YW2Z1J2EPI36P8fNCMcZG7N1w1GZluPs4og4evo/pub?w=1163&h=231\">",
-		"params": [
-			{
-				"type": [
-					"Object"
-				],
-				"optional": true,
-				"description": "the options available for the synth\n                         see defaults below",
-				"name": "options"
-			}
-		],
-		"examples": [
-			"var synth = new Tone.Synth().toMaster();\nsynth.triggerAttackRelease(\"C4\", \"8n\");"
-		],
-		"extends": "Tone.Monophonic"
-	},
-	"MembraneSynth": {
-		"description": "Tone.MembraneSynth makes kick and tom sounds using a single oscillator\n         with an amplitude envelope and frequency ramp. A Tone.OmniOscillator\n         is routed through a Tone.AmplitudeEnvelope to the output. The drum\n         quality of the sound comes from the frequency envelope applied\n         during Tone.MembraneSynth.triggerAttack(note). The frequency envelope\n         starts at <code>note * .octaves</code> and ramps to <code>note</code>\n         over the duration of <code>.pitchDecay</code>.",
-		"params": [
-			{
-				"type": [
-					"Object"
-				],
-				"optional": true,
-				"description": "the options available for the synth\n                         see defaults below",
-				"name": "options"
-			}
-		],
-		"examples": [
-			"var synth = new Tone.MembraneSynth().toMaster();\nsynth.triggerAttackRelease(\"C2\", \"8n\");"
-		],
-		"extends": "Tone.Instrument"
 	},
 	"Monophonic": {
 		"description": "This is an abstract base class for other monophonic instruments to \n         extend. IMPORTANT: It does not make any sound on its own and\n         shouldn't be directly instantiated.",
@@ -1857,12 +1840,47 @@
 		],
 		"extends": "Tone.Instrument"
 	},
+	"Synth": {
+		"description": "Tone.Synth is composed simply of a Tone.OmniOscillator\n         routed through a Tone.AmplitudeEnvelope.\n         <img src=\"https://docs.google.com/drawings/d/1-1_0YW2Z1J2EPI36P8fNCMcZG7N1w1GZluPs4og4evo/pub?w=1163&h=231\">",
+		"params": [
+			{
+				"type": [
+					"Object"
+				],
+				"optional": true,
+				"description": "the options available for the synth\n                         see defaults below",
+				"name": "options"
+			}
+		],
+		"examples": [
+			"var synth = new Tone.Synth().toMaster();\nsynth.triggerAttackRelease(\"C4\", \"8n\");"
+		],
+		"extends": "Tone.Monophonic"
+	},
 	"Abs": {
 		"description": "Return the absolute value of an incoming signal.",
 		"examples": [
 			"var signal = new Tone.Signal(-1);\nvar abs = new Tone.Abs();\nsignal.connect(abs);\n//the output of abs is 1."
 		],
 		"extends": "Tone.SignalBase"
+	},
+	"Add": {
+		"description": "Add a signal and a number or two signals. When no value is\n        passed into the constructor, Tone.Add will sum <code>input[0]</code>\n        and <code>input[1]</code>. If a value is passed into the constructor, \n        the it will be added to the input.",
+		"params": [
+			{
+				"type": [
+					"number"
+				],
+				"optional": true,
+				"description": "If no value is provided, Tone.Add will sum the first\n                        and second inputs.",
+				"name": "value"
+			}
+		],
+		"examples": [
+			"var signal = new Tone.Signal(2);\nvar add = new Tone.Add(2);\nsignal.connect(add);\n//the output of add equals 4\n ",
+			"//if constructed with no arguments\n//it will add the first and second inputs\nvar add = new Tone.Add();\nvar sig0 = new Tone.Signal(3).connect(add, 0, 0);\nvar sig1 = new Tone.Signal(4).connect(add, 0, 1);\n//the output of add equals 7. "
+		],
+		"extends": "Tone.Signal"
 	},
 	"AudioToGain": {
 		"description": "AudioToGain converts an input in AudioRange [-1,1] to NormalRange [0,1]. \n        See Tone.GainToAudio.",
@@ -1884,6 +1902,24 @@
 			"var g2a = new Tone.GainToAudio();"
 		],
 		"extends": "Tone.SignalBase"
+	},
+	"GreaterThan": {
+		"description": "Output 1 if the signal is greater than the value, otherwise outputs 0.\n         can compare two signals or a signal and a number.",
+		"params": [
+			{
+				"type": [
+					"number"
+				],
+				"optional": true,
+				"defaultvalue": 0,
+				"description": "the value to compare to the incoming signal",
+				"name": "value"
+			}
+		],
+		"examples": [
+			"var gt = new Tone.GreaterThan(2);\nvar sig = new Tone.Signal(4).connect(gt);\n//output of gt is equal 1."
+		],
+		"extends": "Tone.Signal"
 	},
 	"GreaterThanZero": {
 		"description": "GreaterThanZero outputs 1 when the input is strictly greater than zero",
@@ -1907,6 +1943,24 @@
 			"var mod = new Tone.Modulo(0.2)\nvar sig = new Tone.Signal(0.5).connect(mod);\n//mod outputs 0.1"
 		],
 		"extends": "Tone.SignalBase"
+	},
+	"Multiply": {
+		"description": "Multiply two incoming signals. Or, if a number is given in the constructor,\n         multiplies the incoming signal by that value.",
+		"params": [
+			{
+				"type": [
+					"number"
+				],
+				"optional": true,
+				"description": "Constant value to multiple. If no value is provided,\n                        it will return the product of the first and second inputs",
+				"name": "value"
+			}
+		],
+		"examples": [
+			"var mult = new Tone.Multiply();\nvar sigA = new Tone.Signal(3);\nvar sigB = new Tone.Signal(4);\nsigA.connect(mult, 0, 0);\nsigB.connect(mult, 0, 1);\n//output of mult is 12.\n ",
+			"var mult = new Tone.Multiply(10);\nvar sig = new Tone.Signal(2).connect(mult);\n//the output of mult is 20."
+		],
+		"extends": "Tone.Signal"
 	},
 	"Negate": {
 		"description": "Negate the incoming signal. i.e. an input signal of 10 will output -10",
@@ -2017,109 +2071,6 @@
 		],
 		"extends": "Tone.SignalBase"
 	},
-	"TickSignal": {
-		"description": "Tone.TickSignal extends Tone.Signal, but adds the capability\n       to calculate the number of elapsed ticks. exponential and target curves\n       are approximated with multiple linear ramps.\n\n       Thank you Bruno Dias, H. Sofia Pinto, and David M. Matos, for your [WAC paper](https://smartech.gatech.edu/bitstream/handle/1853/54588/WAC2016-49.pdf)\n       describing integrating timing functions for tempo calculations.",
-		"params": [
-			{
-				"type": [
-					"Number"
-				],
-				"description": "The initial value of the signal",
-				"name": "value"
-			}
-		],
-		"extends": "Tone.Signal"
-	},
-	"TransportTimelineSignal": {
-		"description": "Tone.TransportTimelineSignal extends Tone.Signal, but adds the ability to synchronize the signal to the signal to the Tone.Transport",
-		"extends": "Tone.Signal"
-	},
-	"WaveShaper": {
-		"description": "Wraps the native Web Audio API\n        [WaveShaperNode](http://webaudio.github.io/web-audio-api/#the-waveshapernode-interface).",
-		"params": [
-			{
-				"type": [
-					"function",
-					"Array",
-					"Number"
-				],
-				"description": "The function used to define the values.\n                                   The mapping function should take two arguments:\n                                   the first is the value at the current position\n                                   and the second is the array position.\n                                   If the argument is an array, that array will be\n                                   set as the wave shaping function. The input\n                                   signal is an AudioRange [-1, 1] value and the output\n                                   signal can take on any numerical values.",
-				"name": "mapping"
-			},
-			{
-				"type": [
-					"Number"
-				],
-				"optional": true,
-				"defaultvalue": 1024,
-				"description": "The length of the WaveShaperNode buffer.",
-				"name": "bufferLen"
-			}
-		],
-		"examples": [
-			"var timesTwo = new Tone.WaveShaper(function(val){\n\treturn val * 2;\n}, 2048);\n ",
-			"//a waveshaper can also be constructed with an array of values\nvar invert = new Tone.WaveShaper([1, -1]);"
-		],
-		"extends": "Tone.SignalBase"
-	},
-	"Zero": {
-		"description": "Tone.Zero outputs 0's at audio-rate. The reason this has to be\n        it's own class is that many browsers optimize out Tone.Signal\n        with a value of 0 and will not process nodes further down the graph.",
-		"extends": "Tone.SignalBase"
-	},
-	"Add": {
-		"description": "Add a signal and a number or two signals. When no value is\n        passed into the constructor, Tone.Add will sum <code>input[0]</code>\n        and <code>input[1]</code>. If a value is passed into the constructor, \n        the it will be added to the input.",
-		"params": [
-			{
-				"type": [
-					"number"
-				],
-				"optional": true,
-				"description": "If no value is provided, Tone.Add will sum the first\n                        and second inputs.",
-				"name": "value"
-			}
-		],
-		"examples": [
-			"var signal = new Tone.Signal(2);\nvar add = new Tone.Add(2);\nsignal.connect(add);\n//the output of add equals 4\n ",
-			"//if constructed with no arguments\n//it will add the first and second inputs\nvar add = new Tone.Add();\nvar sig0 = new Tone.Signal(3).connect(add, 0, 0);\nvar sig1 = new Tone.Signal(4).connect(add, 0, 1);\n//the output of add equals 7. "
-		],
-		"extends": "Tone.Signal"
-	},
-	"GreaterThan": {
-		"description": "Output 1 if the signal is greater than the value, otherwise outputs 0.\n         can compare two signals or a signal and a number.",
-		"params": [
-			{
-				"type": [
-					"number"
-				],
-				"optional": true,
-				"defaultvalue": 0,
-				"description": "the value to compare to the incoming signal",
-				"name": "value"
-			}
-		],
-		"examples": [
-			"var gt = new Tone.GreaterThan(2);\nvar sig = new Tone.Signal(4).connect(gt);\n//output of gt is equal 1."
-		],
-		"extends": "Tone.Signal"
-	},
-	"Multiply": {
-		"description": "Multiply two incoming signals. Or, if a number is given in the constructor,\n         multiplies the incoming signal by that value.",
-		"params": [
-			{
-				"type": [
-					"number"
-				],
-				"optional": true,
-				"description": "Constant value to multiple. If no value is provided,\n                        it will return the product of the first and second inputs",
-				"name": "value"
-			}
-		],
-		"examples": [
-			"var mult = new Tone.Multiply();\nvar sigA = new Tone.Signal(3);\nvar sigB = new Tone.Signal(4);\nsigA.connect(mult, 0, 0);\nsigB.connect(mult, 0, 1);\n//output of mult is 12.\n ",
-			"var mult = new Tone.Multiply(10);\nvar sig = new Tone.Signal(2).connect(mult);\n//the output of mult is 20."
-		],
-		"extends": "Tone.Signal"
-	},
 	"Signal": {
 		"description": "A signal is an audio-rate value. Tone.Signal is a core component of the library.\n         Unlike a number, Signals can be scheduled with sample-level accuracy. Tone.Signal\n         has all of the methods available to native Web Audio\n         [AudioParam](http://webaudio.github.io/web-audio-api/#the-audioparam-interface)\n         as well as additional conveniences. Read more about working with signals\n         [here](https://github.com/Tonejs/Tone.js/wiki/Signals).",
 		"params": [
@@ -2169,6 +2120,55 @@
 		],
 		"extends": "Tone.Signal"
 	},
+	"TickSignal": {
+		"description": "Tone.TickSignal extends Tone.Signal, but adds the capability\n       to calculate the number of elapsed ticks. exponential and target curves\n       are approximated with multiple linear ramps.\n\n       Thank you Bruno Dias, H. Sofia Pinto, and David M. Matos, for your [WAC paper](https://smartech.gatech.edu/bitstream/handle/1853/54588/WAC2016-49.pdf)\n       describing integrating timing functions for tempo calculations.",
+		"params": [
+			{
+				"type": [
+					"Number"
+				],
+				"description": "The initial value of the signal",
+				"name": "value"
+			}
+		],
+		"extends": "Tone.Signal"
+	},
+	"TransportTimelineSignal": {
+		"description": "Tone.TransportTimelineSignal extends Tone.Signal, but adds the ability to synchronize the signal to the signal to the Tone.Transport",
+		"extends": "Tone.Signal"
+	},
+	"WaveShaper": {
+		"description": "Wraps the native Web Audio API\n        [WaveShaperNode](http://webaudio.github.io/web-audio-api/#the-waveshapernode-interface).",
+		"params": [
+			{
+				"type": [
+					"function",
+					"Array",
+					"Number"
+				],
+				"description": "The function used to define the values.\n                                   The mapping function should take two arguments:\n                                   the first is the value at the current position\n                                   and the second is the array position.\n                                   If the argument is an array, that array will be\n                                   set as the wave shaping function. The input\n                                   signal is an AudioRange [-1, 1] value and the output\n                                   signal can take on any numerical values.",
+				"name": "mapping"
+			},
+			{
+				"type": [
+					"Number"
+				],
+				"optional": true,
+				"defaultvalue": 1024,
+				"description": "The length of the WaveShaperNode buffer.",
+				"name": "bufferLen"
+			}
+		],
+		"examples": [
+			"var timesTwo = new Tone.WaveShaper(function(val){\n\treturn val * 2;\n}, 2048);\n ",
+			"//a waveshaper can also be constructed with an array of values\nvar invert = new Tone.WaveShaper([1, -1]);"
+		],
+		"extends": "Tone.SignalBase"
+	},
+	"Zero": {
+		"description": "Tone.Zero outputs 0's at audio-rate. The reason this has to be\n        it's own class is that many browsers optimize out Tone.Signal\n        with a value of 0 and will not process nodes further down the graph.",
+		"extends": "Tone.SignalBase"
+	},
 	"AMOscillator": {
 		"description": "Tone.AMOscillator",
 		"params": [
@@ -2199,6 +2199,27 @@
 		],
 		"extends": "Tone.Oscillator"
 	},
+	"BufferSource": {
+		"description": "Wrapper around the native BufferSourceNode.",
+		"params": [
+			{
+				"type": [
+					"AudioBuffer",
+					"Tone.Buffer"
+				],
+				"description": "The buffer to play",
+				"name": "buffer"
+			},
+			{
+				"type": [
+					"function"
+				],
+				"description": "The callback to invoke when the\n                              buffer is done playing.",
+				"name": "onload"
+			}
+		],
+		"extends": "Tone.AudioNode"
+	},
 	"FMOscillator": {
 		"description": "Tone.FMOscillator",
 		"params": [
@@ -2228,80 +2249,6 @@
 			"//a sine oscillator frequency-modulated by a square wave\nvar fmOsc = new Tone.FMOscillator(\"Ab3\", \"sine\", \"square\").toMaster().start();"
 		],
 		"extends": "Tone.Source"
-	},
-	"OmniOscillator": {
-		"description": "Tone.OmniOscillator aggregates Tone.Oscillator, Tone.PulseOscillator,\n        Tone.PWMOscillator, Tone.FMOscillator, Tone.AMOscillator, and Tone.FatOscillator\n        into one class. The oscillator class can be changed by setting the `type`.\n        `omniOsc.type = \"pwm\"` will set it to the Tone.PWMOscillator. Prefixing\n        any of the basic types (\"sine\", \"square4\", etc.) with \"fm\", \"am\", or \"fat\"\n        will use the FMOscillator, AMOscillator or FatOscillator respectively.\n        For example: `omniOsc.type = \"fatsawtooth\"` will create set the oscillator\n        to a FatOscillator of type \"sawtooth\".",
-		"params": [
-			{
-				"type": [
-					"Frequency"
-				],
-				"description": "The initial frequency of the oscillator.",
-				"name": "frequency"
-			},
-			{
-				"type": [
-					"String"
-				],
-				"description": "The type of the oscillator.",
-				"name": "type"
-			}
-		],
-		"examples": [
-			"var omniOsc = new Tone.OmniOscillator(\"C#4\", \"pwm\");"
-		],
-		"extends": "Tone.Source"
-	},
-	"PWMOscillator": {
-		"description": "Tone.PWMOscillator modulates the width of a Tone.PulseOscillator\n        at the modulationFrequency. This has the effect of continuously\n        changing the timbre of the oscillator by altering the harmonics\n        generated.",
-		"params": [
-			{
-				"type": [
-					"Frequency"
-				],
-				"description": "The starting frequency of the oscillator.",
-				"name": "frequency"
-			},
-			{
-				"type": [
-					"Frequency"
-				],
-				"description": "The modulation frequency of the width of the pulse.",
-				"name": "modulationFrequency"
-			}
-		],
-		"examples": [
-			"var pwm = new Tone.PWMOscillator(\"Ab3\", 0.3).toMaster().start();"
-		],
-		"extends": "Tone.Source"
-	},
-	"Source": {
-		"description": "Base class for sources. Sources have start/stop methods\n         and the ability to be synced to the\n         start/stop of Tone.Transport.",
-		"examples": [
-			"//Multiple state change events can be chained together,\n//but must be set in the correct order and with ascending times\n\n// OK\nstate.start().stop(\"+0.2\");\n// AND\nstate.start().stop(\"+0.2\").start(\"+0.4\").stop(\"+0.7\")\n\n// BAD\nstate.stop(\"+0.2\").start();\n// OR\nstate.start(\"+0.3\").stop(\"+0.2\");"
-		],
-		"extends": "Tone.AudioNode"
-	},
-	"BufferSource": {
-		"description": "Wrapper around the native BufferSourceNode.",
-		"params": [
-			{
-				"type": [
-					"AudioBuffer",
-					"Tone.Buffer"
-				],
-				"description": "The buffer to play",
-				"name": "buffer"
-			},
-			{
-				"type": [
-					"function"
-				],
-				"description": "The callback to invoke when the\n                              buffer is done playing.",
-				"name": "onload"
-			}
-		],
-		"extends": "Tone.AudioNode"
 	},
 	"FatOscillator": {
 		"description": "Tone.FatOscillator",
@@ -2371,6 +2318,29 @@
 		],
 		"extends": "Tone.Source"
 	},
+	"OmniOscillator": {
+		"description": "Tone.OmniOscillator aggregates Tone.Oscillator, Tone.PulseOscillator,\n        Tone.PWMOscillator, Tone.FMOscillator, Tone.AMOscillator, and Tone.FatOscillator\n        into one class. The oscillator class can be changed by setting the `type`.\n        `omniOsc.type = \"pwm\"` will set it to the Tone.PWMOscillator. Prefixing\n        any of the basic types (\"sine\", \"square4\", etc.) with \"fm\", \"am\", or \"fat\"\n        will use the FMOscillator, AMOscillator or FatOscillator respectively.\n        For example: `omniOsc.type = \"fatsawtooth\"` will create set the oscillator\n        to a FatOscillator of type \"sawtooth\".",
+		"params": [
+			{
+				"type": [
+					"Frequency"
+				],
+				"description": "The initial frequency of the oscillator.",
+				"name": "frequency"
+			},
+			{
+				"type": [
+					"String"
+				],
+				"description": "The type of the oscillator.",
+				"name": "type"
+			}
+		],
+		"examples": [
+			"var omniOsc = new Tone.OmniOscillator(\"C#4\", \"pwm\");"
+		],
+		"extends": "Tone.Source"
+	},
 	"Oscillator": {
 		"description": "Tone.Oscillator supports a number of features including\n        phase rotation, multiple oscillator types (see Tone.Oscillator.type),\n        and Transport syncing (see Tone.Oscillator.syncFrequency).",
 		"params": [
@@ -2416,6 +2386,29 @@
 			}
 		],
 		"extends": "Tone.AudioNode"
+	},
+	"PWMOscillator": {
+		"description": "Tone.PWMOscillator modulates the width of a Tone.PulseOscillator\n        at the modulationFrequency. This has the effect of continuously\n        changing the timbre of the oscillator by altering the harmonics\n        generated.",
+		"params": [
+			{
+				"type": [
+					"Frequency"
+				],
+				"description": "The starting frequency of the oscillator.",
+				"name": "frequency"
+			},
+			{
+				"type": [
+					"Frequency"
+				],
+				"description": "The modulation frequency of the width of the pulse.",
+				"name": "modulationFrequency"
+			}
+		],
+		"examples": [
+			"var pwm = new Tone.PWMOscillator(\"Ab3\", 0.3).toMaster().start();"
+		],
+		"extends": "Tone.Source"
 	},
 	"Player": {
 		"description": "Tone.Player is an audio file player with start, loop, and stop functions.",
@@ -2488,6 +2481,13 @@
 		],
 		"extends": "Tone.Source"
 	},
+	"Source": {
+		"description": "Base class for sources. Sources have start/stop methods\n         and the ability to be synced to the\n         start/stop of Tone.Transport.",
+		"examples": [
+			"//Multiple state change events can be chained together,\n//but must be set in the correct order and with ascending times\n\n// OK\nstate.start().stop(\"+0.2\");\n// AND\nstate.start().stop(\"+0.2\").start(\"+0.4\").stop(\"+0.7\")\n\n// BAD\nstate.stop(\"+0.2\").start();\n// OR\nstate.start(\"+0.3\").stop(\"+0.2\");"
+		],
+		"extends": "Tone.AudioNode"
+	},
 	"TickSource": {
 		"description": "Uses [Tone.TickSignal](TickSignal) to track elapsed ticks with\n \t\tcomplex automation curves.",
 		"params": [
@@ -2550,27 +2550,6 @@
 			"Tone.Frequency(\"C3\") // 261\nTone.Frequency(38, \"midi\") //\nTone.Frequency(\"C3\").transpose(4);"
 		],
 		"extends": "Tone.TimeBase"
-	},
-	"TransportTime": {
-		"description": "Tone.TransportTime is a the time along the Transport's\n        timeline. It is similar to Tone.Time, but instead of evaluating\n        against the AudioContext's clock, it is evaluated against\n        the Transport's position. See [TransportTime wiki](https://github.com/Tonejs/Tone.js/wiki/TransportTime).",
-		"params": [
-			{
-				"type": [
-					"Time"
-				],
-				"description": "The time value as a number or string",
-				"name": "val"
-			},
-			{
-				"type": [
-					"String"
-				],
-				"optional": true,
-				"description": "Unit values",
-				"name": "units"
-			}
-		],
-		"extends": "Tone.Time"
 	},
 	"Midi": {
 		"description": "Tone.Midi is a primitive type for encoding Time values.\n        Tone.Midi can be constructed with or without the `new` keyword. Tone.Midi can be passed\n        into the parameter of any method which takes time as an argument.",
@@ -2671,5 +2650,26 @@
 			"Tone.TimeBase(4, \"n\")\nTone.TimeBase(2, \"t\")\nTone.TimeBase(\"2t\")\nTone.TimeBase({\"2t\" : 2})\nTone.TimeBase(\"2t\") + Tone.TimeBase(\"4n\");"
 		],
 		"extends": "Tone"
+	},
+	"TransportTime": {
+		"description": "Tone.TransportTime is a the time along the Transport's\n        timeline. It is similar to Tone.Time, but instead of evaluating\n        against the AudioContext's clock, it is evaluated against\n        the Transport's position. See [TransportTime wiki](https://github.com/Tonejs/Tone.js/wiki/TransportTime).",
+		"params": [
+			{
+				"type": [
+					"Time"
+				],
+				"description": "The time value as a number or string",
+				"name": "val"
+			},
+			{
+				"type": [
+					"String"
+				],
+				"optional": true,
+				"description": "Unit values",
+				"name": "units"
+			}
+		],
+		"extends": "Tone.Time"
 	}
 }

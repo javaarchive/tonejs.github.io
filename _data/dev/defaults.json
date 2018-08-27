@@ -1,69 +1,10 @@
 {
-	"Analyser": {
-		"size": 1024,
-		"type": "fft",
-		"smoothing": 0.8
-	},
-	"Compressor": {
-		"ratio": 12,
-		"threshold": -24,
-		"release": 0.25,
-		"attack": 0.003,
-		"knee": 30
-	},
-	"EQ3": {
-		"low": 0,
-		"mid": 0,
-		"high": 0,
-		"lowFrequency": 400,
-		"highFrequency": 2500
-	},
-	"FFT": {
-		"size": 1024
-	},
-	"FeedbackCombFilter": {
-		"delayTime": 0.1,
-		"resonance": 0.5
-	},
-	"LFO": {
-		"type": "sine",
-		"min": 0,
-		"max": 1,
-		"phase": 0,
-		"frequency": "4n",
-		"amplitude": 1,
-		"units": "Tone.Type.Default"
-	},
-	"Limiter": {
-		"threshold": -12
-	},
-	"MidSideCompressor": {
-		"mid": {
-			"ratio": 3,
-			"threshold": -24,
-			"release": 0.03,
-			"attack": 0.02,
-			"knee": 16
-		},
-		"side": {
-			"ratio": 6,
-			"threshold": -30,
-			"release": 0.25,
-			"attack": 0.03,
-			"knee": 10
-		}
-	},
 	"MultibandCompressor": {
 		"low": "Tone.Compressor.defaults",
 		"mid": "Tone.Compressor.defaults",
 		"high": "Tone.Compressor.defaults",
 		"lowFrequency": 250,
 		"highFrequency": 2000
-	},
-	"MultibandSplit": {
-		"lowFrequency": 400,
-		"highFrequency": 2500,
-		"Q": 1
 	},
 	"PanVol": {
 		"pan": 0,
@@ -94,8 +35,31 @@
 	"Solo": {
 		"solo": false
 	},
+	"Volume": {
+		"volume": 0,
+		"mute": false
+	},
 	"Waveform": {
 		"size": 1024
+	},
+	"Analyser": {
+		"size": 1024,
+		"type": "fft",
+		"smoothing": 0.8
+	},
+	"Compressor": {
+		"ratio": 12,
+		"threshold": -24,
+		"release": 0.25,
+		"attack": 0.003,
+		"knee": 30
+	},
+	"EQ3": {
+		"low": 0,
+		"mid": 0,
+		"high": 0,
+		"lowFrequency": 400,
+		"highFrequency": 2500
 	},
 	"Envelope": {
 		"attack": 0.01,
@@ -105,6 +69,13 @@
 		"attackCurve": "linear",
 		"decayCurve": "exponential",
 		"releaseCurve": "exponential"
+	},
+	"FFT": {
+		"size": 1024
+	},
+	"FeedbackCombFilter": {
+		"delayTime": 0.1,
+		"resonance": 0.5
 	},
 	"Filter": {
 		"type": "lowpass",
@@ -125,6 +96,18 @@
 		"smoothing": 0.1,
 		"threshold": -40
 	},
+	"LFO": {
+		"type": "sine",
+		"min": 0,
+		"max": 1,
+		"phase": 0,
+		"frequency": "4n",
+		"amplitude": 1,
+		"units": "Tone.Type.Default"
+	},
+	"Limiter": {
+		"threshold": -12
+	},
 	"LowpassCombFilter": {
 		"delayTime": 0.1,
 		"resonance": 0.5,
@@ -133,9 +116,26 @@
 	"Meter": {
 		"smoothing": 0.8
 	},
-	"Volume": {
-		"volume": 0,
-		"mute": false
+	"MidSideCompressor": {
+		"mid": {
+			"ratio": 3,
+			"threshold": -24,
+			"release": 0.03,
+			"attack": 0.02,
+			"knee": 16
+		},
+		"side": {
+			"ratio": 6,
+			"threshold": -30,
+			"release": 0.25,
+			"attack": 0.03,
+			"knee": 10
+		}
+	},
+	"MultibandSplit": {
+		"lowFrequency": 400,
+		"highFrequency": 2500,
+		"Q": 1
 	},
 	"CtrlInterpolate": {
 		"index": 0,
@@ -150,26 +150,15 @@
 		"max": 1,
 		"integer": false
 	},
-	"Buffers": {
-		"onload": "Tone.noOp",
-		"baseUrl": ""
-	},
-	"Timeline": {
-		"memory": "Infinity"
-	},
-	"TransportEvent": {
-		"once": false,
-		"callback": "Tone.noOp"
-	},
-	"TransportRepeatEvent": {
-		"duration": "Infinity",
-		"interval": 1
-	},
 	"Buffer": {
 		"url": "undefined",
 		"reverse": false,
 		"onload": "Tone.noOp",
 		"onerror": "Tone.noOp"
+	},
+	"Buffers": {
+		"onload": "Tone.noOp",
+		"baseUrl": ""
 	},
 	"Clock": {
 		"callback": "Tone.noOp",
@@ -209,6 +198,9 @@
 		"convert": true,
 		"param": "undefined"
 	},
+	"Timeline": {
+		"memory": "Infinity"
+	},
 	"Transport": {
 		"bpm": 120,
 		"swing": 0,
@@ -217,6 +209,26 @@
 		"loopStart": 0,
 		"loopEnd": "4m",
 		"PPQ": 192
+	},
+	"TransportEvent": {
+		"once": false,
+		"callback": "Tone.noOp"
+	},
+	"TransportRepeatEvent": {
+		"duration": "Infinity",
+		"interval": 1
+	},
+	"AutoFilter": {
+		"frequency": 1,
+		"type": "sine",
+		"depth": 1,
+		"baseFrequency": 200,
+		"octaves": 2.6,
+		"filter": {
+			"type": "lowpass",
+			"rolloff": -12,
+			"Q": 1
+		}
 	},
 	"AutoPanner": {
 		"frequency": 1,
@@ -247,6 +259,9 @@
 		"depth": 0.7,
 		"type": "sine",
 		"spread": 180
+	},
+	"Convolver": {
+		"onload": "Tone.noOp"
 	},
 	"Distortion": {
 		"distortion": 0.4,
@@ -305,21 +320,6 @@
 		"depth": 0.1,
 		"type": "sine"
 	},
-	"AutoFilter": {
-		"frequency": 1,
-		"type": "sine",
-		"depth": 1,
-		"baseFrequency": 200,
-		"octaves": 2.6,
-		"filter": {
-			"type": "lowpass",
-			"rolloff": -12,
-			"Q": 1
-		}
-	},
-	"Convolver": {
-		"onload": "Tone.noOp"
-	},
 	"Event": {
 		"callback": "Tone.noOp",
 		"loop": false,
@@ -330,14 +330,6 @@
 		"probability": 1,
 		"mute": false,
 		"humanize": false
-	},
-	"Pattern": {
-		"pattern": "Tone.CtrlPattern.Type.Up",
-		"callback": "Tone.noOp",
-		"values": "[]"
-	},
-	"Sequence": {
-		"subdivision": "4n"
 	},
 	"Loop": {
 		"interval": "4n",
@@ -357,6 +349,14 @@
 		"humanize": false,
 		"mute": false,
 		"events": "[]"
+	},
+	"Pattern": {
+		"pattern": "Tone.CtrlPattern.Type.Up",
+		"callback": "Tone.noOp",
+		"values": "[]"
+	},
+	"Sequence": {
+		"subdivision": "4n"
 	},
 	"AMSynth": {
 		"harmonicity": 3,
@@ -449,6 +449,20 @@
 	"Instrument": {
 		"volume": 0
 	},
+	"MembraneSynth": {
+		"pitchDecay": 0.05,
+		"octaves": 10,
+		"oscillator": {
+			"type": "sine"
+		},
+		"envelope": {
+			"attack": 0.001,
+			"decay": 0.4,
+			"sustain": 0.01,
+			"release": 1.4,
+			"attackCurve": "exponential"
+		}
+	},
 	"MetalSynth": {
 		"frequency": 200,
 		"envelope": {
@@ -488,31 +502,6 @@
 			"exponent": 2
 		}
 	},
-	"Synth": {
-		"oscillator": {
-			"type": "triangle"
-		},
-		"envelope": {
-			"attack": 0.005,
-			"decay": 0.1,
-			"sustain": 0.3,
-			"release": 1
-		}
-	},
-	"MembraneSynth": {
-		"pitchDecay": 0.05,
-		"octaves": 10,
-		"oscillator": {
-			"type": "sine"
-		},
-		"envelope": {
-			"attack": 0.001,
-			"decay": 0.4,
-			"sustain": 0.01,
-			"release": 1.4,
-			"attackCurve": "exponential"
-		}
-	},
 	"Monophonic": {
 		"portamento": 0
 	},
@@ -544,6 +533,17 @@
 		"baseUrl": "",
 		"curve": "exponential"
 	},
+	"Synth": {
+		"oscillator": {
+			"type": "triangle"
+		},
+		"envelope": {
+			"attack": 0.005,
+			"decay": 0.1,
+			"sustain": 0.3,
+			"release": 1
+		}
+	},
 	"Signal": {
 		"value": 0,
 		"units": "Tone.Type.Default",
@@ -556,30 +556,6 @@
 		"modulationType": "square",
 		"harmonicity": 1
 	},
-	"FMOscillator": {
-		"frequency": 440,
-		"detune": 0,
-		"phase": 0,
-		"modulationIndex": 2,
-		"modulationType": "square",
-		"harmonicity": 1
-	},
-	"OmniOscillator": {
-		"frequency": 440,
-		"detune": 0,
-		"type": "sine",
-		"phase": 0
-	},
-	"PWMOscillator": {
-		"frequency": 440,
-		"detune": 0,
-		"phase": 0,
-		"modulationFrequency": 0.4
-	},
-	"Source": {
-		"volume": 0,
-		"mute": false
-	},
 	"BufferSource": {
 		"onended": "Tone.noOp",
 		"onload": "Tone.noOp",
@@ -590,6 +566,14 @@
 		"fadeOut": 0,
 		"curve": "linear",
 		"playbackRate": 1
+	},
+	"FMOscillator": {
+		"frequency": 440,
+		"detune": 0,
+		"phase": 0,
+		"modulationIndex": 2,
+		"modulationType": "square",
+		"harmonicity": 1
 	},
 	"FatOscillator": {
 		"frequency": 440,
@@ -614,6 +598,12 @@
 		"type": "white",
 		"playbackRate": 1
 	},
+	"OmniOscillator": {
+		"frequency": 440,
+		"detune": 0,
+		"type": "sine",
+		"phase": 0
+	},
 	"Oscillator": {
 		"type": "sine",
 		"frequency": 440,
@@ -626,6 +616,12 @@
 		"detune": 0,
 		"type": "sine",
 		"onended": "Tone.noOp"
+	},
+	"PWMOscillator": {
+		"frequency": 440,
+		"detune": 0,
+		"phase": 0,
+		"modulationFrequency": 0.4
 	},
 	"Player": {
 		"onload": "Tone.noOp",
@@ -651,6 +647,10 @@
 		"detune": 0,
 		"phase": 0,
 		"width": 0.2
+	},
+	"Source": {
+		"volume": 0,
+		"mute": false
 	},
 	"TickSource": {
 		"frequency": 1
