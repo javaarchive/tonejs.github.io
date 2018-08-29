@@ -5883,7 +5883,7 @@
 			},
 			"scope": "static",
 			"name": "equalPowerScale",
-			"lineno": "Tone/core/Tone.js#L501"
+			"lineno": "Tone/core/Tone.js#L506"
 		},
 		{
 			"description": "Convert decibels into gain.",
@@ -5902,7 +5902,7 @@
 			},
 			"scope": "static",
 			"name": "dbToGain",
-			"lineno": "Tone/core/Tone.js#L513"
+			"lineno": "Tone/core/Tone.js#L518"
 		},
 		{
 			"description": "Convert gain to decibels.",
@@ -5922,7 +5922,7 @@
 			},
 			"scope": "static",
 			"name": "gainToDb",
-			"lineno": "Tone/core/Tone.js#L524"
+			"lineno": "Tone/core/Tone.js#L529"
 		},
 		{
 			"description": "Convert an interval (in semitones) to a frequency ratio.",
@@ -5946,7 +5946,7 @@
 			},
 			"scope": "static",
 			"name": "intervalToFrequencyRatio",
-			"lineno": "Tone/core/Tone.js#L539"
+			"lineno": "Tone/core/Tone.js#L544"
 		},
 		{
 			"description": "Return the current time of the AudioContext clock plus\n the lookAhead.",
@@ -5958,7 +5958,7 @@
 			},
 			"scope": "static",
 			"name": "now",
-			"lineno": "Tone/core/Tone.js#L564"
+			"lineno": "Tone/core/Tone.js#L569"
 		},
 		{
 			"description": "Return the current time of the AudioContext clock without\n any lookAhead.",
@@ -5970,7 +5970,7 @@
 			},
 			"scope": "static",
 			"name": "immediate",
-			"lineno": "Tone/core/Tone.js#L584"
+			"lineno": "Tone/core/Tone.js#L589"
 		},
 		{
 			"description": "have a child inherit all of Tone's (or a parent's) prototype\n to inherit the parent's properties, make sure to call\n Parent.call(this) in the child's constructor\n\n based on closure library's inherit function",
@@ -5992,7 +5992,7 @@
 			],
 			"scope": "static",
 			"name": "extend",
-			"lineno": "Tone/core/Tone.js#L606"
+			"lineno": "Tone/core/Tone.js#L611"
 		},
 		{
 			"description": "Convert Time into seconds.\n\n Unlike the method which it overrides, this takes into account\n transporttime and musical notation.\n\n Time : 1.40\n Notation: 4n or 1m or 2t\n Now Relative: +3n",
@@ -9395,7 +9395,7 @@
 			},
 			"scope": "instance",
 			"name": "now",
-			"lineno": "Tone/core/Tone.js#L553"
+			"lineno": "Tone/core/Tone.js#L558"
 		},
 		{
 			"description": "Return the current time of the AudioContext clock without\n any lookAhead.",
@@ -9407,7 +9407,7 @@
 			},
 			"scope": "instance",
 			"name": "immediate",
-			"lineno": "Tone/core/Tone.js#L574"
+			"lineno": "Tone/core/Tone.js#L579"
 		}
 	],
 	"Tone#\n disconnect and dispose": [
@@ -9443,7 +9443,7 @@
 			],
 			"scope": "static",
 			"name": "setContext",
-			"lineno": "Tone/core/Tone.js#L671"
+			"lineno": "Tone/core/Tone.js#L676"
 		},
 		{
 			"description": "Get the context when it becomes available",
@@ -9463,7 +9463,7 @@
 			},
 			"scope": "static",
 			"name": "getContext",
-			"lineno": "Tone/core/Tone.js#L742"
+			"lineno": "Tone/core/Tone.js#L747"
 		}
 	],
 	"extend": [
@@ -9471,7 +9471,7 @@
 			"params": [],
 			"scope": "inner",
 			"name": "TempConstructor",
-			"lineno": "Tone/core/Tone.js#L610"
+			"lineno": "Tone/core/Tone.js#L615"
 		}
 	],
 	"getContext": [
@@ -9479,7 +9479,7 @@
 			"params": [],
 			"scope": "inner",
 			"name": "resCallback",
-			"lineno": "Tone/core/Tone.js#L746"
+			"lineno": "Tone/core/Tone.js#L751"
 		}
 	],
 	"Transport": [
