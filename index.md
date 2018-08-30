@@ -59,7 +59,7 @@ Tone.js abstracts away the AudioContext time. Instead of defining all values in 
 
 Read more about [Time encodings](https://github.com/Tonejs/Tone.js/wiki/Time).
 
-<script async src="//jsfiddle.net/yotammann/meodck51/7/embed/js,result/"></script>
+<script async src="//jsfiddle.net/yotammann/y9jewrdf/embed/js,result/"></script>
 
 # Scheduling
 
@@ -79,7 +79,7 @@ Unlike the AudioContext, the Transport can be looped, stopped and restarted.
 
 The Transport is the master timekeeper, allowing for application-wide synchronization of sources, signals and events along a shared timeline. Time expressions (like `"4n"` and `"2:0"`) are evaluated against the Transport's BPM which can be set like this: `Tone.Transport.bpm.value = 120`.
 
-<script async src="//jsfiddle.net/yotammann/k0caxzwt/21/embed/js,result/"></script>
+<script async src="//jsfiddle.net/yotammann/1xrk4eto/1/embed/js,result/"></script>
 
 ### Loops
 
