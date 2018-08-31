@@ -5199,7 +5199,7 @@
 			},
 			"scope": "instance",
 			"name": "set",
-			"lineno": "Tone/core/Buffer.js#L97"
+			"lineno": "Tone/core/Buffer.js#L92"
 		},
 		{
 			"returns": {
@@ -5210,7 +5210,7 @@
 			},
 			"scope": "instance",
 			"name": "get",
-			"lineno": "Tone/core/Buffer.js#L116"
+			"lineno": "Tone/core/Buffer.js#L113"
 		},
 		{
 			"description": "Makes an xhr reqest for the selected url then decodes\n the file as an audio buffer. Invokes\n the callback once the audio buffer loads.",
@@ -5231,7 +5231,7 @@
 			},
 			"scope": "instance",
 			"name": "load",
-			"lineno": "Tone/core/Buffer.js#L129"
+			"lineno": "Tone/core/Buffer.js#L126"
 		},
 		{
 			"description": "dispose and disconnect",
@@ -5243,7 +5243,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/Buffer.js#L164"
+			"lineno": "Tone/core/Buffer.js#L161"
 		},
 		{
 			"description": "Set the audio buffer from the array. To create a multichannel AudioBuffer,\n pass in a multidimensional array.",
@@ -5264,7 +5264,7 @@
 			},
 			"scope": "instance",
 			"name": "fromArray",
-			"lineno": "Tone/core/Buffer.js#L246"
+			"lineno": "Tone/core/Buffer.js#L243"
 		},
 		{
 			"description": "Sums muliple channels into 1 channel",
@@ -5285,7 +5285,7 @@
 			},
 			"scope": "instance",
 			"name": "toMono",
-			"lineno": "Tone/core/Buffer.js#L266"
+			"lineno": "Tone/core/Buffer.js#L263"
 		},
 		{
 			"description": "Get the buffer as an array. Single channel buffers will return a 1-dimensional\n\tFloat32Array, and multichannel buffers will return multidimensional arrays.",
@@ -5306,7 +5306,7 @@
 			},
 			"scope": "instance",
 			"name": "toArray",
-			"lineno": "Tone/core/Buffer.js#L293"
+			"lineno": "Tone/core/Buffer.js#L290"
 		},
 		{
 			"description": "Returns the Float32Array representing the PCM audio data for the specific channel.",
@@ -5327,7 +5327,7 @@
 			},
 			"scope": "instance",
 			"name": "getChannelData",
-			"lineno": "Tone/core/Buffer.js#L312"
+			"lineno": "Tone/core/Buffer.js#L309"
 		},
 		{
 			"description": "Cut a subsection of the array and return a buffer of the\n subsection. Does not modify the original buffer",
@@ -5356,7 +5356,7 @@
 			},
 			"scope": "instance",
 			"name": "slice",
-			"lineno": "Tone/core/Buffer.js#L324"
+			"lineno": "Tone/core/Buffer.js#L321"
 		},
 		{
 			"description": "Create a Tone.Buffer from the array. To create a multichannel AudioBuffer,\n pass in a multidimensional array.",
@@ -5377,7 +5377,7 @@
 			},
 			"scope": "static",
 			"name": "fromArray",
-			"lineno": "Tone/core/Buffer.js#L395"
+			"lineno": "Tone/core/Buffer.js#L392"
 		},
 		{
 			"description": "Creates a Tone.Buffer from a URL, returns a promise\nwhich resolves to a Tone.Buffer",
@@ -5398,7 +5398,7 @@
 			},
 			"scope": "static",
 			"name": "fromUrl",
-			"lineno": "Tone/core/Buffer.js#L405"
+			"lineno": "Tone/core/Buffer.js#L402"
 		},
 		{
 			"description": "Loads a url using XMLHttpRequest.",
@@ -5435,7 +5435,7 @@
 			},
 			"scope": "static",
 			"name": "load",
-			"lineno": "Tone/core/Buffer.js#L431"
+			"lineno": "Tone/core/Buffer.js#L428"
 		},
 		{
 			"description": "Stop all of the downloads in progress",
@@ -5446,7 +5446,7 @@
 			},
 			"scope": "static",
 			"name": "cancelDownloads",
-			"lineno": "Tone/core/Buffer.js#L518"
+			"lineno": "Tone/core/Buffer.js#L515"
 		},
 		{
 			"description": "Checks a url's extension to see if the current browser can play that file type.",
@@ -5470,7 +5470,7 @@
 			},
 			"scope": "static",
 			"name": "supportsType",
-			"lineno": "Tone/core/Buffer.js#L535"
+			"lineno": "Tone/core/Buffer.js#L532"
 		}
 	],
 	"load": [
@@ -5478,13 +5478,13 @@
 			"params": [],
 			"scope": "inner",
 			"name": "onError",
-			"lineno": "Tone/core/Buffer.js#L449"
+			"lineno": "Tone/core/Buffer.js#L446"
 		},
 		{
 			"params": [],
 			"scope": "inner",
 			"name": "onProgress",
-			"lineno": "Tone/core/Buffer.js#L459"
+			"lineno": "Tone/core/Buffer.js#L456"
 		}
 	],
 	"Tone": [
@@ -5497,7 +5497,7 @@
 			},
 			"scope": "static",
 			"name": "loaded",
-			"lineno": "Tone/core/Buffer.js#L546"
+			"lineno": "Tone/core/Buffer.js#L543"
 		},
 		{
 			"description": "Send this signal to the channel name.",
@@ -6059,19 +6059,19 @@
 			"params": [],
 			"scope": "inner",
 			"name": "removeEvents",
-			"lineno": "Tone/core/Buffer.js#L548"
+			"lineno": "Tone/core/Buffer.js#L545"
 		}
 	],
 	"<anonymous>": [
 		{
 			"scope": "inner",
 			"name": "onload",
-			"lineno": "Tone/core/Buffer.js#L554"
+			"lineno": "Tone/core/Buffer.js#L551"
 		},
 		{
 			"scope": "inner",
 			"name": "onerror",
-			"lineno": "Tone/core/Buffer.js#L557"
+			"lineno": "Tone/core/Buffer.js#L554"
 		},
 		{
 			"params": [],
