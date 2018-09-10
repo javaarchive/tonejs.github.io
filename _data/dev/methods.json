@@ -6096,12 +6096,6 @@
 			"scope": "inner",
 			"name": "WaveShaperNode",
 			"lineno": "Tone/shim/WaveShaperNode.js#L10"
-		},
-		{
-			"params": [],
-			"scope": "inner",
-			"name": "createBuffers",
-			"lineno": "Tone/source/Noise.js#L248"
 		}
 	],
 	"Buffers": [
@@ -11103,7 +11097,7 @@
 			},
 			"scope": "instance",
 			"name": "load",
-			"lineno": "Tone/effect/Convolver.js#L82"
+			"lineno": "Tone/effect/Convolver.js#L101"
 		},
 		{
 			"description": "Clean up.",
@@ -11115,7 +11109,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/effect/Convolver.js#L95"
+			"lineno": "Tone/effect/Convolver.js#L114"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -12727,7 +12721,7 @@
 			},
 			"scope": "instance",
 			"name": "load",
-			"lineno": "Tone/effect/Convolver.js#L82",
+			"lineno": "Tone/effect/Convolver.js#L101",
 			"inherits": "Tone.Convolver"
 		},
 		{

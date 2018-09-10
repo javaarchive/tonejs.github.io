@@ -4786,7 +4786,16 @@
 			],
 			"scope": "instance",
 			"name": "buffer",
-			"lineno": "Tone/effect/Convolver.js#L56"
+			"lineno": "Tone/effect/Convolver.js#L60"
+		},
+		{
+			"description": "The normalize property of the ConvolverNode interface is a boolean that controls whether the impulse response from the buffer will be scaled by an equal-power normalization when the buffer attribute is set, or not.",
+			"type": [
+				"Boolean"
+			],
+			"scope": "instance",
+			"name": "normalize",
+			"lineno": "Tone/effect/Convolver.js#L76"
 		},
 		{
 			"description": "The wet control is how much of the effected\n will pass through to the output. 1 = 100% effected\n signal, 0 = 100% dry signal.",
@@ -5784,7 +5793,17 @@
 			],
 			"scope": "instance",
 			"name": "buffer",
-			"lineno": "Tone/effect/Convolver.js#L56",
+			"lineno": "Tone/effect/Convolver.js#L60",
+			"inherits": "Tone.Convolver"
+		},
+		{
+			"description": "The normalize property of the ConvolverNode interface is a boolean that controls whether the impulse response from the buffer will be scaled by an equal-power normalization when the buffer attribute is set, or not.",
+			"type": [
+				"Boolean"
+			],
+			"scope": "instance",
+			"name": "normalize",
+			"lineno": "Tone/effect/Convolver.js#L76",
 			"inherits": "Tone.Convolver"
 		},
 		{
