@@ -11097,7 +11097,7 @@
 			},
 			"scope": "instance",
 			"name": "load",
-			"lineno": "Tone/effect/Convolver.js#L101"
+			"lineno": "Tone/effect/Convolver.js#L119"
 		},
 		{
 			"description": "Clean up.",
@@ -11109,7 +11109,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/effect/Convolver.js#L114"
+			"lineno": "Tone/effect/Convolver.js#L132"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -12721,7 +12721,7 @@
 			},
 			"scope": "instance",
 			"name": "load",
-			"lineno": "Tone/effect/Convolver.js#L101",
+			"lineno": "Tone/effect/Convolver.js#L119",
 			"inherits": "Tone.Convolver"
 		},
 		{
