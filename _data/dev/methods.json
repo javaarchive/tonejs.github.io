@@ -11737,7 +11737,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/AMOscillator.js#L208"
+			"lineno": "Tone/source/AMOscillator.js#L209"
 		},
 		{
 			"description": "Sync the signal to the Transport's bpm. Any changes to the transports bpm,\n will also affect the oscillators frequency.",
@@ -11752,7 +11752,7 @@
 			},
 			"scope": "instance",
 			"name": "syncFrequency",
-			"lineno": "Tone/source/Oscillator.js#L169",
+			"lineno": "Tone/source/Oscillator.js#L180",
 			"inherits": "Tone.Oscillator"
 		},
 		{
@@ -11765,7 +11765,7 @@
 			},
 			"scope": "instance",
 			"name": "unsyncFrequency",
-			"lineno": "Tone/source/Oscillator.js#L179",
+			"lineno": "Tone/source/Oscillator.js#L190",
 			"inherits": "Tone.Oscillator"
 		},
 		{
@@ -13148,7 +13148,7 @@
 			},
 			"scope": "instance",
 			"name": "restart",
-			"lineno": "Tone/source/Oscillator.js#L151"
+			"lineno": "Tone/source/Oscillator.js#L162"
 		},
 		{
 			"description": "Sync the signal to the Transport's bpm. Any changes to the transports bpm,\n will also affect the oscillators frequency.",
@@ -13163,7 +13163,7 @@
 			},
 			"scope": "instance",
 			"name": "syncFrequency",
-			"lineno": "Tone/source/Oscillator.js#L169"
+			"lineno": "Tone/source/Oscillator.js#L180"
 		},
 		{
 			"description": "Unsync the oscillator's frequency from the Transport.\n See Tone.Oscillator.syncFrequency",
@@ -13175,7 +13175,7 @@
 			},
 			"scope": "instance",
 			"name": "unsyncFrequency",
-			"lineno": "Tone/source/Oscillator.js#L179"
+			"lineno": "Tone/source/Oscillator.js#L190"
 		},
 		{
 			"description": "Dispose and disconnect.",
@@ -13187,7 +13187,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/Oscillator.js#L377"
+			"lineno": "Tone/source/Oscillator.js#L418"
 		},
 		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
@@ -13641,7 +13641,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/FMOscillator.js#L215"
+			"lineno": "Tone/source/FMOscillator.js#L216"
 		},
 		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",

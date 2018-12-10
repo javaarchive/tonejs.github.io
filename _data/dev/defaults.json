@@ -396,6 +396,7 @@
 		"frequency": 440,
 		"detune": 0,
 		"phase": 0,
+		"type": "sine",
 		"modulationType": "square",
 		"harmonicity": 1
 	},
@@ -445,6 +446,7 @@
 		"frequency": 440,
 		"detune": 0,
 		"phase": 0,
+		"type": "sine",
 		"modulationIndex": 2,
 		"modulationType": "square",
 		"harmonicity": 1
