@@ -6012,7 +6012,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerRelease",
-			"lineno": "Tone/instrument/Sampler.js#L167"
+			"lineno": "Tone/instrument/Sampler.js#L169"
 		},
 		{
 			"description": "Release all currently active notes.",
@@ -6034,7 +6034,7 @@
 			},
 			"scope": "instance",
 			"name": "releaseAll",
-			"lineno": "Tone/instrument/Sampler.js#L190"
+			"lineno": "Tone/instrument/Sampler.js#L192"
 		},
 		{
 			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
@@ -6049,7 +6049,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/instrument/Sampler.js#L216"
+			"lineno": "Tone/instrument/Sampler.js#L218"
 		},
 		{
 			"description": "Invoke the attack phase, then after the duration, invoke the release.",
@@ -6094,7 +6094,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Sampler.js#L230"
+			"lineno": "Tone/instrument/Sampler.js#L232"
 		},
 		{
 			"description": "Add a note to the sampler.",
@@ -6127,7 +6127,7 @@
 			],
 			"scope": "instance",
 			"name": "add",
-			"lineno": "Tone/instrument/Sampler.js#L253"
+			"lineno": "Tone/instrument/Sampler.js#L255"
 		},
 		{
 			"description": "Clean up",
@@ -6139,7 +6139,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/Sampler.js#L283"
+			"lineno": "Tone/instrument/Sampler.js#L285"
 		},
 		{
 			"description": "Unsync the instrument from the Transport",
