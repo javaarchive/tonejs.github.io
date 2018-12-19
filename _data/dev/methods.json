@@ -14903,7 +14903,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttack",
-			"lineno": "Tone/component/Envelope.js#L253"
+			"lineno": "Tone/component/Envelope.js#L254"
 		},
 		{
 			"description": "Triggers the release of the envelope.",
@@ -14929,7 +14929,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerRelease",
-			"lineno": "Tone/component/Envelope.js#L311"
+			"lineno": "Tone/component/Envelope.js#L312"
 		},
 		{
 			"description": "Get the scheduled value at the given time. This will\n return the unconverted (raw) value.",
@@ -14950,7 +14950,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/component/Envelope.js#L338"
+			"lineno": "Tone/component/Envelope.js#L339"
 		},
 		{
 			"description": "triggerAttackRelease is shorthand for triggerAttack, then waiting\n some duration, then triggerRelease.",
@@ -14992,7 +14992,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/component/Envelope.js#L353"
+			"lineno": "Tone/component/Envelope.js#L354"
 		},
 		{
 			"description": "Cancels all scheduled envelope changes after the given time.",
@@ -15012,7 +15012,7 @@
 			},
 			"scope": "instance",
 			"name": "cancel",
-			"lineno": "Tone/component/Envelope.js#L365"
+			"lineno": "Tone/component/Envelope.js#L366"
 		},
 		{
 			"description": "Disconnect and dispose.",
@@ -15024,7 +15024,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/component/Envelope.js#L481"
+			"lineno": "Tone/component/Envelope.js#L482"
 		},
 		{
 			"description": "disconnect the output",
@@ -16942,7 +16942,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttack",
-			"lineno": "Tone/component/Envelope.js#L253",
+			"lineno": "Tone/component/Envelope.js#L254",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -16969,7 +16969,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerRelease",
-			"lineno": "Tone/component/Envelope.js#L311",
+			"lineno": "Tone/component/Envelope.js#L312",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -16991,7 +16991,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/component/Envelope.js#L338",
+			"lineno": "Tone/component/Envelope.js#L339",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -17034,7 +17034,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/component/Envelope.js#L353",
+			"lineno": "Tone/component/Envelope.js#L354",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -17055,7 +17055,7 @@
 			},
 			"scope": "instance",
 			"name": "cancel",
-			"lineno": "Tone/component/Envelope.js#L365",
+			"lineno": "Tone/component/Envelope.js#L366",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -17193,7 +17193,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttack",
-			"lineno": "Tone/component/Envelope.js#L253",
+			"lineno": "Tone/component/Envelope.js#L254",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -17220,7 +17220,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerRelease",
-			"lineno": "Tone/component/Envelope.js#L311",
+			"lineno": "Tone/component/Envelope.js#L312",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -17242,7 +17242,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/component/Envelope.js#L338",
+			"lineno": "Tone/component/Envelope.js#L339",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -17285,7 +17285,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/component/Envelope.js#L353",
+			"lineno": "Tone/component/Envelope.js#L354",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -17306,7 +17306,7 @@
 			},
 			"scope": "instance",
 			"name": "cancel",
-			"lineno": "Tone/component/Envelope.js#L365",
+			"lineno": "Tone/component/Envelope.js#L366",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -17706,7 +17706,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttack",
-			"lineno": "Tone/component/Envelope.js#L253",
+			"lineno": "Tone/component/Envelope.js#L254",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -17733,7 +17733,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerRelease",
-			"lineno": "Tone/component/Envelope.js#L311",
+			"lineno": "Tone/component/Envelope.js#L312",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -17755,7 +17755,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/component/Envelope.js#L338",
+			"lineno": "Tone/component/Envelope.js#L339",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -17798,7 +17798,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/component/Envelope.js#L353",
+			"lineno": "Tone/component/Envelope.js#L354",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -17819,7 +17819,7 @@
 			},
 			"scope": "instance",
 			"name": "cancel",
-			"lineno": "Tone/component/Envelope.js#L365",
+			"lineno": "Tone/component/Envelope.js#L366",
 			"inherits": "Tone.Envelope"
 		},
 		{

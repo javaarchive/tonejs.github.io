@@ -1541,7 +1541,7 @@
 					"Time"
 				],
 				"optional": true,
-				"description": "The period of time after the attack that it takes for the envelope\n                      \tto fall to the sustain value.",
+				"description": "The period of time after the attack that it takes for the envelope\n                      \tto fall to the sustain value. Value must be greater than 0.",
 				"name": "decay"
 			},
 			{
@@ -1557,7 +1557,7 @@
 					"Time"
 				],
 				"optional": true,
-				"description": "The amount of time after the release is triggered it takes to reach 0.",
+				"description": "The amount of time after the release is triggered it takes to reach 0.\n                        \tValue must be greater than 0.",
 				"name": "release"
 			}
 		],

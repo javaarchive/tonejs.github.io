@@ -7970,7 +7970,7 @@
 			],
 			"scope": "instance",
 			"name": "attack",
-			"lineno": "Tone/component/Envelope.js#L43"
+			"lineno": "Tone/component/Envelope.js#L44"
 		},
 		{
 			"description": "After the attack portion of the envelope, the value will fall\n over the duration of the decay time to it's sustain value.",
@@ -7979,7 +7979,7 @@
 			],
 			"scope": "instance",
 			"name": "decay",
-			"lineno": "Tone/component/Envelope.js#L50"
+			"lineno": "Tone/component/Envelope.js#L51"
 		},
 		{
 			"description": "The sustain value is the value\n\twhich the envelope rests at after triggerAttack is\n\tcalled, but before triggerRelease is invoked.",
@@ -7988,7 +7988,7 @@
 			],
 			"scope": "instance",
 			"name": "sustain",
-			"lineno": "Tone/component/Envelope.js#L58"
+			"lineno": "Tone/component/Envelope.js#L59"
 		},
 		{
 			"description": "After triggerRelease is called, the envelope's\n value will fall to it's miminum value over the\n duration of the release time.",
@@ -7997,7 +7997,7 @@
 			],
 			"scope": "instance",
 			"name": "release",
-			"lineno": "Tone/component/Envelope.js#L66"
+			"lineno": "Tone/component/Envelope.js#L67"
 		},
 		{
 			"description": "Read the current value of the envelope. Useful for\nsyncronizing visual output to the envelope.",
@@ -8007,7 +8007,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "value",
-			"lineno": "Tone/component/Envelope.js#L112"
+			"lineno": "Tone/component/Envelope.js#L113"
 		},
 		{
 			"description": "The shape of the attack.\nCan be any of these strings:\n<ul>\n  <li>linear</li>\n  <li>exponential</li>\n  <li>sine</li>\n  <li>cosine</li>\n  <li>bounce</li>\n  <li>ripple</li>\n  <li>step</li>\n</ul>\nCan also be an array which describes the curve. Values\nin the array are evenly subdivided and linearly\ninterpolated over the duration of the attack.",
@@ -8021,7 +8021,7 @@
 			],
 			"scope": "instance",
 			"name": "attackCurve",
-			"lineno": "Tone/component/Envelope.js#L171"
+			"lineno": "Tone/component/Envelope.js#L172"
 		},
 		{
 			"description": "The shape of the release. See the attack curve types.",
@@ -8034,7 +8034,7 @@
 			],
 			"scope": "instance",
 			"name": "releaseCurve",
-			"lineno": "Tone/component/Envelope.js#L204"
+			"lineno": "Tone/component/Envelope.js#L205"
 		},
 		{
 			"description": "The shape of the decay either \"linear\" or \"exponential\"",
@@ -8046,7 +8046,7 @@
 			],
 			"scope": "instance",
 			"name": "decayCurve",
-			"lineno": "Tone/component/Envelope.js#L221"
+			"lineno": "Tone/component/Envelope.js#L222"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -9250,7 +9250,7 @@
 			],
 			"scope": "instance",
 			"name": "attack",
-			"lineno": "Tone/component/Envelope.js#L43",
+			"lineno": "Tone/component/Envelope.js#L44",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -9260,7 +9260,7 @@
 			],
 			"scope": "instance",
 			"name": "decay",
-			"lineno": "Tone/component/Envelope.js#L50",
+			"lineno": "Tone/component/Envelope.js#L51",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -9270,7 +9270,7 @@
 			],
 			"scope": "instance",
 			"name": "sustain",
-			"lineno": "Tone/component/Envelope.js#L58",
+			"lineno": "Tone/component/Envelope.js#L59",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -9280,7 +9280,7 @@
 			],
 			"scope": "instance",
 			"name": "release",
-			"lineno": "Tone/component/Envelope.js#L66",
+			"lineno": "Tone/component/Envelope.js#L67",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -9291,7 +9291,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "value",
-			"lineno": "Tone/component/Envelope.js#L112",
+			"lineno": "Tone/component/Envelope.js#L113",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -9306,7 +9306,7 @@
 			],
 			"scope": "instance",
 			"name": "attackCurve",
-			"lineno": "Tone/component/Envelope.js#L171",
+			"lineno": "Tone/component/Envelope.js#L172",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -9320,7 +9320,7 @@
 			],
 			"scope": "instance",
 			"name": "releaseCurve",
-			"lineno": "Tone/component/Envelope.js#L204",
+			"lineno": "Tone/component/Envelope.js#L205",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -9333,7 +9333,7 @@
 			],
 			"scope": "instance",
 			"name": "decayCurve",
-			"lineno": "Tone/component/Envelope.js#L221",
+			"lineno": "Tone/component/Envelope.js#L222",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -9438,7 +9438,7 @@
 			],
 			"scope": "instance",
 			"name": "attack",
-			"lineno": "Tone/component/Envelope.js#L43",
+			"lineno": "Tone/component/Envelope.js#L44",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -9448,7 +9448,7 @@
 			],
 			"scope": "instance",
 			"name": "decay",
-			"lineno": "Tone/component/Envelope.js#L50",
+			"lineno": "Tone/component/Envelope.js#L51",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -9458,7 +9458,7 @@
 			],
 			"scope": "instance",
 			"name": "sustain",
-			"lineno": "Tone/component/Envelope.js#L58",
+			"lineno": "Tone/component/Envelope.js#L59",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -9468,7 +9468,7 @@
 			],
 			"scope": "instance",
 			"name": "release",
-			"lineno": "Tone/component/Envelope.js#L66",
+			"lineno": "Tone/component/Envelope.js#L67",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -9479,7 +9479,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "value",
-			"lineno": "Tone/component/Envelope.js#L112",
+			"lineno": "Tone/component/Envelope.js#L113",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -9494,7 +9494,7 @@
 			],
 			"scope": "instance",
 			"name": "attackCurve",
-			"lineno": "Tone/component/Envelope.js#L171",
+			"lineno": "Tone/component/Envelope.js#L172",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -9508,7 +9508,7 @@
 			],
 			"scope": "instance",
 			"name": "releaseCurve",
-			"lineno": "Tone/component/Envelope.js#L204",
+			"lineno": "Tone/component/Envelope.js#L205",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -9521,7 +9521,7 @@
 			],
 			"scope": "instance",
 			"name": "decayCurve",
-			"lineno": "Tone/component/Envelope.js#L221",
+			"lineno": "Tone/component/Envelope.js#L222",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -11558,7 +11558,7 @@
 			],
 			"scope": "instance",
 			"name": "attack",
-			"lineno": "Tone/component/Envelope.js#L43",
+			"lineno": "Tone/component/Envelope.js#L44",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -11568,7 +11568,7 @@
 			],
 			"scope": "instance",
 			"name": "decay",
-			"lineno": "Tone/component/Envelope.js#L50",
+			"lineno": "Tone/component/Envelope.js#L51",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -11578,7 +11578,7 @@
 			],
 			"scope": "instance",
 			"name": "sustain",
-			"lineno": "Tone/component/Envelope.js#L58",
+			"lineno": "Tone/component/Envelope.js#L59",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -11588,7 +11588,7 @@
 			],
 			"scope": "instance",
 			"name": "release",
-			"lineno": "Tone/component/Envelope.js#L66",
+			"lineno": "Tone/component/Envelope.js#L67",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -11599,7 +11599,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "value",
-			"lineno": "Tone/component/Envelope.js#L112",
+			"lineno": "Tone/component/Envelope.js#L113",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -11614,7 +11614,7 @@
 			],
 			"scope": "instance",
 			"name": "attackCurve",
-			"lineno": "Tone/component/Envelope.js#L171",
+			"lineno": "Tone/component/Envelope.js#L172",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -11628,7 +11628,7 @@
 			],
 			"scope": "instance",
 			"name": "releaseCurve",
-			"lineno": "Tone/component/Envelope.js#L204",
+			"lineno": "Tone/component/Envelope.js#L205",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -11641,7 +11641,7 @@
 			],
 			"scope": "instance",
 			"name": "decayCurve",
-			"lineno": "Tone/component/Envelope.js#L221",
+			"lineno": "Tone/component/Envelope.js#L222",
 			"inherits": "Tone.Envelope"
 		},
 		{
