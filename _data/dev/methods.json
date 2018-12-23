@@ -11149,7 +11149,7 @@
 			},
 			"scope": "instance",
 			"name": "load",
-			"lineno": "Tone/source/Player.js#L148"
+			"lineno": "Tone/source/Player.js#L140"
 		},
 		{
 			"description": "Play the buffer at the given startTime. Optionally add an offset\n and/or duration which will play the buffer from a position\n within the buffer for the given duration.",
@@ -11189,7 +11189,7 @@
 			},
 			"scope": "instance",
 			"name": "start",
-			"lineno": "Tone/source/Player.js#L173"
+			"lineno": "Tone/source/Player.js#L168"
 		},
 		{
 			"description": "Stop and then restart the player from the beginning (or offset)",
@@ -11229,7 +11229,7 @@
 			},
 			"scope": "instance",
 			"name": "restart",
-			"lineno": "Tone/source/Player.js#L272"
+			"lineno": "Tone/source/Player.js#L263"
 		},
 		{
 			"description": "Seek to a specific time in the player's buffer. If the\n source is no longer playing at that time, it will stop.\n If you seek to a time that",
@@ -11261,7 +11261,7 @@
 			},
 			"scope": "instance",
 			"name": "seek",
-			"lineno": "Tone/source/Player.js#L289"
+			"lineno": "Tone/source/Player.js#L280"
 		},
 		{
 			"description": "Set the loop start and end. Will only loop if loop is\n set to true.",
@@ -11292,7 +11292,7 @@
 			},
 			"scope": "instance",
 			"name": "setLoopPoints",
-			"lineno": "Tone/source/Player.js#L312"
+			"lineno": "Tone/source/Player.js#L303"
 		},
 		{
 			"description": "Dispose and disconnect.",
@@ -11304,7 +11304,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/Player.js#L498"
+			"lineno": "Tone/source/Player.js#L453"
 		},
 		{
 			"description": "Stop the source at the specified time. If no time is given,\n stop the source now.",
@@ -11592,7 +11592,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/BufferSource.js#L255"
+			"lineno": "Tone/source/BufferSource.js#L251"
 		},
 		{
 			"description": "Cancel a scheduled stop event",
@@ -11604,7 +11604,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelStop",
-			"lineno": "Tone/source/BufferSource.js#L296"
+			"lineno": "Tone/source/BufferSource.js#L292"
 		},
 		{
 			"description": "Clean up.",
@@ -11616,7 +11616,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/BufferSource.js#L389"
+			"lineno": "Tone/source/BufferSource.js#L385"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",

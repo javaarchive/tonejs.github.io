@@ -376,7 +376,6 @@
 		"autostart": false,
 		"loopStart": 0,
 		"loopEnd": 0,
-		"retrigger": false,
 		"reverse": false,
 		"fadeIn": 0,
 		"fadeOut": 0
