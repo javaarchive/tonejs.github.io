@@ -7487,7 +7487,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttack",
-			"lineno": "Tone/instrument/PolySynth.js#L136"
+			"lineno": "Tone/instrument/PolySynth.js#L131"
 		},
 		{
 			"description": "Trigger the release of the note. Unlike monophonic instruments,\n a note (or array of notes) needs to be passed in as the first argument.",
@@ -7521,7 +7521,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerRelease",
-			"lineno": "Tone/instrument/PolySynth.js#L159"
+			"lineno": "Tone/instrument/PolySynth.js#L154"
 		},
 		{
 			"description": "Trigger the attack and release after the specified duration",
@@ -7572,7 +7572,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/PolySynth.js#L188"
+			"lineno": "Tone/instrument/PolySynth.js#L183"
 		},
 		{
 			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
@@ -7587,7 +7587,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/instrument/PolySynth.js#L216"
+			"lineno": "Tone/instrument/PolySynth.js#L211"
 		},
 		{
 			"description": "Set a member/attribute of the voices.",
@@ -7625,7 +7625,7 @@
 			},
 			"scope": "instance",
 			"name": "set",
-			"lineno": "Tone/instrument/PolySynth.js#L238"
+			"lineno": "Tone/instrument/PolySynth.js#L233"
 		},
 		{
 			"description": "Get the synth's attributes. Given no arguments get\n will return all available object properties and their corresponding\n values. Pass in a single attribute to retrieve or an array\n of attributes. The attribute strings can also include a \".\"\n to access deeper properties.",
@@ -7641,7 +7641,7 @@
 			],
 			"scope": "instance",
 			"name": "get",
-			"lineno": "Tone/instrument/PolySynth.js#L254"
+			"lineno": "Tone/instrument/PolySynth.js#L249"
 		},
 		{
 			"description": "Trigger the release portion of all the currently active voices.",
@@ -7664,7 +7664,7 @@
 			},
 			"scope": "instance",
 			"name": "releaseAll",
-			"lineno": "Tone/instrument/PolySynth.js#L263"
+			"lineno": "Tone/instrument/PolySynth.js#L258"
 		},
 		{
 			"description": "Clean up.",
@@ -7676,7 +7676,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/PolySynth.js#L275"
+			"lineno": "Tone/instrument/PolySynth.js#L270"
 		},
 		{
 			"description": "Unsync the instrument from the Transport",
@@ -12490,7 +12490,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/GrainPlayer.js#L306"
+			"lineno": "Tone/source/GrainPlayer.js#L319"
 		},
 		{
 			"description": "Stop the source at the specified time. If no time is given,\n stop the source now.",
@@ -15875,6 +15875,149 @@
 			"scope": "instance",
 			"name": "dispose",
 			"lineno": "Tone/component/Solo.js#L147"
+		},
+		{
+			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
+			"params": [
+				{
+					"type": [
+						"Tone",
+						"AudioParam",
+						"AudioNode"
+					],
+					"name": "unit"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which output to connect from",
+					"name": "outputNum"
+				},
+				{
+					"type": [
+						"number"
+					],
+					"optional": true,
+					"defaultvalue": 0,
+					"description": "optionally which input to connect to",
+					"name": "inputNum"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "connect",
+			"lineno": "Tone/core/AudioNode.js#L167",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "disconnect the output",
+			"params": [
+				{
+					"type": [
+						"Number",
+						"AudioNode"
+					],
+					"description": "Either the output index to disconnect\n                                  if the output is an array, or the\n                                  node to disconnect from.",
+					"name": "output"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "disconnect",
+			"lineno": "Tone/core/AudioNode.js#L184",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect the output of this node to the rest of the nodes in series.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"examples": [
+				"//connect a node to an effect, panVol and then to the master output\n node.chain(effect, panVol, Tone.Master);\n "
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "chain",
+			"lineno": "Tone/core/AudioNode.js#L205",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "connect the output of this node to the rest of the nodes in parallel.",
+			"params": [
+				{
+					"type": [
+						"AudioParam",
+						"Tone",
+						"AudioNode"
+					],
+					"name": "nodes"
+				}
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "fan",
+			"lineno": "Tone/core/AudioNode.js#L220",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "Connect 'this' to the master output. Shorthand for this.connect(Tone.Master)",
+			"examples": [
+				"//connect an oscillator to the master output\nvar osc = new Tone.Oscillator().toMaster();"
+			],
+			"returns": {
+				"type": [
+					"Tone.AudioNode"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "toMaster",
+			"lineno": "Tone/core/Master.js#L138",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Channel": [
+		{
+			"description": "clean up",
+			"returns": {
+				"type": [
+					"Tone.Channel"
+				],
+				"description": "this"
+			},
+			"scope": "instance",
+			"name": "dispose",
+			"lineno": "Tone/component/Channel.js#L120"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",

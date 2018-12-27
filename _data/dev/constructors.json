@@ -1675,6 +1675,29 @@
 		],
 		"extends": "Tone.AudioNode"
 	},
+	"Channel": {
+		"description": "Tone.Channel provides a channel strip interface with \n volume, pan, solo and mute controls.",
+		"params": [
+			{
+				"type": [
+					"Decibels"
+				],
+				"description": "The output volume.",
+				"name": "volume"
+			},
+			{
+				"type": [
+					"AudioRange"
+				],
+				"description": "the initial pan",
+				"name": "pan"
+			}
+		],
+		"examples": [
+			"//pan the incoming signal left and drop the volume\nvar channel = new Tone.Channel(-0.25, -12);"
+		],
+		"extends": "Tone.AudioNode"
+	},
 	"Limiter": {
 		"description": "Tone.Limiter will limit the loudness of an incoming signal.\n        It is composed of a Tone.Compressor with a fast attack\n        and release. Limiters are commonly used to safeguard against\n        signal clipping. Unlike a compressor, limiters do not provide\n        smooth gain reduction and almost completely prevent\n        additional gain above the threshold.",
 		"params": [

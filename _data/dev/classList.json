@@ -94,6 +94,7 @@
 		"FeedbackCombFilter",
 		"MultibandCompressor",
 		"Solo",
+		"Channel",
 		"Limiter",
 		"Mono",
 		"Meter",

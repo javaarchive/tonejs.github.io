@@ -6470,6 +6470,16 @@
 			"lineno": "Tone/source/GrainPlayer.js#L286"
 		},
 		{
+			"description": "If all the buffer is loaded",
+			"type": [
+				"Boolean"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "loaded",
+			"lineno": "Tone/source/GrainPlayer.js#L302"
+		},
+		{
 			"description": "Mute the output.",
 			"type": [
 				"boolean"
@@ -8650,6 +8660,122 @@
 			"scope": "instance",
 			"name": "muted",
 			"lineno": "Tone/component/Solo.js#L70"
+		},
+		{
+			"description": "Get the audio context belonging to this instance.",
+			"type": [
+				"Tone.Context"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "context",
+			"lineno": "Tone/core/AudioNode.js#L27",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelCount is the number of channels used when up-mixing and down-mixing\n connections to any inputs to the node. The default value is 2 except for\n specific nodes where its value is specially determined.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelCount",
+			"lineno": "Tone/core/AudioNode.js#L62",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelCountMode determines how channels will be counted when up-mixing and\n down-mixing connections to any inputs to the node.\n The default value is \"max\". This attribute has no effect for nodes with no inputs.",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelCountMode",
+			"lineno": "Tone/core/AudioNode.js#L81",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "channelInterpretation determines how individual channels will be treated\n when up-mixing and down-mixing connections to any inputs to the node.\n The default value is \"speakers\".",
+			"type": [
+				"String"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "channelInterpretation",
+			"lineno": "Tone/core/AudioNode.js#L99",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "The number of inputs feeding into the AudioNode.\n For source nodes, this will be 0.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "numberOfInputs",
+			"lineno": "Tone/core/AudioNode.js#L117",
+			"inherits": "Tone.AudioNode"
+		},
+		{
+			"description": "The number of outputs coming out of the AudioNode.",
+			"type": [
+				"Number"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "numberOfOutputs",
+			"lineno": "Tone/core/AudioNode.js#L139",
+			"inherits": "Tone.AudioNode"
+		}
+	],
+	"Channel": [
+		{
+			"description": "The L/R panning control.",
+			"type": [
+				"AudioRange"
+			],
+			"scope": "instance",
+			"name": "pan",
+			"lineno": "Tone/component/Channel.js#L43",
+			"signal": true
+		},
+		{
+			"description": "The volume control in decibels.",
+			"type": [
+				"Decibels"
+			],
+			"scope": "instance",
+			"name": "volume",
+			"lineno": "Tone/component/Channel.js#L50",
+			"signal": true
+		},
+		{
+			"description": "Solo/unsolo the channel. Soloing is only relative to other\nTone.Channels and Tone.Solos.",
+			"type": [
+				"Boolean"
+			],
+			"scope": "instance",
+			"name": "solo",
+			"lineno": "Tone/component/Channel.js#L71"
+		},
+		{
+			"description": "If the current instance is muted, i.e. another instance is soloed,\n or the channel is muted",
+			"type": [
+				"Boolean"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "muted",
+			"lineno": "Tone/component/Channel.js#L87"
+		},
+		{
+			"description": "Mute/unmute the volume",
+			"type": [
+				"Boolean"
+			],
+			"scope": "instance",
+			"name": "mute",
+			"lineno": "Tone/component/Channel.js#L101"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",

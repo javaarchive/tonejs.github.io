@@ -386,6 +386,10 @@
 		"AudioNode",
 		"Tone"
 	],
+	"Channel": [
+		"AudioNode",
+		"Tone"
+	],
 	"Limiter": [
 		"AudioNode",
 		"Tone"

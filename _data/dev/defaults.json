@@ -522,6 +522,12 @@
 	"Solo": {
 		"solo": false
 	},
+	"Channel": {
+		"pan": 0,
+		"volume": 0,
+		"mute": false,
+		"solo": false
+	},
 	"Limiter": {
 		"threshold": -12
 	},
