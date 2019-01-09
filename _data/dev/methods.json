@@ -663,7 +663,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/effect/StereoWidener.js#L91"
+			"lineno": "Tone/effect/StereoWidener.js#L92"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
