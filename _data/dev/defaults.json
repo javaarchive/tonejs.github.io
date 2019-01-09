@@ -348,7 +348,9 @@
 		"phase": 0,
 		"spread": 20,
 		"count": 3,
-		"type": "sawtooth"
+		"type": "sawtooth",
+		"partials": "[]",
+		"partialCount": 0
 	},
 	"Players": {
 		"volume": 0,

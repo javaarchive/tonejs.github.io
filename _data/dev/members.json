@@ -3995,7 +3995,7 @@
 			],
 			"scope": "instance",
 			"name": "filterEnvelope",
-			"lineno": "Tone/instrument/MonoSynth.js#L63"
+			"lineno": "Tone/instrument/MonoSynth.js#L64"
 		},
 		{
 			"description": "The amplitude envelope.",
@@ -4004,7 +4004,7 @@
 			],
 			"scope": "instance",
 			"name": "envelope",
-			"lineno": "Tone/instrument/MonoSynth.js#L69"
+			"lineno": "Tone/instrument/MonoSynth.js#L70"
 		},
 		{
 			"description": "The glide time between notes.",
@@ -4723,7 +4723,7 @@
 			],
 			"scope": "instance",
 			"name": "type",
-			"lineno": "Tone/source/FatOscillator.js#L142"
+			"lineno": "Tone/source/FatOscillator.js#L150"
 		},
 		{
 			"description": "The detune spread between the oscillators. If \"count\" is\nset to 3 oscillators and the \"spread\" is set to 40,\nthe three oscillators would be detuned like this: [-20, 0, 20]\nfor a total detune spread of 40 cents.",
@@ -4732,7 +4732,7 @@
 			],
 			"scope": "instance",
 			"name": "spread",
-			"lineno": "Tone/source/FatOscillator.js#L160"
+			"lineno": "Tone/source/FatOscillator.js#L168"
 		},
 		{
 			"description": "The number of detuned oscillators",
@@ -4741,7 +4741,7 @@
 			],
 			"scope": "instance",
 			"name": "count",
-			"lineno": "Tone/source/FatOscillator.js#L185"
+			"lineno": "Tone/source/FatOscillator.js#L193"
 		},
 		{
 			"description": "The phase of the oscillator in degrees.",
@@ -4750,7 +4750,19 @@
 			],
 			"scope": "instance",
 			"name": "phase",
-			"lineno": "Tone/source/FatOscillator.js#L228"
+			"lineno": "Tone/source/FatOscillator.js#L237"
+		},
+		{
+			"description": "The oscillator type without the partialsCount appended to the end",
+			"type": [
+				"string"
+			],
+			"examples": [
+				"osc.type = 'sine2'\nosc.baseType //'sine'\nosc.partialCount = 2"
+			],
+			"scope": "instance",
+			"name": "baseType",
+			"lineno": "Tone/source/FatOscillator.js#L255"
 		},
 		{
 			"description": "The partials of the carrier waveform. A partial represents\nthe amplitude at a harmonic. The first harmonic is the\nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series.\nSetting this value will automatically set the type to \"custom\".\nThe value is an empty array when the type is not \"custom\".",
@@ -4762,7 +4774,16 @@
 			],
 			"scope": "instance",
 			"name": "partials",
-			"lineno": "Tone/source/FatOscillator.js#L246"
+			"lineno": "Tone/source/FatOscillator.js#L277"
+		},
+		{
+			"description": "'partialCount' offers an alternative way to set the number of used partials. \nWhen partialCount is 0, the maximum number of partials are used when representing\nthe waveform using the periodicWave. When 'partials' is set, this value is \nnot settable, but equals the length of the partials array.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "partialCount",
+			"lineno": "Tone/source/FatOscillator.js#L303"
 		},
 		{
 			"description": "Mute the output.",
@@ -5200,8 +5221,19 @@
 			],
 			"scope": "instance",
 			"name": "sourceType",
-			"lineno": "Tone/source/OmniOscillator.js#L300",
-			"signal": true
+			"lineno": "Tone/source/OmniOscillator.js#L300"
+		},
+		{
+			"description": "The base type of the oscillator.",
+			"type": [
+				"String"
+			],
+			"examples": [
+				"var omniOsc = new Tone.OmniOscillator(440, \"fmsquare4\");\nomniOsc.sourceType // 'fm'\nomniOsc.baseType //'square'\nomniOsc.partialCount //4"
+			],
+			"scope": "instance",
+			"name": "baseType",
+			"lineno": "Tone/source/OmniOscillator.js#L337"
 		},
 		{
 			"description": "The width of the oscillator (only if the oscillator is set to \"pulse\")",
@@ -5213,7 +5245,7 @@
 			],
 			"scope": "instance",
 			"name": "width",
-			"lineno": "Tone/source/OmniOscillator.js#L338",
+			"lineno": "Tone/source/OmniOscillator.js#L359",
 			"signal": true
 		},
 		{
@@ -5223,7 +5255,7 @@
 			],
 			"scope": "instance",
 			"name": "count",
-			"lineno": "Tone/source/OmniOscillator.js#L357"
+			"lineno": "Tone/source/OmniOscillator.js#L378"
 		},
 		{
 			"description": "The detune spread between the oscillators. If \"count\" is\nset to 3 oscillators and the \"spread\" is set to 40,\nthe three oscillators would be detuned like this: [-20, 0, 20]\nfor a total detune spread of 40 cents. See Tone.FatOscillator\nfor more info.",
@@ -5232,7 +5264,7 @@
 			],
 			"scope": "instance",
 			"name": "spread",
-			"lineno": "Tone/source/OmniOscillator.js#L376"
+			"lineno": "Tone/source/OmniOscillator.js#L397"
 		},
 		{
 			"description": "The type of the modulator oscillator. Only if the oscillator\nis set to \"am\" or \"fm\" types. see. Tone.AMOscillator or Tone.FMOscillator\nfor more info.",
@@ -5241,7 +5273,7 @@
 			],
 			"scope": "instance",
 			"name": "modulationType",
-			"lineno": "Tone/source/OmniOscillator.js#L399"
+			"lineno": "Tone/source/OmniOscillator.js#L420"
 		},
 		{
 			"description": "Harmonicity is the frequency ratio between the carrier and the modulator oscillators.\n A harmonicity of 1 gives both oscillators the same frequency.\n Harmonicity = 2 means a change of an octave. See Tone.AMOscillator or Tone.FMOscillator\n for more info.",
@@ -5250,7 +5282,7 @@
 			],
 			"scope": "instance",
 			"name": "harmonicity",
-			"lineno": "Tone/source/OmniOscillator.js#L437",
+			"lineno": "Tone/source/OmniOscillator.js#L458",
 			"signal": true
 		},
 		{
@@ -5263,7 +5295,7 @@
 			],
 			"scope": "instance",
 			"name": "modulationFrequency",
-			"lineno": "Tone/source/OmniOscillator.js#L455",
+			"lineno": "Tone/source/OmniOscillator.js#L476",
 			"signal": true
 		},
 		{
@@ -5433,13 +5465,23 @@
 			"lineno": "Tone/source/PWMOscillator.js#L125"
 		},
 		{
+			"description": "The baseType of the oscillator. Always returns \"pwm\".",
+			"type": [
+				"string"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "baseType",
+			"lineno": "Tone/source/PWMOscillator.js#L138"
+		},
+		{
 			"description": "The phase of the oscillator in degrees.",
 			"type": [
 				"number"
 			],
 			"scope": "instance",
 			"name": "phase",
-			"lineno": "Tone/source/PWMOscillator.js#L151"
+			"lineno": "Tone/source/PWMOscillator.js#L164"
 		},
 		{
 			"description": "Mute the output.",
@@ -5970,13 +6012,34 @@
 			"lineno": "Tone/source/AMOscillator.js#L137"
 		},
 		{
+			"description": "The oscillator type without the partialsCount appended to the end",
+			"type": [
+				"string"
+			],
+			"examples": [
+				"osc.type = 'sine2'\nosc.baseType //'sine'\nosc.partialCount = 2"
+			],
+			"scope": "instance",
+			"name": "baseType",
+			"lineno": "Tone/source/AMOscillator.js#L152"
+		},
+		{
+			"description": "'partialCount' offers an alternative way to set the number of used partials. \nWhen partialCount is 0, the maximum number of partials are used when representing\nthe waveform using the periodicWave. When 'partials' is set, this value is \nnot settable, but equals the length of the partials array.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "partialCount",
+			"lineno": "Tone/source/AMOscillator.js#L171"
+		},
+		{
 			"description": "The type of the modulator oscillator",
 			"type": [
 				"string"
 			],
 			"scope": "instance",
 			"name": "modulationType",
-			"lineno": "Tone/source/AMOscillator.js#L152"
+			"lineno": "Tone/source/AMOscillator.js#L189"
 		},
 		{
 			"description": "The phase of the oscillator in degrees.",
@@ -5985,7 +6048,7 @@
 			],
 			"scope": "instance",
 			"name": "phase",
-			"lineno": "Tone/source/AMOscillator.js#L167"
+			"lineno": "Tone/source/AMOscillator.js#L204"
 		},
 		{
 			"description": "The partials of the carrier waveform. A partial represents\nthe amplitude at a harmonic. The first harmonic is the\nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series.\nSetting this value will automatically set the type to \"custom\".\nThe value is an empty array when the type is not \"custom\".",
@@ -5997,20 +6060,7 @@
 			],
 			"scope": "instance",
 			"name": "partials",
-			"lineno": "Tone/source/AMOscillator.js#L183"
-		},
-		{
-			"description": "'partialCount' offers an alternative way to set the number of used partials. \nWhen partialCount is 0, the maximum number of partials are used when representing\nthe waveform using the periodicWave. When 'partials' is set, this value is \nnot settable, but equals the length of the partials array.",
-			"type": [
-				"Number"
-			],
-			"examples": [
-				"osc.type = 'sine'\nosc.partialCount = 3\n//is equivalent to\nosc.type = 'sine3'"
-			],
-			"scope": "instance",
-			"name": "partialCount",
-			"lineno": "Tone/source/Oscillator.js#L231",
-			"inherits": "Tone.Oscillator"
+			"lineno": "Tone/source/AMOscillator.js#L220"
 		},
 		{
 			"description": "Mute the output.",
@@ -6275,7 +6325,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "state",
-			"lineno": "Tone/source/UserMedia.js#L168"
+			"lineno": "Tone/source/UserMedia.js#L172"
 		},
 		{
 			"description": "Returns an identifier for the represented device that is\n\tpersisted across sessions. It is un-guessable by other applications and\n\tunique to the origin of the calling application. It is reset when the\n\tuser clears cookies (for Private Browsing, a different identifier is\n\tused that is not persisted across sessions). Returns undefined when the\n\tdevice is not open.",
@@ -6285,7 +6335,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "deviceId",
-			"lineno": "Tone/source/UserMedia.js#L182"
+			"lineno": "Tone/source/UserMedia.js#L186"
 		},
 		{
 			"description": "Returns a group identifier. Two devices have the\n\tsame group identifier if they belong to the same physical device.\n\tReturns undefined when the device is not open.",
@@ -6295,7 +6345,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "groupId",
-			"lineno": "Tone/source/UserMedia.js#L202"
+			"lineno": "Tone/source/UserMedia.js#L206"
 		},
 		{
 			"description": "Returns a label describing this device (for example \"Built-in Microphone\").\n\tReturns undefined when the device is not open or label is not available\n\tbecause of permissions.",
@@ -6305,7 +6355,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "groupId",
-			"lineno": "Tone/source/UserMedia.js#L219"
+			"lineno": "Tone/source/UserMedia.js#L223"
 		},
 		{
 			"description": "Mute the output.",
@@ -6317,7 +6367,7 @@
 			],
 			"scope": "instance",
 			"name": "mute",
-			"lineno": "Tone/source/UserMedia.js#L236"
+			"lineno": "Tone/source/UserMedia.js#L240"
 		},
 		{
 			"description": "If getUserMedia is supported by the browser.",
@@ -6327,7 +6377,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "supported",
-			"lineno": "Tone/source/UserMedia.js#L268"
+			"lineno": "Tone/source/UserMedia.js#L272"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -6787,6 +6837,18 @@
 			"lineno": "Tone/source/Oscillator.js#L196"
 		},
 		{
+			"description": "The oscillator type without the partialsCount appended to the end",
+			"type": [
+				"string"
+			],
+			"examples": [
+				"osc.type = 'sine2'\nosc.baseType //'sine'\nosc.partialCount = 2"
+			],
+			"scope": "instance",
+			"name": "baseType",
+			"lineno": "Tone/source/Oscillator.js#L231"
+		},
+		{
 			"description": "'partialCount' offers an alternative way to set the number of used partials. \nWhen partialCount is 0, the maximum number of partials are used when representing\nthe waveform using the periodicWave. When 'partials' is set, this value is \nnot settable, but equals the length of the partials array.",
 			"type": [
 				"Number"
@@ -6796,7 +6858,7 @@
 			],
 			"scope": "instance",
 			"name": "partialCount",
-			"lineno": "Tone/source/Oscillator.js#L231"
+			"lineno": "Tone/source/Oscillator.js#L254"
 		},
 		{
 			"description": "The partials of the waveform. A partial represents\nthe amplitude at a harmonic. The first harmonic is the\nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series.\nSetting this value will automatically set the type to \"custom\".\nThe value is an empty array when the type is not \"custom\".",
@@ -6808,7 +6870,7 @@
 			],
 			"scope": "instance",
 			"name": "partials",
-			"lineno": "Tone/source/Oscillator.js#L373"
+			"lineno": "Tone/source/Oscillator.js#L411"
 		},
 		{
 			"description": "The phase of the oscillator in degrees.",
@@ -6820,7 +6882,7 @@
 			],
 			"scope": "instance",
 			"name": "phase",
-			"lineno": "Tone/source/Oscillator.js#L396"
+			"lineno": "Tone/source/Oscillator.js#L434"
 		},
 		{
 			"description": "Mute the output.",
@@ -6996,6 +7058,16 @@
 			"scope": "instance",
 			"name": "type",
 			"lineno": "Tone/source/PulseOscillator.js#L149"
+		},
+		{
+			"description": "The baseType of the oscillator. Always returns \"pulse\".",
+			"type": [
+				"string"
+			],
+			"readonly": true,
+			"scope": "instance",
+			"name": "baseType",
+			"lineno": "Tone/source/PulseOscillator.js#L162"
 		},
 		{
 			"description": "Mute the output.",
@@ -7176,13 +7248,34 @@
 			"lineno": "Tone/source/FMOscillator.js#L144"
 		},
 		{
+			"description": "The oscillator type without the partialsCount appended to the end",
+			"type": [
+				"string"
+			],
+			"examples": [
+				"osc.type = 'sine2'\nosc.baseType //'sine'\nosc.partialCount = 2"
+			],
+			"scope": "instance",
+			"name": "baseType",
+			"lineno": "Tone/source/FMOscillator.js#L159"
+		},
+		{
+			"description": "'partialCount' offers an alternative way to set the number of used partials. \nWhen partialCount is 0, the maximum number of partials are used when representing\nthe waveform using the periodicWave. When 'partials' is set, this value is \nnot settable, but equals the length of the partials array.",
+			"type": [
+				"Number"
+			],
+			"scope": "instance",
+			"name": "partialCount",
+			"lineno": "Tone/source/FMOscillator.js#L178"
+		},
+		{
 			"description": "The type of the modulator oscillator",
 			"type": [
 				"String"
 			],
 			"scope": "instance",
 			"name": "modulationType",
-			"lineno": "Tone/source/FMOscillator.js#L159"
+			"lineno": "Tone/source/FMOscillator.js#L196"
 		},
 		{
 			"description": "The phase of the oscillator in degrees.",
@@ -7191,7 +7284,7 @@
 			],
 			"scope": "instance",
 			"name": "phase",
-			"lineno": "Tone/source/FMOscillator.js#L174"
+			"lineno": "Tone/source/FMOscillator.js#L211"
 		},
 		{
 			"description": "The partials of the carrier waveform. A partial represents\nthe amplitude at a harmonic. The first harmonic is the\nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series.\nSetting this value will automatically set the type to \"custom\".\nThe value is an empty array when the type is not \"custom\".",
@@ -7203,7 +7296,7 @@
 			],
 			"scope": "instance",
 			"name": "partials",
-			"lineno": "Tone/source/FMOscillator.js#L190"
+			"lineno": "Tone/source/FMOscillator.js#L227"
 		},
 		{
 			"description": "Mute the output.",

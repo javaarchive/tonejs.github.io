@@ -6645,7 +6645,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/MonoSynth.js#L149"
+			"lineno": "Tone/instrument/MonoSynth.js#L150"
 		},
 		{
 			"description": "Trigger the attack of the note optionally with a given velocity.",
@@ -10153,7 +10153,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/FatOscillator.js#L276"
+			"lineno": "Tone/source/FatOscillator.js#L329"
 		},
 		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
@@ -10679,7 +10679,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/OmniOscillator.js#L480"
+			"lineno": "Tone/source/OmniOscillator.js#L501"
 		},
 		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
@@ -10906,7 +10906,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/PWMOscillator.js#L170"
+			"lineno": "Tone/source/PWMOscillator.js#L183"
 		},
 		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
@@ -11759,7 +11759,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/AMOscillator.js#L209"
+			"lineno": "Tone/source/AMOscillator.js#L246"
 		},
 		{
 			"description": "Sync the signal to the Transport's bpm. Any changes to the transports bpm,\n will also affect the oscillators frequency.",
@@ -12280,7 +12280,7 @@
 			},
 			"scope": "instance",
 			"name": "close",
-			"lineno": "Tone/source/UserMedia.js#L137"
+			"lineno": "Tone/source/UserMedia.js#L141"
 		},
 		{
 			"description": "Returns a promise which resolves with the list of audio input devices available.",
@@ -12295,7 +12295,7 @@
 			},
 			"scope": "static",
 			"name": "enumerateDevices",
-			"lineno": "Tone/source/UserMedia.js#L160"
+			"lineno": "Tone/source/UserMedia.js#L164"
 		},
 		{
 			"description": "Clean up.",
@@ -12307,7 +12307,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/UserMedia.js#L258"
+			"lineno": "Tone/source/UserMedia.js#L262"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -13170,7 +13170,7 @@
 			},
 			"scope": "instance",
 			"name": "restart",
-			"lineno": "Tone/source/Oscillator.js#L163"
+			"lineno": "Tone/source/Oscillator.js#L161"
 		},
 		{
 			"description": "Sync the signal to the Transport's bpm. Any changes to the transports bpm,\n will also affect the oscillators frequency.",
@@ -13200,6 +13200,17 @@
 			"lineno": "Tone/source/Oscillator.js#L191"
 		},
 		{
+			"description": "Get the object's attributes. Given no arguments get\n will return all available object properties and their corresponding\n values.",
+			"returns": {
+				"type": [
+					"Object"
+				]
+			},
+			"scope": "instance",
+			"name": "get",
+			"lineno": "Tone/source/Oscillator.js#L295"
+		},
+		{
 			"description": "Dispose and disconnect.",
 			"returns": {
 				"type": [
@@ -13209,7 +13220,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/Oscillator.js#L419"
+			"lineno": "Tone/source/Oscillator.js#L457"
 		},
 		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
@@ -13436,7 +13447,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/PulseOscillator.js#L179"
+			"lineno": "Tone/source/PulseOscillator.js#L192"
 		},
 		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
@@ -13663,7 +13674,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/FMOscillator.js#L216"
+			"lineno": "Tone/source/FMOscillator.js#L253"
 		},
 		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
@@ -18714,6 +18725,29 @@
 	],
 	"Filter": [
 		{
+			"description": "Get the frequency response curve. This curve represets how the filter\nresponses to frequencies between 20hz-20khz.",
+			"params": [
+				{
+					"type": [
+						"Number"
+					],
+					"optional": true,
+					"defaultvalue": 128,
+					"description": "The number of values to return",
+					"name": "len"
+				}
+			],
+			"returns": {
+				"type": [
+					"Float32Array"
+				],
+				"description": "The frequency response curve between 20-20k"
+			},
+			"scope": "instance",
+			"name": "getFrequencyResponse",
+			"lineno": "Tone/component/Filter.js#L173"
+		},
+		{
 			"description": "Clean up.",
 			"returns": {
 				"type": [
@@ -18723,7 +18757,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/component/Filter.js#L171"
+			"lineno": "Tone/component/Filter.js#L205"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
