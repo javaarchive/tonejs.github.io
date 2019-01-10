@@ -38,9 +38,10 @@ git add ./examples
 git commit -m "updating to latest examples $COMMIT_MESSAGE" -m "Automated commit"
 
 # and the build
-# cp -a $TMP_TONE/build/. $SITE_DIR/build/
-# git add ./build/
-# git commit -m "updating to latest build $COMMIT_MESSAGE" -m "Automated commit"
+npm install --prefix $SITE_DIR/tmp tone
+cp -a $SITE_DIR/tmp/node_modules/tone/build/ $SITE_DIR/build/
+git add ./build/
+git commit -m "updating to latest build $COMMIT_MESSAGE" -m "Automated commit"
 
 # push the changes
 # git push -f
