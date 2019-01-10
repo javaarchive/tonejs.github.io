@@ -12,7 +12,7 @@ JSDOC_OUTPUT=docs.json
 jsdoc -X $TONE_FILES > $JSDOC_OUTPUT
 
 # get the version number
-VERSION=$(node version.js $JSDOC_OUTPUT)
+VERSION=$(node version.js)
 
 if [ "${2}" = "dev" ]; then
 	VERSION_DIR=dev

@@ -1,12 +1,12 @@
-const fs = require('fs')
-const child_process = require('child_process')
+const semver = require("semver");
+const { resolve } = require("path");
+const { execSync } = require("child_process");
 
-// open the passed in file
-const data = JSON.parse(fs.readFileSync(process.argv[2]))
+const version = execSync("npm show tone version").toString();
 
-data.forEach(datum => {
-	if (datum.name === 'version' && datum.scope === "static"){
-		const version = datum.meta.code.value
-		console.log(version)
-	}
-})
+const major = parseInt(semver(version).major)
+if (major === 0){
+	console.log(`r${semver(version).minor}`)
+} else {
+	console.log(`r${major}`)
+}

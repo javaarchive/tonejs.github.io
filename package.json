@@ -13,6 +13,7 @@
   "author": "Yotam Mann",
   "license": "MIT",
   "devDependencies": {
-    "jsdoc": "^3.5.5"
+    "jsdoc": "^3.5.5",
+    "semver": "^5.6.0"
   }
 }
