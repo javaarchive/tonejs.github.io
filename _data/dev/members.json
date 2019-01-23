@@ -6225,7 +6225,7 @@
 			],
 			"scope": "instance",
 			"name": "type",
-			"lineno": "Tone/source/OscillatorNode.js#L193"
+			"lineno": "Tone/source/OscillatorNode.js#L195"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",

@@ -10221,7 +10221,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L186",
+			"lineno": "Tone/source/Source.js#L187",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -10238,7 +10238,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L222",
+			"lineno": "Tone/source/Source.js#L224",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -10251,7 +10251,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L255",
+			"lineno": "Tone/source/Source.js#L257",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -10747,7 +10747,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L186",
+			"lineno": "Tone/source/Source.js#L187",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -10764,7 +10764,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L222",
+			"lineno": "Tone/source/Source.js#L224",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -10777,7 +10777,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L255",
+			"lineno": "Tone/source/Source.js#L257",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -10974,7 +10974,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L186",
+			"lineno": "Tone/source/Source.js#L187",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -10991,7 +10991,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L222",
+			"lineno": "Tone/source/Source.js#L224",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -11004,7 +11004,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L255",
+			"lineno": "Tone/source/Source.js#L257",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -11345,7 +11345,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L186",
+			"lineno": "Tone/source/Source.js#L187",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -11362,7 +11362,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L222",
+			"lineno": "Tone/source/Source.js#L224",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -11375,7 +11375,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L255",
+			"lineno": "Tone/source/Source.js#L257",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -11856,7 +11856,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L186",
+			"lineno": "Tone/source/Source.js#L187",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -11873,7 +11873,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L222",
+			"lineno": "Tone/source/Source.js#L224",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -11886,7 +11886,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L255",
+			"lineno": "Tone/source/Source.js#L257",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -12082,7 +12082,7 @@
 			},
 			"scope": "instance",
 			"name": "setPeriodicWave",
-			"lineno": "Tone/source/OscillatorNode.js#L148"
+			"lineno": "Tone/source/OscillatorNode.js#L149"
 		},
 		{
 			"description": "Stop the oscillator node at the given time",
@@ -12104,7 +12104,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/OscillatorNode.js#L158"
+			"lineno": "Tone/source/OscillatorNode.js#L159"
 		},
 		{
 			"description": "Cancel a scheduled stop event",
@@ -12116,7 +12116,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelStop",
-			"lineno": "Tone/source/OscillatorNode.js#L183"
+			"lineno": "Tone/source/OscillatorNode.js#L185"
 		},
 		{
 			"description": "Clean up.",
@@ -12128,7 +12128,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/OscillatorNode.js#L212"
+			"lineno": "Tone/source/OscillatorNode.js#L214"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -12531,7 +12531,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L186",
+			"lineno": "Tone/source/Source.js#L187",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -12548,7 +12548,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L222",
+			"lineno": "Tone/source/Source.js#L224",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -12561,7 +12561,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L255",
+			"lineno": "Tone/source/Source.js#L257",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -12779,7 +12779,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L186",
+			"lineno": "Tone/source/Source.js#L187",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -12796,7 +12796,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L222",
+			"lineno": "Tone/source/Source.js#L224",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -12809,7 +12809,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L255",
+			"lineno": "Tone/source/Source.js#L257",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -12993,7 +12993,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L186"
+			"lineno": "Tone/source/Source.js#L187"
 		},
 		{
 			"description": "Sync the source to the Transport so that all subsequent\n calls to `start` and `stop` are synced to the TransportTime\n instead of the AudioContext time.",
@@ -13009,7 +13009,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L222"
+			"lineno": "Tone/source/Source.js#L224"
 		},
 		{
 			"description": "Unsync the source to the Transport. See Tone.Source.sync",
@@ -13021,7 +13021,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L255"
+			"lineno": "Tone/source/Source.js#L257"
 		},
 		{
 			"description": "Clean up.",
@@ -13033,7 +13033,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/Source.js#L275"
+			"lineno": "Tone/source/Source.js#L277"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -13288,7 +13288,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L186",
+			"lineno": "Tone/source/Source.js#L187",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -13305,7 +13305,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L222",
+			"lineno": "Tone/source/Source.js#L224",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -13318,7 +13318,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L255",
+			"lineno": "Tone/source/Source.js#L257",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -13515,7 +13515,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L186",
+			"lineno": "Tone/source/Source.js#L187",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -13532,7 +13532,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L222",
+			"lineno": "Tone/source/Source.js#L224",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -13545,7 +13545,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L255",
+			"lineno": "Tone/source/Source.js#L257",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -13742,7 +13742,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/Source.js#L186",
+			"lineno": "Tone/source/Source.js#L187",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -13759,7 +13759,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/source/Source.js#L222",
+			"lineno": "Tone/source/Source.js#L224",
 			"inherits": "Tone.Source"
 		},
 		{
@@ -13772,7 +13772,7 @@
 			},
 			"scope": "instance",
 			"name": "unsync",
-			"lineno": "Tone/source/Source.js#L255",
+			"lineno": "Tone/source/Source.js#L257",
 			"inherits": "Tone.Source"
 		},
 		{
