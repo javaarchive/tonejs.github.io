@@ -1503,6 +1503,17 @@
 	},
 	"Split": {
 		"description": "Tone.Split splits an incoming signal into left and right channels.",
+		"params": [
+			{
+				"type": [
+					"number"
+				],
+				"optional": true,
+				"defaultvalue": 2,
+				"description": "The number of channels to merge.",
+				"name": "channels"
+			}
+		],
 		"examples": [
 			"var split = new Tone.Split();\nstereoSignal.connect(split);"
 		],
@@ -2033,6 +2044,17 @@
 	},
 	"Merge": {
 		"description": "Tone.Merge brings two signals into the left and right\n         channels of a single stereo channel.",
+		"params": [
+			{
+				"type": [
+					"number"
+				],
+				"optional": true,
+				"defaultvalue": 2,
+				"description": "The number of channels to merge.",
+				"name": "channels"
+			}
+		],
 		"examples": [
 			"var merge = new Tone.Merge().toMaster();\n//routing a sine tone in the left channel\n//and noise in the right channel\nvar osc = new Tone.Oscillator().connect(merge.left);\nvar noise = new Tone.Noise().connect(merge.right);\n//starting our oscillators\nnoise.start();\nosc.start();"
 		],
