@@ -35,9 +35,9 @@
 		"value": "audioRange"
 	},
 	{
-		"description": "A number representing a midi note.",
-		"name": "MIDI",
-		"value": "midi"
+		"description": "Frequency can be described similar to time, except ultimately the\n values are converted to frequency instead of seconds. A number\n is taken literally as the value in hertz. Additionally any of the\n Time encodings can be used. Note names in the form\n of NOTE OCTAVE (i.e. C4) are also accepted and converted to their\n frequency value.",
+		"name": "Frequency",
+		"value": "frequency"
 	},
 	{
 		"description": "Normal values are within the range [0, 1].",
@@ -55,14 +55,14 @@
 		"value": "hertz"
 	},
 	{
-		"description": "Frequency can be described similar to time, except ultimately the\n values are converted to frequency instead of seconds. A number\n is taken literally as the value in hertz. Additionally any of the\n Time encodings can be used. Note names in the form\n of NOTE OCTAVE (i.e. C4) are also accepted and converted to their\n frequency value.",
-		"name": "Frequency",
-		"value": "frequency"
-	},
-	{
 		"description": "Half-step note increments, i.e. 12 is an octave above the root. and 1 is a half-step up.",
 		"name": "Interval",
 		"value": "interval"
+	},
+	{
+		"description": "A number representing a midi note.",
+		"name": "MIDI",
+		"value": "midi"
 	},
 	{
 		"description": "Angle between 0 and 360.",
@@ -108,5 +108,8 @@
 		"description": "TransportTime describes a position along the Transport's timeline. It is\n similar to Time in that it uses all the same encodings, but TransportTime specifically\n pertains to the Transport's timeline, which is startable, stoppable, loopable, and seekable.\n [Read more](https://github.com/Tonejs/Tone.js/wiki/TransportTime)",
 		"name": "TransportTime",
 		"value": "transportTime"
+	},
+	{
+		"name": "function"
 	}
 ]

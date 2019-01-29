@@ -634,7 +634,7 @@
 				"type": [
 					"function"
 				],
-				"description": "The callback to invoke with the\n                            event.",
+				"description": "The callback to invoke with the event.",
 				"name": "callback"
 			},
 			{
