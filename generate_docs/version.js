@@ -8,5 +8,5 @@ const major = parseInt(semver(version).major)
 if (major === 0){
 	console.log(`r${semver(version).minor}`)
 } else {
-	console.log(`r${major}`)
+	console.log(version)
 }
