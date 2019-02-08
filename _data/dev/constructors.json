@@ -176,7 +176,7 @@
 			}
 		],
 		"examples": [
-			"var pingPong = new Tone.PingPongDelay(\"4n\", 0.2).toMaster();\nvar drum = new Tone.DrumSynth().connect(pingPong);\ndrum.triggerAttackRelease(\"C4\", \"32n\");"
+			"var pingPong = new Tone.PingPongDelay(\"4n\", 0.2).toMaster();\nvar drum = new Tone.MembraneSynth().connect(pingPong);\ndrum.triggerAttackRelease(\"C4\", \"32n\");"
 		],
 		"extends": "Tone.StereoXFeedbackEffect"
 	},
@@ -424,7 +424,7 @@
 			}
 		],
 		"examples": [
-			"var feedbackDelay = new Tone.FeedbackDelay(\"8n\", 0.5).toMaster();\nvar tom = new Tone.DrumSynth({\n\t\"octaves\" : 4,\n\t\"pitchDecay\" : 0.1\n}).connect(feedbackDelay);\ntom.triggerAttackRelease(\"A2\",\"32n\");"
+			"var feedbackDelay = new Tone.FeedbackDelay(\"8n\", 0.5).toMaster();\nvar tom = new Tone.MembraneSynth({\n\t\"octaves\" : 4,\n\t\"pitchDecay\" : 0.1\n}).connect(feedbackDelay);\ntom.triggerAttackRelease(\"A2\",\"32n\");"
 		],
 		"extends": "Tone.FeedbackEffect"
 	},
