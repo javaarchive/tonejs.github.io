@@ -10911,7 +10911,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/OmniOscillator.js#L506"
+			"lineno": "Tone/source/OmniOscillator.js#L520"
 		},
 		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
@@ -12551,7 +12551,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/UserMedia.js#L262"
+			"lineno": "Tone/source/UserMedia.js#L268"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -22411,7 +22411,7 @@
 			},
 			"scope": "instance",
 			"name": "get",
-			"lineno": "Tone/core/IntervalTimeline.js#L279"
+			"lineno": "Tone/core/IntervalTimeline.js#L278"
 		},
 		{
 			"description": "Iterate over everything in the timeline.",
@@ -22432,7 +22432,7 @@
 			},
 			"scope": "instance",
 			"name": "forEach",
-			"lineno": "Tone/core/IntervalTimeline.js#L301"
+			"lineno": "Tone/core/IntervalTimeline.js#L300"
 		},
 		{
 			"description": "Iterate over everything in the array in which the given time\n overlaps with the time and duration time of the event.",
@@ -22460,7 +22460,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachAtTime",
-			"lineno": "Tone/core/IntervalTimeline.js#L324"
+			"lineno": "Tone/core/IntervalTimeline.js#L323"
 		},
 		{
 			"description": "Iterate over everything in the array in which the time is greater\n than or equal to the given time.",
@@ -22488,7 +22488,7 @@
 			},
 			"scope": "instance",
 			"name": "forEachFrom",
-			"lineno": "Tone/core/IntervalTimeline.js#L345"
+			"lineno": "Tone/core/IntervalTimeline.js#L344"
 		},
 		{
 			"description": "Clean up",
@@ -22500,7 +22500,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/IntervalTimeline.js#L361"
+			"lineno": "Tone/core/IntervalTimeline.js#L360"
 		}
 	],
 	"IntervalNode": [
@@ -22516,7 +22516,7 @@
 			],
 			"scope": "instance",
 			"name": "insert",
-			"lineno": "Tone/core/IntervalTimeline.js#L414"
+			"lineno": "Tone/core/IntervalTimeline.js#L413"
 		},
 		{
 			"description": "Search the tree for nodes which overlap\n with the given point",
@@ -22538,7 +22538,7 @@
 			],
 			"scope": "instance",
 			"name": "search",
-			"lineno": "Tone/core/IntervalTimeline.js#L434"
+			"lineno": "Tone/core/IntervalTimeline.js#L433"
 		},
 		{
 			"description": "Search the tree for nodes which are less\n than the given point",
@@ -22560,7 +22560,7 @@
 			],
 			"scope": "instance",
 			"name": "searchAfter",
-			"lineno": "Tone/core/IntervalTimeline.js#L465"
+			"lineno": "Tone/core/IntervalTimeline.js#L464"
 		},
 		{
 			"description": "Invoke the callback on this element and both it's branches",
@@ -22574,19 +22574,19 @@
 			],
 			"scope": "instance",
 			"name": "traverse",
-			"lineno": "Tone/core/IntervalTimeline.js#L483"
+			"lineno": "Tone/core/IntervalTimeline.js#L482"
 		},
 		{
 			"description": "Update the height of the node",
 			"scope": "instance",
 			"name": "updateHeight",
-			"lineno": "Tone/core/IntervalTimeline.js#L496"
+			"lineno": "Tone/core/IntervalTimeline.js#L495"
 		},
 		{
 			"description": "Update the height of the node",
 			"scope": "instance",
 			"name": "updateMax",
-			"lineno": "Tone/core/IntervalTimeline.js#L511"
+			"lineno": "Tone/core/IntervalTimeline.js#L510"
 		},
 		{
 			"description": "The balance is how the leafs are distributed on the node",
@@ -22598,7 +22598,7 @@
 			},
 			"scope": "instance",
 			"name": "getBalance",
-			"lineno": "Tone/core/IntervalTimeline.js#L525"
+			"lineno": "Tone/core/IntervalTimeline.js#L524"
 		},
 		{
 			"returns": {
@@ -22609,13 +22609,13 @@
 			},
 			"scope": "instance",
 			"name": "isLeftChild",
-			"lineno": "Tone/core/IntervalTimeline.js#L541"
+			"lineno": "Tone/core/IntervalTimeline.js#L540"
 		},
 		{
 			"description": "null out references.",
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/IntervalTimeline.js#L584"
+			"lineno": "Tone/core/IntervalTimeline.js#L583"
 		}
 	],
 	"Param": [

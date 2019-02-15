@@ -5286,7 +5286,7 @@
 			],
 			"scope": "instance",
 			"name": "count",
-			"lineno": "Tone/source/OmniOscillator.js#L382"
+			"lineno": "Tone/source/OmniOscillator.js#L384"
 		},
 		{
 			"description": "The detune spread between the oscillators. If \"count\" is\nset to 3 oscillators and the \"spread\" is set to 40,\nthe three oscillators would be detuned like this: [-20, 0, 20]\nfor a total detune spread of 40 cents. See Tone.FatOscillator\nfor more info.",
@@ -5295,7 +5295,7 @@
 			],
 			"scope": "instance",
 			"name": "spread",
-			"lineno": "Tone/source/OmniOscillator.js#L401"
+			"lineno": "Tone/source/OmniOscillator.js#L405"
 		},
 		{
 			"description": "The type of the modulator oscillator. Only if the oscillator\nis set to \"am\" or \"fm\" types. see. Tone.AMOscillator or Tone.FMOscillator\nfor more info.",
@@ -5304,7 +5304,7 @@
 			],
 			"scope": "instance",
 			"name": "modulationType",
-			"lineno": "Tone/source/OmniOscillator.js#L424"
+			"lineno": "Tone/source/OmniOscillator.js#L430"
 		},
 		{
 			"description": "The modulation index which is in essence the depth or amount of the modulation. In other terms it is the\nratio of the frequency of the modulating signal (mf) to the amplitude of the\nmodulating signal (ma) -- as in ma/mf.\nSee Tone.FMOscillator for more info.",
@@ -5313,7 +5313,7 @@
 			],
 			"scope": "instance",
 			"name": "modulationIndex",
-			"lineno": "Tone/source/OmniOscillator.js#L445",
+			"lineno": "Tone/source/OmniOscillator.js#L453",
 			"signal": true
 		},
 		{
@@ -5323,7 +5323,7 @@
 			],
 			"scope": "instance",
 			"name": "harmonicity",
-			"lineno": "Tone/source/OmniOscillator.js#L463",
+			"lineno": "Tone/source/OmniOscillator.js#L473",
 			"signal": true
 		},
 		{
@@ -5336,7 +5336,7 @@
 			],
 			"scope": "instance",
 			"name": "modulationFrequency",
-			"lineno": "Tone/source/OmniOscillator.js#L481",
+			"lineno": "Tone/source/OmniOscillator.js#L493",
 			"signal": true
 		},
 		{
@@ -6386,7 +6386,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "groupId",
-			"lineno": "Tone/source/UserMedia.js#L206"
+			"lineno": "Tone/source/UserMedia.js#L208"
 		},
 		{
 			"description": "Returns a label describing this device (for example \"Built-in Microphone\").\n\tReturns undefined when the device is not open or label is not available\n\tbecause of permissions.",
@@ -6396,7 +6396,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "groupId",
-			"lineno": "Tone/source/UserMedia.js#L223"
+			"lineno": "Tone/source/UserMedia.js#L227"
 		},
 		{
 			"description": "Mute the output.",
@@ -6408,7 +6408,7 @@
 			],
 			"scope": "instance",
 			"name": "mute",
-			"lineno": "Tone/source/UserMedia.js#L240"
+			"lineno": "Tone/source/UserMedia.js#L246"
 		},
 		{
 			"description": "If getUserMedia is supported by the browser.",
@@ -6418,7 +6418,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "supported",
-			"lineno": "Tone/source/UserMedia.js#L272"
+			"lineno": "Tone/source/UserMedia.js#L278"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
