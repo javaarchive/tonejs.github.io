@@ -867,7 +867,7 @@
 			],
 			"returns": {
 				"type": [
-					"Tone.AutoFilter"
+					"Tone.Tremolo"
 				],
 				"description": "this"
 			},
@@ -11854,7 +11854,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/BufferSource.js#L388"
+			"lineno": "Tone/source/BufferSource.js#L396"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -12014,7 +12014,7 @@
 			},
 			"scope": "instance",
 			"name": "syncFrequency",
-			"lineno": "Tone/source/Oscillator.js#L177",
+			"lineno": "Tone/source/Oscillator.js#L192",
 			"inherits": "Tone.Oscillator"
 		},
 		{
@@ -12027,7 +12027,7 @@
 			},
 			"scope": "instance",
 			"name": "unsyncFrequency",
-			"lineno": "Tone/source/Oscillator.js#L187",
+			"lineno": "Tone/source/Oscillator.js#L202",
 			"inherits": "Tone.Oscillator"
 		},
 		{
@@ -12343,7 +12343,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelStop",
-			"lineno": "Tone/source/OscillatorNode.js#L189"
+			"lineno": "Tone/source/OscillatorNode.js#L195"
 		},
 		{
 			"description": "Clean up.",
@@ -12355,7 +12355,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/OscillatorNode.js#L218"
+			"lineno": "Tone/source/OscillatorNode.js#L224"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -13422,7 +13422,7 @@
 			},
 			"scope": "instance",
 			"name": "restart",
-			"lineno": "Tone/source/Oscillator.js#L157"
+			"lineno": "Tone/source/Oscillator.js#L172"
 		},
 		{
 			"description": "Sync the signal to the Transport's bpm. Any changes to the transports bpm,\n will also affect the oscillators frequency.",
@@ -13437,7 +13437,7 @@
 			},
 			"scope": "instance",
 			"name": "syncFrequency",
-			"lineno": "Tone/source/Oscillator.js#L177"
+			"lineno": "Tone/source/Oscillator.js#L192"
 		},
 		{
 			"description": "Unsync the oscillator's frequency from the Transport.\n See Tone.Oscillator.syncFrequency",
@@ -13449,7 +13449,7 @@
 			},
 			"scope": "instance",
 			"name": "unsyncFrequency",
-			"lineno": "Tone/source/Oscillator.js#L187"
+			"lineno": "Tone/source/Oscillator.js#L202"
 		},
 		{
 			"description": "Get the object's attributes. Given no arguments get\n will return all available object properties and their corresponding\n values.",
@@ -13460,7 +13460,7 @@
 			},
 			"scope": "instance",
 			"name": "get",
-			"lineno": "Tone/source/Oscillator.js#L291"
+			"lineno": "Tone/source/Oscillator.js#L316"
 		},
 		{
 			"description": "Dispose and disconnect.",
@@ -13472,7 +13472,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/Oscillator.js#L453"
+			"lineno": "Tone/source/Oscillator.js#L478"
 		},
 		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
@@ -20189,7 +20189,7 @@
 			},
 			"scope": "instance",
 			"name": "now",
-			"lineno": "Tone/core/Context.js#L147"
+			"lineno": "Tone/core/Context.js#L168"
 		},
 		{
 			"description": "Starts the audio context from a suspended state. This is required\n to initially start the AudioContext.",
@@ -20200,7 +20200,7 @@
 			},
 			"scope": "instance",
 			"name": "resume",
-			"lineno": "Tone/core/Context.js#L171"
+			"lineno": "Tone/core/Context.js#L192"
 		},
 		{
 			"description": "Promise which is invoked when the context is running.\n Tries to resume the context if it's not started.",
@@ -20211,7 +20211,7 @@
 			},
 			"scope": "instance",
 			"name": "close",
-			"lineno": "Tone/core/Context.js#L184"
+			"lineno": "Tone/core/Context.js#L205"
 		},
 		{
 			"description": "Generate a looped buffer at some constant value.",
@@ -20230,7 +20230,7 @@
 			},
 			"scope": "instance",
 			"name": "getConstant",
-			"lineno": "Tone/core/Context.js#L200"
+			"lineno": "Tone/core/Context.js#L221"
 		},
 		{
 			"description": "A setTimeout which is gaurenteed by the clock source.\n Also runs in the offline context.",
@@ -20258,7 +20258,7 @@
 			},
 			"scope": "instance",
 			"name": "setTimeout",
-			"lineno": "Tone/core/Context.js#L239"
+			"lineno": "Tone/core/Context.js#L260"
 		},
 		{
 			"description": "Clears a previously scheduled timeout with Tone.context.setTimeout",
@@ -20279,7 +20279,7 @@
 			},
 			"scope": "instance",
 			"name": "clearTimeout",
-			"lineno": "Tone/core/Context.js#L255"
+			"lineno": "Tone/core/Context.js#L276"
 		},
 		{
 			"description": "Unlike other dispose methods, this returns a Promise\n which executes when the context is closed and disposed",
@@ -20291,7 +20291,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/Context.js#L363"
+			"lineno": "Tone/core/Context.js#L384"
 		},
 		{
 			"scope": "instance",
@@ -22113,7 +22113,7 @@
 			},
 			"scope": "instance",
 			"name": "getConstant",
-			"lineno": "Tone/core/Context.js#L200",
+			"lineno": "Tone/core/Context.js#L221",
 			"inherits": "Tone.Context"
 		},
 		{
@@ -22142,7 +22142,7 @@
 			},
 			"scope": "instance",
 			"name": "setTimeout",
-			"lineno": "Tone/core/Context.js#L239",
+			"lineno": "Tone/core/Context.js#L260",
 			"inherits": "Tone.Context"
 		},
 		{
@@ -22164,7 +22164,7 @@
 			},
 			"scope": "instance",
 			"name": "clearTimeout",
-			"lineno": "Tone/core/Context.js#L255",
+			"lineno": "Tone/core/Context.js#L276",
 			"inherits": "Tone.Context"
 		},
 		{
@@ -22177,7 +22177,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/Context.js#L363",
+			"lineno": "Tone/core/Context.js#L384",
 			"inherits": "Tone.Context"
 		},
 		{
@@ -23873,7 +23873,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/signal/Signal.js#L78",
+			"lineno": "Tone/signal/Signal.js#L77",
 			"inherits": "Tone.Signal"
 		},
 		{
@@ -24468,7 +24468,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/signal/Signal.js#L78",
+			"lineno": "Tone/signal/Signal.js#L77",
 			"inherits": "Tone.Signal"
 		},
 		{
@@ -25907,7 +25907,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/signal/Signal.js#L78"
+			"lineno": "Tone/signal/Signal.js#L77"
 		},
 		{
 			"description": "dispose and disconnect",
@@ -25919,7 +25919,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/signal/Signal.js#L90"
+			"lineno": "Tone/signal/Signal.js#L89"
 		},
 		{
 			"description": "Schedules a parameter value change at the given time.",
@@ -26513,7 +26513,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/signal/Signal.js#L78",
+			"lineno": "Tone/signal/Signal.js#L77",
 			"inherits": "Tone.Signal"
 		},
 		{
@@ -27332,7 +27332,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/signal/Signal.js#L78",
+			"lineno": "Tone/signal/Signal.js#L77",
 			"inherits": "Tone.Signal"
 		},
 		{
@@ -28294,7 +28294,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/signal/Signal.js#L78",
+			"lineno": "Tone/signal/Signal.js#L77",
 			"inherits": "Tone.Signal"
 		},
 		{
@@ -28307,7 +28307,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/signal/Signal.js#L90",
+			"lineno": "Tone/signal/Signal.js#L89",
 			"inherits": "Tone.Signal"
 		},
 		{

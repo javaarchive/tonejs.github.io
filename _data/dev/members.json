@@ -5913,7 +5913,7 @@
 			],
 			"scope": "instance",
 			"name": "loopStart",
-			"lineno": "Tone/source/BufferSource.js#L323"
+			"lineno": "Tone/source/BufferSource.js#L331"
 		},
 		{
 			"description": "If loop is true, the loop will end at this position.",
@@ -5922,7 +5922,7 @@
 			],
 			"scope": "instance",
 			"name": "loopEnd",
-			"lineno": "Tone/source/BufferSource.js#L338"
+			"lineno": "Tone/source/BufferSource.js#L346"
 		},
 		{
 			"description": "The audio buffer belonging to the player.",
@@ -5931,7 +5931,7 @@
 			],
 			"scope": "instance",
 			"name": "buffer",
-			"lineno": "Tone/source/BufferSource.js#L353"
+			"lineno": "Tone/source/BufferSource.js#L361"
 		},
 		{
 			"description": "If the buffer should loop once it's over.",
@@ -5940,7 +5940,7 @@
 			],
 			"scope": "instance",
 			"name": "loop",
-			"lineno": "Tone/source/BufferSource.js#L368"
+			"lineno": "Tone/source/BufferSource.js#L376"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -6275,7 +6275,7 @@
 			],
 			"scope": "instance",
 			"name": "type",
-			"lineno": "Tone/source/OscillatorNode.js#L199"
+			"lineno": "Tone/source/OscillatorNode.js#L205"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -6875,7 +6875,7 @@
 			],
 			"scope": "instance",
 			"name": "type",
-			"lineno": "Tone/source/Oscillator.js#L192"
+			"lineno": "Tone/source/Oscillator.js#L207"
 		},
 		{
 			"description": "The oscillator type without the partialsCount appended to the end",
@@ -6887,7 +6887,7 @@
 			],
 			"scope": "instance",
 			"name": "baseType",
-			"lineno": "Tone/source/Oscillator.js#L227"
+			"lineno": "Tone/source/Oscillator.js#L252"
 		},
 		{
 			"description": "'partialCount' offers an alternative way to set the number of used partials. \nWhen partialCount is 0, the maximum number of partials are used when representing\nthe waveform using the periodicWave. When 'partials' is set, this value is \nnot settable, but equals the length of the partials array.",
@@ -6899,7 +6899,7 @@
 			],
 			"scope": "instance",
 			"name": "partialCount",
-			"lineno": "Tone/source/Oscillator.js#L250"
+			"lineno": "Tone/source/Oscillator.js#L275"
 		},
 		{
 			"description": "The partials of the waveform. A partial represents\nthe amplitude at a harmonic. The first harmonic is the\nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series.\nSetting this value will automatically set the type to \"custom\".\nThe value is an empty array when the type is not \"custom\".",
@@ -6911,7 +6911,7 @@
 			],
 			"scope": "instance",
 			"name": "partials",
-			"lineno": "Tone/source/Oscillator.js#L407"
+			"lineno": "Tone/source/Oscillator.js#L432"
 		},
 		{
 			"description": "The phase of the oscillator in degrees.",
@@ -6923,7 +6923,7 @@
 			],
 			"scope": "instance",
 			"name": "phase",
-			"lineno": "Tone/source/Oscillator.js#L430"
+			"lineno": "Tone/source/Oscillator.js#L455"
 		},
 		{
 			"description": "Mute the output.",
@@ -10826,7 +10826,7 @@
 			],
 			"scope": "instance",
 			"name": "lookAhead",
-			"lineno": "Tone/core/Context.js#L56"
+			"lineno": "Tone/core/Context.js#L64"
 		},
 		{
 			"description": "Is an instanceof Tone.Context",
@@ -10835,7 +10835,7 @@
 			],
 			"scope": "instance",
 			"name": "isContext",
-			"lineno": "Tone/core/Context.js#L117"
+			"lineno": "Tone/core/Context.js#L125"
 		},
 		{
 			"description": "How often the Web Worker callback is invoked.\n This number corresponds to how responsive the scheduling\n can be. Context.updateInterval + Context.lookAhead gives you the\n total latency between scheduling an event and hearing it.",
@@ -10844,7 +10844,7 @@
 			],
 			"scope": "instance",
 			"name": "updateInterval",
-			"lineno": "Tone/core/Context.js#L264"
+			"lineno": "Tone/core/Context.js#L285"
 		},
 		{
 			"description": "The unwrapped AudioContext.",
@@ -10854,7 +10854,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "rawContext",
-			"lineno": "Tone/core/Context.js#L282"
+			"lineno": "Tone/core/Context.js#L303"
 		},
 		{
 			"description": "What the source of the clock is, either \"worker\" (Web Worker [default]),\n \"timeout\" (setTimeout), or \"offline\" (none).",
@@ -10863,7 +10863,7 @@
 			],
 			"scope": "instance",
 			"name": "clockSource",
-			"lineno": "Tone/core/Context.js#L295"
+			"lineno": "Tone/core/Context.js#L316"
 		},
 		{
 			"description": "The type of playback, which affects tradeoffs between audio\n output latency and responsiveness.\n\n In addition to setting the value in seconds, the latencyHint also\n accepts the strings \"interactive\" (prioritizes low latency),\n \"playback\" (prioritizes sustained playback), \"balanced\" (balances\n latency and performance), and \"fastest\" (lowest latency, might glitch more often).",
@@ -10876,7 +10876,7 @@
 			],
 			"scope": "instance",
 			"name": "latencyHint",
-			"lineno": "Tone/core/Context.js#L311"
+			"lineno": "Tone/core/Context.js#L332"
 		}
 	],
 	"TransportEvent": [
@@ -12009,7 +12009,7 @@
 			],
 			"scope": "instance",
 			"name": "lookAhead",
-			"lineno": "Tone/core/Context.js#L56",
+			"lineno": "Tone/core/Context.js#L64",
 			"inherits": "Tone.Context"
 		},
 		{
@@ -12019,7 +12019,7 @@
 			],
 			"scope": "instance",
 			"name": "isContext",
-			"lineno": "Tone/core/Context.js#L117",
+			"lineno": "Tone/core/Context.js#L125",
 			"inherits": "Tone.Context"
 		},
 		{
@@ -12029,7 +12029,7 @@
 			],
 			"scope": "instance",
 			"name": "updateInterval",
-			"lineno": "Tone/core/Context.js#L264",
+			"lineno": "Tone/core/Context.js#L285",
 			"inherits": "Tone.Context"
 		},
 		{
@@ -12040,7 +12040,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "rawContext",
-			"lineno": "Tone/core/Context.js#L282",
+			"lineno": "Tone/core/Context.js#L303",
 			"inherits": "Tone.Context"
 		},
 		{
@@ -12050,7 +12050,7 @@
 			],
 			"scope": "instance",
 			"name": "clockSource",
-			"lineno": "Tone/core/Context.js#L295",
+			"lineno": "Tone/core/Context.js#L316",
 			"inherits": "Tone.Context"
 		},
 		{
@@ -12064,7 +12064,7 @@
 			],
 			"scope": "instance",
 			"name": "latencyHint",
-			"lineno": "Tone/core/Context.js#L311",
+			"lineno": "Tone/core/Context.js#L332",
 			"inherits": "Tone.Context"
 		}
 	],
