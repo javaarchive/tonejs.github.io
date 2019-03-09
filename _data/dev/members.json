@@ -11160,7 +11160,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "loaded",
-			"lineno": "Tone/core/Buffer.js#L173"
+			"lineno": "Tone/core/Buffer.js#L176"
 		},
 		{
 			"description": "The duration of the buffer.",
@@ -11170,7 +11170,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "duration",
-			"lineno": "Tone/core/Buffer.js#L186"
+			"lineno": "Tone/core/Buffer.js#L189"
 		},
 		{
 			"description": "The length of the buffer in samples",
@@ -11180,7 +11180,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "length",
-			"lineno": "Tone/core/Buffer.js#L203"
+			"lineno": "Tone/core/Buffer.js#L206"
 		},
 		{
 			"description": "The number of discrete audio channels. Returns 0 if no buffer\nis loaded.",
@@ -11190,7 +11190,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "numberOfChannels",
-			"lineno": "Tone/core/Buffer.js#L220"
+			"lineno": "Tone/core/Buffer.js#L223"
 		},
 		{
 			"description": "Reverse the buffer.",
@@ -11199,7 +11199,7 @@
 			],
 			"scope": "instance",
 			"name": "reverse",
-			"lineno": "Tone/core/Buffer.js#L348"
+			"lineno": "Tone/core/Buffer.js#L351"
 		}
 	],
 	"Draw": [
