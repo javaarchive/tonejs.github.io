@@ -4754,7 +4754,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/instrument/NoiseSynth.js#L112"
+			"lineno": "Tone/instrument/NoiseSynth.js#L113"
 		},
 		{
 			"description": "Trigger the attack and then the release.",
@@ -4793,7 +4793,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/NoiseSynth.js#L125"
+			"lineno": "Tone/instrument/NoiseSynth.js#L126"
 		},
 		{
 			"description": "Clean up.",
@@ -4805,7 +4805,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/NoiseSynth.js#L137"
+			"lineno": "Tone/instrument/NoiseSynth.js#L138"
 		},
 		{
 			"description": "Unsync the instrument from the Transport",
