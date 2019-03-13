@@ -6012,10 +6012,11 @@
 			"params": [
 				{
 					"type": [
-						"Frequency"
+						"Frequency",
+						"Array.<Frequency>"
 					],
-					"description": "The note to play",
-					"name": "note"
+					"description": "The note to play, or an array of notes.",
+					"name": "notes"
 				},
 				{
 					"type": [
@@ -6048,10 +6049,11 @@
 			"params": [
 				{
 					"type": [
-						"Frequency"
+						"Frequency",
+						"Array.<Frequency>"
 					],
-					"description": "The note to release.",
-					"name": "note"
+					"description": "The note to release, or an array of notes.",
+					"name": "notes"
 				},
 				{
 					"type": [
@@ -6117,8 +6119,8 @@
 						"Frequency",
 						"Array.<Frequency>"
 					],
-					"description": "The note to play",
-					"name": "note"
+					"description": "The note to play and release, or an array of notes.",
+					"name": "notes"
 				},
 				{
 					"type": [
@@ -9216,7 +9218,7 @@
 			},
 			"scope": "static",
 			"name": "loaded",
-			"lineno": "Tone/core/Buffer.js#L547"
+			"lineno": "Tone/core/Buffer.js#L548"
 		},
 		{
 			"params": [
@@ -11465,7 +11467,7 @@
 			},
 			"scope": "instance",
 			"name": "restart",
-			"lineno": "Tone/source/Player.js#L264"
+			"lineno": "Tone/source/Player.js#L272"
 		},
 		{
 			"description": "Seek to a specific time in the player's buffer. If the\n source is no longer playing at that time, it will stop.\n If you seek to a time that",
@@ -11497,7 +11499,7 @@
 			},
 			"scope": "instance",
 			"name": "seek",
-			"lineno": "Tone/source/Player.js#L281"
+			"lineno": "Tone/source/Player.js#L289"
 		},
 		{
 			"description": "Set the loop start and end. Will only loop if loop is\n set to true.",
@@ -11528,7 +11530,7 @@
 			},
 			"scope": "instance",
 			"name": "setLoopPoints",
-			"lineno": "Tone/source/Player.js#L304"
+			"lineno": "Tone/source/Player.js#L312"
 		},
 		{
 			"description": "Dispose and disconnect.",
@@ -11540,7 +11542,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/Player.js#L454"
+			"lineno": "Tone/source/Player.js#L462"
 		},
 		{
 			"description": "Stop the source at the specified time. If no time is given,\n stop the source now.",
@@ -15234,7 +15236,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerRelease",
-			"lineno": "Tone/component/Envelope.js#L311"
+			"lineno": "Tone/component/Envelope.js#L314"
 		},
 		{
 			"description": "Get the scheduled value at the given time. This will\n return the unconverted (raw) value.",
@@ -15255,7 +15257,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/component/Envelope.js#L338"
+			"lineno": "Tone/component/Envelope.js#L341"
 		},
 		{
 			"description": "triggerAttackRelease is shorthand for triggerAttack, then waiting\n some duration, then triggerRelease.",
@@ -15297,7 +15299,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/component/Envelope.js#L353"
+			"lineno": "Tone/component/Envelope.js#L356"
 		},
 		{
 			"description": "Cancels all scheduled envelope changes after the given time.",
@@ -15317,7 +15319,7 @@
 			},
 			"scope": "instance",
 			"name": "cancel",
-			"lineno": "Tone/component/Envelope.js#L365"
+			"lineno": "Tone/component/Envelope.js#L368"
 		},
 		{
 			"description": "Disconnect and dispose.",
@@ -15329,7 +15331,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/component/Envelope.js#L481"
+			"lineno": "Tone/component/Envelope.js#L484"
 		},
 		{
 			"description": "disconnect the output",
@@ -17445,7 +17447,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerRelease",
-			"lineno": "Tone/component/Envelope.js#L311",
+			"lineno": "Tone/component/Envelope.js#L314",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -17467,7 +17469,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/component/Envelope.js#L338",
+			"lineno": "Tone/component/Envelope.js#L341",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -17510,7 +17512,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/component/Envelope.js#L353",
+			"lineno": "Tone/component/Envelope.js#L356",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -17531,7 +17533,7 @@
 			},
 			"scope": "instance",
 			"name": "cancel",
-			"lineno": "Tone/component/Envelope.js#L365",
+			"lineno": "Tone/component/Envelope.js#L368",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -17698,7 +17700,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerRelease",
-			"lineno": "Tone/component/Envelope.js#L311",
+			"lineno": "Tone/component/Envelope.js#L314",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -17720,7 +17722,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/component/Envelope.js#L338",
+			"lineno": "Tone/component/Envelope.js#L341",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -17763,7 +17765,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/component/Envelope.js#L353",
+			"lineno": "Tone/component/Envelope.js#L356",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -17784,7 +17786,7 @@
 			},
 			"scope": "instance",
 			"name": "cancel",
-			"lineno": "Tone/component/Envelope.js#L365",
+			"lineno": "Tone/component/Envelope.js#L368",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -18217,7 +18219,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerRelease",
-			"lineno": "Tone/component/Envelope.js#L311",
+			"lineno": "Tone/component/Envelope.js#L314",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -18239,7 +18241,7 @@
 			},
 			"scope": "instance",
 			"name": "getValueAtTime",
-			"lineno": "Tone/component/Envelope.js#L338",
+			"lineno": "Tone/component/Envelope.js#L341",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -18282,7 +18284,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/component/Envelope.js#L353",
+			"lineno": "Tone/component/Envelope.js#L356",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -18303,7 +18305,7 @@
 			},
 			"scope": "instance",
 			"name": "cancel",
-			"lineno": "Tone/component/Envelope.js#L365",
+			"lineno": "Tone/component/Envelope.js#L368",
 			"inherits": "Tone.Envelope"
 		},
 		{
@@ -21085,7 +21087,7 @@
 			},
 			"scope": "instance",
 			"name": "set",
-			"lineno": "Tone/core/Buffer.js#L96"
+			"lineno": "Tone/core/Buffer.js#L93"
 		},
 		{
 			"returns": {
@@ -21096,7 +21098,7 @@
 			},
 			"scope": "instance",
 			"name": "get",
-			"lineno": "Tone/core/Buffer.js#L117"
+			"lineno": "Tone/core/Buffer.js#L118"
 		},
 		{
 			"description": "Makes an xhr reqest for the selected url then decodes\n the file as an audio buffer. Invokes\n the callback once the audio buffer loads.",
@@ -21117,7 +21119,7 @@
 			},
 			"scope": "instance",
 			"name": "load",
-			"lineno": "Tone/core/Buffer.js#L130"
+			"lineno": "Tone/core/Buffer.js#L131"
 		},
 		{
 			"description": "dispose and disconnect",
@@ -21129,7 +21131,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/Buffer.js#L165"
+			"lineno": "Tone/core/Buffer.js#L166"
 		},
 		{
 			"description": "Set the audio buffer from the array. To create a multichannel AudioBuffer,\n pass in a multidimensional array.",
@@ -21150,7 +21152,7 @@
 			},
 			"scope": "instance",
 			"name": "fromArray",
-			"lineno": "Tone/core/Buffer.js#L247"
+			"lineno": "Tone/core/Buffer.js#L248"
 		},
 		{
 			"description": "Sums muliple channels into 1 channel",
@@ -21171,7 +21173,7 @@
 			},
 			"scope": "instance",
 			"name": "toMono",
-			"lineno": "Tone/core/Buffer.js#L267"
+			"lineno": "Tone/core/Buffer.js#L268"
 		},
 		{
 			"description": "Get the buffer as an array. Single channel buffers will return a 1-dimensional\n\tFloat32Array, and multichannel buffers will return multidimensional arrays.",
@@ -21192,7 +21194,7 @@
 			},
 			"scope": "instance",
 			"name": "toArray",
-			"lineno": "Tone/core/Buffer.js#L294"
+			"lineno": "Tone/core/Buffer.js#L295"
 		},
 		{
 			"description": "Returns the Float32Array representing the PCM audio data for the specific channel.",
@@ -21213,7 +21215,7 @@
 			},
 			"scope": "instance",
 			"name": "getChannelData",
-			"lineno": "Tone/core/Buffer.js#L313"
+			"lineno": "Tone/core/Buffer.js#L314"
 		},
 		{
 			"description": "Cut a subsection of the array and return a buffer of the\n subsection. Does not modify the original buffer",
@@ -21242,7 +21244,7 @@
 			},
 			"scope": "instance",
 			"name": "slice",
-			"lineno": "Tone/core/Buffer.js#L325"
+			"lineno": "Tone/core/Buffer.js#L326"
 		},
 		{
 			"description": "Create a Tone.Buffer from the array. To create a multichannel AudioBuffer,\n pass in a multidimensional array.",
@@ -21263,7 +21265,7 @@
 			},
 			"scope": "static",
 			"name": "fromArray",
-			"lineno": "Tone/core/Buffer.js#L396"
+			"lineno": "Tone/core/Buffer.js#L397"
 		},
 		{
 			"description": "Creates a Tone.Buffer from a URL, returns a promise\nwhich resolves to a Tone.Buffer",
@@ -21284,7 +21286,7 @@
 			},
 			"scope": "static",
 			"name": "fromUrl",
-			"lineno": "Tone/core/Buffer.js#L406"
+			"lineno": "Tone/core/Buffer.js#L407"
 		},
 		{
 			"description": "Loads a url using XMLHttpRequest.",
@@ -21321,7 +21323,7 @@
 			},
 			"scope": "static",
 			"name": "load",
-			"lineno": "Tone/core/Buffer.js#L432"
+			"lineno": "Tone/core/Buffer.js#L433"
 		},
 		{
 			"description": "Stop all of the downloads in progress",
@@ -21332,7 +21334,7 @@
 			},
 			"scope": "static",
 			"name": "cancelDownloads",
-			"lineno": "Tone/core/Buffer.js#L519"
+			"lineno": "Tone/core/Buffer.js#L520"
 		},
 		{
 			"description": "Checks a url's extension to see if the current browser can play that file type.",
@@ -21356,7 +21358,7 @@
 			},
 			"scope": "static",
 			"name": "supportsType",
-			"lineno": "Tone/core/Buffer.js#L536"
+			"lineno": "Tone/core/Buffer.js#L537"
 		}
 	],
 	"load": [
@@ -21364,13 +21366,13 @@
 			"params": [],
 			"scope": "inner",
 			"name": "onError",
-			"lineno": "Tone/core/Buffer.js#L450"
+			"lineno": "Tone/core/Buffer.js#L451"
 		},
 		{
 			"params": [],
 			"scope": "inner",
 			"name": "onProgress",
-			"lineno": "Tone/core/Buffer.js#L460"
+			"lineno": "Tone/core/Buffer.js#L461"
 		}
 	],
 	"loaded": [
@@ -21378,19 +21380,19 @@
 			"params": [],
 			"scope": "inner",
 			"name": "removeEvents",
-			"lineno": "Tone/core/Buffer.js#L549"
+			"lineno": "Tone/core/Buffer.js#L550"
 		}
 	],
 	"<anonymous>": [
 		{
 			"scope": "inner",
 			"name": "onload",
-			"lineno": "Tone/core/Buffer.js#L555"
+			"lineno": "Tone/core/Buffer.js#L556"
 		},
 		{
 			"scope": "inner",
 			"name": "onerror",
-			"lineno": "Tone/core/Buffer.js#L558"
+			"lineno": "Tone/core/Buffer.js#L559"
 		}
 	],
 	"Draw": [

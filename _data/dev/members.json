@@ -5687,7 +5687,7 @@
 			],
 			"scope": "instance",
 			"name": "loopStart",
-			"lineno": "Tone/source/Player.js#L310"
+			"lineno": "Tone/source/Player.js#L318"
 		},
 		{
 			"description": "If loop is true, the loop will end at this position.",
@@ -5696,7 +5696,7 @@
 			],
 			"scope": "instance",
 			"name": "loopEnd",
-			"lineno": "Tone/source/Player.js#L329"
+			"lineno": "Tone/source/Player.js#L337"
 		},
 		{
 			"description": "The audio buffer belonging to the player.",
@@ -5705,7 +5705,7 @@
 			],
 			"scope": "instance",
 			"name": "buffer",
-			"lineno": "Tone/source/Player.js#L348"
+			"lineno": "Tone/source/Player.js#L356"
 		},
 		{
 			"description": "If the buffer should loop once it's over.",
@@ -5714,7 +5714,7 @@
 			],
 			"scope": "instance",
 			"name": "loop",
-			"lineno": "Tone/source/Player.js#L363"
+			"lineno": "Tone/source/Player.js#L371"
 		},
 		{
 			"description": "The playback speed. 1 is normal speed. This is not a signal because\nSafari and iOS currently don't support playbackRate as a signal.",
@@ -5723,7 +5723,7 @@
 			],
 			"scope": "instance",
 			"name": "playbackRate",
-			"lineno": "Tone/source/Player.js#L393"
+			"lineno": "Tone/source/Player.js#L401"
 		},
 		{
 			"description": "The direction the buffer should play in",
@@ -5732,7 +5732,7 @@
 			],
 			"scope": "instance",
 			"name": "reverse",
-			"lineno": "Tone/source/Player.js#L422"
+			"lineno": "Tone/source/Player.js#L430"
 		},
 		{
 			"description": "If all the buffer is loaded",
@@ -5742,7 +5742,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "loaded",
-			"lineno": "Tone/source/Player.js#L437"
+			"lineno": "Tone/source/Player.js#L445"
 		},
 		{
 			"description": "Mute the output.",
@@ -11160,7 +11160,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "loaded",
-			"lineno": "Tone/core/Buffer.js#L176"
+			"lineno": "Tone/core/Buffer.js#L177"
 		},
 		{
 			"description": "The duration of the buffer.",
@@ -11170,7 +11170,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "duration",
-			"lineno": "Tone/core/Buffer.js#L189"
+			"lineno": "Tone/core/Buffer.js#L190"
 		},
 		{
 			"description": "The length of the buffer in samples",
@@ -11180,7 +11180,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "length",
-			"lineno": "Tone/core/Buffer.js#L206"
+			"lineno": "Tone/core/Buffer.js#L207"
 		},
 		{
 			"description": "The number of discrete audio channels. Returns 0 if no buffer\nis loaded.",
@@ -11190,7 +11190,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "numberOfChannels",
-			"lineno": "Tone/core/Buffer.js#L223"
+			"lineno": "Tone/core/Buffer.js#L224"
 		},
 		{
 			"description": "Reverse the buffer.",
@@ -11199,7 +11199,7 @@
 			],
 			"scope": "instance",
 			"name": "reverse",
-			"lineno": "Tone/core/Buffer.js#L351"
+			"lineno": "Tone/core/Buffer.js#L352"
 		}
 	],
 	"Draw": [
