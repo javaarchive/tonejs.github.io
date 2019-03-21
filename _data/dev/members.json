@@ -5913,7 +5913,7 @@
 			],
 			"scope": "instance",
 			"name": "loopStart",
-			"lineno": "Tone/source/BufferSource.js#L331"
+			"lineno": "Tone/source/BufferSource.js#L332"
 		},
 		{
 			"description": "If loop is true, the loop will end at this position.",
@@ -5922,7 +5922,7 @@
 			],
 			"scope": "instance",
 			"name": "loopEnd",
-			"lineno": "Tone/source/BufferSource.js#L346"
+			"lineno": "Tone/source/BufferSource.js#L347"
 		},
 		{
 			"description": "The audio buffer belonging to the player.",
@@ -5931,7 +5931,7 @@
 			],
 			"scope": "instance",
 			"name": "buffer",
-			"lineno": "Tone/source/BufferSource.js#L361"
+			"lineno": "Tone/source/BufferSource.js#L362"
 		},
 		{
 			"description": "If the buffer should loop once it's over.",
@@ -5940,7 +5940,7 @@
 			],
 			"scope": "instance",
 			"name": "loop",
-			"lineno": "Tone/source/BufferSource.js#L376"
+			"lineno": "Tone/source/BufferSource.js#L377"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -6275,7 +6275,7 @@
 			],
 			"scope": "instance",
 			"name": "type",
-			"lineno": "Tone/source/OscillatorNode.js#L205"
+			"lineno": "Tone/source/OscillatorNode.js#L206"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",

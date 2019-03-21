@@ -11856,7 +11856,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/BufferSource.js#L396"
+			"lineno": "Tone/source/BufferSource.js#L397"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -12345,7 +12345,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelStop",
-			"lineno": "Tone/source/OscillatorNode.js#L195"
+			"lineno": "Tone/source/OscillatorNode.js#L196"
 		},
 		{
 			"description": "Clean up.",
@@ -12357,7 +12357,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/OscillatorNode.js#L224"
+			"lineno": "Tone/source/OscillatorNode.js#L225"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
