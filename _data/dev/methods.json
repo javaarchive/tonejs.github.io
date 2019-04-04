@@ -17240,7 +17240,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/component/Panner.js#L50"
+			"lineno": "Tone/component/Panner.js#L61"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",

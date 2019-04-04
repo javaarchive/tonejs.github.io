@@ -9412,7 +9412,7 @@
 			],
 			"scope": "instance",
 			"name": "pan",
-			"lineno": "Tone/component/Panner.js#L37",
+			"lineno": "Tone/component/Panner.js#L38",
 			"signal": true
 		},
 		{
