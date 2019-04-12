@@ -8363,13 +8363,13 @@
 	],
 	"FFT": [
 		{
-			"description": "The size of analysis. This must be a power of two in the range 32 to 32768.",
+			"description": "The size of analysis. This must be a power of two in the range 16 to 16384.\n Determines the size of the array returned by [getValue](#getvalue) (i.e. the number of\n frequency bins). Large FFT sizes may be costly to compute.",
 			"type": [
 				"Number"
 			],
 			"scope": "instance",
 			"name": "size",
-			"lineno": "Tone/component/FFT.js#L45"
+			"lineno": "Tone/component/FFT.js#L46"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",
@@ -9860,7 +9860,7 @@
 	],
 	"Analyser": [
 		{
-			"description": "The size of analysis. This must be a power of two in the range 32 to 32768.",
+			"description": "The size of analysis. This must be a power of two in the range 16 to 16384.",
 			"type": [
 				"Number"
 			],
@@ -9875,7 +9875,7 @@
 			],
 			"scope": "instance",
 			"name": "type",
-			"lineno": "Tone/component/Analyser.js#L97"
+			"lineno": "Tone/component/Analyser.js#L98"
 		},
 		{
 			"description": "0 represents no time averaging with the last analysis frame.",
@@ -9884,7 +9884,7 @@
 			],
 			"scope": "instance",
 			"name": "smoothing",
-			"lineno": "Tone/component/Analyser.js#L115"
+			"lineno": "Tone/component/Analyser.js#L116"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",

@@ -1612,14 +1612,14 @@
 		"extends": "Tone.AudioNode"
 	},
 	"FFT": {
-		"description": "Get the current waveform data of the connected audio source.",
+		"description": "Get the current frequency data of the connected audio source\n         using a fast Fourier transform.",
 		"params": [
 			{
 				"type": [
 					"Number"
 				],
 				"optional": true,
-				"description": "The size of the FFT. Value must be a power of\n                      two in the range 32 to 32768.",
+				"description": "The size of the FFT. Value must be a power of\n                      two in the range 16 to 16384.",
 				"name": "size"
 			}
 		],
@@ -1939,7 +1939,7 @@
 					"Number"
 				],
 				"optional": true,
-				"description": "The size of the FFT. Value must be a power of\n                      two in the range 32 to 32768.",
+				"description": "The size of the FFT. Value must be a power of\n                      two in the range 16 to 16384.",
 				"name": "size"
 			}
 		],

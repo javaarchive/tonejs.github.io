@@ -15579,7 +15579,7 @@
 			},
 			"scope": "instance",
 			"name": "getValue",
-			"lineno": "Tone/component/FFT.js#L41"
+			"lineno": "Tone/component/FFT.js#L42"
 		},
 		{
 			"description": "Clean up.",
@@ -15591,7 +15591,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/component/FFT.js#L64"
+			"lineno": "Tone/component/FFT.js#L67"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -17882,7 +17882,7 @@
 	],
 	"Analyser": [
 		{
-			"description": "Run the analysis given the current settings and return the\n result as a TypedArray.",
+			"description": "Run the analysis given the current settings and return the\n result as a TypedArray of length [size](#size).",
 			"returns": {
 				"type": [
 					"TypedArray"
@@ -17902,7 +17902,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/component/Analyser.js#L134"
+			"lineno": "Tone/component/Analyser.js#L135"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
