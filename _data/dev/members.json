@@ -11514,7 +11514,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "context",
-			"lineno": "Tone/core/Tone.js#L735"
+			"lineno": "Tone/core/Tone.js#L738"
 		}
 	],
 	"Timeline": [
