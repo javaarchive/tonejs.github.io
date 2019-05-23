@@ -3254,7 +3254,7 @@
 			],
 			"scope": "instance",
 			"name": "oscillator",
-			"lineno": "Tone/instrument/Synth.js#L30"
+			"lineno": "Tone/instrument/Synth.js#L29"
 		},
 		{
 			"description": "The frequency control.",
@@ -3263,7 +3263,7 @@
 			],
 			"scope": "instance",
 			"name": "frequency",
-			"lineno": "Tone/instrument/Synth.js#L37",
+			"lineno": "Tone/instrument/Synth.js#L36",
 			"signal": true
 		},
 		{
@@ -3273,7 +3273,7 @@
 			],
 			"scope": "instance",
 			"name": "detune",
-			"lineno": "Tone/instrument/Synth.js#L44",
+			"lineno": "Tone/instrument/Synth.js#L43",
 			"signal": true
 		},
 		{
@@ -3283,7 +3283,7 @@
 			],
 			"scope": "instance",
 			"name": "envelope",
-			"lineno": "Tone/instrument/Synth.js#L50"
+			"lineno": "Tone/instrument/Synth.js#L49"
 		},
 		{
 			"description": "The glide time between notes.",
@@ -5913,7 +5913,7 @@
 			],
 			"scope": "instance",
 			"name": "loopStart",
-			"lineno": "Tone/source/BufferSource.js#L332"
+			"lineno": "Tone/source/BufferSource.js#L329"
 		},
 		{
 			"description": "If loop is true, the loop will end at this position.",
@@ -5922,7 +5922,7 @@
 			],
 			"scope": "instance",
 			"name": "loopEnd",
-			"lineno": "Tone/source/BufferSource.js#L347"
+			"lineno": "Tone/source/BufferSource.js#L344"
 		},
 		{
 			"description": "The audio buffer belonging to the player.",
@@ -5931,7 +5931,7 @@
 			],
 			"scope": "instance",
 			"name": "buffer",
-			"lineno": "Tone/source/BufferSource.js#L362"
+			"lineno": "Tone/source/BufferSource.js#L359"
 		},
 		{
 			"description": "If the buffer should loop once it's over.",
@@ -5940,7 +5940,7 @@
 			],
 			"scope": "instance",
 			"name": "loop",
-			"lineno": "Tone/source/BufferSource.js#L377"
+			"lineno": "Tone/source/BufferSource.js#L374"
 		},
 		{
 			"description": "Get the audio context belonging to this instance.",

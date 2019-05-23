@@ -4963,7 +4963,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/Synth.js#L111"
+			"lineno": "Tone/instrument/Synth.js#L110"
 		},
 		{
 			"description": "Trigger the attack of the note optionally with a given velocity.",
@@ -11792,14 +11792,6 @@
 					"defaultvalue": 1,
 					"description": "The gain to play the buffer back at.",
 					"name": "gain"
-				},
-				{
-					"type": [
-						"Time"
-					],
-					"optional": true,
-					"description": "The optional fadeIn ramp time.",
-					"name": "fadeInTime"
 				}
 			],
 			"returns": {
@@ -11810,10 +11802,10 @@
 			},
 			"scope": "instance",
 			"name": "start",
-			"lineno": "Tone/source/BufferSource.js#L182"
+			"lineno": "Tone/source/BufferSource.js#L181"
 		},
 		{
-			"description": "Stop the buffer. Optionally add a ramp time to fade the\n buffer out. If there is a fadeOut ramp, the ramp starts at \n the given time and ends at time + fadeOut.",
+			"description": "Stop the buffer.",
 			"params": [
 				{
 					"type": [
@@ -11832,7 +11824,7 @@
 			},
 			"scope": "instance",
 			"name": "stop",
-			"lineno": "Tone/source/BufferSource.js#L254"
+			"lineno": "Tone/source/BufferSource.js#L251"
 		},
 		{
 			"description": "Cancel a scheduled stop event",
@@ -11844,7 +11836,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelStop",
-			"lineno": "Tone/source/BufferSource.js#L295"
+			"lineno": "Tone/source/BufferSource.js#L292"
 		},
 		{
 			"description": "Clean up.",
@@ -11856,7 +11848,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/BufferSource.js#L397"
+			"lineno": "Tone/source/BufferSource.js#L394"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
