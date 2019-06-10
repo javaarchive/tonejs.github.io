@@ -4734,7 +4734,7 @@
 			],
 			"scope": "instance",
 			"name": "frequency",
-			"lineno": "Tone/source/FatOscillator.js#L29",
+			"lineno": "Tone/source/FatOscillator.js#L28",
 			"signal": true
 		},
 		{
@@ -4744,7 +4744,7 @@
 			],
 			"scope": "instance",
 			"name": "detune",
-			"lineno": "Tone/source/FatOscillator.js#L36",
+			"lineno": "Tone/source/FatOscillator.js#L35",
 			"signal": true
 		},
 		{
@@ -4754,7 +4754,7 @@
 			],
 			"scope": "instance",
 			"name": "type",
-			"lineno": "Tone/source/FatOscillator.js#L151"
+			"lineno": "Tone/source/FatOscillator.js#L150"
 		},
 		{
 			"description": "The detune spread between the oscillators. If \"count\" is\nset to 3 oscillators and the \"spread\" is set to 40,\nthe three oscillators would be detuned like this: [-20, 0, 20]\nfor a total detune spread of 40 cents.",
@@ -4763,7 +4763,7 @@
 			],
 			"scope": "instance",
 			"name": "spread",
-			"lineno": "Tone/source/FatOscillator.js#L169"
+			"lineno": "Tone/source/FatOscillator.js#L168"
 		},
 		{
 			"description": "The number of detuned oscillators",
@@ -4772,7 +4772,7 @@
 			],
 			"scope": "instance",
 			"name": "count",
-			"lineno": "Tone/source/FatOscillator.js#L194"
+			"lineno": "Tone/source/FatOscillator.js#L193"
 		},
 		{
 			"description": "The phase of the oscillator in degrees.",
@@ -4781,7 +4781,7 @@
 			],
 			"scope": "instance",
 			"name": "phase",
-			"lineno": "Tone/source/FatOscillator.js#L238"
+			"lineno": "Tone/source/FatOscillator.js#L237"
 		},
 		{
 			"description": "The oscillator type without the partialsCount appended to the end",
@@ -4793,7 +4793,7 @@
 			],
 			"scope": "instance",
 			"name": "baseType",
-			"lineno": "Tone/source/FatOscillator.js#L256"
+			"lineno": "Tone/source/FatOscillator.js#L255"
 		},
 		{
 			"description": "The partials of the carrier waveform. A partial represents\nthe amplitude at a harmonic. The first harmonic is the\nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series.\nSetting this value will automatically set the type to \"custom\".\nThe value is an empty array when the type is not \"custom\".",
@@ -4805,7 +4805,7 @@
 			],
 			"scope": "instance",
 			"name": "partials",
-			"lineno": "Tone/source/FatOscillator.js#L278"
+			"lineno": "Tone/source/FatOscillator.js#L277"
 		},
 		{
 			"description": "'partialCount' offers an alternative way to set the number of used partials. \nWhen partialCount is 0, the maximum number of partials are used when representing\nthe waveform using the periodicWave. When 'partials' is set, this value is \nnot settable, but equals the length of the partials array.",
@@ -4814,7 +4814,7 @@
 			],
 			"scope": "instance",
 			"name": "partialCount",
-			"lineno": "Tone/source/FatOscillator.js#L304"
+			"lineno": "Tone/source/FatOscillator.js#L303"
 		},
 		{
 			"description": "Mute the output.",
@@ -6875,7 +6875,7 @@
 			],
 			"scope": "instance",
 			"name": "type",
-			"lineno": "Tone/source/Oscillator.js#L207"
+			"lineno": "Tone/source/Oscillator.js#L211"
 		},
 		{
 			"description": "The oscillator type without the partialsCount appended to the end",
@@ -6887,7 +6887,7 @@
 			],
 			"scope": "instance",
 			"name": "baseType",
-			"lineno": "Tone/source/Oscillator.js#L252"
+			"lineno": "Tone/source/Oscillator.js#L256"
 		},
 		{
 			"description": "'partialCount' offers an alternative way to set the number of used partials. \nWhen partialCount is 0, the maximum number of partials are used when representing\nthe waveform using the periodicWave. When 'partials' is set, this value is \nnot settable, but equals the length of the partials array.",
@@ -6899,7 +6899,7 @@
 			],
 			"scope": "instance",
 			"name": "partialCount",
-			"lineno": "Tone/source/Oscillator.js#L275"
+			"lineno": "Tone/source/Oscillator.js#L279"
 		},
 		{
 			"description": "The partials of the waveform. A partial represents\nthe amplitude at a harmonic. The first harmonic is the\nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series.\nSetting this value will automatically set the type to \"custom\".\nThe value is an empty array when the type is not \"custom\".",
@@ -6911,7 +6911,7 @@
 			],
 			"scope": "instance",
 			"name": "partials",
-			"lineno": "Tone/source/Oscillator.js#L432"
+			"lineno": "Tone/source/Oscillator.js#L436"
 		},
 		{
 			"description": "The phase of the oscillator in degrees.",
@@ -6923,7 +6923,7 @@
 			],
 			"scope": "instance",
 			"name": "phase",
-			"lineno": "Tone/source/Oscillator.js#L455"
+			"lineno": "Tone/source/Oscillator.js#L459"
 		},
 		{
 			"description": "Mute the output.",
