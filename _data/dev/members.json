@@ -2523,7 +2523,7 @@
 			"inherits": "Tone.Part"
 		},
 		{
-			"description": "If the part should loop or not\n between Tone.Part.loopStart and\n Tone.Part.loopEnd. An integer\n value corresponds to the number of\n loops the Part does after it starts.",
+			"description": "If the part should loop or not\n between Tone.Part.loopStart and\n Tone.Part.loopEnd. If set to true,\n the part will loop indefinitely,\n if set to a number greater than 1\n it will play a specific number of\n times, if set to false, 0 or 1, the\n part will only play once.",
 			"type": [
 				"Boolean",
 				"Positive"
@@ -2543,7 +2543,7 @@
 			],
 			"scope": "instance",
 			"name": "loopEnd",
-			"lineno": "Tone/event/Part.js#L433",
+			"lineno": "Tone/event/Part.js#L436",
 			"inherits": "Tone.Part"
 		},
 		{
@@ -2553,7 +2553,7 @@
 			],
 			"scope": "instance",
 			"name": "loopStart",
-			"lineno": "Tone/event/Part.js#L455",
+			"lineno": "Tone/event/Part.js#L458",
 			"inherits": "Tone.Part"
 		},
 		{
@@ -2563,7 +2563,7 @@
 			],
 			"scope": "instance",
 			"name": "playbackRate",
-			"lineno": "Tone/event/Part.js#L477",
+			"lineno": "Tone/event/Part.js#L480",
 			"inherits": "Tone.Part"
 		},
 		{
@@ -2574,7 +2574,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "length",
-			"lineno": "Tone/event/Part.js#L493",
+			"lineno": "Tone/event/Part.js#L496",
 			"inherits": "Tone.Part"
 		},
 		{
@@ -2616,7 +2616,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "progress",
-			"lineno": "Tone/event/Event.js#L398",
+			"lineno": "Tone/event/Event.js#L401",
 			"inherits": "Tone.Event"
 		}
 	],
@@ -2672,7 +2672,7 @@
 			"lineno": "Tone/event/Event.js#L217"
 		},
 		{
-			"description": "If the note should loop or not\n between Tone.Event.loopStart and\n Tone.Event.loopEnd. An integer\n value corresponds to the number of\n loops the Event does after it starts.",
+			"description": "If the note should loop or not\n between Tone.Event.loopStart and\n Tone.Event.loopEnd. If set to true,\n the event will loop indefinitely,\n if set to a number greater than 1\n it will play a specific number of\n times, if set to false, 0 or 1, the\n part will only play once.",
 			"type": [
 				"Boolean",
 				"Positive"
@@ -2691,7 +2691,7 @@
 			],
 			"scope": "instance",
 			"name": "playbackRate",
-			"lineno": "Tone/event/Event.js#L341"
+			"lineno": "Tone/event/Event.js#L344"
 		},
 		{
 			"description": "The loopEnd point is the time the event will loop\n if Tone.Event.loop is true.",
@@ -2700,7 +2700,7 @@
 			],
 			"scope": "instance",
 			"name": "loopEnd",
-			"lineno": "Tone/event/Event.js#L361"
+			"lineno": "Tone/event/Event.js#L364"
 		},
 		{
 			"description": "The time when the loop should start.",
@@ -2709,7 +2709,7 @@
 			],
 			"scope": "instance",
 			"name": "loopStart",
-			"lineno": "Tone/event/Event.js#L380"
+			"lineno": "Tone/event/Event.js#L383"
 		},
 		{
 			"description": "The current progress of the loop interval.\n Returns 0 if the event is not started yet or\n it is not set to loop.",
@@ -2719,7 +2719,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "progress",
-			"lineno": "Tone/event/Event.js#L398"
+			"lineno": "Tone/event/Event.js#L401"
 		}
 	],
 	"Part": [
@@ -2746,7 +2746,7 @@
 			"lineno": "Tone/event/Part.js#L385"
 		},
 		{
-			"description": "If the part should loop or not\n between Tone.Part.loopStart and\n Tone.Part.loopEnd. An integer\n value corresponds to the number of\n loops the Part does after it starts.",
+			"description": "If the part should loop or not\n between Tone.Part.loopStart and\n Tone.Part.loopEnd. If set to true,\n the part will loop indefinitely,\n if set to a number greater than 1\n it will play a specific number of\n times, if set to false, 0 or 1, the\n part will only play once.",
 			"type": [
 				"Boolean",
 				"Positive"
@@ -2765,7 +2765,7 @@
 			],
 			"scope": "instance",
 			"name": "loopEnd",
-			"lineno": "Tone/event/Part.js#L433"
+			"lineno": "Tone/event/Part.js#L436"
 		},
 		{
 			"description": "The loopStart point determines when it will\n loop if Tone.Part.loop is true.",
@@ -2774,7 +2774,7 @@
 			],
 			"scope": "instance",
 			"name": "loopStart",
-			"lineno": "Tone/event/Part.js#L455"
+			"lineno": "Tone/event/Part.js#L458"
 		},
 		{
 			"description": "The playback rate of the part",
@@ -2783,7 +2783,7 @@
 			],
 			"scope": "instance",
 			"name": "playbackRate",
-			"lineno": "Tone/event/Part.js#L477"
+			"lineno": "Tone/event/Part.js#L480"
 		},
 		{
 			"description": "The number of scheduled notes in the part.",
@@ -2793,7 +2793,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "length",
-			"lineno": "Tone/event/Part.js#L493"
+			"lineno": "Tone/event/Part.js#L496"
 		},
 		{
 			"description": "The callback to invoke.",
@@ -2834,7 +2834,7 @@
 			"readonly": true,
 			"scope": "instance",
 			"name": "progress",
-			"lineno": "Tone/event/Event.js#L398",
+			"lineno": "Tone/event/Event.js#L401",
 			"inherits": "Tone.Event"
 		}
 	],

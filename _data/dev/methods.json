@@ -4105,7 +4105,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/event/Event.js#L429"
+			"lineno": "Tone/event/Event.js#L432"
 		}
 	],
 	"Part": [
@@ -4293,7 +4293,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/event/Part.js#L510"
+			"lineno": "Tone/event/Part.js#L513"
 		}
 	],
 	"Pattern": [
