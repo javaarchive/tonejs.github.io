@@ -6094,7 +6094,7 @@
 			},
 			"scope": "instance",
 			"name": "releaseAll",
-			"lineno": "Tone/instrument/Sampler.js#L193"
+			"lineno": "Tone/instrument/Sampler.js#L196"
 		},
 		{
 			"description": "Sync the instrument to the Transport. All subsequent calls of\n[triggerAttack](#triggerattack) and [triggerRelease](#triggerrelease)\nwill be scheduled along the transport.",
@@ -6109,7 +6109,7 @@
 			},
 			"scope": "instance",
 			"name": "sync",
-			"lineno": "Tone/instrument/Sampler.js#L219"
+			"lineno": "Tone/instrument/Sampler.js#L222"
 		},
 		{
 			"description": "Invoke the attack phase, then after the duration, invoke the release.",
@@ -6156,7 +6156,7 @@
 			},
 			"scope": "instance",
 			"name": "triggerAttackRelease",
-			"lineno": "Tone/instrument/Sampler.js#L233"
+			"lineno": "Tone/instrument/Sampler.js#L236"
 		},
 		{
 			"description": "Add a note to the sampler.",
@@ -6189,7 +6189,7 @@
 			],
 			"scope": "instance",
 			"name": "add",
-			"lineno": "Tone/instrument/Sampler.js#L256"
+			"lineno": "Tone/instrument/Sampler.js#L259"
 		},
 		{
 			"description": "Clean up",
@@ -6201,7 +6201,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/instrument/Sampler.js#L286"
+			"lineno": "Tone/instrument/Sampler.js#L289"
 		},
 		{
 			"description": "Unsync the instrument from the Transport",
@@ -22927,7 +22927,7 @@
 			},
 			"scope": "instance",
 			"name": "setTargetAtTime",
-			"lineno": "Tone/core/Param.js#L411"
+			"lineno": "Tone/core/Param.js#L415"
 		},
 		{
 			"description": "Sets an array of arbitrary parameter values starting at the given time\n for the given duration.",
@@ -22968,7 +22968,7 @@
 			},
 			"scope": "instance",
 			"name": "setValueCurveAtTime",
-			"lineno": "Tone/core/Param.js#L439"
+			"lineno": "Tone/core/Param.js#L443"
 		},
 		{
 			"description": "Cancels all scheduled parameter changes with times greater than or\n equal to startTime.",
@@ -22988,7 +22988,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelScheduledValues",
-			"lineno": "Tone/core/Param.js#L458"
+			"lineno": "Tone/core/Param.js#L462"
 		},
 		{
 			"description": "This is similar to [cancelScheduledValues](#cancelScheduledValues) except\n it holds the automated value at time until the next automated event.",
@@ -23008,7 +23008,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelAndHoldAtTime",
-			"lineno": "Tone/core/Param.js#L472"
+			"lineno": "Tone/core/Param.js#L476"
 		},
 		{
 			"description": "Ramps to the given value over the duration of the rampTime.\n Automatically selects the best ramp type (exponential or linear)\n depending on the `units` of the signal",
@@ -23048,22 +23048,22 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L528"
+			"lineno": "Tone/core/Param.js#L533"
 		},
 		{
 			"scope": "instance",
 			"name": "_exponentialApproach",
-			"lineno": "Tone/core/Param.js#L544"
-		},
-		{
-			"scope": "instance",
-			"name": "_linearInterpolate",
 			"lineno": "Tone/core/Param.js#L549"
 		},
 		{
 			"scope": "instance",
-			"name": "_exponentialInterpolate",
+			"name": "_linearInterpolate",
 			"lineno": "Tone/core/Param.js#L554"
+		},
+		{
+			"scope": "instance",
+			"name": "_exponentialInterpolate",
+			"lineno": "Tone/core/Param.js#L559"
 		},
 		{
 			"description": "Clean up",
@@ -23075,7 +23075,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/core/Param.js#L562"
+			"lineno": "Tone/core/Param.js#L567"
 		},
 		{
 			"description": "connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode",
@@ -24171,7 +24171,7 @@
 			},
 			"scope": "instance",
 			"name": "setTargetAtTime",
-			"lineno": "Tone/core/Param.js#L411",
+			"lineno": "Tone/core/Param.js#L415",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -24213,7 +24213,7 @@
 			},
 			"scope": "instance",
 			"name": "setValueCurveAtTime",
-			"lineno": "Tone/core/Param.js#L439",
+			"lineno": "Tone/core/Param.js#L443",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -24234,7 +24234,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelScheduledValues",
-			"lineno": "Tone/core/Param.js#L458",
+			"lineno": "Tone/core/Param.js#L462",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -24255,7 +24255,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelAndHoldAtTime",
-			"lineno": "Tone/core/Param.js#L472",
+			"lineno": "Tone/core/Param.js#L476",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -24296,7 +24296,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L528",
+			"lineno": "Tone/core/Param.js#L533",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -24766,7 +24766,7 @@
 			},
 			"scope": "instance",
 			"name": "setTargetAtTime",
-			"lineno": "Tone/core/Param.js#L411",
+			"lineno": "Tone/core/Param.js#L415",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -24808,7 +24808,7 @@
 			},
 			"scope": "instance",
 			"name": "setValueCurveAtTime",
-			"lineno": "Tone/core/Param.js#L439",
+			"lineno": "Tone/core/Param.js#L443",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -24829,7 +24829,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelScheduledValues",
-			"lineno": "Tone/core/Param.js#L458",
+			"lineno": "Tone/core/Param.js#L462",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -24850,7 +24850,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelAndHoldAtTime",
-			"lineno": "Tone/core/Param.js#L472",
+			"lineno": "Tone/core/Param.js#L476",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -24891,7 +24891,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L528",
+			"lineno": "Tone/core/Param.js#L533",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -25691,7 +25691,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L528",
+			"lineno": "Tone/core/Param.js#L533",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -26216,7 +26216,7 @@
 			},
 			"scope": "instance",
 			"name": "setTargetAtTime",
-			"lineno": "Tone/core/Param.js#L411",
+			"lineno": "Tone/core/Param.js#L415",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -26258,7 +26258,7 @@
 			},
 			"scope": "instance",
 			"name": "setValueCurveAtTime",
-			"lineno": "Tone/core/Param.js#L439",
+			"lineno": "Tone/core/Param.js#L443",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -26279,7 +26279,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelScheduledValues",
-			"lineno": "Tone/core/Param.js#L458",
+			"lineno": "Tone/core/Param.js#L462",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -26300,7 +26300,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelAndHoldAtTime",
-			"lineno": "Tone/core/Param.js#L472",
+			"lineno": "Tone/core/Param.js#L476",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -26341,7 +26341,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L528",
+			"lineno": "Tone/core/Param.js#L533",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -26811,7 +26811,7 @@
 			},
 			"scope": "instance",
 			"name": "setTargetAtTime",
-			"lineno": "Tone/core/Param.js#L411",
+			"lineno": "Tone/core/Param.js#L415",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -26853,7 +26853,7 @@
 			},
 			"scope": "instance",
 			"name": "setValueCurveAtTime",
-			"lineno": "Tone/core/Param.js#L439",
+			"lineno": "Tone/core/Param.js#L443",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -26874,7 +26874,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelScheduledValues",
-			"lineno": "Tone/core/Param.js#L458",
+			"lineno": "Tone/core/Param.js#L462",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -26895,7 +26895,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelAndHoldAtTime",
-			"lineno": "Tone/core/Param.js#L472",
+			"lineno": "Tone/core/Param.js#L476",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -26936,7 +26936,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L528",
+			"lineno": "Tone/core/Param.js#L533",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -27630,7 +27630,7 @@
 			},
 			"scope": "instance",
 			"name": "setTargetAtTime",
-			"lineno": "Tone/core/Param.js#L411",
+			"lineno": "Tone/core/Param.js#L415",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -27672,7 +27672,7 @@
 			},
 			"scope": "instance",
 			"name": "setValueCurveAtTime",
-			"lineno": "Tone/core/Param.js#L439",
+			"lineno": "Tone/core/Param.js#L443",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -27693,7 +27693,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelScheduledValues",
-			"lineno": "Tone/core/Param.js#L458",
+			"lineno": "Tone/core/Param.js#L462",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -27714,7 +27714,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelAndHoldAtTime",
-			"lineno": "Tone/core/Param.js#L472",
+			"lineno": "Tone/core/Param.js#L476",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -27755,7 +27755,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L528",
+			"lineno": "Tone/core/Param.js#L533",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -28587,7 +28587,7 @@
 			},
 			"scope": "instance",
 			"name": "setValueCurveAtTime",
-			"lineno": "Tone/core/Param.js#L439",
+			"lineno": "Tone/core/Param.js#L443",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -28608,7 +28608,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelScheduledValues",
-			"lineno": "Tone/core/Param.js#L458",
+			"lineno": "Tone/core/Param.js#L462",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -28629,7 +28629,7 @@
 			},
 			"scope": "instance",
 			"name": "cancelAndHoldAtTime",
-			"lineno": "Tone/core/Param.js#L472",
+			"lineno": "Tone/core/Param.js#L476",
 			"inherits": "Tone.Param"
 		},
 		{
@@ -28670,7 +28670,7 @@
 			},
 			"scope": "instance",
 			"name": "rampTo",
-			"lineno": "Tone/core/Param.js#L528",
+			"lineno": "Tone/core/Param.js#L533",
 			"inherits": "Tone.Param"
 		},
 		{
