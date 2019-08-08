@@ -6875,7 +6875,7 @@
 			],
 			"scope": "instance",
 			"name": "type",
-			"lineno": "Tone/source/Oscillator.js#L211"
+			"lineno": "Tone/source/Oscillator.js#L198"
 		},
 		{
 			"description": "The oscillator type without the partialsCount appended to the end",
@@ -6887,7 +6887,7 @@
 			],
 			"scope": "instance",
 			"name": "baseType",
-			"lineno": "Tone/source/Oscillator.js#L256"
+			"lineno": "Tone/source/Oscillator.js#L243"
 		},
 		{
 			"description": "'partialCount' offers an alternative way to set the number of used partials. \nWhen partialCount is 0, the maximum number of partials are used when representing\nthe waveform using the periodicWave. When 'partials' is set, this value is \nnot settable, but equals the length of the partials array.",
@@ -6899,7 +6899,7 @@
 			],
 			"scope": "instance",
 			"name": "partialCount",
-			"lineno": "Tone/source/Oscillator.js#L279"
+			"lineno": "Tone/source/Oscillator.js#L266"
 		},
 		{
 			"description": "The partials of the waveform. A partial represents\nthe amplitude at a harmonic. The first harmonic is the\nfundamental frequency, the second is the octave and so on\nfollowing the harmonic series.\nSetting this value will automatically set the type to \"custom\".\nThe value is an empty array when the type is not \"custom\".",
@@ -6911,7 +6911,7 @@
 			],
 			"scope": "instance",
 			"name": "partials",
-			"lineno": "Tone/source/Oscillator.js#L436"
+			"lineno": "Tone/source/Oscillator.js#L423"
 		},
 		{
 			"description": "The phase of the oscillator in degrees.",
@@ -6923,7 +6923,7 @@
 			],
 			"scope": "instance",
 			"name": "phase",
-			"lineno": "Tone/source/Oscillator.js#L459"
+			"lineno": "Tone/source/Oscillator.js#L446"
 		},
 		{
 			"description": "Mute the output.",

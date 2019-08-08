@@ -12008,7 +12008,7 @@
 			},
 			"scope": "instance",
 			"name": "syncFrequency",
-			"lineno": "Tone/source/Oscillator.js#L196",
+			"lineno": "Tone/source/Oscillator.js#L183",
 			"inherits": "Tone.Oscillator"
 		},
 		{
@@ -12021,7 +12021,7 @@
 			},
 			"scope": "instance",
 			"name": "unsyncFrequency",
-			"lineno": "Tone/source/Oscillator.js#L206",
+			"lineno": "Tone/source/Oscillator.js#L193",
 			"inherits": "Tone.Oscillator"
 		},
 		{
@@ -13416,7 +13416,7 @@
 			},
 			"scope": "instance",
 			"name": "restart",
-			"lineno": "Tone/source/Oscillator.js#L176"
+			"lineno": "Tone/source/Oscillator.js#L163"
 		},
 		{
 			"description": "Sync the signal to the Transport's bpm. Any changes to the transports bpm,\n will also affect the oscillators frequency.",
@@ -13431,7 +13431,7 @@
 			},
 			"scope": "instance",
 			"name": "syncFrequency",
-			"lineno": "Tone/source/Oscillator.js#L196"
+			"lineno": "Tone/source/Oscillator.js#L183"
 		},
 		{
 			"description": "Unsync the oscillator's frequency from the Transport.\n See Tone.Oscillator.syncFrequency",
@@ -13443,7 +13443,7 @@
 			},
 			"scope": "instance",
 			"name": "unsyncFrequency",
-			"lineno": "Tone/source/Oscillator.js#L206"
+			"lineno": "Tone/source/Oscillator.js#L193"
 		},
 		{
 			"description": "Get the object's attributes. Given no arguments get\n will return all available object properties and their corresponding\n values.",
@@ -13454,7 +13454,7 @@
 			},
 			"scope": "instance",
 			"name": "get",
-			"lineno": "Tone/source/Oscillator.js#L320"
+			"lineno": "Tone/source/Oscillator.js#L307"
 		},
 		{
 			"description": "Dispose and disconnect.",
@@ -13466,7 +13466,7 @@
 			},
 			"scope": "instance",
 			"name": "dispose",
-			"lineno": "Tone/source/Oscillator.js#L482"
+			"lineno": "Tone/source/Oscillator.js#L469"
 		},
 		{
 			"description": "Start the source at the specified time. If no time is given,\n start the source now.",
