@@ -42,10 +42,6 @@
   url : https://experiments.withgoogle.com/ai/ai-duet/view/
   image : https://drive.google.com/thumbnail?id=1I934UxRFPpF2aWYBTejRAOnntOrsIwLX&sz=w400-h400
 
-- title : Musical Chord Progression Arpeggiator
-  url : http://codepen.io/jakealbaugh/full/qNrZyw/
-  image : https://drive.google.com/thumbnail?id=11_x2ykZiCPBFBUeDoD4VL1y3P9SpI_gv&sz=w400-h400
-
 - title : Solarbeat
   url : http://www.whitevinyldesign.com/solarbeat/
   image : https://drive.google.com/thumbnail?id=1yotHCA_7f2bnN2iA0aR8ohZpLet5uIB4&sz=w400-h400
@@ -53,10 +49,6 @@
 - title : Infinite Drum Machine
   url : https://experiments.withgoogle.com/ai/drum-machine
   image : https://drive.google.com/thumbnail?id=1esFZh6zQxlsfLZvFa99nhLMoA6KeHiEP&sz=w400-h400
-
-- title : Flume - Skin
-  url : http://skin.flu.me
-  image : https://drive.google.com/thumbnail?id=1JVJgpXqdw3KEDckEGlch5F1qt1gU602a&sz=w400-h400
 
 - title : Block Chords
   url : http://dev.abe.sh/block-chords/
@@ -102,10 +94,6 @@
   url : http://reflect.sydneyzh.com/
   image : https://drive.google.com/thumbnail?id=1eot5y-6mlXh4q-Cn0I8p1qsMhp8bCF_R&sz=w400-h400
 
-- title : Anxiety
-  url : http://anxietybrain.net/
-  image : https://drive.google.com/thumbnail?id=1Z0tCdtCh6FQpSsnQb3jumDX54YsXy0FL&sz=w400-h400
-
 - title : Music Blocks
   url : http://walterbender.github.io/musicblocks/
   image : https://drive.google.com/thumbnail?id=16sfehsMDyq10nj3xpG5rOc3OYheSTmjh&sz=w400-h400
@@ -137,10 +125,6 @@
 - title : duly noted
   url : https://p5js.org/assets/p5_featured/maya-dulynoted/
   image : https://drive.google.com/thumbnail?id=1-1v2XK-_ab79oT-25eo2GBdgYl_0mfU9&sz=w400-h400
-
-- title : Ocaniemanights
-  url : http://autotel.co/loopita-ocaniemanights/
-  image : https://drive.google.com/thumbnail?id=1jmot1Sl-YHt73stEfrn71CEAkbB7eKOB&sz=w400-h400
 
 - title : Groove Salad
   url : https://ccorcos.github.io/groove-salad/
@@ -229,3 +213,51 @@
 - title : Seasons (季节)
   url : https://usdivad.itch.io/seasons
   image : https://drive.google.com/thumbnail?id=1LG6xE0ALHjpgNnnMj0NuhYRg5CaF8H0X&sz=w400-h400
+
+- title : The R-Synth
+  url : https://deibid.github.io/r-synth/index.html
+  image : https://drive.google.com/thumbnail?id=1JoEevh4UQGAPBU3YJB3NOULQt6MbvRbN&sz=w400-h400
+
+- title : Satoshi NK-Lite.5
+  url : https://bitcoinaudio.github.io/
+  image : https://drive.google.com/thumbnail?id=1Yi5dRnLX96ncagpfsXuzvAWsnk0AIkwf&sz=w400-h400
+
+- title : Euclidean Sequencer
+  url : http://euclidean-sequencer.herokuapp.com/
+  image : https://drive.google.com/thumbnail?id=1pQ1PyNaHOT_PKsJp42kjVuVM6G-wUWf1&sz=w400-h400
+
+- title : Harmopark
+  url : https://www.harmopark.app
+  image : https://drive.google.com/thumbnail?id=1W06AqrHM3qs2DMXHitQz82NiH8uqLvhs&sz=w400-h400
+
+- title : Speed Trainer / Metronome
+  url : https://indiebubbler.github.io/metro
+  image : https://drive.google.com/thumbnail?id=1OzneEClIIQ8EdBHGMc0uDVgbD_Kdv7uz&sz=w400-h400
+
+- title : ChordQuery Chord Finder
+  url : https://app.chordquery.com/
+  image : https://drive.google.com/thumbnail?id=1vJKFKi1jpNg3mYLH9UupOvzk5RY1-QC2&sz=w400-h400
+
+- title : Busy Beats
+  url : https://busybeats.co.uk
+  image : https://drive.google.com/thumbnail?id=1QDvhCSg59d67ca6vESrn4yLXXkpl1f4J&sz=w400-h400
+
+- title : Akson
+  url : www.akson.xyz
+  image : https://drive.google.com/thumbnail?id=1yI02wdBVYkAglmfrKChm9TBAj9_X9eQi&sz=w400-h400
+
+- title : Mala Vida - Manu Chao (Karaoke)
+  url : https://www.franceinter.fr/embed/multipistes
+  image : https://drive.google.com/thumbnail?id=1Stb16xA-nsF_ScwB_Ob-yP4WNYPuPS-I&sz=w400-h400
+
+- title : KWEEBz
+  url : https://lazerbea.ms/lb011/
+  image : https://drive.google.com/thumbnail?id=1WHJHPdZ3rf05820LekQ7XIMpBXEd1_mE&sz=w400-h400
+
+- title : "Orbitals" for clarinet and mobile devices
+  url : https://youtu.be/oi_C-AvaWr0
+  image : https://drive.google.com/thumbnail?id=1qqfOPkLg9tbjocJukHQdZDMjuVomHHGz&sz=w400-h400
+
+- title : Poly-60
+  url : https://fonserbc.itch.io/poly-60
+  image : https://drive.google.com/thumbnail?id=1Yu0BkNAB15MDRysmgzjJOZOVim-n0ZUw&sz=w400-h400
