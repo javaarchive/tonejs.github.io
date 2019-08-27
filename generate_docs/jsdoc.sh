@@ -30,8 +30,10 @@ node jsdoc_generateFiles.js $VERSION_DIR $DOC_FILES
 
 if [ "$VERSION_DIR" == *"."* ]; then
 	ESCAPED_VERSION="$(echo "$VERSION_DIR" | tr . _)"
+	# remove if there's already a dir
+	rm -rf $DATA_FILES/$ESCAPED_VERSION
 	# copy to an escaped dir
-	mv $DATA_FILES/$VERSION_DIR $DATA_FILES/$ESCAPED_VERSION
+	cp $DATA_FILES/$VERSION_DIR $DATA_FILES/$ESCAPED_VERSION
 fi
 
 # make a type file
