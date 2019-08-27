@@ -6,7 +6,8 @@
 </head>
 <body>
 
-	{% include sidebar.html visible=true version=site.data.version %}
+	{% assign version = site.data.version | replace: ".", "_" %}
+	{% include sidebar.html visible=true version=version %}
 
 	<div id="content">
 		{{content}}
