@@ -28,6 +28,11 @@ node jsdoc_attributes.js $JSDOC_OUTPUT $DATA_FILES/$VERSION_DIR/
 # generate all of the files
 node jsdoc_generateFiles.js $VERSION_DIR $DOC_FILES
 
+if [[ "$VERSION_DIR" == *"."* ]]; then
+	ESCAPED_VERSION="$(echo "$VERSION_DIR" | tr . _)"
+	# copy to an escaped dir
+	cp -r $DATA_FILES/$VERSION_DIR $DATA_FILES/$ESCAPED_VERSION
+fi
 
 # make a type file
 TYPE_FILE=$DOC_FILES/$VERSION_DIR/Type.md
