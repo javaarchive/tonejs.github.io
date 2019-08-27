@@ -552,9 +552,6 @@
 		"amplitude": 1,
 		"units": "Tone.Type.Default"
 	},
-	"Panner": {
-		"pan": 0
-	},
 	"FrequencyEnvelope": {
 		"baseFrequency": 200,
 		"octaves": 4,

@@ -176,7 +176,7 @@
 			}
 		],
 		"examples": [
-			"var pingPong = new Tone.PingPongDelay(\"4n\", 0.2).toMaster();\nvar drum = new Tone.MembraneSynth().connect(pingPong);\ndrum.triggerAttackRelease(\"C4\", \"32n\");"
+			"var pingPong = new Tone.PingPongDelay(\"4n\", 0.2).toMaster();\nvar drum = new Tone.DrumSynth().connect(pingPong);\ndrum.triggerAttackRelease(\"C4\", \"32n\");"
 		],
 		"extends": "Tone.StereoXFeedbackEffect"
 	},
@@ -424,7 +424,7 @@
 			}
 		],
 		"examples": [
-			"var feedbackDelay = new Tone.FeedbackDelay(\"8n\", 0.5).toMaster();\nvar tom = new Tone.MembraneSynth({\n\t\"octaves\" : 4,\n\t\"pitchDecay\" : 0.1\n}).connect(feedbackDelay);\ntom.triggerAttackRelease(\"A2\",\"32n\");"
+			"var feedbackDelay = new Tone.FeedbackDelay(\"8n\", 0.5).toMaster();\nvar tom = new Tone.DrumSynth({\n\t\"octaves\" : 4,\n\t\"pitchDecay\" : 0.1\n}).connect(feedbackDelay);\ntom.triggerAttackRelease(\"A2\",\"32n\");"
 		],
 		"extends": "Tone.FeedbackEffect"
 	},
@@ -634,7 +634,7 @@
 				"type": [
 					"function"
 				],
-				"description": "The callback to invoke with the event.",
+				"description": "The callback to invoke with the\n                            event.",
 				"name": "callback"
 			},
 			{
@@ -863,18 +863,10 @@
 				"defaultvalue": "Tone.Synth",
 				"description": "The constructor of the voices\n                                           uses Tone.Synth by default.",
 				"name": "voice"
-			},
-			{
-				"type": [
-					"*"
-				],
-				"variable": true,
-				"description": "All additional arguments will be passed into the class constructor.",
-				"name": "voiceArgs"
 			}
 		],
 		"examples": [
-			"//a polysynth composed of 6 Voices of Synth\nvar synth = new Tone.PolySynth(6, Tone.Synth, {\n  oscillator : {\n\t\ttype : \"square\"\n\t}\n}).toMaster();\n//set the attributes using the set interface\nsynth.set(\"detune\", -1200);\n//play a chord\nsynth.triggerAttackRelease([\"C4\", \"E4\", \"A4\"], \"4n\");"
+			"//a polysynth composed of 6 Voices of Synth\nvar synth = new Tone.PolySynth(6, Tone.Synth).toMaster();\n//set the attributes using the set interface\nsynth.set(\"detune\", -1200);\n//play a chord\nsynth.triggerAttackRelease([\"C4\", \"E4\", \"A4\"], \"4n\");"
 		],
 		"extends": "Tone.Instrument"
 	},
@@ -1067,32 +1059,32 @@
 		"extends": "Tone"
 	},
 	"FatOscillator": {
-		"description": "Tone.FatOscillator is an array of oscillators with detune spread between the oscillators",
+		"description": "Tone.FatOscillator",
 		"params": [
 			{
 				"type": [
 					"Frequency"
 				],
-				"description": "The oscillator's frequency.",
+				"description": "The starting frequency of the oscillator.",
 				"name": "frequency"
 			},
 			{
 				"type": [
 					"String"
 				],
-				"description": "The type of the oscillator.",
+				"description": "The type of the carrier oscillator.",
 				"name": "type"
 			},
 			{
 				"type": [
-					"Cents"
+					"String"
 				],
-				"description": "The detune spread between the oscillators.",
-				"name": "spread"
+				"description": "The type of the modulator oscillator.",
+				"name": "modulationType"
 			}
 		],
 		"examples": [
-			"var fatOsc = new Tone.FatOscillator(\"Ab3\", \"sine\", 40).toMaster().start();"
+			"//a sine oscillator frequency-modulated by a square wave\nvar fmOsc = new Tone.FatOscillator(\"Ab3\", \"sine\", \"square\").toMaster().start();"
 		],
 		"extends": "Tone.Source"
 	},
@@ -1511,17 +1503,6 @@
 	},
 	"Split": {
 		"description": "Tone.Split splits an incoming signal into left and right channels.",
-		"params": [
-			{
-				"type": [
-					"number"
-				],
-				"optional": true,
-				"defaultvalue": 2,
-				"description": "The number of channels to merge.",
-				"name": "channels"
-			}
-		],
 		"examples": [
 			"var split = new Tone.Split();\nstereoSignal.connect(split);"
 		],
@@ -1612,14 +1593,14 @@
 		"extends": "Tone.AudioNode"
 	},
 	"FFT": {
-		"description": "Get the current frequency data of the connected audio source\n         using a fast Fourier transform.",
+		"description": "Get the current waveform data of the connected audio source.",
 		"params": [
 			{
 				"type": [
 					"Number"
 				],
 				"optional": true,
-				"description": "The size of the FFT. Value must be a power of\n                      two in the range 16 to 16384.",
+				"description": "The size of the FFT. Value must be a power of\n                      two in the range 32 to 32768.",
 				"name": "size"
 			}
 		],
@@ -1939,7 +1920,7 @@
 					"Number"
 				],
 				"optional": true,
-				"description": "The size of the FFT. Value must be a power of\n                      two in the range 16 to 16384.",
+				"description": "The size of the FFT. Value must be a power of\n                      two in the range 32 to 32768.",
 				"name": "size"
 			}
 		],
@@ -2052,17 +2033,6 @@
 	},
 	"Merge": {
 		"description": "Tone.Merge brings two signals into the left and right\n         channels of a single stereo channel.",
-		"params": [
-			{
-				"type": [
-					"number"
-				],
-				"optional": true,
-				"defaultvalue": 2,
-				"description": "The number of channels to merge.",
-				"name": "channels"
-			}
-		],
 		"examples": [
 			"var merge = new Tone.Merge().toMaster();\n//routing a sine tone in the left channel\n//and noise in the right channel\nvar osc = new Tone.Oscillator().connect(merge.left);\nvar noise = new Tone.Noise().connect(merge.right);\n//starting our oscillators\nnoise.start();\nosc.start();"
 		],
