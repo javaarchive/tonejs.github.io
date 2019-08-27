@@ -497,6 +497,9 @@
 			"knee": 10
 		}
 	},
+	"Panner": {
+		"pan": 0
+	},
 	"Follower": {
 		"smoothing": 0.05
 	},

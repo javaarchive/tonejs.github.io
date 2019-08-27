@@ -1,5 +1,8 @@
 [
 	{
+		"name": "function"
+	},
+	{
 		"description": "Default units",
 		"name": "Default",
 		"value": "number"
