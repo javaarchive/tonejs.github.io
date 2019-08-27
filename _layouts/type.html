@@ -8,9 +8,10 @@
 </head>
 <body>
 
-	{% assign types = site.data[page.version].types %}
+	{% assign version = page.version | replace: ".", "_" %}
+	{% assign types = site.data[version].types %}
 
-	{% include sidebar.html class_name=page.title version=page.version %}
+	{% include sidebar.html class_name=page.title version=version %}
 
 	<div id="content">
 

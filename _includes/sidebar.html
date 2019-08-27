@@ -17,7 +17,9 @@
 			<div class="group">
 				<h1>{{category[0]}}</h1>
 
-				{% for class in category[1] %}
+				{% assign sub_category = category[1] | sort %}
+
+				{% for class in sub_category %}
 					<a href="{{class}}" {% if class == page.title %} class="active item" {% else %} class="item" {% endif %}>{{class}}</a>
 				{% endfor %}
 			</div>

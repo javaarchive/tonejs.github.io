@@ -1,5 +1,6 @@
-{% assign constructor = site.data[page.version].constructors[page.title] %}
-{% assign types = site.data[page.version].types %}
+{% assign version = page.version | replace: ".", "_" %}
+{% assign constructor = site.data[version].constructors[page.title] %}
+{% assign types = site.data[version].types %}
 
 <div id="constructor">
 
