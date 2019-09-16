@@ -10,6 +10,6 @@ const versions = execSync("npm view tone@'>=14.3.29' version").toString().trim()
 const latest = versions[versions.length - 1].split(' ')[1].replace(/'/g, '')
 // add that npm module
 console.log(`installing ${latest}`)
-execSync(`npm i tone@${latest} -D`)
+execSync(`npm i tone@${latest} --no-save`)
 //build the version
 execSync(`npm run build:docs --output=${resolve(DOCS_DIR, latest)}`)
