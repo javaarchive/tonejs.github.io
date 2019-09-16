@@ -11,7 +11,8 @@
     "build:css": "node-sass ./doc-gen/style/ -o $npm_config_output/assets/",
     "build:js": "tsc ./doc-gen/scripts/*.ts --outFile $npm_config_output/assets/build.js --target es5",
     "build:docs": "echo $npm_config_output && npm run build:html && npm run build:js &&npm run build:css",
-    "build": "node scripts/build_latest.js"
+    "build": "node scripts/build_latest.js",
+    "commit": "node scripts/commit.js"
   },
   "repository": {
     "type": "git",
