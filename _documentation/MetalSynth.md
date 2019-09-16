@@ -1,4 +1,0 @@
----
-title : MetalSynth
-layout : forward
----

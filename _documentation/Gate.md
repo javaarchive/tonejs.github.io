@@ -1,4 +1,0 @@
----
-title : Gate
-layout : forward
----

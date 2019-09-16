@@ -7,14 +7,10 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-collections:
-  documentation:
-    output: true
-    permalink: /docs/:path
-
 exclude:
   - .DS_Store
   - Gemfile.lock
   - node_modules
   - images/original
   - images/scripts
+  - doc-gen

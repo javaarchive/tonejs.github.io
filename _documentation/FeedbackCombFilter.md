@@ -1,4 +1,0 @@
----
-title : FeedbackCombFilter
-layout : forward
----

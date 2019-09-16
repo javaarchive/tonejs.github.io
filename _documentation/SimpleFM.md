@@ -1,4 +1,0 @@
----
-title : SimpleFM
-layout : forward
----

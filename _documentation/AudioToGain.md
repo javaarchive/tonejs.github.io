@@ -1,4 +1,0 @@
----
-title : AudioToGain
-layout : forward
----

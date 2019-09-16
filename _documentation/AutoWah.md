@@ -1,4 +1,0 @@
----
-title : AutoWah
-layout : forward
----

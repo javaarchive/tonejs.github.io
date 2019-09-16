@@ -1,4 +1,0 @@
----
-title : AMOscillator
-layout : forward
----

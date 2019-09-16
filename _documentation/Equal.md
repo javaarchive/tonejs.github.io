@@ -1,4 +1,0 @@
----
-title : Equal
-layout : forward
----

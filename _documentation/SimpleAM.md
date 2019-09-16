@@ -1,4 +1,0 @@
----
-title : SimpleAM
-layout : forward
----

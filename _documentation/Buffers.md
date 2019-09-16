@@ -1,4 +1,0 @@
----
-title : Buffers
-layout : forward
----

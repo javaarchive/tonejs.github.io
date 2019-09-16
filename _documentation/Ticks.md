@@ -1,4 +1,0 @@
----
-title : Ticks
-layout : forward
----

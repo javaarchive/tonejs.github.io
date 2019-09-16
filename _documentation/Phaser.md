@@ -1,4 +1,0 @@
----
-title : Phaser
-layout : forward
----

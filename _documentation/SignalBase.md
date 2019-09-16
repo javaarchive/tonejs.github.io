@@ -1,4 +1,0 @@
----
-title : SignalBase
-layout : forward
----

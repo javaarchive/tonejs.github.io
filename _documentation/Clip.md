@@ -1,4 +1,0 @@
----
-title : Clip
-layout : forward
----

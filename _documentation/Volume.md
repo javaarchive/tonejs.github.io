@@ -1,4 +1,0 @@
----
-title : Volume
-layout : forward
----

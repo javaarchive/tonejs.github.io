@@ -1,4 +1,0 @@
----
-title : Waveform
-layout : forward
----

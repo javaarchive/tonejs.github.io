@@ -1,4 +1,0 @@
----
-title : DuoSynth
-layout : forward
----

@@ -1,4 +1,0 @@
----
-title : Signal
-layout : forward
----

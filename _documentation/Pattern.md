@@ -1,4 +1,0 @@
----
-title : Pattern
-layout : forward
----

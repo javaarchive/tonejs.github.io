@@ -1,4 +1,0 @@
----
-title : FMSynth
-layout : forward
----

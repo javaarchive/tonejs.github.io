@@ -1,4 +1,0 @@
----
-title : PanVol
-layout : forward
----

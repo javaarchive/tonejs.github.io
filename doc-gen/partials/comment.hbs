@@ -1,0 +1,32 @@
+{{#if comment.shortText}}
+	<div class="description">
+		{{#markdown}}{{{comment.shortText}}}{{/markdown}}
+		{{#if comment.tags}}
+			{{#each comment.tags}}
+				{{!-- CUSTOM TAGS --}}
+				{{#ifCond tag '==' 'example'}}
+					<div class="example">
+						<pre>{{{highlight text}}}</pre>
+					</div>
+				{{/ifCond}}
+			{{/each}}
+		{{/if}}
+	</div>
+{{else}}
+	{{#if comment.text}}
+		<div class="description">
+			{{#markdown}}{{{comment.text}}}{{/markdown}}
+		</div>
+	{{else}}
+		{{#ifCond kindString '!=' 'Constructor signature'}}
+			{{#each signatures}}
+				{{>comment this}}
+			{{/each}}
+			{{#with (resolveComment overwrites.id)}}
+				{{#each signatures}}
+					{{>comment this}}
+				{{/each}}
+			{{/with}}
+		{{/ifCond}}
+	{{/if}}
+{{/if}}

@@ -1,4 +1,0 @@
----
-title : Chebyshev
-layout : forward
----

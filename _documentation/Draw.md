@@ -1,4 +1,0 @@
----
-title : Draw
-layout : forward
----

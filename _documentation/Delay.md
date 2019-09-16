@@ -1,4 +1,0 @@
----
-title : Delay
-layout : forward
----

@@ -1,4 +1,0 @@
----
-title : Tremolo
-layout : forward
----

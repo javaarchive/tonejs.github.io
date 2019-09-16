@@ -1,4 +1,0 @@
----
-title : AutoFilter
-layout : forward
----

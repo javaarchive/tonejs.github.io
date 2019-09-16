@@ -1,4 +1,0 @@
----
-title : StereoEffect
-layout : forward
----

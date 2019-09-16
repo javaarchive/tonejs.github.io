@@ -1,4 +1,0 @@
----
-title : Synth
-layout : forward
----

@@ -1,4 +1,0 @@
----
-title : Max
-layout : forward
----

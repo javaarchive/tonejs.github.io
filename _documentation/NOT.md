@@ -1,4 +1,0 @@
----
-title : NOT
-layout : forward
----

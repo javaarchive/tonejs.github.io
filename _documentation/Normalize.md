@@ -1,4 +1,0 @@
----
-title : Normalize
-layout : forward
----

@@ -1,4 +1,0 @@
----
-title : Min
-layout : forward
----

@@ -1,4 +1,0 @@
----
-title : ExternalInput
-layout : forward
----

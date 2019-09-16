@@ -1,0 +1,34 @@
+<div id="content-container">
+	{{!-- resolve the implemented by type --}}
+	{{implementedBy this}}
+	<div id="class-container">
+		<h2 id="class-name">{{name}}
+			{{#if typeParameter}}
+				&lt;
+				{{#each typeParameter}}
+					{{#if @index}},&nbsp;{{/if}}
+					{{name}}
+				{{/each}}
+				&gt;
+			{{/if}}
+		</h2>
+		<div id="comment">
+			{{>comment this}}
+		</div>
+		{{#if typeParameter}}
+			<h4>Type Parameter</h4>
+			<ul>
+				{{#each typeParameter}}
+					<li>{{name}}<span class="signature-symbol">: </span>{{>type type}}</li>
+				{{/each}}
+			</ul>
+		{{/if}}
+		<div id="class-members">
+			{{>hierarchy}}
+			{{>classIndex}}
+			{{>constructor}}
+			{{>properties}}
+			{{>methods}}
+		</div>
+	</div>
+</div>

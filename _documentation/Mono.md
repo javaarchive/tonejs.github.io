@@ -1,4 +1,0 @@
----
-title : Mono
-layout : forward
----

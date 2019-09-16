@@ -1,4 +1,0 @@
----
-title : Sampler
-layout : forward
----

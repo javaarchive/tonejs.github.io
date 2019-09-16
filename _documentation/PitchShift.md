@@ -1,4 +1,0 @@
----
-title : PitchShift
-layout : forward
----

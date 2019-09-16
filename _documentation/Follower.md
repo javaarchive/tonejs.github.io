@@ -1,4 +1,0 @@
----
-title : Follower
-layout : forward
----

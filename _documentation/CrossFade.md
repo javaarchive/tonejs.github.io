@@ -1,4 +1,0 @@
----
-title : CrossFade
-layout : forward
----

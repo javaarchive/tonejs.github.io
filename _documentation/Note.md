@@ -1,4 +1,0 @@
----
-title : Note
-layout : forward
----

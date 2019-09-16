@@ -1,4 +1,0 @@
----
-title : Midi
-layout : forward
----

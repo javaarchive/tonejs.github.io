@@ -1,4 +1,0 @@
----
-title : CtrlPattern
-layout : forward
----

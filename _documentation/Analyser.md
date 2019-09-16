@@ -1,4 +1,0 @@
----
-title : Analyser
-layout : forward
----

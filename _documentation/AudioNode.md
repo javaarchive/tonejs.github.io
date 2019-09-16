@@ -1,4 +1,0 @@
----
-title : AudioNode
-layout : forward
----

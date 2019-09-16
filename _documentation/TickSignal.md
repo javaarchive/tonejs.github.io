@@ -1,4 +1,0 @@
----
-title : TickSignal
-layout : forward
----

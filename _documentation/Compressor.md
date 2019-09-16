@@ -1,4 +1,0 @@
----
-title : Compressor
-layout : forward
----

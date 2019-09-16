@@ -1,4 +1,0 @@
----
-title : SimpleSynth
-layout : forward
----

@@ -1,4 +1,0 @@
----
-title : LessThan
-layout : forward
----

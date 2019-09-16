@@ -1,4 +1,0 @@
----
-title : AND
-layout : forward
----

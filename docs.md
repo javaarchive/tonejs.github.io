@@ -1,7 +1,6 @@
 ---
 title : Tone.js Docs
 layout : index
-version: r11-dev
 permalink: /docs/
 ---
 

@@ -1,4 +1,0 @@
----
-title : MultibandCompressor
-layout : forward
----

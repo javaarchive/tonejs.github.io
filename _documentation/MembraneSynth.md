@@ -1,4 +1,0 @@
----
-title : MembraneSynth
-layout : forward
----

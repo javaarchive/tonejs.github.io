@@ -1,4 +1,0 @@
----
-title : Panner
-layout : forward
----

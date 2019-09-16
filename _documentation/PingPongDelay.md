@@ -1,4 +1,0 @@
----
-title : PingPongDelay
-layout : forward
----

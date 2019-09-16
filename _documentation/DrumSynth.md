@@ -1,4 +1,0 @@
----
-title : DrumSynth
-layout : forward
----

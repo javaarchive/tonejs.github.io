@@ -1,4 +1,0 @@
----
-title : Effect
-layout : forward
----

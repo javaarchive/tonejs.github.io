@@ -1,4 +1,0 @@
----
-title : OmniOscillator
-layout : forward
----

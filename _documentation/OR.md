@@ -1,4 +1,0 @@
----
-title : OR
-layout : forward
----

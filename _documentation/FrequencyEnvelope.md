@@ -1,4 +1,0 @@
----
-title : FrequencyEnvelope
-layout : forward
----

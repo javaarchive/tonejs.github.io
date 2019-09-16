@@ -1,4 +1,0 @@
----
-title : EqualZero
-layout : forward
----

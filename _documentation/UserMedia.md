@@ -1,4 +1,0 @@
----
-title : UserMedia
-layout : forward
----

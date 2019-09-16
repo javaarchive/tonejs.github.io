@@ -1,4 +1,0 @@
----
-title : JCReverb
-layout : forward
----

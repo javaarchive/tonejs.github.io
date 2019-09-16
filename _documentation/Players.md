@@ -1,4 +1,0 @@
----
-title : Players
-layout : forward
----

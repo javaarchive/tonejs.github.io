@@ -1,4 +1,0 @@
----
-title : NoiseSynth
-layout : forward
----

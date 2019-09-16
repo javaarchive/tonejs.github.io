@@ -1,4 +1,0 @@
----
-title : LowpassCombFilter
-layout : forward
----

@@ -1,4 +1,0 @@
----
-title : Solo
-layout : forward
----

@@ -1,4 +1,0 @@
----
-title : Channel
-layout : forward
----

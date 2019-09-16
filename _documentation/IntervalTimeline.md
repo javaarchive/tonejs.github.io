@@ -1,4 +1,0 @@
----
-title : IntervalTimeline
-layout : forward
----

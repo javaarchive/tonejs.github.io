@@ -1,4 +1,0 @@
----
-title : TimelineSignal
-layout : forward
----

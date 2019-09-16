@@ -1,4 +1,0 @@
----
-title : MidSideEffect
-layout : forward
----

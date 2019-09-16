@@ -1,4 +1,0 @@
----
-title : Noise
-layout : forward
----

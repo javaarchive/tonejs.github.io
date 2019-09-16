@@ -1,4 +1,0 @@
----
-title : Frequency
-layout : forward
----

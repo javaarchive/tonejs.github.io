@@ -1,4 +1,0 @@
----
-title : BufferSource
-layout : forward
----

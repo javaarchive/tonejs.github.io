@@ -1,4 +1,0 @@
----
-title : MidSideSplit
-layout : forward
----

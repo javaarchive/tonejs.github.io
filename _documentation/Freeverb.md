@@ -1,4 +1,0 @@
----
-title : Freeverb
-layout : forward
----

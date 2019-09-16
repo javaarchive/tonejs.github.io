@@ -1,4 +1,0 @@
----
-title : Vibrato
-layout : forward
----

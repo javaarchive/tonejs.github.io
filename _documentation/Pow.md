@@ -1,4 +1,0 @@
----
-title : Pow
-layout : forward
----

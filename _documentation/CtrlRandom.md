@@ -1,4 +1,0 @@
----
-title : CtrlRandom
-layout : forward
----

@@ -1,0 +1,9 @@
+{{#if sources}}
+	<div class="code-link">
+		{{#each sources}}
+			{{#if @first}}
+				Defined in: <a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/{{commitHash}}/Tone/{{fileName}}#L{{line}}">{{fileName}}</a>
+			{{/if}}
+		{{/each}}
+	</div>
+{{/if}}

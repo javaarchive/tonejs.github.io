@@ -1,6 +1,0 @@
----
-title : PitchShift
-version : r12
-layout : docs
-category : effect
----

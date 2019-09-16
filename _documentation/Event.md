@@ -1,4 +1,0 @@
----
-title : Event
-layout : forward
----

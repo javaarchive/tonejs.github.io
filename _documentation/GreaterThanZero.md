@@ -1,4 +1,0 @@
----
-title : GreaterThanZero
-layout : forward
----

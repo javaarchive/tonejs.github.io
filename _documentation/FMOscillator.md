@@ -1,4 +1,0 @@
----
-title : FMOscillator
-layout : forward
----

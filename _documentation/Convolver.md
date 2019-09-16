@@ -1,4 +1,0 @@
----
-title : Convolver
-layout : forward
----
