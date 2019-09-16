@@ -9,8 +9,9 @@
     "watch:css": "npm run build:css -- -w",
     "build:html": "node -r ts-node/register ./doc-gen/src/index.ts --output=$npm_config_output",
     "build:css": "node-sass ./doc-gen/style/ -o $npm_config_output/assets/",
-    "build:js": "tsc ./doc-gen/scripts/*.ts --outFile $npm_config_output/assets/build.js --target es5",
-    "build:docs": "echo $npm_config_output && npm run build:html && npm run build:js &&npm run build:css",
+	"build:js": "tsc ./doc-gen/scripts/*.ts --outFile $npm_config_output/assets/build.js --target es5",
+	"test:output_dir" : "[ -z \"$npm_config_output\" ] && echo \"SPECIFY OUTPUT DIR\" && exit 1 || echo $npm_config_output",
+    "build:docs": "npm run test:output_dir && npm run build:html && npm run build:js &&npm run build:css",
     "build": "node scripts/build_latest.js"
   },
   "repository": {
