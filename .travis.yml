@@ -9,7 +9,6 @@ install:
 - git config --global user.name "Travis CI"
 script: 
 - npm run build
-- npm run commit
 deploy:
   provider: pages
   skip-cleanup: true
