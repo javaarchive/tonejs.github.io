@@ -1,5 +1,5 @@
 import { compile, TemplateDelegate } from "handlebars";
-import {readFile, writeFile, ensureDir, remove} from 'fs-extra'
+import {readFile, writeFile, ensureDir} from 'fs-extra'
 import {resolve} from 'path'
 import {registerPartials} from './partials'
 import {registerHelpers} from './helpers'
@@ -23,7 +23,6 @@ async function getClassTemplate(): Promise<TemplateDelegate>{
 }
 
 async function ensureDirs(){
-	await remove(OUT_DIR)
 	await ensureDir(OUT_DIR)
 	await Promise.all([
 		ensureDir(INTERFACE_DIR),
