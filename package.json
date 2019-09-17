@@ -7,10 +7,11 @@
     "watch:html": "nodemon --exec \"npm run build:html\" --ext ts,hbs --ignore scripts/type.ts --ignore scripts/sidebar.ts",
     "watch:js": "npm run build:js -- --watch",
     "watch:css": "npm run build:css -- -w",
+    "watch": "concurrently \"npm run watch:css\" \"npm run watch:js\" \"npm run watch:html\"",
     "build:html": "node -r ts-node/register ./doc-gen/src/index.ts --output=$npm_config_output",
     "build:css": "node-sass ./doc-gen/style/ -o $npm_config_output/assets/",
-	"build:js": "tsc ./doc-gen/scripts/*.ts --outFile $npm_config_output/assets/build.js --target es5",
-	"test:output_dir" : "[ -z \"$npm_config_output\" ] && echo \"SPECIFY OUTPUT DIR\" && exit 1 || echo $npm_config_output",
+    "build:js": "tsc ./doc-gen/scripts/*.ts --outFile $npm_config_output/assets/build.js --target es5",
+    "test:output_dir": "[ -z \"$npm_config_output\" ] && echo \"SPECIFY OUTPUT DIR\" && exit 1 || echo $npm_config_output",
     "build:docs": "npm run test:output_dir && npm run build:html && npm run build:js &&npm run build:css",
     "build": "node scripts/build_latest.js"
   },
@@ -21,7 +22,7 @@
   "author": "Yotam Mann",
   "license": "MIT",
   "devDependencies": {
-    "jsdoc": "^3.6.3",
+    "concurrently": "^4.1.2",
     "nodemon": "^1.19.2",
     "semver": "^5.6.0"
   },

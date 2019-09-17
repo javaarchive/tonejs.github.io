@@ -12,9 +12,9 @@ $sidebarHide: 900px;
 		flex: 0 0 40px;
 	}
 	
-	details {
+	#contents {
 		flex: 1;
-		overflow-y: scroll;
+		overflow-y: auto;
 		margin: 0px;
 		margin-top: 0px;
 		
@@ -60,7 +60,7 @@ $sidebarHide: 900px;
 	}
 
 	.category {
-		$steps: 8;
+		$steps: 12;
 		$from: $orange;
 		$to: $yellow;
 		@for $var from 0 to $steps {
@@ -68,7 +68,7 @@ $sidebarHide: 900px;
 				$weight : clamp($var / $steps, 0, 1);
 				$color: mix($to, $from, $weight * 100);
 				
-				$innerSteps: 20;
+				$innerSteps: 30;
 				$toColor: adjust-hue($color, -30);
 				@for $var from 0 to $innerSteps {
 					.instance:nth-child(#{$var}) a{

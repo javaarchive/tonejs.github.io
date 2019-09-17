@@ -71,6 +71,13 @@ export async function registerHelpers(allData: any){
 	})
 
 	/**
+	 * get the current version
+	 */
+	registerHelper('version', function(){
+		return allData.version
+	})
+
+	/**
 	 * Get the class constructor
 	 */
 	registerHelper('getConstructor', function(data){
