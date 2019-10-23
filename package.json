@@ -5,12 +5,12 @@
   "main": "index.md",
   "scripts": {
     "watch:html": "nodemon --exec \"npm run build:html\" --ext ts,hbs --ignore scripts/type.ts --ignore scripts/sidebar.ts",
-    "watch:js": "npm run build:js -- --watch",
+    "watch:js": "npm run build:js -- --watch --mode=development",
     "watch:css": "npm run build:css -- -w",
     "watch": "npm run test:output_dir && concurrently \"npm run watch:css\" \"npm run watch:js\" \"npm run watch:html\"",
     "build:html": "node -r ts-node/register ./doc-gen/src/index.ts --output=$npm_config_output",
     "build:css": "node-sass ./doc-gen/style/ -o $npm_config_output/assets/",
-    "build:js": "tsc ./doc-gen/scripts/*.ts --outFile $npm_config_output/assets/build.js --target es5",
+    "build:js": "webpack --config ./doc-gen/scripts/webpack.config.js",
     "test:output_dir": "[ -z \"$npm_config_output\" ] && echo \"SPECIFY OUTPUT DIR\" && exit 1 || echo $npm_config_output",
     "build:docs": "npm run test:output_dir && npm run build:html && npm run build:js &&npm run build:css",
     "build": "node scripts/build_latest.js"
@@ -28,6 +28,8 @@
   },
   "dependencies": {
     "@types/node": "^12.7.5",
+    "css-loader": "^3.2.0",
+    "dts-bundle": "^0.7.3",
     "fs-extra": "^8.1.0",
     "glob": "^7.1.4",
     "glob-promise": "^3.4.0",
@@ -36,8 +38,12 @@
     "marked": "^0.7.0",
     "monaco-editor": "^0.18.1",
     "node-sass": "^4.12.0",
+    "style-loader": "^1.0.0",
+    "ts-loader": "^6.2.0",
     "ts-node": "^8.4.1",
-    "typescript": "^3.6.3",
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
     "yargs": "^14.0.0"
   }
 }

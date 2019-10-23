@@ -6,7 +6,18 @@ import {registerHelper} from 'handlebars'
 marked.setOptions({
 	highlight: function(code, lang) {
 		if (lang) {
-			return hljs.highlight(lang, code).value;
+			console.log(code)
+			return code
+			// return `<div class="e">
+			// 			<div class="center">${code.split('').map((letter:string) => {
+			// 				if (letter.match(/[\-\+\|><]/g)){
+			// 					return `<span>${letter}</span>`
+			// 				} else {
+			// 					return letter
+			// 				}
+			// 			}).join('')}</div>
+			// 		</div>`
+			// // return hljs.highlight(lang, code).value;
 		} else {
 			return `<div class="ascii-diagram">
 						<div class="center">${code.split('').map((letter:string) => {

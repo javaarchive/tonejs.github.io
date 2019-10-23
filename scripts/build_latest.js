@@ -13,3 +13,10 @@ console.log(`fetching tone@${latest}`)
 execSync(`npm i tone@${latest} --no-save`)
 //build the version
 execSync(`npm run build:docs --output=${resolve(DOCS_DIR, latest)}`)
+
+// add the d.ts bundle
+require('dts-bundle').bundle({
+	name: 'tone',
+	main: resolve(__dirname, '../node_modules/tone/build/esm/index.d.ts'),
+	out: resolve(DOCS_DIR, latest, 'assets/tone.d.ts'),
+});

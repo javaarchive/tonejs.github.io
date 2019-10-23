@@ -113,6 +113,34 @@ body {
 		white-space: pre;
 	}
 
+	.example {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		width: calc(100% - 20px);
+		
+		.monaco-editor {
+			padding: 10px;
+			padding-bottom: 0px;;
+			border-radius: 10px;
+		}
+
+		iframe {
+			width: 0px;
+			height: 0px;
+			border: none;
+		}
+
+		button {
+			width: 80px;
+		}
+
+		#error {
+			margin-left: 10px;
+			color: red;
+		}
+	}
+
+
 	p, p li {
 		line-height: 1.5em;
 	}

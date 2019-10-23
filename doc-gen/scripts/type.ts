@@ -1,5 +1,7 @@
+import {IS_IFRAME} from './common'
+
 //make sure you're not running an in iframe
-if ( window.location === window.parent.location ) {
+if ( !IS_IFRAME ) {
 	document.querySelectorAll('.type a').forEach((element: HTMLAnchorElement) => {
 		element.parentNode.addEventListener('mouseenter', (e) => {
 			if (e instanceof MouseEvent){
