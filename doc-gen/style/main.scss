@@ -115,7 +115,7 @@ body {
 
 	.example {
 		margin-top: 10px;
-		margin-bottom: 10px;
+		margin-bottom: 40px;
 		width: calc(100% - 20px);
 		
 		.monaco-editor {
@@ -134,9 +134,12 @@ body {
 			width: 80px;
 		}
 
-		#error {
+		#info {
 			margin-left: 10px;
-			color: red;
+
+			&.error {
+				color: red;
+			}
 		}
 	}
 
