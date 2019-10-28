@@ -12,4 +12,6 @@ travis/tmp
 
 tmp
 
+docs/test
+
 .DS_Store

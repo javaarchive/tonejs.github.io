@@ -140,7 +140,7 @@ async function main(){
 								iframeError(e.data.error)
 							} else if (e.data.console){
 								infoText.classList.remove('error')
-								infoText.textContent = `log: ${JSON.stringify(e.data.console)}`
+								infoText.textContent = `log: ${e.data.console.map(c => JSON.stringify(c))}`
 							}
 						}
 					})
