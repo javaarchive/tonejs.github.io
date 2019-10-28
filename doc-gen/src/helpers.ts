@@ -42,6 +42,9 @@ export async function registerHelpers(allData: any){
 		const brackets: RegExp = /\[\[([^\]]+)\]\]/g
 		//if it refers to an internal function
 		function isClassOrFunction(name: string): boolean{
+			if (name.includes('.')){
+				name = name.split('.')[0]
+			}
 			return allData.children.findIndex((doc) => {
 				return doc.name === name && (doc.kindString === 'Class' || doc.kindString === 'Function')
 			}) !== -1
