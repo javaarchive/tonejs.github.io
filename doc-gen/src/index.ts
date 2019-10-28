@@ -1,5 +1,5 @@
 import { compile, TemplateDelegate } from "handlebars";
-import {readFile, writeFile, ensureDir} from 'fs-extra'
+import { readFile, writeFile, ensureDir } from 'fs-extra'
 import {resolve} from 'path'
 import {registerPartials} from './partials'
 import {registerHelpers} from './helpers'
@@ -14,6 +14,7 @@ const TYPE_DIR = resolve(OUT_DIR, 'type')
 const INTERFACE_DIR = resolve(OUT_DIR, 'interface')
 const FUNCTION_DIR = resolve(OUT_DIR, 'fn')
 const INPUT_FILE = resolve(__dirname, '../../node_modules/tone/docs/tone.json')
+// const INPUT_FILE = resolve(__dirname, '../../../Tone.js/docs/tone.json')
 
 async function getClassTemplate(): Promise<TemplateDelegate>{
 	const classTemplate = await readFile(resolve(TEMPLATE_DIR, 'class.hbs'), 'utf-8')
