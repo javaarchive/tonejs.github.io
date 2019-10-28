@@ -15,16 +15,41 @@ async function fetchToneDts(){
 async function runCode(code, element){
 	const iframe  = document.createElement('iframe');
 	iframe.sandbox.add("allow-scripts")
+	iframe.sandbox.add("allow-same-origin")
 	iframe.allow = "autoplay"
 	element.appendChild(iframe)
 	const version = getVersion()
-	code = code.replace(/from ["']tone["']/gm, `from "https://unpkg.com/tone@${version}?module"`)
+	const unpkgTone = `https://unpkg.com/tone@${version}?module`
+	code = code.replace(/from ["']tone["']/gm, `from "${unpkgTone}"`)
 	const content = `
+	<script>
+		// don't print the tone.js logging to the console
+		window.TONE_SILENCE_LOGGING = true;
+		//overwrite console.log to send info the client
+		const originalLog = console.log.bind(console)
+		console.log = (...args) => {
+			originalLog(...args)
+			// defer the logging until after it's loaded
+			setTimeout(() => {
+				window.parent.postMessage({ console : args }, "*")
+			}, 1)
+		}
+	</script>
 	<script type="module">
+		// stop it after 30 seconds max
+		import { getContext, Destination } from "${unpkgTone}"
+		Destination.volume.rampTo(-Infinity, 1, "+30");
+		setTimeout(() => {
+			// let the parent know 
+			window.parent.postMessage({ done : true }, "*")
+		}, 32000)
+
+
 		window.onerror = e => {
-			window.parent.postMessage({ error : e })
+			window.parent.postMessage({ error : e }, "*")
 		}
 		${code}
+		window.parent.postMessage({ loaded : true }, "*")
 	</script>
 	`
 	const blob = new Blob([content], { type : 'text/html' })
@@ -33,17 +58,36 @@ async function runCode(code, element){
 	})
 	iframe.src = URL.createObjectURL(blob)
 	await loaded
+	await Promise.race([
+		new Promise((done, error) => {
+			window.addEventListener('message', e => {
+				if(e.source === iframe.contentWindow) {
+					if (e.data.loaded){
+						done()
+					} else if (e.data.error){
+						error(e.data.error)
+					}
+				}
+			})
+		}),
+		new Promise((_, error) => {
+			// 10 second timeout
+			setTimeout(() => {
+				error("Timeout!")
+			}, 10000)
+		})
+	])
 	return iframe
 }
 
-const runText = "▶ Run"
+const runText = "► Run"
 const stopText = "◼ Stop"
 
 async function main(){
 	
 	// @ts-ignore
 	self.MonacoEnvironment = {
-		getWorkerUrl: function(moduleId, label) {
+		getWorkerUrl: function(_, label) {
 			if (label === "typescript" || label === "javascript") {
 				return "./assets/ts.worker.bundle.js";
 			}
@@ -72,28 +116,37 @@ async function main(){
 		const button = document.createElement("button")
 		button.textContent = runText
 		element.appendChild(button)
-		const errorText = document.createElement('span')
-		errorText.id = 'error'
-		element.appendChild(errorText)
+		const infoText = document.createElement('span')
+		infoText.id = 'info'
+		element.appendChild(infoText)
 		
 		let iframe = null
 		let iframePromise = null
 		button.addEventListener("click", async e => {
 			if (button.textContent === runText){
-				errorText.textContent = ""
+				infoText.textContent = ""
 				button.textContent = "Loading..."
 				button.disabled = true
 				iframePromise = runCode(editor.getValue(), element)
-				iframe = await iframePromise
-				button.disabled = false
-				button.textContent = stopText
-				window.addEventListener('message', e => {
-					if(iframe && e.source === iframe.contentWindow){
-						iframe.remove()
-						errorText.textContent = e.data.error
-						stopIframe()
-					}
-				})
+				try {
+					iframe = await iframePromise
+					button.disabled = false
+					button.textContent = stopText
+					window.addEventListener('message', e => {
+						if(iframe && e.source === iframe.contentWindow){
+							if (e.data.done){
+								stopIframe()
+							} else if (e.data.error){
+								iframeError(e.data.error)
+							} else if (e.data.console){
+								infoText.classList.remove('error')
+								infoText.textContent = `log: ${JSON.stringify(e.data.console)}`
+							}
+						}
+					})
+				} catch(e){
+					iframeError(e)
+				}
 			} else {
 				stopIframe()
 			}
@@ -110,6 +163,12 @@ async function main(){
 				//stop it once it's started
 				iframePromise.then(stopIframe)
 			}
+		}
+
+		function iframeError(e){
+			stopIframe()
+			infoText.textContent = e
+			infoText.classList.add('error')
 		}
 
 		//cancel it
