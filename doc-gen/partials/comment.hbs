@@ -2,8 +2,11 @@
 	<div class="description">
 		{{#markdown}}{{{comment.shortText}}}{{/markdown}}
 		{{#if comment.tags}}
+			{{!-- nominal range --}}
+			<span class="nominal-range">{{nominalRange comment.tags}}</span>
+
 			{{#each comment.tags}}
-				{{!-- CUSTOM TAGS --}}
+				{{!-- EXAMPLES --}}
 				{{#ifCond tag '==' 'example'}}
 					<div class="example">
 						<pre>{{{highlight text}}}</pre>

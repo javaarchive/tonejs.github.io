@@ -273,4 +273,24 @@ export async function registerHelpers(allData: any){
 			}
 		})
 	})
+
+	/**
+	 * If it's got either min or max
+	 */
+	registerHelper('nominalRange', (obj) => {
+		const min = obj.find(o => o.tag === 'min')
+		const max = obj.find(o => o.tag === 'max')
+		let ret = ""
+		if (min || max){
+			ret += "Range: "
+			if (min && max){
+				ret += `${min.text} to ${max.text}`
+			} else if (min){
+				ret += `${min.text} (min)`
+			} else if (max){
+				ret += `${max.text} (max)`
+			}
+		}
+		return ret
+	})
 }

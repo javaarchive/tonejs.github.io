@@ -141,6 +141,16 @@
 		}
 	}
 
+	.description {
+
+		.nominal-range {
+			font-size: 0.9em;
+			color: #444;
+			line-height: 1.3em;
+			font-weight: 100;
+		}
+	}
+
 	.property-container & {
 		@include interpolate($memberColor, adjust-hue($memberColor, 60), 20, 'border-color');
 	}
