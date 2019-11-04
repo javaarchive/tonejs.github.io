@@ -43,7 +43,8 @@ async function runCode(code, element){
 			// let the parent know 
 			window.parent.postMessage({ done : true }, "*")
 		}, 32000)
-
+	</script>
+	<script type="module">
 
 		window.onerror = e => {
 			window.parent.postMessage({ error : e }, "*")
