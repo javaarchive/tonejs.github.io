@@ -178,6 +178,12 @@ async function main(){
 		})
 	});
 
+	monaco.languages.typescript.typescriptDefaults.setCompilerOptions({
+		target: monaco.languages.typescript.ScriptTarget.ES2015,
+		allowNonTsExtensions: true,
+		lib: ["es6"]
+	});
+
 	/**
 	 * Add the declaration
 	 */
