@@ -167,7 +167,7 @@ export async function registerHelpers(allData: any){
 	 * highlight a block of code as javascript
 	 */
 	registerHelper('highlight', function(code: string, context){
-		return `<code class="language-js hljs">${hljs.highlight('js', code).value}</code>`;
+		return `<code class="language-js hljs">${hljs.highlight('typescript', code).value}</code>`;
 	})
 
 	/**
