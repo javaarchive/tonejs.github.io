@@ -53,6 +53,13 @@ async function getFunctionTemplate(): Promise<TemplateDelegate>{
 	})
 }
 
+async function getIndexTemplate(): Promise<TemplateDelegate>{
+	const fTemplate = await readFile(resolve(TEMPLATE_DIR, 'index.hbs'), 'utf-8')
+	return compile(fTemplate, {
+		preventIndent: true,
+	})
+}
+
 async function getJSON(){
 	return JSON.parse(await readFile(INPUT_FILE, 'utf-8')) 
 }
@@ -80,6 +87,11 @@ async function main(){
 			}
 			await writeFile(resolve(FUNCTION_DIR, `${docs.name}.html`), fnTemplate(docs))
 		}
+	}))
+	// add the index page
+	const indexTemplate = await getIndexTemplate()
+	await writeFile(resolve(CLASS_DIR, "index.html"), indexTemplate({
+		name : "Tone.js Docs"
 	}))
 }
 main()
