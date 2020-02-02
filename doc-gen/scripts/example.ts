@@ -181,13 +181,27 @@ async function main(){
 	monaco.languages.typescript.typescriptDefaults.setCompilerOptions({
 		target: monaco.languages.typescript.ScriptTarget.ES2015,
 		allowNonTsExtensions: true,
-		lib: ["es6"]
+		lib: ["ES2015"]
 	});
+
+	console.log()
 
 	/**
 	 * Add the declaration
 	 */
-	const declr = await fetchToneDts()
+	let declr = await fetchToneDts()
+
+	// add the console
+	declr += `
+		interface Console {
+			log(message?: any, ...optionalParams: any[]): void;
+		}
+		declare var Console: {
+			prototype: Console;
+			new(): Console;
+		};
+		const console = new Console()
+	`
 
 	monaco.languages.typescript.typescriptDefaults.addExtraLib(
 		declr,
