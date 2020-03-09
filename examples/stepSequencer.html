@@ -32,6 +32,7 @@
 
 
 	<script type="text/javascript">
+		const midiLength = 64;
 		//setup a polyphonic sampler
 		var keys = new Tone.Players({
 			"A" : "./audio/casio/A1.[mp3|ogg]",
@@ -42,7 +43,6 @@
 			"volume" : -10,
 			"fadeOut" : "64n",
 		}).toMaster();
-		var midiLength = 64;
 		//the notes
 		var noteNames = ["F#", "E", "C#", "A"];
 
