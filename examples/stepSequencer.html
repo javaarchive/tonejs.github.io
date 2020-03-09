@@ -42,7 +42,7 @@
 			"volume" : -10,
 			"fadeOut" : "64n",
 		}).toMaster();
-
+		var midiLength = 64;
 		//the notes
 		var noteNames = ["F#", "E", "C#", "A"];
 
@@ -52,7 +52,7 @@
 				if (val){
 					//slightly randomized velocities
 					var vel = Math.random() * 0.5 + 0.5;
-					keys.get(noteNames[i]).start(time, 0, "32n", 0, vel);
+					keys.get(noteNames[i]).start(time, 0, midiLength*2+"n", 0, vel);
 				}
 			});
 			//set the columne on the correct draw frame
